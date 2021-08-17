@@ -78,12 +78,13 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(64)))), ((int)(((byte)(65)))));
-            this.linkLabel1.Location = new System.Drawing.Point(640, 441);
+            this.linkLabel1.Location = new System.Drawing.Point(637, 442);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(130, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(161, 17);
             this.linkLabel1.TabIndex = 22;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Contacta a Soporte";
+            this.linkLabel1.Text = "Recupera tu contraseña";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label8
             // 

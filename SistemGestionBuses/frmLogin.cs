@@ -59,5 +59,12 @@ namespace SistemGestionBuses
                 return false;
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRecuperar recu = new frmRecuperar();
+            recu.Show();
+            recu.BringToFront();
+        }
     }
 }
