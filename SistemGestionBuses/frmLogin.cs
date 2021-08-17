@@ -22,10 +22,9 @@ namespace SistemGestionBuses
         {
             tryLogIn();
         }
-        static int contador = 0;
+
         void tryLogIn()
-        {
-            
+        {           
             string user = txtUser.Text;
             string password= txtPass.Text;
             if (!Empty(user, password))
@@ -43,7 +42,7 @@ namespace SistemGestionBuses
                 }
             }else
             {
-                MessageBox.Show("Ingresa Las credenciales correctas");
+                MessageBox.Show("Por favor ingresa datos");
             }
 
         }

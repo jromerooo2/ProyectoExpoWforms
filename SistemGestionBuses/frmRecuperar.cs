@@ -16,11 +16,17 @@ namespace SistemGestionBuses
         public frmRecuperar()
         {
             InitializeComponent();
+            txtCode.ReadOnly = true;
+            btnConfirmar.Enabled = false;
+            txtNueva.ReadOnly = true;
+            btnNueva.Enabled = false;
         }
+            
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            recuperarPorMail();
+            
+
         }
 
         private void recuperarPorMail()
@@ -28,10 +34,15 @@ namespace SistemGestionBuses
             string usernameRecu = txtUser.Text;
             if (usernameRecu.Trim() != "")
             {
-               bool res =  ControladorRecuperar.recuperarPassMail(usernameRecu);
+               bool res =  ControladorRecuperar.RecuperarMail(usernameRecu);
                 if (res)
                 {
                     MessageBox.Show("Enviado con exito");
+                    txtUser.ReadOnly = true;
+                    btnMetodo1.Enabled = false;
+                    btnMetodo2.Enabled = false;
+                    txtCode.ReadOnly = false;
+                    btnConfirmar.Enabled = true;
                 }
                 else
                 {
@@ -44,5 +55,34 @@ namespace SistemGestionBuses
 
             }
         }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            recuperarPorMail();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            int code = Convert.ToInt32(txtCode.Text);
+            if (ControladorRecuperar.ConfirmCodes(code))
+            {
+                MessageBox.Show("Son Iguales, puedes continuar");
+
+                txtCode.ReadOnly = true;
+                btnConfirmar.Enabled = false;
+                txtNueva.ReadOnly = false;
+                btnNueva.Enabled = true;
+
+            }
+            else
+            {
+                MessageBox.Show("Intentalo de nuevo");
+            }
+        }
+
     }
 }

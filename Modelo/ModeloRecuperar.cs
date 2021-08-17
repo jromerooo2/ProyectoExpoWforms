@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,22 +11,25 @@ namespace Modelo
    public class ModeloRecuperar
     {
 
-        public static bool recuperarPassMail(string username)
+        public static string recuperarPassMail(string username)
         {
-            bool retorno = false;
+            string retorno = "hellojuancho75@gmail.com";
             try
             {
-
-                string query = "SELECT * FROM tbusuarios WHERE usuario = BINARY ?param1";
+                string query = "SELECT correo_usuario FROM tb_cliente WHERE nombre_usuario = BINARY ?param1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
-                retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
-                return true;
+
+                if (cmdselect.ExecuteScalar() == null)
+                {
+                     retorno = "hellojuancho75@gmail.com";
+                }
+                return retorno;
             }
             catch (Exception)
             {
 
-                return true;
+                return retorno;
             }
         }
     }
