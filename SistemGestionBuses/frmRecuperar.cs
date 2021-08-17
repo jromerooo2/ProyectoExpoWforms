@@ -29,7 +29,14 @@ namespace SistemGestionBuses
             if (usernameRecu.Trim() != "")
             {
                bool res =  ControladorRecuperar.recuperarPassMail(usernameRecu);
-
+                if (res)
+                {
+                    MessageBox.Show("Enviado con exito");
+                }
+                else
+                {
+                    MessageBox.Show("Algo fallo en el proceso");
+                }
 
             }
             else

@@ -20,12 +20,12 @@ namespace Modelo
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
-                return retorno;
+                return true;
             }
             catch (Exception)
             {
 
-                return retorno;
+                return true;
             }
         }
     }
