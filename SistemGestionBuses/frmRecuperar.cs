@@ -28,7 +28,7 @@ namespace SistemGestionBuses
             string usernameRecu = txtUser.Text;
             if (usernameRecu.Trim() != "")
             {
-               bool res =  ControladorRecuperar.recuperarPassMail(usernameRecu);
+               bool res =  ControladorRecuperar.RecuperarMail(usernameRecu);
                 if (res)
                 {
                     MessageBox.Show("Enviado con exito");

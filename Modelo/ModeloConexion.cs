@@ -14,7 +14,7 @@ namespace Modelo
             MySqlConnection rtrn;
             string server, database, user, password, puerto;
             server = "127.0.0.1";
-            database = "dbgestionnotas2";
+            database = "dbsistemaviajes";
             user = "root";
             password = "";
             puerto = "3306";
