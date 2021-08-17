@@ -36,8 +36,8 @@ namespace Controlador
             //Enter your email blow and also change in database too
 
             message.To.Add(new MailAddress(mail));
-            message.Subject = "change password";
-            message.Body = "Write this given code on text box\n" + code + "\nThank you!";
+            message.Subject = "Cambia tu contraseña";
+            message.Body = "Escribe este codigo en el espacio de texto para verificar tu identidad\n" + code + "\n Gracias!";
 
             smtp.Port = 587;
             smtp.Host = "smtp.gmail.com";
