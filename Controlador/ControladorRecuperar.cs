@@ -25,7 +25,7 @@ namespace Controlador
         {
 
             code = rnd.Next(123123, 999999);
-            const string p = "";
+            const string p = "JuanRomero>10";
 
 
             MailMessage message = new MailMessage();
@@ -47,6 +47,17 @@ namespace Controlador
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.Send(message);
 
+        }
+        public static bool ConfirmCodes(int codeFromLaVista)
+        {
+            if (codeFromLaVista == code)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 

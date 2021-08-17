@@ -16,7 +16,12 @@ namespace SistemGestionBuses
         public frmRecuperar()
         {
             InitializeComponent();
+            txtCode.ReadOnly = true;
+            btnConfirmar.Enabled = false;
+            txtNueva.ReadOnly = true;
+            btnNueva.Enabled = false;
         }
+            
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -33,6 +38,11 @@ namespace SistemGestionBuses
                 if (res)
                 {
                     MessageBox.Show("Enviado con exito");
+                    txtUser.ReadOnly = true;
+                    btnMetodo1.Enabled = false;
+                    btnMetodo2.Enabled = false;
+                    txtCode.ReadOnly = false;
+                    btnConfirmar.Enabled = true;
                 }
                 else
                 {
@@ -54,5 +64,25 @@ namespace SistemGestionBuses
         {
             recuperarPorMail();
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            int code = Convert.ToInt32(txtCode.Text);
+            if (ControladorRecuperar.ConfirmCodes(code))
+            {
+                MessageBox.Show("Son Iguales, puedes continuar");
+
+                txtCode.ReadOnly = true;
+                btnConfirmar.Enabled = false;
+                txtNueva.ReadOnly = false;
+                btnNueva.Enabled = true;
+
+            }
+            else
+            {
+                MessageBox.Show("Intentalo de nuevo");
+            }
+        }
+
     }
 }
