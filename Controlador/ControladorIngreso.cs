@@ -56,6 +56,7 @@ namespace Controlador
         //CONSTRUCTOR
         public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento, char pGenero, int pEstado, int pCargo, int pMunicipio)
         {
+            //Atributo = parametro
             nombres_conduc = pNombre;
             apellidos_conduc = pApellido;
             DUI = pDUI;
@@ -70,9 +71,9 @@ namespace Controlador
         }
 
         //CRUD
-        public bool EnviarDatosController()
+        public bool EnviarDatosControlador()
         {
-            return ModeloIngreso.RegistrarConductor(nombre_conduc, apellido_conduc, DUI, NIT, direccion_conduc, telefono_conduc, genero_conduc, id_estado_conduc, id_cargo, id_municipio, nacimiento_con);
+            return ModeloIngreso.RegistrarConductor(nombres_conduc, apellidos_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, genero_conduc, id_estado, id_cargo, id_municipio);
         }
     }
 }

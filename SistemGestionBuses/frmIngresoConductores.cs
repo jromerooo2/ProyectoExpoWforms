@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using Controlador;
 
 namespace SistemGestionBuses
 {
     public partial class frmIngresoConductores : Form
     {
+        public DataTable datosCond;
+        public ControladorIngreso objCond;
         //cmb Cargar Cargo
         void CargarCargo()
         {
@@ -62,6 +65,59 @@ namespace SistemGestionBuses
                 MessageBox.Show("Error al cargar los municipios.", "Error de carga",
                                                  MessageBoxButtons.OK,
                                                  MessageBoxIcon.Error);
+            }
+        }
+        //Cargar Datos
+        void CargarDatos()
+        {
+            try
+            {
+                CargarCargo();
+                CargarEstado();
+                CargarMunicipios();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos." + ex.Message, "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Envio de Datos
+        void EnvioDatos()
+        {
+
+            try
+            {
+                string nombre_conduc, apellido_conduc, DUI, NIT, direccion_conduc, telefono_conduc, nacimiento_con;
+                char genero_conduc;
+                int id_estado_conduc, id_cargo, id_municipio;
+                nombre_conduc = TxtNombres.Text;
+                apellido_conduc = TxtApellidos.Text;
+                DUI = TxtDUI.Text;
+                NIT = txtNIT.Text;
+                direccion_conduc = TxtDireccion.Text;
+                telefono_conduc = txtNumero.Text;
+                nacimiento_con = dtNacimiento.Text;
+                genero_conduc = Convert.ToChar(cmbGenero.SelectedValue);
+                id_estado_conduc= Convert.ToInt16(cmbEstado.SelectedValue);
+                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+                id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
+                //INSTANCIAR OBJETO
+                objCond = new ControladorIngreso(nombre_conduc, apellido_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, genero_conduc, id_estado_conduc, id_cargo, id_municipio );
+                bool respuesta = objCond.EnviarDatosControlador();
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public frmIngresoConductores()
@@ -133,9 +189,34 @@ namespace SistemGestionBuses
             CargarEstado();
         }
 
-        private void cmbGenero_click(object sender, EventArgs e)
+        private void cmbGenero()
+        {
+            
+            cmbGenero.Items.Add("M");
+            cmbGenero.Items.Add("F");
+            cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+
+
+        }
+
+        private void TxtApellidos_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNombres_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_click(object sender, EventArgs e)
+        {
+            EnvioDatos();
         }
     }
 }
