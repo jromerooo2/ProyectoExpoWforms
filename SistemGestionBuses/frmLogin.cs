@@ -65,5 +65,10 @@ namespace SistemGestionBuses
             recu.Show();
             recu.BringToFront();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
