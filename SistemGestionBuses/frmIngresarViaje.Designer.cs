@@ -44,8 +44,15 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -55,25 +62,25 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(810, 450);
+            this.pictureBox2.Size = new System.Drawing.Size(866, 510);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
             // btnLimpiarCampos
             // 
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(312, 319);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(35, 437);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(75, 38);
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(140, 38);
             this.btnLimpiarCampos.TabIndex = 11;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
             // 
             // btnCrearViaje
             // 
-            this.btnCrearViaje.Location = new System.Drawing.Point(312, 271);
+            this.btnCrearViaje.Location = new System.Drawing.Point(194, 437);
             this.btnCrearViaje.Name = "btnCrearViaje";
-            this.btnCrearViaje.Size = new System.Drawing.Size(75, 23);
+            this.btnCrearViaje.Size = new System.Drawing.Size(157, 38);
             this.btnCrearViaje.TabIndex = 12;
             this.btnCrearViaje.Text = "Crear Viaje";
             this.btnCrearViaje.UseVisualStyleBackColor = true;
@@ -81,36 +88,36 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 75);
+            this.comboBox1.Location = new System.Drawing.Point(35, 120);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
+            this.comboBox1.Size = new System.Drawing.Size(140, 21);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.Text = "cliente";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(197, 121);
+            this.comboBox2.Location = new System.Drawing.Point(35, 321);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(158, 21);
+            this.comboBox2.Size = new System.Drawing.Size(140, 21);
             this.comboBox2.TabIndex = 14;
             this.comboBox2.Text = "estado viaje";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(197, 173);
+            this.comboBox3.Location = new System.Drawing.Point(35, 269);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(158, 21);
+            this.comboBox3.Size = new System.Drawing.Size(140, 21);
             this.comboBox3.TabIndex = 15;
             this.comboBox3.Text = "metodo pago";
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(52, 225);
+            this.comboBox4.Location = new System.Drawing.Point(193, 166);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(124, 21);
+            this.comboBox4.Size = new System.Drawing.Size(158, 21);
             this.comboBox4.TabIndex = 16;
             this.comboBox4.Text = "conductor";
             // 
@@ -118,21 +125,23 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(52, 170);
+            this.dateTimePicker1.Location = new System.Drawing.Point(35, 219);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(124, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(140, 20);
             this.dateTimePicker1.TabIndex = 17;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(87, 420);
+            this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.progressBar1.Location = new System.Drawing.Point(35, 92);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(615, 18);
+            this.progressBar1.Size = new System.Drawing.Size(646, 10);
             this.progressBar1.TabIndex = 18;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 76);
+            this.textBox1.Location = new System.Drawing.Point(193, 121);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 19;
@@ -140,18 +149,18 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(52, 121);
+            this.textBox2.Location = new System.Drawing.Point(35, 166);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 20);
+            this.textBox2.Size = new System.Drawing.Size(140, 20);
             this.textBox2.TabIndex = 20;
             this.textBox2.Text = "tarifa";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(460, 75);
+            this.textBox3.Location = new System.Drawing.Point(194, 219);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 73);
+            this.textBox3.Size = new System.Drawing.Size(157, 123);
             this.textBox3.TabIndex = 21;
             this.textBox3.Text = "destino";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -159,18 +168,18 @@
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(460, 225);
+            this.comboBox5.Location = new System.Drawing.Point(35, 375);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(124, 21);
+            this.comboBox5.Size = new System.Drawing.Size(140, 21);
             this.comboBox5.TabIndex = 23;
             this.comboBox5.Text = "tipo destino";
             // 
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(460, 173);
+            this.comboBox6.Location = new System.Drawing.Point(193, 375);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(124, 21);
+            this.comboBox6.Size = new System.Drawing.Size(158, 21);
             this.comboBox6.TabIndex = 24;
             this.comboBox6.Text = "municipio";
             // 
@@ -178,18 +187,80 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(676, 319);
+            this.pictureBox1.Location = new System.Drawing.Point(732, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(386, 166);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(110, 20);
+            this.textBox4.TabIndex = 26;
+            this.textBox4.Text = "ID viaje";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(386, 120);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(110, 20);
+            this.textBox5.TabIndex = 27;
+            this.textBox5.Text = "ID destino";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(386, 219);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(451, 268);
+            this.dataGridView1.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(516, 119);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 67);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Eliminar Viaje";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(608, 119);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 67);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Actualizar Viaje";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 68);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Viajes";
+            // 
             // frmIngresarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 450);
+            this.ClientSize = new System.Drawing.Size(866, 510);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
@@ -209,6 +280,7 @@
             this.Text = "frmIngresarViaje";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +303,11 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }
