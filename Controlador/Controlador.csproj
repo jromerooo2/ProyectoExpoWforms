@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorConexion.cs" />
+    <Compile Include="ControladorIngreso.cs" />
     <Compile Include="ControladorLogin.cs" />
     <Compile Include="ControladorRecuperar.cs" />
     <Compile Include="EncryptClass.cs" />
