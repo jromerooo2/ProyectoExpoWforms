@@ -122,5 +122,8 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        //CRUD
+        //public static bool RegistrarConductor(string pNombreCond, string pApellidoCond,string pDUI,string pNIT,string pDireccionCond,string ptelefonoCond, char pgenero, )
     }
 }
