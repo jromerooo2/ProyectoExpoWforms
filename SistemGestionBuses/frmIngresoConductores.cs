@@ -13,6 +13,24 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresoConductores : Form
     {
+        //cmb Cargar Cargo
+        void CargarCargo()
+        {
+            try
+            {
+                DataTable dataCargo = ControladorIngreso.ObtenerCargo();
+                cmbCargo.DataSource = dataCargo;
+                cmbCargo.DisplayMember = "cargo";
+                cmbCargo.ValueMember = "id_cargo";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los cargo.", "Error de carga.",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+        //cmb Cargar Municipios
         void CargarMunicipios()
         {
             try
@@ -21,6 +39,23 @@ namespace SistemGestionBuses
                 cmbMunicipio.DataSource = dataMunicipio;
                 cmbMunicipio.DisplayMember = "municipio";
                 cmbMunicipio.ValueMember = "id_municipio";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+        //cmb Cargar Estado
+        void CargarEstado()
+        {
+            try
+            {
+                DataTable dataEstado = ControladorIngreso.ObtenerEstado();
+                cmbEstado.DataSource = dataEstado;
+                cmbEstado.DisplayMember = "estado_conductor";
+                cmbEstado.ValueMember = "id_estado_conduc";
             }
             catch (Exception)
             {
@@ -84,6 +119,23 @@ namespace SistemGestionBuses
         {
             
            
+        }
+
+        private void cmbCargo_click(object sender, EventArgs e)
+        {
+            cmbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
+            CargarCargo();
+        }
+
+        private void cmbEstado_click(object sender, EventArgs e)
+        {
+            cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            CargarEstado();
+        }
+
+        private void cmbGenero_click(object sender, EventArgs e)
+        {
+
         }
     }
 }
