@@ -189,7 +189,7 @@ namespace SistemGestionBuses
             CargarEstado();
         }
 
-        private void cmbGenero()
+        private void cmbGenero_click()
         {
             
             cmbGenero.Items.Add("M");
