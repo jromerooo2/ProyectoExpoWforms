@@ -82,11 +82,11 @@ namespace Controlador
         public string telefono_empleado { get; set; }
         public string nacimiento_empleado { get; set; }
         public int id_genero { get; set; }
-        public int id_estado { get; set; }
+        public int id_estado_empleado { get; set; }
         public int id_cargo { get; set; }
         public  int id_municipio { get; set; }
         //CONSTRUCTOR
-        public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento, int pGenero, int pEstado, int pCargo, int pMunicipio)
+        public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
         {
             //Atributo = parametro
             nombres_empleado = pNombre;
@@ -97,7 +97,7 @@ namespace Controlador
             telefono_empleado = pTelefono;
             nacimiento_empleado = pNacimiento;
             id_genero = pGenero;
-            id_estado = pEstado;
+            id_estado_empleado = pEstado;
             id_cargo = pCargo;
             id_municipio = pMunicipio;
         }
@@ -105,7 +105,7 @@ namespace Controlador
         //CRUD
         public bool EnviarDatosControlador()
         {
-            return ModeloIngreso.RegistrarEmpleado(nombres_empleado, apellidos_empleado, DUI, NIT, nacimiento_empleado, direccion_empleado, telefono_empleado, id_genero, id_estado, id_cargo, id_municipio);
+            return ModeloIngreso.RegistrarEmpleado(nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
         }
     }
 }

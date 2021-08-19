@@ -19,13 +19,24 @@ namespace SistemGestionBuses
             CargarDatosCMB();
         }
 
-        void Vacio()
+        public bool Vacio()
         {
             if (txtDestino.Text.Trim() == "" &&
             txtNombreViaje.Text.Trim() == "" &&
-            txtTarifaViaje.Text.Trim() == "")
+            txtTarifaViaje.Text.Trim() == "" &&
+            cmbCliente.SelectedIndex == 0 &&
+            cmbConductor.SelectedIndex == 0 &&
+            cmbEstadoViaje.SelectedIndex == 0 &&
+            cmbMetodoPago.SelectedIndex == 0 &&
+            cmbTipoDestino.SelectedIndex == 0 &&
+            cmbMunicipios.SelectedIndex == 0 &&
+            cmbCliente.SelectedIndex == 0)
             {
-
+                return true;
+            }
+            else
+            {
+                return false;
             }
             
         }
@@ -156,6 +167,29 @@ namespace SistemGestionBuses
         }
         #endregion 
 
+
+        void EnvioDatos()
+        {
+            string nombreViaje, fecha, tarifa;
+            int id_destino, id_unidad, id_empleado, id_estado_viaje, id_metodo_pago;
+            nombreViaje = txtNombreViaje.Text;
+            fecha = dtpFechaViaje.Text;
+            tarifa = txtTarifaViaje.Text;
+            id
+            bool res = empresa.AgregarEmpresa();
+            if (res)
+            {
+                MessageBox.Show("Empresa registrada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Oops!, ocurrió un error al registrar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -165,6 +199,16 @@ namespace SistemGestionBuses
         {
             CargarDatosCMB();
             LimpiarCampos();
+        }
+
+        private void btnCrearViaje_Click(object sender, EventArgs e)
+        {
+            Vacio();
+            if (Vacio() == true)
+            {
+                MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            //EnvioDatos();
         }
     }
 }
