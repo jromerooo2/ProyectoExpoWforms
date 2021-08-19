@@ -159,6 +159,44 @@ namespace Modelo
                 return data = null;
             }
         }
+    
+        //Cargar Cliente
+        public static DataTable CargarCliente()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_cliente ORDER BY municipio ASC";
+                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        //Cargar Unidad Transporte
+        public static DataTable CargarUnidadTransporte()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_unidad_transporte ORDER BY municipio ASC";
+                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
 
         //CRUD
         public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,int pGenero,int pEstado,int pCargo,int pMunicipio )

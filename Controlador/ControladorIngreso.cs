@@ -50,6 +50,12 @@ namespace Controlador
         {
             return ModeloIngreso.CargarEstadoInner(id);
         }
+        //cmb Cliente
+        public static DataTable ObtenerCliente()
+        {
+            return ModeloIngreso.CargarCliente();
+        }
+
         //ATRIBUTOS 
         public static int id_conductor { get; set; }
         public string nombres_empleado { get; set; }
