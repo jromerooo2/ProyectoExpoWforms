@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmIngresarViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresarViaje.Designer.cs">
+      <DependentUpon>frmIngresarViaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmIngresarViaje.resx">
+      <DependentUpon>frmIngresarViaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngresoCliente.resx">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
     </EmbeddedResource>
