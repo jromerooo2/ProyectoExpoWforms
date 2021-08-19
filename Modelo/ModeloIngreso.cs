@@ -236,13 +236,13 @@ namespace Modelo
         }
 
         //CRUD
-        public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,int pGenero,int pEstado,int pCargo,int pMunicipio )
+        public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,int pGenero,int pEstado,int pCargo,int pMunicipio)
         {
             bool retorno = false;
             try
             {
-                //INCERCION
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado) VALUES {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono, pNacimiento, pGenero, pEstado, pCargo, pMunicipio), ModeloConexion.GetConnection());
+                //INSERCION
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados(nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6},'{7}', '{8}', '{9}', '{10}')", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono , pGenero, pEstado, pCargo, pMunicipio, pNacimiento), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 //RETORNO
