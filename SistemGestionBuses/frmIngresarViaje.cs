@@ -46,7 +46,7 @@ namespace SistemGestionBuses
             cmbMunicipios.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
-            dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021"));
+            dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021");
         }
 
         void CargarDatosCMB()
