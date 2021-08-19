@@ -168,26 +168,26 @@ namespace SistemGestionBuses
         #endregion 
 
 
-        void EnvioDatos()
-        {
-            string nombreViaje, fecha, tarifa;
-            int id_destino, id_unidad, id_empleado, id_estado_viaje, id_metodo_pago;
-            nombreViaje = txtNombreViaje.Text;
-            fecha = dtpFechaViaje.Text;
-            tarifa = txtTarifaViaje.Text;
-            id
-            bool res = empresa.AgregarEmpresa();
-            if (res)
-            {
-                MessageBox.Show("Empresa registrada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //void EnvioDatos()
+        //{
+        //    string nombreViaje, fecha, tarifa;
+        //    int id_destino, id_unidad, id_empleado, id_estado_viaje, id_metodo_pago;
+        //    nombreViaje = txtNombreViaje.Text;
+        //    fecha = dtpFechaViaje.Text;
+        //    tarifa = txtTarifaViaje.Text;
+        //    id
+        //    bool res = empresa.AgregarEmpresa();
+        //    if (res)
+        //    {
+        //        MessageBox.Show("Empresa registrada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            else
-            {
-                MessageBox.Show("Oops!, ocurrió un error al registrar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Oops!, ocurrió un error al registrar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-        }
+        //    }
+        //}
 
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)

@@ -28,8 +28,8 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable DataTipCliente = ControladorIngreso.ObtenerTipoCliente();
-                cmbTipCliente.DataSource = DataTipCliente;
+                //DataTable DataTipCliente = ControladorIngreso.ObtenerTipoCliente();
+                //cmbTipCliente.DataSource = DataTipCliente;
                 cmbTipCliente.DisplayMember = "tipo_cliente"; 
                 cmbTipCliente.ValueMember = "id_tipo_cliente";
             }
