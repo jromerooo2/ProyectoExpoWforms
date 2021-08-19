@@ -122,6 +122,24 @@ namespace Modelo
                 return data = null;
             }
         }
+        //Cargar tipo cliente 
+        public static DataTable CargarTipoCliente()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_cliente ";
+                MySqlCommand cmdTipCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdTipCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
 
         //CRUD
         //public static bool RegistrarConductor(string pNombreCond, string pApellidoCond,string pDUI,string pNIT,string pDireccionCond,string ptelefonoCond, char pgenero, )

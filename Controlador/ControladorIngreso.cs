@@ -40,6 +40,11 @@ namespace Controlador
         {
             return ModeloIngreso.CargarEstadoInner(id);
         }
+        //cmb tipo cliente
+        public static DataTable ObtenerTipoCliente()
+        {
+            return ModeloIngreso.CargarTipoCliente();
+        }
 
     }
 }
