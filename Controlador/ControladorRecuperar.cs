@@ -43,7 +43,7 @@ namespace Controlador
             smtp.Host = "smtp.gmail.com";
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("juan.romeroramos9@gmail.com", p);
+            smtp.Credentials = new NetworkCredential("systemlocus@gmail.com", p);
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.Send(message);
 
