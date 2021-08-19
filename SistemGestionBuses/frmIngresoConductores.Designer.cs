@@ -162,7 +162,7 @@
             this.txtNIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNIT.Location = new System.Drawing.Point(30, 195);
             this.txtNIT.Name = "txtNIT";
-            this.txtNIT.Size = new System.Drawing.Size(213, 24);
+            this.txtNIT.Size = new System.Drawing.Size(254, 24);
             this.txtNIT.TabIndex = 59;
             // 
             // label9
@@ -237,7 +237,7 @@
             this.TxtDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDUI.Location = new System.Drawing.Point(30, 143);
             this.TxtDUI.Name = "TxtDUI";
-            this.TxtDUI.Size = new System.Drawing.Size(213, 24);
+            this.TxtDUI.Size = new System.Drawing.Size(254, 24);
             this.TxtDUI.TabIndex = 48;
             // 
             // TxtNombres
