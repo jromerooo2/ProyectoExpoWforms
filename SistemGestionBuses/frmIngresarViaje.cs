@@ -19,18 +19,34 @@ namespace SistemGestionBuses
             CargarDatosCMB();
         }
 
+        void Vacio()
+        {
+            if (txtDestino.Text.Trim() == "" &&
+            txtNombreViaje.Text.Trim() == "" &&
+            txtTarifaViaje.Text.Trim() == "")
+            {
+
+            }
+            
+        }
+
+
+        //Metodo para limpiar los campos
         void LimpiarCampos()
         {
             txtDestino.Clear();
             txtNombreViaje.Clear();
             txtTarifaViaje.Clear();
-            cmbCliente.SelectedValue = 0;
-            cmbConductor.SelectedValue = 0;
-            cmbEstadoViaje.SelectedValue = 0;
-            cmbMetodoPago.SelectedValue = 0;
-            cmbMunicipios.SelectedValue = 0;
-            cmbTipoDestino.SelectedValue = 0;
-            cmbUnidadTransporte.SelectedValue = 0;
+            txtIDviaje.Clear();
+            txtIDdestino.Clear();
+            cmbCliente.SelectedValue = 1;
+            cmbConductor.SelectedValue = 1;
+            cmbEstadoViaje.SelectedValue = 1;
+            cmbMetodoPago.SelectedValue = 1;
+            cmbMunicipios.SelectedValue = 1;
+            cmbTipoDestino.SelectedValue = 1;
+            cmbUnidadTransporte.SelectedValue = 1;
+            dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021"));
         }
 
         void CargarDatosCMB()
@@ -38,11 +54,11 @@ namespace SistemGestionBuses
             try
             {
                 CargarClientes();
-                //CargarUnidad();
+                CargarUnidadTransporte();
                 CargarMunicipios();
                 //CargarConductor();
-                //CargarMetodoPago();
-                //CargarEstadoViaje();
+                CargarMetodoPago();
+                CargarEstadoViaje();
                 //CargarTipoDestino();
             }
             catch (Exception)
@@ -52,7 +68,8 @@ namespace SistemGestionBuses
                  MessageBoxIcon.Error);
             }
         }
-
+        //Region de todos los metodos para cargar los combobox
+        #region CMB
         void CargarClientes()
         {
             try
@@ -91,10 +108,10 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataTransporte = ControladorIngreso.ObtenerMunicipios();
-                cmbMunicipios.DataSource = dataTransporte;
-                cmbMunicipios.DisplayMember = "tipo_unidad";
-                cmbMunicipios.ValueMember = "id_tipo_unidad";
+                DataTable dataTransporte = ControladorIngreso.ObtenerTipoUnidadTransporte(  );
+                cmbUnidadTransporte.DataSource = dataTransporte;
+                cmbUnidadTransporte.DisplayMember = "tipo_unidad";
+                cmbUnidadTransporte.ValueMember = "id_tipo_unidad";
             }
             catch (Exception)
             {
@@ -104,6 +121,41 @@ namespace SistemGestionBuses
             }
         }
 
+        void CargarMetodoPago()
+        {
+            try
+            {
+                DataTable dataMetodoPago = ControladorIngreso.ObtenerMetodoPago();
+                cmbMetodoPago.DataSource = dataMetodoPago;
+                cmbMetodoPago.DisplayMember = "metodo_pago";
+                cmbMetodoPago.ValueMember = "id_metodo_pago";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los metodos de pago.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+
+        void CargarEstadoViaje()
+        {
+            try
+            {
+                DataTable dataMetodoPago = ControladorIngreso.ObtenerEstadoViaje();
+                cmbEstadoViaje.DataSource = dataMetodoPago;
+                cmbEstadoViaje.DisplayMember = "estado_viaje";
+                cmbEstadoViaje.ValueMember = "id_estado_viaje";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los metodos de pago.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+        #endregion 
+
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -112,6 +164,7 @@ namespace SistemGestionBuses
         private void frmIngresarViaje_Load(object sender, EventArgs e)
         {
             CargarDatosCMB();
+            LimpiarCampos();
         }
     }
 }

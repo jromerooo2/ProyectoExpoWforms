@@ -25,13 +25,13 @@ namespace Controlador
         {
 
             code = rnd.Next(123123, 999999);
-            const string p = "JuanRomero>10";
+            const string p = "trackonyou";
 
 
             MailMessage message = new MailMessage();
             SmtpClient smtp = new SmtpClient();
 
-            message.From = new MailAddress("juan.romeroramos9@gmail.com");
+            message.From = new MailAddress("systemlocus@gmail.com");
 
             //Enter your email blow and also change in database too
 
@@ -43,7 +43,7 @@ namespace Controlador
             smtp.Host = "smtp.gmail.com";
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("juan.romeroramos9@gmail.com", p);
+            smtp.Credentials = new NetworkCredential("systemlocus@gmail.com", p);
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.Send(message);
 
