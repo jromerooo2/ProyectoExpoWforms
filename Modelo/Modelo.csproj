@@ -45,6 +45,7 @@
     <Compile Include="ModeloConexion.cs" />
     <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloRecuperar.cs" />
+    <Compile Include="ModeloViaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

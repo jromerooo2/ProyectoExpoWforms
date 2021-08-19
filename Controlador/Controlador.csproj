@@ -45,6 +45,7 @@
     <Compile Include="ControladorConexion.cs" />
     <Compile Include="ControladorLogin.cs" />
     <Compile Include="ControladorRecuperar.cs" />
+    <Compile Include="ControladorViaje.cs" />
     <Compile Include="EncryptClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
