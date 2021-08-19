@@ -105,21 +105,21 @@ namespace SistemGestionBuses
 
             try
             {
-                string nombre_conduc, apellido_conduc, DUI, NIT, direccion_conduc, telefono_conduc, nacimiento_con;
+                string nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, nacimiento_empleado;
                 int id_genero, id_estado_conduc, id_cargo, id_municipio;
-                nombre_conduc = TxtNombres.Text;
-                apellido_conduc = TxtApellidos.Text;
+                nombre_empleado = TxtNombres.Text;
+                apellido_empleado = TxtApellidos.Text;
                 DUI = TxtDUI.Text;
                 NIT = txtNIT.Text;
-                direccion_conduc = TxtDireccion.Text;
-                telefono_conduc = txtNumero.Text;
-                nacimiento_con = dtNacimiento.Text;
+                direccion_empleado = TxtDireccion.Text;
+                telefono_empleado = txtNumero.Text;
+                nacimiento_empleado = dtNacimiento.Text;
                 id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_estado_conduc= Convert.ToInt16(cmbEstado.SelectedValue);
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
                 //INSTANCIAR OBJETO
-                objCond = new ControladorIngreso(nombre_conduc, apellido_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, id_genero, id_estado_conduc, id_cargo, id_municipio );
+                objCond = new ControladorIngreso(nombre_empleado, apellido_empleado, DUI, NIT, nacimiento_empleado, direccion_empleado, telefono_empleado, id_genero, id_estado_conduc, id_cargo, id_municipio );
                 bool respuesta = objCond.EnviarDatosControlador();
                 if (respuesta == true)
                 {
@@ -217,6 +217,11 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("Error al establecer conexión.");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
