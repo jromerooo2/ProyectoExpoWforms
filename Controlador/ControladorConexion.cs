@@ -10,7 +10,7 @@ namespace Controlador
 {
     public class ControladorConexion
     {
-        public MySqlConnection  GetConn()
+        public static MySqlConnection  GetConn()
         {
             return ModeloConexion.GetConnection();
         }
