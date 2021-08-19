@@ -47,6 +47,43 @@ namespace Modelo
                 return data = null;
             }
         }
+        //Cargar genero
+        public static DataTable CargarGenero()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_genero ";
+                MySqlCommand cmdtipogen = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipogen);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+        //Genero inner
+        public static DataTable CargarGeneroInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_genero WHERE id_genero = ?param1";
+                MySqlCommand cmdtipogen = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdtipogen.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipogen);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
         //Cargar Cargo
         public static DataTable CargarCargo()
         {
@@ -91,8 +128,8 @@ namespace Modelo
             try
             {
                 string instruccion = "SELECT * FROM tb_municipios ORDER BY municipio ASC";
-                MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
+                MySqlCommand cmdtipomun= new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
@@ -110,9 +147,84 @@ namespace Modelo
             try
             {
                 string instruccion = "SELECT * FROM tb_municipios WHERE id_municipio = ?param1";
-                MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdtipomun.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+    
+        //Cargar Cliente
+        public static DataTable CargarCliente()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_cliente ORDER BY apellidos_cliente ASC";
+                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        //Cargar Unidad Transporte
+        public static DataTable CargarUnidadTransporte()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_unidad ORDER BY tipo_unidad ASC";
+                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        //Cargar Metodo Pago
+        public static DataTable CargarMetodoPago()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_metodo_pago";
+                MySqlCommand cmdMetodoPago = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdMetodoPago);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static DataTable CargarEstadoViaje()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_estado_viaje";
+                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
@@ -142,6 +254,22 @@ namespace Modelo
         }
 
         //CRUD
-        //public static bool RegistrarConductor(string pNombreCond, string pApellidoCond,string pDUI,string pNIT,string pDireccionCond,string ptelefonoCond, char pgenero, )
+        public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,int pGenero,int pEstado,int pCargo,int pMunicipio )
+        {
+            bool retorno = false;
+            try
+            {
+                //INCERCION
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado) VALUES {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono, pNacimiento, pGenero, pEstado, pCargo, pMunicipio), ModeloConexion.GetConnection());
+                //VERIFICACION
+                retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
+                //RETORNO
+                return retorno;
+            }
+            catch(Exception)
+            {
+                return retorno;
+            }   
+        }
     }
 }
