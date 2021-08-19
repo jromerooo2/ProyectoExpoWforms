@@ -128,8 +128,8 @@ namespace Modelo
             try
             {
                 string instruccion = "SELECT * FROM tb_municipios ORDER BY municipio ASC";
-                MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
+                MySqlCommand cmdtipomun= new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
@@ -147,9 +147,9 @@ namespace Modelo
             try
             {
                 string instruccion = "SELECT * FROM tb_municipios WHERE id_municipio = ?param1";
-                MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdtipomun.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
