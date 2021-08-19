@@ -25,13 +25,13 @@ namespace Controlador
         {
 
             code = rnd.Next(123123, 999999);
-            const string p = "JuanRomero>10";
+            const string p = "trackonyou";
 
 
             MailMessage message = new MailMessage();
             SmtpClient smtp = new SmtpClient();
 
-            message.From = new MailAddress("juan.romeroramos9@gmail.com");
+            message.From = new MailAddress("systemlocus@gmail.com");
 
             //Enter your email blow and also change in database too
 

@@ -41,8 +41,8 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -183,13 +183,6 @@
             this.panel1.Size = new System.Drawing.Size(390, 416);
             this.panel1.TabIndex = 12;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(395, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(264, 400);
-            this.panel2.TabIndex = 24;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -199,6 +192,13 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(395, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(264, 400);
+            this.panel2.TabIndex = 24;
             // 
             // frmLogin
             // 
