@@ -47,6 +47,43 @@ namespace Modelo
                 return data = null;
             }
         }
+        //Cargar Estado
+        public static DataTable CargarGenero()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_genero ";
+                MySqlCommand cmdtipogen = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipogen);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+        //Genero inner
+        public static DataTable CargarGeneroInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_genero WHERE id_genero = ?param1";
+                MySqlCommand cmdtipogen = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdtipogen.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipogen);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
         //Cargar Cargo
         public static DataTable CargarCargo()
         {
@@ -124,13 +161,13 @@ namespace Modelo
         }
 
         //CRUD
-        public static bool RegistrarConductor(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,char pGenero,int pEstado,int pCargo,int pMunicipio )
+        public static bool RegistrarConductor(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,int pGenero,int pEstado,int pCargo,int pMunicipio )
         {
             bool retorno = false;
             try
             {
                 //INCERCION
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombre_conduc, apellido_conduc, DUI, NIT, direccion_conduc, telefono_conduc, genero_conduc, id_estado_conduc, id_cargo, id_municipio, nacimiento_con) VALUES {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono, pNacimiento, pGenero, pEstado, pCargo, pMunicipio), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombre_conduc, apellido_conduc, DUI, NIT, direccion_conduc, telefono_conduc, id_genero, id_estado_conduc, id_cargo, id_municipio, nacimiento_con) VALUES {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono, pNacimiento, pGenero, pEstado, pCargo, pMunicipio), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 //RETORNO

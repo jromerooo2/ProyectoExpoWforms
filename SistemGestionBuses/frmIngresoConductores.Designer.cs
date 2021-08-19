@@ -62,10 +62,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvdatos = new System.Windows.Forms.DataGridView();
+            this.dgvIngreso = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvdatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -139,7 +139,6 @@
             this.TxtApellidos.Name = "TxtApellidos";
             this.TxtApellidos.Size = new System.Drawing.Size(254, 24);
             this.TxtApellidos.TabIndex = 61;
-            this.TxtApellidos.TextChanged += new System.EventHandler(this.TxtApellidos_TextChanged);
             // 
             // label11
             // 
@@ -172,7 +171,6 @@
             this.label9.TabIndex = 58;
             this.label9.Text = "Fecha de nacimiento";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click_1);
             // 
             // dtNacimiento
             // 
@@ -228,7 +226,6 @@
             this.label12.TabIndex = 50;
             this.label12.Text = "Nombre del conductor";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // TxtDUI
             // 
@@ -245,7 +242,6 @@
             this.TxtNombres.Name = "TxtNombres";
             this.TxtNombres.Size = new System.Drawing.Size(254, 24);
             this.TxtNombres.TabIndex = 45;
-            this.TxtNombres.TextChanged += new System.EventHandler(this.TxtNombres_TextChanged);
             // 
             // label10
             // 
@@ -258,7 +254,6 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "ID empleado";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtId
             // 
@@ -267,7 +262,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 24);
             this.txtId.TabIndex = 36;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // cmbGenero
             // 
@@ -277,6 +271,7 @@
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(121, 26);
             this.cmbGenero.TabIndex = 26;
+            this.cmbGenero.Click += new System.EventHandler(this.cmbGenero_click);
             // 
             // label5
             // 
@@ -387,6 +382,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Conectar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -507,13 +503,13 @@
             this.label2.Text = "Administracion de Conductor";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dgvdatos
+            // dgvIngreso
             // 
-            this.dgvdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdatos.Location = new System.Drawing.Point(17, 374);
-            this.dgvdatos.Name = "dgvdatos";
-            this.dgvdatos.Size = new System.Drawing.Size(1028, 206);
-            this.dgvdatos.TabIndex = 29;
+            this.dgvIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIngreso.Location = new System.Drawing.Point(17, 374);
+            this.dgvIngreso.Name = "dgvIngreso";
+            this.dgvIngreso.Size = new System.Drawing.Size(1028, 206);
+            this.dgvIngreso.TabIndex = 29;
             // 
             // frmIngresoConductores
             // 
@@ -524,7 +520,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvdatos);
+            this.Controls.Add(this.dgvIngreso);
             this.Name = "frmIngresoConductores";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmIngresoConductores_Load);
@@ -532,7 +528,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvdatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,7 +555,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvdatos;
+        private System.Windows.Forms.DataGridView dgvIngreso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label7;

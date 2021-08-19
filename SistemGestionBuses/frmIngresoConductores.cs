@@ -33,6 +33,23 @@ namespace SistemGestionBuses
                                                  MessageBoxIcon.Error);
             }
         }
+        //cmb Cargar Genero
+        void CargarGenero()
+        {
+            try
+            {
+                DataTable dataGenero = ControladorIngreso.ObtenerGenero();
+                cmbGenero.DataSource = dataGenero;
+                cmbGenero.DisplayMember = "genero";
+                cmbGenero.ValueMember = "id_genero";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los generos.", "Error de carga.",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
         //cmb Cargar Municipios
         void CargarMunicipios()
         {
@@ -75,6 +92,7 @@ namespace SistemGestionBuses
                 CargarCargo();
                 CargarEstado();
                 CargarMunicipios();
+                CargarGenero();
             }
             catch (Exception ex)
             {
@@ -88,8 +106,7 @@ namespace SistemGestionBuses
             try
             {
                 string nombre_conduc, apellido_conduc, DUI, NIT, direccion_conduc, telefono_conduc, nacimiento_con;
-                char genero_conduc;
-                int id_estado_conduc, id_cargo, id_municipio;
+                int id_genero, id_estado_conduc, id_cargo, id_municipio;
                 nombre_conduc = TxtNombres.Text;
                 apellido_conduc = TxtApellidos.Text;
                 DUI = TxtDUI.Text;
@@ -97,12 +114,12 @@ namespace SistemGestionBuses
                 direccion_conduc = TxtDireccion.Text;
                 telefono_conduc = txtNumero.Text;
                 nacimiento_con = dtNacimiento.Text;
-                genero_conduc = Convert.ToChar(cmbGenero.SelectedValue);
+                id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_estado_conduc= Convert.ToInt16(cmbEstado.SelectedValue);
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
                 //INSTANCIAR OBJETO
-                objCond = new ControladorIngreso(nombre_conduc, apellido_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, genero_conduc, id_estado_conduc, id_cargo, id_municipio );
+                objCond = new ControladorIngreso(nombre_conduc, apellido_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, id_genero, id_estado_conduc, id_cargo, id_municipio );
                 bool respuesta = objCond.EnviarDatosControlador();
                 if (respuesta == true)
                 {
@@ -125,30 +142,12 @@ namespace SistemGestionBuses
             InitializeComponent();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmIngresoConductores_Load(object sender, EventArgs e)
         {
-
+            CargarDatos();
         }
 
-        private void label9_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void dtNacimiento_ValueChanged(object sender, EventArgs e)
         {
@@ -160,14 +159,10 @@ namespace SistemGestionBuses
            
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
         private void cmbMunicipios_Click(object sender, EventArgs e)
         {
             cmbMunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
-
+     
             CargarMunicipios();
         }
 
@@ -191,32 +186,37 @@ namespace SistemGestionBuses
 
         private void cmbGenero_click()
         {
-            
-            cmbGenero.Items.Add("M");
-            cmbGenero.Items.Add("F");
-            cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+          
 
-
-        }
-
-        private void TxtApellidos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtNombres_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
         private void btnAgregar_click(object sender, EventArgs e)
         {
+
             EnvioDatos();
+        }
+
+
+
+        private void cmbGenero_click(object sender, EventArgs e)
+        {
+            CargarGenero();
+            cmbGenero.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection objvalor;
+            objvalor = ControladorConexion.GetConn();
+            if (objvalor != null)
+            {
+                MessageBox.Show("Conexión se estableció con exito.");
+            }
+            else
+            {
+                MessageBox.Show("Error al establecer conexión.");
+            }
         }
     }
 }

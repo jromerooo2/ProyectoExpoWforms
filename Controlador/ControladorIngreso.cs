@@ -20,6 +20,16 @@ namespace Controlador
         {
             return ModeloIngreso.CargarMunicipioInner(id);
         }
+        //cmb Genero
+        public static DataTable ObtenerGenero()
+        {
+            return ModeloIngreso.CargarGenero();
+        }
+        //cmb inner Genero
+        public static DataTable CargarGeneroInner_controlador(int id)
+        {
+            return ModeloIngreso.CargarGeneroInner(id);
+        }
         //cmb Cargo
         public static DataTable ObtenerCargo()
         {
@@ -49,12 +59,12 @@ namespace Controlador
         public string direccion_conduc { get; set; }
         public string telefono_conduc { get; set; }
         public string nacimiento_con { get; set; }
-        public char genero_conduc { get; set; }
+        public int id_genero { get; set; }
         public int id_estado { get; set; }
         public int id_cargo { get; set; }
         public  int id_municipio { get; set; }
         //CONSTRUCTOR
-        public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento, char pGenero, int pEstado, int pCargo, int pMunicipio)
+        public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento, int pGenero, int pEstado, int pCargo, int pMunicipio)
         {
             //Atributo = parametro
             nombres_conduc = pNombre;
@@ -64,7 +74,7 @@ namespace Controlador
             direccion_conduc = pDireccion;
             telefono_conduc = pTelefono;
             nacimiento_con = pNacimiento;
-            genero_conduc = pGenero;
+            id_genero = pGenero;
             id_estado = pEstado;
             id_cargo = pCargo;
             id_municipio = pMunicipio;
@@ -73,7 +83,7 @@ namespace Controlador
         //CRUD
         public bool EnviarDatosControlador()
         {
-            return ModeloIngreso.RegistrarConductor(nombres_conduc, apellidos_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, genero_conduc, id_estado, id_cargo, id_municipio);
+            return ModeloIngreso.RegistrarConductor(nombres_conduc, apellidos_conduc, DUI, NIT, nacimiento_con, direccion_conduc, telefono_conduc, id_genero, id_estado, id_cargo, id_municipio);
         }
     }
 }
