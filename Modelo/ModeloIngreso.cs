@@ -16,7 +16,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_estado_conductor ";
+                string instruccion = "SELECT * FROM tb_estado_empleado";
                 MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
                 data = new DataTable();
@@ -34,7 +34,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_estado_conductor WHERE id_estado_conduc = ?param1";
+                string instruccion = "SELECT * FROM tb_estado_conductor WHERE id_estado_empleado = ?param1";
                 MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdtipoest.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
@@ -235,14 +235,14 @@ namespace Modelo
             }
         }
 
-        //CRUD
-        public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, string pNacimiento,int pGenero,int pEstado,int pCargo,int pMunicipio )
+        //CRUD Empleado
+        public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero,int pEstado,int pCargo,int pMunicipio, string pNacimiento )
         {
             bool retorno = false;
             try
             {
                 //INCERCION
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado) VALUES {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono, pNacimiento, pGenero, pEstado, pCargo, pMunicipio), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", pNombre, pApellido, pDUI, pNIT, pDireccion, pTelefono, pGenero, pEstado, pCargo, pMunicipio, pNacimiento), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 //RETORNO
