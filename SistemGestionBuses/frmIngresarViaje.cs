@@ -87,6 +87,23 @@ namespace SistemGestionBuses
             }
         }
 
+        void CargarUnidadTransporte()
+        {
+            try
+            {
+                DataTable dataTransporte = ControladorIngreso.ObtenerMunicipios();
+                cmbMunicipios.DataSource = dataTransporte;
+                cmbMunicipios.DisplayMember = "tipo_unidad";
+                cmbMunicipios.ValueMember = "id_tipo_unidad";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar las unidades de transporte.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -94,7 +111,7 @@ namespace SistemGestionBuses
 
         private void frmIngresarViaje_Load(object sender, EventArgs e)
         {
-            CargarMunicipios();
+            CargarDatosCMB();
         }
     }
 }

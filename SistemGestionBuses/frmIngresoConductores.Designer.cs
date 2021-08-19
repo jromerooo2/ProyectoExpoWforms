@@ -373,7 +373,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
@@ -404,7 +404,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button3.FlatAppearance.BorderSize = 2;
             this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
@@ -424,7 +424,7 @@
             // 
             this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnEliminar.FlatAppearance.BorderSize = 2;
             this.BtnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.BtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
@@ -443,7 +443,7 @@
             // 
             this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnActualizar.FlatAppearance.BorderSize = 2;
             this.BtnActualizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.BtnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
@@ -462,7 +462,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button4.FlatAppearance.BorderSize = 2;
             this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
@@ -481,7 +481,7 @@
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnAgregar.FlatAppearance.BorderSize = 2;
             this.BtnAgregar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
