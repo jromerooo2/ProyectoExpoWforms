@@ -45,12 +45,14 @@
     <Compile Include="ControladorConexion.cs" />
     <Compile Include="ControladorIngreso.cs" />
     <Compile Include="ControladorIngresoCliente.cs" />
+<<<<<<< HEAD
     <Compile Include="ControladorEmpleado.cs" />
+=======
+>>>>>>> parent of f323b11 (ya fue)
     <Compile Include="ControladorLogin.cs" />
     <Compile Include="ControladorMantenimiento.cs" />
     <Compile Include="ControladorRecuperar.cs" />
     <Compile Include="ControladorUsuario.cs" />
-    <Compile Include="ControladorViaje.cs" />
     <Compile Include="EncryptClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
