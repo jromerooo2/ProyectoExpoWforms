@@ -39,7 +39,7 @@
             this.txtDirCliente = new System.Windows.Forms.TextBox();
             this.txtApeCliente = new System.Windows.Forms.TextBox();
             this.txtCorCliente = new System.Windows.Forms.TextBox();
-            this.txtNumCliente = new System.Windows.Forms.TextBox();
+            this.txtTelCliente = new System.Windows.Forms.TextBox();
             this.txtNomCliente = new System.Windows.Forms.TextBox();
             this.btnEliminarClientes = new System.Windows.Forms.Button();
             this.btnActualizarCliente = new System.Windows.Forms.Button();
@@ -48,9 +48,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDatosCliente
@@ -58,16 +62,18 @@
             this.dgvDatosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatosCliente.Location = new System.Drawing.Point(12, 268);
             this.dgvDatosCliente.Name = "dgvDatosCliente";
-            this.dgvDatosCliente.Size = new System.Drawing.Size(620, 150);
+            this.dgvDatosCliente.Size = new System.Drawing.Size(642, 170);
             this.dgvDatosCliente.TabIndex = 58;
             this.dgvDatosCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(418, 102);
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(244, 90);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 57;
             this.label5.Text = "Correo";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -75,9 +81,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(529, 38);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(355, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 56;
             this.label4.Text = "Numero cel";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -85,9 +94,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(162, 102);
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(7, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 55;
             this.label3.Text = "Direccion";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -95,9 +106,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(349, 38);
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(182, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(58, 18);
             this.label2.TabIndex = 54;
             this.label2.Text = "Apellido";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -105,9 +118,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 38);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(7, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 53;
             this.label1.Text = "Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -123,7 +139,7 @@
             // 
             // txtDirCliente
             // 
-            this.txtDirCliente.Location = new System.Drawing.Point(165, 118);
+            this.txtDirCliente.Location = new System.Drawing.Point(10, 106);
             this.txtDirCliente.Multiline = true;
             this.txtDirCliente.Name = "txtDirCliente";
             this.txtDirCliente.Size = new System.Drawing.Size(215, 131);
@@ -132,7 +148,7 @@
             // 
             // txtApeCliente
             // 
-            this.txtApeCliente.Location = new System.Drawing.Point(352, 54);
+            this.txtApeCliente.Location = new System.Drawing.Point(185, 42);
             this.txtApeCliente.Name = "txtApeCliente";
             this.txtApeCliente.Size = new System.Drawing.Size(131, 20);
             this.txtApeCliente.TabIndex = 50;
@@ -140,23 +156,23 @@
             // 
             // txtCorCliente
             // 
-            this.txtCorCliente.Location = new System.Drawing.Point(421, 118);
+            this.txtCorCliente.Location = new System.Drawing.Point(247, 106);
             this.txtCorCliente.Name = "txtCorCliente";
             this.txtCorCliente.Size = new System.Drawing.Size(211, 20);
             this.txtCorCliente.TabIndex = 49;
             this.txtCorCliente.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // txtNumCliente
+            // txtTelCliente
             // 
-            this.txtNumCliente.Location = new System.Drawing.Point(532, 54);
-            this.txtNumCliente.Name = "txtNumCliente";
-            this.txtNumCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtNumCliente.TabIndex = 48;
-            this.txtNumCliente.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtTelCliente.Location = new System.Drawing.Point(358, 42);
+            this.txtTelCliente.Name = "txtTelCliente";
+            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCliente.TabIndex = 48;
+            this.txtTelCliente.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtNomCliente
             // 
-            this.txtNomCliente.Location = new System.Drawing.Point(165, 54);
+            this.txtNomCliente.Location = new System.Drawing.Point(10, 42);
             this.txtNomCliente.Name = "txtNomCliente";
             this.txtNomCliente.Size = new System.Drawing.Size(131, 20);
             this.txtNomCliente.TabIndex = 47;
@@ -164,7 +180,8 @@
             // 
             // btnEliminarClientes
             // 
-            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 218);
+            this.btnEliminarClientes.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 105);
             this.btnEliminarClientes.Name = "btnEliminarClientes";
             this.btnEliminarClientes.Size = new System.Drawing.Size(122, 31);
             this.btnEliminarClientes.TabIndex = 46;
@@ -174,7 +191,8 @@
             // 
             // btnActualizarCliente
             // 
-            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 171);
+            this.btnActualizarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 55);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
             this.btnActualizarCliente.Size = new System.Drawing.Size(122, 31);
             this.btnActualizarCliente.TabIndex = 45;
@@ -184,7 +202,7 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(424, 218);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(303, 206);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(122, 31);
             this.btnAgregarCliente.TabIndex = 44;
@@ -196,7 +214,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +229,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(647, 450);
+            this.pictureBox2.Size = new System.Drawing.Size(666, 450);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
@@ -220,44 +238,65 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(421, 168);
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(244, 156);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(81, 18);
             this.label6.TabIndex = 60;
             this.label6.Text = "Tipo cliente";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 118);
+            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(12, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 31);
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.btnAgregarCliente);
+            this.panel1.Controls.Add(this.txtApeCliente);
+            this.panel1.Controls.Add(this.txtCorCliente);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtDirCliente);
+            this.panel1.Controls.Add(this.txtNomCliente);
+            this.panel1.Controls.Add(this.txtTelCliente);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(174, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(471, 250);
+            this.panel1.TabIndex = 78;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.btnActualizarCliente);
+            this.panel2.Controls.Add(this.btnEliminarClientes);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(12, 113);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(148, 149);
+            this.panel2.TabIndex = 79;
+            // 
             // frmIngresoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dgvDatosCliente);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(666, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmbTipCliente);
-            this.Controls.Add(this.txtDirCliente);
-            this.Controls.Add(this.txtApeCliente);
-            this.Controls.Add(this.txtCorCliente);
-            this.Controls.Add(this.txtNumCliente);
-            this.Controls.Add(this.txtNomCliente);
-            this.Controls.Add(this.btnEliminarClientes);
-            this.Controls.Add(this.btnActualizarCliente);
-            this.Controls.Add(this.btnAgregarCliente);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgvDatosCliente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "frmIngresoCliente";
@@ -266,8 +305,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -283,7 +324,7 @@
         private System.Windows.Forms.TextBox txtDirCliente;
         private System.Windows.Forms.TextBox txtApeCliente;
         private System.Windows.Forms.TextBox txtCorCliente;
-        private System.Windows.Forms.TextBox txtNumCliente;
+        private System.Windows.Forms.TextBox txtTelCliente;
         private System.Windows.Forms.TextBox txtNomCliente;
         private System.Windows.Forms.Button btnEliminarClientes;
         private System.Windows.Forms.Button btnActualizarCliente;
@@ -292,5 +333,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

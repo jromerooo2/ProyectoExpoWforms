@@ -271,5 +271,23 @@ namespace Modelo
                 return retorno;
             }   
         }
+        //Igreso datos cliente
+        public static bool AgregarCliente(string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
+        {
+            bool retorno = false;
+            try
+            {
+                //INCERCION
+                MySqlCommand cmdinsertar = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", pNomCliente, pApeCliente, pTelCliente,pDirCliente,pCorCliente,pTipCliente), ModeloConexion.GetConnection());
+                //VERIFICACION
+                retorno = Convert.ToBoolean(cmdinsertar.ExecuteNonQuery());
+                //RETORNO
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
     }
 }
