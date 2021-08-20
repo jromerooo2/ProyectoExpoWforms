@@ -45,7 +45,6 @@
     <Compile Include="ControladorConexion.cs" />
     <Compile Include="ControladorIngreso.cs" />
     <Compile Include="ControladorLogin.cs" />
-    <Compile Include="ControladorMantenimiento.cs" />
     <Compile Include="ControladorRecuperar.cs" />
     <Compile Include="ControladorUsuario.cs" />
     <Compile Include="EncryptClass.cs" />
