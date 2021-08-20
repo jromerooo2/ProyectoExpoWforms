@@ -35,6 +35,7 @@ namespace Controlador
         {
             return ModeloIngreso.CargarCargo();
         }
+
         //cmb innner Cargo
         public static DataTable CargarCargoInner_controlador(int id)
         {

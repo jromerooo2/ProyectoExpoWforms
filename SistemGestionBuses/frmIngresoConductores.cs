@@ -140,6 +140,7 @@ namespace SistemGestionBuses
         public frmIngresoConductores()
         {
             InitializeComponent();
+            CargarDatos();
         }
 
         private void frmIngresoConductores_Load(object sender, EventArgs e)
@@ -193,7 +194,6 @@ namespace SistemGestionBuses
 
         private void btnAgregar_click(object sender, EventArgs e)
         {
-
             EnvioDatos();
         }
 
@@ -220,6 +220,16 @@ namespace SistemGestionBuses
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

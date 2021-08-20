@@ -46,6 +46,7 @@
     <Compile Include="ModeloIngreso.cs" />
     <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloRecuperar.cs" />
+    <Compile Include="ModeloUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

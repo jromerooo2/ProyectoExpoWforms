@@ -91,7 +91,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.label6.Font = new System.Drawing.Font("Yu Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(125, 311);
+            this.label6.Location = new System.Drawing.Point(125, 320);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 26);
@@ -178,9 +178,9 @@
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(384, 3);
+            this.panel1.Location = new System.Drawing.Point(383, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 401);
+            this.panel1.Size = new System.Drawing.Size(274, 421);
             this.panel1.TabIndex = 25;
             // 
             // button1
@@ -214,6 +214,7 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Inicio de Sesión";
