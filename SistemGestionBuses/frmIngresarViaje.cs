@@ -85,7 +85,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataClientes = ControladorIngreso.ObtenerTipoCliente();
+                DataTable dataClientes = ControladorViaje.ObtenerCliente();
                 cmbCliente.DataSource = dataClientes;
                 cmbCliente.DisplayMember = "nombres_cliente AND apellidos_cliente";
                 cmbCliente.ValueMember = "id_cliente";
@@ -102,7 +102,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataMunicipio = ControladorIngreso.ObtenerMunicipios();
+                DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
                 cmbMunicipios.DataSource = dataMunicipio;
                 cmbMunicipios.DisplayMember = "municipio";
                 cmbMunicipios.ValueMember = "id_municipio";
@@ -119,7 +119,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataTransporte = ControladorIngreso.ObtenerTipoUnidadTransporte(  );
+                DataTable dataTransporte = ControladorViaje.ObtenerTipoUnidadTransporte(  );
                 cmbUnidadTransporte.DataSource = dataTransporte;
                 cmbUnidadTransporte.DisplayMember = "tipo_unidad";
                 cmbUnidadTransporte.ValueMember = "id_tipo_unidad";
@@ -136,7 +136,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataMetodoPago = ControladorIngreso.ObtenerMetodoPago();
+                DataTable dataMetodoPago = ControladorViaje.ObtenerMetodoPago();
                 cmbMetodoPago.DataSource = dataMetodoPago;
                 cmbMetodoPago.DisplayMember = "metodo_pago";
                 cmbMetodoPago.ValueMember = "id_metodo_pago";
@@ -153,7 +153,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataMetodoPago = ControladorIngreso.ObtenerEstadoViaje();
+                DataTable dataMetodoPago = ControladorViaje.ObtenerEstadoViaje();
                 cmbEstadoViaje.DataSource = dataMetodoPago;
                 cmbEstadoViaje.DisplayMember = "estado_viaje";
                 cmbEstadoViaje.ValueMember = "id_estado_viaje";

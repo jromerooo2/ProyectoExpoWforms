@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Controlador
 {
-    class ControladorViaje
+    public class ControladorViaje
     {
         //Atributos para el viaje
         public static int id_destino { get; set; }
