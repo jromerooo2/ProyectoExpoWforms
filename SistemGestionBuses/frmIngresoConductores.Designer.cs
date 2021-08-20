@@ -518,6 +518,7 @@
             this.dgvIngreso.Name = "dgvIngreso";
             this.dgvIngreso.Size = new System.Drawing.Size(1028, 206);
             this.dgvIngreso.TabIndex = 29;
+            this.dgvIngreso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngreso_CellContentClick);
             // 
             // pictureBox2
             // 

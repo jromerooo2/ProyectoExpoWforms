@@ -233,5 +233,10 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void dgvIngreso_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
