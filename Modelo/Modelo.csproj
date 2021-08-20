@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="ModeloConexion.cs" />
     <Compile Include="ModeloEmpleado.cs" />
-    <Compile Include="ModeloIngreso.cs" />
     <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloMantenimiento.cs" />
     <Compile Include="ModeloRecuperar.cs" />
