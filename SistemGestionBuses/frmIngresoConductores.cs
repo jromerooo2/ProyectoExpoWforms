@@ -15,13 +15,13 @@ namespace SistemGestionBuses
     public partial class frmIngresoConductores : Form
     {
         public DataTable datosCond;
-        public ControladorIngreso objCond;
+        public ControladorEmpleado objCond;
         //cmb Cargar Cargo
         void CargarCargo()
         {
             try
             {
-                DataTable dataCargo = ControladorIngreso.ObtenerCargo();
+                DataTable dataCargo = ControladorEmpleado.ObtenerCargo();
                 cmbCargo.DataSource = dataCargo;
                 cmbCargo.DisplayMember = "cargo";
                 cmbCargo.ValueMember = "id_cargo";
@@ -38,7 +38,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataGenero = ControladorIngreso.ObtenerGenero();
+                DataTable dataGenero = ControladorEmpleado.ObtenerGenero();
                 cmbGenero.DataSource = dataGenero;
                 cmbGenero.DisplayMember = "genero";
                 cmbGenero.ValueMember = "id_genero";
@@ -55,7 +55,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataMunicipio = ControladorIngreso.ObtenerMunicipios();
+                DataTable dataMunicipio = ControladorEmpleado.ObtenerMunicipios();
                 cmbMunicipio.DataSource = dataMunicipio;
                 cmbMunicipio.DisplayMember = "municipio";
                 cmbMunicipio.ValueMember = "id_municipio";
@@ -72,7 +72,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataEstado = ControladorIngreso.ObtenerEstado();
+                DataTable dataEstado = ControladorEmpleado.ObtenerEstado();
                 cmbEstado.DataSource = dataEstado;
                 cmbEstado.DisplayMember = "estado_empleado";
                 cmbEstado.ValueMember = "id_estado_empleado";
@@ -119,7 +119,7 @@ namespace SistemGestionBuses
                 id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
                 direccion_empleado = TxtDireccion.Text;
                 //INSTANCIAR OBJETO
-                objCond = new ControladorIngreso(nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
+                objCond = new ControladorEmpleado(nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
                 bool respuesta = objCond.EnviarDatosControlador();
                 if (respuesta == true)
                 {
@@ -230,6 +230,11 @@ namespace SistemGestionBuses
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvIngreso_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
