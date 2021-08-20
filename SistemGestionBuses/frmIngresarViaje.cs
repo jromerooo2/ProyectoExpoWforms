@@ -18,6 +18,9 @@ namespace SistemGestionBuses
             InitializeComponent();
             CargarDatosCMB();
         }
+        public ControladorViaje objViaje;
+        public DataTable datosViaje;
+        public static int id_viaje, id_destino;
 
         public bool Vacio()
         {
@@ -64,7 +67,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                CargarClientes();
+                //CargarClientes();
                 CargarUnidadTransporte();
                 CargarMunicipios();
                 //CargarConductor();
@@ -81,28 +84,28 @@ namespace SistemGestionBuses
         }
         //Region de todos los metodos para cargar los combobox
         #region CMB
-        void CargarClientes()
-        {
-            try
-            {
-                DataTable dataClientes = ControladorIngreso.ObtenerCliente();
-                cmbCliente.DataSource = dataClientes;
-                cmbCliente.DisplayMember = "nombres_cliente AND apellidos_cliente";
-                cmbCliente.ValueMember = "id_cliente";
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al cargar los clientes.", "Error de carga",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Error);
-            }
-        }
+        //void CargarClientes()
+        //{
+        //    try
+        //    {
+        //        DataTable dataClientes = ControladorViaje.ObtenerCliente();
+        //        cmbCliente.DataSource = dataClientes;
+        //        cmbCliente.DisplayMember = "nombres_cliente AND apellidos_cliente";
+        //        cmbCliente.ValueMember = "id_cliente";
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Error al cargar los clientes.", "Error de carga",
+        //                         MessageBoxButtons.OK,
+        //                         MessageBoxIcon.Error);
+        //    }
+        //}
 
         void CargarMunicipios()
         {
             try
             {
-                DataTable dataMunicipio = ControladorIngreso.ObtenerMunicipios();
+                DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
                 cmbMunicipios.DataSource = dataMunicipio;
                 cmbMunicipios.DisplayMember = "municipio";
                 cmbMunicipios.ValueMember = "id_municipio";
@@ -119,7 +122,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataTransporte = ControladorIngreso.ObtenerTipoUnidadTransporte(  );
+                DataTable dataTransporte = ControladorViaje.ObtenerTipoUnidadTransporte(  );
                 cmbUnidadTransporte.DataSource = dataTransporte;
                 cmbUnidadTransporte.DisplayMember = "tipo_unidad";
                 cmbUnidadTransporte.ValueMember = "id_tipo_unidad";
@@ -136,7 +139,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataMetodoPago = ControladorIngreso.ObtenerMetodoPago();
+                DataTable dataMetodoPago = ControladorViaje.ObtenerMetodoPago();
                 cmbMetodoPago.DataSource = dataMetodoPago;
                 cmbMetodoPago.DisplayMember = "metodo_pago";
                 cmbMetodoPago.ValueMember = "id_metodo_pago";
@@ -153,7 +156,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataMetodoPago = ControladorIngreso.ObtenerEstadoViaje();
+                DataTable dataMetodoPago = ControladorViaje.ObtenerEstadoViaje();
                 cmbEstadoViaje.DataSource = dataMetodoPago;
                 cmbEstadoViaje.DisplayMember = "estado_viaje";
                 cmbEstadoViaje.ValueMember = "id_estado_viaje";
@@ -168,26 +171,43 @@ namespace SistemGestionBuses
         #endregion 
 
 
-        //void EnvioDatos()
-        //{
-        //    string nombreViaje, fecha, tarifa;
-        //    int id_destino, id_unidad, id_empleado, id_estado_viaje, id_metodo_pago;
-        //    nombreViaje = txtNombreViaje.Text;
-        //    fecha = dtpFechaViaje.Text;
-        //    tarifa = txtTarifaViaje.Text;
-        //    id
-        //    bool res = empresa.AgregarEmpresa();
-        //    if (res)
-        //    {
-        //        MessageBox.Show("Empresa registrada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Oops!, ocurrió un error al registrar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        //    }
-        //}
+        void EnvioDatos()
+        {
+            string nombreViaje, fecha_viaje, destino;
+            int id_unidad, id_empleado, id_estado_viaje, id_metodo_pago, id_cliente, id_municipio, tarifa, id_tipo_destino;
+            nombreViaje = txtNombreViaje.Text;
+            fecha_viaje = dtpFechaViaje.Text;
+            tarifa = Convert.ToInt32(txtTarifaViaje.Text);
+            destino = txtDestino.Text;
+            id_unidad = Convert.ToInt16(cmbUnidadTransporte.SelectedValue);
+            id_metodo_pago = Convert.ToInt16(cmbMetodoPago.SelectedValue);
+            id_estado_viaje = Convert.ToInt16(cmbEstadoViaje.SelectedValue);
+            id_empleado = Convert.ToInt16(cmbConductor.SelectedValue);
+            id_cliente = Convert.ToInt16(cmbCliente.SelectedValue);
+            id_municipio = Convert.ToInt16(cmbMunicipios.SelectedValue);
+            id_tipo_destino = Convert.ToInt16(cmbTipoDestino.SelectedValue);
+            objViaje = new ControladorViaje(id_cliente, id_unidad, id_metodo_pago, id_empleado, id_municipio, id_estado_viaje, tarifa, id_tipo_destino, nombreViaje, destino, fecha_viaje, id_destino);
+            objViaje.EnviarDatos_ControllerDestino();
+            bool respuestadestino = objViaje.EnviarDatos_ControllerDestino();
+            if (respuestadestino == true)
+            {
+                txtIDdestino.Text = Convert.ToString(ControladorViaje.id_destino);
+                bool respuestaviaje = objViaje.EnviarDatos_ControllerViaje();
+                if (respuestaviaje == true)
+                {
+                    MessageBox.Show("Destino registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Oops!, ocurrió un error al registrar del destino, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
+        }
 
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -201,6 +221,11 @@ namespace SistemGestionBuses
             LimpiarCampos();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnCrearViaje_Click(object sender, EventArgs e)
         {
             Vacio();
@@ -208,7 +233,10 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            //EnvioDatos();
+            else
+            {
+                EnvioDatos();
+            }            
         }
     }
 }
