@@ -43,15 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModeloConexion.cs" />
-<<<<<<< HEAD
     <Compile Include="ModeloEmpleado.cs" />
-=======
->>>>>>> parent of f323b11 (ya fue)
     <Compile Include="ModeloIngreso.cs" />
     <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloMantenimiento.cs" />
     <Compile Include="ModeloRecuperar.cs" />
     <Compile Include="ModeloUsuario.cs" />
+    <Compile Include="ModeloViaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
