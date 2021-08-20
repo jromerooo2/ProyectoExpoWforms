@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorConexion.cs" />
+<<<<<<< Updated upstream
     <Compile Include="ControladorIngreso.cs" />
     <Compile Include="ControladorIngresoCliente.cs" />
+=======
     <Compile Include="ControladorEmpleado.cs" />
+>>>>>>> Stashed changes
     <Compile Include="ControladorLogin.cs" />
     <Compile Include="ControladorMantenimiento.cs" />
     <Compile Include="ControladorRecuperar.cs" />
