@@ -13,7 +13,7 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresoCliente : Form
     {
-        public ControladorIngreso objCliente;
+        public ControladorIngresoCliente objCliente;
 
         public frmIngresoCliente()
         {
@@ -58,8 +58,8 @@ namespace SistemGestionBuses
                 correo_cliente = txtCorCliente.Text;
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);                
                 //INSTANCIAR OBJETO
-                objCliente = new ControladorIngreso(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
-                bool respuesta = objCliente.EnviarDatosControlador();
+                objCliente = new ControladorIngresoCliente (nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                bool respuesta = objCliente.EnviarClientes();
                 if (respuesta == true)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
