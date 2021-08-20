@@ -85,7 +85,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataClientes = ControladorIngreso.ObtenerCliente();
+                DataTable dataClientes = ControladorIngreso.ObtenerTipoCliente();
                 cmbCliente.DataSource = dataClientes;
                 cmbCliente.DisplayMember = "nombres_cliente AND apellidos_cliente";
                 cmbCliente.ValueMember = "id_cliente";

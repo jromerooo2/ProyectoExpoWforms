@@ -198,42 +198,6 @@ namespace Modelo
             }
         }
 
-        //Cargar Metodo Pago
-        public static DataTable CargarMetodoPago()
-        {
-            DataTable data;
-            try
-            {
-                string instruccion = "SELECT * FROM tb_metodo_pago";
-                MySqlCommand cmdMetodoPago = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdMetodoPago);
-                data = new DataTable();
-                adp.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
-                return data = null;
-            }
-        }
-
-        public static DataTable CargarEstadoViaje()
-        {
-            DataTable data;
-            try
-            {
-                string query = "SELECT * FROM tb_estado_viaje";
-                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
-                data = new DataTable();
-                adp.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
-                return data = null;
-            }
-        }
         //Cargar tipo cliente 
         public static DataTable CargarTipoCliente()
         {
