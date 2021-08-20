@@ -34,7 +34,7 @@ namespace SistemGestionBuses
         }
 
         public DataTable datosCond;
-        public ControladorEmpleado objCond;
+        public ControladorIngreso objCond;
 
         private void CargarEmpleados()
         {
