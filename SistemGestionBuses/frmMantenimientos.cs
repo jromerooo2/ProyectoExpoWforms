@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controlador;
 
 namespace SistemGestionBuses
 {
@@ -15,6 +16,16 @@ namespace SistemGestionBuses
         public frmMantenimientos()
         {
             InitializeComponent();
+        }
+
+        private void frmMantenimientos_Load(object sender, EventArgs e)
+        {
+            if (ControladorMantenimiento.ReturnVehicleType() != null)
+            {
+                CmbTipoVehiculo.DataSource = ControladorMantenimiento.ReturnVehicleType();
+                CmbTipoVehiculo.ValueMember = "id_tipo_unidad";
+                CmbTipoVehiculo.DisplayMember = "tipo_unidad";
+            }
         }
     }
 }
