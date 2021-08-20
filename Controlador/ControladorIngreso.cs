@@ -50,7 +50,12 @@ namespace Controlador
         public static DataTable CargarEstadoInner_controlador(int id)
         {
             return ModeloIngreso.CargarEstadoInner(id);
-        }      
+        }
+        //cmb Cliente
+        public static DataTable ObtenerTipoCliente()
+        {
+            return ModeloIngreso.CargarCliente();
+        }
         //cmbTipoUnidadTransporte
         public static DataTable ObtenerTipoUnidadTransporte()
         {
@@ -87,16 +92,22 @@ namespace Controlador
         public int id_cargo { get; set; }
         public  int id_municipio { get; set; }
         //CONSTRUCTOR
-        public ControladorIngreso(string pNombre,  string pApellido,  string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
+        public ControladorIngreso(string pNombre, string pNomCliente, string pApellido, string pApeCliente, string pDUI, string pTelCliente, string pDirCliente, string pCorCliente, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, int pTipCliente, string pNacimiento)
         {
             //Atributo = parametro
             nombres_empleado = pNombre;
+            nombres_cliente = pNomCliente;
             apellidos_empleado = pApellido;
+            apellidos_cliente = pApeCliente;
+            telefono_cliente = pTelCliente;
+            direccion_cliente = pDirCliente;
+            correo_cliente = pCorCliente;
             DUI = pDUI;
             NIT = pNIT;
             direccion_empleado = pDireccion;
             telefono_empleado = pTelefono;
             nacimiento_empleado = pNacimiento;
+            id_tipo_cliente = pTipCliente;
             id_genero = pGenero;
             id_estado_empleado = pEstado;
             id_cargo = pCargo;
@@ -107,6 +118,11 @@ namespace Controlador
         public bool EnviarDatosControlador()
         {
             return ModeloIngreso.RegistrarEmpleado(nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
-        }       
+        }
+
+        public bool EnviarClientes()
+        {
+            return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente );
+        }
     }
 }

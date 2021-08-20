@@ -13,11 +13,7 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresoCliente : Form
     {
-<<<<<<< Updated upstream
-        public ControladorIngresoCliente objCliente;
-=======
-        public ControladorEmpleado objCliente;
->>>>>>> Stashed changes
+        public ControladorIngreso objCliente;
 
         public frmIngresoCliente()
         {
@@ -48,7 +44,6 @@ namespace SistemGestionBuses
         }
 
         //Envio de Datos
-<<<<<<< Updated upstream
         void EnvioDatos()
         {
 
@@ -63,7 +58,7 @@ namespace SistemGestionBuses
                 correo_cliente = txtCorCliente.Text;
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);                
                 //INSTANCIAR OBJETO
-                objCliente = new ControladorIngresoCliente(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                objCliente = new ControladorIngreso(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
                 bool respuesta = objCliente.EnviarDatosControlador();
                 if (respuesta == true)
                 {
@@ -81,41 +76,6 @@ namespace SistemGestionBuses
                 MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-=======
-        //void EnvioDatos()
-        //{
-
-        //    try
-        //    {
-        //        int genero = 1;
-        //        string nombre_cliente, apellido_cliente, telefono_cliente,direccion_cliente,correo_cliente;
-        //        int id_tipo_cliente;
-        //        nombre_cliente = txtNomCliente.Text;
-        //        apellido_cliente = txtApeCliente.Text;
-        //        telefono_cliente = txtTelCliente.Text;
-        //        direccion_cliente = txtDirCliente.Text;
-        //        correo_cliente = txtCorCliente.Text;
-        //        id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);                
-        //        //INSTANCIAR OBJETO
-        //        objCliente = new ControladorEmpleado(nombre_cliente, apellido_cliente, telefono_cliente, genero ,direccion_cliente, correo_cliente, id_tipo_cliente);
-        //        bool respuesta = objCliente.EnviarDatosControlador();
-        //        if (respuesta == true)
-        //        {
-        //            MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Usuario no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
->>>>>>> Stashed changes
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -193,6 +153,11 @@ namespace SistemGestionBuses
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -206,27 +171,6 @@ namespace SistemGestionBuses
         private void frmIngresoCliente_Load(object sender, EventArgs e)
         {
             CargarTipoCliente();
-            LimpiarCampos();
-        }
-       
-        void LimpiarCampos()
-        {
-            txtNomCliente.Clear();
-            txtApeCliente.Clear();
-            txtTelCliente.Clear();
-            txtDirCliente.Clear();
-            txtCorCliente.Clear();
-            cmbTipCliente.SelectedValue = 1;
-        }
-
-        private void btnAgregarCliente_Click(object sender, EventArgs e)
-        {
-            EnvioDatos();
-        }
-
-        private void btnLimpiarCampos_Click_1(object sender, EventArgs e)
-        {
-            LimpiarCampos();
         }
     }
 }

@@ -208,7 +208,7 @@
             this.btnAgregarCliente.TabIndex = 44;
             this.btnAgregarCliente.Text = "Agregar clientes";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
-            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            this.btnAgregarCliente.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -256,7 +256,6 @@
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
             // 
             // panel1
             // 
