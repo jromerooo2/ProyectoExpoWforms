@@ -64,12 +64,12 @@ namespace SistemGestionBuses
         {
             try
             {
-                CargarClientes();
-                CargarUnidadTransporte();
-                CargarMunicipios();
-                //CargarConductor();
-                CargarMetodoPago();
-                CargarEstadoViaje();
+                //CargarClientes();
+                //CargarUnidadTransporte();
+                //CargarMunicipios();
+                ////CargarConductor();
+                //CargarMetodoPago();
+                //CargarEstadoViaje();
                 //CargarTipoDestino();
             }
             catch (Exception)
@@ -80,6 +80,7 @@ namespace SistemGestionBuses
             }
         }
         //Region de todos los metodos para cargar los combobox
+        /*
         #region CMB
         void CargarClientes()
         {
@@ -166,7 +167,8 @@ namespace SistemGestionBuses
             }
         }
         #endregion 
-
+        
+    */
 
         //void EnvioDatos()
         //{

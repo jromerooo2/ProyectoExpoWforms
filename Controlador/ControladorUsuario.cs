@@ -14,5 +14,10 @@ namespace Controlador
         {
             return ModeloUsuario.CargarEmpleados();
         }
+
+        public bool RegistrarUsuario(string user, string password, string correo,int idCargo,int idEmpleado)
+        {
+            return ModeloUsuario.RegistrarUser();
+        }
     }
 }
