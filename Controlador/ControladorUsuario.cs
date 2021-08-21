@@ -17,7 +17,10 @@ namespace Controlador
 
         public bool RegistrarUsuario(string user, string password, string correo,int idCargo,int idEmpleado)
         {
-            return ModeloUsuario.RegistrarUser();
+            //haciendolo MD5
+            string passMD5 = EncryptClass.Encrypt(password);
+
+            return ModeloUsuario.RegistrarUser(idEmpleado, user, passMD5, correo);
         }
     }
 }

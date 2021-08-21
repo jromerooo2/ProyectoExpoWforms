@@ -30,12 +30,16 @@ namespace SistemGestionBuses
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            CargarEmpleados();
+            CargarDatos();
         }
 
         public DataTable datosCond;
 
-
+        void CargarDatos()
+        {
+            CargarEmpleados();
+            CargarCargos();
+        }
         private void CargarEmpleados()
         {
 
@@ -56,26 +60,65 @@ namespace SistemGestionBuses
         
 
     }
-
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            EnvioDatos();
-        }
-        public ControladorUsuario objCond;
-        void EnvioDatos()
+        private void CargarCargos()
         {
 
             try
             {
-                string user,password, correo;
-                int id_empleado, id_cargo;
+                DataTable dataCargo = ControladorIngreso.ObtenerCargo();
+                cmbCargo.DataSource = dataCargo;
+                cmbCargo.DisplayMember = "cargo";
+                cmbCargo.ValueMember = "id_cargo";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los cargo.", "Error de carga.",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
 
-                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
-                user = txtUser.Text;
-                password = txtPassword.Text;
-                correo = txtCorreo.Text;
-                id_empleado =Convert.ToInt16(cmbEmpleado.SelectedValue);
 
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            string user, password, correo;
+            int id_empleado, id_cargo;
+
+            id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+            user = txtUser.Text;
+            password = txtPassword.Text;
+            correo = txtCorreo.Text;
+            id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
+
+            if (!Empty(user, password, correo, id_cargo, id_empleado))
+            {
+                EnvioDatos(user, password, correo, id_cargo, id_empleado);
+            }
+            else
+            {
+                MessageBox.Show("Por favor rellena todos los campos para ingresar un usuario", "Llena los cambios");
+            }
+            
+        }
+        public ControladorUsuario objCond;
+        
+        bool Empty(string user, string pass, string correo, int? empleado, int? cargo)
+        {
+            if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(pass) ||
+                String.IsNullOrEmpty(correo) || empleado != null || cargo != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        void EnvioDatos(string user, string password, string correo, int id_cargo, int id_empleado)
+        {
+            try
+            {
                 bool respuesta = objCond.RegistrarUsuario(user, password, correo, id_cargo, id_empleado);
                 if (respuesta == true)
                 {

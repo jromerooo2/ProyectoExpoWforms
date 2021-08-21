@@ -60,9 +60,10 @@
             // dgvDatosCliente
             // 
             this.dgvDatosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosCliente.Location = new System.Drawing.Point(12, 268);
+            this.dgvDatosCliente.Location = new System.Drawing.Point(16, 330);
+            this.dgvDatosCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDatosCliente.Name = "dgvDatosCliente";
-            this.dgvDatosCliente.Size = new System.Drawing.Size(642, 170);
+            this.dgvDatosCliente.Size = new System.Drawing.Size(856, 209);
             this.dgvDatosCliente.TabIndex = 58;
             this.dgvDatosCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -71,9 +72,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(244, 90);
+            this.label5.Location = new System.Drawing.Point(325, 111);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 18);
+            this.label5.Size = new System.Drawing.Size(64, 23);
             this.label5.TabIndex = 57;
             this.label5.Text = "Correo";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -84,9 +86,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(355, 26);
+            this.label4.Location = new System.Drawing.Point(473, 32);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 18);
+            this.label4.Size = new System.Drawing.Size(102, 23);
             this.label4.TabIndex = 56;
             this.label4.Text = "Numero cel";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -96,9 +99,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 90);
+            this.label3.Location = new System.Drawing.Point(9, 111);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 55;
             this.label3.Text = "Direccion";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -108,9 +112,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(182, 26);
+            this.label2.Location = new System.Drawing.Point(243, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 18);
+            this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 54;
             this.label2.Text = "Apellido";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -121,9 +126,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 26);
+            this.label1.Location = new System.Drawing.Point(9, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 18);
+            this.label1.Size = new System.Drawing.Size(73, 23);
             this.label1.TabIndex = 53;
             this.label1.Text = "Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -131,59 +137,66 @@
             // cmbTipCliente
             // 
             this.cmbTipCliente.FormattingEnabled = true;
-            this.cmbTipCliente.Location = new System.Drawing.Point(421, 184);
+            this.cmbTipCliente.Location = new System.Drawing.Point(561, 226);
+            this.cmbTipCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipCliente.Name = "cmbTipCliente";
-            this.cmbTipCliente.Size = new System.Drawing.Size(120, 21);
+            this.cmbTipCliente.Size = new System.Drawing.Size(280, 24);
             this.cmbTipCliente.TabIndex = 52;
             this.cmbTipCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtDirCliente
             // 
-            this.txtDirCliente.Location = new System.Drawing.Point(10, 106);
+            this.txtDirCliente.Location = new System.Drawing.Point(13, 130);
+            this.txtDirCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDirCliente.Multiline = true;
             this.txtDirCliente.Name = "txtDirCliente";
-            this.txtDirCliente.Size = new System.Drawing.Size(215, 131);
+            this.txtDirCliente.Size = new System.Drawing.Size(285, 160);
             this.txtDirCliente.TabIndex = 51;
             this.txtDirCliente.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtApeCliente
             // 
-            this.txtApeCliente.Location = new System.Drawing.Point(185, 42);
+            this.txtApeCliente.Location = new System.Drawing.Point(247, 59);
+            this.txtApeCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApeCliente.Name = "txtApeCliente";
-            this.txtApeCliente.Size = new System.Drawing.Size(131, 20);
+            this.txtApeCliente.Size = new System.Drawing.Size(173, 22);
             this.txtApeCliente.TabIndex = 50;
             this.txtApeCliente.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtCorCliente
             // 
-            this.txtCorCliente.Location = new System.Drawing.Point(247, 106);
+            this.txtCorCliente.Location = new System.Drawing.Point(329, 130);
+            this.txtCorCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorCliente.Name = "txtCorCliente";
-            this.txtCorCliente.Size = new System.Drawing.Size(211, 20);
+            this.txtCorCliente.Size = new System.Drawing.Size(280, 22);
             this.txtCorCliente.TabIndex = 49;
             this.txtCorCliente.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtTelCliente
             // 
-            this.txtTelCliente.Location = new System.Drawing.Point(358, 42);
+            this.txtTelCliente.Location = new System.Drawing.Point(477, 52);
+            this.txtTelCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelCliente.Name = "txtTelCliente";
-            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCliente.Size = new System.Drawing.Size(132, 22);
             this.txtTelCliente.TabIndex = 48;
             this.txtTelCliente.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtNomCliente
             // 
-            this.txtNomCliente.Location = new System.Drawing.Point(10, 42);
+            this.txtNomCliente.Location = new System.Drawing.Point(13, 52);
+            this.txtNomCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomCliente.Name = "txtNomCliente";
-            this.txtNomCliente.Size = new System.Drawing.Size(131, 20);
+            this.txtNomCliente.Size = new System.Drawing.Size(173, 22);
             this.txtNomCliente.TabIndex = 47;
             this.txtNomCliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnEliminarClientes
             // 
             this.btnEliminarClientes.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 105);
+            this.btnEliminarClientes.Location = new System.Drawing.Point(16, 129);
+            this.btnEliminarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarClientes.Name = "btnEliminarClientes";
-            this.btnEliminarClientes.Size = new System.Drawing.Size(122, 31);
+            this.btnEliminarClientes.Size = new System.Drawing.Size(163, 38);
             this.btnEliminarClientes.TabIndex = 46;
             this.btnEliminarClientes.Text = "Eliminar cliente";
             this.btnEliminarClientes.UseVisualStyleBackColor = true;
@@ -192,9 +205,10 @@
             // btnActualizarCliente
             // 
             this.btnActualizarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 55);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(16, 68);
+            this.btnActualizarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
-            this.btnActualizarCliente.Size = new System.Drawing.Size(122, 31);
+            this.btnActualizarCliente.Size = new System.Drawing.Size(163, 38);
             this.btnActualizarCliente.TabIndex = 45;
             this.btnActualizarCliente.Text = "Actualizar clientes";
             this.btnActualizarCliente.UseVisualStyleBackColor = true;
@@ -202,9 +216,10 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(303, 206);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(404, 254);
+            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(122, 31);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(163, 38);
             this.btnAgregarCliente.TabIndex = 44;
             this.btnAgregarCliente.Text = "Agregar clientes";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
@@ -214,9 +229,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(163, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -227,9 +243,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(666, 450);
+            this.pictureBox2.Size = new System.Drawing.Size(888, 554);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
@@ -240,9 +256,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(244, 156);
+            this.label6.Location = new System.Drawing.Point(325, 192);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 18);
+            this.label6.Size = new System.Drawing.Size(105, 23);
             this.label6.TabIndex = 60;
             this.label6.Text = "Tipo cliente";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -250,9 +267,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 5);
+            this.button1.Location = new System.Drawing.Point(16, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 31);
+            this.button1.Size = new System.Drawing.Size(163, 38);
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
             this.button1.UseVisualStyleBackColor = true;
@@ -272,9 +290,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(174, 12);
+            this.panel1.Location = new System.Drawing.Point(232, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(471, 250);
+            this.panel1.Size = new System.Drawing.Size(628, 308);
             this.panel1.TabIndex = 78;
             // 
             // panel2
@@ -283,22 +302,24 @@
             this.panel2.Controls.Add(this.btnActualizarCliente);
             this.panel2.Controls.Add(this.btnEliminarClientes);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(12, 113);
+            this.panel2.Location = new System.Drawing.Point(16, 139);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 149);
+            this.panel2.Size = new System.Drawing.Size(197, 183);
             this.panel2.TabIndex = 79;
             // 
             // frmIngresoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 450);
+            this.ClientSize = new System.Drawing.Size(888, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmbTipCliente);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvDatosCliente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmIngresoCliente";
             this.Text = "frmIngresoCliente";
             this.Load += new System.EventHandler(this.frmIngresoCliente_Load);
