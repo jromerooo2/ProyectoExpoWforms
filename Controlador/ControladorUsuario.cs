@@ -22,5 +22,32 @@ namespace Controlador
 
             return ModeloUsuario.RegistrarUser(idEmpleado, user, passMD5, correo, idCargo);
         }
+
+        public static DataTable CargarUsuarios()
+        {
+            return ModeloUsuario.CargarUsuarios();
+        }
+
+        public static bool EliminarDatosController(int id)
+        {
+            return ModeloUsuario.EliminarUsuario(id);
+        }
+
+        public static object cargarUsuario(int id_empleado)
+        {
+            return ModeloUsuario.CargarUsuarioInner(id_empleado);
+        }
+        public static object cargarCargo(int id_empleado)
+        {
+            return ModeloUsuario.CargarCargoInner(id_empleado);
+        }
+
+        public bool ActualizarUser(int id, int id_empleado, string user, string correo, string password, int id_cargo)
+        {
+            //haciendolo MD5
+            string passMD5 = EncryptClass.Encrypt(password);
+
+            return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, passMD5, id_cargo);
+        }
     }
 }

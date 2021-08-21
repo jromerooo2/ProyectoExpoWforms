@@ -31,6 +31,21 @@ namespace SistemGestionBuses
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            cargarGridDatos();
+        }
+
+        private void cargarGridDatos()
+        {
+            try
+            {
+                DataTable data = ControladorUsuario.CargarUsuarios();
+                dgvUsuarios.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         public DataTable datosCond;
@@ -91,9 +106,10 @@ namespace SistemGestionBuses
             correo = txtCorreo.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
 
-            if (!Empty(user, password, correo, id_cargo, id_empleado))
+            if (!Empty(user, password, correo))
             {
                 EnvioDatos();
+                cargarGridDatos();
             }
             else
             {
@@ -103,10 +119,10 @@ namespace SistemGestionBuses
         }
         
         
-        bool Empty(string user, string pass, string correo, int empleado, int cargo)
+        bool Empty(string user, string pass, string correo)
         {
             if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(pass) ||
-                String.IsNullOrEmpty(correo) /*|| empleado > -1 || cargo > -1*/)
+                String.IsNullOrEmpty(correo) )
             {
                 return true;
             }
@@ -148,6 +164,89 @@ namespace SistemGestionBuses
 
         private void TxtApellidos_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtUser.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarDatos();
+                cargarGridDatos();
+            }
+        }
+
+        void EliminarDatos()
+        {
+            bool respuesta = ControladorUsuario.EliminarDatosController(Convert.ToInt16(txtId.Text));
+            if (respuesta)
+            {
+                MessageBox.Show("El registro se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El registro no se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvUsuarios.CurrentRow.Index;
+            txtId.Text = dgvUsuarios[0, i].Value.ToString();
+            txtUser.Text = dgvUsuarios[2, i].Value.ToString();
+            txtPassword.Text = dgvUsuarios[4, i].Value.ToString();
+            txtCorreo.Text = dgvUsuarios[3, i].Value.ToString();
+
+            int id_empleado = Convert.ToInt16(dgvUsuarios[1, i].Value.ToString());
+            cmbEmpleado.DataSource = ControladorUsuario.cargarUsuario(id_empleado);
+            cmbEmpleado.DisplayMember = "nombres_empleado";
+            cmbEmpleado.ValueMember = "id_empleado";
+
+            int id_cargo = Convert.ToInt16(dgvUsuarios[5, i].Value.ToString());
+            cmbCargo.DataSource = ControladorUsuario.cargarCargo(id_cargo);
+            cmbCargo.DisplayMember = "cargo";
+            cmbCargo.ValueMember = "id_cargo";
+        }
+
+        private void cmbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCargo_Click(object sender, EventArgs e)
+        {
+            CargarCargos();
+        }
+
+        private void cmbEmpleado_Click(object sender, EventArgs e)
+        {
+            CargarEmpleados();
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            string user, password, correo;
+            int id_empleado, id_cargo, id;
+            id = Convert.ToInt16(txtId.Text);
+            id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+            user = txtUser.Text;
+            password = txtPassword.Text;
+            correo = txtCorreo.Text;
+            id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
+            bool res = objCond.ActualizarUser(id,id_empleado, user, correo, password, id_cargo);
+            if (res)
+            {
+                MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargarGridDatos();
+            }
+            else
+            {
+                MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }
