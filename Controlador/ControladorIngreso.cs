@@ -57,15 +57,15 @@ namespace Controlador
             return ModeloIngreso.CargarUnidadTransporte();
         }
         //cmbMetodoPago
-        public static DataTable ObtenerMetodoPago()
-        {
-            return ModeloIngreso.CargarMetodoPago();
-        }
-        //cmb EstadoViaje
-        public static DataTable ObtenerEstadoViaje()
-        {
-            return ModeloIngreso.CargarEstadoViaje();
-        }
+        //public static DataTable ObtenerMetodoPago()
+        //{
+        //    return ModeloIngreso.CargarMetodoPago();
+        //}
+        ////cmb EstadoViaje
+        //public static DataTable ObtenerEstadoViaje()
+        //{
+        //    return ModeloIngreso.CargarEstadoViaje();
+        //}
 
         //ATRIBUTOS 
         public static int id_conductor { get; set; }
