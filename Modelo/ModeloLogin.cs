@@ -14,13 +14,11 @@ namespace Modelo
             bool retorno = false;
             try
             {
-                int activo = 1;
 
-                string query = "SELECT * FROM tbusuarios WHERE usuario = BINARY ?param1 AND clave = BINARY ?param2 AND idestado = ?param3";
+                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1 AND contrasena = BINARY ?param2";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
                 cmdselect.Parameters.Add(new MySqlParameter("param2", password));
-                cmdselect.Parameters.Add(new MySqlParameter("param2", activo));
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
                 return retorno;
             }

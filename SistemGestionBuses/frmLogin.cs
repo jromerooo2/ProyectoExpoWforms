@@ -35,6 +35,10 @@ namespace SistemGestionBuses
                 if (res)
                 {
                     //mostrar siguiente forms
+                    frmIngresoConductores next = new frmIngresoConductores();
+                    next.Show();
+                    this.Hide();
+
                 }
                 else
                 {
