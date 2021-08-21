@@ -64,7 +64,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(900, 436);
+            this.pictureBox2.Size = new System.Drawing.Size(864, 436);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -75,7 +75,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label5.Location = new System.Drawing.Point(280, 27);
+            this.label5.Location = new System.Drawing.Point(282, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(256, 43);
             this.label5.TabIndex = 78;
@@ -85,7 +85,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(616, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(611, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -121,7 +121,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(20, 110);
+            this.groupBox1.Location = new System.Drawing.Point(39, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 233);
             this.groupBox1.TabIndex = 81;
@@ -199,7 +199,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(248, 53);
+            this.textBox2.Location = new System.Drawing.Point(268, 53);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -219,7 +219,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(22, 52);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 28);
+            this.comboBox2.Size = new System.Drawing.Size(223, 28);
             this.comboBox2.TabIndex = 88;
             // 
             // label4
@@ -264,7 +264,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(244, 31);
+            this.label1.Location = new System.Drawing.Point(264, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 20);
@@ -308,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 436);
+            this.ClientSize = new System.Drawing.Size(864, 436);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
