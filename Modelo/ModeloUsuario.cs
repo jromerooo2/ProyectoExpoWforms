@@ -27,5 +27,10 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        public static bool RegistrarUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

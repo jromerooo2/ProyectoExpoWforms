@@ -34,7 +34,7 @@ namespace SistemGestionBuses
         }
 
         public DataTable datosCond;
-        public ControladorIngreso objCond;
+
 
         private void CargarEmpleados()
         {
@@ -61,15 +61,22 @@ namespace SistemGestionBuses
         {
             EnvioDatos();
         }
+        public ControladorUsuario objCond;
         void EnvioDatos()
         {
 
             try
             {
-                string user, apellido,password;
-                int id_empleado;
+                string user,password, correo;
+                int id_empleado, id_cargo;
 
-                bool respuesta = objCond.EnviarDatosControlador();
+                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+                user = txtUser.Text;
+                password = txtPassword.Text;
+                correo = txtCorreo.Text;
+                id_empleado =Convert.ToInt16(cmbEmpleado.SelectedValue);
+
+                bool respuesta = objCond.RegistrarUsuario(user, password, correo, id_cargo, id_empleado);
                 if (respuesta == true)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -85,6 +92,11 @@ namespace SistemGestionBuses
 
                 MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void TxtApellidos_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
