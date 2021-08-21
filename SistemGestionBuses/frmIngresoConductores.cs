@@ -233,5 +233,15 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

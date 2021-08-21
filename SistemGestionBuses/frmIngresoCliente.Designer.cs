@@ -143,6 +143,7 @@
             this.cmbTipCliente.Size = new System.Drawing.Size(280, 24);
             this.cmbTipCliente.TabIndex = 52;
             this.cmbTipCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            
             // 
             // txtDirCliente
             // 
@@ -223,7 +224,7 @@
             this.btnAgregarCliente.TabIndex = 44;
             this.btnAgregarCliente.Text = "Agregar clientes";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
-            this.btnAgregarCliente.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente1_Click);
             // 
             // pictureBox1
             // 

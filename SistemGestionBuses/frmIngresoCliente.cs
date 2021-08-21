@@ -30,8 +30,8 @@ namespace SistemGestionBuses
         {
             try
             {
-                //DataTable DataTipCliente = ControladorIngreso.ObtenerTipoCliente();
-                //cmbTipCliente.DataSource = DataTipCliente;
+                DataTable DataTipCliente = ControladorIngresoCliente.ObtenerTipoCliente();
+                cmbTipCliente.DataSource = DataTipCliente;
                 cmbTipCliente.DisplayMember = "tipo_cliente"; 
                 cmbTipCliente.ValueMember = "id_tipo_cliente";
             }
@@ -58,22 +58,22 @@ namespace SistemGestionBuses
                 correo_cliente = txtCorCliente.Text;
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);                
                 //INSTANCIAR OBJETO
-                objCliente = new ControladorIngresoCliente (nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                ControladorIngresoCliente objCliente = new ControladorIngresoCliente (nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
                 bool respuesta = objCliente.EnviarClientes();
                 if (respuesta == true)
                 {
-                    MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente agregado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cliente no agregado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops!, ocurrió un error al agregar clientes, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -115,7 +115,7 @@ namespace SistemGestionBuses
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -171,6 +171,11 @@ namespace SistemGestionBuses
         private void frmIngresoCliente_Load(object sender, EventArgs e)
         {
             CargarTipoCliente();
+        }
+
+        private void btnAgregarCliente1_Click(object sender, EventArgs e)
+        {
+            EnvioDatos();
         }
     }
 }
