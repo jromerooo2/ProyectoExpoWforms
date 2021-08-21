@@ -50,6 +50,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -104,6 +106,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
@@ -130,15 +134,16 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.Location = new System.Drawing.Point(625, 172);
+            this.button4.Location = new System.Drawing.Point(625, 163);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 40);
+            this.button4.Size = new System.Drawing.Size(132, 49);
             this.button4.TabIndex = 97;
             this.button4.Text = "Eliminar Mantenimiento";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -181,7 +186,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(487, 53);
+            this.textBox3.Location = new System.Drawing.Point(534, 52);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -192,18 +197,18 @@
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(268, 152);
+            this.dateTimePicker1.Location = new System.Drawing.Point(268, 187);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(193, 25);
             this.dateTimePicker1.TabIndex = 92;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(268, 53);
+            this.textBox2.Location = new System.Drawing.Point(314, 53);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 27);
+            this.textBox2.Size = new System.Drawing.Size(216, 27);
             this.textBox2.TabIndex = 91;
             // 
             // textBox1
@@ -219,7 +224,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(22, 52);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(223, 28);
+            this.comboBox2.Size = new System.Drawing.Size(287, 28);
             this.comboBox2.TabIndex = 88;
             // 
             // label4
@@ -227,7 +232,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(264, 129);
+            this.label4.Location = new System.Drawing.Point(264, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 86;
@@ -251,7 +256,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(483, 31);
+            this.label2.Location = new System.Drawing.Point(529, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
@@ -264,7 +269,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(264, 31);
+            this.label1.Location = new System.Drawing.Point(310, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 20);
@@ -304,6 +309,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label6.Location = new System.Drawing.Point(264, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 20);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "ID vehículo:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(268, 128);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(193, 27);
+            this.textBox4.TabIndex = 99;
+            // 
             // frmMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,7 +342,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
             this.Name = "frmMantenimientos";
-            this.Text = "frmMantenimientos";
+            this.Text = "Mantenimiento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -351,5 +377,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
     }
 }
