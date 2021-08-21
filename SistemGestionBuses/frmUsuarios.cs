@@ -93,7 +93,7 @@ namespace SistemGestionBuses
 
             if (!Empty(user, password, correo, id_cargo, id_empleado))
             {
-                EnvioDatos(user, password, correo, id_cargo, id_empleado);
+                EnvioDatos();
             }
             else
             {
@@ -101,12 +101,12 @@ namespace SistemGestionBuses
             }
             
         }
-        public ControladorUsuario objCond;
         
-        bool Empty(string user, string pass, string correo, int? empleado, int? cargo)
+        
+        bool Empty(string user, string pass, string correo, int empleado, int cargo)
         {
             if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(pass) ||
-                String.IsNullOrEmpty(correo) || empleado != null || cargo != null)
+                String.IsNullOrEmpty(correo) /*|| empleado > -1 || cargo > -1*/)
             {
                 return true;
             }
@@ -115,12 +115,22 @@ namespace SistemGestionBuses
                 return false;
             }
         }
-        void EnvioDatos(string user, string password, string correo, int id_cargo, int id_empleado)
+        public ControladorUsuario objCond = new ControladorUsuario();
+
+        void EnvioDatos()
         {
             try
             {
+                string user, password, correo;
+                int id_empleado, id_cargo;
+
+                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+                user = txtUser.Text;
+                password = txtPassword.Text;
+                correo = txtCorreo.Text;
+                id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
                 bool respuesta = objCond.RegistrarUsuario(user, password, correo, id_cargo, id_empleado);
-                if (respuesta == true)
+                if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -130,10 +140,9 @@ namespace SistemGestionBuses
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema." + ex.ToString(), "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

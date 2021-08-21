@@ -20,7 +20,7 @@ namespace Controlador
             //haciendolo MD5
             string passMD5 = EncryptClass.Encrypt(password);
 
-            return ModeloUsuario.RegistrarUser(idEmpleado, user, passMD5, correo);
+            return ModeloUsuario.RegistrarUser(idEmpleado, user, passMD5, correo, idCargo);
         }
     }
 }

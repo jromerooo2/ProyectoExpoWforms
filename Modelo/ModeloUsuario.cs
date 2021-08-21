@@ -29,13 +29,12 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int id_empleado, string user, string password, string correo)
+        public static bool RegistrarUser(int pid_empleado, string user, string password, string correo, int cargo )
         {
             bool res = false;
             try
             {
-                string query = "INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contraseña) VALUES(" + id_empleado + ", " + user + ", " + correo + "," + password + ")";
-                MySqlCommand insert = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario) VALUES('{0}','{1}', '{2}', '{3}','{4}')", pid_empleado, user, correo, password, cargo), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(insert.ExecuteNonQuery());
                 return res;
             }
