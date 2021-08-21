@@ -13,16 +13,17 @@ namespace Modelo
 
         public static string recuperarPassMail(string username)
         {
-            string retorno = "hellojuancho75@gmail.com";
+            string retorno = "";
             try
             {
-                string query = "SELECT correo_usuario FROM tb_cliente WHERE nombre_usuario = BINARY ?param1";
+                string query = "SELECT correo_usuario FROM tb_usuarios WHERE nombre_usuario= BINARY ?param1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
 
-                if (cmdselect.ExecuteScalar() == null)
+                MySqlDataReader reader = cmdselect.ExecuteReader();
+                while (reader.Read())
                 {
-                     retorno = "hellojuancho75@gmail.com";
+                    retorno = reader.GetString(0);
                 }
                 return retorno;
             }
