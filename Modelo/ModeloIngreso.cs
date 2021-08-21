@@ -43,7 +43,7 @@ namespace Modelo
                 return data;
             }
             catch (Exception)
-            {
+            { 
                 return data = null;
             }
         }
