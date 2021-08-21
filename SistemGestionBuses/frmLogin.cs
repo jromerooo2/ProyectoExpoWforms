@@ -38,7 +38,6 @@ namespace SistemGestionBuses
                     frmIngresoConductores next = new frmIngresoConductores();
                     next.Show();
                     this.Hide();
-
                 }
                 else
                 {
