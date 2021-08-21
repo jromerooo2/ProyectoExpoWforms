@@ -11,26 +11,43 @@ namespace Modelo
    public class ModeloRecuperar
     {
 
-        public static string recuperarPassMail(string username)
+        public static List<string> recuperarPassMail(string username)
         {
-            string retorno = "";
+            List<string> data = new List<string>();
             try
             {
-                string query = "SELECT correo_usuario FROM tb_usuarios WHERE nombre_usuario= BINARY ?param1";
+                string query = "SELECT id_usuario, correo_usuario FROM tb_usuarios WHERE nombre_usuario= BINARY ?param1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
 
                 MySqlDataReader reader = cmdselect.ExecuteReader();
                 while (reader.Read())
                 {
-                    retorno = reader.GetString(0);
+                    data.Add(reader.GetString(0));
+                    data.Add(reader.GetString(1));
                 }
-                return retorno;
+                return data;
             }
             catch (Exception)
             {
 
-                return retorno;
+                return data;
+            }
+        }
+
+        public static bool ActualizarContra(string passMD5, string v)
+        {
+            bool res = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena='" + passMD5 + "' WHERE id_usuario=" + v), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+                throw;
             }
         }
     }

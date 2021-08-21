@@ -70,7 +70,7 @@ namespace SistemGestionBuses
             int code = Convert.ToInt32(txtCode.Text);
             if (ControladorRecuperar.ConfirmCodes(code))
             {
-                MessageBox.Show("Son Iguales, puedes continuar");
+                MessageBox.Show("Se ha confirmado tu identidad, puedes continuar");
 
                 txtCode.ReadOnly = true;
                 btnConfirmar.Enabled = false;
@@ -87,6 +87,29 @@ namespace SistemGestionBuses
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            ControladorRecuperar obj = new ControladorRecuperar();
+            string contra = txtNueva.Text;
+            if (contra != "")
+            {
+                bool res = obj.ActualizarContra(contra);
+
+                if (res)
+                {
+                    MessageBox.Show("Se ha actualizado la contraseña");
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor escribe una contraseña nueva");
+            }
         }
     }
 }

@@ -12,12 +12,20 @@ namespace Controlador
 {
     public class ControladorRecuperar
     {
+        static List<string> res = new List<string>();
         public static bool RecuperarMail(string user)
         {
-            string res = ModeloRecuperar.recuperarPassMail(user);
-            mail(res);
+             res = ModeloRecuperar.recuperarPassMail(user);
+            mail(res[1]);
             return true;
         }
+        public bool ActualizarContra(string contra)
+        {
+            //haciendolo MD5
+            string passMD5 = EncryptClass.Encrypt(contra);
+            return ModeloRecuperar.ActualizarContra(passMD5, res[0]);
+        }
+
         static Random rnd = new Random();
         public static  int code;
 

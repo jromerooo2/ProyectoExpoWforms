@@ -62,6 +62,22 @@ namespace Modelo
             }
         }
 
+        public static bool ActualizarContra(string passMD5, string user)
+        {
+            bool res = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena='"+passMD5+"', WHERE nombre_usuario="+ user), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+                throw;
+            }
+        }
+
         public static bool EliminarUsuario(int id)
         {
             bool res = false;
