@@ -14,7 +14,7 @@ namespace Controlador
         //cmb Cliente
         public static DataTable ObtenerTipoCliente()
         {
-            return ModeloIngreso.CargarCliente();
+            return ModeloIngreso.CargarTipoCliente();
         }
 
        

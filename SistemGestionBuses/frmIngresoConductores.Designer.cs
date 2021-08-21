@@ -276,6 +276,7 @@
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(121, 26);
             this.cmbGenero.TabIndex = 26;
+            this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
             this.cmbGenero.Click += new System.EventHandler(this.cmbGenero_click);
             // 
             // label5
