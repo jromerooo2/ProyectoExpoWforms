@@ -11,8 +11,8 @@ namespace Controlador
     public class ControladorViaje
     {
         //Atributos para el viaje
-        public static int id_destino { get; set; }
         public static int id_viaje { get; set; }
+        public static int id_direccion_detalle { get; set; }
         public int id_estado_viaje { get; set; }
         public int id_unidad_transporte { get; set; }
         public int id_metodo_pago { get; set; }
@@ -20,15 +20,15 @@ namespace Controlador
         public int id_municipio { get; set; }
         public int tarifa { get; set; }
         public int id_empleado { get; set; }
-        public int id_tipo_destino { get; set; }
+        public int id_tipo_viaje{ get; set; }
         public string fecha_viaje { get; set; }
-        public string destino { get; set; }
         public string nombre_viaje { get; set; }
+        public string hora { get; set; }
+        public List<string>direcciones { get; set; }
 
         //Constructor
-        public ControladorViaje(int pidCliente, int pidUnidad_transporte, int pidMetodo_pago, int pidEmpleado, int pidMunicipio, int pidEstado_viaje, int ptarifa, int pidTipo_destino, string pnombre_viaje, string pdestino, string pfecha_viaje, int pidDestino)
+        public ControladorViaje(int pidCliente, int pidUnidad_transporte, int pidMetodo_pago, int pidEmpleado, int pidMunicipio, int pidEstado_viaje, int ptarifa, string phora, int pidTipo_destino, string pnombre_viaje, int pdireccion_detalle, string pfecha_viaje, List<string>pDirecciones)
         {
-            id_destino = pidDestino;
             id_cliente = pidCliente;
             id_unidad_transporte = pidUnidad_transporte;
             id_metodo_pago = pidMetodo_pago;
@@ -36,22 +36,25 @@ namespace Controlador
             id_municipio = pidMunicipio;
             id_estado_viaje = pidEstado_viaje;
             tarifa = ptarifa;
-            id_tipo_destino = pidTipo_destino;
+            hora = phora;
+            id_tipo_viaje = pidTipo_destino;
             nombre_viaje = pnombre_viaje;
-            destino = pdestino;
+            id_direccion_detalle = pdireccion_detalle;
             fecha_viaje = pfecha_viaje;
+            direcciones = pDirecciones;
         }
 
         public bool EnviarDatos_ControllerViaje()
         {
-            return ModeloViaje.RegistrarViaje(id_cliente, id_unidad_transporte, id_metodo_pago, id_empleado, id_estado_viaje, tarifa, id_destino, nombre_viaje, fecha_viaje);
+            return ModeloViaje.RegistrarViaje(nombre_viaje, id_cliente, id_unidad_transporte, id_empleado, fecha_viaje, hora, tarifa, id_estado_viaje, id_metodo_pago, id_tipo_viaje, id_direccion_detalle);
         }
 
-        public bool EnviarDatos_ControllerDestino()
-        {
-            return ModeloViaje.RegistrarDestino(destino, id_municipio, id_tipo_destino);
-        }
+        //public bool EnviarDatos_ControllerDirecciones()
+        //{
+        //    return ModeloViaje.RegistarDirecciones(direccion, id_municipio);
+        //}
 
+        #region CMB Controller
         //cmb Cliente
         public static DataTable ObtenerCliente()
         {
@@ -77,13 +80,15 @@ namespace Controlador
         {
             return ModeloViaje.CargarMunicipios();
         }
+        #endregion
 
 
-
+        #region CMB Controller Inner 
         //cmb inner Municipio
         public static DataTable CargarMunicipiosInner_controlador(int id)
         {
             return ModeloViaje.CargarMunicipioInner(id);
         }
+        #endregion
     }
 }

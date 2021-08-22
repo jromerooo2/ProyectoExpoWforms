@@ -21,7 +21,7 @@ namespace SistemGestionBuses
 
         public bool Vacio()
         {
-            if (txtDestino.Text.Trim() == "" &&
+            if (txtDireccion_final.Text.Trim() == "" &&
             txtNombreViaje.Text.Trim() == "" &&
             txtTarifaViaje.Text.Trim() == "" &&
             cmbCliente.SelectedIndex == 0 &&
@@ -29,7 +29,7 @@ namespace SistemGestionBuses
             cmbEstadoViaje.SelectedIndex == 0 &&
             cmbMetodoPago.SelectedIndex == 0 &&
             cmbTipoDestino.SelectedIndex == 0 &&
-            cmbMunicipios.SelectedIndex == 0 &&
+            cmbMunicipios_inicio.SelectedIndex == 0 &&
             cmbCliente.SelectedIndex == 0)
             {
                 return true;
@@ -45,16 +45,15 @@ namespace SistemGestionBuses
         //Metodo para limpiar los campos
         void LimpiarCampos()
         {
-            txtDestino.Clear();
+            txtDireccion_final.Clear();
             txtNombreViaje.Clear();
             txtTarifaViaje.Clear();
             txtIDviaje.Clear();
-            txtIDdestino.Clear();
             cmbCliente.SelectedValue = 1;
             cmbConductor.SelectedValue = 1;
             cmbEstadoViaje.SelectedValue = 1;
             cmbMetodoPago.SelectedValue = 1;
-            cmbMunicipios.SelectedValue = 1;
+            cmbMunicipios_inicio.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
             dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021");
@@ -64,12 +63,12 @@ namespace SistemGestionBuses
         {
             try
             {
-                //CargarClientes();
-                //CargarUnidadTransporte();
-                //CargarMunicipios();
-                ////CargarConductor();
-                //CargarMetodoPago();
-                //CargarEstadoViaje();
+                CargarClientes();
+                CargarUnidadTransporte();
+                CargarMunicipios();
+                //CargarConductor();
+                CargarMetodoPago();
+                CargarEstadoViaje();
                 //CargarTipoDestino();
             }
             catch (Exception)
@@ -80,7 +79,7 @@ namespace SistemGestionBuses
             }
         }
         //Region de todos los metodos para cargar los combobox
-        /*
+
         #region CMB
         void CargarClientes()
         {
@@ -104,9 +103,9 @@ namespace SistemGestionBuses
             try
             {
                 DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
-                cmbMunicipios.DataSource = dataMunicipio;
-                cmbMunicipios.DisplayMember = "municipio";
-                cmbMunicipios.ValueMember = "id_municipio";
+                cmbMunicipios_inicio.DataSource = dataMunicipio;
+                cmbMunicipios_inicio.DisplayMember = "municipio";
+                cmbMunicipios_inicio.ValueMember = "id_municipio";
             }
             catch (Exception)
             {
@@ -120,7 +119,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataTransporte = ControladorViaje.ObtenerTipoUnidadTransporte(  );
+                DataTable dataTransporte = ControladorViaje.ObtenerTipoUnidadTransporte();
                 cmbUnidadTransporte.DataSource = dataTransporte;
                 cmbUnidadTransporte.DisplayMember = "tipo_unidad";
                 cmbUnidadTransporte.ValueMember = "id_tipo_unidad";
@@ -166,30 +165,48 @@ namespace SistemGestionBuses
                                                  MessageBoxIcon.Error);
             }
         }
-        #endregion 
-        
-    */
+        #endregion
 
-        //void EnvioDatos()
-        //{
-        //    string nombreViaje, fecha, tarifa;
-        //    int id_destino, id_unidad, id_empleado, id_estado_viaje, id_metodo_pago;
-        //    nombreViaje = txtNombreViaje.Text;
-        //    fecha = dtpFechaViaje.Text;
-        //    tarifa = txtTarifaViaje.Text;
-        //    id
-        //    bool res = empresa.AgregarEmpresa();
-        //    if (res)
-        //    {
-        //        MessageBox.Show("Empresa registrada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Oops!, ocurrió un error al registrar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        //    }
-        //}
+        void EnvioDatos()
+        {
+            //AL MANDAR LOS DATOS DE LAS DIRECCIONES LOS MUNICIPIOS Y LAS DIRECCIONES SERAN LISTAS OCUPANDO UN METODO DISTINTO PARA CADA UNA PERO LA MISMA LISTA EN TODOS LOS METODOS. :D
+
+            List<string> direcciones = new List<string> ();
+            string nombreViaje, fecha, hora;
+            int id_unidad, id_empleado, id_estado_viaje, id_metodo_pago, id_municipio, id_tipo_viaje, id_cliente, tarifa, id_direccion_detalle;
+            nombreViaje = txtNombreViaje.Text;
+            fecha = dtpFechaViaje.Text;
+            hora = dtpHoraViaje.Text;
+            tarifa = Convert.ToInt32(txtTarifaViaje.Text);
+            //direcciones [0] == direccion de incio
+            //direcciones [1] == direccion final
+            //direcciones [2] == direccion adincional
+            direcciones.Add(txtDireccion_inicio.Text);
+            direcciones.Add(txtDireccion_final.Text);
+            //direcciones.Add(txtDireccion_adicional.Text);
+            id_direccion_detalle = Convert.ToInt16(txtIDdirecciones.Text);
+            id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
+            id_metodo_pago = Convert.ToInt32(cmbMetodoPago.SelectedValue);
+            id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
+            id_municipio = Convert.ToInt32(cmbMunicipios_inicio.SelectedValue);
+            id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
+            id_empleado = Convert.ToInt32(cmbConductor.SelectedValue);
+            id_cliente = Convert.ToInt32(cmbCliente.SelectedValue);
+            ControladorViaje objViaje = new ControladorViaje(id_cliente, id_unidad, id_metodo_pago, id_empleado, id_municipio, id_estado_viaje, tarifa, hora, id_tipo_viaje, nombreViaje, id_direccion_detalle, fecha, direcciones);
+            bool res = objViaje.EnviarDatos_ControllerViaje();
+            if (res)
+            {
+                MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
 
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -211,6 +228,16 @@ namespace SistemGestionBuses
                 MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             //EnvioDatos();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
