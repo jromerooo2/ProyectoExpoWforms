@@ -56,9 +56,9 @@ namespace SistemGestionBuses
                 telefono_cliente = txtTelCliente.Text;
                 direccion_cliente = txtDirCliente.Text;
                 correo_cliente = txtCorCliente.Text;
-                id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);                
+                id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);              
                 //INSTANCIAR OBJETO
-                ControladorIngresoCliente objCliente = new ControladorIngresoCliente (nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
                 bool respuesta = objCliente.EnviarClientes();
                 if (respuesta == true)
                 {
@@ -77,17 +77,10 @@ namespace SistemGestionBuses
             }
         }
 
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -148,11 +141,6 @@ namespace SistemGestionBuses
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -173,8 +161,30 @@ namespace SistemGestionBuses
             CargarTipoCliente();
         }
 
+        public bool Vacio()
+        {
+            if (txtNomCliente.Text.Trim() == "" &&
+            txtApeCliente.Text.Trim() == "" &&
+            txtTelCliente.Text.Trim() == "" &&
+            txtDirCliente.Text.Trim() == "" &&
+            txtCorCliente.Text.Trim() == "" &&    
+            cmbTipCliente.SelectedIndex == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         private void btnAgregarCliente1_Click(object sender, EventArgs e)
         {
+            Vacio();
+            if (Vacio() == true)
+            {
+                MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }           
             EnvioDatos();
         }
     }

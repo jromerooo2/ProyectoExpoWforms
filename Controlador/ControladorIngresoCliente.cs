@@ -33,12 +33,20 @@ namespace Controlador
             telefono_cliente = pTelCliente;
             direccion_cliente = pDirCliente;
             correo_cliente = pCorCliente;
-            id_tipo_cliente = pTipCliente;
+            id_tipo_cliente = pTipCliente;            
         }
      
         public bool EnviarClientes()
         {
             return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);
+        }
+        //public static object ActualizarClienteControlador()
+        //{
+        //    return ModeloIngreso.ActualizarCliente();
+        //}
+        public static object EliminarClienteControlador()
+        {
+            return ModeloIngreso.EliminarCliente();
         }
     }
 }

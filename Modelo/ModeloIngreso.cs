@@ -242,7 +242,7 @@ namespace Modelo
             try
             {
                 //INCERCION
-                MySqlCommand cmdinsertar = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", pNomCliente, pApeCliente, pTelCliente,pDirCliente,pCorCliente,pTipCliente), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsertar = new MySqlCommand(string.Format("INSERT INTO tb_empleados (nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", pNomCliente, pApeCliente,  pTelCliente,  pDirCliente,  pCorCliente, pTipCliente), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsertar.ExecuteNonQuery());
                 //RETORNO
@@ -251,6 +251,37 @@ namespace Modelo
             catch (Exception)
             {
                 return retorno;
+            }
+        }
+        public static bool ActualizarCliente(int pIdCliente, string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
+        {
+            bool res = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombre_cliente = '" + pNomCliente + "', apellido_cliente= '" + pApeCliente + "',  telefono_cliente= '" + pTelCliente + "', direccion_cliente= '" + pDirCliente + "', correo_cliente=" + pCorCliente + " WHERE id_cliente= '" + pIdCliente + "'"), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+                throw;
+            }
+        }
+        public static bool EliminarCliente()
+        {
+            bool res = false;
+            try
+            {
+                string query = "DELETE FROM tb_cliente" ;
+                MySqlCommand cmd = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmd.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+                throw;
             }
         }
     }
