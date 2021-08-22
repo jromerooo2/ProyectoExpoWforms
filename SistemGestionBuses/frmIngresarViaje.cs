@@ -29,7 +29,7 @@ namespace SistemGestionBuses
             cmbEstadoViaje.SelectedIndex == 0 &&
             cmbMetodoPago.SelectedIndex == 0 &&
             cmbTipoDestino.SelectedIndex == 0 &&
-            cmbMunicipios_inicio.SelectedIndex == 0 &&
+            cmbMunicipio_inicio.SelectedIndex == 0 &&
             cmbCliente.SelectedIndex == 0)
             {
                 return true;
@@ -53,7 +53,7 @@ namespace SistemGestionBuses
             cmbConductor.SelectedValue = 1;
             cmbEstadoViaje.SelectedValue = 1;
             cmbMetodoPago.SelectedValue = 1;
-            cmbMunicipios_inicio.SelectedValue = 1;
+            cmbMunicipio_inicio.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
             dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021");
@@ -103,9 +103,9 @@ namespace SistemGestionBuses
             try
             {
                 DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
-                cmbMunicipios_inicio.DataSource = dataMunicipio;
-                cmbMunicipios_inicio.DisplayMember = "municipio";
-                cmbMunicipios_inicio.ValueMember = "id_municipio";
+                cmbMunicipio_inicio.DataSource = dataMunicipio;
+                cmbMunicipio_inicio.DisplayMember = "municipio";
+                cmbMunicipio_inicio.ValueMember = "id_municipio";
             }
             catch (Exception)
             {
@@ -172,10 +172,10 @@ namespace SistemGestionBuses
         void EnvioDatos()
         {
             //AL MANDAR LOS DATOS DE LAS DIRECCIONES LOS MUNICIPIOS Y LAS DIRECCIONES SERAN LISTAS OCUPANDO UN METODO DISTINTO PARA CADA UNA PERO LA MISMA LISTA EN TODOS LOS METODOS. :D
-
+            List<int> id_municipios = new List<int>();
             List<string> direcciones = new List<string> ();
             string nombreViaje, fecha, hora;
-            int id_unidad, id_empleado, id_estado_viaje, id_metodo_pago, id_municipio, id_tipo_viaje, id_cliente, tarifa, id_direccion_detalle;
+            int id_unidad, id_empleado, id_estado_viaje, id_metodo_pago, id_tipo_viaje, id_cliente, tarifa, id_direccion_detalle;
             nombreViaje = txtNombreViaje.Text;
             fecha = dtpFechaViaje.Text;
             hora = dtpHoraViaje.Text;
@@ -190,21 +190,32 @@ namespace SistemGestionBuses
             id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
             id_metodo_pago = Convert.ToInt32(cmbMetodoPago.SelectedValue);
             id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
-            id_municipio = Convert.ToInt32(cmbMunicipios_inicio.SelectedValue);
+            // municipio [0] == municipio inicial
+            // municipio [1] == municipio final
+            id_municipios.Add(cmbMunicipio_inicio.SelectedIndex);
+            id_municipios.Add(cmbMunicipio_final.SelectedIndex);
             id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
             id_empleado = Convert.ToInt32(cmbConductor.SelectedValue);
             id_cliente = Convert.ToInt32(cmbCliente.SelectedValue);
-            ControladorViaje objViaje = new ControladorViaje(id_cliente, id_unidad, id_metodo_pago, id_empleado, id_municipio, id_estado_viaje, tarifa, hora, id_tipo_viaje, nombreViaje, id_direccion_detalle, fecha, direcciones);
-            bool res = objViaje.EnviarDatos_ControllerViaje();
-            if (res)
+            ControladorViaje objViaje = new ControladorViaje(id_cliente, id_unidad, id_metodo_pago, id_empleado, id_municipios, id_estado_viaje, tarifa, hora, id_tipo_viaje, nombreViaje, id_direccion_detalle, fecha, direcciones);
+            bool respuesta_direcciones = objViaje.EnviarDatos_ControllerDirecciones();
+            if (respuesta_direcciones == true)
             {
-                MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool res = objViaje.EnviarDatos_ControllerViaje();
+                if (res)
+                {
+                    MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+                else
+                {
+                    MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             else
             {
-                MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Oops!, ocurrió un error al registrar una de las direcciones, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

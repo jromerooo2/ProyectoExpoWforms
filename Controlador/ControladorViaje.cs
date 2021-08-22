@@ -24,16 +24,16 @@ namespace Controlador
         public string fecha_viaje { get; set; }
         public string nombre_viaje { get; set; }
         public string hora { get; set; }
+        public List<int> municipios { get; set; }
         public List<string>direcciones { get; set; }
 
         //Constructor
-        public ControladorViaje(int pidCliente, int pidUnidad_transporte, int pidMetodo_pago, int pidEmpleado, int pidMunicipio, int pidEstado_viaje, int ptarifa, string phora, int pidTipo_destino, string pnombre_viaje, int pdireccion_detalle, string pfecha_viaje, List<string>pDirecciones)
+        public ControladorViaje(int pidCliente, int pidUnidad_transporte, int pidMetodo_pago, int pidEmpleado, List<int> pidMunicipio, int pidEstado_viaje, int ptarifa, string phora, int pidTipo_destino, string pnombre_viaje, int pdireccion_detalle, string pfecha_viaje, List<string>pDirecciones)
         {
             id_cliente = pidCliente;
+            id_empleado = pidEmpleado;
             id_unidad_transporte = pidUnidad_transporte;
             id_metodo_pago = pidMetodo_pago;
-            id_empleado = pidEmpleado;
-            id_municipio = pidMunicipio;
             id_estado_viaje = pidEstado_viaje;
             tarifa = ptarifa;
             hora = phora;
@@ -41,7 +41,9 @@ namespace Controlador
             nombre_viaje = pnombre_viaje;
             id_direccion_detalle = pdireccion_detalle;
             fecha_viaje = pfecha_viaje;
-            direcciones = pDirecciones;
+            //Listas
+            direcciones = pDirecciones;          
+            municipios = pidMunicipio;
         }
 
         public bool EnviarDatos_ControllerViaje()
@@ -49,10 +51,10 @@ namespace Controlador
             return ModeloViaje.RegistrarViaje(nombre_viaje, id_cliente, id_unidad_transporte, id_empleado, fecha_viaje, hora, tarifa, id_estado_viaje, id_metodo_pago, id_tipo_viaje, id_direccion_detalle);
         }
 
-        //public bool EnviarDatos_ControllerDirecciones()
-        //{
-        //    return ModeloViaje.RegistarDirecciones(direccion, id_municipio);
-        //}
+        public bool EnviarDatos_ControllerDirecciones()
+        {
+            return ModeloViaje.RegistarDireccionInicio(direcciones, municipios);
+        }
 
         #region CMB Controller
         //cmb Cliente

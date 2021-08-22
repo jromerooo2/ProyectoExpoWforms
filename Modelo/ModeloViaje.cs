@@ -133,7 +133,7 @@ namespace Modelo
             try
             {
                 //INCERCION
-                MySqlCommand cmdinsertviaje = new MySqlCommand(string.Format("INSERT INTO tb_viajes (nombre_viaje, id_cliente, id_unidad, id_empleado, fecha, tarifa, id_estado_viaje, id_destino, id_metodo_pago) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", pNombre_viaje, pidCliente, pidUnidad, pidEmpleado, pfecha , ptarifa, pidEstado_viaje, pidMetodo_pago, pidTipo_viaje, pidDirecciones_detalle), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsertviaje = new MySqlCommand(string.Format("INSERT INTO tb_viajes (nombre_viaje, id_cliente, id_unidad, id_emplea) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", pNombre_viaje, pidCliente, pidUnidad, pidEmpleado, pfecha , ptarifa, pidEstado_viaje, pidMetodo_pago, pidTipo_viaje, pidDirecciones_detalle), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsertviaje.ExecuteNonQuery());
                 //RETORNO
@@ -145,12 +145,30 @@ namespace Modelo
             }
         }
 
+        public static bool RegistrarDirecciones(List<string> pdireccion, List<int> pidMunicipio)
+        {
+            RegistarDireccionInicio(pdireccion, pidMunicipio);
+            RegistrarDireccionFinal(pdireccion, pidMunicipio);
+            RegistrarDireccionFinal(pdireccion, pidMunicipio);
+
+            if (RegistarDireccionInicio(pdireccion, pidMunicipio) == true &&
+                RegistrarDireccionFinal(pdireccion, pidMunicipio) == true &&
+                RegistrarDireccionAdicional(pdireccion, pidMunicipio) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static bool RegistarDireccionInicio(List<string> pdireccion, List<int> pidMunicipio)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_inicio (direccion_inicio) VALUES ('{0}', '{1}')", pdireccion, pidMunicipio), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_inicio (direccion_inicio) VALUES ('{0}', '{1}')", pdireccion[0], pidMunicipio[0]), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdinsertdireccion.ExecuteNonQuery());
                 return retorno;
             }
@@ -165,7 +183,7 @@ namespace Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_final (direccion_final) VALUES ('{0}', '{1}')", pdireccion, pidMunicipio), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_final (direccion_final) VALUES ('{0}', '{1}')", pdireccion[1], pidMunicipio[1]), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdinsertdireccion.ExecuteNonQuery());
                 return retorno;
             }
@@ -180,7 +198,7 @@ namespace Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_adicional (direccion_adicional) VALUES ('{0}', '{1}')", pdireccion, pidMunicipio), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_adicional (direccion_adicional) VALUES ('{0}', '{1}')", pdireccion[2], pidMunicipio[2]), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdinsertdireccion.ExecuteNonQuery());
                 return retorno;
             }

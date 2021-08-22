@@ -35,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtIDviaje = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbMunicipios_inicio = new System.Windows.Forms.ComboBox();
+            this.cmbMunicipio_inicio = new System.Windows.Forms.ComboBox();
             this.cmbTipoDestino = new System.Windows.Forms.ComboBox();
             this.txtTarifaViaje = new System.Windows.Forms.TextBox();
             this.txtNombreViaje = new System.Windows.Forms.TextBox();
@@ -155,14 +155,14 @@
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
             // 
-            // cmbMunicipios_inicio
+            // cmbMunicipio_inicio
             // 
-            this.cmbMunicipios_inicio.FormattingEnabled = true;
-            this.cmbMunicipios_inicio.Location = new System.Drawing.Point(171, 300);
-            this.cmbMunicipios_inicio.Name = "cmbMunicipios_inicio";
-            this.cmbMunicipios_inicio.Size = new System.Drawing.Size(158, 21);
-            this.cmbMunicipios_inicio.TabIndex = 68;
-            this.cmbMunicipios_inicio.Text = "municipio";
+            this.cmbMunicipio_inicio.FormattingEnabled = true;
+            this.cmbMunicipio_inicio.Location = new System.Drawing.Point(171, 300);
+            this.cmbMunicipio_inicio.Name = "cmbMunicipio_inicio";
+            this.cmbMunicipio_inicio.Size = new System.Drawing.Size(158, 21);
+            this.cmbMunicipio_inicio.TabIndex = 68;
+            this.cmbMunicipio_inicio.Text = "municipio";
             // 
             // cmbTipoDestino
             // 
@@ -307,7 +307,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbUnidadTransporte);
-            this.panel1.Controls.Add(this.cmbMunicipios_inicio);
+            this.panel1.Controls.Add(this.cmbMunicipio_inicio);
             this.panel1.Controls.Add(this.cmbTipoDestino);
             this.panel1.Controls.Add(this.cmbEstadoViaje);
             this.panel1.Controls.Add(this.cmbCliente);
@@ -630,7 +630,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtIDviaje;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbMunicipios_inicio;
+        private System.Windows.Forms.ComboBox cmbMunicipio_inicio;
         private System.Windows.Forms.ComboBox cmbTipoDestino;
         private System.Windows.Forms.TextBox txtTarifaViaje;
         private System.Windows.Forms.TextBox txtNombreViaje;
