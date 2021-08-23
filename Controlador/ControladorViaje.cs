@@ -82,6 +82,12 @@ namespace Controlador
         {
             return ModeloViaje.CargarMunicipios();
         }
+
+        //cmb Tipo Viaje
+        public static DataTable ObtenerTipoViaje()
+        {
+            return ModeloViaje.CargarTipoViaje();
+        }
         #endregion
 
 
