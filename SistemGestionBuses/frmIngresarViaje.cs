@@ -194,24 +194,15 @@ namespace SistemGestionBuses
 
         void EnvioDatos()
         {
-            //AL MANDAR LOS DATOS DE LAS DIRECCIONES LOS MUNICIPIOS Y LAS DIRECCIONES SERAN LISTAS OCUPANDO UN METODO DISTINTO PARA CADA UNA PERO LA MISMA LISTA EN TODOS LOS METODOS. :D
-            List<int> id_municipios = new List<int>();
-            List<string> direcciones = new List<string> ();
             string nombreViaje, fecha, hora;
             int id_unidad, id_empleado, id_estado_viaje, id_metodo_pago, id_tipo_viaje, id_cliente, tarifa, id_direccion_detalle;
             nombreViaje = txtNombreViaje.Text;
             fecha = dtpFechaViaje.Text;
             hora = dtpHoraViaje.Text;
             tarifa = Convert.ToInt32(txtTarifaViaje.Text);
-            //direcciones [0] == direccion de incio
-            //direcciones [1] == direccion final
-            //direcciones [2] == direccion adincional
-            //direcciones.Add(txtDireccion_adicional.Text);
             id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
             id_metodo_pago = Convert.ToInt32(cmbMetodoPago.SelectedValue);
             id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
-            // id_municipios [0] == municipio inicial
-            // id_municipios [1] == municipio final
             id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
             id_empleado = Convert.ToInt32(cmbConductor.SelectedValue);
             id_cliente = Convert.ToInt32(cmbCliente.SelectedValue);
