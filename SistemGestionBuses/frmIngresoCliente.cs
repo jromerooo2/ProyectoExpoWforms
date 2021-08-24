@@ -56,17 +56,17 @@ namespace SistemGestionBuses
 
             try
             {
-                string nombre_cliente, apellido_cliente, telefono_cliente,direccion_cliente,correo_cliente;
+                string nombres_cliente, apellidos_cliente, telefono_cliente,direccion_cliente,correo_cliente;
                 int id_tipo_cliente;
-                nombre_cliente = txtNomCliente.Text;
-                apellido_cliente = txtApeCliente.Text;
+                nombres_cliente = txtNomCliente.Text;
+                apellidos_cliente = txtApeCliente.Text;
                 telefono_cliente = txtTelCliente.Text;
                 direccion_cliente = txtDirCliente.Text;
                 correo_cliente = txtCorCliente.Text;
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
 
                 //INSTANCIAR OBJETO
-                ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
                 bool respuesta = objCliente.EnviarClientes();
                 if (respuesta == true)
                 {
@@ -187,20 +187,18 @@ namespace SistemGestionBuses
             }
 
         }
-
-        private void BtnActualizar_Click(object sender, EventArgs e)
+        void ActualizarDatos()
         {
-            string nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente;
-            int id_tipo_cliente, id_cliente;
-            id_cliente = Convert.ToInt16(txtIdCliente.Text);
-            nombre_cliente = txtNomCliente.Text;
-            apellido_cliente = txtApeCliente.Text;
+            string nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente;
+            int id_tipo_cliente;
+            nombres_cliente = txtNomCliente.Text;
+            apellidos_cliente = txtApeCliente.Text;
             telefono_cliente = txtTelCliente.Text;
             direccion_cliente = txtDirCliente.Text;
             correo_cliente = txtCorCliente.Text;
             id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
-            ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente, id);
-            bool res = objCliente.ActualizarCliente();
+            ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+            bool res = objCliente.ActualizarClienteContorlador();
             if (res)
             {
                 MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -210,7 +208,10 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void btnAgregarCliente1_Click(object sender, EventArgs e)

@@ -351,7 +351,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombre_cliente= '"+pNomCliente+"', apellido_cliente= '" + pApeCliente + "',  telefono_cliente= '" + pTelCliente + "', direccion_cliente= '" + pDirCliente + "', correo_cliente=" + pCorCliente + " WHERE id_cliente= '" +pIdCliente + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombres_cliente= '"+pNomCliente+"', apellidos_cliente= '" + pApeCliente + "',  telefono_cliente= '" + pTelCliente + "', direccion_cliente= '" + pDirCliente + "', correo_cliente=" + pCorCliente + "', direccion_cliente= '" + pDirCliente + "' WHERE id_cliente= '" + pIdCliente + "'"), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }
