@@ -24,7 +24,7 @@ namespace SistemGestionBuses
         {
             InitializeComponent();
             gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            gMapDirections.Position = new GMap.NET.PointLatLng(lat_ElSalvador, longt_ElSalvador);
+            gMapDirections.Position = new PointLatLng(lat_ElSalvador, longt_ElSalvador);
         }
 
         void ColocarDirecciones()
@@ -45,14 +45,14 @@ namespace SistemGestionBuses
             gMapDirections.DragButton = MouseButtons.Left;
             gMapDirections.MapProvider = GMapProviders.GoogleMap;
             gMapDirections.SetPositionByKeywords("Chennai, India");
-            gMapDirections.Position = new GMap.NET.PointLatLng(lat_ElSalvador, longt_ElSalvador);
+            gMapDirections.Position = new PointLatLng(lat_ElSalvador, longt_ElSalvador);
             //gMapDirections.Position = new Point;
         }
 
         private void frmIngresarDirecciones_Load(object sender, EventArgs e)
         {
             gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            gMapDirections.Position = new GMap.NET.PointLatLng(lat_ElSalvador, longt_ElSalvador);
+            gMapDirections.Position = new PointLatLng(lat_ElSalvador, longt_ElSalvador);
         }
 
         private void btnCargarMapa_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace SistemGestionBuses
             gMapDirections.MapProvider = GMapProviders.GoogleMap;
             double direccion_inicio_lat = Convert.ToDouble(txtDireccion_inicio.Text);
             double direccion_inicio_longt = Convert.ToDouble(txtDireccion_inicio_longt.Text);
-            gMapDirections.Position = new GMap.NET.PointLatLng(direccion_inicio_lat, direccion_inicio_longt);
+            gMapDirections.Position = new PointLatLng(direccion_inicio_lat, direccion_inicio_longt);
             gMapDirections.Zoom = 10;
             gMapDirections.MaxZoom = 100;
             gMapDirections.MinZoom = 5;
