@@ -111,7 +111,7 @@ namespace SistemGestionBuses
                 apellido_empleado = TxtApellidos.Text;
                 DUI = TxtDUI.Text;
                 NIT = txtNIT.Text;
-                telefono_empleado = txtNumero.Text;
+                telefono_empleado = txtTelefono.Text;
                 nacimiento_empleado = dtNacimiento.Text;
                 id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_estado_empleado= Convert.ToInt16(cmbEstado.SelectedValue);
@@ -137,6 +137,13 @@ namespace SistemGestionBuses
                 MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //CARGAR GRID DATOS
+        void CargarGridDatos()
+        {
+
+            datosCond = ControladorIngreso.CargarEmpleadoControlador();
+            dgvEmpleado.DataSource = datosCond;
+        }
         //ACTUALIZAR DATOS
         void ActualizarDatos()
         {
@@ -148,7 +155,7 @@ namespace SistemGestionBuses
                 apellido_empleado = TxtApellidos.Text;
                 DUI = TxtDUI.Text;
                 NIT = txtNIT.Text;
-                telefono_empleado = txtNumero.Text;
+                telefono_empleado = txtTelefono.Text;
                 nacimiento_empleado = dtNacimiento.Text;
                 id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_estado_empleado = Convert.ToInt16(cmbEstado.SelectedValue);
@@ -156,6 +163,7 @@ namespace SistemGestionBuses
                 id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
                 direccion_empleado = TxtDireccion.Text;
                 //INSTANCIAR OBJETO
+                ControladorIngreso.id_empleado = Convert.ToInt16(txtId.Text);
                 objCond = new ControladorIngreso(nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
                 bool respuesta = objCond.ActualizarDatosControlador();
                 if (respuesta == true)
@@ -177,12 +185,14 @@ namespace SistemGestionBuses
         {
             InitializeComponent();
             CargarDatos();
+            CargarGridDatos();
 
         }
 
         private void frmIngresoConductores_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            CargarGridDatos();
         }
 
 
@@ -225,8 +235,9 @@ namespace SistemGestionBuses
 
         private void btnAgregar_click(object sender, EventArgs e)
         {
-            ActualizarDatos();
+            EnvioDatos();
             CargarDatos();
+            CargarGridDatos();
         }
 
 
@@ -239,6 +250,7 @@ namespace SistemGestionBuses
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CargarGridDatos();
             MySqlConnection objvalor;
             objvalor = ControladorConexion.GetConn();
             if (objvalor != null)
@@ -275,6 +287,48 @@ namespace SistemGestionBuses
         {
             ActualizarDatos();
             
+        }
+
+        private void DgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Capturar el numero de fila a la cual se le dio click
+            int posicion = dgvEmpleado.CurrentRow.Index;
+            //envio datos hacia texbox
+            txtId.Text = dgvEmpleado[0, posicion].Value.ToString();
+            TxtNombres.Text= dgvEmpleado[1, posicion].Value.ToString();
+            TxtApellidos.Text = dgvEmpleado[2, posicion].Value.ToString();
+            TxtDUI.Text = dgvEmpleado[3, posicion].Value.ToString();
+            txtNIT.Text = dgvEmpleado[4, posicion].Value.ToString();
+            TxtDireccion.Text = dgvEmpleado[5, posicion].Value.ToString();
+            txtTelefono.Text = dgvEmpleado[6, posicion].Value.ToString();
+            //Envio de datos a cmb
+            int id_genero = Convert.ToInt16(dgvEmpleado[7, posicion].Value.ToString());
+            cmbGenero.DataSource = ControladorIngreso.CargarGeneroInner_controlador(id_genero);
+            cmbGenero.DisplayMember = "genero";
+            cmbGenero.ValueMember = "id_genero";
+
+            int id_estado_empleado = Convert.ToInt16(dgvEmpleado[8, posicion].Value.ToString());
+            cmbEstado.DataSource = ControladorIngreso.CargarEstadoInner_controlador(id_estado_empleado);
+            cmbEstado.DisplayMember = "estado_empleado";
+            cmbEstado.ValueMember = "id_estado_empleado";
+
+            int id_cargo = Convert.ToInt16(dgvEmpleado[9, posicion].Value.ToString());
+            cmbCargo.DataSource = ControladorIngreso.CargarCargoInner_controlador(id_cargo);
+            cmbCargo.DisplayMember = "cargo";
+            cmbCargo.ValueMember = "id_cargo";
+
+            int id_municipio = Convert.ToInt16(dgvEmpleado[10, posicion].Value.ToString());
+            cmbMunicipio.DataSource = ControladorIngreso.CargarMunicipiosInner_controlador(id_municipio);
+            cmbMunicipio.DisplayMember = "municipio";
+            cmbMunicipio.ValueMember = "id_municipio";
+            //Fecha de nacimiento
+            dtNacimiento.Text = dgvEmpleado[11, posicion].Value.ToString();
+
+        }
+
+        private void BtnGrid_Click(object sender, EventArgs e)
+        {
+            CargarGridDatos();
         }
     }
 }

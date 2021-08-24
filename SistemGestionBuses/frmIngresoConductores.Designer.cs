@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoConductores));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
             this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,12 +63,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvIngreso = new System.Windows.Forms.DataGridView();
+            this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtNumero);
+            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.lblApellido);
             this.panel2.Controls.Add(this.TxtApellidos);
             this.panel2.Controls.Add(this.label11);
@@ -117,13 +117,13 @@
             this.label8.Text = "Telefono del conductor";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtNumero
+            // txtTelefono
             // 
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(492, 155);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(206, 24);
-            this.txtNumero.TabIndex = 63;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(492, 155);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(206, 24);
+            this.txtTelefono.TabIndex = 63;
             // 
             // lblApellido
             // 
@@ -420,7 +420,6 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
-            //this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnEliminar
             // 
@@ -479,6 +478,7 @@
             this.button4.TabIndex = 16;
             this.button4.Text = "Actualizar grid de datos";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.BtnGrid_Click);
             // 
             // BtnAgregar
             // 
@@ -513,13 +513,15 @@
             this.label2.Text = "Administracion de Conductor";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dgvIngreso
+            // dgvEmpleado
             // 
-            this.dgvIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIngreso.Location = new System.Drawing.Point(17, 374);
-            this.dgvIngreso.Name = "dgvIngreso";
-            this.dgvIngreso.Size = new System.Drawing.Size(1028, 206);
-            this.dgvIngreso.TabIndex = 29;
+            this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleado.Location = new System.Drawing.Point(17, 374);
+            this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.ReadOnly = true;
+            this.dgvEmpleado.Size = new System.Drawing.Size(1028, 206);
+            this.dgvEmpleado.TabIndex = 29;
+            this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEmpleado_CellClick);
             // 
             // pictureBox2
             // 
@@ -555,7 +557,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvIngreso);
+            this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.pictureBox2);
             this.Name = "frmIngresoConductores";
             this.Text = "Form1";
@@ -564,7 +566,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -593,7 +595,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvIngreso;
+        private System.Windows.Forms.DataGridView dgvEmpleado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label7;
@@ -608,7 +610,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox TxtApellidos;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

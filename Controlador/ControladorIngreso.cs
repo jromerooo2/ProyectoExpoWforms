@@ -61,6 +61,11 @@ namespace Controlador
         {
             return ModeloIngreso.CargarUnidadTransporte();
         }
+        //CARGAR EMPLEADO
+        public static DataTable CargarEmpleadoControlador()
+        {
+            return ModeloIngreso.ObtenerListaEmpleados();
+        }
 
         //ATRIBUTOS 
         public static int id_empleado { get; set; }
@@ -99,7 +104,7 @@ namespace Controlador
         }     
         public bool ActualizarDatosControlador()
         {
-            return ModeloIngreso.ActualizarEmpleado(id_empleado, nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
+            return ModeloIngreso.ActualizarEmpleado( id_empleado,nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
         }
     }
 }

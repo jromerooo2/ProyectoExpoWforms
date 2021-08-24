@@ -184,14 +184,13 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instuccion = "SELECT * FROM tbempleados";
+                string instuccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
                 MySqlCommand cmdListaEmpleado = new MySqlCommand(string.Format(instuccion),
                     ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdListaEmpleado);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
-                    
             }
             catch (Exception)
             {
@@ -256,6 +255,25 @@ namespace Modelo
                 return retorno;
             }   
         }
+        //Obtener Lista de Empleado
+        public static DataTable ObtenerEmpleado()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
+                MySqlCommand cmdEmpl = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEmpl);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data = null;
+            }
+        }
         //Update Empleado
         public static bool ActualizarEmpleado(int pId,string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
         {
@@ -263,7 +281,7 @@ namespace Modelo
             try
             {
                 //Proceso de Actualizacion
-                MySqlCommand cmdUpEmpleado = new MySqlCommand(string.Format("UPDATE tb_empleados SET id_empleado'" + pId + "',nombres_empeado'" + pNombre + "',apellidos_empleado'" + pApellido + "',DUI'" + pDUI + "',NIT'" + pNIT + "',direccion_empleado'" + pDireccion + "',telefono_empleado'" + pTelefono + "',id_genero'" + pGenero + "',id_estado_empleado'" + pEstado + "',id_cargo'" + pCargo + "',id_municipio'" + pMunicipio + "',nacimiento_empleado'" + pNacimiento + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdUpEmpleado = new MySqlCommand(string.Format(" UPDATE tb_empleados SET nombres_empleado = '" + pNombre + "',apellidos_empleado = '" + pApellido + "',DUI = '" + pDUI + "',NIT = '" + pNIT + "',direccion_empleado = '" + pDireccion + "',telefono_empleado = '" + pTelefono + "',id_genero = '" + pGenero + "',id_estado_empleado = '" + pEstado + "',id_cargo = '" + pCargo + "',id_municipio = '" + pMunicipio + "',nacimiento_empleado = '" + pNacimiento + "'WHERE id_empleado = '"+pId+"' "), ModeloConexion.GetConnection());
                 //Verificar Update
                 retorno = Convert.ToBoolean(cmdUpEmpleado.ExecuteNonQuery());
                 return retorno;
