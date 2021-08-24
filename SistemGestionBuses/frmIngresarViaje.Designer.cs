@@ -35,7 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtIDviaje = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbMunicipio_inicio = new System.Windows.Forms.ComboBox();
             this.cmbTipoDestino = new System.Windows.Forms.ComboBox();
             this.txtTarifaViaje = new System.Windows.Forms.TextBox();
             this.txtNombreViaje = new System.Windows.Forms.TextBox();
@@ -48,17 +47,10 @@
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDireccion_final = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.dtpHoraViaje = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmbMunicipio_final = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtDireccion_inicio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,18 +66,13 @@
             this.dgvViaje = new System.Windows.Forms.DataGridView();
             this.btnActualizarGird = new System.Windows.Forms.Button();
             this.btnConexion = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViaje)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbUnidadTransporte
@@ -161,15 +148,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
-            // 
-            // cmbMunicipio_inicio
-            // 
-            this.cmbMunicipio_inicio.FormattingEnabled = true;
-            this.cmbMunicipio_inicio.Location = new System.Drawing.Point(12, 203);
-            this.cmbMunicipio_inicio.Name = "cmbMunicipio_inicio";
-            this.cmbMunicipio_inicio.Size = new System.Drawing.Size(140, 21);
-            this.cmbMunicipio_inicio.TabIndex = 68;
-            this.cmbMunicipio_inicio.Text = "municipio";
             // 
             // cmbTipoDestino
             // 
@@ -317,27 +295,6 @@
             this.panel1.Size = new System.Drawing.Size(361, 297);
             this.panel1.TabIndex = 77;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(163, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 18);
-            this.label10.TabIndex = 95;
-            this.label10.Text = "Destino del viaje:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // txtDireccion_final
-            // 
-            this.txtDireccion_final.Location = new System.Drawing.Point(167, 40);
-            this.txtDireccion_final.Multiline = true;
-            this.txtDireccion_final.Name = "txtDireccion_final";
-            this.txtDireccion_final.Size = new System.Drawing.Size(141, 130);
-            this.txtDireccion_final.TabIndex = 94;
-            this.txtDireccion_final.Text = "destino";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -357,47 +314,6 @@
             this.dtpHoraViaje.Name = "dtpHoraViaje";
             this.dtpHoraViaje.Size = new System.Drawing.Size(157, 20);
             this.dtpHoraViaje.TabIndex = 92;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 182);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 18);
-            this.label15.TabIndex = 91;
-            this.label15.Text = "Municipio de salida:";
-            // 
-            // cmbMunicipio_final
-            // 
-            this.cmbMunicipio_final.FormattingEnabled = true;
-            this.cmbMunicipio_final.Location = new System.Drawing.Point(166, 202);
-            this.cmbMunicipio_final.Name = "cmbMunicipio_final";
-            this.cmbMunicipio_final.Size = new System.Drawing.Size(142, 21);
-            this.cmbMunicipio_final.TabIndex = 90;
-            this.cmbMunicipio_final.Text = "municipio";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(10, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 18);
-            this.label13.TabIndex = 89;
-            this.label13.Text = "Direccion de salida:";
-            // 
-            // txtDireccion_inicio
-            // 
-            this.txtDireccion_inicio.Location = new System.Drawing.Point(12, 42);
-            this.txtDireccion_inicio.Multiline = true;
-            this.txtDireccion_inicio.Name = "txtDireccion_inicio";
-            this.txtDireccion_inicio.Size = new System.Drawing.Size(139, 130);
-            this.txtDireccion_inicio.TabIndex = 88;
-            this.txtDireccion_inicio.Text = "destino";
             // 
             // label12
             // 
@@ -420,17 +336,6 @@
             this.label11.Size = new System.Drawing.Size(135, 18);
             this.label11.TabIndex = 86;
             this.label11.Text = "Conductor asignado:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(163, 181);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 18);
-            this.label9.TabIndex = 84;
-            this.label9.Text = "Municipio del destino:";
             // 
             // label8
             // 
@@ -576,10 +481,10 @@
             // 
             this.dgvViaje.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.dgvViaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvViaje.Location = new System.Drawing.Point(379, 364);
+            this.dgvViaje.Location = new System.Drawing.Point(379, 148);
             this.dgvViaje.Name = "dgvViaje";
             this.dgvViaje.RowHeadersVisible = false;
-            this.dgvViaje.Size = new System.Drawing.Size(602, 171);
+            this.dgvViaje.Size = new System.Drawing.Size(602, 387);
             this.dgvViaje.TabIndex = 82;
             // 
             // btnActualizarGird
@@ -591,9 +496,9 @@
             this.btnActualizarGird.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnActualizarGird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarGird.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarGird.Location = new System.Drawing.Point(852, 309);
+            this.btnActualizarGird.Location = new System.Drawing.Point(841, 65);
             this.btnActualizarGird.Name = "btnActualizarGird";
-            this.btnActualizarGird.Size = new System.Drawing.Size(129, 47);
+            this.btnActualizarGird.Size = new System.Drawing.Size(134, 47);
             this.btnActualizarGird.TabIndex = 75;
             this.btnActualizarGird.Text = "Actualizar Grid de Datos";
             this.btnActualizarGird.UseVisualStyleBackColor = false;
@@ -615,71 +520,25 @@
             this.btnConexion.UseVisualStyleBackColor = false;
             this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
             // 
-            // panel4
+            // label9
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.txtDireccion_final);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.cmbMunicipio_inicio);
-            this.panel4.Controls.Add(this.txtDireccion_inicio);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.cmbMunicipio_final);
-            this.panel4.Location = new System.Drawing.Point(379, 112);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(467, 244);
-            this.panel4.TabIndex = 96;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(317, 21);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 18);
-            this.label18.TabIndex = 99;
-            this.label18.Text = "Destino del viaje:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(321, 41);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 130);
-            this.textBox1.TabIndex = 98;
-            this.textBox1.Text = "destino";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(317, 182);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(145, 18);
-            this.label19.TabIndex = 96;
-            this.label19.Text = "Municipio del destino:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(320, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 21);
-            this.comboBox1.TabIndex = 97;
-            this.comboBox1.Text = "municipio";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(379, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 18);
+            this.label9.TabIndex = 92;
+            this.label9.Text = "Registro de viajes";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmIngresarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 552);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnActualizarGird);
             this.Controls.Add(this.btnConexion);
             this.Controls.Add(this.panel3);
@@ -688,7 +547,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvViaje);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.Name = "frmIngresarViaje";
             this.Text = "frmIngresarViaje";
@@ -701,9 +559,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViaje)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -715,7 +572,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtIDviaje;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbMunicipio_inicio;
         private System.Windows.Forms.ComboBox cmbTipoDestino;
         private System.Windows.Forms.TextBox txtTarifaViaje;
         private System.Windows.Forms.TextBox txtNombreViaje;
@@ -735,18 +591,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cmbMunicipio_final;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtDireccion_inicio;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtDireccion_final;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dtpHoraViaje;
         private System.Windows.Forms.DataGridView dgvViaje;
@@ -754,10 +603,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnConexion;
         private System.Windows.Forms.Button btnActualizarGird;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label9;
     }
 }

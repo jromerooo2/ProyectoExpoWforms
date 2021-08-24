@@ -22,15 +22,13 @@ namespace SistemGestionBuses
 
         public bool Vacio()
         {
-            if (txtDireccion_final.Text.Trim() == "" &&
-            txtNombreViaje.Text.Trim() == "" &&
+            if (txtNombreViaje.Text.Trim() == "" &&
             txtTarifaViaje.Text.Trim() == "" &&
             cmbCliente.SelectedIndex == 0 &&
             cmbConductor.SelectedIndex == 0 &&
             cmbEstadoViaje.SelectedIndex == 0 &&
             cmbMetodoPago.SelectedIndex == 0 &&
             cmbTipoDestino.SelectedIndex == 0 &&
-            cmbMunicipio_inicio.SelectedIndex == 0 &&
             cmbCliente.SelectedIndex == 0)
             {
                 return true;
@@ -50,7 +48,6 @@ namespace SistemGestionBuses
         //Metodo para limpiar los campos
         void LimpiarCampos()
         {
-            txtDireccion_final.Clear();
             txtNombreViaje.Clear();
             txtTarifaViaje.Clear();
             txtIDviaje.Clear();
@@ -58,8 +55,6 @@ namespace SistemGestionBuses
             cmbConductor.SelectedValue = 1;
             cmbEstadoViaje.SelectedValue = 1;
             cmbMetodoPago.SelectedValue = 1;
-            cmbMunicipio_inicio.SelectedValue = 1;
-            cmbMunicipio_final.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
             dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021");
@@ -71,7 +66,7 @@ namespace SistemGestionBuses
             {
                 CargarClientes();
                 CargarUnidadTransporte();
-                CargarMunicipios();
+                //CargarMunicipios();
                 //CargarConductor();
                 CargarMetodoPago();
                 CargarEstadoViaje();
@@ -104,27 +99,27 @@ namespace SistemGestionBuses
             }
         }
 
-        void CargarMunicipios()
-        {
-            try
-            {
-                DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
-                cmbMunicipio_inicio.DataSource = dataMunicipio;
-                cmbMunicipio_inicio.DisplayMember = "municipio";
-                cmbMunicipio_inicio.ValueMember = "id_municipio";
+        //void CargarMunicipios()
+        //{
+        //    try
+        //    {
+        //        DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
+        //        cmbMunicipio_inicio.DataSource = dataMunicipio;
+        //        cmbMunicipio_inicio.DisplayMember = "municipio";
+        //        cmbMunicipio_inicio.ValueMember = "id_municipio";
 
-                DataTable dataMunicipio2 = ControladorViaje.ObtenerMunicipios();
-                cmbMunicipio_final.DataSource = dataMunicipio2;
-                cmbMunicipio_final.DisplayMember = "municipio";
-                cmbMunicipio_final.ValueMember = "id_municipio";
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
-                                                 MessageBoxButtons.OK,
-                                                 MessageBoxIcon.Error);
-            }
-        }
+        //        DataTable dataMunicipio2 = ControladorViaje.ObtenerMunicipios();
+        //        cmbMunicipio_final.DataSource = dataMunicipio2;
+        //        cmbMunicipio_final.DisplayMember = "municipio";
+        //        cmbMunicipio_final.ValueMember = "id_municipio";
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Error al cargar los municipios.", "Error de carga",
+        //                                         MessageBoxButtons.OK,
+        //                                         MessageBoxIcon.Error);
+        //    }
+        //}
 
         void CargarUnidadTransporte()
         {
@@ -211,16 +206,12 @@ namespace SistemGestionBuses
             //direcciones [0] == direccion de incio
             //direcciones [1] == direccion final
             //direcciones [2] == direccion adincional
-            direcciones.Add(txtDireccion_inicio.Text);
-            direcciones.Add(txtDireccion_final.Text);
             //direcciones.Add(txtDireccion_adicional.Text);
             id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
             id_metodo_pago = Convert.ToInt32(cmbMetodoPago.SelectedValue);
             id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
             // id_municipios [0] == municipio inicial
             // id_municipios [1] == municipio final
-            id_municipios.Add(cmbMunicipio_inicio.SelectedIndex);
-            id_municipios.Add(cmbMunicipio_final.SelectedIndex);
             id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
             id_empleado = Convert.ToInt32(cmbConductor.SelectedValue);
             id_cliente = Convert.ToInt32(cmbCliente.SelectedValue);
