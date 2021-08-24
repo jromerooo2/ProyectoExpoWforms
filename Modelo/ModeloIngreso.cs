@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using Modelo;
 
 namespace Modelo
 {
@@ -178,6 +179,26 @@ namespace Modelo
                 return data = null;
             }
         }
+        public static DataTable ObtenerListaEmpleados()
+        {
+            DataTable data;
+            try
+            {
+                string instuccion = "SELECT * FROM tbempleados";
+                MySqlCommand cmdListaEmpleado = new MySqlCommand(string.Format(instuccion),
+                    ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdListaEmpleado);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+                    
+            }
+            catch (Exception)
+            {
+
+                return data = null;
+            }
+        }
 
         //Cargar Unidad Transporte
         public static DataTable CargarUnidadTransporte()
@@ -234,6 +255,24 @@ namespace Modelo
             {
                 return retorno;
             }   
+        }
+        //Update Empleado
+        public static bool ActualizarEmpleado(int pId,string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
+        {
+            bool retorno = false;
+            try
+            {
+                //Proceso de Actualizacion
+                MySqlCommand cmdUpEmpleado = new MySqlCommand(string.Format("UPDATE tb_empleados SET id_empleado'" + pId + "',nombres_empeado'" + pNombre + "',apellidos_empleado'" + pApellido + "',DUI'" + pDUI + "',NIT'" + pNIT + "',direccion_empleado'" + pDireccion + "',telefono_empleado'" + pTelefono + "',id_genero'" + pGenero + "',id_estado_empleado'" + pEstado + "',id_cargo'" + pCargo + "',id_municipio'" + pMunicipio + "',nacimiento_empleado'" + pNacimiento + "'"), ModeloConexion.GetConnection());
+                //Verificar Update
+                retorno = Convert.ToBoolean(cmdUpEmpleado.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno;
+            }
         }
         //Igreso datos cliente
         public static bool AgregarCliente(string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)

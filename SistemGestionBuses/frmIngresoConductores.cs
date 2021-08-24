@@ -137,10 +137,47 @@ namespace SistemGestionBuses
                 MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //ACTUALIZAR DATOS
+        void ActualizarDatos()
+        {
+            try
+            {
+                string nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, nacimiento_empleado;
+                int id_genero, id_estado_empleado, id_cargo, id_municipio;
+                nombre_empleado = TxtNombres.Text;
+                apellido_empleado = TxtApellidos.Text;
+                DUI = TxtDUI.Text;
+                NIT = txtNIT.Text;
+                telefono_empleado = txtNumero.Text;
+                nacimiento_empleado = dtNacimiento.Text;
+                id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
+                id_estado_empleado = Convert.ToInt16(cmbEstado.SelectedValue);
+                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+                id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
+                direccion_empleado = TxtDireccion.Text;
+                //INSTANCIAR OBJETO
+                objCond = new ControladorIngreso(nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
+                bool respuesta = objCond.ActualizarDatosControlador();
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Usuario actualizado exitosamente", "Confirmación de actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no pudo ser actualizado", "Proceso de actualización incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public frmIngresoConductores()
         {
             InitializeComponent();
             CargarDatos();
+
         }
 
         private void frmIngresoConductores_Load(object sender, EventArgs e)
@@ -185,16 +222,11 @@ namespace SistemGestionBuses
             CargarEstado();
         }
 
-        private void cmbGenero_click()
-        {
-          
-
-
-        }
 
         private void btnAgregar_click(object sender, EventArgs e)
         {
-            EnvioDatos();
+            ActualizarDatos();
+            CargarDatos();
         }
 
 
@@ -219,11 +251,6 @@ namespace SistemGestionBuses
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -242,6 +269,12 @@ namespace SistemGestionBuses
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnActualizar_click(object sender, EventArgs e)
+        {
+            ActualizarDatos();
+            
         }
     }
 }

@@ -420,7 +420,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            //this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnEliminar
             // 
@@ -459,6 +459,7 @@
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Conductor";
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_click);
             // 
             // button4
             // 
