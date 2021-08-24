@@ -10,6 +10,11 @@ namespace Controlador
 {
    public class ControladorIngreso
     {
+        //dt Empleado
+        public static DataTable CargarEmpleado_Controlador()
+        {
+            return ModeloIngreso.ObtenerListaEmpleados();
+        }
         //cmb Municipio
         public static DataTable ObtenerMunicipios()
         {
@@ -56,9 +61,14 @@ namespace Controlador
         {
             return ModeloIngreso.CargarUnidadTransporte();
         }
+        //CARGAR EMPLEADO
+        public static DataTable CargarEmpleadoControlador()
+        {
+            return ModeloIngreso.ObtenerListaEmpleados();
+        }
 
         //ATRIBUTOS 
-        public static int id_conductor { get; set; }
+        public static int id_empleado { get; set; }
         public string nombres_empleado { get; set; }       
         public string apellidos_empleado { get; set; }       
         public string DUI { get; set; }
@@ -87,10 +97,18 @@ namespace Controlador
             id_municipio = pMunicipio;
         }
        
-        //CRUD
+        //CRUD empleado
         public bool EnviarDatosControlador()
         {
             return ModeloIngreso.RegistrarEmpleado(nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
-        }        
+        }     
+        public bool ActualizarDatosControlador()
+        {
+            return ModeloIngreso.ActualizarEmpleado( id_empleado,nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
+        }
+        public static bool EliminarEmpleadoControlador()
+        {
+            return ModeloIngreso.EliminarEmpleado(id_empleado);
+        }
     }
 }

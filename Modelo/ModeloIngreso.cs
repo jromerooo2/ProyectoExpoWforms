@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using Modelo;
 
 namespace Modelo
 {
@@ -34,7 +35,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_estado_conductor WHERE id_estado_empleado = ?param1";
+                string instruccion = "SELECT * FROM tb_estado_empleado WHERE id_estado_empleado = ?param1";
                 MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdtipoest.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
@@ -178,6 +179,25 @@ namespace Modelo
                 return data = null;
             }
         }
+        public static DataTable ObtenerListaEmpleados()
+        {
+            DataTable data;
+            try
+            {
+                string instuccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
+                MySqlCommand cmdListaEmpleado = new MySqlCommand(string.Format(instuccion),
+                    ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdListaEmpleado);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data = null;
+            }
+        }
 
         //Cargar Unidad Transporte
         public static DataTable CargarUnidadTransporte()
@@ -252,6 +272,61 @@ namespace Modelo
             {
                 return retorno;
             }   
+        }
+        //Obtener Lista de Empleado
+        public static DataTable ObtenerEmpleado()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
+                MySqlCommand cmdEmpl = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEmpl);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data = null;
+            }
+        }
+        //Update Empleado
+        public static bool ActualizarEmpleado(int pId,string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
+        {
+            bool retorno = false;
+            try
+            {
+                //Proceso de Actualizacion
+                MySqlCommand cmdUpEmpleado = new MySqlCommand(string.Format(" UPDATE tb_empleados SET nombres_empleado = '" + pNombre + "',apellidos_empleado = '" + pApellido + "',DUI = '" + pDUI + "',NIT = '" + pNIT + "',direccion_empleado = '" + pDireccion + "',telefono_empleado = '" + pTelefono + "',id_genero = '" + pGenero + "',id_estado_empleado = '" + pEstado + "',id_cargo = '" + pCargo + "',id_municipio = '" + pMunicipio + "',nacimiento_empleado = '" + pNacimiento + "'WHERE id_empleado = '"+pId+"' "), ModeloConexion.GetConnection());
+                //Verificar Update
+                retorno = Convert.ToBoolean(cmdUpEmpleado.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno;
+            }
+        }
+        //Eliminar Empleado
+        public static bool EliminarEmpleado(int pId)
+        {
+            bool retorno;
+            try
+            {
+                string query = "DELETE FROM tb_empleados WHERE id_empleado = '" + pId + "'";
+                MySqlCommand cmdEli = new MySqlCommand(string.Format(query),
+                                                        ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdEli.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno = false;
+            }
         }
         //Igreso datos cliente
         public static bool AgregarCliente(string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)

@@ -102,6 +102,24 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        public static DataTable CargarTipoViaje()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_viaje";
+                MySqlCommand cmdtipoviaje = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoviaje);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
         #endregion
 
         #region CMBInner
