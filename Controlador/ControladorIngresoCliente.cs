@@ -16,6 +16,11 @@ namespace Controlador
         {
             return ModeloIngreso.CargarTipoCliente();
         }
+        //cmb Cliente inner
+        public static DataTable ObtenerInner(int id)
+        {
+            return ModeloIngreso.CargarTipoClienteInner(id);
+        }
 
         public static DataTable ObtenerCliente()
         {
@@ -49,7 +54,7 @@ namespace Controlador
         }
         public bool ActualizarClienteContorlador()
         {
-            return ModeloIngreso.ActualizarCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente, id_cliente);
+            return ModeloIngreso.ActualizarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente, id_cliente);
         }
         public static object EliminarClienteControlador()
         {

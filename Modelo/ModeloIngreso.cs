@@ -236,6 +236,26 @@ namespace Modelo
                 return data = null;
             }
         }
+        // Cargar Tipo Cliente Inner
+        public static DataTable CargarTipoClienteInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_cliente WHERE id_tipo_cliente = ?param1";
+                MySqlCommand cmdTipCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdTipCliente.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdTipCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         //Cargarcliente
         public static DataTable CargarClientes()
         {

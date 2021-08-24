@@ -211,7 +211,7 @@ namespace SistemGestionBuses
         }
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-           
+            ActualizarDatos();
         }
 
         private void btnAgregarCliente1_Click(object sender, EventArgs e)
@@ -243,16 +243,22 @@ namespace SistemGestionBuses
             {
                 int i = dgvDatosCliente.CurrentRow.Index;
                 txtIdCliente.Text = dgvDatosCliente[0, i].Value.ToString();
-                txtNomCliente.Text = dgvDatosCliente[2, i].Value.ToString();
-                txtApeCliente.Text = dgvDatosCliente[4, i].Value.ToString();
+                txtNomCliente.Text = dgvDatosCliente[1, i].Value.ToString();
+                txtApeCliente.Text = dgvDatosCliente[2, i].Value.ToString();
                 txtTelCliente.Text = dgvDatosCliente[3, i].Value.ToString();
-                txtDirCliente.Text = dgvDatosCliente[3, i].Value.ToString();
+                txtDirCliente.Text = dgvDatosCliente[5, i].Value.ToString();
+                txtCorCliente.Text = dgvDatosCliente[6, i].Value.ToString();
 
-                int id_tipo_cliente = Convert.ToInt16(dgvDatosCliente[1, i].Value.ToString());
-                cmbTipCliente.DataSource = ControladorUsuario.cargarUsuario(id_tipo_cliente);
+                int id_tipo_cliente = Convert.ToInt16(dgvDatosCliente[4, i].Value.ToString());
+                cmbTipCliente.DataSource = ControladorIngresoCliente.ObtenerInner(id_tipo_cliente);
                 cmbTipCliente.DisplayMember = "tipo_cliente";
                 cmbTipCliente.ValueMember = "id_tipo_cliente";
             }
+        }
+
+        private void btnAcualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarDatos();
         }
     }
 }

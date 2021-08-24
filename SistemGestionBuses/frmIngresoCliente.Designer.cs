@@ -200,6 +200,7 @@
             this.btnActualizarCliente.TabIndex = 45;
             this.btnActualizarCliente.Text = "Actualizar clientes";
             this.btnActualizarCliente.UseVisualStyleBackColor = true;
+            this.btnActualizarCliente.Click += new System.EventHandler(this.btnAcualizar_Click);
             // 
             // btnAgregarCliente
             // 
