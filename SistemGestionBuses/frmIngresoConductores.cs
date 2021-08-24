@@ -73,9 +73,9 @@ namespace SistemGestionBuses
             try
             {
                 DataTable dataEstado = ControladorIngreso.ObtenerEstado();
-                cmbEstado.DataSource = dataEstado;
-                cmbEstado.DisplayMember = "estado_empleado";
-                cmbEstado.ValueMember = "id_estado_empleado";
+                CmbEstado.DataSource = dataEstado;
+                CmbEstado.DisplayMember = "estado_empleado";
+                CmbEstado.ValueMember = "id_estado_empleado";
             }
             catch (Exception)
             {
@@ -84,7 +84,18 @@ namespace SistemGestionBuses
                                                  MessageBoxIcon.Error);
             }
         }
-        //Cargar Datos
+        //LIMPIAR CAMPOS
+        public void LimpiarCampos()
+        {
+            TxtApellidos.Clear();
+            TxtDireccion.Clear();
+            TxtDUI.Clear();
+            txtId.Clear();
+            txtNIT.Clear();
+            TxtNombres.Clear();
+            txtTelefono.Clear();
+        }
+        //CARGAR DATOS DE CMB
         void CargarDatos()
         {
             try
@@ -99,7 +110,14 @@ namespace SistemGestionBuses
                 MessageBox.Show("Error al cargar datos." + ex.Message, "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Envio de Datos
+        //CARGAR GRID DATOS
+        void CargarGridDatos()
+        {
+            CargarDatos();
+            datosCond = ControladorIngreso.CargarEmpleadoControlador();
+            dgvEmpleado.DataSource = datosCond;
+        }
+        //CREAR DATOS
         void EnvioDatos()
         {
 
@@ -114,7 +132,7 @@ namespace SistemGestionBuses
                 telefono_empleado = txtTelefono.Text;
                 nacimiento_empleado = dtNacimiento.Text;
                 id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
-                id_estado_empleado= Convert.ToInt16(cmbEstado.SelectedValue);
+                id_estado_empleado= Convert.ToInt16(CmbEstado.SelectedValue);
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
                 direccion_empleado = TxtDireccion.Text;
@@ -137,13 +155,7 @@ namespace SistemGestionBuses
                 MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //CARGAR GRID DATOS
-        void CargarGridDatos()
-        {
 
-            datosCond = ControladorIngreso.CargarEmpleadoControlador();
-            dgvEmpleado.DataSource = datosCond;
-        }
         //ACTUALIZAR DATOS
         void ActualizarDatos()
         {
@@ -158,7 +170,7 @@ namespace SistemGestionBuses
                 telefono_empleado = txtTelefono.Text;
                 nacimiento_empleado = dtNacimiento.Text;
                 id_genero = Convert.ToInt16(cmbCargo.SelectedValue);
-                id_estado_empleado = Convert.ToInt16(cmbEstado.SelectedValue);
+                id_estado_empleado = Convert.ToInt16(CmbEstado.SelectedValue);
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 id_municipio = Convert.ToInt16(cmbMunicipio.SelectedValue);
                 direccion_empleado = TxtDireccion.Text;
@@ -181,6 +193,22 @@ namespace SistemGestionBuses
                 MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //ELIMINAR DATOS
+        void EliminarDatos()
+        {
+            ControladorIngreso.id_empleado = Convert.ToInt16(txtId.Text);
+            bool respuesta = ControladorIngreso.EliminarEmpleadoControlador();
+            if (respuesta == true)
+            {
+                MessageBox.Show("El registro ha sido eliminado", "Confirmación",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El registro no fue eliminado", "Confirmación",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public frmIngresoConductores()
         {
             InitializeComponent();
@@ -195,40 +223,19 @@ namespace SistemGestionBuses
             CargarGridDatos();
         }
 
-
-
-        private void dtNacimiento_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbMunicipio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void cmbMunicipios_Click(object sender, EventArgs e)
-        {
-            cmbMunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
-     
+        {    
             CargarMunicipios();
-        }
-
-        private void cmbMunicipio_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            
-           
         }
 
         private void cmbCargo_click(object sender, EventArgs e)
         {
-            cmbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
-            CargarCargo();
+           CargarCargo();
         }
 
         private void cmbEstado_click(object sender, EventArgs e)
         {
-            cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+
             CargarEstado();
         }
 
@@ -245,48 +252,14 @@ namespace SistemGestionBuses
         private void cmbGenero_click(object sender, EventArgs e)
         {
             CargarGenero();
-            cmbGenero.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CargarGridDatos();
-            MySqlConnection objvalor;
-            objvalor = ControladorConexion.GetConn();
-            if (objvalor != null)
-            {
-                MessageBox.Show("Conexión se estableció con exito.");
-            }
-            else
-            {
-                MessageBox.Show("Error al establecer conexión.");
-            }
-        }
-
-        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnActualizar_click(object sender, EventArgs e)
         {
-            ActualizarDatos();
-            
+            ActualizarDatos();      
         }
 
         private void DgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -308,9 +281,9 @@ namespace SistemGestionBuses
             cmbGenero.ValueMember = "id_genero";
 
             int id_estado_empleado = Convert.ToInt16(dgvEmpleado[8, posicion].Value.ToString());
-            cmbEstado.DataSource = ControladorIngreso.CargarEstadoInner_controlador(id_estado_empleado);
-            cmbEstado.DisplayMember = "estado_empleado";
-            cmbEstado.ValueMember = "id_estado_empleado";
+            CmbEstado.DataSource = ControladorIngreso.CargarEstadoInner_controlador(id_estado_empleado);
+            CmbEstado.DisplayMember = "estado_empleado";
+            CmbEstado.ValueMember = "id_estado_empleado";
 
             int id_cargo = Convert.ToInt16(dgvEmpleado[9, posicion].Value.ToString());
             cmbCargo.DataSource = ControladorIngreso.CargarCargoInner_controlador(id_cargo);
@@ -329,6 +302,37 @@ namespace SistemGestionBuses
         private void BtnGrid_Click(object sender, EventArgs e)
         {
             CargarGridDatos();
+        }
+
+        private void BtnEliminar_click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("¿Está seguro de eliminar a: " + TxtNombres.Text + "?",
+                "Confirmar eliminación", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarDatos();
+                CargarGridDatos();
+            }
+        }
+
+        private void BtnConectar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection objvalor;
+            objvalor = ControladorConexion.GetConn();
+            if (objvalor != null)
+            {
+                MessageBox.Show("Conexión se estableció con exito.");
+            }
+            else
+            {
+                MessageBox.Show("Error al establecer conexión.");
+            }
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

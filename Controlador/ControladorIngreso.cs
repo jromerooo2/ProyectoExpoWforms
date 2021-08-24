@@ -106,5 +106,9 @@ namespace Controlador
         {
             return ModeloIngreso.ActualizarEmpleado( id_empleado,nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
         }
+        public static bool EliminarEmpleadoControlador()
+        {
+            return ModeloIngreso.EliminarEmpleado(id_empleado);
+        }
     }
 }

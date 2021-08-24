@@ -49,13 +49,13 @@
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.CmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbMunicipio = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnConectar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -95,7 +95,7 @@
             this.panel2.Controls.Add(this.cmbGenero);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.cmbCargo);
-            this.panel2.Controls.Add(this.cmbEstado);
+            this.panel2.Controls.Add(this.CmbEstado);
             this.panel2.Controls.Add(this.cmbMunicipio);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
@@ -185,7 +185,6 @@
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dtNacimiento.TabIndex = 57;
-            this.dtNacimiento.ValueChanged += new System.EventHandler(this.dtNacimiento_ValueChanged);
             // 
             // label6
             // 
@@ -270,13 +269,13 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(339, 142);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(121, 26);
             this.cmbGenero.TabIndex = 26;
-            this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
             this.cmbGenero.Click += new System.EventHandler(this.cmbGenero_click);
             // 
             // label5
@@ -293,6 +292,7 @@
             // 
             // cmbCargo
             // 
+            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(339, 90);
@@ -301,26 +301,26 @@
             this.cmbCargo.TabIndex = 24;
             this.cmbCargo.Click += new System.EventHandler(this.cmbCargo_click);
             // 
-            // cmbEstado
+            // CmbEstado
             // 
-            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(339, 38);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 26);
-            this.cmbEstado.TabIndex = 23;
-            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
-            this.cmbEstado.Click += new System.EventHandler(this.cmbEstado_click);
+            this.CmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbEstado.FormattingEnabled = true;
+            this.CmbEstado.Location = new System.Drawing.Point(339, 38);
+            this.CmbEstado.Name = "CmbEstado";
+            this.CmbEstado.Size = new System.Drawing.Size(121, 26);
+            this.CmbEstado.TabIndex = 23;
+            this.CmbEstado.Click += new System.EventHandler(this.cmbEstado_click);
             // 
             // cmbMunicipio
             // 
+            this.cmbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMunicipio.FormattingEnabled = true;
             this.cmbMunicipio.Location = new System.Drawing.Point(339, 194);
             this.cmbMunicipio.Name = "cmbMunicipio";
             this.cmbMunicipio.Size = new System.Drawing.Size(121, 26);
             this.cmbMunicipio.TabIndex = 22;
-            this.cmbMunicipio.SelectedIndexChanged += new System.EventHandler(this.cmbMunicipio_SelectedIndexChanged_1);
             this.cmbMunicipio.Click += new System.EventHandler(this.cmbMunicipios_Click);
             // 
             // label4
@@ -359,7 +359,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnConectar);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.BtnEliminar);
@@ -371,25 +371,25 @@
             this.panel1.Size = new System.Drawing.Size(284, 256);
             this.panel1.TabIndex = 31;
             // 
-            // button1
+            // BtnConectar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.Location = new System.Drawing.Point(153, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 51);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Conectar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnConectar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnConectar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnConectar.FlatAppearance.BorderSize = 2;
+            this.BtnConectar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnConectar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnConectar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConectar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConectar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnConectar.Location = new System.Drawing.Point(153, 185);
+            this.BtnConectar.Name = "BtnConectar";
+            this.BtnConectar.Size = new System.Drawing.Size(111, 51);
+            this.BtnConectar.TabIndex = 20;
+            this.BtnConectar.Text = "Conectar";
+            this.BtnConectar.UseVisualStyleBackColor = false;
+            this.BtnConectar.Click += new System.EventHandler(this.BtnConectar_Click);
             // 
             // label3
             // 
@@ -420,6 +420,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnEliminar
             // 
@@ -439,6 +440,7 @@
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Conductor";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_click);
             // 
             // BtnActualizar
             // 
@@ -534,7 +536,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 61;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -581,13 +582,13 @@
         private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCargo;
-        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.ComboBox CmbEstado;
         private System.Windows.Forms.ComboBox cmbMunicipio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnConectar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnEliminar;

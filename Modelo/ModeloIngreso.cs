@@ -35,7 +35,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_estado_conductor WHERE id_estado_empleado = ?param1";
+                string instruccion = "SELECT * FROM tb_estado_empleado WHERE id_estado_empleado = ?param1";
                 MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdtipoest.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
@@ -290,6 +290,24 @@ namespace Modelo
             {
 
                 return retorno;
+            }
+        }
+        //Eliminar Empleado
+        public static bool EliminarEmpleado(int pId)
+        {
+            bool retorno;
+            try
+            {
+                string query = "DELETE FROM tb_empleados WHERE id_empleado = '" + pId + "'";
+                MySqlCommand cmdEli = new MySqlCommand(string.Format(query),
+                                                        ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdEli.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno = false;
             }
         }
         //Igreso datos cliente
