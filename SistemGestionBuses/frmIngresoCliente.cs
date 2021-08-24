@@ -18,14 +18,21 @@ namespace SistemGestionBuses
         public frmIngresoCliente()
         {
             InitializeComponent();
-            CargarTipoCliente();
-        }
-
-        void CargarGridDatos()
-        {
             
         }
+        private void CargarGridDatos()
+        {
+            try
+            {
+                DataTable data = ControladorIngresoCliente.ObtenerCliente();
+                dgvDatosCliente.DataSource = data;
+            }
+            catch (Exception ex)
+            {
 
+                throw;
+            }
+        }
         void CargarTipoCliente()
         {
             try
@@ -56,7 +63,8 @@ namespace SistemGestionBuses
                 telefono_cliente = txtTelCliente.Text;
                 direccion_cliente = txtDirCliente.Text;
                 correo_cliente = txtCorCliente.Text;
-                id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);              
+                id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
+
                 //INSTANCIAR OBJETO
                 ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
                 bool respuesta = objCliente.EnviarClientes();
@@ -159,6 +167,7 @@ namespace SistemGestionBuses
         private void frmIngresoCliente_Load(object sender, EventArgs e)
         {
             CargarTipoCliente();
+            CargarGridDatos();
         }
 
         public bool Vacio()
@@ -178,6 +187,32 @@ namespace SistemGestionBuses
             }
 
         }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            string nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente;
+            int id_tipo_cliente, id_cliente;
+            id_cliente = Convert.ToInt16(txtIdCliente.Text);
+            nombre_cliente = txtNomCliente.Text;
+            apellido_cliente = txtApeCliente.Text;
+            telefono_cliente = txtTelCliente.Text;
+            direccion_cliente = txtDirCliente.Text;
+            correo_cliente = txtCorCliente.Text;
+            id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
+            ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombre_cliente, apellido_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente, id);
+            bool res = objCliente.ActualizarCliente();
+            if (res)
+            {
+                MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarGridDatos();
+            }
+            else
+            {
+                MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         private void btnAgregarCliente1_Click(object sender, EventArgs e)
         {
             Vacio();
@@ -186,6 +221,37 @@ namespace SistemGestionBuses
                 MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }           
             EnvioDatos();
+        }
+
+        void EliminarDatos()
+        {
+            bool respuesta = ControladorUsuario.EliminarDatosController(Convert.ToInt16(txtIdCliente.Text));
+            if (respuesta)
+            {
+                MessageBox.Show("El registro se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El registro no se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+     
+        private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                int i = dgvDatosCliente.CurrentRow.Index;
+                txtIdCliente.Text = dgvDatosCliente[0, i].Value.ToString();
+                txtNomCliente.Text = dgvDatosCliente[2, i].Value.ToString();
+                txtApeCliente.Text = dgvDatosCliente[4, i].Value.ToString();
+                txtTelCliente.Text = dgvDatosCliente[3, i].Value.ToString();
+                txtDirCliente.Text = dgvDatosCliente[3, i].Value.ToString();
+
+                int id_tipo_cliente = Convert.ToInt16(dgvDatosCliente[1, i].Value.ToString());
+                cmbTipCliente.DataSource = ControladorUsuario.cargarUsuario(id_tipo_cliente);
+                cmbTipCliente.DisplayMember = "tipo_cliente";
+                cmbTipCliente.ValueMember = "id_tipo_cliente";
+            }
         }
     }
 }

@@ -49,6 +49,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +66,7 @@
             this.dgvDatosCliente.Name = "dgvDatosCliente";
             this.dgvDatosCliente.Size = new System.Drawing.Size(642, 170);
             this.dgvDatosCliente.TabIndex = 58;
+            this.dgvDatosCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             // 
             // label5
             // 
@@ -201,7 +204,7 @@
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarCliente.Location = new System.Drawing.Point(247, 212);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(336, 212);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(122, 31);
             this.btnAgregarCliente.TabIndex = 44;
@@ -259,6 +262,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtIdCliente);
             this.panel1.Controls.Add(this.btnAgregarCliente);
             this.panel1.Controls.Add(this.txtApeCliente);
             this.panel1.Controls.Add(this.txtCorCliente);
@@ -275,6 +280,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(471, 260);
             this.panel1.TabIndex = 78;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(244, 202);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 18);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "ID";
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Location = new System.Drawing.Point(247, 223);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(57, 20);
+            this.txtIdCliente.TabIndex = 61;
             // 
             // panel2
             // 
@@ -334,5 +357,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtIdCliente;
     }
 }

@@ -216,6 +216,24 @@ namespace Modelo
                 return data = null;
             }
         }
+        //Cargarcliente
+        public static DataTable CargarClientes()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_cliente";
+                MySqlCommand cmdClientes = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdClientes);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
 
         //CRUD Empleado
         public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero,int pEstado,int pCargo,int pMunicipio, string pNacimiento )
@@ -253,12 +271,12 @@ namespace Modelo
                 return retorno;
             }
         }
-        public static bool ActualizarCliente(int pIdCliente, string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
+        public static bool ActualizarCliente(string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente , int pIdCliente)
         {
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombre_cliente = '" + pNomCliente + "', apellido_cliente= '" + pApeCliente + "',  telefono_cliente= '" + pTelCliente + "', direccion_cliente= '" + pDirCliente + "', correo_cliente=" + pCorCliente + " WHERE id_cliente= '" + pIdCliente + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombre_cliente= '"+pNomCliente+"', apellido_cliente= '" + pApeCliente + "',  telefono_cliente= '" + pTelCliente + "', direccion_cliente= '" + pDirCliente + "', correo_cliente=" + pCorCliente + " WHERE id_cliente= '" +pIdCliente + "'"), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }

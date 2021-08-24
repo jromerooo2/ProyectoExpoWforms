@@ -17,13 +17,17 @@ namespace Controlador
             return ModeloIngreso.CargarTipoCliente();
         }
 
-       
+        public static DataTable ObtenerCliente()
+        {
+            return ModeloIngreso.CargarClientes();
+        }
+
         public string nombres_cliente { get; set; }
         public string apellidos_cliente { get; set; }
         public string telefono_cliente { get; set; }
         public string direccion_cliente { get; set; }
         public string correo_cliente { get; set; }       
-        public int id_tipo_cliente { get; set; }        
+        public int id_tipo_cliente { get; set; }
 
         public ControladorIngresoCliente (string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
         {
@@ -33,17 +37,18 @@ namespace Controlador
             telefono_cliente = pTelCliente;
             direccion_cliente = pDirCliente;
             correo_cliente = pCorCliente;
-            id_tipo_cliente = pTipCliente;            
+            id_tipo_cliente = pTipCliente;
+            
         }
      
         public bool EnviarClientes()
         {
             return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);
         }
-        //public static object ActualizarClienteControlador()
-        //{
-        //    return ModeloIngreso.ActualizarCliente();
-        //}
+        public static object ActualizarCliente(string nombres_cliente, string apellidos_cliente, string direccion_cliente, string telefono_cliente, string correo_cliente, int id_tipo_cliente, int id_cliente)
+        {
+            return ModeloIngreso.ActualizarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente, id_cliente);
+        }
         public static object EliminarClienteControlador()
         {
             return ModeloIngreso.EliminarCliente();

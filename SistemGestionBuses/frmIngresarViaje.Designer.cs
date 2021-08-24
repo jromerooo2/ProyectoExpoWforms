@@ -68,11 +68,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtIDdirecciones = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtIDdirecciones = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -116,6 +116,7 @@
             this.button2.TabIndex = 74;
             this.button2.Text = "Actualizar Viaje";
             this.button2.UseVisualStyleBackColor = false;
+            
             // 
             // button1
             // 
@@ -538,6 +539,29 @@
             this.panel3.Size = new System.Drawing.Size(113, 121);
             this.panel3.TabIndex = 79;
             // 
+            // txtIDdirecciones
+            // 
+            this.txtIDdirecciones.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDdirecciones.Location = new System.Drawing.Point(12, 82);
+            this.txtIDdirecciones.Name = "txtIDdirecciones";
+            this.txtIDdirecciones.ReadOnly = true;
+            this.txtIDdirecciones.Size = new System.Drawing.Size(87, 28);
+            this.txtIDdirecciones.TabIndex = 90;
+            this.txtIDdirecciones.Text = "ID viaje";
+            this.txtIDdirecciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(9, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(95, 18);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "ID direcciones";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -569,29 +593,6 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(433, 260);
             this.dataGridView1.TabIndex = 82;
-            // 
-            // txtIDdirecciones
-            // 
-            this.txtIDdirecciones.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDdirecciones.Location = new System.Drawing.Point(12, 82);
-            this.txtIDdirecciones.Name = "txtIDdirecciones";
-            this.txtIDdirecciones.ReadOnly = true;
-            this.txtIDdirecciones.Size = new System.Drawing.Size(87, 28);
-            this.txtIDdirecciones.TabIndex = 90;
-            this.txtIDdirecciones.Text = "ID viaje";
-            this.txtIDdirecciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(9, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 18);
-            this.label17.TabIndex = 91;
-            this.label17.Text = "ID direcciones";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmIngresarViaje
             // 
