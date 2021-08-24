@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresarDirecciones));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtDireccion_inicio_longt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.btnCargarMapa = new System.Windows.Forms.Button();
             this.gMapDirections = new GMap.NET.WindowsForms.GMapControl();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDireccion_inicio_longt = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -89,6 +89,15 @@
             this.panel4.Size = new System.Drawing.Size(482, 342);
             this.panel4.TabIndex = 97;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // txtDireccion_inicio_longt
+            // 
+            this.txtDireccion_inicio_longt.Location = new System.Drawing.Point(15, 135);
+            this.txtDireccion_inicio_longt.Multiline = true;
+            this.txtDireccion_inicio_longt.Name = "txtDireccion_inicio_longt";
+            this.txtDireccion_inicio_longt.Size = new System.Drawing.Size(139, 76);
+            this.txtDireccion_inicio_longt.TabIndex = 106;
+            this.txtDireccion_inicio_longt.Text = "destino";
             // 
             // label3
             // 
@@ -362,15 +371,6 @@
             this.label4.Size = new System.Drawing.Size(484, 55);
             this.label4.TabIndex = 103;
             this.label4.Text = "Ingresa las direcciones:";
-            // 
-            // txtDireccion_inicio_longt
-            // 
-            this.txtDireccion_inicio_longt.Location = new System.Drawing.Point(15, 135);
-            this.txtDireccion_inicio_longt.Multiline = true;
-            this.txtDireccion_inicio_longt.Name = "txtDireccion_inicio_longt";
-            this.txtDireccion_inicio_longt.Size = new System.Drawing.Size(139, 76);
-            this.txtDireccion_inicio_longt.TabIndex = 106;
-            this.txtDireccion_inicio_longt.Text = "destino";
             // 
             // frmIngresarDirecciones
             // 
