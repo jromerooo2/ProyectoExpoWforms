@@ -33,11 +33,11 @@ namespace Controlador
             return ModeloUsuario.EliminarUsuario(id);
         }
 
-        public static object cargarUsuario(int id_empleado)
+        public static object cargarUsuario(string id_empleado)
         {
             return ModeloUsuario.CargarUsuarioInner(id_empleado);
         }
-        public static object cargarCargo(int id_empleado)
+        public static object cargarCargo(string id_empleado)
         {
             return ModeloUsuario.CargarCargoInner(id_empleado);
         }

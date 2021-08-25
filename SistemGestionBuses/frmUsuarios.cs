@@ -203,16 +203,16 @@ namespace SistemGestionBuses
             BtnEliminar.Enabled = true;
 
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
-            txtUser.Text = dgvUsuarios[2, i].Value.ToString();
-            txtPassword.Text = dgvUsuarios[4, i].Value.ToString();
-            txtCorreo.Text = dgvUsuarios[3, i].Value.ToString();
+            txtUser.Text = dgvUsuarios[1, i].Value.ToString();
+            txtPassword.Text = dgvUsuarios[3, i].Value.ToString();
+            txtCorreo.Text = dgvUsuarios[2, i].Value.ToString();
 
-            int id_empleado = Convert.ToInt16(dgvUsuarios[1, i].Value.ToString());
+            string id_empleado = dgvUsuarios[4, i].Value.ToString();
             cmbEmpleado.DataSource = ControladorUsuario.cargarUsuario(id_empleado);
             cmbEmpleado.DisplayMember = "nombres_empleado";
             cmbEmpleado.ValueMember = "id_empleado";
 
-            int id_cargo = Convert.ToInt16(dgvUsuarios[5, i].Value.ToString());
+            string id_cargo = dgvUsuarios[5, i].Value.ToString();
             cmbCargo.DataSource = ControladorUsuario.cargarCargo(id_cargo);
             cmbCargo.DisplayMember = "cargo";
             cmbCargo.ValueMember = "id_cargo";

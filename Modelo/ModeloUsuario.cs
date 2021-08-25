@@ -33,7 +33,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM tb_usuarios";
+                string query = "SELECT * FROM tbusuariosview";
                 MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
                 data = new DataTable();
@@ -95,12 +95,12 @@ namespace Modelo
             }
         }
 
-        public static object CargarUsuarioInner(int id)
+        public static object CargarUsuarioInner(string id)
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_empleados WHERE id_empleado= ?param1";
+                string instruccion = "SELECT * FROM tb_empleados WHERE nombres_empleado= ?param1";
                 MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
@@ -113,12 +113,12 @@ namespace Modelo
                 return data = null;
             }
         }
-        public static object CargarCargoInner(int id)
+        public static object CargarCargoInner(string id)
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_cargo WHERE id_cargo= ?param1";
+                string instruccion = "SELECT * FROM tb_cargo WHERE cargo= ?param1";
                 MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
