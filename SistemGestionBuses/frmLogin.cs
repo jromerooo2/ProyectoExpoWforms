@@ -91,7 +91,15 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            tryLogIn();
+            if (!Empty(txtUser.Text, txtPass.Text))
+            {
+                tryLogIn();
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingresa datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+            }
+            
         }
     }
 }

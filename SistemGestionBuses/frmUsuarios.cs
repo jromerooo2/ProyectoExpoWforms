@@ -16,6 +16,8 @@ namespace SistemGestionBuses
         public frmUsuarios()
         {
             InitializeComponent();
+            BtnActualizar.Enabled = false;
+            BtnEliminar.Enabled = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -152,7 +154,7 @@ namespace SistemGestionBuses
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Existen entradas duplicadas para el usuario, por favor verifica que los datos sean únicos y que el empleado no tenga un usuario ya asignado.", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -196,6 +198,10 @@ namespace SistemGestionBuses
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dgvUsuarios.CurrentRow.Index;
+
+            BtnActualizar.Enabled = true;
+            BtnEliminar.Enabled = true;
+
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
             txtUser.Text = dgvUsuarios[2, i].Value.ToString();
             txtPassword.Text = dgvUsuarios[4, i].Value.ToString();

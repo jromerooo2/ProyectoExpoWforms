@@ -32,7 +32,8 @@ namespace SistemGestionBuses
         private void recuperarPorMail()
         {
             string usernameRecu = txtUser.Text;
-            if (usernameRecu.Trim() != "")
+
+            if (!String.IsNullOrEmpty(usernameRecu))
             {
                bool res =  ControladorRecuperar.RecuperarMail(usernameRecu);
                 if (res)
@@ -46,13 +47,13 @@ namespace SistemGestionBuses
                 }
                 else
                 {
-                    MessageBox.Show("Algo fallo en el proceso");
+                    MessageBox.Show("Algo fallo en el proceso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
             else
             {
-
+                MessageBox.Show("Por favor ingresa un usuario valido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void label2_Click(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            recuperarPorMail();
+                recuperarPorMail();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -100,16 +101,23 @@ namespace SistemGestionBuses
                 if (res)
                 {
                     MessageBox.Show("Se ha actualizado la contraseña");
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error ");
+                    MessageBox.Show("Hubo un error , intentalo más tarde");
+                    this.Close();
                 }
             }
             else
             {
                 MessageBox.Show("Por favor escribe una contraseña nueva");
             }
+        }
+
+        private void frmRecuperar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
