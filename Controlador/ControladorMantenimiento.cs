@@ -17,12 +17,6 @@ namespace Controlador
 
         public int id_unidad_transporte { get; set; }
 
-        public int id_marca { get; set; }
-
-        public int id_modelo { get; set; }
-
-        public int placa { get; set; }
-
         public int monto_mantenimiento { get; set; }
 
         public int ultimo_kilometraje { get; set; }
@@ -34,16 +28,12 @@ namespace Controlador
         //CONSTRUCTOR
         //Parámetros
 
-        public ControladorMantenimiento(int pid_unidad_transporte, 
-                                        int pid_marca, int pid_modelo, int pplaca, 
+        public ControladorMantenimiento(int pid_unidad_transporte,
                                         int pmonto_mantenimiento, 
                                         int pultimo_kilometraje, string pdescripcion, string pfecha)
             //Atributos = Parámetros
         {
             id_unidad_transporte = pid_unidad_transporte;
-            id_marca = pid_marca;
-            id_modelo = pid_modelo;
-            placa = pplaca;
             monto_mantenimiento = pmonto_mantenimiento;
             ultimo_kilometraje = pultimo_kilometraje;
             descripcion = pdescripcion;
@@ -60,7 +50,7 @@ namespace Controlador
         //RETURNING MAINTENANCE REGISTER
         public bool backing_Maintenance()
         {
-            return ModeloMantenimiento.RegisterMaintenance(id_unidad_transporte,id_marca,id_modelo,placa,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
+            return ModeloMantenimiento.RegisterMaintenance(id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
         }
 
     }

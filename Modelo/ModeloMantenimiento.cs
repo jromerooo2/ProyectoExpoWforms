@@ -13,7 +13,6 @@ namespace Modelo
         /*DATA INSERT*/
         //INSERSIÓN DE DATOS
         public static bool RegisterMaintenance(int pid_unidad_transporte,
-                                        int pid_marca, int pid_modelo, int pplaca,
                                         int pmonto_mantenimiento,
                                         int pultimo_kilometraje, string pdescripcion, string pfecha)
         {
