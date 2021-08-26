@@ -34,17 +34,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CmbModelo = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TxtID_unidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.BtnFieldsClean = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.TxtUltimoKilom = new System.Windows.Forms.TextBox();
+            this.DtFecha = new System.Windows.Forms.DateTimePicker();
+            this.TxtMonto = new System.Windows.Forms.TextBox();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.CmbMarca = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,12 +55,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.TxtPlaca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -112,23 +110,21 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.TxtPlaca);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CmbModelo);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.TxtID_unidad);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.BtnDelete);
+            this.groupBox1.Controls.Add(this.BtnUpdate);
+            this.groupBox1.Controls.Add(this.BtnFieldsClean);
+            this.groupBox1.Controls.Add(this.BtnAdd);
+            this.groupBox1.Controls.Add(this.TxtUltimoKilom);
+            this.groupBox1.Controls.Add(this.DtFecha);
+            this.groupBox1.Controls.Add(this.TxtMonto);
+            this.groupBox1.Controls.Add(this.TxtDescripcion);
+            this.groupBox1.Controls.Add(this.CmbMarca);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -139,133 +135,167 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(39, 110);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 297);
+            this.groupBox1.Size = new System.Drawing.Size(776, 283);
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Vehículo";
             // 
-            // textBox4
+            // label8
             // 
-            this.textBox4.Location = new System.Drawing.Point(314, 98);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(193, 27);
-            this.textBox4.TabIndex = 99;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label8.Location = new System.Drawing.Point(530, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 20);
+            this.label8.TabIndex = 102;
+            this.label8.Text = "Placa:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // CmbModelo
+            // 
+            this.CmbModelo.FormattingEnabled = true;
+            this.CmbModelo.Location = new System.Drawing.Point(314, 45);
+            this.CmbModelo.Name = "CmbModelo";
+            this.CmbModelo.Size = new System.Drawing.Size(193, 28);
+            this.CmbModelo.TabIndex = 101;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label7.Location = new System.Drawing.Point(310, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "Modelo:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TxtID_unidad
+            // 
+            this.TxtID_unidad.Location = new System.Drawing.Point(314, 122);
+            this.TxtID_unidad.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtID_unidad.Multiline = true;
+            this.TxtID_unidad.Name = "TxtID_unidad";
+            this.TxtID_unidad.ReadOnly = true;
+            this.TxtID_unidad.Size = new System.Drawing.Size(193, 27);
+            this.TxtID_unidad.TabIndex = 99;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(310, 76);
+            this.label6.Location = new System.Drawing.Point(310, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 20);
             this.label6.TabIndex = 98;
             this.label6.Text = "ID vehículo:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button4
+            // BtnDelete
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.Location = new System.Drawing.Point(429, 232);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 49);
-            this.button4.TabIndex = 97;
-            this.button4.Text = "Eliminar Mantenimiento";
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnDelete.Location = new System.Drawing.Point(429, 220);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(132, 49);
+            this.BtnDelete.TabIndex = 97;
+            this.BtnDelete.Text = "Eliminar Mantenimiento";
+            this.BtnDelete.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // BtnUpdate
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(224, 232);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 49);
-            this.button3.TabIndex = 96;
-            this.button3.Text = "Actualizar mantenimiento";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnUpdate.Location = new System.Drawing.Point(224, 220);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(132, 49);
+            this.BtnUpdate.TabIndex = 96;
+            this.BtnUpdate.Text = "Actualizar mantenimiento";
+            this.BtnUpdate.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BtnFieldsClean
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button2.Location = new System.Drawing.Point(625, 232);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 49);
-            this.button2.TabIndex = 95;
-            this.button2.Text = "Limpiar Campos";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnFieldsClean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnFieldsClean.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnFieldsClean.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnFieldsClean.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnFieldsClean.Location = new System.Drawing.Point(625, 220);
+            this.BtnFieldsClean.Name = "BtnFieldsClean";
+            this.BtnFieldsClean.Size = new System.Drawing.Size(132, 49);
+            this.BtnFieldsClean.TabIndex = 95;
+            this.BtnFieldsClean.Text = "Limpiar Campos";
+            this.BtnFieldsClean.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BtnAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.Location = new System.Drawing.Point(22, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 49);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "Agregar Mantenimiento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnAdd.Location = new System.Drawing.Point(22, 220);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(132, 49);
+            this.BtnAdd.TabIndex = 94;
+            this.BtnAdd.Text = "Agregar Mantenimiento";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // textBox3
+            // TxtUltimoKilom
             // 
-            this.textBox3.Location = new System.Drawing.Point(534, 152);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 27);
-            this.textBox3.TabIndex = 93;
+            this.TxtUltimoKilom.Location = new System.Drawing.Point(534, 176);
+            this.TxtUltimoKilom.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtUltimoKilom.Multiline = true;
+            this.TxtUltimoKilom.Name = "TxtUltimoKilom";
+            this.TxtUltimoKilom.Size = new System.Drawing.Size(223, 27);
+            this.TxtUltimoKilom.TabIndex = 93;
             // 
-            // dateTimePicker1
+            // DtFecha
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(314, 151);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(193, 25);
-            this.dateTimePicker1.TabIndex = 92;
+            this.DtFecha.CustomFormat = "yyyy-MM-dd";
+            this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtFecha.Location = new System.Drawing.Point(314, 175);
+            this.DtFecha.Name = "DtFecha";
+            this.DtFecha.Size = new System.Drawing.Size(193, 25);
+            this.DtFecha.TabIndex = 92;
             // 
-            // textBox2
+            // TxtMonto
             // 
-            this.textBox2.Location = new System.Drawing.Point(534, 98);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 27);
-            this.textBox2.TabIndex = 91;
+            this.TxtMonto.Location = new System.Drawing.Point(534, 122);
+            this.TxtMonto.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtMonto.Multiline = true;
+            this.TxtMonto.Name = "TxtMonto";
+            this.TxtMonto.Size = new System.Drawing.Size(223, 27);
+            this.TxtMonto.TabIndex = 91;
             // 
-            // textBox1
+            // TxtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 98);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 128);
-            this.textBox1.TabIndex = 90;
+            this.TxtDescripcion.Location = new System.Drawing.Point(22, 98);
+            this.TxtDescripcion.Multiline = true;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(282, 116);
+            this.TxtDescripcion.TabIndex = 90;
             // 
-            // comboBox2
+            // CmbMarca
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(22, 44);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(282, 28);
-            this.comboBox2.TabIndex = 88;
+            this.CmbMarca.FormattingEnabled = true;
+            this.CmbMarca.Location = new System.Drawing.Point(22, 44);
+            this.CmbMarca.Name = "CmbMarca";
+            this.CmbMarca.Size = new System.Drawing.Size(282, 28);
+            this.CmbMarca.TabIndex = 88;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(310, 127);
+            this.label4.Location = new System.Drawing.Point(310, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 86;
@@ -289,7 +319,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(530, 127);
+            this.label2.Location = new System.Drawing.Point(530, 151);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
@@ -302,7 +332,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(530, 76);
+            this.label1.Location = new System.Drawing.Point(530, 100);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 20);
@@ -342,68 +372,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
-            // comboBox1
+            // TxtPlaca
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(314, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 28);
-            this.comboBox1.TabIndex = 101;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(310, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
-            this.label7.TabIndex = 100;
-            this.label7.Text = "Modelo:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(534, 44);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(223, 28);
-            this.comboBox3.TabIndex = 103;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label8.Location = new System.Drawing.Point(530, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 20);
-            this.label8.TabIndex = 102;
-            this.label8.Text = "Placa:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(523, 196);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(121, 27);
-            this.textBox5.TabIndex = 105;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label9.Location = new System.Drawing.Point(425, 199);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
-            this.label9.TabIndex = 104;
-            this.label9.Text = "ID vehículo:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TxtPlaca.Location = new System.Drawing.Point(534, 46);
+            this.TxtPlaca.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPlaca.Multiline = true;
+            this.TxtPlaca.Name = "TxtPlaca";
+            this.TxtPlaca.Size = new System.Drawing.Size(223, 27);
+            this.TxtPlaca.TabIndex = 103;
             // 
             // frmMantenimientos
             // 
@@ -441,25 +417,23 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox TxtDescripcion;
+        private System.Windows.Forms.ComboBox CmbMarca;
+        private System.Windows.Forms.Button BtnUpdate;
+        private System.Windows.Forms.Button BtnFieldsClean;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.TextBox TxtUltimoKilom;
+        private System.Windows.Forms.DateTimePicker DtFecha;
+        private System.Windows.Forms.TextBox TxtMonto;
+        private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtID_unidad;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbModelo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox TxtPlaca;
     }
 }
