@@ -12,6 +12,16 @@ namespace Controlador
     public class ControladorMantenimiento
     {
 
+        //LOADING COMBO BOXES 
+        public static DataTable Load_Marca()
+        {
+            return ModeloMantenimiento.CargarMarca_Vehiculo();
+        }
+        public static DataTable Load_Modelo()
+        {
+            return ModeloMantenimiento.CargarModelo_Vehiculo();
+        }
+
         //ATRIBUTOS
         public static int id_mantenimiento { get; set; }
 

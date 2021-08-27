@@ -10,6 +10,44 @@ namespace Modelo
 {
     public class ModeloMantenimiento
     {
+
+        public static DataTable CargarMarca_Vehiculo()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_marca";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter mdadapt = new MySqlDataAdapter();
+                data = new DataTable();
+                mdadapt.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static DataTable CargarModelo_Vehiculo()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_modelo";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query),ModeloConexion.GetConnection());
+                MySqlDataAdapter mdadapt = new MySqlDataAdapter();
+                data = new DataTable();
+                mdadapt.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+
         /*DATA INSERT*/
         //INSERSIÓN DE DATOS
         public static bool RegisterMaintenance(int pid_unidad_transporte,

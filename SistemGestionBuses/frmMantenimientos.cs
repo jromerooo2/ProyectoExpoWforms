@@ -22,6 +22,19 @@ namespace SistemGestionBuses
 
         public ControladorMantenimiento objmaintenance;
         
+        //DISPLAYING COMBO BOXES 
+        void Cargar_Marca()
+        {
+            CmbMarca.DataSource = ControladorMantenimiento.Load_Marca();
+            CmbMarca.ValueMember = "id_marca";
+            CmbMarca.DisplayMember = "marca";
+        }
+        void Cargar_Modelo()
+        {
+            CmbModelo.DataSource = ControladorMantenimiento.Load_Modelo();
+            CmbModelo.ValueMember = "id_modelo";
+            CmbModelo.DisplayMember = "modelo";
+        }
 
         /*DATA INSERT*/
         //REGISTERING MAINTENANCE
@@ -30,17 +43,14 @@ namespace SistemGestionBuses
             try
             {
                 string descripcion, fecha;
-                int id_unidad_transporte, id_marca, id_modelo, placa, monto_mantenimiento,
+                int id_unidad_transporte, monto_mantenimiento,
                     ultimo_kilometraje;
                 //Sending registers
                 descripcion = TxtDescripcion.Text;
                 fecha = DtFecha.Text;
-                placa = Convert.ToInt16(TxtPlaca.Text);
                 monto_mantenimiento = Convert.ToInt16(TxtMonto.Text);
                 ultimo_kilometraje = Convert.ToInt16(TxtUltimoKilom.Text);
                 id_unidad_transporte = Convert.ToInt16(TxtID_unidad.Text);
-                id_marca = Convert.ToInt16(CmbMarca.SelectedValue);
-                id_modelo = Convert.ToInt16(CmbModelo.SelectedValue);
                 //Instace random object
                 //objmaintenance = new ControladorMantenimiento(id_unidad_transporte, id_marca, id_modelo, placa,
                 //                                            monto_mantenimiento,
