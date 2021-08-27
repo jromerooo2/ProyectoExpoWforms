@@ -7,15 +7,14 @@ using MySql.Data.MySqlClient;
 
 namespace Modelo
 {
-   public class ModeloLogin
+    public class ModeloLogin
     {
         public static bool Login(string username, string password)
         {
             bool retorno = false;
             try
             {
-
-                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1 AND contrasena = BINARY ?param2";
+                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1 AND contrasena = BINARY ?param2 ";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
                 cmdselect.Parameters.Add(new MySqlParameter("param2", password));
@@ -28,5 +27,6 @@ namespace Modelo
                 return retorno;
             }
         }
+
     }
 }
