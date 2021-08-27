@@ -19,6 +19,7 @@ namespace Modelo
             bool register = false;
             try
             {
+
                 MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_mantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha) VALUES('{0}','{1}','{2}','{3}','{4}')", pid_unidad_transporte, pmonto_mantenimiento,pultimo_kilometraje,pdescripcion,pfecha), ModeloConexion.GetConnection());
                 register = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 return register;

@@ -43,7 +43,7 @@ namespace SistemGestionBuses
                 DataTable data = ControladorUsuario.CargarUsuarios();
                 dgvUsuarios.DataSource = data;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
                 throw;

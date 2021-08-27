@@ -18,17 +18,21 @@ namespace SistemGestionBuses
             InitializeComponent();
         }
 
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             tryLogIn();
         }
 
         void tryLogIn()
-        {           
-            string user = txtUser.Text;
-            string password= txtPass.Text;
-            if (!Empty(user, password))
-            {
+        {
+                string user = txtUser.Text;
+                string password = txtPass.Text;
+
                 AtributosLogin.username = user;
                 AtributosLogin.password = password;
                 bool res = ControladorLogin.Login();
@@ -42,13 +46,9 @@ namespace SistemGestionBuses
                 else
                 {
                     MessageBox.Show("Datos Incorrectos, Intentalo De Nuevo");
-                }
-            }else
-            {
-                MessageBox.Show("Por favor ingresa datos");
-            }
+                }            
 
-        }
+           }
 
         private bool Empty(string user, string password)
         {
@@ -69,11 +69,6 @@ namespace SistemGestionBuses
             recu.BringToFront();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -91,7 +86,7 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (!Empty(txtUser.Text, txtPass.Text))
+            if (!Empty(txtUser.Text, txtPass.Text) )
             {
                 tryLogIn();
             }
