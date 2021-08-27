@@ -55,7 +55,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TxtPlaca = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -110,7 +110,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.TxtPlaca);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.CmbModelo);
             this.groupBox1.Controls.Add(this.label7);
@@ -154,11 +154,12 @@
             // 
             // CmbModelo
             // 
+            this.CmbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbModelo.FormattingEnabled = true;
             this.CmbModelo.Location = new System.Drawing.Point(314, 45);
             this.CmbModelo.Name = "CmbModelo";
             this.CmbModelo.Size = new System.Drawing.Size(193, 28);
-            this.CmbModelo.TabIndex = 101;
+            this.CmbModelo.TabIndex = 1;
             // 
             // label7
             // 
@@ -203,7 +204,7 @@
             this.BtnDelete.Location = new System.Drawing.Point(429, 220);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(132, 49);
-            this.BtnDelete.TabIndex = 97;
+            this.BtnDelete.TabIndex = 9;
             this.BtnDelete.Text = "Eliminar Mantenimiento";
             this.BtnDelete.UseVisualStyleBackColor = false;
             // 
@@ -216,7 +217,7 @@
             this.BtnUpdate.Location = new System.Drawing.Point(224, 220);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(132, 49);
-            this.BtnUpdate.TabIndex = 96;
+            this.BtnUpdate.TabIndex = 8;
             this.BtnUpdate.Text = "Actualizar mantenimiento";
             this.BtnUpdate.UseVisualStyleBackColor = false;
             // 
@@ -229,7 +230,7 @@
             this.BtnFieldsClean.Location = new System.Drawing.Point(625, 220);
             this.BtnFieldsClean.Name = "BtnFieldsClean";
             this.BtnFieldsClean.Size = new System.Drawing.Size(132, 49);
-            this.BtnFieldsClean.TabIndex = 95;
+            this.BtnFieldsClean.TabIndex = 10;
             this.BtnFieldsClean.Text = "Limpiar Campos";
             this.BtnFieldsClean.UseVisualStyleBackColor = false;
             // 
@@ -242,7 +243,7 @@
             this.BtnAdd.Location = new System.Drawing.Point(22, 220);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(132, 49);
-            this.BtnAdd.TabIndex = 94;
+            this.BtnAdd.TabIndex = 7;
             this.BtnAdd.Text = "Agregar Mantenimiento";
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -253,8 +254,8 @@
             this.TxtUltimoKilom.Margin = new System.Windows.Forms.Padding(2);
             this.TxtUltimoKilom.Multiline = true;
             this.TxtUltimoKilom.Name = "TxtUltimoKilom";
-            this.TxtUltimoKilom.Size = new System.Drawing.Size(223, 27);
-            this.TxtUltimoKilom.TabIndex = 93;
+            this.TxtUltimoKilom.Size = new System.Drawing.Size(223, 24);
+            this.TxtUltimoKilom.TabIndex = 6;
             // 
             // DtFecha
             // 
@@ -263,7 +264,7 @@
             this.DtFecha.Location = new System.Drawing.Point(314, 175);
             this.DtFecha.Name = "DtFecha";
             this.DtFecha.Size = new System.Drawing.Size(193, 25);
-            this.DtFecha.TabIndex = 92;
+            this.DtFecha.TabIndex = 4;
             // 
             // TxtMonto
             // 
@@ -272,7 +273,7 @@
             this.TxtMonto.Multiline = true;
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.Size = new System.Drawing.Size(223, 27);
-            this.TxtMonto.TabIndex = 91;
+            this.TxtMonto.TabIndex = 5;
             // 
             // TxtDescripcion
             // 
@@ -280,15 +281,16 @@
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(282, 116);
-            this.TxtDescripcion.TabIndex = 90;
+            this.TxtDescripcion.TabIndex = 3;
             // 
             // CmbMarca
             // 
+            this.CmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbMarca.FormattingEnabled = true;
             this.CmbMarca.Location = new System.Drawing.Point(22, 44);
             this.CmbMarca.Name = "CmbMarca";
             this.CmbMarca.Size = new System.Drawing.Size(282, 28);
-            this.CmbMarca.TabIndex = 88;
+            this.CmbMarca.TabIndex = 0;
             // 
             // label4
             // 
@@ -372,14 +374,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
-            // TxtPlaca
+            // comboBox1
             // 
-            this.TxtPlaca.Location = new System.Drawing.Point(534, 46);
-            this.TxtPlaca.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtPlaca.Multiline = true;
-            this.TxtPlaca.Name = "TxtPlaca";
-            this.TxtPlaca.Size = new System.Drawing.Size(223, 27);
-            this.TxtPlaca.TabIndex = 103;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(534, 44);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(223, 28);
+            this.comboBox1.TabIndex = 2;
             // 
             // frmMantenimientos
             // 
@@ -434,6 +436,6 @@
         private System.Windows.Forms.ComboBox CmbModelo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TxtPlaca;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
