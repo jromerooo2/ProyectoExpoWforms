@@ -42,9 +42,9 @@ namespace SistemGestionBuses
                 id_marca = Convert.ToInt16(CmbMarca.SelectedValue);
                 id_modelo = Convert.ToInt16(CmbModelo.SelectedValue);
                 //Instace random object
-                objmaintenance = new ControladorMantenimiento(id_unidad_transporte, id_marca, id_modelo, placa,
-                                                            monto_mantenimiento,
-                                                            ultimo_kilometraje, descripcion, fecha);
+                //objmaintenance = new ControladorMantenimiento(id_unidad_transporte, id_marca, id_modelo, placa,
+                //                                            monto_mantenimiento,
+                //                                            ultimo_kilometraje, descripcion, fecha);
                 bool answer = objmaintenance.backing_Maintenance();
                 if (answer == true)
                 {

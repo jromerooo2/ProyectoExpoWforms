@@ -54,7 +54,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnCargarMapa = new System.Windows.Forms.Button();
-            this.gMapDirections = new GMap.NET.WindowsForms.GMapControl();
+            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -335,32 +335,32 @@
             this.btnCargarMapa.UseVisualStyleBackColor = true;
             this.btnCargarMapa.Click += new System.EventHandler(this.btnCargarMapa_Click);
             // 
-            // gMapDirections
+            // gMapControl1
             // 
-            this.gMapDirections.Bearing = 0F;
-            this.gMapDirections.CanDragMap = true;
-            this.gMapDirections.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapDirections.GrayScaleMode = false;
-            this.gMapDirections.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapDirections.LevelsKeepInMemory = 5;
-            this.gMapDirections.Location = new System.Drawing.Point(22, 86);
-            this.gMapDirections.MarkersEnabled = true;
-            this.gMapDirections.MaxZoom = 2;
-            this.gMapDirections.MinZoom = 2;
-            this.gMapDirections.MouseWheelZoomEnabled = true;
-            this.gMapDirections.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapDirections.Name = "gMapDirections";
-            this.gMapDirections.NegativeMode = false;
-            this.gMapDirections.PolygonsEnabled = true;
-            this.gMapDirections.RetryLoadTile = 0;
-            this.gMapDirections.RoutesEnabled = true;
-            this.gMapDirections.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapDirections.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapDirections.ShowTileGridLines = false;
-            this.gMapDirections.Size = new System.Drawing.Size(451, 446);
-            this.gMapDirections.TabIndex = 102;
-            this.gMapDirections.Zoom = 0D;
-            this.gMapDirections.Load += new System.EventHandler(this.gMapDirections_Load);
+            this.gMapControl1.Bearing = 0F;
+            this.gMapControl1.CanDragMap = true;
+            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMapControl1.GrayScaleMode = false;
+            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMapControl1.LevelsKeepInMemory = 5;
+            this.gMapControl1.Location = new System.Drawing.Point(22, 86);
+            this.gMapControl1.MarkersEnabled = true;
+            this.gMapControl1.MaxZoom = 2;
+            this.gMapControl1.MinZoom = 2;
+            this.gMapControl1.MouseWheelZoomEnabled = true;
+            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControl1.Name = "gMapControl1";
+            this.gMapControl1.NegativeMode = false;
+            this.gMapControl1.PolygonsEnabled = true;
+            this.gMapControl1.RetryLoadTile = 0;
+            this.gMapControl1.RoutesEnabled = true;
+            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMapControl1.ShowTileGridLines = false;
+            this.gMapControl1.Size = new System.Drawing.Size(451, 446);
+            this.gMapControl1.TabIndex = 102;
+            this.gMapControl1.Zoom = 0D;
+            this.gMapControl1.Load += new System.EventHandler(this.gMapDirections_Load);
             // 
             // label4
             // 
@@ -379,7 +379,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(991, 541);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.gMapDirections);
+            this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
@@ -420,7 +420,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnCargarMapa;
-        private GMap.NET.WindowsForms.GMapControl gMapDirections;
+        private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDireccion_inicio_longt;
     }

@@ -27,7 +27,7 @@ namespace SistemGestionBuses
                 DataTable data = ControladorIngresoCliente.ObtenerCliente();
                 dgvDatosCliente.DataSource = data;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;

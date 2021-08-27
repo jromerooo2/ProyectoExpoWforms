@@ -17,22 +17,19 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresarDirecciones : Form
     {
-        double lat_ElSalvador = 13.69;
-        double longt_ElSalvador = -89.19;
+        static double lat_ElSalvador = 13.69;
+        static double longt_ElSalvador = -89.19;
 
         public frmIngresarDirecciones()
         {
             InitializeComponent();
-            gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            gMapDirections.Position = new PointLatLng(lat_ElSalvador, longt_ElSalvador);
         }
 
         void ColocarDirecciones()
         {
-            gMapDirections.MapProvider = GMapProviders.GoogleMap;
             string direccion_inicio = txtDireccion_inicio.Text;
             string direccion_final = txtDireccion_final.Text;
-            gMapDirections.SetPositionByKeywords(direccion_inicio);
+            gMapControl1.SetPositionByKeywords(direccion_inicio);
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -42,32 +39,37 @@ namespace SistemGestionBuses
 
         private void gMapDirections_Load(object sender, EventArgs e)
         {
-            gMapDirections.DragButton = MouseButtons.Left;
-            gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            gMapDirections.SetPositionByKeywords("Chennai, India");
-            gMapDirections.Position = new PointLatLng(lat_ElSalvador, longt_ElSalvador);
-            //gMapDirections.Position = new Point;
+
         }
 
+        GMarkerGoogle marker;
+        GMapOverlay overlay;
+        static double LatInicial = 13.69;
+        static double LongInicial = -89.19;
         private void frmIngresarDirecciones_Load(object sender, EventArgs e)
         {
-            gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            gMapDirections.Position = new PointLatLng(lat_ElSalvador, longt_ElSalvador);
+            //Initial Settings
+            gMapControl1.DragButton = MouseButtons.Left;
+            gMapControl1.CanDragMap = true;
+            gMapControl1.MapProvider = GMapProviders.GoogleMap;
+            gMapControl1.Position = new PointLatLng(lat_ElSalvador , longt_ElSalvador);
+            gMapControl1.MinZoom = 0;
+            gMapControl1.MaxZoom = 24;
+            gMapControl1.AutoScroll = true;
+            gMapControl1.Zoom = 10;
+
+            marker = new GMarkerGoogle(new PointLatLng(LatInicial, LongInicial), GMarkerGoogleType.blue);
+            overlay = new GMapOverlay();
+            overlay.Markers.Add(marker); //agregando el marker al overlay
+
+            //ahora al mapa xd
+            gMapControl1.Overlays.Add(overlay);
+
         }
 
         private void btnCargarMapa_Click(object sender, EventArgs e)
         {
-            //13.69
-            //-89.19 
-            gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            
-            gMapDirections.MapProvider = GMapProviders.GoogleMap;
-            double direccion_inicio_lat = Convert.ToDouble(txtDireccion_inicio.Text);
-            double direccion_inicio_longt = Convert.ToDouble(txtDireccion_inicio_longt.Text);
-            gMapDirections.Position = new PointLatLng(direccion_inicio_lat, direccion_inicio_longt);
-            gMapDirections.Zoom = 10;
-            gMapDirections.MaxZoom = 100;
-            gMapDirections.MinZoom = 5;
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
