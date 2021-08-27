@@ -52,9 +52,8 @@ namespace SistemGestionBuses
                 ultimo_kilometraje = Convert.ToInt16(TxtUltimoKilom.Text);
                 id_unidad_transporte = Convert.ToInt16(TxtID_unidad.Text);
                 //Instace random object
-                //objmaintenance = new ControladorMantenimiento(id_unidad_transporte, id_marca, id_modelo, placa,
-                //                                            monto_mantenimiento,
-                //                                            ultimo_kilometraje, descripcion, fecha);
+                objmaintenance = new ControladorMantenimiento(id_unidad_transporte, monto_mantenimiento,
+                                                            ultimo_kilometraje, descripcion, fecha);
                 bool answer = objmaintenance.backing_Maintenance();
                 if (answer == true)
                 {
