@@ -43,7 +43,6 @@ namespace Controlador
                                         int pultimo_kilometraje, string pdescripcion, string pfecha)
             //Atributos = Parámetros
         {
-            id_unidad_transporte = pid_unidad_transporte;
             monto_mantenimiento = pmonto_mantenimiento;
             ultimo_kilometraje = pultimo_kilometraje;
             descripcion = pdescripcion;

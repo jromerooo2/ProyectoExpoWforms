@@ -110,5 +110,78 @@ namespace Modelo
         }
 
         /*DATA UPDATE*/
+        public static DataTable CargarMarca_VehiculoInner(string jeje)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_marca WHERE marca = ?param";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdselect.Parameters.Add(new MySqlParameter("param", jeje));
+                MySqlDataAdapter mdadapt = new MySqlDataAdapter();
+                data = new DataTable();
+                mdadapt.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static DataTable CargarModelo_VehiculoInner(string hola)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_modelo WHERE modelo = ?param";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdselect.Parameters.Add(new MySqlParameter("param", hola));
+                MySqlDataAdapter mdadapt = new MySqlDataAdapter();
+                data = new DataTable();
+                mdadapt.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static DataTable CargarPlaca_VehículoInner(string placa)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_unidad_transporte WHERE matricula = ?param";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdselect.Parameters.Add(new MySqlParameter("param", placa));
+                MySqlDataAdapter mdadapt = new MySqlDataAdapter();
+                data = new DataTable();
+                mdadapt.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static bool UpdateMaintenance(int pid_mantenimiento, int pid_unidad_transporte,
+                                        int pmonto_mantenimiento,
+                                        int pultimo_kilometraje, string pdescripcion, string pfecha)
+        {
+            bool update = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_mantenimiento SET id_unidad_transporte = '"+pid_unidad_transporte+"', monto_mantenimiento = '"+pmonto_mantenimiento+"', ultimo_kilometraje = '"+pultimo_kilometraje+"', descripcion = '"+pdescripcion+"', fecha = '"+pfecha+"' WHERE id_mantenimiento = '"+pid_mantenimiento+"'"), ModeloConexion.GetConnection());
+                update = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return update;
+            }
+            catch (Exception)
+            {
+                return update;
+            }
+        }
     }
 }

@@ -51,13 +51,16 @@ namespace SistemGestionBuses
             {
                 string descripcion, fecha;
                 int id_unidad_transporte, monto_mantenimiento,
-                    ultimo_kilometraje;
+                    ultimo_kilometraje, marca, modelo, placa;
                 //Sending registers
                 descripcion = TxtDescripcion.Text;
                 fecha = DtFecha.Text;
+                id_unidad_transporte = Convert.ToInt16(TxtID_unidad.Text);
                 monto_mantenimiento = Convert.ToInt16(TxtMonto.Text);
                 ultimo_kilometraje = Convert.ToInt16(TxtUltimoKilom.Text);
-                id_unidad_transporte = Convert.ToInt16(TxtID_unidad.Text);
+                marca = Convert.ToInt16(CmbMarca.SelectedValue);
+                modelo = Convert.ToInt16(CmbModelo.SelectedValue);
+                placa = Convert.ToInt16(CmbPlaca.SelectedValue);
                 //Instace random object
                 objmaintenance = new ControladorMantenimiento(id_unidad_transporte, monto_mantenimiento,
                                                             ultimo_kilometraje, descripcion, fecha);
