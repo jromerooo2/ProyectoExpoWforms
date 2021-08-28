@@ -47,6 +47,25 @@ namespace Modelo
             }
         }
 
+        public static DataTable CargarPlaca_Vehículo(string placa)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_unidad_transporte WHERE matricula = ?param";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdselect.Parameters.Add(new MySqlParameter("param", placa));
+                MySqlDataAdapter mdadapt = new MySqlDataAdapter();
+                data = new DataTable();
+                mdadapt.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
 
         /*DATA INSERT*/
         //INSERSIÓN DE DATOS
@@ -89,5 +108,7 @@ namespace Modelo
                 ModeloConexion.GetConnection().Close();
             }
         }
+
+        /*DATA UPDATE*/
     }
 }

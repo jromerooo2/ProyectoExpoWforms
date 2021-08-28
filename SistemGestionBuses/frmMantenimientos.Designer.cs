@@ -34,7 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.CmbModelo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,11 +55,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvMaintenance = new System.Windows.Forms.DataGridView();
+            this.CmbPlaca = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -70,7 +72,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(864, 436);
+            this.pictureBox2.Size = new System.Drawing.Size(864, 461);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -110,7 +112,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CmbPlaca);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.CmbModelo);
             this.groupBox1.Controls.Add(this.label7);
@@ -133,21 +135,12 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(39, 110);
+            this.groupBox1.Location = new System.Drawing.Point(39, 102);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 283);
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Vehículo";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(534, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 28);
-            this.comboBox1.TabIndex = 2;
             // 
             // label8
             // 
@@ -383,11 +376,29 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
+            // DgvMaintenance
+            // 
+            this.DgvMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMaintenance.Location = new System.Drawing.Point(39, 391);
+            this.DgvMaintenance.Name = "DgvMaintenance";
+            this.DgvMaintenance.Size = new System.Drawing.Size(776, 58);
+            this.DgvMaintenance.TabIndex = 83;
+            // 
+            // CmbPlaca
+            // 
+            this.CmbPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPlaca.FormattingEnabled = true;
+            this.CmbPlaca.Location = new System.Drawing.Point(534, 44);
+            this.CmbPlaca.Name = "CmbPlaca";
+            this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
+            this.CmbPlaca.TabIndex = 2;
+            // 
             // frmMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 436);
+            this.ClientSize = new System.Drawing.Size(864, 461);
+            this.Controls.Add(this.DgvMaintenance);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -404,6 +415,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,6 +449,7 @@
         private System.Windows.Forms.ComboBox CmbModelo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView DgvMaintenance;
+        private System.Windows.Forms.ComboBox CmbPlaca;
     }
 }

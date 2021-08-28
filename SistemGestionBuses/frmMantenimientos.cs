@@ -20,6 +20,7 @@ namespace SistemGestionBuses
             InitializeComponent();
         }
 
+        public DataTable DataGridView_useonly;
         public ControladorMantenimiento objmaintenance;
         
         //DISPLAYING COMBO BOXES 
@@ -34,6 +35,12 @@ namespace SistemGestionBuses
             CmbModelo.DataSource = ControladorMantenimiento.Load_Modelo();
             CmbModelo.ValueMember = "id_modelo";
             CmbModelo.DisplayMember = "modelo";
+        }
+        //INSERTING DATA PLATE
+        void CargarPlaca(string placa)
+        {
+            CmbPlaca.DataSource = ControladorMantenimiento.backing_PlateData(placa);
+            CmbPlaca.DisplayMember = "matricula";
         }
 
         /*DATA INSERT*/
@@ -80,12 +87,25 @@ namespace SistemGestionBuses
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             registering_maintenance();
+            LoadDataGridView();
+            Cargar_Marca();
+            Cargar_Modelo();
         }
 
         private void frmMantenimientos_Load(object sender, EventArgs e)
         {
             Cargar_Marca();
             Cargar_Modelo();
+            LoadDataGridView();
         }
+
+        void LoadDataGridView()
+        {
+            DataGridView_useonly = ControladorMantenimiento.LoadMaintenance_Controller();
+            DgvMaintenance.DataSource = DataGridView_useonly;
+        }
+
+        /*DATA UPDATE*/
+
     }
 }

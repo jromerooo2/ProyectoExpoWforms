@@ -62,6 +62,11 @@ namespace Controlador
         {
             return ModeloMantenimiento.RegisterMaintenance(id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
         }
+        public static DataTable backing_PlateData(string placa)
+        {
+            return ModeloMantenimiento.CargarPlaca_Vehículo(placa);
+        }
 
+        /*DATA UPDATE*/
     }
 }
