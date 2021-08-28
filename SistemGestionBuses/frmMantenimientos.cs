@@ -81,5 +81,11 @@ namespace SistemGestionBuses
         {
             registering_maintenance();
         }
+
+        private void frmMantenimientos_Load(object sender, EventArgs e)
+        {
+            Cargar_Marca();
+            Cargar_Modelo();
+        }
     }
 }
