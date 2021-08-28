@@ -34,6 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtID_mant = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CmbPlaca = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.CmbModelo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,9 +59,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DgvMaintenance = new System.Windows.Forms.DataGridView();
-            this.CmbPlaca = new System.Windows.Forms.ComboBox();
-            this.TxtID_mant = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -146,6 +146,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Vehículo";
             // 
+            // TxtID_mant
+            // 
+            this.TxtID_mant.Location = new System.Drawing.Point(525, 188);
+            this.TxtID_mant.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtID_mant.Multiline = true;
+            this.TxtID_mant.Name = "TxtID_mant";
+            this.TxtID_mant.ReadOnly = true;
+            this.TxtID_mant.Size = new System.Drawing.Size(98, 26);
+            this.TxtID_mant.TabIndex = 104;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label9.Location = new System.Drawing.Point(379, 191);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 20);
+            this.label9.TabIndex = 103;
+            this.label9.Text = "ID mantenimiento:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // CmbPlaca
+            // 
+            this.CmbPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPlaca.FormattingEnabled = true;
+            this.CmbPlaca.Location = new System.Drawing.Point(534, 44);
+            this.CmbPlaca.Name = "CmbPlaca";
+            this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
+            this.CmbPlaca.TabIndex = 2;
+            this.CmbPlaca.Click += new System.EventHandler(this.CmbPlaca_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -227,6 +259,7 @@
             this.BtnUpdate.TabIndex = 8;
             this.BtnUpdate.Text = "Actualizar mantenimiento";
             this.BtnUpdate.UseVisualStyleBackColor = false;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnFieldsClean
             // 
@@ -390,38 +423,6 @@
             this.DgvMaintenance.Size = new System.Drawing.Size(776, 58);
             this.DgvMaintenance.TabIndex = 83;
             this.DgvMaintenance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMaintenance_CellClick);
-            // 
-            // CmbPlaca
-            // 
-            this.CmbPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPlaca.FormattingEnabled = true;
-            this.CmbPlaca.Location = new System.Drawing.Point(534, 44);
-            this.CmbPlaca.Name = "CmbPlaca";
-            this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
-            this.CmbPlaca.TabIndex = 2;
-            this.CmbPlaca.Click += new System.EventHandler(this.CmbPlaca_Click);
-            // 
-            // TxtID_mant
-            // 
-            this.TxtID_mant.Location = new System.Drawing.Point(525, 188);
-            this.TxtID_mant.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtID_mant.Multiline = true;
-            this.TxtID_mant.Name = "TxtID_mant";
-            this.TxtID_mant.ReadOnly = true;
-            this.TxtID_mant.Size = new System.Drawing.Size(98, 26);
-            this.TxtID_mant.TabIndex = 104;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label9.Location = new System.Drawing.Point(379, 191);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 20);
-            this.label9.TabIndex = 103;
-            this.label9.Text = "ID mantenimiento:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmMantenimientos
             // 

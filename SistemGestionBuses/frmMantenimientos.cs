@@ -131,9 +131,8 @@ namespace SistemGestionBuses
             Cargar_Modelo();
         }
 
-        private void CmbPlaca_Click(object sender, EventArgs e, int placa)
+        private void CmbPlaca_Click(object sender, EventArgs e)
         {
-            CargarPlaca(placa);
         }
 
         void ActualizarDatos()
@@ -172,6 +171,12 @@ namespace SistemGestionBuses
                 MessageBox.Show("Vayaa ಥ_ಥ, se produjo un error externo al actualizar el regsitro.", "Error Crítico",
                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            LoadDataGridView();
+            ActualizarDatos();
         }
 
 
