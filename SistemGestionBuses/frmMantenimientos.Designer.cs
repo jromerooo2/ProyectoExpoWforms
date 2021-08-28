@@ -57,6 +57,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DgvMaintenance = new System.Windows.Forms.DataGridView();
             this.CmbPlaca = new System.Windows.Forms.ComboBox();
+            this.TxtID_mant = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -112,6 +114,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.TxtID_mant);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.CmbPlaca);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.CmbModelo);
@@ -162,6 +166,7 @@
             this.CmbModelo.Name = "CmbModelo";
             this.CmbModelo.Size = new System.Drawing.Size(193, 28);
             this.CmbModelo.TabIndex = 1;
+            this.CmbModelo.Click += new System.EventHandler(this.CmbModelo_Click);
             // 
             // label7
             // 
@@ -177,7 +182,7 @@
             // 
             // TxtID_unidad
             // 
-            this.TxtID_unidad.Location = new System.Drawing.Point(314, 122);
+            this.TxtID_unidad.Location = new System.Drawing.Point(314, 100);
             this.TxtID_unidad.Margin = new System.Windows.Forms.Padding(2);
             this.TxtID_unidad.Multiline = true;
             this.TxtID_unidad.Name = "TxtID_unidad";
@@ -190,7 +195,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(310, 100);
+            this.label6.Location = new System.Drawing.Point(310, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 20);
             this.label6.TabIndex = 98;
@@ -252,7 +257,7 @@
             // 
             // TxtUltimoKilom
             // 
-            this.TxtUltimoKilom.Location = new System.Drawing.Point(534, 176);
+            this.TxtUltimoKilom.Location = new System.Drawing.Point(534, 152);
             this.TxtUltimoKilom.Margin = new System.Windows.Forms.Padding(2);
             this.TxtUltimoKilom.Multiline = true;
             this.TxtUltimoKilom.Name = "TxtUltimoKilom";
@@ -263,14 +268,14 @@
             // 
             this.DtFecha.CustomFormat = "yyyy-MM-dd";
             this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtFecha.Location = new System.Drawing.Point(314, 175);
+            this.DtFecha.Location = new System.Drawing.Point(314, 151);
             this.DtFecha.Name = "DtFecha";
             this.DtFecha.Size = new System.Drawing.Size(193, 25);
             this.DtFecha.TabIndex = 4;
             // 
             // TxtMonto
             // 
-            this.TxtMonto.Location = new System.Drawing.Point(534, 122);
+            this.TxtMonto.Location = new System.Drawing.Point(534, 98);
             this.TxtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMonto.Multiline = true;
             this.TxtMonto.Name = "TxtMonto";
@@ -293,13 +298,14 @@
             this.CmbMarca.Name = "CmbMarca";
             this.CmbMarca.Size = new System.Drawing.Size(282, 28);
             this.CmbMarca.TabIndex = 0;
+            this.CmbMarca.Click += new System.EventHandler(this.CmbMarca_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(310, 151);
+            this.label4.Location = new System.Drawing.Point(310, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 86;
@@ -323,7 +329,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(530, 151);
+            this.label2.Location = new System.Drawing.Point(530, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
@@ -336,7 +342,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(530, 100);
+            this.label1.Location = new System.Drawing.Point(530, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 20);
@@ -383,6 +389,7 @@
             this.DgvMaintenance.Name = "DgvMaintenance";
             this.DgvMaintenance.Size = new System.Drawing.Size(776, 58);
             this.DgvMaintenance.TabIndex = 83;
+            this.DgvMaintenance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMaintenance_CellClick);
             // 
             // CmbPlaca
             // 
@@ -392,6 +399,29 @@
             this.CmbPlaca.Name = "CmbPlaca";
             this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
             this.CmbPlaca.TabIndex = 2;
+            this.CmbPlaca.Click += new System.EventHandler(this.CmbPlaca_Click);
+            // 
+            // TxtID_mant
+            // 
+            this.TxtID_mant.Location = new System.Drawing.Point(525, 188);
+            this.TxtID_mant.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtID_mant.Multiline = true;
+            this.TxtID_mant.Name = "TxtID_mant";
+            this.TxtID_mant.ReadOnly = true;
+            this.TxtID_mant.Size = new System.Drawing.Size(98, 26);
+            this.TxtID_mant.TabIndex = 104;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label9.Location = new System.Drawing.Point(379, 191);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 20);
+            this.label9.TabIndex = 103;
+            this.label9.Text = "ID mantenimiento:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmMantenimientos
             // 
@@ -451,5 +481,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView DgvMaintenance;
         private System.Windows.Forms.ComboBox CmbPlaca;
+        private System.Windows.Forms.TextBox TxtID_mant;
+        private System.Windows.Forms.Label label9;
     }
 }

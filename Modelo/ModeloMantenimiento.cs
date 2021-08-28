@@ -47,7 +47,7 @@ namespace Modelo
             }
         }
 
-        public static DataTable CargarPlaca_Vehículo(string placa)
+        public static DataTable CargarPlaca_Vehículo(int placa)
         {
             DataTable data;
             try
@@ -110,7 +110,7 @@ namespace Modelo
         }
 
         /*DATA UPDATE*/
-        public static DataTable CargarMarca_VehiculoInner(string jeje)
+        public static DataTable CargarMarca_VehiculoInner(int jeje)
         {
             DataTable data;
             try
@@ -129,7 +129,7 @@ namespace Modelo
             }
         }
 
-        public static DataTable CargarModelo_VehiculoInner(string hola)
+        public static DataTable CargarModelo_VehiculoInner(int hola)
         {
             DataTable data;
             try
@@ -148,7 +148,7 @@ namespace Modelo
             }
         }
 
-        public static DataTable CargarPlaca_VehículoInner(string placa)
+        public static DataTable CargarPlaca_VehículoInner(int placa)
         {
             DataTable data;
             try

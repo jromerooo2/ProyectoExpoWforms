@@ -61,11 +61,27 @@ namespace Controlador
         {
             return ModeloMantenimiento.RegisterMaintenance(id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
         }
-        public static DataTable backing_PlateData(string placa)
+        public static DataTable backing_PlateData(int placa)
         {
             return ModeloMantenimiento.CargarPlaca_Vehículo(placa);
         }
 
         /*DATA UPDATE*/
+        public static DataTable CargarMarcaInnerJoin(int id)
+        {
+            return ModeloMantenimiento.CargarMarca_VehiculoInner(id);
+        }
+        public static DataTable CargarModeloInnerJoin(int id)
+        {
+            return ModeloMantenimiento.CargarModelo_VehiculoInner(id);
+        }
+        public static DataTable CargarPlacaInnerJoin(int id)
+        {
+            return ModeloMantenimiento.CargarPlaca_VehículoInner(id);
+        }
+        public bool Maintenance_Update()
+        {
+            return ModeloMantenimiento.UpdateMaintenance(id_mantenimiento,id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
+        }
     }
 }
