@@ -82,6 +82,7 @@
             this.btnMetodo2.TabIndex = 14;
             this.btnMetodo2.Text = "Contacta al Administrador";
             this.btnMetodo2.UseVisualStyleBackColor = false;
+            this.btnMetodo2.Click += new System.EventHandler(this.btnMetodo2_Click);
             // 
             // btnMetodo1
             // 

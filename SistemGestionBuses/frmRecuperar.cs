@@ -119,5 +119,12 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void btnMetodo2_Click(object sender, EventArgs e)
+        {
+            frmRecuperarAdmin admin = new frmRecuperarAdmin();
+            this.Hide();
+            admin.Show();         
+        }
     }
 }
