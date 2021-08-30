@@ -425,7 +425,7 @@
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.txtIDviaje);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(383, 110);
+            this.panel3.Location = new System.Drawing.Point(868, 110);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(113, 121);
             this.panel3.TabIndex = 79;
@@ -467,9 +467,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(502, 109);
+            this.pictureBox3.Location = new System.Drawing.Point(743, 109);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(110, 121);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -489,6 +489,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 526);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
