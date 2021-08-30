@@ -34,6 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtID_mant = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CmbPlaca = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.CmbModelo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,12 +58,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TxtPlaca = new System.Windows.Forms.TextBox();
+            this.DgvMaintenance = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -70,7 +74,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(864, 436);
+            this.pictureBox2.Size = new System.Drawing.Size(864, 461);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -110,7 +114,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.TxtPlaca);
+            this.groupBox1.Controls.Add(this.TxtID_mant);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.CmbPlaca);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.CmbModelo);
             this.groupBox1.Controls.Add(this.label7);
@@ -133,12 +139,44 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(39, 110);
+            this.groupBox1.Location = new System.Drawing.Point(39, 102);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 283);
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Vehículo";
+            // 
+            // TxtID_mant
+            // 
+            this.TxtID_mant.Location = new System.Drawing.Point(525, 188);
+            this.TxtID_mant.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtID_mant.Multiline = true;
+            this.TxtID_mant.Name = "TxtID_mant";
+            this.TxtID_mant.ReadOnly = true;
+            this.TxtID_mant.Size = new System.Drawing.Size(98, 26);
+            this.TxtID_mant.TabIndex = 104;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label9.Location = new System.Drawing.Point(379, 191);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 20);
+            this.label9.TabIndex = 103;
+            this.label9.Text = "ID mantenimiento:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // CmbPlaca
+            // 
+            this.CmbPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPlaca.FormattingEnabled = true;
+            this.CmbPlaca.Location = new System.Drawing.Point(534, 44);
+            this.CmbPlaca.Name = "CmbPlaca";
+            this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
+            this.CmbPlaca.TabIndex = 2;
+            this.CmbPlaca.Click += new System.EventHandler(this.CmbPlaca_Click);
             // 
             // label8
             // 
@@ -154,11 +192,13 @@
             // 
             // CmbModelo
             // 
+            this.CmbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbModelo.FormattingEnabled = true;
             this.CmbModelo.Location = new System.Drawing.Point(314, 45);
             this.CmbModelo.Name = "CmbModelo";
             this.CmbModelo.Size = new System.Drawing.Size(193, 28);
-            this.CmbModelo.TabIndex = 101;
+            this.CmbModelo.TabIndex = 1;
+            this.CmbModelo.Click += new System.EventHandler(this.CmbModelo_Click);
             // 
             // label7
             // 
@@ -174,7 +214,7 @@
             // 
             // TxtID_unidad
             // 
-            this.TxtID_unidad.Location = new System.Drawing.Point(314, 122);
+            this.TxtID_unidad.Location = new System.Drawing.Point(314, 100);
             this.TxtID_unidad.Margin = new System.Windows.Forms.Padding(2);
             this.TxtID_unidad.Multiline = true;
             this.TxtID_unidad.Name = "TxtID_unidad";
@@ -187,7 +227,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(310, 100);
+            this.label6.Location = new System.Drawing.Point(310, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 20);
             this.label6.TabIndex = 98;
@@ -203,9 +243,10 @@
             this.BtnDelete.Location = new System.Drawing.Point(429, 220);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(132, 49);
-            this.BtnDelete.TabIndex = 97;
+            this.BtnDelete.TabIndex = 9;
             this.BtnDelete.Text = "Eliminar Mantenimiento";
             this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnUpdate
             // 
@@ -216,9 +257,10 @@
             this.BtnUpdate.Location = new System.Drawing.Point(224, 220);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(132, 49);
-            this.BtnUpdate.TabIndex = 96;
+            this.BtnUpdate.TabIndex = 8;
             this.BtnUpdate.Text = "Actualizar mantenimiento";
             this.BtnUpdate.UseVisualStyleBackColor = false;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnFieldsClean
             // 
@@ -229,7 +271,7 @@
             this.BtnFieldsClean.Location = new System.Drawing.Point(625, 220);
             this.BtnFieldsClean.Name = "BtnFieldsClean";
             this.BtnFieldsClean.Size = new System.Drawing.Size(132, 49);
-            this.BtnFieldsClean.TabIndex = 95;
+            this.BtnFieldsClean.TabIndex = 10;
             this.BtnFieldsClean.Text = "Limpiar Campos";
             this.BtnFieldsClean.UseVisualStyleBackColor = false;
             // 
@@ -242,37 +284,37 @@
             this.BtnAdd.Location = new System.Drawing.Point(22, 220);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(132, 49);
-            this.BtnAdd.TabIndex = 94;
+            this.BtnAdd.TabIndex = 7;
             this.BtnAdd.Text = "Agregar Mantenimiento";
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // TxtUltimoKilom
             // 
-            this.TxtUltimoKilom.Location = new System.Drawing.Point(534, 176);
+            this.TxtUltimoKilom.Location = new System.Drawing.Point(534, 152);
             this.TxtUltimoKilom.Margin = new System.Windows.Forms.Padding(2);
             this.TxtUltimoKilom.Multiline = true;
             this.TxtUltimoKilom.Name = "TxtUltimoKilom";
-            this.TxtUltimoKilom.Size = new System.Drawing.Size(223, 27);
-            this.TxtUltimoKilom.TabIndex = 93;
+            this.TxtUltimoKilom.Size = new System.Drawing.Size(223, 24);
+            this.TxtUltimoKilom.TabIndex = 6;
             // 
             // DtFecha
             // 
             this.DtFecha.CustomFormat = "yyyy-MM-dd";
             this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtFecha.Location = new System.Drawing.Point(314, 175);
+            this.DtFecha.Location = new System.Drawing.Point(314, 151);
             this.DtFecha.Name = "DtFecha";
             this.DtFecha.Size = new System.Drawing.Size(193, 25);
-            this.DtFecha.TabIndex = 92;
+            this.DtFecha.TabIndex = 4;
             // 
             // TxtMonto
             // 
-            this.TxtMonto.Location = new System.Drawing.Point(534, 122);
+            this.TxtMonto.Location = new System.Drawing.Point(534, 98);
             this.TxtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMonto.Multiline = true;
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.Size = new System.Drawing.Size(223, 27);
-            this.TxtMonto.TabIndex = 91;
+            this.TxtMonto.TabIndex = 5;
             // 
             // TxtDescripcion
             // 
@@ -280,22 +322,24 @@
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(282, 116);
-            this.TxtDescripcion.TabIndex = 90;
+            this.TxtDescripcion.TabIndex = 3;
             // 
             // CmbMarca
             // 
+            this.CmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbMarca.FormattingEnabled = true;
             this.CmbMarca.Location = new System.Drawing.Point(22, 44);
             this.CmbMarca.Name = "CmbMarca";
             this.CmbMarca.Size = new System.Drawing.Size(282, 28);
-            this.CmbMarca.TabIndex = 88;
+            this.CmbMarca.TabIndex = 0;
+            this.CmbMarca.Click += new System.EventHandler(this.CmbMarca_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(310, 151);
+            this.label4.Location = new System.Drawing.Point(310, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 86;
@@ -319,7 +363,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(530, 151);
+            this.label2.Location = new System.Drawing.Point(530, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
@@ -332,7 +376,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(530, 100);
+            this.label1.Location = new System.Drawing.Point(530, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 20);
@@ -372,20 +416,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
-            // TxtPlaca
+            // DgvMaintenance
             // 
-            this.TxtPlaca.Location = new System.Drawing.Point(534, 46);
-            this.TxtPlaca.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtPlaca.Multiline = true;
-            this.TxtPlaca.Name = "TxtPlaca";
-            this.TxtPlaca.Size = new System.Drawing.Size(223, 27);
-            this.TxtPlaca.TabIndex = 103;
+            this.DgvMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMaintenance.Location = new System.Drawing.Point(39, 391);
+            this.DgvMaintenance.Name = "DgvMaintenance";
+            this.DgvMaintenance.Size = new System.Drawing.Size(776, 58);
+            this.DgvMaintenance.TabIndex = 83;
+            this.DgvMaintenance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMaintenance_CellClick);
             // 
             // frmMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 436);
+            this.ClientSize = new System.Drawing.Size(864, 461);
+            this.Controls.Add(this.DgvMaintenance);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -395,12 +440,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMantenimientos";
             this.Text = "Mantenimiento";
+            this.Load += new System.EventHandler(this.frmMantenimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,6 +481,9 @@
         private System.Windows.Forms.ComboBox CmbModelo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TxtPlaca;
+        private System.Windows.Forms.DataGridView DgvMaintenance;
+        private System.Windows.Forms.ComboBox CmbPlaca;
+        private System.Windows.Forms.TextBox TxtID_mant;
+        private System.Windows.Forms.Label label9;
     }
 }

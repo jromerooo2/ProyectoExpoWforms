@@ -12,48 +12,52 @@ namespace Controlador
     {
         //Atributos para el viaje
         public static int id_viaje { get; set; }
-        public static int id_direccion_detalle { get; set; }
-        public int id_estado_viaje { get; set; }
-        public int id_unidad_transporte { get; set; }
-        public int id_metodo_pago { get; set; }
-        public int id_cliente { get; set; }
-        public int id_municipio { get; set; }
-        public int tarifa { get; set; }
-        public int id_empleado { get; set; }
-        public int id_tipo_viaje{ get; set; }
-        public string fecha_viaje { get; set; }
         public string nombre_viaje { get; set; }
-        public string hora { get; set; }
-        public List<int> municipios { get; set; }
+        public int id_unidad { get; set; }
+        public int id_empleado { get; set; }
+        public string fecha_partida { get; set; }
+        public string hora_partida { get; set; }
+        public double tarifa { get; set; }
+        public int id_estado_viaje { get; set; }
+        public int id_tipo_viaje { get; set; }
+        public string fecha_retorno { get; set; }
+        public string hora_retorno { get; set; }
+        public int id_municipio { get; set; }
+
+        //Atributos para el ingreso de direcciones.
+        //id_viaje
+        public List<string> puntos_referencias { get; set; }
         public List<string>direcciones { get; set; }
 
         //Constructor
-        public ControladorViaje(int pidCliente, int pidUnidad_transporte, int pidMetodo_pago, int pidEmpleado, List<int> pidMunicipio, int pidEstado_viaje, int ptarifa, string phora, int pidTipo_destino, string pnombre_viaje, int pdireccion_detalle, string pfecha_viaje, List<string>pDirecciones)
+        public ControladorViaje(string pnombreViaje, int pidUnidad, int pidEmpleado, string pfechaPartida, string phoraPartida, double ptarifa, int pidEstadoViaje, int pidTipoViaje, string pfechaRetorno, string phoraRetorno, int pidMunicipio, List <string> pdirecciones, List <string> ppuntosReferencia)
         {
-            id_cliente = pidCliente;
             id_empleado = pidEmpleado;
-            id_unidad_transporte = pidUnidad_transporte;
-            id_metodo_pago = pidMetodo_pago;
-            id_estado_viaje = pidEstado_viaje;
+            id_unidad = pidUnidad;
+            id_estado_viaje = pidEstadoViaje;
             tarifa = ptarifa;
-            hora = phora;
-            id_tipo_viaje = pidTipo_destino;
-            nombre_viaje = pnombre_viaje;
-            id_direccion_detalle = pdireccion_detalle;
-            fecha_viaje = pfecha_viaje;
+            hora_partida = phoraPartida;
+            fecha_partida = pfechaPartida;
+            id_tipo_viaje = pidTipoViaje;
+            nombre_viaje = pnombreViaje;
+            hora_retorno = phoraRetorno;
+            fecha_retorno = phoraRetorno;
+            id_municipio = pidMunicipio;
+            
             //Listas
-            direcciones = pDirecciones;          
-            municipios = pidMunicipio;
+            direcciones = pdirecciones;          
+            puntos_referencias = ppuntosReferencia;
         }
 
         public bool EnviarDatos_ControllerViaje()
         {
-            return ModeloViaje.RegistrarViaje(nombre_viaje, id_cliente, id_unidad_transporte, id_empleado, fecha_viaje, hora, tarifa, id_estado_viaje, id_metodo_pago, id_tipo_viaje, id_direccion_detalle);
+            return ModeloViaje.RegistrarViaje(nombre_viaje, id_unidad, id_empleado, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
         }
 
         public bool EnviarDatos_ControllerDirecciones()
         {
-            return ModeloViaje.RegistarDireccionInicio(direcciones, municipios);
+            //int, lista string, lista string
+            return ModeloViaje.RegistrarDirecciones(id_viaje, direcciones, puntos_referencias);
         }
 
         #region CMB Controller
