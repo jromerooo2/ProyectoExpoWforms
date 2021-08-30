@@ -62,6 +62,19 @@ namespace Modelo
             }
         }
 
+        public static void BlockUser(string user)
+        {
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET id_estado_usuario='bloqueado', WHERE nombre_usuario=" + user), ModeloConexion.GetConnection());
+                cmdupdate.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static bool ActualizarContra(string passMD5, string user)
         {
             bool res = false;

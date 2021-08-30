@@ -32,17 +32,27 @@ namespace SistemGestionBuses
         {
                 string user = txtUser.Text;
                 string password = txtPass.Text;
+                int count = 0;
 
                 AtributosLogin.username = user;
                 AtributosLogin.password = password;
-                bool res = ControladorLogin.Login();
-                if (res)
+                int res = ControladorLogin.Login();
+                if (res == 1)
                 {
-                    //mostrar siguiente forms
-                    frmIngresoConductores next = new frmIngresoConductores();
-                    next.Show();
-                    this.Hide();
+                        //mostrar siguiente forms
+                        frmIngresoConductores next = new frmIngresoConductores();
+                        next.Show();
+                        this.Hide();
                 }
+                else if (res == 2)
+                {
+                        MessageBox.Show("Datos Incorrectos, Intentalo De Nuevo");
+                        count++;
+                        if (count >= 3)
+                        {
+                            ControladorUsuario.BlockUser(user);
+                        }                
+                 }
                 else
                 {
                     MessageBox.Show("Datos Incorrectos, Intentalo De Nuevo");

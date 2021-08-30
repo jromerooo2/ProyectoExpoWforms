@@ -51,10 +51,9 @@
             this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.linkLabel1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(74, 353);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(99, 434);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(143, 18);
+            this.linkLabel1.Size = new System.Drawing.Size(167, 20);
             this.linkLabel1.TabIndex = 22;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recupera tu contraseña";
@@ -65,10 +64,9 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(545, 318);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(727, 391);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 21;
             this.label8.Text = "_______";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -78,10 +76,9 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(473, 318);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(631, 391);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(64, 17);
             this.label7.TabIndex = 20;
             this.label7.Text = "_______";
             // 
@@ -91,39 +88,39 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.label6.Font = new System.Drawing.Font("Yu Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(125, 317);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(167, 390);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 26);
+            this.label6.Size = new System.Drawing.Size(37, 32);
             this.label6.TabIndex = 19;
             this.label6.Text = " ó";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(429, 220);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Location = new System.Drawing.Point(572, 271);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(198, 29);
+            this.txtPass.Size = new System.Drawing.Size(263, 35);
             this.txtPass.TabIndex = 16;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(429, 145);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Location = new System.Drawing.Point(572, 178);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(198, 29);
+            this.txtUser.Size = new System.Drawing.Size(263, 35);
             this.txtUser.TabIndex = 15;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-1, -4);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, -5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(394, 421);
+            this.pictureBox2.Size = new System.Drawing.Size(525, 518);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
@@ -134,10 +131,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 15F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(53, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 26);
+            this.label2.Size = new System.Drawing.Size(161, 32);
             this.label2.TabIndex = 13;
             this.label2.Text = "Inicia Sesión ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -148,10 +144,9 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 11F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(42, 187);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(56, 230);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 20);
+            this.label5.Size = new System.Drawing.Size(111, 24);
             this.label5.TabIndex = 18;
             this.label5.Text = "Contraseña:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -162,10 +157,9 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(42, 112);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(56, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.Size = new System.Drawing.Size(79, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Usuario:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -179,9 +173,10 @@
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(390, -4);
+            this.panel1.Location = new System.Drawing.Point(520, -5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 421);
+            this.panel1.Size = new System.Drawing.Size(365, 518);
             this.panel1.TabIndex = 25;
             // 
             // button1
@@ -196,9 +191,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.Location = new System.Drawing.Point(87, 272);
+            this.button1.Location = new System.Drawing.Point(116, 335);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 32);
+            this.button1.Size = new System.Drawing.Size(148, 39);
             this.button1.TabIndex = 26;
             this.button1.Text = "Iniciar sesión";
             this.button1.UseVisualStyleBackColor = false;
@@ -206,9 +202,9 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 405);
+            this.ClientSize = new System.Drawing.Size(877, 498);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -216,7 +212,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.Text = "Inicio de Sesión";
             this.Load += new System.EventHandler(this.frmLogin_Load);

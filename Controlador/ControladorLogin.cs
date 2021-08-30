@@ -9,7 +9,7 @@ namespace Controlador
 {
        public class ControladorLogin : AtributosLogin
         {
-            public static bool Login()
+            public static int Login()
             {
                 string passwordMD5 = EncryptClass.Encrypt(password);
 

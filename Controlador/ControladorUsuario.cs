@@ -50,6 +50,9 @@ namespace Controlador
             return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, passMD5, id_cargo);
         }
 
-
+        public static void BlockUser(string user)
+        {
+            ModeloUsuario.BlockUser(user);
+        }
     }
 }
