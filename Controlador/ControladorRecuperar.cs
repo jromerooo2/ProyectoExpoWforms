@@ -12,6 +12,16 @@ namespace Controlador
 {
     public class ControladorRecuperar
     {
+        //Atributos para recuperar contraseña por medio del admin
+        public string usuarioadmin { get; set; }
+        public string claveadmin { get; set; }
+
+
+        public static bool ValidarCredenciales_Controller(string usuarioadmin, string claveadmin)
+        {
+            return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
+        }
+
         static List<string> res = new List<string>();
         public static bool RecuperarMail(string user)
         {
@@ -67,8 +77,5 @@ namespace Controlador
                 return false;
             }
         }
-
-
-
     }
 }

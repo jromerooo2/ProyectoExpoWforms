@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarAdmin));
             this.btnNueva = new System.Windows.Forms.Button();
-            this.txtNueva = new System.Windows.Forms.TextBox();
+            this.txtUsuarioRecu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtUsuarioAdmin = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtClaveAdmin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDUI = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtConfirmacion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNueva = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,13 +67,13 @@
             this.btnNueva.Text = "Confirmar";
             this.btnNueva.UseVisualStyleBackColor = false;
             // 
-            // txtNueva
+            // txtUsuarioRecu
             // 
-            this.txtNueva.Location = new System.Drawing.Point(524, 112);
-            this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNueva.Name = "txtNueva";
-            this.txtNueva.Size = new System.Drawing.Size(224, 20);
-            this.txtNueva.TabIndex = 34;
+            this.txtUsuarioRecu.Location = new System.Drawing.Point(524, 112);
+            this.txtUsuarioRecu.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuarioRecu.Name = "txtUsuarioRecu";
+            this.txtUsuarioRecu.Size = new System.Drawing.Size(224, 20);
+            this.txtUsuarioRecu.TabIndex = 34;
             // 
             // label4
             // 
@@ -98,6 +98,7 @@
             this.btnConfirmar.TabIndex = 32;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // label3
             // 
@@ -112,13 +113,13 @@
             this.label3.Text = "Ingresa las creedenciales del Administrador";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtCode
+            // txtUsuarioAdmin
             // 
-            this.txtCode.Location = new System.Drawing.Point(81, 299);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(236, 20);
-            this.txtCode.TabIndex = 30;
+            this.txtUsuarioAdmin.Location = new System.Drawing.Point(81, 299);
+            this.txtUsuarioAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuarioAdmin.Name = "txtUsuarioAdmin";
+            this.txtUsuarioAdmin.Size = new System.Drawing.Size(236, 20);
+            this.txtUsuarioAdmin.TabIndex = 30;
             // 
             // pictureBox1
             // 
@@ -157,13 +158,13 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // txtClaveAdmin
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 358);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 20);
-            this.textBox1.TabIndex = 36;
+            this.txtClaveAdmin.Location = new System.Drawing.Point(81, 358);
+            this.txtClaveAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClaveAdmin.Name = "txtClaveAdmin";
+            this.txtClaveAdmin.Size = new System.Drawing.Size(236, 20);
+            this.txtClaveAdmin.TabIndex = 36;
             // 
             // label2
             // 
@@ -216,13 +217,13 @@
             this.label7.Text = "DUI del Empleado:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox2
+            // txtDUI
             // 
-            this.textBox2.Location = new System.Drawing.Point(524, 164);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(224, 20);
-            this.textBox2.TabIndex = 40;
+            this.txtDUI.Location = new System.Drawing.Point(524, 164);
+            this.txtDUI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(224, 20);
+            this.txtDUI.TabIndex = 40;
             // 
             // label8
             // 
@@ -236,13 +237,13 @@
             this.label8.TabIndex = 47;
             this.label8.Text = "Confirmación de contraseña:";
             // 
-            // textBox3
+            // txtConfirmacion
             // 
-            this.textBox3.Location = new System.Drawing.Point(524, 410);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 20);
-            this.textBox3.TabIndex = 46;
+            this.txtConfirmacion.Location = new System.Drawing.Point(524, 410);
+            this.txtConfirmacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmacion.Name = "txtConfirmacion";
+            this.txtConfirmacion.Size = new System.Drawing.Size(224, 20);
+            this.txtConfirmacion.TabIndex = 46;
             // 
             // label9
             // 
@@ -268,13 +269,13 @@
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtNueva
             // 
-            this.textBox4.Location = new System.Drawing.Point(524, 345);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(224, 20);
-            this.textBox4.TabIndex = 43;
+            this.txtNueva.Location = new System.Drawing.Point(524, 345);
+            this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNueva.Name = "txtNueva";
+            this.txtNueva.Size = new System.Drawing.Size(224, 20);
+            this.txtNueva.TabIndex = 43;
             // 
             // label10
             // 
@@ -303,23 +304,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 539);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtConfirmacion);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNueva);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDUI);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtClaveAdmin);
             this.Controls.Add(this.btnNueva);
-            this.Controls.Add(this.txtNueva);
+            this.Controls.Add(this.txtUsuarioRecu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtUsuarioAdmin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -335,25 +336,25 @@
 
         #endregion
         private System.Windows.Forms.Button btnNueva;
-        private System.Windows.Forms.TextBox txtNueva;
+        private System.Windows.Forms.TextBox txtUsuarioRecu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtUsuarioAdmin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClaveAdmin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDUI;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtConfirmacion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNueva;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Splitter splitter1;
     }
