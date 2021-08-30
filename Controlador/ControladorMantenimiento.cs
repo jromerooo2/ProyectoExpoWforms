@@ -83,5 +83,11 @@ namespace Controlador
         {
             return ModeloMantenimiento.UpdateMaintenance(id_mantenimiento,id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
         }
+
+        /*DATA DELETE*/
+        public static bool Delete_Maintenance()
+        {
+            return ModeloMantenimiento.DeleteMaintenance(id_mantenimiento);
+        }
     }
 }

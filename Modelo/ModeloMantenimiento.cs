@@ -183,5 +183,23 @@ namespace Modelo
                 return update;
             }
         }
+
+        /*DATA DELETE*/
+
+        public static bool DeleteMaintenance(int maint)
+        {
+            bool delete;
+            try
+            {
+                string query = "DELETE FROM tb_mantenimiento WHERE id_mantenimiento = '"+maint+"'";
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                delete = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return delete;
+            }
+            catch (Exception)
+            {
+                return delete = false;
+            }
+        }
     }
 }

@@ -179,6 +179,33 @@ namespace SistemGestionBuses
             ActualizarDatos();
         }
 
+        /*DATA DELETE*/
+        void Delete_Mantenimiento()
+        {
+            ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(TxtID_mant.Text);
+            bool delete = ControladorMantenimiento.Delete_Maintenance();
+            if (delete == true)
+            {
+                MessageBox.Show("El registro ha sido eliminado exitosamente", 
+                                    "Confirmación de eliminación",
+                                    MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El registro no ha podido ser eliminado",
+                                    "Confirmación de eliminación",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro de eliminar el registro de mantenimiento del vehículos con placas:" +CmbPlaca.Text+ "?", "Confirmación de eliminación",
+                                    MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
+            {
+                Delete_Mantenimiento();
+                LoadDataGridView();
+            }
+        }
     }
 }
