@@ -27,7 +27,7 @@ namespace SistemGestionBuses
             cmbCliente.SelectedIndex == 0 &&
             cmbConductor.SelectedIndex == 0 &&
             cmbEstadoViaje.SelectedIndex == 0 &&
-            cmbMetodoPago.SelectedIndex == 0 &&
+            //cmbMetodoPago.SelectedIndex == 0 &&
             cmbTipoDestino.SelectedIndex == 0 &&
             cmbCliente.SelectedIndex == 0)
             {
@@ -54,7 +54,7 @@ namespace SistemGestionBuses
             cmbCliente.SelectedValue = 1;
             cmbConductor.SelectedValue = 1;
             cmbEstadoViaje.SelectedValue = 1;
-            cmbMetodoPago.SelectedValue = 1;
+            //cmbMetodoPago.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
             dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021");
@@ -143,9 +143,9 @@ namespace SistemGestionBuses
             try
             {
                 DataTable dataMetodoPago = ControladorViaje.ObtenerMetodoPago();
-                cmbMetodoPago.DataSource = dataMetodoPago;
-                cmbMetodoPago.DisplayMember = "metodo_pago";
-                cmbMetodoPago.ValueMember = "id_metodo_pago";
+                //cmbMetodoPago.DataSource = dataMetodoPago;
+                //cmbMetodoPago.DisplayMember = "metodo_pago";
+                //cmbMetodoPago.ValueMember = "id_metodo_pago";
             }
             catch (Exception)
             {
