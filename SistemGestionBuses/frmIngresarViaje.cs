@@ -57,7 +57,7 @@ namespace SistemGestionBuses
             //cmbMetodoPago.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
-            dtpFechaViaje.Value = Convert.ToDateTime("01 / 01 / 2021");
+            dtpFechaRetorno.Value = Convert.ToDateTime("01 / 01 / 2021");
         }
 
         void CargarDatosCMB()
@@ -192,44 +192,43 @@ namespace SistemGestionBuses
 
 
 
-        //void EnvioDatos()
-        //{
-        //    string nombreViaje, fecha, hora;
-        //    int id_unidad, id_empleado, id_estado_viaje, id_metodo_pago, id_tipo_viaje, id_cliente, tarifa, id_direccion_detalle;
-        //    nombreViaje = txtNombreViaje.Text;
-        //    fecha = dtpFechaViaje.Text;
-        //    hora = dtpHoraViaje.Text;
-        //    tarifa = Convert.ToInt32(txtTarifaViaje.Text);
-        //    id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
-        //    id_metodo_pago = Convert.ToInt32(cmbMetodoPago.SelectedValue);
-        //    id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
-        //    id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
-        //    id_empleado = Convert.ToInt32(cmbConductor.SelectedValue);
-        //    id_cliente = Convert.ToInt32(cmbCliente.SelectedValue);
+        void EnvioDatos()
+        {
+            double tarifa;
+            string nombreViaje, fecha_partida, hora_partida, fecha_retorno, hora_retorno;
+            int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio;
+            nombreViaje = txtNombreViaje.Text;
+            fecha_partida = dtpFechaRetorno.Text;
+            hora_partida = dtpHoraRetorno.Text;
+            fecha_retorno = dtpFechaRetorno.Text;
+            hora_retorno = dtpHoraRetorno.Text;
+            tarifa = Convert.ToDouble(txtTarifaViaje.Text);
+            id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
+            id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
+            id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
+            id_conductor = Convert.ToInt32(cmbConductor.SelectedValue);
+            id_municipio = Convert.ToInt32(cmbMunicipios.SelectedValue);
+            //Llamar a la clase por objeto
+            ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_unidad, id_conductor, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
+            if ( == true)
+            {
+                bool res = objViaje.EnviarDatos_ControllerViaje();
+                if (res)
+                {
+                    MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        //    id_direccion_detalle = Convert.ToInt16(txtIDdirecciones.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        //    ControladorViaje objViaje = new ControladorViaje(id_cliente, id_unidad, id_metodo_pago, id_empleado, id_municipios, id_estado_viaje, tarifa, hora, id_tipo_viaje, nombreViaje, id_direccion_detalle, fecha, direcciones);
-        //    bool respuesta_direcciones = objViaje.EnviarDatos_ControllerDirecciones();
-        //    if (respuesta_direcciones == true)
-        //    {
-        //        bool res = objViaje.EnviarDatos_ControllerViaje();
-        //        if (res)
-        //        {
-        //            MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        //        }
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Oops!, ocurrió un error al registrar una de las direcciones, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+                }
+            }
+            else
+            {
+                MessageBox.Show("Oops!, ocurrió un error al registrar una de las direcciones, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -275,56 +274,6 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("Error al establecer conexión.", "Comprobación de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIDviaje_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTarifaViaje_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbEstadoViaje_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

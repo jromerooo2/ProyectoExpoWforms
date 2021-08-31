@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresarViaje));
             this.cmbUnidadTransporte = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,16 +38,20 @@
             this.cmbTipoDestino = new System.Windows.Forms.ComboBox();
             this.txtTarifaViaje = new System.Windows.Forms.TextBox();
             this.txtNombreViaje = new System.Windows.Forms.TextBox();
-            this.dtpFechaViaje = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaRetorno = new System.Windows.Forms.DateTimePicker();
             this.cmbConductor = new System.Windows.Forms.ComboBox();
             this.cmbEstadoViaje = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.btnCrearViaje = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelFormularios = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtpFechaPartida = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraPartida = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
-            this.dtpHoraViaje = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraRetorno = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,28 +61,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtIDviaje = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.ElipseGeneral = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.DragControlGeneral = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panelBar = new System.Windows.Forms.Panel();
+            this.panelGrid = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ElipsePanelGrid = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.cmbMunicipios = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelGrid.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbUnidadTransporte
             // 
             this.cmbUnidadTransporte.FormattingEnabled = true;
-            this.cmbUnidadTransporte.Location = new System.Drawing.Point(11, 253);
+            this.cmbUnidadTransporte.Location = new System.Drawing.Point(14, 253);
             this.cmbUnidadTransporte.Name = "cmbUnidadTransporte";
-            this.cmbUnidadTransporte.Size = new System.Drawing.Size(158, 21);
+            this.cmbUnidadTransporte.Size = new System.Drawing.Size(155, 21);
             this.cmbUnidadTransporte.TabIndex = 76;
             this.cmbUnidadTransporte.Text = "unidad transporte";
             // 
@@ -85,7 +92,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 19);
+            this.label1.Location = new System.Drawing.Point(122, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 74);
             this.label1.TabIndex = 75;
@@ -93,43 +100,43 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(189, 6);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(16, 293);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 43);
+            this.button2.Size = new System.Drawing.Size(138, 43);
             this.button2.TabIndex = 74;
             this.button2.Text = "Actualizar Viaje";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(189, 55);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(160, 293);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 43);
+            this.button1.Size = new System.Drawing.Size(138, 43);
             this.button1.TabIndex = 73;
             this.button1.Text = "Eliminar Viaje";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +159,6 @@
             this.txtTarifaViaje.Size = new System.Drawing.Size(158, 20);
             this.txtTarifaViaje.TabIndex = 65;
             this.txtTarifaViaje.Text = "tarifa";
-            this.txtTarifaViaje.TextChanged += new System.EventHandler(this.txtTarifaViaje_TextChanged);
             // 
             // txtNombreViaje
             // 
@@ -162,14 +168,14 @@
             this.txtNombreViaje.TabIndex = 64;
             this.txtNombreViaje.Text = "nombre viaje";
             // 
-            // dtpFechaViaje
+            // dtpFechaRetorno
             // 
-            this.dtpFechaViaje.CustomFormat = "dd/mm/yyyy";
-            this.dtpFechaViaje.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaViaje.Location = new System.Drawing.Point(189, 192);
-            this.dtpFechaViaje.Name = "dtpFechaViaje";
-            this.dtpFechaViaje.Size = new System.Drawing.Size(165, 20);
-            this.dtpFechaViaje.TabIndex = 62;
+            this.dtpFechaRetorno.CustomFormat = "dd/mm/yyyy";
+            this.dtpFechaRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaRetorno.Location = new System.Drawing.Point(189, 192);
+            this.dtpFechaRetorno.Name = "dtpFechaRetorno";
+            this.dtpFechaRetorno.Size = new System.Drawing.Size(165, 20);
+            this.dtpFechaRetorno.TabIndex = 62;
             // 
             // cmbConductor
             // 
@@ -188,7 +194,6 @@
             this.cmbEstadoViaje.Size = new System.Drawing.Size(158, 21);
             this.cmbEstadoViaje.TabIndex = 59;
             this.cmbEstadoViaje.Text = "estado viaje";
-            this.cmbEstadoViaje.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoViaje_SelectedIndexChanged);
             // 
             // cmbCliente
             // 
@@ -203,14 +208,14 @@
             // 
             this.btnCrearViaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.btnCrearViaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCrearViaje.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnCrearViaje.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.btnCrearViaje.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnCrearViaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnCrearViaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.btnCrearViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearViaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearViaje.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearViaje.Location = new System.Drawing.Point(14, 6);
+            this.btnCrearViaje.Location = new System.Drawing.Point(14, 359);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(158, 43);
             this.btnCrearViaje.TabIndex = 57;
@@ -227,7 +232,7 @@
             this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(14, 55);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(189, 359);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(158, 43);
             this.btnLimpiarCampos.TabIndex = 56;
@@ -247,41 +252,82 @@
             this.pictureBox2.TabIndex = 55;
             this.pictureBox2.TabStop = false;
             // 
-            // panel1
+            // panelFormularios
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelFormularios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.dtpHoraViaje);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.cmbUnidadTransporte);
-            this.panel1.Controls.Add(this.cmbTipoDestino);
-            this.panel1.Controls.Add(this.cmbEstadoViaje);
-            this.panel1.Controls.Add(this.cmbCliente);
-            this.panel1.Controls.Add(this.txtTarifaViaje);
-            this.panel1.Controls.Add(this.dtpFechaViaje);
-            this.panel1.Controls.Add(this.txtNombreViaje);
-            this.panel1.Controls.Add(this.cmbConductor);
-            this.panel1.Location = new System.Drawing.Point(606, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 360);
-            this.panel1.TabIndex = 77;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panelFormularios.Controls.Add(this.cmbMunicipios);
+            this.panelFormularios.Controls.Add(this.btnLimpiarCampos);
+            this.panelFormularios.Controls.Add(this.label10);
+            this.panelFormularios.Controls.Add(this.label9);
+            this.panelFormularios.Controls.Add(this.dtpFechaPartida);
+            this.panelFormularios.Controls.Add(this.dtpHoraPartida);
+            this.panelFormularios.Controls.Add(this.label16);
+            this.panelFormularios.Controls.Add(this.btnCrearViaje);
+            this.panelFormularios.Controls.Add(this.dtpHoraRetorno);
+            this.panelFormularios.Controls.Add(this.label12);
+            this.panelFormularios.Controls.Add(this.label11);
+            this.panelFormularios.Controls.Add(this.label8);
+            this.panelFormularios.Controls.Add(this.label7);
+            this.panelFormularios.Controls.Add(this.label6);
+            this.panelFormularios.Controls.Add(this.label5);
+            this.panelFormularios.Controls.Add(this.label4);
+            this.panelFormularios.Controls.Add(this.label3);
+            this.panelFormularios.Controls.Add(this.label2);
+            this.panelFormularios.Controls.Add(this.cmbUnidadTransporte);
+            this.panelFormularios.Controls.Add(this.cmbTipoDestino);
+            this.panelFormularios.Controls.Add(this.cmbEstadoViaje);
+            this.panelFormularios.Controls.Add(this.cmbCliente);
+            this.panelFormularios.Controls.Add(this.txtTarifaViaje);
+            this.panelFormularios.Controls.Add(this.dtpFechaRetorno);
+            this.panelFormularios.Controls.Add(this.txtNombreViaje);
+            this.panelFormularios.Controls.Add(this.cmbConductor);
+            this.panelFormularios.Location = new System.Drawing.Point(606, 86);
+            this.panelFormularios.Name = "panelFormularios";
+            this.panelFormularios.Size = new System.Drawing.Size(368, 419);
+            this.panelFormularios.TabIndex = 77;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(186, 288);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 18);
+            this.label10.TabIndex = 98;
+            this.label10.Text = "Municipio:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(11, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(163, 18);
+            this.label9.TabIndex = 96;
+            this.label9.Text = "Fecha de inicio del viaje:";
+            // 
+            // dtpFechaPartida
+            // 
+            this.dtpFechaPartida.CustomFormat = "dd/mm/yyyy";
+            this.dtpFechaPartida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaPartida.Location = new System.Drawing.Point(14, 136);
+            this.dtpFechaPartida.Name = "dtpFechaPartida";
+            this.dtpFechaPartida.Size = new System.Drawing.Size(157, 20);
+            this.dtpFechaPartida.TabIndex = 95;
+            // 
+            // dtpHoraPartida
+            // 
+            this.dtpHoraPartida.CustomFormat = "dd/mm/yyyy";
+            this.dtpHoraPartida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraPartida.Location = new System.Drawing.Point(12, 87);
+            this.dtpHoraPartida.Name = "dtpHoraPartida";
+            this.dtpHoraPartida.Size = new System.Drawing.Size(157, 20);
+            this.dtpHoraPartida.TabIndex = 94;
             // 
             // label16
             // 
@@ -294,14 +340,14 @@
             this.label16.TabIndex = 93;
             this.label16.Text = "Hora de retorno del viaje:";
             // 
-            // dtpHoraViaje
+            // dtpHoraRetorno
             // 
-            this.dtpHoraViaje.CustomFormat = "";
-            this.dtpHoraViaje.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraViaje.Location = new System.Drawing.Point(187, 253);
-            this.dtpHoraViaje.Name = "dtpHoraViaje";
-            this.dtpHoraViaje.Size = new System.Drawing.Size(167, 20);
-            this.dtpHoraViaje.TabIndex = 92;
+            this.dtpHoraRetorno.CustomFormat = "";
+            this.dtpHoraRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraRetorno.Location = new System.Drawing.Point(187, 253);
+            this.dtpHoraRetorno.Name = "dtpHoraRetorno";
+            this.dtpHoraRetorno.Size = new System.Drawing.Size(167, 20);
+            this.dtpHoraRetorno.TabIndex = 92;
             // 
             // label12
             // 
@@ -357,7 +403,6 @@
             this.label6.Size = new System.Drawing.Size(110, 18);
             this.label6.TabIndex = 81;
             this.label6.Text = "Estado del viaje:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -391,7 +436,6 @@
             this.label3.Size = new System.Drawing.Size(49, 18);
             this.label3.TabIndex = 78;
             this.label3.Text = "Tarifa:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -404,83 +448,21 @@
             this.label2.TabIndex = 77;
             this.label2.Text = "Cliente:";
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.btnLimpiarCampos);
-            this.panel3.Controls.Add(this.btnCrearViaje);
-            this.panel3.Location = new System.Drawing.Point(606, 402);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(368, 107);
-            this.panel3.TabIndex = 79;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 14);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 262);
             this.dataGridView1.TabIndex = 82;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 87);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(157, 20);
-            this.dateTimePicker1.TabIndex = 94;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 18);
-            this.label9.TabIndex = 96;
-            this.label9.Text = "Fecha de inicio del viaje:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(14, 136);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(157, 20);
-            this.dateTimePicker2.TabIndex = 95;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(186, 288);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 18);
-            this.label10.TabIndex = 98;
-            this.label10.Text = "Municipio:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(189, 308);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 20);
-            this.textBox1.TabIndex = 97;
-            this.textBox1.Text = "municipio";
             // 
             // txtIDviaje
             // 
             this.txtIDviaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDviaje.Location = new System.Drawing.Point(502, 149);
+            this.txtIDviaje.Location = new System.Drawing.Point(489, 308);
             this.txtIDviaje.Name = "txtIDviaje";
             this.txtIDviaje.ReadOnly = true;
             this.txtIDviaje.Size = new System.Drawing.Size(87, 28);
@@ -493,12 +475,83 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(512, 122);
+            this.label14.Location = new System.Drawing.Point(494, 287);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(77, 18);
             this.label14.TabIndex = 91;
             this.label14.Text = "ID del viaje";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ElipseGeneral
+            // 
+            this.ElipseGeneral.ElipseRadius = 5;
+            this.ElipseGeneral.TargetControl = this;
+            // 
+            // DragControlGeneral
+            // 
+            this.DragControlGeneral.Fixed = true;
+            this.DragControlGeneral.Horizontal = true;
+            this.DragControlGeneral.TargetControl = this.panelBar;
+            this.DragControlGeneral.Vertical = true;
+            // 
+            // panelBar
+            // 
+            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(986, 43);
+            this.panelBar.TabIndex = 92;
+            // 
+            // panelGrid
+            // 
+            this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.panelGrid.Controls.Add(this.button3);
+            this.panelGrid.Controls.Add(this.button1);
+            this.panelGrid.Controls.Add(this.txtIDviaje);
+            this.panelGrid.Controls.Add(this.button2);
+            this.panelGrid.Controls.Add(this.label14);
+            this.panelGrid.Controls.Add(this.dataGridView1);
+            this.panelGrid.Location = new System.Drawing.Point(12, 152);
+            this.panelGrid.Name = "panelGrid";
+            this.panelGrid.Size = new System.Drawing.Size(588, 353);
+            this.panelGrid.TabIndex = 93;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(304, 293);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(138, 43);
+            this.button3.TabIndex = 92;
+            this.button3.Text = "Actualizar Grid";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // ElipsePanelGrid
+            // 
+            this.ElipsePanelGrid.ElipseRadius = 5;
+            this.ElipsePanelGrid.TargetControl = this.panelGrid;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this.panelFormularios;
+            // 
+            // cmbMunicipios
+            // 
+            this.cmbMunicipios.FormattingEnabled = true;
+            this.cmbMunicipios.Location = new System.Drawing.Point(189, 307);
+            this.cmbMunicipios.Name = "cmbMunicipios";
+            this.cmbMunicipios.Size = new System.Drawing.Size(155, 21);
+            this.cmbMunicipios.TabIndex = 99;
+            this.cmbMunicipios.Text = "unidad transporte";
             // 
             // frmIngresarViaje
             // 
@@ -506,25 +559,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(986, 530);
-            this.Controls.Add(this.txtIDviaje);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIngresarViaje";
             this.Text = "frmIngresarViaje";
             this.Load += new System.EventHandler(this.frmIngresarViaje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panelFormularios.ResumeLayout(false);
+            this.panelFormularios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelGrid.ResumeLayout(false);
+            this.panelGrid.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -538,33 +590,39 @@
         private System.Windows.Forms.ComboBox cmbTipoDestino;
         private System.Windows.Forms.TextBox txtTarifaViaje;
         private System.Windows.Forms.TextBox txtNombreViaje;
-        private System.Windows.Forms.DateTimePicker dtpFechaViaje;
+        private System.Windows.Forms.DateTimePicker dtpFechaRetorno;
         private System.Windows.Forms.ComboBox cmbConductor;
         private System.Windows.Forms.ComboBox cmbEstadoViaje;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Button btnCrearViaje;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelFormularios;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dtpHoraViaje;
+        private System.Windows.Forms.DateTimePicker dtpHoraRetorno;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaPartida;
+        private System.Windows.Forms.DateTimePicker dtpHoraPartida;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtIDviaje;
         private System.Windows.Forms.Label label14;
+        private Bunifu.Framework.UI.BunifuElipse ElipseGeneral;
+        private Bunifu.Framework.UI.BunifuDragControl DragControlGeneral;
+        private System.Windows.Forms.Panel panelBar;
+        private System.Windows.Forms.Panel panelGrid;
+        private System.Windows.Forms.Button button3;
+        private Bunifu.Framework.UI.BunifuElipse ElipsePanelGrid;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.ComboBox cmbMunicipios;
     }
 }
