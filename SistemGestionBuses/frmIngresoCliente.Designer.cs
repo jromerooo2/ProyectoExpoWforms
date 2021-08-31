@@ -260,6 +260,7 @@
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnLimCampos_Click);
             // 
             // panel1
             // 

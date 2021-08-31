@@ -245,8 +245,8 @@ namespace SistemGestionBuses
                 txtIdCliente.Text = dgvDatosCliente[0, i].Value.ToString();
                 txtNomCliente.Text = dgvDatosCliente[1, i].Value.ToString();
                 txtApeCliente.Text = dgvDatosCliente[2, i].Value.ToString();
-                txtTelCliente.Text = dgvDatosCliente[5, i].Value.ToString();
                 txtDirCliente.Text = dgvDatosCliente[3, i].Value.ToString();
+                txtTelCliente.Text = dgvDatosCliente[5, i].Value.ToString();
                 txtCorCliente.Text = dgvDatosCliente[6, i].Value.ToString();
 
                 int id_tipo_cliente = Convert.ToInt16(dgvDatosCliente[4, i].Value.ToString());
@@ -273,6 +273,19 @@ namespace SistemGestionBuses
         private void BtnActualizarGrid_click(object sender, EventArgs e)
         {
             CargarGridDatos();
+        }
+        public void LimpiarCampos()
+        {
+            txtNomCliente.Clear();
+            txtApeCliente.Clear();
+            txtDirCliente.Clear();
+            txtTelCliente.Clear();
+            txtCorCliente.Clear();        
+        }
+
+        private void BtnLimCampos_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }
