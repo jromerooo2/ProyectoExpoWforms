@@ -195,7 +195,7 @@
             // btnActualizarCliente
             // 
             this.btnActualizarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 56);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 45);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
             this.btnActualizarCliente.Size = new System.Drawing.Size(122, 46);
             this.btnActualizarCliente.TabIndex = 45;
@@ -218,9 +218,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(148, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -311,15 +311,15 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnActualizarCliente);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(12, 98);
+            this.panel2.Location = new System.Drawing.Point(12, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 183);
+            this.panel2.Size = new System.Drawing.Size(148, 161);
             this.panel2.TabIndex = 79;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(12, 119);
+            this.button2.Location = new System.Drawing.Point(12, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 55);
             this.button2.TabIndex = 62;
