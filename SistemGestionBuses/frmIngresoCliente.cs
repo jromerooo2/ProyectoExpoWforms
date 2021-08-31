@@ -205,8 +205,8 @@ namespace SistemGestionBuses
                 CargarGridDatos();
             }
             else
+                   MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             {
-                MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void BtnActualizar_Click(object sender, EventArgs e)
@@ -226,7 +226,7 @@ namespace SistemGestionBuses
 
         void EliminarDatos()
         {
-            bool respuesta = ControladorUsuario.EliminarDatosController(Convert.ToInt16(txtIdCliente.Text));
+            bool respuesta = ControladorIngresoCliente.EliminarClienteControlador(Convert.ToInt16(txtIdCliente.Text));
             if (respuesta)
             {
                 MessageBox.Show("El registro se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -245,8 +245,8 @@ namespace SistemGestionBuses
                 txtIdCliente.Text = dgvDatosCliente[0, i].Value.ToString();
                 txtNomCliente.Text = dgvDatosCliente[1, i].Value.ToString();
                 txtApeCliente.Text = dgvDatosCliente[2, i].Value.ToString();
-                txtTelCliente.Text = dgvDatosCliente[3, i].Value.ToString();
-                txtDirCliente.Text = dgvDatosCliente[5, i].Value.ToString();
+                txtTelCliente.Text = dgvDatosCliente[5, i].Value.ToString();
+                txtDirCliente.Text = dgvDatosCliente[3, i].Value.ToString();
                 txtCorCliente.Text = dgvDatosCliente[6, i].Value.ToString();
 
                 int id_tipo_cliente = Convert.ToInt16(dgvDatosCliente[4, i].Value.ToString());
@@ -259,6 +259,20 @@ namespace SistemGestionBuses
         private void btnAcualizar_Click(object sender, EventArgs e)
         {
             ActualizarDatos();
+        }
+
+        private void BtnEliminarCliente_click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtNomCliente.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarDatos();
+                CargarGridDatos();
+            }
+        }
+
+        private void BtnActualizarGrid_click(object sender, EventArgs e)
+        {
+            CargarGridDatos();
         }
     }
 }

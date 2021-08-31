@@ -381,12 +381,12 @@ namespace Modelo
                 throw;
             }
         }
-        public static bool EliminarCliente()
+        public static bool EliminarCliente(int IdCliente)
         {
             bool res = false;
             try
             {
-                string query = "DELETE FROM tb_cliente" ;
+                string query = "DELETE FROM tb_cliente WHERE id_Cliente="+ IdCliente;
                 MySqlCommand cmd = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmd.ExecuteNonQuery());
                 return res;
