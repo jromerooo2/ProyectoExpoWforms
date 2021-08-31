@@ -192,43 +192,43 @@ namespace SistemGestionBuses
 
 
 
-        void EnvioDatos()
-        {
-            double tarifa;
-            string nombreViaje, fecha_partida, hora_partida, fecha_retorno, hora_retorno;
-            int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio;
-            nombreViaje = txtNombreViaje.Text;
-            fecha_partida = dtpFechaRetorno.Text;
-            hora_partida = dtpHoraRetorno.Text;
-            fecha_retorno = dtpFechaRetorno.Text;
-            hora_retorno = dtpHoraRetorno.Text;
-            tarifa = Convert.ToDouble(txtTarifaViaje.Text);
-            id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
-            id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
-            id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
-            id_conductor = Convert.ToInt32(cmbConductor.SelectedValue);
-            id_municipio = Convert.ToInt32(cmbMunicipios.SelectedValue);
-            //Llamar a la clase por objeto
-            ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_unidad, id_conductor, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
-            if ( == true)
-            {
-                bool res = objViaje.EnviarDatos_ControllerViaje();
-                if (res)
-                {
-                    MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //void EnvioDatos()
+        //{
+        //    double tarifa;
+        //    string nombreViaje, fecha_partida, hora_partida, fecha_retorno, hora_retorno;
+        //    int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio;
+        //    nombreViaje = txtNombreViaje.Text;
+        //    fecha_partida = dtpFechaRetorno.Text;
+        //    hora_partida = dtpHoraRetorno.Text;
+        //    fecha_retorno = dtpFechaRetorno.Text;
+        //    hora_retorno = dtpHoraRetorno.Text;
+        //    tarifa = Convert.ToDouble(txtTarifaViaje.Text);
+        //    id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
+        //    id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
+        //    id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
+        //    id_conductor = Convert.ToInt32(cmbConductor.SelectedValue);
+        //    id_municipio = Convert.ToInt32(cmbMunicipios.SelectedValue);
+        //    //Llamar a la clase por objeto
+        //    ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_unidad, id_conductor, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
+        //    if ( == true)
+        //    {
+        //        bool res = objViaje.EnviarDatos_ControllerViaje();
+        //        if (res)
+        //        {
+        //            MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                else
-                {
-                    MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-            }
-            else
-            {
-                MessageBox.Show("Oops!, ocurrió un error al registrar una de las direcciones, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Oops!, ocurrió un error al registrar una de las direcciones, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
