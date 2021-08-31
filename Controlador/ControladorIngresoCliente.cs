@@ -54,7 +54,7 @@ namespace Controlador
         }
         public bool ActualizarClienteContorlador()
         {
-            return ModeloIngreso.ActualizarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente, id_cliente);
+            return ModeloIngreso.ActualizarCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente, id_cliente);
         }
         public static bool EliminarClienteControlador(int IdCliente)
         {

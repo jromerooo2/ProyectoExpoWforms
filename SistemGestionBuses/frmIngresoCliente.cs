@@ -189,26 +189,35 @@ namespace SistemGestionBuses
         }
         void ActualizarDatos()
         {
-            string nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente;
-            int id_tipo_cliente;
-            nombres_cliente = txtNomCliente.Text;
-            apellidos_cliente = txtApeCliente.Text;
-            telefono_cliente = txtTelCliente.Text;
-            direccion_cliente = txtDirCliente.Text;
-            correo_cliente = txtCorCliente.Text;
-            id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
-            ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
-            bool res = objCliente.ActualizarClienteContorlador();
-            if (res)
+            try
             {
-                MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarGridDatos();
+                string nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente;
+                int id_tipo_cliente;
+                nombres_cliente = txtNomCliente.Text;
+                apellidos_cliente = txtApeCliente.Text;
+                telefono_cliente = txtTelCliente.Text;
+                direccion_cliente = txtDirCliente.Text;
+                correo_cliente = txtCorCliente.Text;
+                id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
+                ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                bool res = objCliente.ActualizarClienteContorlador();
+                if (res)
+                {
+                    MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarGridDatos();
+                }
+                else
+                {
+                    MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-                   MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception)
             {
-            }
+
+                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }           
         }
+
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             ActualizarDatos();
@@ -223,6 +232,11 @@ namespace SistemGestionBuses
             }           
             EnvioDatos();
         }
+
+
+
+
+
 
         void EliminarDatos()
         {
