@@ -30,7 +30,7 @@ namespace Controlador
         public List<string>direcciones { get; set; }
 
         //Constructor
-        public ControladorViaje(string pnombreViaje, int pidUnidad, int pidEmpleado, string pfechaPartida, string phoraPartida, double ptarifa, int pidEstadoViaje, int pidTipoViaje, string pfechaRetorno, string phoraRetorno, int pidMunicipio, List <string> pdirecciones, List <string> ppuntosReferencia)
+        public ControladorViaje(string pnombreViaje, int pidUnidad, int pidEmpleado, string pfechaPartida, string phoraPartida, double ptarifa, int pidEstadoViaje, int pidTipoViaje, string pfechaRetorno, string phoraRetorno, int pidMunicipio)
         {
             id_empleado = pidEmpleado;
             id_unidad = pidUnidad;
@@ -43,10 +43,6 @@ namespace Controlador
             hora_retorno = phoraRetorno;
             fecha_retorno = phoraRetorno;
             id_municipio = pidMunicipio;
-            
-            //Listas
-            direcciones = pdirecciones;          
-            puntos_referencias = ppuntosReferencia;
         }
 
         public bool EnviarDatos_ControllerViaje()
@@ -54,8 +50,11 @@ namespace Controlador
             return ModeloViaje.RegistrarViaje(nombre_viaje, id_unidad, id_empleado, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
         }
 
-        public bool EnviarDatos_ControllerDirecciones()
+        public bool EnviarDatos_ControllerDirecciones(List<string> pdirecciones, List<string> ppuntosReferencia)
         {
+            //Listas
+            direcciones = pdirecciones;
+            puntos_referencias = ppuntosReferencia;
             //int, lista string, lista string
             return ModeloViaje.RegistrarDirecciones(id_viaje, direcciones, puntos_referencias);
         }
