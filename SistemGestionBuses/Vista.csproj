@@ -141,6 +141,12 @@
     <Compile Include="frmRecuperarAdmin.Designer.cs">
       <DependentUpon>frmRecuperarAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIngresarUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresarUnidades.Designer.cs">
+      <DependentUpon>frmIngresarUnidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarAdmin.resx">
       <DependentUpon>frmRecuperarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresarUnidades.resx">
+      <DependentUpon>frmIngresarUnidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
