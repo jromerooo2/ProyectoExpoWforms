@@ -191,7 +191,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                string nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente;
+                string nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente;
                 int id_tipo_cliente;
                 nombres_cliente = txtNomCliente.Text;
                 apellidos_cliente = txtApeCliente.Text;
@@ -199,12 +199,13 @@ namespace SistemGestionBuses
                 direccion_cliente = txtDirCliente.Text;
                 correo_cliente = txtCorCliente.Text;
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
-                ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+                ControladorIngresoCliente.id_cliente = Convert.ToInt32(txtIdCliente.Text);
+                objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);                
                 bool res = objCliente.ActualizarClienteContorlador();
-                if (res)
+                if (res == true)
                 {
                     MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarGridDatos();
+                    
                 }
                 else
                 {
@@ -217,12 +218,6 @@ namespace SistemGestionBuses
                 MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }           
         }
-
-        private void BtnActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarDatos();
-        }
-
         private void btnAgregarCliente1_Click(object sender, EventArgs e)
         {
             Vacio();
@@ -259,8 +254,8 @@ namespace SistemGestionBuses
                 txtIdCliente.Text = dgvDatosCliente[0, i].Value.ToString();
                 txtNomCliente.Text = dgvDatosCliente[1, i].Value.ToString();
                 txtApeCliente.Text = dgvDatosCliente[2, i].Value.ToString();
-                txtDirCliente.Text = dgvDatosCliente[3, i].Value.ToString();
-                txtTelCliente.Text = dgvDatosCliente[5, i].Value.ToString();
+                txtTelCliente.Text = dgvDatosCliente[3, i].Value.ToString();
+                txtDirCliente.Text = dgvDatosCliente[5, i].Value.ToString();
                 txtCorCliente.Text = dgvDatosCliente[6, i].Value.ToString();
 
                 int id_tipo_cliente = Convert.ToInt16(dgvDatosCliente[4, i].Value.ToString());
