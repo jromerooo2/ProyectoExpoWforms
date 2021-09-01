@@ -12,7 +12,7 @@ namespace Modelo
     {
         #region CMB
         //Cargar Unidad Transporte
-        public static DataTable CargarUnidadTransporte()
+        public static DataTable CargarTipoUnidadTransporte()
         {
             DataTable data;
             try
@@ -29,16 +29,50 @@ namespace Modelo
                 return data = null;
             }
         }
-
-        //Cargar Metodo Pago
-        public static DataTable CargarMetodoPago()
+        public static DataTable CargarUnidadTransporte()
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_metodo_pago";
-                MySqlCommand cmdMetodoPago = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdMetodoPago);
+                string instruccion = "SELECT * FROM tb_unidad_transporte";
+                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        ////Cargar Metodo Pago
+        //public static DataTable CargarMetodoPago()
+        //{
+        //    DataTable data;
+        //    try
+        //    {
+        //        string instruccion = "SELECT * FROM tb_metodo_pago";
+        //        MySqlCommand cmdMetodoPago = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+        //        MySqlDataAdapter adp = new MySqlDataAdapter(cmdMetodoPago);
+        //        data = new DataTable();
+        //        adp.Fill(data);
+        //        return data;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return data = null;
+        //    }
+        //}
+        public static DataTable CargarConductores()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_empleados";
+                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;

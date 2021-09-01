@@ -50,15 +50,6 @@ namespace Controlador
             return ModeloViaje.RegistrarViaje(nombre_viaje, id_unidad, id_empleado, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
         }
 
-        public bool EnviarDatos_ControllerDirecciones(List<string> pdirecciones, List<string> ppuntosReferencia)
-        {
-            //Listas
-            direcciones = pdirecciones;
-            puntos_referencias = ppuntosReferencia;
-            //int, lista string, lista string
-            return ModeloViaje.RegistrarDirecciones(id_viaje, direcciones, puntos_referencias);
-        }
-
         public static DataTable ViajesController()
         {
             return ModeloViaje.ObtenerViajes();
@@ -66,20 +57,20 @@ namespace Controlador
 
         #region CMB Controller
         //cmb Cliente
-        public static DataTable ObtenerCliente()
+        public static DataTable ObtenerUnidad()
         {
-            return ModeloViaje.CargarCliente();
+            return ModeloViaje.CargarUnidadTransporte();
         }
         //cmbTipoUnidadTransporte
         public static DataTable ObtenerTipoUnidadTransporte()
         {
-            return ModeloViaje.CargarUnidadTransporte();
+            return ModeloViaje.CargarTipoUnidadTransporte();
         }
         //cmbMetodoPago
-        public static DataTable ObtenerMetodoPago()
-        {
-            return ModeloViaje.CargarMetodoPago();
-        }
+        //public static DataTable ObtenerMetodoPago()
+        //{
+        //    return ModeloViaje.CargarMetodoPago();
+        //}
         //cmb EstadoViaje
         public static DataTable ObtenerEstadoViaje()
         {
@@ -95,6 +86,12 @@ namespace Controlador
         public static DataTable ObtenerTipoViaje()
         {
             return ModeloViaje.CargarTipoViaje();
+        }
+
+        //cmb Conductores
+        public static DataTable ObtenerConductores()
+        {
+            return ModeloViaje.CargarConductores();
         }
         #endregion
 
