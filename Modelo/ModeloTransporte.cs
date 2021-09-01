@@ -136,7 +136,38 @@ namespace Modelo
             }
         }
 
-        
+        public static bool ActualizarUnidades(int pMarca, int pAnio, string pVIN, int pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, string pNumeroMotor, string pNumeroChasis, int pUnidadTransporte)
+        {
+            bool res = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_unidad_transporte SET id_marca = '" + pMarca + "', anio = '" + pAnio + "', VIN = '" + pVIN + "', capacisas = '" + pCapacidad + "', id_modelo = '" + pModelo + "', placa = '" + pPlaca + "', id_tipo_placa = '" + pTipoPlaca + "'id_tipo_unidad = '" + pTipoUnidad + "'numero_motor = '" + pNumeroMotor + "'numero_chasis = '" + pNumeroChasis+ "' WHERE id_cliente = '" + pUnidadTransporte + "'"), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+            }
+        }
+
+        public static bool EliminarUnidades(int pUnidadTransporte)
+        {
+            bool res = false;
+            try
+            {
+                string query = "DELETE FROM tb_unidad_transporte WHERE id_unidad_transorte=" + pUnidadTransporte;
+                MySqlCommand cmddelet = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmddelet.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+                throw;
+            }
+        }
+
         #endregion
     }
 }
