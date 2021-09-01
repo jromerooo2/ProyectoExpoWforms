@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using MySql.Data.MySqlClient;
 
 namespace SistemGestionBuses
 {
     public partial class frmIngresoCliente : Form
     {
+        public DataTable datosClien;
         public ControladorIngresoCliente objCliente;
 
         public frmIngresoCliente()
@@ -20,18 +22,11 @@ namespace SistemGestionBuses
             InitializeComponent();
             
         }
-        private void CargarGridDatos()
+        void CargarGridDatos()
         {
-            try
-            {
-                DataTable data = ControladorIngresoCliente.ObtenerCliente();
-                dgvDatosCliente.DataSource = data;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            CargarTipoCliente();
+            datosClien = ControladorIngresoCliente.CargarClienteControlador();
+            dgvDatosCliente.DataSource = datosClien;
         }
         void CargarTipoCliente()
         {
@@ -195,11 +190,12 @@ namespace SistemGestionBuses
                 int id_tipo_cliente;
                 nombres_cliente = txtNomCliente.Text;
                 apellidos_cliente = txtApeCliente.Text;
-                telefono_cliente = txtTelCliente.Text;
                 direccion_cliente = txtDirCliente.Text;
+                telefono_cliente = txtTelCliente.Text;
                 correo_cliente = txtCorCliente.Text;
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
-                ControladorIngresoCliente.id_cliente = Convert.ToInt32(txtIdCliente.Text);
+
+                ControladorIngresoCliente.id_cliente = Convert.ToInt16(txtIdCliente.Text);
                 objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);                
                 bool res = objCliente.ActualizarClienteContorlador();
                 if (res == true)
@@ -235,7 +231,8 @@ namespace SistemGestionBuses
 
         void EliminarDatos()
         {
-            bool respuesta = ControladorIngresoCliente.EliminarClienteControlador(Convert.ToInt16(txtIdCliente.Text));
+            ControladorIngresoCliente.id_cliente = Convert.ToInt16(txtIdCliente.Text);
+            bool respuesta = ControladorIngresoCliente.EliminarClienteControlador();
             if (respuesta)
             {
                 MessageBox.Show("El registro se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -27,15 +27,19 @@ namespace Controlador
         {
             return ModeloIngreso.CargarClientes();
         }
+        public static DataTable CargarClienteControlador()
+        {
+            return ModeloIngreso.ObtenerListaCliente();
+        }
 
-         
+        public static int id_cliente { get; set; }
         public string nombres_cliente { get; set; }
         public string apellidos_cliente { get; set; }
         public string telefono_cliente { get; set; }
         public string direccion_cliente { get; set; }
         public string correo_cliente { get; set; }       
         public int id_tipo_cliente { get; set; }
-        public static int id_cliente { get; set; }
+        
 
         public ControladorIngresoCliente (string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
         {
@@ -46,21 +50,19 @@ namespace Controlador
             direccion_cliente = pDirCliente;
             correo_cliente = pCorCliente;
             id_tipo_cliente = pTipCliente;
-           
-            
         }
      
         public bool EnviarClientes()
         {
-            return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+            return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);
         }
         public bool ActualizarClienteContorlador()
         {
-            return ModeloIngreso.ActualizarCliente(id_cliente, nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
+            return ModeloIngreso.ActualizarCliente(id_cliente, nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente,  correo_cliente, id_tipo_cliente);
         }
-        public static bool EliminarClienteControlador(int IdCliente)
+        public static bool EliminarClienteControlador()
         {
-            return ModeloIngreso.EliminarCliente(IdCliente);
+            return ModeloIngreso.EliminarCliente(id_cliente);
         }
     }
 }

@@ -198,6 +198,25 @@ namespace Modelo
                 return data = null;
             }
         }
+        public static DataTable ObtenerListaCliente()
+        {
+            DataTable data;
+            try
+            {
+                string instuccion = "SELECT * FROM dbsistemaviajes.tb_cliente;";
+                MySqlCommand cmdListaClientes = new MySqlCommand(string.Format(instuccion),
+                    ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdListaClientes);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data = null;
+            }
+        }
 
         //Cargar Unidad Transporte
         public static DataTable CargarUnidadTransporte()
@@ -371,7 +390,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombres_cliente= '" + pNomCliente + "', apellidos_cliente= '" + pApeCliente + "',  telefono_cliente= '" + pTelCliente + "', direccion_cliente= '" + pDirCliente + "', correo_cliente=" + pCorCliente + "', direccion_cliente= '" + pTipCliente + " WHERE id_cliente= '" + pIdCliente + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombres_cliente= '" + pNomCliente + "', apellidos_cliente= '" + pApeCliente + "',  direccion_cliente= '" + pDirCliente + "', telefono_cliente= '" + pTelCliente + "', correo_cliente=" + pCorCliente + "', direccion_cliente= '" + pTipCliente + " WHERE id_cliente= '" + pIdCliente + "'"), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }

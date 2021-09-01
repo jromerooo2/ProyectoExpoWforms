@@ -16,7 +16,7 @@ namespace SistemGestionBuses
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIngresoEmpleado());
+            Application.Run(new frmIngresoCliente());
 
             //pasen siempre a frmLogin plis
         }

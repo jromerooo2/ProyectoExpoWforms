@@ -336,3 +336,4 @@ namespace SistemGestionBuses
         }
     }
 }
+//nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente
