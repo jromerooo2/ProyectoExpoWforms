@@ -150,7 +150,8 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario) VALUES('{0}','{1}', '{2}', '{3}','{4}')", pid_empleado, user, correo, password, cargo), ModeloConexion.GetConnection());
+                int estado = 1;
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}')", pid_empleado, user, correo, password, cargo, estado), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(insert.ExecuteNonQuery());
                 return res;
             }

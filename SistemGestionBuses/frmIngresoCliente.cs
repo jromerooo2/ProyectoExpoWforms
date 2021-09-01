@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using MySql.Data.MySqlClient;
 
 namespace SistemGestionBuses
 {
     public partial class frmIngresoCliente : Form
     {
+        public DataTable datosClien;
         public ControladorIngresoCliente objCliente;
 
         public frmIngresoCliente()
@@ -20,18 +22,11 @@ namespace SistemGestionBuses
             InitializeComponent();
             
         }
-        private void CargarGridDatos()
+        void CargarGridDatos()
         {
-            try
-            {
-                DataTable data = ControladorIngresoCliente.ObtenerCliente();
-                dgvDatosCliente.DataSource = data;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            CargarTipoCliente();
+            datosClien = ControladorIngresoCliente.CargarClienteControlador();
+            dgvDatosCliente.DataSource = datosClien;
         }
         void CargarTipoCliente()
         {
@@ -189,31 +184,37 @@ namespace SistemGestionBuses
         }
         void ActualizarDatos()
         {
-            string nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente;
-            int id_tipo_cliente;
-            nombres_cliente = txtNomCliente.Text;
-            apellidos_cliente = txtApeCliente.Text;
-            telefono_cliente = txtTelCliente.Text;
-            direccion_cliente = txtDirCliente.Text;
-            correo_cliente = txtCorCliente.Text;
-            id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
-            ControladorIngresoCliente objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
-            bool res = objCliente.ActualizarClienteContorlador();
-            if (res)
+            try
             {
-                MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarGridDatos();
-            }
-            else
-            {
-                MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void BtnActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarDatos();
-        }
+                string nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente;
+                int id_tipo_cliente;
+                nombres_cliente = txtNomCliente.Text;
+                apellidos_cliente = txtApeCliente.Text;
+                direccion_cliente = txtDirCliente.Text;
+                telefono_cliente = txtTelCliente.Text;
+                correo_cliente = txtCorCliente.Text;
+                id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
 
+                ControladorIngresoCliente.id_cliente = Convert.ToInt16(txtIdCliente.Text);
+                objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);                
+                bool res = objCliente.ActualizarClienteContorlador();
+                if (res == true)
+                {
+                    MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }       
+            
+        }
         private void btnAgregarCliente1_Click(object sender, EventArgs e)
         {
             Vacio();
@@ -226,7 +227,8 @@ namespace SistemGestionBuses
 
         void EliminarDatos()
         {
-            bool respuesta = ControladorUsuario.EliminarDatosController(Convert.ToInt16(txtIdCliente.Text));
+            ControladorIngresoCliente.id_cliente = Convert.ToInt16(txtIdCliente.Text);
+            bool respuesta = ControladorIngresoCliente.EliminarClienteControlador();
             if (respuesta)
             {
                 MessageBox.Show("El registro se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -259,6 +261,34 @@ namespace SistemGestionBuses
         private void btnAcualizar_Click(object sender, EventArgs e)
         {
             ActualizarDatos();
+            CargarGridDatos();
+        }
+
+        private void BtnEliminarCliente_click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtNomCliente.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarDatos();
+                CargarGridDatos();
+            }
+        }
+
+        private void BtnActualizarGrid_click(object sender, EventArgs e)
+        {
+            CargarGridDatos();
+        }
+        public void LimpiarCampos()
+        {
+            txtNomCliente.Clear();
+            txtApeCliente.Clear();
+            txtDirCliente.Clear();
+            txtTelCliente.Clear();
+            txtCorCliente.Clear();        
+        }
+
+        private void BtnLimCampos_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

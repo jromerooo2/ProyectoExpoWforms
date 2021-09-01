@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -102,11 +105,11 @@
     <Compile Include="frmIngresoCliente.Designer.cs">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmIngresoConductores.cs">
+    <Compile Include="frmIngresoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIngresoConductores.Designer.cs">
-      <DependentUpon>frmIngresoConductores.cs</DependentUpon>
+    <Compile Include="frmIngresoEmpleado.Designer.cs">
+      <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -138,6 +141,12 @@
     <Compile Include="frmRecuperarAdmin.Designer.cs">
       <DependentUpon>frmRecuperarAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIngresarUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresarUnidades.Designer.cs">
+      <DependentUpon>frmIngresarUnidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,8 +164,8 @@
     <EmbeddedResource Include="frmIngresoCliente.resx">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmIngresoConductores.resx">
-      <DependentUpon>frmIngresoConductores.cs</DependentUpon>
+    <EmbeddedResource Include="frmIngresoEmpleado.resx">
+      <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -172,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarAdmin.resx">
       <DependentUpon>frmRecuperarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresarUnidades.resx">
+      <DependentUpon>frmIngresarUnidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

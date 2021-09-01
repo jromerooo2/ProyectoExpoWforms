@@ -40,7 +40,7 @@ namespace SistemGestionBuses
                 if (res == 1)
                 {
                         //mostrar siguiente forms
-                        frmIngresoConductores next = new frmIngresoConductores();
+                        frmIngresoEmpleado next = new frmIngresoEmpleado();
                         next.Show();
                         this.Hide();
                 }

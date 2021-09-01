@@ -48,6 +48,7 @@
     <Compile Include="ControladorLogin.cs" />
     <Compile Include="ControladorMantenimiento.cs" />
     <Compile Include="ControladorRecuperar.cs" />
+    <Compile Include="ControladorTransporte.cs" />
     <Compile Include="ControladorUsuario.cs" />
     <Compile Include="ControladorViaje.cs" />
     <Compile Include="EncryptClass.cs" />

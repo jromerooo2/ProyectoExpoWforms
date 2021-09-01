@@ -52,6 +52,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,7 +74,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(244, 90);
+            this.label5.Location = new System.Drawing.Point(244, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 57;
@@ -86,7 +87,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(355, 26);
+            this.label4.Location = new System.Drawing.Point(355, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 56;
@@ -98,7 +99,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 90);
+            this.label3.Location = new System.Drawing.Point(7, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 55;
@@ -110,7 +111,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(182, 26);
+            this.label2.Location = new System.Drawing.Point(182, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 18);
             this.label2.TabIndex = 54;
@@ -123,7 +124,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 26);
+            this.label1.Location = new System.Drawing.Point(7, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 53;
@@ -133,7 +134,7 @@
             // cmbTipCliente
             // 
             this.cmbTipCliente.FormattingEnabled = true;
-            this.cmbTipCliente.Location = new System.Drawing.Point(421, 184);
+            this.cmbTipCliente.Location = new System.Drawing.Point(247, 145);
             this.cmbTipCliente.Name = "cmbTipCliente";
             this.cmbTipCliente.Size = new System.Drawing.Size(211, 21);
             this.cmbTipCliente.TabIndex = 52;
@@ -141,16 +142,16 @@
             // 
             // txtDirCliente
             // 
-            this.txtDirCliente.Location = new System.Drawing.Point(10, 106);
+            this.txtDirCliente.Location = new System.Drawing.Point(10, 91);
             this.txtDirCliente.Multiline = true;
             this.txtDirCliente.Name = "txtDirCliente";
-            this.txtDirCliente.Size = new System.Drawing.Size(215, 137);
+            this.txtDirCliente.Size = new System.Drawing.Size(205, 169);
             this.txtDirCliente.TabIndex = 51;
             this.txtDirCliente.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtApeCliente
             // 
-            this.txtApeCliente.Location = new System.Drawing.Point(185, 42);
+            this.txtApeCliente.Location = new System.Drawing.Point(185, 31);
             this.txtApeCliente.Name = "txtApeCliente";
             this.txtApeCliente.Size = new System.Drawing.Size(131, 20);
             this.txtApeCliente.TabIndex = 50;
@@ -158,7 +159,7 @@
             // 
             // txtCorCliente
             // 
-            this.txtCorCliente.Location = new System.Drawing.Point(247, 106);
+            this.txtCorCliente.Location = new System.Drawing.Point(247, 91);
             this.txtCorCliente.Name = "txtCorCliente";
             this.txtCorCliente.Size = new System.Drawing.Size(211, 20);
             this.txtCorCliente.TabIndex = 49;
@@ -166,7 +167,7 @@
             // 
             // txtTelCliente
             // 
-            this.txtTelCliente.Location = new System.Drawing.Point(358, 42);
+            this.txtTelCliente.Location = new System.Drawing.Point(358, 31);
             this.txtTelCliente.Name = "txtTelCliente";
             this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
             this.txtTelCliente.TabIndex = 48;
@@ -174,7 +175,7 @@
             // 
             // txtNomCliente
             // 
-            this.txtNomCliente.Location = new System.Drawing.Point(10, 42);
+            this.txtNomCliente.Location = new System.Drawing.Point(10, 31);
             this.txtNomCliente.Name = "txtNomCliente";
             this.txtNomCliente.Size = new System.Drawing.Size(131, 20);
             this.txtNomCliente.TabIndex = 47;
@@ -183,20 +184,20 @@
             // btnEliminarClientes
             // 
             this.btnEliminarClientes.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 116);
+            this.btnEliminarClientes.Location = new System.Drawing.Point(336, 229);
             this.btnEliminarClientes.Name = "btnEliminarClientes";
             this.btnEliminarClientes.Size = new System.Drawing.Size(122, 31);
             this.btnEliminarClientes.TabIndex = 46;
             this.btnEliminarClientes.Text = "Eliminar cliente";
             this.btnEliminarClientes.UseVisualStyleBackColor = true;
-            this.btnEliminarClientes.Click += new System.EventHandler(this.button3_Click);
+            this.btnEliminarClientes.Click += new System.EventHandler(this.BtnEliminarCliente_click);
             // 
             // btnActualizarCliente
             // 
             this.btnActualizarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 55);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 45);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
-            this.btnActualizarCliente.Size = new System.Drawing.Size(122, 51);
+            this.btnActualizarCliente.Size = new System.Drawing.Size(122, 46);
             this.btnActualizarCliente.TabIndex = 45;
             this.btnActualizarCliente.Text = "Actualizar clientes";
             this.btnActualizarCliente.UseVisualStyleBackColor = true;
@@ -205,7 +206,7 @@
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarCliente.Location = new System.Drawing.Point(336, 212);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(336, 189);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(122, 31);
             this.btnAgregarCliente.TabIndex = 44;
@@ -217,9 +218,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(148, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -243,7 +244,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(244, 156);
+            this.label6.Location = new System.Drawing.Point(244, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 18);
             this.label6.TabIndex = 60;
@@ -253,18 +254,21 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 15);
+            this.button1.Location = new System.Drawing.Point(12, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 31);
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnLimCampos_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.cmbTipCliente);
             this.panel1.Controls.Add(this.txtIdCliente);
+            this.panel1.Controls.Add(this.btnEliminarClientes);
             this.panel1.Controls.Add(this.btnAgregarCliente);
             this.panel1.Controls.Add(this.txtApeCliente);
             this.panel1.Controls.Add(this.txtCorCliente);
@@ -279,7 +283,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(174, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(471, 260);
+            this.panel1.Size = new System.Drawing.Size(471, 269);
             this.panel1.TabIndex = 78;
             // 
             // label7
@@ -287,7 +291,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(244, 202);
+            this.label7.Location = new System.Drawing.Point(244, 179);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 18);
             this.label7.TabIndex = 62;
@@ -295,8 +299,7 @@
             // 
             // txtIdCliente
             // 
-            this.txtIdCliente.Enabled = false;
-            this.txtIdCliente.Location = new System.Drawing.Point(247, 223);
+            this.txtIdCliente.Location = new System.Drawing.Point(247, 200);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(57, 20);
             this.txtIdCliente.TabIndex = 61;
@@ -304,13 +307,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnActualizarCliente);
-            this.panel2.Controls.Add(this.btnEliminarClientes);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(12, 113);
+            this.panel2.Location = new System.Drawing.Point(12, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 159);
+            this.panel2.Size = new System.Drawing.Size(148, 161);
             this.panel2.TabIndex = 79;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(12, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 55);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "Actualizar Grid de datos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.BtnActualizarGrid_click);
             // 
             // frmIngresoCliente
             // 
@@ -318,7 +332,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 469);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.cmbTipCliente);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvDatosCliente);
             this.Controls.Add(this.pictureBox1);
@@ -361,5 +374,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIdCliente;
+        private System.Windows.Forms.Button button2;
     }
 }

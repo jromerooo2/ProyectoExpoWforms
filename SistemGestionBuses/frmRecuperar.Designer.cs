@@ -148,7 +148,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(420, 28);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Ingresa el Codigo de confirmacion";
+            this.label3.Text = "Ingresa el Codigo de confirmación";
             // 
             // btnConfirmar
             // 

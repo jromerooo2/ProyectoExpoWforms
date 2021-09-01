@@ -95,10 +95,11 @@ namespace SistemGestionBuses
             Cargar_Modelo();
         }
 
-        private void frmMantenimientos_Load(object sender, EventArgs e)
+        private void frmMantenimientos_Load(object sender, EventArgs e, int placa)
         {
             Cargar_Marca();
             Cargar_Modelo();
+            CargarPlaca(placa);
             LoadDataGridView();
         }
 
@@ -131,8 +132,9 @@ namespace SistemGestionBuses
             Cargar_Modelo();
         }
 
-        private void CmbPlaca_Click(object sender, EventArgs e)
+        private void CmbPlaca_Click(object sender, EventArgs e, int placa)
         {
+            CargarPlaca(placa);
         }
 
         void ActualizarDatos()

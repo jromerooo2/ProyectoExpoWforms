@@ -21,6 +21,10 @@ namespace Controlador
         {
             return ModeloMantenimiento.CargarModelo_Vehiculo();
         }
+        public static DataTable Load_Placa(int placa)
+        {
+            return ModeloMantenimiento.CargarPlaca_Vehículo(placa);
+        }
 
         //ATRIBUTOS
         public static int id_mantenimiento { get; set; }

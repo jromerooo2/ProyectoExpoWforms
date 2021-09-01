@@ -12,7 +12,7 @@ using Controlador;
 
 namespace SistemGestionBuses
 {
-    public partial class frmIngresoConductores : Form
+    public partial class frmIngresoEmpleado : Form
     {
         public DataTable datosCond;
         public ControladorIngreso objCond;
@@ -209,7 +209,7 @@ namespace SistemGestionBuses
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public frmIngresoConductores()
+        public frmIngresoEmpleado()
         {
             InitializeComponent();
             CargarDatos();
@@ -336,3 +336,4 @@ namespace SistemGestionBuses
         }
     }
 }
+//nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente
