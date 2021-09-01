@@ -124,6 +124,7 @@ namespace SistemGestionBuses
         private void btnCrearUnidad_Click(object sender, EventArgs e)
         {
             EnviarDatos();
+            CargarGrid();
         }
 
         void EnviarDatos()

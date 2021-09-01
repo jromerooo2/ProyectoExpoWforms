@@ -128,7 +128,7 @@ namespace Modelo
             try
             {
                 int pEstadoUnidad = 3;
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_unidad_transporte(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad, id_estado_unidad, numero_motor, numero_chasis) VALUES ('{0}', '{1}', '{2}' , '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", pMarca, pAnio, pVIN, pCapacidad, pModelo, pPlaca, pTipoPlaca, pTipoUnidad, pEstadoUnidad, pNumeroMotor, pNumeroChasis),ModeloConexion.GetConnection());
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_unidad_transporte(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad, id_estado_unidad, numero_motor, numero_chasis) VALUES ('{0}', '{1}', '{2}' , '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", pMarca, pAnio, pVIN, pCapacidad, pModelo, pPlaca, pTipoPlaca, pTipoUnidad, pEstadoUnidad, pNumeroMotor, pNumeroChasis),ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 return retorno;
             }
