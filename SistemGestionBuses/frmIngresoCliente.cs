@@ -196,7 +196,7 @@ namespace SistemGestionBuses
                 id_tipo_cliente = Convert.ToInt16(cmbTipCliente.SelectedValue);
 
                 ControladorIngresoCliente.id_cliente = Convert.ToInt16(txtIdCliente.Text);
-                objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);                
+                objCliente = new ControladorIngresoCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);                
                 bool res = objCliente.ActualizarClienteContorlador();
                 if (res == true)
                 {
@@ -212,7 +212,8 @@ namespace SistemGestionBuses
             {
 
                 MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }           
+            }       
+            
         }
         private void btnAgregarCliente1_Click(object sender, EventArgs e)
         {
