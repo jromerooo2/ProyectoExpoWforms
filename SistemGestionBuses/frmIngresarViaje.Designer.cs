@@ -46,6 +46,7 @@
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormularios = new System.Windows.Forms.Panel();
+            this.cmbMunicipios = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpFechaPartida = new System.Windows.Forms.DateTimePicker();
@@ -66,12 +67,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.ElipseGeneral = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DragControlGeneral = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.panelBar = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.ElipsePanelGrid = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.cmbMunicipios = new System.Windows.Forms.ComboBox();
+            this.panelBar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFormularios.SuspendLayout();
@@ -289,6 +289,15 @@
             this.panelFormularios.Size = new System.Drawing.Size(368, 419);
             this.panelFormularios.TabIndex = 77;
             // 
+            // cmbMunicipios
+            // 
+            this.cmbMunicipios.FormattingEnabled = true;
+            this.cmbMunicipios.Location = new System.Drawing.Point(189, 307);
+            this.cmbMunicipios.Name = "cmbMunicipios";
+            this.cmbMunicipios.Size = new System.Drawing.Size(155, 21);
+            this.cmbMunicipios.TabIndex = 99;
+            this.cmbMunicipios.Text = "unidad transporte";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -494,15 +503,6 @@
             this.DragControlGeneral.TargetControl = this.panelBar;
             this.DragControlGeneral.Vertical = true;
             // 
-            // panelBar
-            // 
-            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(986, 43);
-            this.panelBar.TabIndex = 92;
-            // 
             // panelGrid
             // 
             this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
@@ -544,14 +544,14 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this.panelFormularios;
             // 
-            // cmbMunicipios
+            // panelBar
             // 
-            this.cmbMunicipios.FormattingEnabled = true;
-            this.cmbMunicipios.Location = new System.Drawing.Point(189, 307);
-            this.cmbMunicipios.Name = "cmbMunicipios";
-            this.cmbMunicipios.Size = new System.Drawing.Size(155, 21);
-            this.cmbMunicipios.TabIndex = 99;
-            this.cmbMunicipios.Text = "unidad transporte";
+            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(986, 43);
+            this.panelBar.TabIndex = 92;
             // 
             // frmIngresarViaje
             // 
@@ -618,11 +618,11 @@
         private System.Windows.Forms.Label label14;
         private Bunifu.Framework.UI.BunifuElipse ElipseGeneral;
         private Bunifu.Framework.UI.BunifuDragControl DragControlGeneral;
-        private System.Windows.Forms.Panel panelBar;
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Button button3;
         private Bunifu.Framework.UI.BunifuElipse ElipsePanelGrid;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ComboBox cmbMunicipios;
+        private System.Windows.Forms.Panel panelBar;
     }
 }

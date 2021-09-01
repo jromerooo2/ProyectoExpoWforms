@@ -179,7 +179,7 @@ namespace Modelo
         #endregion
 
         #region CRUD
-        public static bool RegistrarViaje(string pNombre_viaje, int pidUnidad, int pidConductor,string pfecha_inicio,  string phora_inicio, double ptarifa, int pidEstado_viaje, int pidTipo_viaje, string pfecha_retorno, string phora_retorno, int pidMunicipio)
+        public static bool RegistrarViaje(string pNombre_viaje, int pidUnidad, int pidConductor,string pfecha_inicio,  string phora_inicio, string ptarifa, int pidEstado_viaje, int pidTipo_viaje, string pfecha_retorno, string phora_retorno, int pidMunicipio)
         {
             bool retorno = false;
             try

@@ -208,15 +208,15 @@ namespace SistemGestionBuses
 
         void EnvioDatos()
         {
-            double tarifa;
-            string nombreViaje, fecha_partida, hora_partida, fecha_retorno, hora_retorno;
+            
+            string nombreViaje, fecha_partida, hora_partida, fecha_retorno, hora_retorno,tarifa ;
             int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio;
             nombreViaje = txtNombreViaje.Text;
             fecha_partida = dtpFechaRetorno.Text;
             hora_partida = dtpHoraRetorno.Text;
             fecha_retorno = dtpFechaRetorno.Text;
             hora_retorno = dtpHoraRetorno.Text;
-            tarifa = Convert.ToDouble(txtTarifaViaje.Text);
+            tarifa = txtTarifaViaje.Text;
             id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
             id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
             id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);

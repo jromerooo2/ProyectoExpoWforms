@@ -17,7 +17,7 @@ namespace Controlador
         public int id_empleado { get; set; }
         public string fecha_partida { get; set; }
         public string hora_partida { get; set; }
-        public double tarifa { get; set; }
+        public string tarifa { get; set; }
         public int id_estado_viaje { get; set; }
         public int id_tipo_viaje { get; set; }
         public string fecha_retorno { get; set; }
@@ -30,7 +30,7 @@ namespace Controlador
         public List<string>direcciones { get; set; }
 
         //Constructor
-        public ControladorViaje(string pnombreViaje, int pidUnidad, int pidEmpleado, string pfechaPartida, string phoraPartida, double ptarifa, int pidEstadoViaje, int pidTipoViaje, string pfechaRetorno, string phoraRetorno, int pidMunicipio)
+        public ControladorViaje(string pnombreViaje, int pidUnidad, int pidEmpleado, string pfechaPartida, string phoraPartida, string ptarifa, int pidEstadoViaje, int pidTipoViaje, string pfechaRetorno, string phoraRetorno, int pidMunicipio)
         {
             id_empleado = pidEmpleado;
             id_unidad = pidUnidad;
