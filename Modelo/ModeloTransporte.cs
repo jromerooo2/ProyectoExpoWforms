@@ -29,7 +29,8 @@ namespace Modelo
                 return data = null;
             }
         }
-        //Inner tipos de unidades
+
+        //Inner tipo unidad
         public static DataTable ObtenerTipoUnidadInner(int id)
         {
             DataTable data;
@@ -48,6 +49,8 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        // este no 
         public static DataTable ObtenerUnidades()
         {
             DataTable data;
@@ -66,6 +69,7 @@ namespace Modelo
             }
         }
 
+      
         public static DataTable ObtenerTipoPlacas()
         {
             DataTable data;
@@ -73,6 +77,26 @@ namespace Modelo
             {
                 string instruccion = "SELECT * FROM tb_tipo_placa;";
                 MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        //Estado inner
+        public static DataTable ObtenerTipoPlacasInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_placa WHERE id_tipo_placas = ?param1";
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdUnidad.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
                 data = new DataTable();
                 adp.Fill(data);
@@ -102,6 +126,26 @@ namespace Modelo
             }
         }
 
+        //Inner Modelos
+        public static DataTable ObtenerModelosInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_modelo WHERE id_modelo = ?param1";
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdUnidad.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         public static DataTable ObtenerMarcas()
         {
             DataTable data;
@@ -120,15 +164,16 @@ namespace Modelo
             }
         }
 
-        //Cargar toda la tabla unidad de transporte
-        public static DataTable CargarUnidadTransporte()
+        //Inner Marcas
+        public static DataTable ObtenerMarcasInner(int id)
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_unidad_transporte";
-                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                string instruccion = "SELECT * FROM tb_marca WHERE id_marca = ?param1";
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdUnidad.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
@@ -138,6 +183,46 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        //Cargar toda la tabla unidad de transporte
+        public static DataTable CargarUnidadTransporte()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_unidad_transporte";
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        //Inner Modelos
+        public static DataTable CargarUnidadTransporteInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_unidad_transporte WHERE id_unidad_transporte = ?param1";
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdUnidad.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         #endregion
 
         #region CRUD

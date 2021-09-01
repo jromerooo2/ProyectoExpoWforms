@@ -225,11 +225,6 @@ namespace SistemGestionBuses
             EnvioDatos();
         }
 
-
-
-
-
-
         void EliminarDatos()
         {
             ControladorIngresoCliente.id_cliente = Convert.ToInt16(txtIdCliente.Text);
