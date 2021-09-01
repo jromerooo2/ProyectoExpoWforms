@@ -120,5 +120,15 @@ namespace SistemGestionBuses
             }
         }
         #endregion
+
+        private void btnCrearUnidad_Click(object sender, EventArgs e)
+        {
+            EnviarDatos();
+        }
+
+        void EnviarDatos()
+        {
+            int id_marca, 
+        }
     }
 }
