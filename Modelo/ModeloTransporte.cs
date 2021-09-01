@@ -138,7 +138,7 @@ namespace Modelo
             }
         }
 
-        public static bool ActualizarUnidades(int pMarca, int pAnio, string pVIN, int pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, string pNumeroMotor, string pNumeroChasis, int pUnidadTransporte)
+        public static bool ActualizarUnidades(int pMarca, int pAnio, string pVIN, int pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, int pEstadoUnidad, string pNumeroMotor, string pNumeroChasis, int pUnidadTransporte)
         {
             bool res = false;
             try
