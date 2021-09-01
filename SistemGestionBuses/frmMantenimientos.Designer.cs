@@ -176,7 +176,6 @@
             this.CmbPlaca.Name = "CmbPlaca";
             this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
             this.CmbPlaca.TabIndex = 2;
-            this.CmbPlaca.Click += new System.EventHandler(this.CmbPlaca_Click);
             // 
             // label8
             // 
@@ -440,7 +439,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMantenimientos";
             this.Text = "Mantenimiento";
-            this.Load += new System.EventHandler(this.frmMantenimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
