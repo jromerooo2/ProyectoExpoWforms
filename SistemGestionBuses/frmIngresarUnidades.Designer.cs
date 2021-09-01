@@ -318,6 +318,7 @@
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(167, 21);
             this.cmbMarca.TabIndex = 58;
+            this.cmbMarca.Click += new System.EventHandler(this.cmbMarca_Click);
             // 
             // txtPlaca
             // 

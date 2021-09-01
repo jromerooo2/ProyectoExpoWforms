@@ -50,7 +50,7 @@ namespace Controlador
         {
             return ModeloTransporte.ObtenerUnidades();
         }
-        public bool EliminarUnidad()
+        public static bool EliminarUnidad()
         {
             return ModeloTransporte.EliminarUnidades(id_unidad_transporte);
         }
@@ -81,7 +81,7 @@ namespace Controlador
             return ModeloTransporte.ObtenerTipoUnidad();
         }
 
-        public static DataTable ObtenerEstadoUnidad()
+        public static DataTable ObtenerEstadoUnidadController()
         {
             return ModeloTransporte.ObtenerEstadoUnidad();
         }

@@ -59,7 +59,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                DataTable dataEstado = ControladorTransporte.ObtenerEstadoUnidad();
+                DataTable dataEstado = ControladorTransporte.ObtenerEstadoUnidadController();
                 cmbEstadoUnidad.DataSource = dataEstado;
                 cmbEstadoUnidad.DisplayMember = "estado_unidad";
                 cmbEstadoUnidad.ValueMember = "id_estado_unidad";
@@ -189,10 +189,10 @@ namespace SistemGestionBuses
             txtVIN.Clear();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        void EliminarUnidad()
         {
             ControladorTransporte.id_unidad_transporte = Convert.ToInt16(txtIDunidad.Text);
-            bool res = transportecontrol.EliminarUnidad();
+            bool res = ControladorTransporte.EliminarUnidad();
             if (res == true)
             {
                 MessageBox.Show("Unidad de transporte eliminada exitosamente", "Confirmación de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -201,6 +201,17 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("La unidad no pudo ser eliminada", "Confirmación de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de eliminar a: " + txtPlaca.Text + "?",
+            "Confirmar eliminación", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarUnidad();
+                CargarGrid();
+            }         
         }
 
         private void dgvUnidades_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -234,6 +245,8 @@ namespace SistemGestionBuses
             cmbEstadoUnidad.DataSource = ControladorTransporte.ObtenerEstadoUnidadInner(id_estado_unidad);
             cmbEstadoUnidad.DisplayMember = "estado_unidad";
             cmbEstadoUnidad.ValueMember = "id_estado_unidad";
+
+            CargarComboBoxes();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -269,6 +282,11 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("La unidad no pudo ser registrada", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cmbMarca_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

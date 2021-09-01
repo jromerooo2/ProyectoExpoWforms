@@ -247,7 +247,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_unidad_transporte WHERE id_unidad_transporte = ?param1";
+                string instruccion = "SELECT * FROM tb_estado_unidad WHERE id_estado_unidad = ?param1";
                 MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdUnidad.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
@@ -284,7 +284,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_unidad_transporte SET id_marca = '" + pMarca + "', anio = '" + pAnio + "', VIN = '" + pVIN + "', capacidad = '" + pCapacidad + "', id_modelo = '" + pModelo + "', placa = '" + pPlaca + "', id_tipo_placa = '" + pTipoPlaca + "'id_tipo_unidad = '" + pTipoUnidad + "'numero_motor = '" + pNumeroMotor + "'numero_chasis = '" + pNumeroChasis+ "' WHERE id_cliente = '" + pUnidadTransporte + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_unidad_transporte SET id_marca = '" + pMarca + "', anio = '" + pAnio + "', VIN = '" + pVIN + "', capacidad = '" + pCapacidad + "', id_modelo = '" + pModelo + "', placa = '" + pPlaca + "', id_tipo_placa = '" + pTipoPlaca + "', id_tipo_unidad = '" + pTipoUnidad + "', numero_motor = '" + pNumeroMotor + "', numero_chasis = '" + pNumeroChasis+ "' WHERE id_unidad_transporte = '" + pUnidadTransporte + "'"), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }
@@ -299,7 +299,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                string query = "DELETE FROM tb_unidad_transporte WHERE id_unidad_transorte=" + pUnidadTransporte;
+                string query = "DELETE FROM tb_unidad_transporte WHERE id_unidad_transporte=" + pUnidadTransporte;
                 MySqlCommand cmddelet = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmddelet.ExecuteNonQuery());
                 return res;
