@@ -18,9 +18,10 @@ namespace SistemGestionBuses
         {
             InitializeComponent();
             CargarDatosCMB();
+            CargarGridDatos();
         }
-
         public DataTable datosViajes;
+
         public bool Vacio()
         {
             if (txtNombreViaje.Text.Trim() == "" &&
@@ -28,7 +29,6 @@ namespace SistemGestionBuses
             cmbCliente.SelectedIndex == 0 &&
             cmbConductor.SelectedIndex == 0 &&
             cmbEstadoViaje.SelectedIndex == 0 &&
-            //cmbMetodoPago.SelectedIndex == 0 &&
             cmbTipoDestino.SelectedIndex == 0 &&
             cmbCliente.SelectedIndex == 0)
             {
@@ -65,11 +65,11 @@ namespace SistemGestionBuses
         {
             try
             {
-                CargarClientes();
                 CargarUnidadTransporte();
-                //CargarMunicipios();
-                //CargarConductor();
-                CargarMetodoPago();
+                CargarTipoUnidadTransporte();
+                CargarMunicipios();
+                CargarConductor();
+                //CargarMetodoPago();
                 CargarEstadoViaje();
                 CargarTipoViaje();
             }
@@ -80,17 +80,17 @@ namespace SistemGestionBuses
                  MessageBoxIcon.Error);
             }
         }
-        //Region de todos los metodos para cargar los combobox
 
+        //Region de todos los metodos para cargar los combobox
         #region CMB
-        void CargarClientes()
+        void CargarUnidadTransporte()
         {
             try
             {
-                DataTable dataClientes = ControladorViaje.ObtenerCliente();
-                cmbCliente.DataSource = dataClientes;
-                cmbCliente.DisplayMember = "nombres_cliente AND apellidos_cliente";
-                cmbCliente.ValueMember = "id_cliente";
+                DataTable dataUnidad = ControladorViaje.ObtenerUnidad();
+                cmbCliente.DataSource = dataUnidad;
+                cmbCliente.DisplayMember = "id_unidad_transporte";
+                cmbCliente.ValueMember = "id_unidad_transporte";
             }
             catch (Exception)
             {
@@ -100,29 +100,42 @@ namespace SistemGestionBuses
             }
         }
 
-        //void CargarMunicipios()
-        //{
-        //    try
-        //    {
-        //        DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
-        //        cmbMunicipio_inicio.DataSource = dataMunicipio;
-        //        cmbMunicipio_inicio.DisplayMember = "municipio";
-        //        cmbMunicipio_inicio.ValueMember = "id_municipio";
+        void CargarConductor()
+        {
+            try
+            {
+                DataTable dataMunicipio = ControladorViaje.ObtenerConductores();
+                cmbConductor.DataSource = dataMunicipio;
+                cmbConductor.DisplayMember = "nombres_empleado";
+                cmbConductor.ValueMember = "id_empleado";
+            }
+            catch (Exception)
+            {
 
-        //        DataTable dataMunicipio2 = ControladorViaje.ObtenerMunicipios();
-        //        cmbMunicipio_final.DataSource = dataMunicipio2;
-        //        cmbMunicipio_final.DisplayMember = "municipio";
-        //        cmbMunicipio_final.ValueMember = "id_municipio";
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Error al cargar los municipios.", "Error de carga",
-        //                                         MessageBoxButtons.OK,
-        //                                         MessageBoxIcon.Error);
-        //    }
-        //}
+                MessageBox.Show("Error al cargar los conductores.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
 
-        void CargarUnidadTransporte()
+        void CargarMunicipios()
+        {
+            try
+            {
+                DataTable dataMunicipio = ControladorViaje.ObtenerMunicipios();
+                cmbMunicipios.DataSource = dataMunicipio;
+                cmbMunicipios.DisplayMember = "municipio";
+                cmbMunicipios.ValueMember = "id_municipio";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+
+        void CargarTipoUnidadTransporte()
         {
             try
             {
@@ -139,22 +152,22 @@ namespace SistemGestionBuses
             }
         }
 
-        void CargarMetodoPago()
-        {
-            try
-            {
-                DataTable dataMetodoPago = ControladorViaje.ObtenerMetodoPago();
-                //cmbMetodoPago.DataSource = dataMetodoPago;
-                //cmbMetodoPago.DisplayMember = "metodo_pago";
-                //cmbMetodoPago.ValueMember = "id_metodo_pago";
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al cargar los metodos de pago.", "Error de carga",
-                                                 MessageBoxButtons.OK,
-                                                 MessageBoxIcon.Error);
-            }
-        }
+        //void CargarMetodoPago()
+        //{
+        //    try
+        //    {
+        //        DataTable dataMetodoPago = ControladorViaje.ObtenerMetodoPago();
+        //        //cmbMetodoPago.DataSource = dataMetodoPago;
+        //        //cmbMetodoPago.DisplayMember = "metodo_pago";
+        //        //cmbMetodoPago.ValueMember = "id_metodo_pago";
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Error al cargar los metodos de pago.", "Error de carga",
+        //                                         MessageBoxButtons.OK,
+        //                                         MessageBoxIcon.Error);
+        //    }
+        //}
 
         void CargarEstadoViaje()
         {
@@ -212,23 +225,13 @@ namespace SistemGestionBuses
             //Llamar a la clase por objeto
             ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_unidad, id_conductor, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
             bool res = viajeController.EnviarDatos_ControllerViaje();
-            if (  res == true)
+            if (res == true)
             {
-               
-                if (res)
-                {
-                    MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else
-                {
-                    MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
+                MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Oops!, ocurrió un error al registrar una de las direcciones, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -251,7 +254,11 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            //EnvioDatos();
+            else
+            {
+                EnvioDatos();
+                CargarGridDatos();
+            }      
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
