@@ -12,18 +12,19 @@ namespace SistemGestionBuses
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal(int cargo)
+        public static string usuario;
+        public static int cargouser;
+
+
+        public frmPrincipal(int cargo, string user)
         {
             InitializeComponent();
 
+            usuario = user;
+            cargouser = cargo;
         }
 
         private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -35,10 +36,6 @@ namespace SistemGestionBuses
             unidades.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
@@ -48,18 +45,14 @@ namespace SistemGestionBuses
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void panelUsers_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelUsers_Click(object sender, EventArgs e)
-        {
-            frmUsuarios users = new frmUsuarios();
-            users.Show();
+            lblUsuario.Text = "¡Bienvenido " +usuario+ "!";
+            if (cargouser  == 1)
+            {
+                cardUsers.Enabled = false;
+                cardEmpleado.Enabled = false;
+                cardClientes.Enabled = false;
+                cardReportes.Enabled = false;
+            }
         }
 
         private void pictureUsers_Click(object sender, EventArgs e)
@@ -68,30 +61,7 @@ namespace SistemGestionBuses
             users.Show();
         }
 
-        private void panelViajes_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelViajes_Click(object sender, EventArgs e)
-        {
-            frmIngresarViaje viajes = new frmIngresarViaje();
-            viajes.Show();
-        }
-
-        private void unidadesPanel_Click(object sender, EventArgs e)
-        {
-            frmUnidades unidades = new frmUnidades();
-            unidades.Show();
-        }
-
         private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            frmIngresoCliente clientes = new frmIngresoCliente();
-            clientes.Show();
-        }
-
-        private void panelClientes_Click(object sender, EventArgs e)
         {
             frmIngresoCliente clientes = new frmIngresoCliente();
             clientes.Show();
@@ -103,22 +73,61 @@ namespace SistemGestionBuses
             empleado.Show();
         }
 
-        private void panelEmpleado_Click(object sender, EventArgs e)
-        {
-            frmIngresoEmpleado empleado = new frmIngresoEmpleado();
-            empleado.Show();
-        }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             frmMantenimientos mantenimientos = new frmMantenimientos();
             mantenimientos.Show();
         }
 
-        private void panelMantenimientos_Click(object sender, EventArgs e)
+        private void cardUsers_Click(object sender, EventArgs e)
+        {
+            frmUsuarios users = new frmUsuarios();
+            users.Show();
+        }
+
+        private void bunifuCards1_Click(object sender, EventArgs e)
+        {
+            frmUnidades unidades = new frmUnidades();
+            unidades.Show();
+        }
+
+        private void bunifuCards2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuCards3_Click(object sender, EventArgs e)
+        {
+            frmIngresoEmpleado empleado = new frmIngresoEmpleado();
+            empleado.Show();
+        }
+
+        private void cardClientes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cardClientes_Click(object sender, EventArgs e)
+        {
+            frmIngresoCliente clientes = new frmIngresoCliente();
+            clientes.Show();
+        }
+
+        private void cardMantenimientos_Click(object sender, EventArgs e)
         {
             frmMantenimientos mantenimientos = new frmMantenimientos();
             mantenimientos.Show();
+        }
+
+        private void bunifuCards2_Click(object sender, EventArgs e)
+        {
+            frmIngresarViaje viajes = new frmIngresarViaje();
+            viajes.Show();
         }
     }
 }

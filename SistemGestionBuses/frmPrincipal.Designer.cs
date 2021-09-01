@@ -29,106 +29,83 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.unidadesPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panelUsers = new System.Windows.Forms.Panel();
             this.pictureUsers = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.panelEmpleado = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelMantenimientos = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panelClientes = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.panelViajes = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.unidadesPanel.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.cardUsers = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.cardEmpleado = new Bunifu.Framework.UI.BunifuCards();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.cardMantenimientos = new Bunifu.Framework.UI.BunifuCards();
+            this.cardClientes = new Bunifu.Framework.UI.BunifuCards();
+            this.cardReportes = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUsers)).BeginInit();
-            this.panelEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelMantenimientos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panelClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panelViajes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cardUsers.SuspendLayout();
+            this.bunifuCards1.SuspendLayout();
+            this.bunifuCards2.SuspendLayout();
+            this.cardEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.cardMantenimientos.SuspendLayout();
+            this.cardClientes.SuspendLayout();
+            this.cardReportes.SuspendLayout();
+            this.bunifuCards6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // lblUsuario
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(731, 747);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(69)))), ((int)(((byte)(99)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 34F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(21, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "¡Bienvenido!";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(69)))), ((int)(((byte)(99)))));
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblUsuario.Location = new System.Drawing.Point(12, 37);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(220, 40);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "¡Bienvenido!";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(69)))), ((int)(((byte)(99)))));
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(33, 77);
+            this.label2.Location = new System.Drawing.Point(15, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(286, 48);
+            this.label2.Size = new System.Drawing.Size(418, 63);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Controla las acciones que \r\nte han sido asignadas.\r\n";
-            // 
-            // unidadesPanel
-            // 
-            this.unidadesPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.unidadesPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.unidadesPanel.Controls.Add(this.pictureBox2);
-            this.unidadesPanel.Controls.Add(this.label4);
-            this.unidadesPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.unidadesPanel.Location = new System.Drawing.Point(263, 204);
-            this.unidadesPanel.Name = "unidadesPanel";
-            this.unidadesPanel.Size = new System.Drawing.Size(200, 159);
-            this.unidadesPanel.TabIndex = 4;
-            this.unidadesPanel.Click += new System.EventHandler(this.unidadesPanel_Click);
-            this.unidadesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.label2.Text = "Controla las acciones que te han sido asignadas\r\na través de este panel de contro" +
+    "l.\r\n\r\n";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(46, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(43, 27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(113, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -139,10 +116,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(57, 131);
+            this.label4.Location = new System.Drawing.Point(55, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 11;
@@ -154,28 +131,15 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(517, 182);
+            this.label5.Location = new System.Drawing.Point(562, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 19);
             this.label5.TabIndex = 12;
             // 
-            // panelUsers
-            // 
-            this.panelUsers.BackColor = System.Drawing.SystemColors.Control;
-            this.panelUsers.Controls.Add(this.pictureUsers);
-            this.panelUsers.Controls.Add(this.label10);
-            this.panelUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelUsers.Location = new System.Drawing.Point(21, 204);
-            this.panelUsers.Name = "panelUsers";
-            this.panelUsers.Size = new System.Drawing.Size(200, 159);
-            this.panelUsers.TabIndex = 13;
-            this.panelUsers.Click += new System.EventHandler(this.panelUsers_Click);
-            this.panelUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUsers_Paint);
-            // 
             // pictureUsers
             // 
             this.pictureUsers.Image = ((System.Drawing.Image)(resources.GetObject("pictureUsers.Image")));
-            this.pictureUsers.Location = new System.Drawing.Point(42, 27);
+            this.pictureUsers.Location = new System.Drawing.Point(31, 27);
             this.pictureUsers.Name = "pictureUsers";
             this.pictureUsers.Size = new System.Drawing.Size(127, 92);
             this.pictureUsers.TabIndex = 12;
@@ -185,32 +149,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(67, 131);
+            this.label10.Location = new System.Drawing.Point(62, 131);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 19);
             this.label10.TabIndex = 11;
             this.label10.Text = "Usuarios";
             // 
-            // panelEmpleado
-            // 
-            this.panelEmpleado.BackColor = System.Drawing.SystemColors.Control;
-            this.panelEmpleado.Controls.Add(this.pictureBox4);
-            this.panelEmpleado.Controls.Add(this.label3);
-            this.panelEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelEmpleado.Location = new System.Drawing.Point(21, 387);
-            this.panelEmpleado.Name = "panelEmpleado";
-            this.panelEmpleado.Size = new System.Drawing.Size(200, 159);
-            this.panelEmpleado.TabIndex = 13;
-            this.panelEmpleado.Click += new System.EventHandler(this.panelEmpleado_Click);
-            this.panelEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(37, 27);
+            this.pictureBox4.Location = new System.Drawing.Point(32, 29);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(134, 90);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -221,66 +172,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(53, 131);
+            this.label3.Location = new System.Drawing.Point(49, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 11;
             this.label3.Text = "Empleados";
             // 
-            // panelMantenimientos
-            // 
-            this.panelMantenimientos.BackColor = System.Drawing.SystemColors.Control;
-            this.panelMantenimientos.Controls.Add(this.pictureBox5);
-            this.panelMantenimientos.Controls.Add(this.label7);
-            this.panelMantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMantenimientos.Location = new System.Drawing.Point(263, 387);
-            this.panelMantenimientos.Name = "panelMantenimientos";
-            this.panelMantenimientos.Size = new System.Drawing.Size(200, 159);
-            this.panelMantenimientos.TabIndex = 14;
-            this.panelMantenimientos.Click += new System.EventHandler(this.panelMantenimientos_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(46, 27);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(113, 92);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(41, 131);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Mantenimientos";
-            // 
-            // panelClientes
-            // 
-            this.panelClientes.BackColor = System.Drawing.SystemColors.Control;
-            this.panelClientes.Controls.Add(this.pictureBox6);
-            this.panelClientes.Controls.Add(this.label8);
-            this.panelClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelClientes.Location = new System.Drawing.Point(506, 387);
-            this.panelClientes.Name = "panelClientes";
-            this.panelClientes.Size = new System.Drawing.Size(200, 159);
-            this.panelClientes.TabIndex = 15;
-            this.panelClientes.Click += new System.EventHandler(this.panelClientes_Click);
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(46, 27);
+            this.pictureBox6.Location = new System.Drawing.Point(46, 29);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(113, 92);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -291,32 +195,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(71, 131);
+            this.label8.Location = new System.Drawing.Point(69, 131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 11;
             this.label8.Text = "Clientes";
             // 
-            // panelViajes
-            // 
-            this.panelViajes.BackColor = System.Drawing.SystemColors.Control;
-            this.panelViajes.Controls.Add(this.pictureBox7);
-            this.panelViajes.Controls.Add(this.label9);
-            this.panelViajes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelViajes.Location = new System.Drawing.Point(506, 204);
-            this.panelViajes.Name = "panelViajes";
-            this.panelViajes.Size = new System.Drawing.Size(200, 159);
-            this.panelViajes.TabIndex = 16;
-            this.panelViajes.Click += new System.EventHandler(this.panelViajes_Click);
-            this.panelViajes.Paint += new System.Windows.Forms.PaintEventHandler(this.panelViajes_Paint);
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(49, 27);
+            this.pictureBox7.Location = new System.Drawing.Point(46, 27);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(113, 92);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,63 +218,42 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(74, 131);
+            this.label9.Location = new System.Drawing.Point(73, 131);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 19);
             this.label9.TabIndex = 11;
             this.label9.Text = "Viajes";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(117, 576);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 159);
-            this.panel1.TabIndex = 16;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(37, 27);
+            this.pictureBox8.Location = new System.Drawing.Point(30, 31);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(131, 87);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(62, 131);
+            this.label6.Location = new System.Drawing.Point(64, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 19);
             this.label6.TabIndex = 11;
             this.label6.Text = "Reportes";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.pictureBox9);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(359, 576);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 159);
-            this.panel2.TabIndex = 17;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(35, 19);
+            this.pictureBox9.Location = new System.Drawing.Point(41, 19);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(131, 109);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -393,94 +263,284 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(30, 131);
+            this.label11.Location = new System.Drawing.Point(41, 131);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(145, 19);
             this.label11.TabIndex = 11;
             this.label11.Text = "Viajes Finalizados";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(805, 747);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.White;
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 10.75F);
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUser.Location = new System.Drawing.Point(580, 82);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(0, 20);
+            this.lblUser.TabIndex = 18;
+            // 
+            // cardUsers
+            // 
+            this.cardUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardUsers.BorderRadius = 50;
+            this.cardUsers.BottomSahddow = true;
+            this.cardUsers.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardUsers.Controls.Add(this.label10);
+            this.cardUsers.Controls.Add(this.pictureUsers);
+            this.cardUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardUsers.LeftSahddow = false;
+            this.cardUsers.Location = new System.Drawing.Point(66, 206);
+            this.cardUsers.Name = "cardUsers";
+            this.cardUsers.RightSahddow = true;
+            this.cardUsers.ShadowDepth = 20;
+            this.cardUsers.Size = new System.Drawing.Size(200, 159);
+            this.cardUsers.TabIndex = 20;
+            this.cardUsers.Click += new System.EventHandler(this.cardUsers_Click);
+            // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.bunifuCards1.BorderRadius = 50;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.bunifuCards1.Controls.Add(this.label4);
+            this.bunifuCards1.Controls.Add(this.pictureBox2);
+            this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(308, 206);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(200, 159);
+            this.bunifuCards1.TabIndex = 21;
+            this.bunifuCards1.Click += new System.EventHandler(this.bunifuCards1_Click);
+            // 
+            // bunifuCards2
+            // 
+            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.bunifuCards2.BorderRadius = 50;
+            this.bunifuCards2.BottomSahddow = true;
+            this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.bunifuCards2.Controls.Add(this.label9);
+            this.bunifuCards2.Controls.Add(this.pictureBox7);
+            this.bunifuCards2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards2.LeftSahddow = false;
+            this.bunifuCards2.Location = new System.Drawing.Point(551, 206);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(200, 159);
+            this.bunifuCards2.TabIndex = 22;
+            this.bunifuCards2.Click += new System.EventHandler(this.bunifuCards2_Click);
+            this.bunifuCards2.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards2_Paint);
+            // 
+            // cardEmpleado
+            // 
+            this.cardEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardEmpleado.BorderRadius = 50;
+            this.cardEmpleado.BottomSahddow = true;
+            this.cardEmpleado.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardEmpleado.Controls.Add(this.label3);
+            this.cardEmpleado.Controls.Add(this.pictureBox4);
+            this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardEmpleado.LeftSahddow = false;
+            this.cardEmpleado.Location = new System.Drawing.Point(66, 389);
+            this.cardEmpleado.Name = "cardEmpleado";
+            this.cardEmpleado.RightSahddow = true;
+            this.cardEmpleado.ShadowDepth = 20;
+            this.cardEmpleado.Size = new System.Drawing.Size(200, 159);
+            this.cardEmpleado.TabIndex = 23;
+            this.cardEmpleado.Click += new System.EventHandler(this.bunifuCards3_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(39, 131);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 19);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Mantenimientos";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(43, 29);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(113, 92);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // cardMantenimientos
+            // 
+            this.cardMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardMantenimientos.BorderRadius = 50;
+            this.cardMantenimientos.BottomSahddow = true;
+            this.cardMantenimientos.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardMantenimientos.Controls.Add(this.label7);
+            this.cardMantenimientos.Controls.Add(this.pictureBox5);
+            this.cardMantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardMantenimientos.LeftSahddow = false;
+            this.cardMantenimientos.Location = new System.Drawing.Point(308, 389);
+            this.cardMantenimientos.Name = "cardMantenimientos";
+            this.cardMantenimientos.RightSahddow = true;
+            this.cardMantenimientos.ShadowDepth = 20;
+            this.cardMantenimientos.Size = new System.Drawing.Size(200, 159);
+            this.cardMantenimientos.TabIndex = 24;
+            this.cardMantenimientos.Click += new System.EventHandler(this.cardMantenimientos_Click);
+            // 
+            // cardClientes
+            // 
+            this.cardClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardClientes.BorderRadius = 50;
+            this.cardClientes.BottomSahddow = true;
+            this.cardClientes.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardClientes.Controls.Add(this.label8);
+            this.cardClientes.Controls.Add(this.pictureBox6);
+            this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardClientes.LeftSahddow = false;
+            this.cardClientes.Location = new System.Drawing.Point(551, 389);
+            this.cardClientes.Name = "cardClientes";
+            this.cardClientes.RightSahddow = true;
+            this.cardClientes.ShadowDepth = 20;
+            this.cardClientes.Size = new System.Drawing.Size(200, 159);
+            this.cardClientes.TabIndex = 25;
+            this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
+            this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
+            // 
+            // cardReportes
+            // 
+            this.cardReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardReportes.BorderRadius = 50;
+            this.cardReportes.BottomSahddow = true;
+            this.cardReportes.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.cardReportes.Controls.Add(this.label6);
+            this.cardReportes.Controls.Add(this.pictureBox8);
+            this.cardReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardReportes.LeftSahddow = false;
+            this.cardReportes.Location = new System.Drawing.Point(188, 569);
+            this.cardReportes.Name = "cardReportes";
+            this.cardReportes.RightSahddow = true;
+            this.cardReportes.ShadowDepth = 20;
+            this.cardReportes.Size = new System.Drawing.Size(200, 159);
+            this.cardReportes.TabIndex = 25;
+            // 
+            // bunifuCards6
+            // 
+            this.bunifuCards6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.bunifuCards6.BorderRadius = 50;
+            this.bunifuCards6.BottomSahddow = true;
+            this.bunifuCards6.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.bunifuCards6.Controls.Add(this.label11);
+            this.bunifuCards6.Controls.Add(this.pictureBox9);
+            this.bunifuCards6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards6.LeftSahddow = false;
+            this.bunifuCards6.Location = new System.Drawing.Point(438, 569);
+            this.bunifuCards6.Name = "bunifuCards6";
+            this.bunifuCards6.RightSahddow = true;
+            this.bunifuCards6.ShadowDepth = 20;
+            this.bunifuCards6.Size = new System.Drawing.Size(208, 159);
+            this.bunifuCards6.TabIndex = 26;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 747);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelViajes);
-            this.Controls.Add(this.panelClientes);
-            this.Controls.Add(this.panelMantenimientos);
-            this.Controls.Add(this.panelEmpleado);
-            this.Controls.Add(this.panelUsers);
+            this.ClientSize = new System.Drawing.Size(805, 747);
+            this.Controls.Add(this.bunifuCards6);
+            this.Controls.Add(this.cardReportes);
+            this.Controls.Add(this.cardClientes);
+            this.Controls.Add(this.cardMantenimientos);
+            this.Controls.Add(this.cardEmpleado);
+            this.Controls.Add(this.bunifuCards2);
+            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.cardUsers);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.unidadesPanel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.unidadesPanel.ResumeLayout(false);
-            this.unidadesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelUsers.ResumeLayout(false);
-            this.panelUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUsers)).EndInit();
-            this.panelEmpleado.ResumeLayout(false);
-            this.panelEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelMantenimientos.ResumeLayout(false);
-            this.panelMantenimientos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panelClientes.ResumeLayout(false);
-            this.panelClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panelViajes.ResumeLayout(false);
-            this.panelViajes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cardUsers.ResumeLayout(false);
+            this.cardUsers.PerformLayout();
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
+            this.bunifuCards2.ResumeLayout(false);
+            this.bunifuCards2.PerformLayout();
+            this.cardEmpleado.ResumeLayout(false);
+            this.cardEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.cardMantenimientos.ResumeLayout(false);
+            this.cardMantenimientos.PerformLayout();
+            this.cardClientes.ResumeLayout(false);
+            this.cardClientes.PerformLayout();
+            this.cardReportes.ResumeLayout(false);
+            this.cardReportes.PerformLayout();
+            this.bunifuCards6.ResumeLayout(false);
+            this.bunifuCards6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel unidadesPanel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panelUsers;
-        private System.Windows.Forms.Panel panelEmpleado;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureUsers;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panelMantenimientos;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panelClientes;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panelViajes;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblUser;
+        private Bunifu.Framework.UI.BunifuCards cardUsers;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private Bunifu.Framework.UI.BunifuCards cardEmpleado;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private Bunifu.Framework.UI.BunifuCards cardMantenimientos;
+        private Bunifu.Framework.UI.BunifuCards cardClientes;
+        private Bunifu.Framework.UI.BunifuCards cardReportes;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards6;
     }
 }

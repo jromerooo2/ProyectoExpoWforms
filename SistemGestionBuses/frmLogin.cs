@@ -41,9 +41,9 @@ namespace SistemGestionBuses
                 if (res == 1)
                 {
                         //mostrar siguiente forms
-                        frmPrincipal next = new frmPrincipal(cargo);
+                        frmPrincipal next = new frmPrincipal(cargo, user);
                         next.Show();
-                        this.Hide();
+                        Hide();
                 }
                 else if (res == 2)
                 {
