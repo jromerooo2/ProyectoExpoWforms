@@ -34,7 +34,6 @@
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbTipoPlaca = new System.Windows.Forms.ComboBox();
-            this.txtNumeroChasis = new System.Windows.Forms.TextBox();
             this.txtNumeroMotor = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
             this.txtVIN = new System.Windows.Forms.TextBox();
@@ -70,6 +69,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbEstadoUnidad = new System.Windows.Forms.ComboBox();
+            this.txtNumeroChasis = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panelFormularios.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidades)).BeginInit();
@@ -88,7 +90,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panelFormularios.Controls.Add(this.label13);
+            this.panelFormularios.Controls.Add(this.cmbEstadoUnidad);
+            this.panelFormularios.Controls.Add(this.txtNombreUnidad);
             this.panelFormularios.Controls.Add(this.label10);
+            this.panelFormularios.Controls.Add(this.label8);
             this.panelFormularios.Controls.Add(this.cmbTipoPlaca);
             this.panelFormularios.Controls.Add(this.txtNumeroChasis);
             this.panelFormularios.Controls.Add(this.txtNumeroMotor);
@@ -133,13 +139,6 @@
             this.cmbTipoPlaca.Name = "cmbTipoPlaca";
             this.cmbTipoPlaca.Size = new System.Drawing.Size(166, 21);
             this.cmbTipoPlaca.TabIndex = 104;
-            // 
-            // txtNumeroChasis
-            // 
-            this.txtNumeroChasis.Location = new System.Drawing.Point(197, 195);
-            this.txtNumeroChasis.Name = "txtNumeroChasis";
-            this.txtNumeroChasis.Size = new System.Drawing.Size(167, 20);
-            this.txtNumeroChasis.TabIndex = 103;
             // 
             // txtNumeroMotor
             // 
@@ -364,8 +363,6 @@
             // panelGrid
             // 
             this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.panelGrid.Controls.Add(this.txtNombreUnidad);
-            this.panelGrid.Controls.Add(this.label8);
             this.panelGrid.Controls.Add(this.btnActualizarGrid);
             this.panelGrid.Controls.Add(this.btnEliminar);
             this.panelGrid.Controls.Add(this.txtIDunidad);
@@ -381,10 +378,10 @@
             // 
             this.txtNombreUnidad.BackColor = System.Drawing.Color.White;
             this.txtNombreUnidad.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreUnidad.Location = new System.Drawing.Point(16, 36);
+            this.txtNombreUnidad.Location = new System.Drawing.Point(199, 300);
             this.txtNombreUnidad.Name = "txtNombreUnidad";
             this.txtNombreUnidad.ReadOnly = true;
-            this.txtNombreUnidad.Size = new System.Drawing.Size(241, 20);
+            this.txtNombreUnidad.Size = new System.Drawing.Size(163, 20);
             this.txtNombreUnidad.TabIndex = 104;
             this.txtNombreUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -394,7 +391,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(13, 15);
+            this.label8.Location = new System.Drawing.Point(198, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(142, 18);
             this.label8.TabIndex = 105;
@@ -444,6 +441,7 @@
             this.btnActualizar.TabIndex = 74;
             this.btnActualizar.Text = "Actualizar Unidad";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label14
             // 
@@ -519,6 +517,32 @@
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbEstadoUnidad
+            // 
+            this.cmbEstadoUnidad.FormattingEnabled = true;
+            this.cmbEstadoUnidad.Location = new System.Drawing.Point(9, 299);
+            this.cmbEstadoUnidad.Name = "cmbEstadoUnidad";
+            this.cmbEstadoUnidad.Size = new System.Drawing.Size(166, 21);
+            this.cmbEstadoUnidad.TabIndex = 106;
+            // 
+            // txtNumeroChasis
+            // 
+            this.txtNumeroChasis.Location = new System.Drawing.Point(197, 195);
+            this.txtNumeroChasis.Name = "txtNumeroChasis";
+            this.txtNumeroChasis.Size = new System.Drawing.Size(167, 20);
+            this.txtNumeroChasis.TabIndex = 103;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(13, 278);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(134, 18);
+            this.label13.TabIndex = 107;
+            this.label13.Text = "Estado de la unidad:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,7 +586,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse ElipsePanelGrid;
         private System.Windows.Forms.Panel panelFormularios;
-        private System.Windows.Forms.TextBox txtNumeroChasis;
         private System.Windows.Forms.TextBox txtNumeroMotor;
         private System.Windows.Forms.TextBox txtCapacidad;
         private System.Windows.Forms.TextBox txtVIN;
@@ -586,5 +609,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbTipoPlaca;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbEstadoUnidad;
+        private System.Windows.Forms.TextBox txtNumeroChasis;
     }
 }

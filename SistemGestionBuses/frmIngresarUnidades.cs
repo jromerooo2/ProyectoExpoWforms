@@ -38,6 +38,7 @@ namespace SistemGestionBuses
                 CargarModelo();
                 CargarTipoPlaca();
                 CargarTipoUnidad();
+                CargarEstadoUnidad();
             }
             catch (Exception)
             {
@@ -54,6 +55,23 @@ namespace SistemGestionBuses
         }
 
         #region CMB
+        void CargarEstadoUnidad()
+        {
+            try
+            {
+                DataTable dataEstado = ControladorTransporte.ObtenerEstadoUnidad();
+                cmbEstadoUnidad.DataSource = dataEstado;
+                cmbEstadoUnidad.DisplayMember = "estado_unidad";
+                cmbEstadoUnidad.ValueMember = "id_estado_unidad";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los tipos unidades de transporte.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
+        }
+
         void CargarTipoUnidad()
         {
             try
@@ -129,7 +147,7 @@ namespace SistemGestionBuses
 
         void EnviarDatos()
         {
-            int id_marca, id_tipo_unidad, id_tipo_placa, id_modelo, capacidad, anio;
+            int id_marca, id_tipo_unidad, id_tipo_placa, id_modelo, capacidad, anio, id_estado_unidad;
             string VIN, numero_chasis, numero_motor, placa;
             id_marca = Convert.ToInt32(cmbMarca.SelectedValue);
             id_tipo_placa = Convert.ToInt32(cmbTipoPlaca.SelectedValue);
@@ -141,7 +159,8 @@ namespace SistemGestionBuses
             numero_chasis = txtNumeroChasis.Text;
             numero_motor = txtNumeroMotor.Text;
             placa = txtPlaca.Text;
-            transportecontrol = new ControladorTransporte(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad, numero_motor, numero_chasis);
+            id_estado_unidad = Convert.ToInt32(cmbEstadoUnidad.SelectedValue);
+            transportecontrol = new ControladorTransporte(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad, id_estado_unidad,numero_motor, numero_chasis);
             bool res = transportecontrol.IngresarUnidadesController();
             if (res == true)
             {
@@ -189,6 +208,67 @@ namespace SistemGestionBuses
             int i = dgvUnidades.CurrentRow.Index;
             txtIDunidad.Text = dgvUnidades[0,i].Value.ToString();
             txtAnio.Text = dgvUnidades[2, i].Value.ToString();
+            txtVIN.Text = dgvUnidades[3, i].Value.ToString();
+            txtCapacidad.Text = dgvUnidades[4, i].Value.ToString();
+            txtPlaca.Text = dgvUnidades[6, i].Value.ToString();
+            txtNumeroMotor.Text = dgvUnidades[10, i].Value.ToString();
+            txtNumeroChasis.Text = dgvUnidades[11, i].Value.ToString();
+
+            int id_marca = Convert.ToInt16(dgvUnidades[1, i].Value);
+            cmbMarca.DataSource = ControladorTransporte.ObtenerMarcasInner(id_marca);
+            cmbMarca.DisplayMember = "marca";
+            cmbMarca.ValueMember = "id_marca";
+            int id_modelo = Convert.ToInt16(dgvUnidades[5, i].Value);
+            cmbModelo.DataSource = ControladorTransporte.ObtenerModeloInner(id_modelo);
+            cmbModelo.DisplayMember = "modelo";
+            cmbModelo.ValueMember = "id_modelo";
+            int id_tipo_placa = Convert.ToInt16(dgvUnidades[7, i].Value);
+            cmbTipoPlaca.DataSource = ControladorTransporte.ObtenerTipoPlacaInner(id_tipo_placa);
+            cmbTipoPlaca.DisplayMember = "tipo_placa";
+            cmbTipoPlaca.ValueMember = "id_tipo_placa";
+            int id_tipo_unidad = Convert.ToInt16(dgvUnidades[8, i].Value);
+            cmbTipoUnidad.DataSource = ControladorTransporte.ObtenerTipoUnidadInner(id_tipo_unidad);
+            cmbTipoUnidad.DisplayMember = "tipo_unidad";
+            cmbTipoUnidad.ValueMember = "id_tipo_unidad";
+            int id_estado_unidad = Convert.ToInt16(dgvUnidades[9, i].Value);
+            cmbEstadoUnidad.DataSource = ControladorTransporte.ObtenerEstadoUnidadInner(id_estado_unidad);
+            cmbEstadoUnidad.DisplayMember = "estado_unidad";
+            cmbEstadoUnidad.ValueMember = "id_estado_unidad";
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarDatos();
+            CargarGrid();
+        }
+
+        void ActualizarDatos()
+        {
+            int id_marca, id_tipo_unidad, id_tipo_placa, id_modelo, capacidad, anio, id_estado_unidad;
+            string VIN, numero_chasis, numero_motor, placa;
+            id_marca = Convert.ToInt32(cmbMarca.SelectedValue);
+            id_tipo_placa = Convert.ToInt32(cmbTipoPlaca.SelectedValue);
+            id_tipo_unidad = Convert.ToInt32(cmbTipoUnidad.SelectedValue);
+            id_modelo = Convert.ToInt32(cmbModelo.SelectedValue);
+            capacidad = Convert.ToInt32(txtCapacidad.Text);
+            anio = Convert.ToInt32(txtAnio.Text);
+            VIN = txtVIN.Text;
+            numero_chasis = txtNumeroChasis.Text;
+            numero_motor = txtNumeroMotor.Text;
+            placa = txtPlaca.Text;
+            id_estado_unidad = Convert.ToInt32(cmbEstadoUnidad.SelectedValue);
+
+            ControladorTransporte.id_unidad_transporte = Convert.ToInt16(txtIDunidad.Text);
+            transportecontrol = new ControladorTransporte(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad,id_estado_unidad, numero_motor, numero_chasis);
+            bool res = transportecontrol.ActualizarUnidadController();
+            if (res == true)
+            {
+                MessageBox.Show("Unidad de transporte registrada exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("La unidad no pudo ser registrada", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
