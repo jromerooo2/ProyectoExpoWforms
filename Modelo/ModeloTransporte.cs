@@ -17,8 +17,27 @@ namespace Modelo
             try
             {
                 string instruccion = "SELECT * FROM tb_tipo_unidad;";
-                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+        //Inner tipos de unidades
+        public static DataTable ObtenerTipoUnidadInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_unidad WHERE id_tipo_unidad = ?param1";
+                MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdUnidad.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
