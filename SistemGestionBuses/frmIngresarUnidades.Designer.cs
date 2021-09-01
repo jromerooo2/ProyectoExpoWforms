@@ -60,7 +60,7 @@
             this.txtNombreUnidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtIDviaje = new System.Windows.Forms.TextBox();
+            this.txtIDunidad = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvUnidades = new System.Windows.Forms.DataGridView();
@@ -368,7 +368,7 @@
             this.panelGrid.Controls.Add(this.label8);
             this.panelGrid.Controls.Add(this.btnActualizarGrid);
             this.panelGrid.Controls.Add(this.btnEliminar);
-            this.panelGrid.Controls.Add(this.txtIDviaje);
+            this.panelGrid.Controls.Add(this.txtIDunidad);
             this.panelGrid.Controls.Add(this.btnActualizar);
             this.panelGrid.Controls.Add(this.label14);
             this.panelGrid.Controls.Add(this.dgvUnidades);
@@ -416,16 +416,17 @@
             this.btnEliminar.TabIndex = 73;
             this.btnEliminar.Text = "Eliminar Unidad";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtIDviaje
+            // txtIDunidad
             // 
-            this.txtIDviaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDviaje.Location = new System.Drawing.Point(478, 358);
-            this.txtIDviaje.Name = "txtIDviaje";
-            this.txtIDviaje.ReadOnly = true;
-            this.txtIDviaje.Size = new System.Drawing.Size(87, 28);
-            this.txtIDviaje.TabIndex = 90;
-            this.txtIDviaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIDunidad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDunidad.Location = new System.Drawing.Point(478, 358);
+            this.txtIDunidad.Name = "txtIDunidad";
+            this.txtIDunidad.ReadOnly = true;
+            this.txtIDunidad.Size = new System.Drawing.Size(87, 28);
+            this.txtIDunidad.TabIndex = 90;
+            this.txtIDunidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnActualizar
             // 
@@ -466,6 +467,7 @@
             this.dgvUnidades.RowHeadersVisible = false;
             this.dgvUnidades.Size = new System.Drawing.Size(574, 262);
             this.dgvUnidades.TabIndex = 82;
+            this.dgvUnidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnidades_CellClick);
             // 
             // DragControlGeneral
             // 
@@ -549,7 +551,7 @@
         private System.Windows.Forms.Panel panelBar;
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtIDviaje;
+        private System.Windows.Forms.TextBox txtIDunidad;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgvUnidades;

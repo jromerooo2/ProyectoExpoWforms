@@ -169,5 +169,26 @@ namespace SistemGestionBuses
             txtPlaca.Clear();
             txtVIN.Clear();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ControladorTransporte.id_unidad_transporte = Convert.ToInt16(txtIDunidad.Text);
+            bool res = transportecontrol.EliminarUnidad();
+            if (res == true)
+            {
+                MessageBox.Show("Unidad de transporte eliminada exitosamente", "Confirmación de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("La unidad no pudo ser eliminada", "Confirmación de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvUnidades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvUnidades.CurrentRow.Index;
+            txtIDunidad.Text = dgvUnidades[0,i].Value.ToString();
+            txtAnio.Text = dgvUnidades[2, i].Value.ToString();
+        }
     }
 }

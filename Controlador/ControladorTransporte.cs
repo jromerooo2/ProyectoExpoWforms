@@ -48,6 +48,10 @@ namespace Controlador
         {
             return ModeloTransporte.ObtenerUnidades();
         }
+        public bool EliminarUnidad()
+        {
+            return ModeloTransporte.EliminarUnidades(id_unidad_transporte);
+        }
 
         //CMB
         public static DataTable ObtenerTipoPlacasController()
