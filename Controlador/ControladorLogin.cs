@@ -11,11 +11,15 @@ namespace Controlador
         {
             public static int Login()
             {
-                string passwordMD5 = EncryptClass.Encrypt(password);
-
+                string passwordMD5 = EncryptClass.Encrypt(password);               
                 return ModeloLogin.Login(username, passwordMD5);
             }
-
+        static List<int> res = new List<int>();
+        public static int GetCargo()
+        {
+            res = ModeloLogin.getUserInfo(username);
+            return res[0];
+        }
     }
 
         public class AtributosLogin

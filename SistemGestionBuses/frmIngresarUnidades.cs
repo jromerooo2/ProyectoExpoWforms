@@ -12,9 +12,9 @@ using Controlador;
 
 namespace SistemGestionBuses
 {
-    public partial class Form1 : Form
+    public partial class frmUnidades : Form
     {
-        public Form1()
+        public frmUnidades()
         {
             InitializeComponent();
             CargarComboBoxes();
@@ -287,6 +287,11 @@ namespace SistemGestionBuses
         private void cmbMarca_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panelBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

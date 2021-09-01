@@ -37,10 +37,11 @@ namespace SistemGestionBuses
                 AtributosLogin.username = user;
                 AtributosLogin.password = password;
                 int res = ControladorLogin.Login();
+                int cargo = ControladorLogin.GetCargo();
                 if (res == 1)
                 {
                         //mostrar siguiente forms
-                        frmIngresoEmpleado next = new frmIngresoEmpleado();
+                        frmPrincipal next = new frmPrincipal(cargo);
                         next.Show();
                         this.Hide();
                 }
@@ -52,11 +53,7 @@ namespace SistemGestionBuses
                         {
                             ControladorUsuario.BlockUser(user);
                         }                
-                 }
-                else
-                {
-                    MessageBox.Show("Datos Incorrectos, Intentalo De Nuevo");
-                }            
+                 }      
 
            }
 

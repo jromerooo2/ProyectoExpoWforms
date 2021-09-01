@@ -15,16 +15,16 @@ namespace Modelo
             bool res2 = false;
             try
             {
-                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1  AND id_estado_usuario=1";
+                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1  AND estado=1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
                 res1 = Convert.ToBoolean(cmdselect.ExecuteScalar());
 
                 if (res1)
                 {
-                    string query2 = "SELECT * FROM tb_usuarios WHERE contrasena = BINARY ?param1 ";
+                    string query2 = "SELECT * FROM tb_usuarios WHERE contrasena = BINARY ?param2 ";
                     MySqlCommand cmdselect2 = new MySqlCommand(string.Format(query2), ModeloConexion.GetConnection());
-                    cmdselect2.Parameters.Add(new MySqlParameter("param1", username));
+                    cmdselect2.Parameters.Add(new MySqlParameter("param2", password));
                     res2 = Convert.ToBoolean(cmdselect.ExecuteScalar());
                 }
                 if (res1 && res2)
@@ -36,7 +36,6 @@ namespace Modelo
                     return 2;
                 }
                 return 0;
-                
             }
             catch (Exception)
             {
@@ -44,6 +43,28 @@ namespace Modelo
                 return 0;
             }
         }
+        public static List<int> getUserInfo(string username)
+        {
+            List<int> data = new List<int>();
+            try
+            {
+                string query = "SELECT cargo_usuario FROM tb_usuarios WHERE nombre_usuario= BINARY ?param1";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdselect.Parameters.Add(new MySqlParameter("param1", username));
 
+                MySqlDataReader reader = cmdselect.ExecuteReader();
+                while (reader.Read())
+                {
+                    data.Add(Convert.ToInt16(reader.GetString(0)));
+                }
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data;
+            }
+        }
     }
+
 }

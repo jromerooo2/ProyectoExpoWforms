@@ -1,6 +1,6 @@
 ﻿namespace SistemGestionBuses
 {
-    partial class Form1
+    partial class frmUnidades
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnidades));
             this.ElipseFormulario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelFormularios = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbEstadoUnidad = new System.Windows.Forms.ComboBox();
+            this.txtNombreUnidad = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.cmbTipoPlaca = new System.Windows.Forms.ComboBox();
+            this.txtNumeroChasis = new System.Windows.Forms.TextBox();
             this.txtNumeroMotor = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
             this.txtVIN = new System.Windows.Forms.TextBox();
@@ -56,8 +61,6 @@
             this.btnActualizarGrid = new System.Windows.Forms.Button();
             this.panelBar = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
-            this.txtNombreUnidad = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtIDunidad = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -69,9 +72,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbEstadoUnidad = new System.Windows.Forms.ComboBox();
-            this.txtNumeroChasis = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panelFormularios.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidades)).BeginInit();
@@ -121,6 +121,36 @@
             this.panelFormularios.Size = new System.Drawing.Size(379, 394);
             this.panelFormularios.TabIndex = 97;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(13, 278);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(134, 18);
+            this.label13.TabIndex = 107;
+            this.label13.Text = "Estado de la unidad:";
+            // 
+            // cmbEstadoUnidad
+            // 
+            this.cmbEstadoUnidad.FormattingEnabled = true;
+            this.cmbEstadoUnidad.Location = new System.Drawing.Point(9, 299);
+            this.cmbEstadoUnidad.Name = "cmbEstadoUnidad";
+            this.cmbEstadoUnidad.Size = new System.Drawing.Size(166, 21);
+            this.cmbEstadoUnidad.TabIndex = 106;
+            // 
+            // txtNombreUnidad
+            // 
+            this.txtNombreUnidad.BackColor = System.Drawing.Color.White;
+            this.txtNombreUnidad.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreUnidad.Location = new System.Drawing.Point(199, 300);
+            this.txtNombreUnidad.Name = "txtNombreUnidad";
+            this.txtNombreUnidad.ReadOnly = true;
+            this.txtNombreUnidad.Size = new System.Drawing.Size(163, 20);
+            this.txtNombreUnidad.TabIndex = 104;
+            this.txtNombreUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -132,6 +162,18 @@
             this.label10.TabIndex = 105;
             this.label10.Text = "Tipo de placa:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(198, 279);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(142, 18);
+            this.label8.TabIndex = 105;
+            this.label8.Text = "Nombre de la unidad:";
+            // 
             // cmbTipoPlaca
             // 
             this.cmbTipoPlaca.FormattingEnabled = true;
@@ -139,6 +181,13 @@
             this.cmbTipoPlaca.Name = "cmbTipoPlaca";
             this.cmbTipoPlaca.Size = new System.Drawing.Size(166, 21);
             this.cmbTipoPlaca.TabIndex = 104;
+            // 
+            // txtNumeroChasis
+            // 
+            this.txtNumeroChasis.Location = new System.Drawing.Point(197, 195);
+            this.txtNumeroChasis.Name = "txtNumeroChasis";
+            this.txtNumeroChasis.Size = new System.Drawing.Size(167, 20);
+            this.txtNumeroChasis.TabIndex = 103;
             // 
             // txtNumeroMotor
             // 
@@ -355,11 +404,11 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(1037, 43);
             this.panelBar.TabIndex = 98;
+            this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
             // panelGrid
             // 
@@ -374,29 +423,6 @@
             this.panelGrid.Name = "panelGrid";
             this.panelGrid.Size = new System.Drawing.Size(607, 394);
             this.panelGrid.TabIndex = 99;
-            // 
-            // txtNombreUnidad
-            // 
-            this.txtNombreUnidad.BackColor = System.Drawing.Color.White;
-            this.txtNombreUnidad.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreUnidad.Location = new System.Drawing.Point(199, 300);
-            this.txtNombreUnidad.Name = "txtNombreUnidad";
-            this.txtNombreUnidad.ReadOnly = true;
-            this.txtNombreUnidad.Size = new System.Drawing.Size(163, 20);
-            this.txtNombreUnidad.TabIndex = 104;
-            this.txtNombreUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(198, 279);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 18);
-            this.label8.TabIndex = 105;
-            this.label8.Text = "Nombre de la unidad:";
             // 
             // btnEliminar
             // 
@@ -518,33 +544,7 @@
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
-            // cmbEstadoUnidad
-            // 
-            this.cmbEstadoUnidad.FormattingEnabled = true;
-            this.cmbEstadoUnidad.Location = new System.Drawing.Point(9, 299);
-            this.cmbEstadoUnidad.Name = "cmbEstadoUnidad";
-            this.cmbEstadoUnidad.Size = new System.Drawing.Size(166, 21);
-            this.cmbEstadoUnidad.TabIndex = 106;
-            // 
-            // txtNumeroChasis
-            // 
-            this.txtNumeroChasis.Location = new System.Drawing.Point(197, 195);
-            this.txtNumeroChasis.Name = "txtNumeroChasis";
-            this.txtNumeroChasis.Size = new System.Drawing.Size(167, 20);
-            this.txtNumeroChasis.TabIndex = 103;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(13, 278);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 18);
-            this.label13.TabIndex = 107;
-            this.label13.Text = "Estado de la unidad:";
-            // 
-            // Form1
+            // frmUnidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -556,7 +556,7 @@
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "frmUnidades";
             this.Text = "Form1";
             this.panelFormularios.ResumeLayout(false);
             this.panelFormularios.PerformLayout();
