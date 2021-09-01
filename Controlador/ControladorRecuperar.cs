@@ -15,11 +15,23 @@ namespace Controlador
         //Atributos para recuperar contraseña por medio del admin
         public string usuarioadmin { get; set; }
         public string claveadmin { get; set; }
+        public string usuariorecu { get; set; }
+        public string documentoempleado { get; set; }
 
 
-        public static bool ValidarCredenciales_Controller(string usuarioadmin, string claveadmin)
+        public bool ValidarCredenciales_Controller()
         {
             return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
+        }
+
+        public bool ValidarCredencialesUsuario_Controller()
+        {
+            return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, documentoempleado);
+        }
+
+        public bool RestaurarClave_Controller(string clave)
+        {
+            return ModeloRecuperar.RestaurarClave(usuariorecu, clave);
         }
 
         static List<string> res = new List<string>();

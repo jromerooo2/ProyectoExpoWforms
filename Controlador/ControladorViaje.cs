@@ -59,6 +59,11 @@ namespace Controlador
             return ModeloViaje.RegistrarDirecciones(id_viaje, direcciones, puntos_referencias);
         }
 
+        public static DataTable ViajesController()
+        {
+            return ModeloViaje.ObtenerViajes();
+        }
+
         #region CMB Controller
         //cmb Cliente
         public static DataTable ObtenerCliente()

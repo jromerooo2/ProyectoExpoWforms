@@ -20,6 +20,7 @@ namespace SistemGestionBuses
             CargarDatosCMB();
         }
 
+        public DataTable datosViajes;
         public bool Vacio()
         {
             if (txtNombreViaje.Text.Trim() == "" &&
@@ -42,7 +43,8 @@ namespace SistemGestionBuses
 
         void CargarGridDatos()
         {
-            
+            datosViajes = ControladorViaje.ViajesController();
+            dataGridView1.DataSource = datosViajes;
         }
 
         //Metodo para limpiar los campos
@@ -54,7 +56,6 @@ namespace SistemGestionBuses
             cmbCliente.SelectedValue = 1;
             cmbConductor.SelectedValue = 1;
             cmbEstadoViaje.SelectedValue = 1;
-            //cmbMetodoPago.SelectedValue = 1;
             cmbTipoDestino.SelectedValue = 1;
             cmbUnidadTransporte.SelectedValue = 1;
             dtpFechaRetorno.Value = Convert.ToDateTime("01 / 01 / 2021");

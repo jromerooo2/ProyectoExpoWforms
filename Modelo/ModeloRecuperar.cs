@@ -51,7 +51,7 @@ namespace Modelo
             }
         }
 
-        public static bool ValidarCredenciales(string usuarioadmin, string claveadmin)
+        public static bool ValidarCredenciales(string pusuarioAdmin, string pclaveAdmin)
         {
             bool retorno = false;
             try
@@ -60,8 +60,8 @@ namespace Modelo
                 string query = "SELECT * FROM tbusuarios WHERE usuario = BINARY ?param1 AND clave = BINARY ?param2 AND id_estado_usuario = ?param3";
                 MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
-                cmdvalidar.Parameters.Add(new MySqlParameter("param1", usuarioadmin));
-                cmdvalidar.Parameters.Add(new MySqlParameter("param2", claveadmin));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuarioAdmin));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param2", pclaveAdmin));
                 cmdvalidar.Parameters.Add(new MySqlParameter("param3", activo));
                 return retorno; 
             }
@@ -69,6 +69,44 @@ namespace Modelo
             {
 
                 throw;
+            }
+        }
+
+        public static bool ValidarCredencialesUsuarios(string pusuario, string pdocuemento)
+        {
+            bool retorno = false;
+            try
+            {
+                //int activo = 1;
+                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND a.id_empleado = b.id_empleado";
+                MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
+                cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocuemento));
+                //cmdvalidar.Parameters.Add(new MySqlParameter("param3", activo));
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
+
+        public static bool RestaurarClave(string usuario, string newpassword)
+        {
+            bool retorno = false;
+            try
+            {
+                int activo = 1;
+                string query = "UPDATE tb_usuarios SET constrasena = '"+newpassword+"', estado = '"+activo+"' WHERE usuario = '"+usuario+"'";
+                MySqlCommand cmdrestaurar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdrestaurar.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno;
             }
         }
     }

@@ -163,6 +163,26 @@ namespace Modelo
             }
         }
 
+        //Metodo para cargar los datos en el grid de datos
+        public static DataTable ObtenerViajes()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_viajes;";
+                MySqlCommand cmdViajes = new MySqlCommand(string.Format(query),
+                    ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdViajes);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         public static bool RegistrarDirecciones(int pidViaje, List<string> pdirecciones, List<string> ppuntos_referencia)
         {
             bool retorno = false;
