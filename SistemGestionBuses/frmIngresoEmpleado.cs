@@ -12,7 +12,7 @@ using Controlador;
 
 namespace SistemGestionBuses
 {
-    public partial class frmIngresoConductores : Form
+    public partial class frmIngresoEmpleado : Form
     {
         public DataTable datosCond;
         public ControladorIngreso objCond;
@@ -209,7 +209,7 @@ namespace SistemGestionBuses
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public frmIngresoConductores()
+        public frmIngresoEmpleado()
         {
             InitializeComponent();
             CargarDatos();

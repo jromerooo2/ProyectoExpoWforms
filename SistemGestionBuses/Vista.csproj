@@ -105,11 +105,11 @@
     <Compile Include="frmIngresoCliente.Designer.cs">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmIngresoConductores.cs">
+    <Compile Include="frmIngresoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIngresoConductores.Designer.cs">
-      <DependentUpon>frmIngresoConductores.cs</DependentUpon>
+    <Compile Include="frmIngresoEmpleado.Designer.cs">
+      <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="frmIngresoCliente.resx">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmIngresoConductores.resx">
-      <DependentUpon>frmIngresoConductores.cs</DependentUpon>
+    <EmbeddedResource Include="frmIngresoEmpleado.resx">
+      <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
