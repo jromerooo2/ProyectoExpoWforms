@@ -390,7 +390,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombres_cliente= '" + pNomCliente + "', apellidos_cliente= '" + pApeCliente + "',  direccion_cliente= '" + pDirCliente + "', telefono_cliente= '" + pTelCliente + "', correo_cliente=" + pCorCliente + "', direccion_cliente= '" + pTipCliente + " WHERE id_cliente= '" + pIdCliente + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_cliente SET nombres_cliente = '"+pNomCliente+"', apellidos_cliente = '"+pApeCliente+"', telefono_cliente = '"+pTelCliente+"', id_tipo_cliente = '"+pTipCliente+"', direccion_cliente = '"+pDirCliente+"', correo_cliente = '"+ pCorCliente + "' WHERE id_cliente = '"+pIdCliente+"' "), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }
@@ -399,6 +399,7 @@ namespace Modelo
                 return res;
             }
         }
+
         public static bool EliminarCliente(int IdCliente)
         {
             bool res = false;

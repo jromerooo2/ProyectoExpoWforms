@@ -54,11 +54,11 @@ namespace Controlador
      
         public bool EnviarClientes()
         {
-            return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente);
+            return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
         }
         public bool ActualizarClienteContorlador()
         {
-            return ModeloIngreso.ActualizarCliente(id_cliente, nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente,  correo_cliente, id_tipo_cliente);
+            return ModeloIngreso.ActualizarCliente(id_cliente, nombres_cliente, apellidos_cliente, telefono_cliente,direccion_cliente,  correo_cliente, id_tipo_cliente);
         }
         public static bool EliminarClienteControlador()
         {
