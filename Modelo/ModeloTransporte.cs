@@ -10,6 +10,7 @@ namespace Modelo
 {
     public class ModeloTransporte
     {
+        #region CMB
         //CMB de los tipos de unidades
         public static DataTable ObtenerTipoUnidad()
         {
@@ -118,6 +119,7 @@ namespace Modelo
                 return data = null;
             }
         }
+        #endregion
 
         #region CRUD
         public static bool IngresarUnidades(int pMarca, int pAnio, string pVIN, int pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, string pNumeroMotor, string pNumeroChasis)
@@ -141,7 +143,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_unidad_transporte SET id_marca = '" + pMarca + "', anio = '" + pAnio + "', VIN = '" + pVIN + "', capacisas = '" + pCapacidad + "', id_modelo = '" + pModelo + "', placa = '" + pPlaca + "', id_tipo_placa = '" + pTipoPlaca + "'id_tipo_unidad = '" + pTipoUnidad + "'numero_motor = '" + pNumeroMotor + "'numero_chasis = '" + pNumeroChasis+ "' WHERE id_cliente = '" + pUnidadTransporte + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_unidad_transporte SET id_marca = '" + pMarca + "', anio = '" + pAnio + "', VIN = '" + pVIN + "', capacidad = '" + pCapacidad + "', id_modelo = '" + pModelo + "', placa = '" + pPlaca + "', id_tipo_placa = '" + pTipoPlaca + "'id_tipo_unidad = '" + pTipoUnidad + "'numero_motor = '" + pNumeroMotor + "'numero_chasis = '" + pNumeroChasis+ "' WHERE id_cliente = '" + pUnidadTransporte + "'"), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }

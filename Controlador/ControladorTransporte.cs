@@ -16,7 +16,7 @@ namespace Controlador
         public int id_marca { get; set; }
         public int anio { get; set; }
         public string VIN { get; set; }
-        public string capacidad { get; set; }
+        public int capacidad { get; set; }
         public int id_modelo { get; set; }
         public string placa { get; set; }
         public int id_tipo_placa { get; set; }
@@ -25,7 +25,7 @@ namespace Controlador
         public string numero_motor { get; set; }
 
         //Constructor
-        ControladorTransporte(int pMarca, int pAnio, string pVIN, string pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, string pNumeroChasis, string pNumeroMotor)
+        public ControladorTransporte(int pMarca, int pAnio, string pVIN, int pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, string pNumeroMotor, string pNumeroChasis)
         {
             id_marca = pMarca;
             anio = pAnio;
@@ -37,6 +37,11 @@ namespace Controlador
             id_tipo_unidad = pTipoUnidad;
             numero_chasis = pNumeroChasis;
             numero_motor = pNumeroMotor;
+        }
+
+        public bool IngresarUnidadesController()
+        {
+            return ModeloTransporte.IngresarUnidades(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad, numero_motor, numero_chasis);
         }
 
         public static DataTable ObtenerUnidadesController()
