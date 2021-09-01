@@ -266,6 +266,7 @@ namespace SistemGestionBuses
         private void btnAcualizar_Click(object sender, EventArgs e)
         {
             ActualizarDatos();
+            CargarGridDatos();
         }
 
         private void BtnEliminarCliente_click(object sender, EventArgs e)
