@@ -153,7 +153,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM tb_unidad_transporte WHERE matricula = ?param";
+                string query = "UPDATE tb_unidad_transporte SET matricula = ?param";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param", placa));
                 MySqlDataAdapter mdadapt = new MySqlDataAdapter();
