@@ -15,27 +15,29 @@ namespace Modelo
             bool res2 = false;
             try
             {
-                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1  AND estado=1";
+                string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1  AND estado = BINARY ?param2";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
+                cmdselect.Parameters.Add(new MySqlParameter("param2", 1));
                 res1 = Convert.ToBoolean(cmdselect.ExecuteScalar());
 
                 if (res1)
                 {
-                    string query2 = "SELECT * FROM tb_usuarios WHERE contrasena = BINARY ?param2 ";
+                    string query2 = "SELECT * FROM tb_usuarios WHERE  nombre_usuario = BINARY ?param1 AND contrasena = BINARY ?param2 ";
                     MySqlCommand cmdselect2 = new MySqlCommand(string.Format(query2), ModeloConexion.GetConnection());
+                    cmdselect2.Parameters.Add(new MySqlParameter("param1", username));
                     cmdselect2.Parameters.Add(new MySqlParameter("param2", password));
-                    res2 = Convert.ToBoolean(cmdselect.ExecuteScalar());
+                    res2 = Convert.ToBoolean(cmdselect2.ExecuteScalar());
                 }
-                if (res1 && res2)
+                if (res2)
                 {
                     return 1;
                 }
-                if (res1 && !res2)
+                else
                 {
                     return 2;
                 }
-                return 0;
+                
             }
             catch (Exception)
             {
