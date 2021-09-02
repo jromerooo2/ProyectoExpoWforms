@@ -13,11 +13,18 @@ namespace SistemGestionBuses
 {
     public partial class frmUsuarios : Form
     {
-        public frmUsuarios()
+        public static int cargouser;
+        public frmUsuarios(int cargo)
         {
             InitializeComponent();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
+            cargouser = cargo;
+            if (cargouser == 2 || cargouser == 3)
+            {
+                BtnAgregar.Enabled = true;
+            }
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -198,9 +205,12 @@ namespace SistemGestionBuses
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dgvUsuarios.CurrentRow.Index;
-
-            BtnActualizar.Enabled = true;
-            BtnEliminar.Enabled = true;
+            if (cargouser == 2 || cargouser == 3)
+            {
+                BtnActualizar.Enabled = true;
+                BtnEliminar.Enabled = true;
+                BtnAgregar.Enabled = true;
+            }
 
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
             txtUser.Text = dgvUsuarios[1, i].Value.ToString();

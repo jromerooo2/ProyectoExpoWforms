@@ -184,9 +184,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(46, 29);
+            this.pictureBox6.Location = new System.Drawing.Point(44, 28);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(113, 92);
+            this.pictureBox6.Size = new System.Drawing.Size(120, 91);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
@@ -311,6 +311,7 @@
             this.cardUsers.Size = new System.Drawing.Size(200, 159);
             this.cardUsers.TabIndex = 20;
             this.cardUsers.Click += new System.EventHandler(this.cardUsers_Click);
+            this.cardUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.cardUsers_Paint);
             // 
             // bunifuCards1
             // 
@@ -437,7 +438,7 @@
             this.cardReportes.Controls.Add(this.pictureBox8);
             this.cardReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardReportes.LeftSahddow = false;
-            this.cardReportes.Location = new System.Drawing.Point(188, 569);
+            this.cardReportes.Location = new System.Drawing.Point(172, 569);
             this.cardReportes.Name = "cardReportes";
             this.cardReportes.RightSahddow = true;
             this.cardReportes.ShadowDepth = 20;

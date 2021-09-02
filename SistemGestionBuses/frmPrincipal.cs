@@ -57,7 +57,7 @@ namespace SistemGestionBuses
 
         private void pictureUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios();
+            frmUsuarios users = new frmUsuarios(cargouser);
             users.Show();
         }
 
@@ -81,7 +81,7 @@ namespace SistemGestionBuses
 
         private void cardUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios();
+            frmUsuarios users = new frmUsuarios(cargouser);
             users.Show();
         }
 
@@ -128,6 +128,11 @@ namespace SistemGestionBuses
         {
             frmIngresarViaje viajes = new frmIngresarViaje();
             viajes.Show();
+        }
+
+        private void cardUsers_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
