@@ -71,7 +71,7 @@ namespace Modelo
             }
         }
 
-        public static bool ValidarCredencialesUsuarios(string pusuario, string pdocuemento)
+        public static bool ValidarCredencialesUsuarios(string pusuario, string pdocumento)
         {
             bool retorno = false;
             try
@@ -80,7 +80,7 @@ namespace Modelo
                 string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND a.id_empleado = b.id_empleado";
                 MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());             
                 cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
-                cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocuemento));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));
                 retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
                 //cmdvalidar.Parameters.Add(new MySqlParameter("param3", activo));
                 return retorno;
@@ -96,8 +96,8 @@ namespace Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdrestaurar = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena = '" + newpassword + "' WHERE nombre_usuario = " + usuario), ModeloConexion.GetConnection());
-                retorno = Convert.ToBoolean(cmdrestaurar.ExecuteNonQuery());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena = '" + newpassword + "' WHERE nombre_usuario = '"+usuario+"'"), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return retorno;
                 //65432413
             }

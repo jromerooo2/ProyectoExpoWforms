@@ -109,7 +109,6 @@ namespace SistemGestionBuses
                     }
                     else
                     {
-                        NotificacionRecuperación();
                         MessageBox.Show("La contraseña no pudo ser actualizada", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }                  
                 }
