@@ -67,16 +67,21 @@
             this.label14 = new System.Windows.Forms.Label();
             this.ElipseGeneral = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DragControlGeneral = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panelBar = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.ElipsePanelGrid = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panelBar = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelBar.SuspendLayout();
             this.panelGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbUnidadTransporte
@@ -503,6 +508,17 @@
             this.DragControlGeneral.TargetControl = this.panelBar;
             this.DragControlGeneral.Vertical = true;
             // 
+            // panelBar
+            // 
+            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.bunifuImageButton2);
+            this.panelBar.Controls.Add(this.bunifuImageButton1);
+            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(986, 43);
+            this.panelBar.TabIndex = 92;
+            // 
             // panelGrid
             // 
             this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
@@ -544,14 +560,33 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this.panelFormularios;
             // 
-            // panelBar
+            // bunifuImageButton1
             // 
-            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(986, 43);
-            this.panelBar.TabIndex = 92;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(12, 3);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(35, 31);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 94;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(939, 3);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(35, 31);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 95;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // frmIngresarViaje
             // 
@@ -574,8 +609,11 @@
             this.panelFormularios.ResumeLayout(false);
             this.panelFormularios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelBar.ResumeLayout(false);
             this.panelGrid.ResumeLayout(false);
             this.panelGrid.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -624,5 +662,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ComboBox cmbMunicipios;
         private System.Windows.Forms.Panel panelBar;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

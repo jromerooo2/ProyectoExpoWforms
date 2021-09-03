@@ -17,7 +17,7 @@ namespace Controlador
         public string claveadmin { get; set; }
         public string usuariorecu { get; set; }
         public string documentoempleado { get; set; }
-
+        public string nuevacontra { get; set; }
 
         public bool ValidarCredenciales_Controller()
         {
@@ -29,9 +29,10 @@ namespace Controlador
             return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, documentoempleado);
         }
 
-        public bool RestaurarClave_Controller(string clave)
+        public bool RestaurarContra_Controller()
         {
-            return ModeloRecuperar.RestaurarClave(usuariorecu, clave);
+            string contraMD5 = EncryptClass.Encrypt(nuevacontra);
+            return ModeloRecuperar.RestaurarClave(usuariorecu, contraMD5);
         }
 
         static List<string> res = new List<string>();

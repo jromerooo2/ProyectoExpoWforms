@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using System.IO;
 
 namespace SistemGestionBuses
 {
@@ -18,6 +19,9 @@ namespace SistemGestionBuses
             InitializeComponent();
             CardUsuario.Enabled = false;
             CardAdmin.Enabled = true;
+            btnNuevaContrasena.Enabled = false;
+            txtConfirmacionContra.Enabled = false;
+            txtNueva.Enabled = false;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -40,8 +44,13 @@ namespace SistemGestionBuses
                 bool respuesta = recu.ValidarCredenciales_Controller();
                 if (respuesta == true)
                 {
+                    MessageBox.Show("Se confirmo el usuario de administrador", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CardAdmin.Enabled = false;
                     CardUsuario.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Los campos no pertenecen a un administrador", "Validar campos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
         }
@@ -59,11 +68,13 @@ namespace SistemGestionBuses
                 bool respuesta = recu.ValidarCredencialesUsuario_Controller();
                 if (respuesta == true)
                 {
-                    recu.usuariorecu = txtUsuarioRecu.Text;
-                    bool respuesta2 = recu.RestaurarClave_Controller(EncryptClass.Encrypt(txtNueva.Text + "123"));
-                    frmLogin nextLog = new frmLogin();
-                    nextLog.Show();
-                    this.Hide();
+                    txtDUI.Enabled = false;
+                    txtUsuarioRecu.Enabled = false;
+                    btnConfirmarUsuario.Enabled = false;
+                    MessageBox.Show("Se confirmo tu usuario", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNueva.Enabled = true;
+                    txtConfirmacionContra.Enabled = true;
+                    btnNuevaContrasena.Enabled = true;
                 }
                 else
                 {
@@ -72,14 +83,91 @@ namespace SistemGestionBuses
             }
         }
 
-        private void frmRecuperarAdmin_Load(object sender, EventArgs e)
-        {
-
+        private void btnNuevaContrasena_Click(object sender, EventArgs e)
+        {           
+            if (txtNueva.Text.Trim() == "" || txtConfirmacionContra.Text.Trim() == "")
+            {
+                MessageBox.Show("Uno o dos campos estan vacíos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else
+            {
+                //variables de comparación :)
+                string contra, confirmacion;
+                contra = txtNueva.Text;
+                confirmacion = txtConfirmacionContra.Text;
+                ControladorRecuperar recu = new ControladorRecuperar();
+                recu.nuevacontra = contra;
+                if (confirmacion.Equals(contra))
+                {
+                    bool respuesta = recu.RestaurarContra_Controller();
+                    if (respuesta == true)
+                    {
+                        NotificacionRecuperación();
+                        frmLogin nextLog = new frmLogin();
+                        nextLog.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        NotificacionRecuperación();
+                        MessageBox.Show("La contraseña no pudo ser actualizada", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }                  
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden", "Verficación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+            }
         }
 
-        private void btnNuevaContrasena_Click(object sender, EventArgs e)
+        void NotificacionRecuperación()
         {
+            nfConfirmacion.Icon = new System.Drawing.Icon(Path.GetFullPath(@"../../Resources/icons8_checked.ico"));
+            nfConfirmacion.Text = "Usuario recuperado y actualizado";
+            nfConfirmacion.Visible = true;
+            nfConfirmacion.BalloonTipTitle = "Confirmación de recuperación";
+            nfConfirmacion.BalloonTipText = "La contraseña fue recuperada y actualizada con exito, inicia sesión con tus nuevas creedenciales en Locus System";
+            nfConfirmacion.ShowBalloonTip(150);
+        }
 
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnVerContra1_Click(object sender, EventArgs e)
+        {
+            if (txtNueva.UseSystemPasswordChar == false)
+            {
+                txtNueva.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtNueva.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnVerContra2_Click(object sender, EventArgs e)
+        {
+            if (txtConfirmacionContra.UseSystemPasswordChar == false)
+            {
+                txtConfirmacionContra.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtConfirmacionContra.UseSystemPasswordChar = false;
+            }
         }
     }
 }

@@ -284,5 +284,15 @@ namespace SistemGestionBuses
                 MessageBox.Show("Error al establecer conexión.", "Comprobación de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
