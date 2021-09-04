@@ -31,10 +31,10 @@ namespace Controlador
             return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
         }
 
-        public bool ValidarCredencialesPIN_Controller()
-        {
-            return ModeloRecuperar.ValidarCredencialesPIN(usuarioadmin, claveadmin);
-        }
+        //public bool ValidarCredencialesPIN_Controller()
+        //{
+        //    //return ModeloRecuperar.ValidarCredencialesPIN(usuarioadmin, claveadmin);
+        //}
 
         public bool ValidarCredencialesUsuario_Controller()
         {
@@ -49,7 +49,7 @@ namespace Controlador
 
         public bool ValidarCredencialesUsuario(string user)
         {
-            return ModeloRecuperar.ValidarCredencialesPorUsuario(user);
+            return ModeloRecuperar.ValidarCredencialesPIN(user);
         }
 
         static List<string> res = new List<string>();
@@ -65,6 +65,12 @@ namespace Controlador
             string passMD5 = EncryptClass.Encrypt(contra);
             return ModeloRecuperar.ActualizarContra(passMD5, res[0]);
         }
+        public bool RecuperarPin()
+        {
+            return ModeloRecuperar.RecuperarByPIN(PINseguridad, nuevacontra);
+        }
+
+
 
         static Random rnd = new Random();
         public static  int code;

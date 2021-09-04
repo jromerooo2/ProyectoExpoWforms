@@ -51,6 +51,7 @@
             this.btnNueva.TabIndex = 35;
             this.btnNueva.Text = "Confirmar";
             this.btnNueva.UseVisualStyleBackColor = false;
+            this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click_1);
             // 
             // txtNueva
             // 

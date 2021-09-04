@@ -130,6 +130,17 @@ namespace SistemGestionBuses
         private void btnRecuPIN_Click(object sender, EventArgs e)
         {
 
+            frmPin pin = new frmPin(txtUser.Text);
+
+            if (!String.IsNullOrEmpty(txtUser.Text))
+            {
+                pin.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor escribe un usuario");
+            }
+
         }
 
     }
