@@ -121,5 +121,21 @@ namespace Modelo
             }
         }
 
+        public static bool ValidarCredencialesPIN(string PIN)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("SELECT * FROM tb_usuarios WHERE pin = '"+PIN+"'"), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno;
+            }
+        }
+
     }
 }

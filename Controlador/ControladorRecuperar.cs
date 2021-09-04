@@ -31,6 +31,11 @@ namespace Controlador
             return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
         }
 
+        public bool ValidarCredencialesPIN_Controller()
+        {
+            return ModeloRecuperar.ValidarCredencialesPIN(usuarioadmin, claveadmin);
+        }
+
         public bool ValidarCredencialesUsuario_Controller()
         {
             return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, documentoempleado);
