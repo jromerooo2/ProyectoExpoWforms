@@ -39,6 +39,7 @@ namespace SistemGestionBuses
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            txtPin.MaxLength = 8;
             CargarDatos();
             cargarGridDatos();
         }
@@ -106,16 +107,17 @@ namespace SistemGestionBuses
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            string user, password, correo;
+            string user, password, correo, pin;
             int id_empleado, id_cargo;
 
             id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
             user = txtUser.Text;
             password = txtPassword.Text;
             correo = txtCorreo.Text;
+            pin = txtPin.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
 
-            if (!Empty(user, password, correo))
+            if (!Empty(user, password, correo,pin))
             {
                 EnvioDatos();
                 cargarGridDatos();
@@ -128,10 +130,10 @@ namespace SistemGestionBuses
         }
         
         
-        bool Empty(string user, string pass, string correo)
+        bool Empty(string user, string pass, string correo, string pin)
         {
             if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(pass) ||
-                String.IsNullOrEmpty(correo) )
+                String.IsNullOrEmpty(correo) || String.IsNullOrEmpty(pin))
             {
                 return true;
             }
@@ -146,15 +148,16 @@ namespace SistemGestionBuses
         {
             try
             {
-                string user, password, correo;
+                string user, password, correo ,pin;
                 int id_empleado, id_cargo;
 
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 user = txtUser.Text;
+                pin = txtPin.Text;
                 password = txtPassword.Text;
                 correo = txtCorreo.Text;
                 id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-                bool respuesta = objCond.RegistrarUsuario(user, password, correo, id_cargo, id_empleado);
+                bool respuesta = objCond.RegistrarUsuario(user, password, correo,pin, id_cargo, id_empleado);
                 if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);

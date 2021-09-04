@@ -145,13 +145,13 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int pid_empleado, string user, string password, string correo, int cargo )
+        public static bool RegistrarUser(int pid_empleado, string user, string password, string correo, int cargo, string pin )
         {
             bool res = false;
             try
             {
                 int estado = 1;
-                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}')", pid_empleado, user, correo, password, cargo, estado), ModeloConexion.GetConnection());
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}', '{6}')", pid_empleado, user, correo, password, cargo, estado, pin), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(insert.ExecuteNonQuery());
                 return res;
             }
