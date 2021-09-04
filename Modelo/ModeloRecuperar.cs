@@ -106,12 +106,12 @@ namespace Modelo
             }
         }
 
-        public static bool RecuperarByPIN(string usuario, string PIN)
+        public static bool RecuperarByPIN(string pin, string newpassword)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format(""), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena = '" + newpassword + "' WHERE pin = '" + pin + "'"), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return retorno;
             }
