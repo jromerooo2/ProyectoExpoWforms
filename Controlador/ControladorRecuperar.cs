@@ -23,7 +23,7 @@ namespace Controlador
         //Metodo para recuperar por PIN
         public bool RecuperarByPIN_Controller()
         {
-            return ModeloRecuperar.RecuperarByPIN(usuariorecu, PINseguridad);
+            return ModeloRecuperar.RestaurarClave(usuariorecu, PINseguridad);
         }
 
         public bool ValidarCredenciales_Controller()
@@ -45,6 +45,11 @@ namespace Controlador
         {
             string contraMD5 = EncryptClass.Encrypt(nuevacontra);
             return ModeloRecuperar.RestaurarClave(usuariorecu, contraMD5);
+        }
+
+        public bool ValidarCredencialesUsuario(string user)
+        {
+            return ModeloRecuperar.ValidarCredencialesPorUsuario(user);
         }
 
         static List<string> res = new List<string>();

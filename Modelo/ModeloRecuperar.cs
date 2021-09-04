@@ -127,7 +127,7 @@ namespace Modelo
             try
             {
                 MySqlCommand cmdupdate = new MySqlCommand(string.Format("SELECT * FROM tb_usuarios WHERE pin = '"+PIN+"'"), ModeloConexion.GetConnection());
-                retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                retorno = Convert.ToBoolean(cmdupdate.ExecuteScalar());
                 return retorno;
             }
             catch (Exception)

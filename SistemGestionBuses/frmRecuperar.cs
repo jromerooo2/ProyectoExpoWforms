@@ -129,14 +129,8 @@ namespace SistemGestionBuses
 
         private void btnRecuPIN_Click(object sender, EventArgs e)
         {
-            lblIngresoCodigo.Text = "Ingresa tu PIN de seguridad";
-            ControladorRecuperar recu = new ControladorRecuperar();
-            recu.PINseguridad = txtCode.Text;
-            bool res = recu.RecuperarByPIN_Controller();
-            if (res == true)
-            {
 
-            }
         }
+
     }
 }
