@@ -18,6 +18,13 @@ namespace Controlador
         public string usuariorecu { get; set; }
         public string documentoempleado { get; set; }
         public string nuevacontra { get; set; }
+        public string PINseguridad { get; set; }
+
+        //Metodo para recuperar por PIN
+        public bool RecuperarByPIN_Controller()
+        {
+            return ModeloRecuperar.RecuperarByPIN(usuariorecu, PINseguridad);
+        }
 
         public bool ValidarCredenciales_Controller()
         {

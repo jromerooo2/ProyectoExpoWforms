@@ -37,12 +37,12 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblIngresoCodigo = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNueva = new System.Windows.Forms.TextBox();
             this.btnNueva = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRecuPIN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,17 +138,17 @@
             this.txtCode.Size = new System.Drawing.Size(224, 20);
             this.txtCode.TabIndex = 16;
             // 
-            // label3
+            // lblIngresoCodigo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(123, 304);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(420, 28);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Ingresa el Codigo de confirmación";
+            this.lblIngresoCodigo.AutoSize = true;
+            this.lblIngresoCodigo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresoCodigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIngresoCodigo.Location = new System.Drawing.Point(123, 304);
+            this.lblIngresoCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngresoCodigo.Name = "lblIngresoCodigo";
+            this.lblIngresoCodigo.Size = new System.Drawing.Size(420, 28);
+            this.lblIngresoCodigo.TabIndex = 17;
+            this.lblIngresoCodigo.Text = "Ingresa el Codigo de confirmación";
             // 
             // btnConfirmar
             // 
@@ -196,17 +196,18 @@
             this.btnNueva.UseVisualStyleBackColor = false;
             this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
             // 
-            // button1
+            // btnRecuPIN
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(402, 227);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 51);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Recuperar por patrón";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRecuPIN.BackColor = System.Drawing.Color.Black;
+            this.btnRecuPIN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRecuPIN.Location = new System.Drawing.Point(402, 227);
+            this.btnRecuPIN.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecuPIN.Name = "btnRecuPIN";
+            this.btnRecuPIN.Size = new System.Drawing.Size(109, 51);
+            this.btnRecuPIN.TabIndex = 22;
+            this.btnRecuPIN.Text = "Recuperar por PIN de seguridad";
+            this.btnRecuPIN.UseVisualStyleBackColor = false;
+            this.btnRecuPIN.Click += new System.EventHandler(this.btnRecuPIN_Click);
             // 
             // frmRecuperar
             // 
@@ -214,12 +215,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(667, 618);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRecuPIN);
             this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.txtNueva);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblIngresoCodigo);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnMetodo2);
@@ -249,11 +250,11 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblIngresoCodigo;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNueva;
         private System.Windows.Forms.Button btnNueva;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRecuPIN;
     }
 }

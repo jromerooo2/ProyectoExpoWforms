@@ -99,7 +99,6 @@ namespace Modelo
                 MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena = '" + newpassword + "' WHERE nombre_usuario = '"+usuario+"'"), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return retorno;
-                //65432413
             }
             catch (Exception)
             {
@@ -107,6 +106,20 @@ namespace Modelo
             }
         }
 
+        public static bool RecuperarByPIN(string usuario, string PIN)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format(""), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
 
     }
 }
