@@ -97,6 +97,7 @@ namespace SistemGestionBuses
                 confirmacion = txtConfirmacionContra.Text;
                 ControladorRecuperar recu = new ControladorRecuperar();
                 recu.nuevacontra = contra;
+                recu.usuariorecu = txtUsuarioRecu.Text;
                 if (confirmacion.Equals(contra))
                 {
                     bool respuesta = recu.RestaurarContra_Controller();
