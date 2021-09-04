@@ -130,7 +130,7 @@ namespace SistemGestionBuses
         private void btnRecuPIN_Click(object sender, EventArgs e)
         {
 
-            frmPin pin = new frmPin(txtUser.Text);
+            frmPin pin = new frmPin();
 
             if (!String.IsNullOrEmpty(txtUser.Text))
             {

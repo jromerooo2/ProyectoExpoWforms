@@ -13,11 +13,9 @@ namespace SistemGestionBuses
 {
     public partial class frmPin : Form
     {
-        public static string user = "";
-        public frmPin(string usuario)
+        public frmPin()
         {
             InitializeComponent();
-            user = usuario;
         }
 
         private void btnRecuPIN_Click(object sender, EventArgs e)
@@ -46,23 +44,9 @@ namespace SistemGestionBuses
         }
 
         private void frmPin_Load(object sender, EventArgs e)
-        {
-            ControladorRecuperar recu = new ControladorRecuperar();
+        {          
             btnNueva.Enabled = false;
             txtNueva.Enabled = false;
-
-            bool res = recu.ValidarCredencialesUsuario(user);
-
-            if (res)
-            {
-                txtCode.Enabled = true;
-                btnConfirmar.Enabled = true;
-            }
-            else
-            {
-                txtCode.Enabled = false;
-                btnConfirmar.Enabled = false;
-            }
 
         }
 
@@ -73,19 +57,19 @@ namespace SistemGestionBuses
             //recu.PINseguridad = txtCode.Text;
             if (!String.IsNullOrEmpty(txtCode.Text))
             {
-                recu.PINseguridad = txtCode.Text;
-                bool res = recu.RecuperarByPIN_Controller();
+                bool res = recu.ValidarCredencialesUsuario(txtCode.Text);
                 if (res)
                 {
                     MessageBox.Show("Se ha confirmado tu identidad");
                     txtNueva.Enabled = true;
                     btnNueva.Enabled = true;
                 }
+                else
+                {
+                    MessageBox.Show("No se ha confirmado tu identidad");
+                }
             }
-            else
-            {
 
-            }
 
         }
 
@@ -96,10 +80,17 @@ namespace SistemGestionBuses
             {
                 recu.PINseguridad = txtCode.Text;
                 recu.nuevacontra = txtNueva.Text;
-                bool res = recu.ActualizarContra(txtNueva.Text);
+
+                bool res = recu.ActualizarContraPIN();
                 if (res)
                 {
                     MessageBox.Show("Se ha actualizado tu contraseña");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha actualizado tu contraseña");
+                    Close();
                 }
             }
         }
