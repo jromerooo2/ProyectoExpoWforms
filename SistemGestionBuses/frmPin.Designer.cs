@@ -64,6 +64,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(168, 197);
@@ -89,6 +90,7 @@
             // lblIngresoCodigo
             // 
             this.lblIngresoCodigo.AutoSize = true;
+            this.lblIngresoCodigo.BackColor = System.Drawing.Color.White;
             this.lblIngresoCodigo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresoCodigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblIngresoCodigo.Location = new System.Drawing.Point(123, 50);
