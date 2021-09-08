@@ -268,5 +268,24 @@ namespace SistemGestionBuses
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            DialogResult rs = dlg.ShowDialog();
+
+            if (rs == DialogResult.OK)
+            {
+                string path = dlg.FileName.ToString();
+                // imageUser.ImageLocation = path;
+                imageUser.Show();
+                imageUser.Image = Image.FromFile(dlg.FileName);
+            }
+        }
     }
 }
