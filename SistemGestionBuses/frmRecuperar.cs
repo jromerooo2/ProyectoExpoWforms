@@ -35,10 +35,16 @@ namespace SistemGestionBuses
 
             if (!String.IsNullOrEmpty(usernameRecu))
             {
-               bool res =  ControladorRecuperar.RecuperarMail(usernameRecu);
+                bool res =  ControladorRecuperar.RecuperarMail(usernameRecu);
                 if (res)
                 {
                     MessageBox.Show("Enviado con exito");
+                    lblNuevaContra.Visible = true;
+                    lblIngresoCodigo.Visible = true;
+                    txtCode.Visible = true;
+                    txtNueva.Visible = true;
+                    btnNueva.Visible = true;
+                    btnConfirmar.Visible = true;
                     txtUser.ReadOnly = true;
                     btnMetodo1.Enabled = false;
                     btnMetodo2.Enabled = false;
@@ -63,7 +69,7 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-                recuperarPorMail();
+            recuperarPorMail();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -117,7 +123,12 @@ namespace SistemGestionBuses
 
         private void frmRecuperar_Load(object sender, EventArgs e)
         {
-
+            txtNueva.Visible = false;
+            txtCode.Visible = false;
+            lblIngresoCodigo.Visible = false;
+            lblNuevaContra.Visible = false;
+            btnConfirmar.Visible = false;
+            btnNueva.Visible = false;
         }
 
         private void btnMetodo2_Click(object sender, EventArgs e)

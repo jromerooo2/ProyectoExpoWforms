@@ -39,7 +39,7 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblIngresoCodigo = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNuevaContra = new System.Windows.Forms.Label();
             this.txtNueva = new System.Windows.Forms.TextBox();
             this.btnNueva = new System.Windows.Forms.Button();
             this.btnRecuPIN = new System.Windows.Forms.Button();
@@ -163,17 +163,17 @@
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // label4
+            // lblNuevaContra
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(224, 456);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 28);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Nueva Contraseña";
+            this.lblNuevaContra.AutoSize = true;
+            this.lblNuevaContra.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevaContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNuevaContra.Location = new System.Drawing.Point(224, 456);
+            this.lblNuevaContra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNuevaContra.Name = "lblNuevaContra";
+            this.lblNuevaContra.Size = new System.Drawing.Size(230, 28);
+            this.lblNuevaContra.TabIndex = 19;
+            this.lblNuevaContra.Text = "Nueva Contraseña";
             // 
             // txtNueva
             // 
@@ -218,7 +218,7 @@
             this.Controls.Add(this.btnRecuPIN);
             this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.txtNueva);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblNuevaContra);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblIngresoCodigo);
             this.Controls.Add(this.txtCode);
@@ -252,7 +252,7 @@
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lblIngresoCodigo;
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNuevaContra;
         private System.Windows.Forms.TextBox txtNueva;
         private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.Button btnRecuPIN;

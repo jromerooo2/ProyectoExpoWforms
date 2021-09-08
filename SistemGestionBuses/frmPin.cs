@@ -18,31 +18,6 @@ namespace SistemGestionBuses
             InitializeComponent();
         }
 
-        private void btnRecuPIN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNueva_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMetodo2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmPin_Load(object sender, EventArgs e)
         {          
             btnNueva.Enabled = false;
