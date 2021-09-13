@@ -72,11 +72,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelFormularios.SuspendLayout();
+            this.panelBar.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // ElipseFormulario
@@ -116,9 +119,10 @@
             this.panelFormularios.Controls.Add(this.cmbMarca);
             this.panelFormularios.Controls.Add(this.txtPlaca);
             this.panelFormularios.Controls.Add(this.cmbModelo);
-            this.panelFormularios.Location = new System.Drawing.Point(12, 146);
+            this.panelFormularios.Location = new System.Drawing.Point(16, 180);
+            this.panelFormularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(379, 394);
+            this.panelFormularios.Size = new System.Drawing.Size(505, 485);
             this.panelFormularios.TabIndex = 97;
             // 
             // label13
@@ -126,28 +130,31 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(13, 278);
+            this.label13.Location = new System.Drawing.Point(17, 342);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 18);
+            this.label13.Size = new System.Drawing.Size(172, 23);
             this.label13.TabIndex = 107;
             this.label13.Text = "Estado de la unidad:";
             // 
             // cmbEstadoUnidad
             // 
             this.cmbEstadoUnidad.FormattingEnabled = true;
-            this.cmbEstadoUnidad.Location = new System.Drawing.Point(9, 299);
+            this.cmbEstadoUnidad.Location = new System.Drawing.Point(12, 368);
+            this.cmbEstadoUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstadoUnidad.Name = "cmbEstadoUnidad";
-            this.cmbEstadoUnidad.Size = new System.Drawing.Size(166, 21);
+            this.cmbEstadoUnidad.Size = new System.Drawing.Size(220, 24);
             this.cmbEstadoUnidad.TabIndex = 106;
             // 
             // txtNombreUnidad
             // 
             this.txtNombreUnidad.BackColor = System.Drawing.Color.White;
             this.txtNombreUnidad.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreUnidad.Location = new System.Drawing.Point(199, 300);
+            this.txtNombreUnidad.Location = new System.Drawing.Point(265, 369);
+            this.txtNombreUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreUnidad.Name = "txtNombreUnidad";
             this.txtNombreUnidad.ReadOnly = true;
-            this.txtNombreUnidad.Size = new System.Drawing.Size(163, 20);
+            this.txtNombreUnidad.Size = new System.Drawing.Size(216, 22);
             this.txtNombreUnidad.TabIndex = 104;
             this.txtNombreUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -156,9 +163,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(198, 226);
+            this.label10.Location = new System.Drawing.Point(264, 278);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 18);
+            this.label10.Size = new System.Drawing.Size(122, 23);
             this.label10.TabIndex = 105;
             this.label10.Text = "Tipo de placa:";
             // 
@@ -168,53 +176,60 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(198, 279);
+            this.label8.Location = new System.Drawing.Point(264, 343);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 18);
+            this.label8.Size = new System.Drawing.Size(182, 23);
             this.label8.TabIndex = 105;
             this.label8.Text = "Nombre de la unidad:";
             // 
             // cmbTipoPlaca
             // 
             this.cmbTipoPlaca.FormattingEnabled = true;
-            this.cmbTipoPlaca.Location = new System.Drawing.Point(196, 246);
+            this.cmbTipoPlaca.Location = new System.Drawing.Point(261, 303);
+            this.cmbTipoPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipoPlaca.Name = "cmbTipoPlaca";
-            this.cmbTipoPlaca.Size = new System.Drawing.Size(166, 21);
+            this.cmbTipoPlaca.Size = new System.Drawing.Size(220, 24);
             this.cmbTipoPlaca.TabIndex = 104;
             // 
             // txtNumeroChasis
             // 
-            this.txtNumeroChasis.Location = new System.Drawing.Point(197, 195);
+            this.txtNumeroChasis.Location = new System.Drawing.Point(263, 240);
+            this.txtNumeroChasis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumeroChasis.Name = "txtNumeroChasis";
-            this.txtNumeroChasis.Size = new System.Drawing.Size(167, 20);
+            this.txtNumeroChasis.Size = new System.Drawing.Size(221, 22);
             this.txtNumeroChasis.TabIndex = 103;
             // 
             // txtNumeroMotor
             // 
-            this.txtNumeroMotor.Location = new System.Drawing.Point(12, 247);
+            this.txtNumeroMotor.Location = new System.Drawing.Point(16, 304);
+            this.txtNumeroMotor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumeroMotor.Name = "txtNumeroMotor";
-            this.txtNumeroMotor.Size = new System.Drawing.Size(167, 20);
+            this.txtNumeroMotor.Size = new System.Drawing.Size(221, 22);
             this.txtNumeroMotor.TabIndex = 102;
             // 
             // txtCapacidad
             // 
-            this.txtCapacidad.Location = new System.Drawing.Point(12, 195);
+            this.txtCapacidad.Location = new System.Drawing.Point(16, 240);
+            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(167, 20);
+            this.txtCapacidad.Size = new System.Drawing.Size(221, 22);
             this.txtCapacidad.TabIndex = 101;
             // 
             // txtVIN
             // 
-            this.txtVIN.Location = new System.Drawing.Point(12, 138);
+            this.txtVIN.Location = new System.Drawing.Point(16, 170);
+            this.txtVIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVIN.Name = "txtVIN";
-            this.txtVIN.Size = new System.Drawing.Size(167, 20);
+            this.txtVIN.Size = new System.Drawing.Size(221, 22);
             this.txtVIN.TabIndex = 100;
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(12, 87);
+            this.txtAnio.Location = new System.Drawing.Point(16, 107);
+            this.txtAnio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(167, 20);
+            this.txtAnio.Size = new System.Drawing.Size(221, 22);
             this.txtAnio.TabIndex = 99;
             // 
             // label4
@@ -222,9 +237,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 226);
+            this.label4.Location = new System.Drawing.Point(17, 278);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 18);
+            this.label4.Size = new System.Drawing.Size(152, 23);
             this.label4.TabIndex = 98;
             this.label4.Text = "Número de motor";
             // 
@@ -233,9 +249,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(194, 173);
+            this.label3.Location = new System.Drawing.Point(259, 213);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 18);
+            this.label3.Size = new System.Drawing.Size(150, 23);
             this.label3.TabIndex = 97;
             this.label3.Text = "Número de chasis";
             // 
@@ -248,9 +265,10 @@
             this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(197, 329);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(263, 405);
+            this.btnLimpiarCampos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(166, 43);
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(221, 53);
             this.btnLimpiarCampos.TabIndex = 56;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -261,9 +279,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 117);
+            this.label9.Location = new System.Drawing.Point(15, 144);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 18);
+            this.label9.Size = new System.Drawing.Size(44, 23);
             this.label9.TabIndex = 96;
             this.label9.Text = "VIN:";
             // 
@@ -278,9 +297,10 @@
             this.btnCrearUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearUnidad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearUnidad.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearUnidad.Location = new System.Drawing.Point(9, 329);
+            this.btnCrearUnidad.Location = new System.Drawing.Point(12, 405);
+            this.btnCrearUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCrearUnidad.Name = "btnCrearUnidad";
-            this.btnCrearUnidad.Size = new System.Drawing.Size(170, 43);
+            this.btnCrearUnidad.Size = new System.Drawing.Size(227, 53);
             this.btnCrearUnidad.TabIndex = 57;
             this.btnCrearUnidad.Text = "Agregar unidad";
             this.btnCrearUnidad.UseVisualStyleBackColor = false;
@@ -291,9 +311,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(194, 15);
+            this.label12.Location = new System.Drawing.Point(259, 18);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 18);
+            this.label12.Size = new System.Drawing.Size(178, 23);
             this.label12.TabIndex = 87;
             this.label12.Text = "Modelo de la unidad:";
             // 
@@ -302,9 +323,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(194, 64);
+            this.label11.Location = new System.Drawing.Point(259, 79);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 18);
+            this.label11.Size = new System.Drawing.Size(145, 23);
             this.label11.TabIndex = 86;
             this.label11.Text = "Matricula/ Placa:";
             // 
@@ -313,9 +335,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(194, 117);
+            this.label7.Location = new System.Drawing.Point(259, 144);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 18);
+            this.label7.Size = new System.Drawing.Size(153, 23);
             this.label7.TabIndex = 82;
             this.label7.Text = "Tipo de la unidad:";
             // 
@@ -324,9 +347,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 173);
+            this.label6.Location = new System.Drawing.Point(12, 213);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 18);
+            this.label6.Size = new System.Drawing.Size(200, 23);
             this.label6.TabIndex = 81;
             this.label6.Text = "Capacidad de la unidad:";
             // 
@@ -335,9 +359,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 66);
+            this.label5.Location = new System.Drawing.Point(15, 81);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.Size = new System.Drawing.Size(150, 23);
             this.label5.TabIndex = 80;
             this.label5.Text = "Año de la unidad:";
             // 
@@ -346,42 +371,47 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 15);
+            this.label2.Location = new System.Drawing.Point(12, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 18);
+            this.label2.Size = new System.Drawing.Size(167, 23);
             this.label2.TabIndex = 77;
             this.label2.Text = "Marca de la unidad:";
             // 
             // cmbTipoUnidad
             // 
             this.cmbTipoUnidad.FormattingEnabled = true;
-            this.cmbTipoUnidad.Location = new System.Drawing.Point(197, 138);
+            this.cmbTipoUnidad.Location = new System.Drawing.Point(263, 170);
+            this.cmbTipoUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipoUnidad.Name = "cmbTipoUnidad";
-            this.cmbTipoUnidad.Size = new System.Drawing.Size(166, 21);
+            this.cmbTipoUnidad.Size = new System.Drawing.Size(220, 24);
             this.cmbTipoUnidad.TabIndex = 67;
             // 
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(12, 36);
+            this.cmbMarca.Location = new System.Drawing.Point(16, 44);
+            this.cmbMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(167, 21);
+            this.cmbMarca.Size = new System.Drawing.Size(221, 24);
             this.cmbMarca.TabIndex = 58;
             this.cmbMarca.Click += new System.EventHandler(this.cmbMarca_Click);
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(196, 85);
+            this.txtPlaca.Location = new System.Drawing.Point(261, 105);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(167, 20);
+            this.txtPlaca.Size = new System.Drawing.Size(221, 22);
             this.txtPlaca.TabIndex = 64;
             // 
             // cmbModelo
             // 
             this.cmbModelo.FormattingEnabled = true;
-            this.cmbModelo.Location = new System.Drawing.Point(197, 36);
+            this.cmbModelo.Location = new System.Drawing.Point(263, 44);
+            this.cmbModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(166, 21);
+            this.cmbModelo.Size = new System.Drawing.Size(220, 24);
             this.cmbModelo.TabIndex = 61;
             // 
             // btnActualizarGrid
@@ -394,9 +424,10 @@
             this.btnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarGrid.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarGrid.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarGrid.Location = new System.Drawing.Point(304, 343);
+            this.btnActualizarGrid.Location = new System.Drawing.Point(405, 422);
+            this.btnActualizarGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizarGrid.Name = "btnActualizarGrid";
-            this.btnActualizarGrid.Size = new System.Drawing.Size(138, 43);
+            this.btnActualizarGrid.Size = new System.Drawing.Size(184, 53);
             this.btnActualizarGrid.TabIndex = 92;
             this.btnActualizarGrid.Text = "Actualizar Grid";
             this.btnActualizarGrid.UseVisualStyleBackColor = false;
@@ -404,9 +435,11 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.bunifuImageButton2);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(1037, 43);
+            this.panelBar.Size = new System.Drawing.Size(1383, 53);
             this.panelBar.TabIndex = 98;
             this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
@@ -419,9 +452,10 @@
             this.panelGrid.Controls.Add(this.btnActualizar);
             this.panelGrid.Controls.Add(this.label14);
             this.panelGrid.Controls.Add(this.dgvUnidades);
-            this.panelGrid.Location = new System.Drawing.Point(407, 146);
+            this.panelGrid.Location = new System.Drawing.Point(543, 180);
+            this.panelGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(607, 394);
+            this.panelGrid.Size = new System.Drawing.Size(809, 485);
             this.panelGrid.TabIndex = 99;
             // 
             // btnEliminar
@@ -434,9 +468,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(160, 343);
+            this.btnEliminar.Location = new System.Drawing.Point(213, 422);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(138, 43);
+            this.btnEliminar.Size = new System.Drawing.Size(184, 53);
             this.btnEliminar.TabIndex = 73;
             this.btnEliminar.Text = "Eliminar Unidad";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -445,10 +480,11 @@
             // txtIDunidad
             // 
             this.txtIDunidad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDunidad.Location = new System.Drawing.Point(478, 358);
+            this.txtIDunidad.Location = new System.Drawing.Point(637, 441);
+            this.txtIDunidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDunidad.Name = "txtIDunidad";
             this.txtIDunidad.ReadOnly = true;
-            this.txtIDunidad.Size = new System.Drawing.Size(87, 28);
+            this.txtIDunidad.Size = new System.Drawing.Size(115, 34);
             this.txtIDunidad.TabIndex = 90;
             this.txtIDunidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -462,9 +498,10 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(16, 343);
+            this.btnActualizar.Location = new System.Drawing.Point(21, 422);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(138, 43);
+            this.btnActualizar.Size = new System.Drawing.Size(184, 53);
             this.btnActualizar.TabIndex = 74;
             this.btnActualizar.Text = "Actualizar Unidad";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -475,9 +512,10 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(475, 337);
+            this.label14.Location = new System.Drawing.Point(633, 415);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 18);
+            this.label14.Size = new System.Drawing.Size(129, 23);
             this.label14.TabIndex = 91;
             this.label14.Text = "ID de la unidad";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -487,10 +525,11 @@
             this.dgvUnidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.dgvUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUnidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnidades.Location = new System.Drawing.Point(16, 64);
+            this.dgvUnidades.Location = new System.Drawing.Point(21, 79);
+            this.dgvUnidades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUnidades.Name = "dgvUnidades";
             this.dgvUnidades.RowHeadersVisible = false;
-            this.dgvUnidades.Size = new System.Drawing.Size(574, 262);
+            this.dgvUnidades.Size = new System.Drawing.Size(765, 322);
             this.dgvUnidades.TabIndex = 82;
             this.dgvUnidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnidades_CellClick);
             // 
@@ -515,9 +554,10 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 63);
+            this.label1.Location = new System.Drawing.Point(163, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(604, 67);
+            this.label1.Size = new System.Drawing.Size(805, 82);
             this.label1.TabIndex = 96;
             this.label1.Text = "Unidades de transporte.";
             // 
@@ -526,9 +566,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1037, 552);
+            this.pictureBox2.Size = new System.Drawing.Size(1383, 679);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 94;
             this.pictureBox2.TabStop = false;
@@ -537,18 +577,34 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 60);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(139, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(1332, 4);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(47, 38);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 96;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
             // frmUnidades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 552);
+            this.ClientSize = new System.Drawing.Size(1383, 679);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.label1);
@@ -556,15 +612,18 @@
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmUnidades";
             this.Text = "Form1";
             this.panelFormularios.ResumeLayout(false);
             this.panelFormularios.PerformLayout();
+            this.panelBar.ResumeLayout(false);
             this.panelGrid.ResumeLayout(false);
             this.panelGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -613,5 +672,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbEstadoUnidad;
         private System.Windows.Forms.TextBox txtNumeroChasis;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
     }
 }
