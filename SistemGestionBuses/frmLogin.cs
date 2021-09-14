@@ -43,7 +43,8 @@ namespace SistemGestionBuses
                 {
                          //mostrar siguiente forms
                         int cargo = ControladorLogin.GetCargo();
-                        frmPrincipal next = new frmPrincipal(cargo, user);
+                        int idlogged = ControladorLogin.GetId();
+                        frmPrincipal next = new frmPrincipal(cargo, user, idlogged);
                         next.Show();
                         Hide();
                 }

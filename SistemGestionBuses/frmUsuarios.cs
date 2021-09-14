@@ -14,12 +14,14 @@ namespace SistemGestionBuses
     public partial class frmUsuarios : Form
     {
         public static int cargouser;
-        public frmUsuarios(int cargo)
+        public static int IdUserLogged;
+        public frmUsuarios(int cargo, int idUser)
         {
             InitializeComponent();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
             cargouser = cargo;
+            IdUserLogged = idUser;
             if (cargouser == 2 || cargouser == 3)
             {
                 BtnAgregar.Enabled = true;
@@ -104,7 +106,11 @@ namespace SistemGestionBuses
 
 
         }
-
+            bool checkEmailAt(string correo)
+            {
+                bool res = correo.LastIndexOf("@") >  -1 ? true : false;
+                return res;
+            }
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             string user, password, correo, pin;
@@ -117,14 +123,14 @@ namespace SistemGestionBuses
             pin = txtPin.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
 
-            if (!Empty(user, password, correo,pin))
+            if (!Empty(user, password, correo,pin) && checkEmailAt(correo))
             {
                 EnvioDatos();
                 cargarGridDatos();
             }
             else
             {
-                MessageBox.Show("Por favor rellena todos los campos para ingresar un usuario", "Llena los cambios");
+                MessageBox.Show("Por favor rellena todos los campos para ingresar un usuario y revisa que todos los datos sean validos", "Llena los cambios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -185,10 +191,15 @@ namespace SistemGestionBuses
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtUser.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            int id = Convert.ToInt16(txtId.Text);
+            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtUser.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && id != IdUserLogged)
             {
                 EliminarDatos();
                 cargarGridDatos();
+            }
+            else
+            {
+                MessageBox.Show("No puedes auto eliminarte","Error",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -257,14 +268,21 @@ namespace SistemGestionBuses
             correo = txtCorreo.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
             bool res = objCond.ActualizarUser(id,id_empleado, user, correo, password, id_cargo);
-            if (res)
+            if (checkEmailAt(correo))
             {
-                MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cargarGridDatos();
+                if (res)
+                {
+                    MessageBox.Show("El registro se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarGridDatos();
+                }
+                else
+                {
+                    MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("El registro no se ha actualizado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Correo Invalido ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

@@ -50,7 +50,7 @@ namespace Modelo
             List<int> data = new List<int>();
             try
             {
-                string query = "SELECT cargo_usuario FROM tb_usuarios WHERE nombre_usuario= BINARY ?param1";
+                string query = "SELECT cargo_usuario, id_usuario FROM tb_usuarios WHERE nombre_usuario= BINARY ?param1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdselect.Parameters.Add(new MySqlParameter("param1", username));
 
@@ -58,6 +58,7 @@ namespace Modelo
                 while (reader.Read())
                 {
                     data.Add(Convert.ToInt16(reader.GetString(0)));
+                    data.Add(Convert.ToInt16(reader.GetString(1)));
                 }
                 return data;
             }

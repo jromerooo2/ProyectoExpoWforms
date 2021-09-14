@@ -20,6 +20,11 @@ namespace Controlador
             res = ModeloLogin.getUserInfo(username);
             return res[0];
         }
+        public static int GetId()
+        {
+            res = ModeloLogin.getUserInfo(username);
+            return res[1];
+        }
     }
 
         public class AtributosLogin

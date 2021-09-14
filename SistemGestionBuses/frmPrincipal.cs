@@ -14,14 +14,16 @@ namespace SistemGestionBuses
     {
         public static string usuario;
         public static int cargouser;
+        public static int idUser;
 
 
-        public frmPrincipal(int cargo, string user)
+        public frmPrincipal(int cargo, string user, int idlogged)
         {
             InitializeComponent();
 
             usuario = user;
             cargouser = cargo;
+            idUser = idlogged;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace SistemGestionBuses
 
         private void pictureUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios(cargouser);
+            frmUsuarios users = new frmUsuarios(cargouser, idUser);
             users.Show();
         }
 
@@ -81,7 +83,7 @@ namespace SistemGestionBuses
 
         private void cardUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios(cargouser);
+            frmUsuarios users = new frmUsuarios(cargouser, idUser);
             users.Show();
         }
 
