@@ -40,7 +40,7 @@ namespace SistemGestionBuses
                 //Objeto del controlador == recu :D
                 ControladorRecuperar recu = new ControladorRecuperar();
                 recu.usuarioadmin = txtUsuarioAdmin.Text;
-                recu.claveadmin = EncryptClass.Encrypt(txtClaveAdmin.Text);
+                recu.claveadmin = ValidacionesClass.Encrypt(txtClaveAdmin.Text);
                 bool respuesta = recu.ValidarCredenciales_Controller();
                 if (respuesta == true)
                 {

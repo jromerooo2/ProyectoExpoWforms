@@ -52,6 +52,8 @@ namespace SistemGestionBuses
             {
                 DataTable data = ControladorUsuario.CargarUsuarios();
                 dgvUsuarios.DataSource = data;
+                dgvUsuarios.Columns[0].HeaderText = "Id Usuario";
+                dgvUsuarios.Columns[0].Visible = false;
             }
             catch (Exception )
             {
@@ -106,11 +108,7 @@ namespace SistemGestionBuses
 
 
         }
-            bool checkEmailAt(string correo)
-            {
-                bool res = correo.LastIndexOf("@") >  -1 ? true : false;
-                return res;
-            }
+
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             string user, password, correo, pin;
@@ -123,7 +121,7 @@ namespace SistemGestionBuses
             pin = txtPin.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
 
-            if (!Empty(user, password, correo,pin) && checkEmailAt(correo))
+            if (!Empty(user, password, correo,pin) && ValidacionesClass.checkEmailAt(correo))
             {
                 EnvioDatos();
                 cargarGridDatos();
@@ -268,7 +266,7 @@ namespace SistemGestionBuses
             correo = txtCorreo.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
             bool res = objCond.ActualizarUser(id,id_empleado, user, correo, password, id_cargo);
-            if (checkEmailAt(correo))
+            if (ValidacionesClass.checkEmailAt(correo))
             {
                 if (res)
                 {

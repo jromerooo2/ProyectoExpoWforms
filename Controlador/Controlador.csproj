@@ -51,7 +51,7 @@
     <Compile Include="ControladorTransporte.cs" />
     <Compile Include="ControladorUsuario.cs" />
     <Compile Include="ControladorViaje.cs" />
-    <Compile Include="EncryptClass.cs" />
+    <Compile Include="ValidacionesClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

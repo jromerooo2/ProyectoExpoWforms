@@ -278,7 +278,7 @@ namespace Modelo
                 return retorno;
             }
         }
-
+        //SELECT a.id_unidad_transporte CONCAT(b.tipo_unidad,'',a.id_unidad_transporte,'',a.capacidad) FROM tb_unidad_transporte a, tb_tipo_unidad b WHERE a.id_tipo_unidad = b.id_tipo_unidad;
         public static bool ActualizarUnidades(int pUnidadTransporte, int pMarca, int pAnio, string pVIN, int pCapacidad, int pModelo, string pPlaca, int pTipoPlaca, int pTipoUnidad, int pEstadoUnidad, string pNumeroMotor, string pNumeroChasis)
         {
             bool res = false;

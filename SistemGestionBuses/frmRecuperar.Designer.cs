@@ -34,7 +34,6 @@
             this.btnMetodo2 = new System.Windows.Forms.Button();
             this.btnMetodo1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblIngresoCodigo = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.txtNueva = new System.Windows.Forms.TextBox();
             this.btnNueva = new System.Windows.Forms.Button();
             this.btnRecuPIN = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -110,14 +110,6 @@
     "raseña ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(221, 186);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(224, 20);
-            this.txtUser.TabIndex = 11;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -135,6 +127,7 @@
             this.txtCode.Location = new System.Drawing.Point(221, 350);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtCode.Name = "txtCode";
+            this.txtCode.ShortcutsEnabled = false;
             this.txtCode.Size = new System.Drawing.Size(224, 20);
             this.txtCode.TabIndex = 16;
             // 
@@ -180,6 +173,7 @@
             this.txtNueva.Location = new System.Drawing.Point(221, 503);
             this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva.Name = "txtNueva";
+            this.txtNueva.ShortcutsEnabled = false;
             this.txtNueva.Size = new System.Drawing.Size(224, 20);
             this.txtNueva.TabIndex = 20;
             // 
@@ -208,6 +202,15 @@
             this.btnRecuPIN.Text = "Recuperar por PIN de seguridad";
             this.btnRecuPIN.UseVisualStyleBackColor = false;
             this.btnRecuPIN.Click += new System.EventHandler(this.btnRecuPIN_Click);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(221, 186);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.ShortcutsEnabled = false;
+            this.txtUser.Size = new System.Drawing.Size(224, 20);
+            this.txtUser.TabIndex = 11;
             // 
             // frmRecuperar
             // 
@@ -247,7 +250,6 @@
         private System.Windows.Forms.Button btnMetodo2;
         private System.Windows.Forms.Button btnMetodo1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lblIngresoCodigo;
@@ -256,5 +258,6 @@
         private System.Windows.Forms.TextBox txtNueva;
         private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.Button btnRecuPIN;
+        private System.Windows.Forms.TextBox txtUser;
     }
 }

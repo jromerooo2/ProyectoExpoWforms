@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace Controlador
 {
-    public static class EncryptClass
+    public static class ValidacionesClass
     {
         public static string Encrypt(string text)
         {
@@ -24,6 +24,11 @@ namespace Controlador
             }
 
             return strBuilder.ToString();
+        }
+
+        public static bool checkEmailAt(string correo)
+        {
+            return correo.LastIndexOf("@") > -1 ? true : false;
         }
     }
 }

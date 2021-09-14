@@ -11,7 +11,7 @@ namespace Controlador
         {
             public static int Login()
             {
-                string passwordMD5 = EncryptClass.Encrypt(password);               
+                string passwordMD5 = ValidacionesClass.Encrypt(password);               
                 return ModeloLogin.Login(username, passwordMD5);
             }
         static List<int> res = new List<int>();

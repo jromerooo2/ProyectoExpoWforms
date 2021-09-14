@@ -510,9 +510,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.label2.Location = new System.Drawing.Point(311, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(480, 43);
+            this.label2.Size = new System.Drawing.Size(486, 43);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Administracion de Conductor";
+            this.label2.Text = "Administracion de Empleados";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dgvEmpleado
@@ -548,7 +548,7 @@
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
-            // frmIngresoConductores
+            // frmIngresoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -560,7 +560,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "frmIngresoConductores";
+            this.Name = "frmIngresoEmpleado";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmIngresoConductores_Load);
             this.panel2.ResumeLayout(false);

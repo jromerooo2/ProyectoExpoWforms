@@ -18,7 +18,7 @@ namespace Controlador
         public bool RegistrarUsuario(string user, string password, string correo,string pin,int idCargo,int idEmpleado)
         {
             //haciendolo MD5
-            string passMD5 = EncryptClass.Encrypt(password);
+            string passMD5 = ValidacionesClass.Encrypt(password);
 
             return ModeloUsuario.RegistrarUser(idEmpleado, user, passMD5, correo, idCargo, pin);
         }
@@ -45,7 +45,7 @@ namespace Controlador
         public bool ActualizarUser(int id, int id_empleado, string user, string correo, string password, int id_cargo)
         {
             //haciendolo MD5
-            string passMD5 = EncryptClass.Encrypt(password);
+            string passMD5 = ValidacionesClass.Encrypt(password);
 
             return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, passMD5, id_cargo);
         }

@@ -43,7 +43,7 @@ namespace Controlador
 
         public bool RestaurarContra_Controller()
         {
-            string contraMD5 = EncryptClass.Encrypt(nuevacontra);
+            string contraMD5 = ValidacionesClass.Encrypt(nuevacontra);
             return ModeloRecuperar.RestaurarClave(usuariorecu, contraMD5);
         }
 
@@ -62,13 +62,13 @@ namespace Controlador
         public bool ActualizarContra(string contra)
         {
             //haciendolo MD5
-            string passMD5 = EncryptClass.Encrypt(contra);
+            string passMD5 = ValidacionesClass.Encrypt(contra);
             return ModeloRecuperar.ActualizarContra(passMD5, res[0]);
         }
 
         public bool ActualizarContraPIN()
         {
-            string passMD5 = EncryptClass.Encrypt(nuevacontra);
+            string passMD5 = ValidacionesClass.Encrypt(nuevacontra);
             return ModeloRecuperar.RecuperarByPIN(PINseguridad, passMD5);
         }
 
