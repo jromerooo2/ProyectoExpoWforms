@@ -264,6 +264,7 @@
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(132, 240);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(100, 24);
             this.txtId.TabIndex = 36;
             // 
@@ -396,7 +397,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label3.Location = new System.Drawing.Point(75, 16);
+            this.label3.Location = new System.Drawing.Point(82, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 35);
             this.label3.TabIndex = 22;
@@ -434,7 +435,7 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(153, 125);
+            this.BtnEliminar.Location = new System.Drawing.Point(153, 117);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(111, 48);
             this.BtnEliminar.TabIndex = 18;
@@ -454,7 +455,7 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnActualizar.Location = new System.Drawing.Point(21, 125);
+            this.BtnActualizar.Location = new System.Drawing.Point(21, 116);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(111, 48);
             this.BtnActualizar.TabIndex = 17;
@@ -474,7 +475,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.Location = new System.Drawing.Point(153, 64);
+            this.button4.Location = new System.Drawing.Point(153, 52);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(111, 49);
             this.button4.TabIndex = 16;
@@ -494,7 +495,7 @@
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAgregar.Location = new System.Drawing.Point(21, 64);
+            this.BtnAgregar.Location = new System.Drawing.Point(21, 52);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(111, 49);
             this.BtnAgregar.TabIndex = 15;
