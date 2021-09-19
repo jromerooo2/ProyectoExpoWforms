@@ -17,5 +17,14 @@ namespace SistemGestionBuses
             InitializeComponent();
         }
 
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void picBackground_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
