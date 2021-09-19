@@ -84,7 +84,7 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.cmbMunicipio_final);
-            this.panel4.Location = new System.Drawing.Point(497, 86);
+            this.panel4.Location = new System.Drawing.Point(497, 75);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(482, 342);
             this.panel4.TabIndex = 97;
@@ -302,7 +302,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnCargarMapa);
-            this.panel1.Location = new System.Drawing.Point(497, 442);
+            this.panel1.Location = new System.Drawing.Point(497, 431);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(482, 87);
             this.panel1.TabIndex = 100;
@@ -343,7 +343,7 @@
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(22, 86);
+            this.gMapControl1.Location = new System.Drawing.Point(22, 75);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
