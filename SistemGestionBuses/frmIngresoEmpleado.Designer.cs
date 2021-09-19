@@ -439,7 +439,7 @@
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(111, 48);
             this.BtnEliminar.TabIndex = 18;
-            this.BtnEliminar.Text = "Eliminar Conductor";
+            this.BtnEliminar.Text = "Eliminar Empleado";
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_click);
             // 
@@ -459,7 +459,7 @@
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(111, 48);
             this.BtnActualizar.TabIndex = 17;
-            this.BtnActualizar.Text = "Modificar Conductor";
+            this.BtnActualizar.Text = "Modificar Empleado";
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_click);
             // 
@@ -499,7 +499,7 @@
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(111, 49);
             this.BtnAgregar.TabIndex = 15;
-            this.BtnAgregar.Text = "Agregar Conductor";
+            this.BtnAgregar.Text = "Agregar Empleado";
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.btnAgregar_click);
             // 
@@ -542,7 +542,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(91, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(86, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

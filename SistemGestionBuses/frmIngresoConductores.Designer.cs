@@ -240,9 +240,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label12.Location = new System.Drawing.Point(26, 11);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(171, 20);
+            this.label12.Size = new System.Drawing.Size(168, 20);
             this.label12.TabIndex = 50;
-            this.label12.Text = "Nombre del Empleado:";
+            this.label12.Text = "Nombre del Conductor";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtUser
@@ -254,6 +254,7 @@
             this.txtUser.ShortcutsEnabled = false;
             this.txtUser.Size = new System.Drawing.Size(253, 22);
             this.txtUser.TabIndex = 45;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // cmbEmpleado
             // 
@@ -372,7 +373,7 @@
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(910, 43);
+            this.panelBar.Size = new System.Drawing.Size(910, 36);
             this.panelBar.TabIndex = 99;
             // 
             // bunifuImageButton1
@@ -380,7 +381,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(874, 12);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(876, 8);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(24, 20);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

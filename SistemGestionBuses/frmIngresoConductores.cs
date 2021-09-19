@@ -25,6 +25,11 @@ namespace SistemGestionBuses
         private void picBackground_Click(object sender, EventArgs e)
         {
 
-        }      
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

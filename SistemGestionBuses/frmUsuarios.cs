@@ -303,5 +303,10 @@ namespace SistemGestionBuses
                 imageUser.Image = Image.FromFile(dlg.FileName);
             }
         }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

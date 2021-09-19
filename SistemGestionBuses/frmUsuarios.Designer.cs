@@ -342,6 +342,7 @@
             this.txtUser.ShortcutsEnabled = false;
             this.txtUser.Size = new System.Drawing.Size(236, 24);
             this.txtUser.TabIndex = 45;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // cmbEmpleado
             // 
