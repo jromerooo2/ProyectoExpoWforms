@@ -306,6 +306,7 @@
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(57, 20);
             this.txtIdCliente.TabIndex = 61;
+            this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
             // 
             // panel2
             // 

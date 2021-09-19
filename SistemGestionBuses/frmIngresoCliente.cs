@@ -348,5 +348,11 @@ namespace SistemGestionBuses
                 e.Handled = true;
             }
         }
+
+        private void txtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+            txtIdCliente.ReadOnly = true;
+
+        }
     }
 }
