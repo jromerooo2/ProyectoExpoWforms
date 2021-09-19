@@ -27,6 +27,13 @@ namespace SistemGestionBuses
             CargarTipoCliente();
             datosClien = ControladorIngresoCliente.CargarClienteControlador();
             dgvDatosCliente.DataSource = datosClien;
+            dgvDatosCliente.Columns[0].Visible = false;
+            dgvDatosCliente.Columns[1].HeaderText = "Nombre";
+            dgvDatosCliente.Columns[2].HeaderText = "Apellido";
+            dgvDatosCliente.Columns[3].HeaderText = "Telefono";
+            dgvDatosCliente.Columns[4].HeaderText = "Tipo de cliente";
+            dgvDatosCliente.Columns[5].HeaderText = "Direccion";
+            dgvDatosCliente.Columns[6].HeaderText = "Correo";
         }
         void CargarTipoCliente()
         {
@@ -289,6 +296,57 @@ namespace SistemGestionBuses
         private void BtnLimCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void KeyNombre(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+    if (Char.IsControl(e.KeyChar)) 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void KeyApellido(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+               if (Char.IsControl(e.KeyChar)) 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void KeyNummero(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+               if (Char.IsControl(e.KeyChar)) 
+            {
+                e.Handled = false;
+            }
+            else
+            {               
+                e.Handled = true;
+            }
         }
     }
 }

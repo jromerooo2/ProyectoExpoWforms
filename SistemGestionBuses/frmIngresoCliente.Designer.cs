@@ -156,6 +156,7 @@
             this.txtApeCliente.Size = new System.Drawing.Size(131, 20);
             this.txtApeCliente.TabIndex = 50;
             this.txtApeCliente.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtApeCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyApellido);
             // 
             // txtCorCliente
             // 
@@ -172,6 +173,7 @@
             this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
             this.txtTelCliente.TabIndex = 48;
             this.txtTelCliente.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtTelCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyNummero);
             // 
             // txtNomCliente
             // 
@@ -180,6 +182,7 @@
             this.txtNomCliente.Size = new System.Drawing.Size(131, 20);
             this.txtNomCliente.TabIndex = 47;
             this.txtNomCliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNomCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyNombre);
             // 
             // btnEliminarClientes
             // 
