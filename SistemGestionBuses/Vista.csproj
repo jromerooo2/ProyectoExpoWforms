@@ -105,6 +105,12 @@
     <Compile Include="frmIngresoCliente.Designer.cs">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIngresoConductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresoConductores.Designer.cs">
+      <DependentUpon>frmIngresoConductores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresoCliente.resx">
       <DependentUpon>frmIngresoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresoConductores.resx">
+      <DependentUpon>frmIngresoConductores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresoEmpleado.resx">
       <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
