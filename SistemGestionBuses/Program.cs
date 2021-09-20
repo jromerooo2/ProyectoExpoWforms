@@ -17,7 +17,7 @@ namespace SistemGestionBuses
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-            //pasen siempre a frmLogin plis
+            //pasen siempre a frmLogin plis - Aviso Parroquial
         }
     }
 }

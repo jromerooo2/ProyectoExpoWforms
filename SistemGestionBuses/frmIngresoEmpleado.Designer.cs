@@ -35,14 +35,12 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtNIT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.TxtDUI = new System.Windows.Forms.TextBox();
             this.TxtNombres = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -66,6 +64,8 @@
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
+            this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -76,19 +76,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.txtNIT);
+            this.panel2.Controls.Add(this.TxtDUI);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.lblApellido);
             this.panel2.Controls.Add(this.TxtApellidos);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtNIT);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.dtNacimiento);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.TxtDireccion);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.TxtDUI);
             this.panel2.Controls.Add(this.TxtNombres);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txtId);
@@ -158,14 +158,6 @@
             this.label11.Text = "NIT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtNIT
-            // 
-            this.txtNIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNIT.Location = new System.Drawing.Point(30, 195);
-            this.txtNIT.Name = "txtNIT";
-            this.txtNIT.Size = new System.Drawing.Size(254, 24);
-            this.txtNIT.TabIndex = 59;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -231,14 +223,6 @@
             this.label12.TabIndex = 50;
             this.label12.Text = "Nombre del empleado";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // TxtDUI
-            // 
-            this.TxtDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDUI.Location = new System.Drawing.Point(30, 143);
-            this.TxtDUI.Name = "TxtDUI";
-            this.TxtDUI.Size = new System.Drawing.Size(254, 24);
-            this.TxtDUI.TabIndex = 48;
             // 
             // TxtNombres
             // 
@@ -550,6 +534,22 @@
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
+            // TxtDUI
+            // 
+            this.TxtDUI.Location = new System.Drawing.Point(30, 146);
+            this.TxtDUI.Mask = "00000000-0";
+            this.TxtDUI.Name = "TxtDUI";
+            this.TxtDUI.Size = new System.Drawing.Size(254, 20);
+            this.TxtDUI.TabIndex = 65;
+            // 
+            // txtNIT
+            // 
+            this.txtNIT.Location = new System.Drawing.Point(30, 200);
+            this.txtNIT.Mask = "0000-000000-000-0";
+            this.txtNIT.Name = "txtNIT";
+            this.txtNIT.Size = new System.Drawing.Size(257, 20);
+            this.txtNIT.TabIndex = 66;
+            // 
             // frmIngresoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,18 +603,18 @@
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox TxtDUI;
         private System.Windows.Forms.TextBox TxtNombres;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtNacimiento;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtNIT;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox TxtApellidos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox txtNIT;
+        private System.Windows.Forms.MaskedTextBox TxtDUI;
     }
 }

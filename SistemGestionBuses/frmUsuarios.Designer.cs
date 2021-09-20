@@ -316,6 +316,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(30, 91);
+            this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ShortcutsEnabled = false;
             this.txtPassword.Size = new System.Drawing.Size(236, 24);
@@ -338,6 +339,7 @@
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(30, 39);
+            this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
             this.txtUser.Size = new System.Drawing.Size(236, 24);
@@ -380,6 +382,7 @@
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(349, 320);
