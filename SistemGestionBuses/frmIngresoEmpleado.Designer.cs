@@ -112,10 +112,11 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label8.Location = new System.Drawing.Point(492, 132);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 20);
+            this.label8.Size = new System.Drawing.Size(170, 20);
             this.label8.TabIndex = 64;
-            this.label8.Text = "Telefono del conductor";
+            this.label8.Text = "Telefono del empleado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtTelefono
             // 
@@ -132,9 +133,9 @@
             this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.lblApellido.Location = new System.Drawing.Point(30, 68);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(175, 20);
+            this.lblApellido.Size = new System.Drawing.Size(173, 20);
             this.lblApellido.TabIndex = 62;
-            this.lblApellido.Text = "Apellidos del conductor";
+            this.lblApellido.Text = "Apellidos del empleado";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TxtApellidos
@@ -226,9 +227,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label12.Location = new System.Drawing.Point(30, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(167, 20);
+            this.label12.Size = new System.Drawing.Size(165, 20);
             this.label12.TabIndex = 50;
-            this.label12.Text = "Nombre del conductor";
+            this.label12.Text = "Nombre del empleado";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TxtDUI
