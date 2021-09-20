@@ -27,7 +27,7 @@ namespace SistemGestionBuses
          capturando talvez el texto sleccionado en cada combobox y textbox concatenandolos de manera que sea efectivo*/
         void CrearNombreUnidad()
         {
-
+            
         }
 
         void CargarComboBoxes()
