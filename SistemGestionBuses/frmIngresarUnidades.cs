@@ -52,6 +52,19 @@ namespace SistemGestionBuses
         {
             unidades = ControladorTransporte.ObtenerUnidadesController();
             dgvUnidades.DataSource = unidades;
+            //dgvunidades.columns[0].headertext = "id usuario";
+            //dgvunidades.columns[0].visible = false;
+            dgvUnidades.Columns[0].HeaderText = "Año";
+            dgvUnidades.Columns[1].HeaderText = "VIN";
+            dgvUnidades.Columns[2].HeaderText = "Capacidad";
+            dgvUnidades.Columns[3].HeaderText = "Placa";
+            dgvUnidades.Columns[4].HeaderText = "Tipo de Placa";
+            dgvUnidades.Columns[5].HeaderText = "Tipo de Unidad";
+            dgvUnidades.Columns[6].HeaderText = "Modelo";
+            dgvUnidades.Columns[7].HeaderText = "Marca";
+            dgvUnidades.Columns[8].HeaderText = "Estado de la Unidad";
+            dgvUnidades.Columns[9].HeaderText = "Número de Motor";
+            dgvUnidades.Columns[10].HeaderText = "Número de Chasis";
         }
 
         #region CMB
@@ -297,6 +310,11 @@ namespace SistemGestionBuses
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnActualizarGrid_Click(object sender, EventArgs e)
+        {
+            CargarGrid();
         }
     }
 }
