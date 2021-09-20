@@ -52,8 +52,12 @@ namespace SistemGestionBuses
             {
                 DataTable data = ControladorUsuario.CargarUsuarios();
                 dgvUsuarios.DataSource = data;
-                dgvUsuarios.Columns[0].HeaderText = "Id Usuario";
                 dgvUsuarios.Columns[0].Visible = false;
+                dgvUsuarios.Columns[1].HeaderText = "Nombre de Usuario";
+                dgvUsuarios.Columns[2].HeaderText = "Correo Electrónico";
+                dgvUsuarios.Columns[3].HeaderText = "Contraseña";
+                dgvUsuarios.Columns[4].HeaderText = "Empleados";
+                dgvUsuarios.Columns[5].HeaderText = "Cargo";
             }
             catch (Exception )
             {
