@@ -1,5 +1,7 @@
 ﻿using System.Text;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace Controlador
 {
@@ -9,17 +11,13 @@ namespace Controlador
         {
             MD5 md5 = new MD5CryptoServiceProvider();
 
-            //compute hash from the bytes of text  
             md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
 
-            //get hash result after compute it  
             byte[] result = md5.Hash;
 
             StringBuilder strBuilder = new StringBuilder();
             for (int i = 0; i < result.Length; i++)
             {
-                //change it into 2 hexadecimal digits  
-                //for each byte  
                 strBuilder.Append(result[i].ToString("x2"));
             }
 
@@ -30,5 +28,25 @@ namespace Controlador
         {
             return correo.LastIndexOf("@") > -1 ? true : false;
         }
+        public static bool hasNumbers(string text)
+        {
+            string specialChar = @"1234567890";
+            foreach (var item in specialChar)
+            {
+                if (text.Contains(item)) return true;
+            }
+
+            return false;
+        }
+        public static bool hasSpecialChars(string text)
+        {
+            var specialChars = new Regex("^[ +-/'=]*$");
+
+            if (specialChars.IsMatch(text)) return true;
+            else return false;
+        }
+
+
+
     }
 }

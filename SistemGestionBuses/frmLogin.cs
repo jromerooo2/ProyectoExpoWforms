@@ -62,7 +62,7 @@ namespace SistemGestionBuses
 
         private bool Empty(string user, string password)
         {
-            if (String.IsNullOrEmpty(user) && String.IsNullOrEmpty(password))
+            if (String.IsNullOrWhiteSpace(user) && String.IsNullOrWhiteSpace(password))
             {
                 return true;
             }
@@ -96,15 +96,17 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (!Empty(txtUser.Text, txtPass.Text) )
+
+
+            if (!Empty(txtUser.Text, txtPass.Text))
             {
                 tryLogIn();
             }
             else
             {
-                MessageBox.Show("Por favor ingresa datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                MessageBox.Show("Por favor ingresa datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
     }
 }

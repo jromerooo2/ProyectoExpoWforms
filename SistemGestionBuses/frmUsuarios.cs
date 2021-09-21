@@ -40,7 +40,7 @@ namespace SistemGestionBuses
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
-        {
+        {          
             txtPin.MaxLength = 8;
             CargarDatos();
             cargarGridDatos();
