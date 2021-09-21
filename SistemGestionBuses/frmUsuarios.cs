@@ -43,7 +43,24 @@ namespace SistemGestionBuses
         {          
            // txtPin.MaxLength = 8;
             CargarDatos();
+            GetOnlineUsers();
             cargarGridDatos();
+        }
+
+        private void GetOnlineUsers()
+        {
+            try
+            {
+                DataTable data = ControladorUsuario.GetOnlineUsers();
+                dgvOnlineUsers.DataSource = data;
+                dgvOnlineUsers.Columns[0].HeaderText = "Nombre de Usuario";
+                dgvOnlineUsers.Columns[1].HeaderText = "Correo Electrónico";
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void cargarGridDatos()

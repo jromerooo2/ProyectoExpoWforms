@@ -63,6 +63,24 @@ namespace Modelo
             }
         }
 
+        public static DataTable GetOnlineUsers()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT nombre_usuario, correo_usuario FROM tb_usuarios WHERE sesion=1";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         public static void BlockUser(string user)
         {
             try

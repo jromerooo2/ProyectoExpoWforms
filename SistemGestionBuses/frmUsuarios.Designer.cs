@@ -51,7 +51,7 @@
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOnlineUsers = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Location = new System.Drawing.Point(49, 65);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 252);
             this.panel1.TabIndex = 73;
@@ -94,7 +94,7 @@
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button3.Location = new System.Drawing.Point(205, 46);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 65);
             this.button3.TabIndex = 19;
@@ -114,7 +114,7 @@
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnEliminar.Location = new System.Drawing.Point(205, 118);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(148, 59);
             this.BtnEliminar.TabIndex = 18;
@@ -135,7 +135,7 @@
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnActualizar.Location = new System.Drawing.Point(29, 118);
-            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(148, 59);
             this.BtnActualizar.TabIndex = 17;
@@ -157,7 +157,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnAgregar.Location = new System.Drawing.Point(29, 46);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(148, 60);
             this.BtnAgregar.TabIndex = 15;
@@ -181,7 +181,7 @@
             this.panel2.Controls.Add(this.cmbEmpleado);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(436, 65);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(943, 252);
             this.panel2.TabIndex = 74;
@@ -199,7 +199,7 @@
             this.button2.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button2.Location = new System.Drawing.Point(764, 190);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 42);
             this.button2.TabIndex = 20;
@@ -210,7 +210,7 @@
             // imageUser
             // 
             this.imageUser.Location = new System.Drawing.Point(751, 63);
-            this.imageUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imageUser.Margin = new System.Windows.Forms.Padding(4);
             this.imageUser.Name = "imageUser";
             this.imageUser.Size = new System.Drawing.Size(175, 114);
             this.imageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +222,7 @@
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(784, 20);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(55, 28);
             this.txtId.TabIndex = 67;
@@ -244,7 +244,7 @@
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(50, 142);
-            this.cmbCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCargo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(308, 30);
             this.cmbCargo.TabIndex = 66;
@@ -280,7 +280,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(421, 142);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.ShortcutsEnabled = false;
             this.txtCorreo.Size = new System.Drawing.Size(268, 28);
@@ -303,7 +303,7 @@
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(45, 78);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
@@ -316,7 +316,7 @@
             this.cmbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpleado.FormattingEnabled = true;
             this.cmbEmpleado.Location = new System.Drawing.Point(421, 76);
-            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmpleado.Name = "cmbEmpleado";
             this.cmbEmpleado.Size = new System.Drawing.Size(268, 30);
             this.cmbEmpleado.TabIndex = 22;
@@ -340,7 +340,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label2.Location = new System.Drawing.Point(461, 337);
+            this.label2.Location = new System.Drawing.Point(477, 337);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 52);
@@ -353,10 +353,10 @@
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(465, 394);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvUsuarios.Location = new System.Drawing.Point(486, 394);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(909, 357);
+            this.dgvUsuarios.Size = new System.Drawing.Size(888, 357);
             this.dgvUsuarios.TabIndex = 71;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
@@ -388,14 +388,15 @@
             this.label5.Text = "Acciones";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dataGridView1
+            // dgvOnlineUsers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(60, 394);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(379, 357);
-            this.dataGridView1.TabIndex = 78;
+            this.dgvOnlineUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOnlineUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOnlineUsers.Location = new System.Drawing.Point(49, 394);
+            this.dgvOnlineUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOnlineUsers.Name = "dgvOnlineUsers";
+            this.dgvOnlineUsers.Size = new System.Drawing.Size(429, 357);
+            this.dgvOnlineUsers.TabIndex = 78;
             // 
             // label3
             // 
@@ -403,7 +404,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label3.Location = new System.Drawing.Point(48, 337);
+            this.label3.Location = new System.Drawing.Point(40, 338);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(249, 52);
@@ -416,8 +417,8 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(325, 341);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(406, 347);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -428,8 +429,8 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(688, 337);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(731, 341);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(63, 43);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -441,7 +442,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(273, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -457,14 +458,14 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOnlineUsers);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
@@ -474,7 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -501,7 +502,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOnlineUsers;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;

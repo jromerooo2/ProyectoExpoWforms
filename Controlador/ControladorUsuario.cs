@@ -47,6 +47,11 @@ namespace Controlador
             return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, id_cargo);
         }
 
+        public static DataTable GetOnlineUsers()
+        {
+            return ModeloUsuario.GetOnlineUsers();
+        }
+
         public static void BlockUser(string user)
         {
             ModeloUsuario.BlockUser(user);
