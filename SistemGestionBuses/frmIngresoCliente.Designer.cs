@@ -39,7 +39,6 @@
             this.txtDirCliente = new System.Windows.Forms.TextBox();
             this.txtApeCliente = new System.Windows.Forms.TextBox();
             this.txtCorCliente = new System.Windows.Forms.TextBox();
-            this.txtTelCliente = new System.Windows.Forms.TextBox();
             this.txtNomCliente = new System.Windows.Forms.TextBox();
             this.btnEliminarClientes = new System.Windows.Forms.Button();
             this.btnActualizarCliente = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTelCliente = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,6 +62,7 @@
             // 
             // dgvDatosCliente
             // 
+            this.dgvDatosCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDatosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatosCliente.Location = new System.Drawing.Point(12, 287);
             this.dgvDatosCliente.Name = "dgvDatosCliente";
@@ -166,15 +167,6 @@
             this.txtCorCliente.TabIndex = 49;
             this.txtCorCliente.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // txtTelCliente
-            // 
-            this.txtTelCliente.Location = new System.Drawing.Point(358, 31);
-            this.txtTelCliente.Name = "txtTelCliente";
-            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtTelCliente.TabIndex = 48;
-            this.txtTelCliente.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.txtTelCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyNummero);
-            // 
             // txtNomCliente
             // 
             this.txtNomCliente.Location = new System.Drawing.Point(10, 31);
@@ -268,6 +260,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.txtTelCliente);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.cmbTipCliente);
             this.panel1.Controls.Add(this.txtIdCliente);
@@ -279,7 +272,6 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtDirCliente);
             this.panel1.Controls.Add(this.txtNomCliente);
-            this.panel1.Controls.Add(this.txtTelCliente);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
@@ -288,6 +280,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(471, 269);
             this.panel1.TabIndex = 78;
+            // 
+            // txtTelCliente
+            // 
+            this.txtTelCliente.Location = new System.Drawing.Point(358, 31);
+            this.txtTelCliente.Mask = "0000-0000";
+            this.txtTelCliente.Name = "txtTelCliente";
+            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCliente.TabIndex = 63;
             // 
             // label7
             // 
@@ -302,11 +302,11 @@
             // 
             // txtIdCliente
             // 
+            this.txtIdCliente.Enabled = false;
             this.txtIdCliente.Location = new System.Drawing.Point(247, 200);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(57, 20);
             this.txtIdCliente.TabIndex = 61;
-            this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
             // 
             // panel2
             // 
@@ -365,7 +365,6 @@
         private System.Windows.Forms.TextBox txtDirCliente;
         private System.Windows.Forms.TextBox txtApeCliente;
         private System.Windows.Forms.TextBox txtCorCliente;
-        private System.Windows.Forms.TextBox txtTelCliente;
         private System.Windows.Forms.TextBox txtNomCliente;
         private System.Windows.Forms.Button btnEliminarClientes;
         private System.Windows.Forms.Button btnActualizarCliente;
@@ -379,5 +378,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox txtTelCliente;
     }
 }

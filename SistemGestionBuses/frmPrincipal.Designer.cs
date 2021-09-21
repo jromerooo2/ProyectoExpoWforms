@@ -207,7 +207,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(46, 27);
+            this.pictureBox7.Location = new System.Drawing.Point(44, 27);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(113, 92);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +278,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(805, 741);
+            this.pictureBox1.Size = new System.Drawing.Size(805, 678);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -304,7 +304,7 @@
             this.cardUsers.Controls.Add(this.pictureUsers);
             this.cardUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardUsers.LeftSahddow = false;
-            this.cardUsers.Location = new System.Drawing.Point(66, 206);
+            this.cardUsers.Location = new System.Drawing.Point(50, 148);
             this.cardUsers.Name = "cardUsers";
             this.cardUsers.RightSahddow = true;
             this.cardUsers.ShadowDepth = 20;
@@ -323,7 +323,7 @@
             this.bunifuCards1.Controls.Add(this.pictureBox2);
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(308, 206);
+            this.bunifuCards1.Location = new System.Drawing.Point(292, 148);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
@@ -341,7 +341,7 @@
             this.bunifuCards2.Controls.Add(this.pictureBox7);
             this.bunifuCards2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(551, 206);
+            this.bunifuCards2.Location = new System.Drawing.Point(535, 148);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
@@ -360,7 +360,7 @@
             this.cardEmpleado.Controls.Add(this.pictureBox4);
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
-            this.cardEmpleado.Location = new System.Drawing.Point(66, 389);
+            this.cardEmpleado.Location = new System.Drawing.Point(50, 331);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
             this.cardEmpleado.ShadowDepth = 20;
@@ -401,7 +401,7 @@
             this.cardMantenimientos.Controls.Add(this.pictureBox5);
             this.cardMantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardMantenimientos.LeftSahddow = false;
-            this.cardMantenimientos.Location = new System.Drawing.Point(308, 389);
+            this.cardMantenimientos.Location = new System.Drawing.Point(292, 331);
             this.cardMantenimientos.Name = "cardMantenimientos";
             this.cardMantenimientos.RightSahddow = true;
             this.cardMantenimientos.ShadowDepth = 20;
@@ -419,7 +419,7 @@
             this.cardClientes.Controls.Add(this.pictureBox6);
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
-            this.cardClientes.Location = new System.Drawing.Point(551, 389);
+            this.cardClientes.Location = new System.Drawing.Point(535, 331);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
             this.cardClientes.ShadowDepth = 20;
@@ -438,7 +438,7 @@
             this.cardReportes.Controls.Add(this.pictureBox8);
             this.cardReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardReportes.LeftSahddow = false;
-            this.cardReportes.Location = new System.Drawing.Point(172, 569);
+            this.cardReportes.Location = new System.Drawing.Point(156, 511);
             this.cardReportes.Name = "cardReportes";
             this.cardReportes.RightSahddow = true;
             this.cardReportes.ShadowDepth = 20;
@@ -455,7 +455,7 @@
             this.bunifuCards6.Controls.Add(this.pictureBox9);
             this.bunifuCards6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards6.LeftSahddow = false;
-            this.bunifuCards6.Location = new System.Drawing.Point(438, 569);
+            this.bunifuCards6.Location = new System.Drawing.Point(422, 511);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 20;
@@ -466,7 +466,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 741);
+            this.ClientSize = new System.Drawing.Size(805, 678);
             this.Controls.Add(this.bunifuCards6);
             this.Controls.Add(this.cardReportes);
             this.Controls.Add(this.cardClientes);

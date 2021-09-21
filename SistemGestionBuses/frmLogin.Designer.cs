@@ -83,7 +83,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(198, 29);
-            this.txtPass.TabIndex = 16;
+            this.txtPass.TabIndex = 16;           
             // 
             // txtUser
             // 
