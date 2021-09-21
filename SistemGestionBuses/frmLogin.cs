@@ -105,6 +105,6 @@ namespace SistemGestionBuses
                 MessageBox.Show("Por favor ingresa datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning );
             }
             
-        }
+        }        
     }
 }

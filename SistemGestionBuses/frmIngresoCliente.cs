@@ -300,14 +300,9 @@ namespace SistemGestionBuses
 
         private void KeyNombre(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
+            if (char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
-            }
-            else
-    if (Char.IsControl(e.KeyChar)) 
-            {
-                e.Handled = false;
             }
             else
             {
@@ -317,14 +312,9 @@ namespace SistemGestionBuses
 
         private void KeyApellido(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
+            if (char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
-            }
-            else
-               if (Char.IsControl(e.KeyChar)) 
-            {
-                e.Handled = false;
             }
             else
             {
@@ -349,10 +339,6 @@ namespace SistemGestionBuses
             }
         }
 
-        private void txtIdCliente_TextChanged(object sender, EventArgs e)
-        {
-            txtIdCliente.ReadOnly = true;
-
-        }
+       
     }
 }

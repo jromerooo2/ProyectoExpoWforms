@@ -48,11 +48,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTelCliente = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtTelCliente = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -281,6 +281,14 @@
             this.panel1.Size = new System.Drawing.Size(471, 269);
             this.panel1.TabIndex = 78;
             // 
+            // txtTelCliente
+            // 
+            this.txtTelCliente.Location = new System.Drawing.Point(358, 31);
+            this.txtTelCliente.Mask = "0000-0000";
+            this.txtTelCliente.Name = "txtTelCliente";
+            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCliente.TabIndex = 63;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -294,11 +302,11 @@
             // 
             // txtIdCliente
             // 
+            this.txtIdCliente.Enabled = false;
             this.txtIdCliente.Location = new System.Drawing.Point(247, 200);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(57, 20);
             this.txtIdCliente.TabIndex = 61;
-            this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
             // 
             // panel2
             // 
@@ -321,14 +329,6 @@
             this.button2.Text = "Actualizar Grid de datos";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.BtnActualizarGrid_click);
-            // 
-            // txtTelCliente
-            // 
-            this.txtTelCliente.Location = new System.Drawing.Point(358, 31);
-            this.txtTelCliente.Mask = "0000-0000";
-            this.txtTelCliente.Name = "txtTelCliente";
-            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtTelCliente.TabIndex = 63;
             // 
             // frmIngresoCliente
             // 
