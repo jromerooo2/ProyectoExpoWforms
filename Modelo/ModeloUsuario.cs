@@ -46,12 +46,13 @@ namespace Modelo
             }
         }
 
-        public static bool ActualizarUser(int id, int id_empleado, string user, string correo, string password, int id_cargo)
+        public static bool ActualizarUser(int id, int id_empleado, string user, string correo, int id_cargo)
         {
             bool res = false;
+            //string password = "1234";
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET id_empleado= '" + id_empleado+ "', nombre_usuario= '" + user+ "',  correo_usuario= '" + correo+ "', contrasena= '" + password+ "', cargo_usuario=" + id_cargo+" WHERE id_usuario= '" + id + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET id_empleado= '" + id_empleado+ "', nombre_usuario= '" + user+ "',  correo_usuario= '" + correo+ "', cargo_usuario=" + id_cargo+" WHERE id_usuario= '" + id + "'"), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }
@@ -145,9 +146,11 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int pid_empleado, string user, string password, string correo, int cargo, string pin )
+        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo)
         {
             bool res = false;
+            string password = "123";
+            string pin = "12345678";
             try
             {
                 int estado = 1;

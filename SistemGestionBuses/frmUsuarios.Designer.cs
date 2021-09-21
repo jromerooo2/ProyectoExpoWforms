@@ -38,15 +38,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.imageUser = new System.Windows.Forms.PictureBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.txtPin = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
@@ -78,9 +74,10 @@
             this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.BtnAgregar);
-            this.panel1.Location = new System.Drawing.Point(37, 53);
+            this.panel1.Location = new System.Drawing.Point(49, 65);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 205);
+            this.panel1.Size = new System.Drawing.Size(379, 252);
             this.panel1.TabIndex = 73;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -96,9 +93,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(154, 37);
+            this.button3.Location = new System.Drawing.Point(205, 46);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 53);
+            this.button3.Size = new System.Drawing.Size(148, 65);
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
@@ -115,9 +113,10 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(154, 96);
+            this.BtnEliminar.Location = new System.Drawing.Point(205, 118);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(111, 48);
+            this.BtnEliminar.Size = new System.Drawing.Size(148, 59);
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Usuario";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -135,9 +134,10 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnActualizar.Location = new System.Drawing.Point(22, 96);
+            this.BtnActualizar.Location = new System.Drawing.Point(29, 118);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(111, 48);
+            this.BtnActualizar.Size = new System.Drawing.Size(148, 59);
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Usuario";
             this.BtnActualizar.UseVisualStyleBackColor = false;
@@ -156,9 +156,10 @@
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAgregar.Location = new System.Drawing.Point(22, 37);
+            this.BtnAgregar.Location = new System.Drawing.Point(29, 46);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(111, 49);
+            this.BtnAgregar.Size = new System.Drawing.Size(148, 60);
             this.BtnAgregar.TabIndex = 15;
             this.BtnAgregar.Text = "Agregar Usuario";
             this.BtnAgregar.UseVisualStyleBackColor = false;
@@ -170,22 +171,19 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.imageUser);
             this.panel2.Controls.Add(this.txtId);
-            this.panel2.Controls.Add(this.txtPin);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.cmbCargo);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtCorreo);
-            this.panel2.Controls.Add(this.lblApellido);
-            this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txtUser);
             this.panel2.Controls.Add(this.cmbEmpleado);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(327, 53);
+            this.panel2.Location = new System.Drawing.Point(436, 65);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(707, 205);
+            this.panel2.Size = new System.Drawing.Size(943, 252);
             this.panel2.TabIndex = 74;
             // 
             // button2
@@ -200,9 +198,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button2.Location = new System.Drawing.Point(573, 154);
+            this.button2.Location = new System.Drawing.Point(764, 190);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 34);
+            this.button2.Size = new System.Drawing.Size(161, 42);
             this.button2.TabIndex = 20;
             this.button2.Text = "Añadir Imagen";
             this.button2.UseVisualStyleBackColor = false;
@@ -210,9 +209,10 @@
             // 
             // imageUser
             // 
-            this.imageUser.Location = new System.Drawing.Point(563, 51);
+            this.imageUser.Location = new System.Drawing.Point(751, 63);
+            this.imageUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imageUser.Name = "imageUser";
-            this.imageUser.Size = new System.Drawing.Size(131, 93);
+            this.imageUser.Size = new System.Drawing.Size(175, 114);
             this.imageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageUser.TabIndex = 72;
             this.imageUser.TabStop = false;
@@ -221,49 +221,32 @@
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(588, 16);
+            this.txtId.Location = new System.Drawing.Point(784, 20);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(42, 24);
+            this.txtId.Size = new System.Drawing.Size(55, 28);
             this.txtId.TabIndex = 67;
-            // 
-            // txtPin
-            // 
-            this.txtPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPin.Location = new System.Drawing.Point(312, 139);
-            this.txtPin.Name = "txtPin";
-            this.txtPin.ShortcutsEnabled = false;
-            this.txtPin.Size = new System.Drawing.Size(202, 24);
-            this.txtPin.TabIndex = 71;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(559, 16);
+            this.label7.Location = new System.Drawing.Point(745, 20);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 20);
+            this.label7.Size = new System.Drawing.Size(27, 24);
             this.label7.TabIndex = 68;
             this.label7.Text = "ID";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label8.Location = new System.Drawing.Point(308, 118);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(206, 20);
-            this.label8.TabIndex = 69;
-            this.label8.Text = "Ingrese un Pin de seguridad";
             // 
             // cmbCargo
             // 
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(34, 139);
+            this.cmbCargo.Location = new System.Drawing.Point(50, 142);
+            this.cmbCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(232, 26);
+            this.cmbCargo.Size = new System.Drawing.Size(308, 30);
             this.cmbCargo.TabIndex = 66;
             this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.cmbCargo_SelectedIndexChanged);
             this.cmbCargo.Click += new System.EventHandler(this.cmbCargo_Click);
@@ -273,9 +256,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(30, 119);
+            this.label6.Location = new System.Drawing.Point(45, 117);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 20);
+            this.label6.Size = new System.Drawing.Size(61, 24);
             this.label6.TabIndex = 65;
             this.label6.Text = "Cargo";
             // 
@@ -284,9 +268,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(308, 70);
+            this.label1.Location = new System.Drawing.Point(416, 116);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.Size = new System.Drawing.Size(180, 24);
             this.label1.TabIndex = 64;
             this.label1.Text = "Correo Electrónico";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -294,43 +279,22 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(312, 91);
+            this.txtCorreo.Location = new System.Drawing.Point(421, 142);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.ShortcutsEnabled = false;
-            this.txtCorreo.Size = new System.Drawing.Size(202, 24);
+            this.txtCorreo.Size = new System.Drawing.Size(268, 28);
             this.txtCorreo.TabIndex = 63;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.lblApellido.Location = new System.Drawing.Point(30, 68);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(170, 20);
-            this.lblApellido.TabIndex = 62;
-            this.lblApellido.Text = "Contraseña del Usuario";
-            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(30, 91);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.ShortcutsEnabled = false;
-            this.txtPassword.Size = new System.Drawing.Size(236, 24);
-            this.txtPassword.TabIndex = 61;
-            this.txtPassword.TextChanged += new System.EventHandler(this.TxtApellidos_TextChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label12.Location = new System.Drawing.Point(30, 16);
+            this.label12.Location = new System.Drawing.Point(45, 50);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 20);
+            this.label12.Size = new System.Drawing.Size(181, 24);
             this.label12.TabIndex = 50;
             this.label12.Text = "Nombre de Usuario";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -338,11 +302,12 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(30, 39);
+            this.txtUser.Location = new System.Drawing.Point(45, 78);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
-            this.txtUser.Size = new System.Drawing.Size(236, 24);
+            this.txtUser.Size = new System.Drawing.Size(313, 28);
             this.txtUser.TabIndex = 45;
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
@@ -350,9 +315,10 @@
             // 
             this.cmbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(312, 37);
+            this.cmbEmpleado.Location = new System.Drawing.Point(421, 76);
+            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(202, 26);
+            this.cmbEmpleado.Size = new System.Drawing.Size(268, 30);
             this.cmbEmpleado.TabIndex = 22;
             this.cmbEmpleado.Click += new System.EventHandler(this.cmbEmpleado_Click);
             // 
@@ -361,9 +327,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(308, 16);
+            this.label4.Location = new System.Drawing.Point(416, 50);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(97, 24);
             this.label4.TabIndex = 21;
             this.label4.Text = "Empleado";
             // 
@@ -373,9 +340,10 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label2.Location = new System.Drawing.Point(346, 274);
+            this.label2.Location = new System.Drawing.Point(461, 337);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 43);
+            this.label2.Size = new System.Drawing.Size(189, 52);
             this.label2.TabIndex = 72;
             this.label2.Text = "Usuarios";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -385,9 +353,10 @@
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(349, 320);
+            this.dgvUsuarios.Location = new System.Drawing.Point(465, 394);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(682, 290);
+            this.dgvUsuarios.Size = new System.Drawing.Size(909, 357);
             this.dgvUsuarios.TabIndex = 71;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
@@ -398,9 +367,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1046, 618);
+            this.pictureBox2.Size = new System.Drawing.Size(1395, 761);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 75;
             this.pictureBox2.TabStop = false;
@@ -411,9 +380,10 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label5.Location = new System.Drawing.Point(36, 9);
+            this.label5.Location = new System.Drawing.Point(48, 11);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 43);
+            this.label5.Size = new System.Drawing.Size(198, 52);
             this.label5.TabIndex = 77;
             this.label5.Text = "Acciones";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -421,9 +391,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 320);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 394);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(284, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(379, 357);
             this.dataGridView1.TabIndex = 78;
             // 
             // label3
@@ -432,9 +403,10 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label3.Location = new System.Drawing.Point(36, 274);
+            this.label3.Location = new System.Drawing.Point(48, 337);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 43);
+            this.label3.Size = new System.Drawing.Size(249, 52);
             this.label3.TabIndex = 79;
             this.label3.Text = "Conectados";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -444,9 +416,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(244, 277);
+            this.pictureBox3.Location = new System.Drawing.Point(325, 341);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 35);
+            this.pictureBox3.Size = new System.Drawing.Size(63, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 80;
             this.pictureBox3.TabStop = false;
@@ -455,9 +428,10 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(516, 274);
+            this.pictureBox4.Location = new System.Drawing.Point(688, 337);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 35);
+            this.pictureBox4.Size = new System.Drawing.Size(63, 43);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 81;
             this.pictureBox4.TabStop = false;
@@ -466,18 +440,19 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(273, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 82;
             this.pictureBox1.TabStop = false;
             // 
             // frmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 618);
+            this.ClientSize = new System.Drawing.Size(1395, 761);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -489,6 +464,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
@@ -515,8 +491,6 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.ComboBox cmbEmpleado;
@@ -536,8 +510,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtPin;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox imageUser;
         private System.Windows.Forms.Button button2;
     }

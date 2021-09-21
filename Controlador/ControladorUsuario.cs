@@ -15,12 +15,11 @@ namespace Controlador
             return ModeloUsuario.CargarEmpleados();
         }
 
-        public bool RegistrarUsuario(string user, string password, string correo,string pin,int idCargo,int idEmpleado)
+        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado)
         {
             //haciendolo MD5
-            string passMD5 = ValidacionesClass.Encrypt(password);
 
-            return ModeloUsuario.RegistrarUser(idEmpleado, user, passMD5, correo, idCargo, pin);
+            return ModeloUsuario.RegistrarUser(idEmpleado, user, correo, idCargo);
         }
 
         public static DataTable CargarUsuarios()
@@ -42,12 +41,10 @@ namespace Controlador
             return ModeloUsuario.CargarCargoInner(id_empleado);
         }
 
-        public bool ActualizarUser(int id, int id_empleado, string user, string correo, string password, int id_cargo)
+        public bool ActualizarUser(int id, int id_empleado, string user, string correo, int id_cargo)
         {
             //haciendolo MD5
-            string passMD5 = ValidacionesClass.Encrypt(password);
-
-            return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, passMD5, id_cargo);
+            return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, id_cargo);
         }
 
         public static void BlockUser(string user)

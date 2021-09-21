@@ -31,6 +31,12 @@ namespace Modelo
                 }
                 if (res2)
                 {
+                    string session = "UPDATE tb_usuarios SET sesion= 1 WHERE nombre_usuario=BINARY ?param1 AND contrasena=BINARY ?param2  ";
+                    MySqlCommand sesscmd = new MySqlCommand(string.Format(session), ModeloConexion.GetConnection());
+                    sesscmd.Parameters.Add(new MySqlParameter("param1", username));
+                    sesscmd.Parameters.Add(new MySqlParameter("param2", password));
+                    sesscmd.ExecuteNonQuery();
+
                     return 1;
                 }
                 else

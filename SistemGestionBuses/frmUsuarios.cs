@@ -41,7 +41,7 @@ namespace SistemGestionBuses
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {          
-            txtPin.MaxLength = 8;
+           // txtPin.MaxLength = 8;
             CargarDatos();
             cargarGridDatos();
         }
@@ -55,7 +55,7 @@ namespace SistemGestionBuses
                 dgvUsuarios.Columns[0].Visible = false;
                 dgvUsuarios.Columns[1].HeaderText = "Nombre de Usuario";
                 dgvUsuarios.Columns[2].HeaderText = "Correo Electrónico";
-                dgvUsuarios.Columns[3].HeaderText = "Contraseña";
+                dgvUsuarios.Columns[3].Visible = false;
                 dgvUsuarios.Columns[4].HeaderText = "Empleados";
                 dgvUsuarios.Columns[5].HeaderText = "Cargo";
             }
@@ -115,17 +115,17 @@ namespace SistemGestionBuses
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            string user, password, correo, pin;
+            string user,correo;
             int id_empleado, id_cargo;
 
             id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
             user = txtUser.Text;
-            password = txtPassword.Text;
+            //password = txtPassword.Text;
             correo = txtCorreo.Text;
-            pin = txtPin.Text;
+            //pin = txtPin.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
 
-            if (!Empty(user, password, correo,pin) && ValidacionesClass.checkEmailAt(correo))
+            if (!Empty(user, correo) && ValidacionesClass.checkEmailAt(correo))
             {
                 EnvioDatos();
                 cargarGridDatos();
@@ -138,10 +138,10 @@ namespace SistemGestionBuses
         }
         
         
-        bool Empty(string user, string pass, string correo, string pin)
+        bool Empty(string user, string correo)
         {
-            if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(pass) ||
-                String.IsNullOrEmpty(correo) || String.IsNullOrEmpty(pin))
+            if (String.IsNullOrEmpty(user) ||
+                String.IsNullOrEmpty(correo) )
             {
                 return true;
             }
@@ -161,11 +161,9 @@ namespace SistemGestionBuses
 
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 user = txtUser.Text;
-                pin = txtPin.Text;
-                password = txtPassword.Text;
                 correo = txtCorreo.Text;
                 id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-                bool respuesta = objCond.RegistrarUsuario(user, password, correo,pin, id_cargo, id_empleado);
+                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado);
                 if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -230,7 +228,6 @@ namespace SistemGestionBuses
 
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
             txtUser.Text = dgvUsuarios[1, i].Value.ToString();
-            txtPassword.Text = dgvUsuarios[3, i].Value.ToString();
             txtCorreo.Text = dgvUsuarios[2, i].Value.ToString();
 
             string id_empleado = dgvUsuarios[4, i].Value.ToString();
@@ -261,15 +258,14 @@ namespace SistemGestionBuses
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            string user, password, correo;
+            string user, correo;
             int id_empleado, id_cargo, id;
             id = Convert.ToInt16(txtId.Text);
             id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
             user = txtUser.Text;
-            password = txtPassword.Text;
             correo = txtCorreo.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-            bool res = objCond.ActualizarUser(id,id_empleado, user, correo, password, id_cargo);
+            bool res = objCond.ActualizarUser(id,id_empleado, user, correo, id_cargo);
             if (ValidacionesClass.checkEmailAt(correo))
             {
                 if (res)
