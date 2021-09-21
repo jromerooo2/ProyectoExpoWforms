@@ -13,6 +13,7 @@ namespace Modelo
         {
             bool res1 = false;
             bool res2 = false;
+            bool res3 = false;
             try
             {
                 string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1  AND estado = BINARY ?param2";
@@ -31,13 +32,28 @@ namespace Modelo
                 }
                 if (res2)
                 {
+                    //updating session to 1 so i can grab it then in users crud online table
                     string session = "UPDATE tb_usuarios SET sesion= 1 WHERE nombre_usuario=BINARY ?param1 AND contrasena=BINARY ?param2  ";
                     MySqlCommand sesscmd = new MySqlCommand(string.Format(session), ModeloConexion.GetConnection());
                     sesscmd.Parameters.Add(new MySqlParameter("param1", username));
                     sesscmd.Parameters.Add(new MySqlParameter("param2", password));
                     sesscmd.ExecuteNonQuery();
 
-                    return 1;
+
+                    int used = 0;
+                    string firstuse = "SELECT primer_uso FROM tb_usuarios WHERE  nombre_usuario = BINARY ?param1 AND contrasena = BINARY ?param2 ";
+                    MySqlCommand firstcmd = new MySqlCommand(string.Format(firstuse), ModeloConexion.GetConnection());
+                    firstcmd.Parameters.Add(new MySqlParameter("param1", username));
+                    firstcmd.Parameters.Add(new MySqlParameter("param2", password));
+                    used = Convert.ToInt16(firstcmd.ExecuteScalar());
+                    if (used == 1)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return 3;
+                    }
                 }
                 else
                 {

@@ -18,8 +18,9 @@ namespace Controlador
         public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado)
         {
             //haciendolo MD5
-
-            return ModeloUsuario.RegistrarUser(idEmpleado, user, correo, idCargo);
+            string defaultt = user + "123";
+            string password  = ValidacionesClass.Encrypt(defaultt);
+            return ModeloUsuario.RegistrarUser(idEmpleado, user, correo, idCargo, password);
         }
 
         public static DataTable CargarUsuarios()
@@ -55,6 +56,11 @@ namespace Controlador
         public static void BlockUser(string user)
         {
             ModeloUsuario.BlockUser(user);
+        }
+
+        public static void PrimerUso(int idlogged)
+        {
+            ModeloUsuario.PrimerUso(idlogged);
         }
     }
 }

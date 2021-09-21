@@ -63,6 +63,19 @@ namespace Modelo
             }
         }
 
+        public static void PrimerUso(int idlogged)
+        {
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET primer_uso = 1 WHERE id_usuario= '" + idlogged+ "'"), ModeloConexion.GetConnection());
+                    cmdupdate.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static DataTable GetOnlineUsers()
         {
             DataTable data;
@@ -164,10 +177,9 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo)
+        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password)
         {
             bool res = false;
-            string password = "123";
             string pin = "12345678";
             try
             {

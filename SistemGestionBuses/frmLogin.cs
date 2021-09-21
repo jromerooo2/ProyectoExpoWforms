@@ -57,6 +57,16 @@ namespace SistemGestionBuses
                             ControladorUsuario.BlockUser(user);
                         }                
                 }
+            if (res == 3)
+            {
+                int cargo = ControladorLogin.GetCargo();
+                int idlogged = ControladorLogin.GetId();
+
+                ControladorUsuario.PrimerUso(idlogged);
+                frmConfig next = new frmConfig(cargo, user, idlogged);
+                next.Show();
+                Hide();
+            }
 
            }
 

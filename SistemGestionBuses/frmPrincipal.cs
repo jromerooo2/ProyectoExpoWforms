@@ -90,8 +90,8 @@ namespace SistemGestionBuses
 
         private void bunifuCards1_Click(object sender, EventArgs e)
         {
-            frmUnidades unidades = new frmUnidades();
-            unidades.Show();
+                frmUnidades unidades = new frmUnidades();
+                unidades.Show();
         }
 
         private void bunifuCards2_Paint(object sender, PaintEventArgs e)
@@ -147,6 +147,11 @@ namespace SistemGestionBuses
         {
             ControladorLogin.LogOut(idUser);
             Application.Restart();
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -28,6 +28,7 @@ namespace Controlador
         {
             return correo.LastIndexOf("@") > -1 ? true : false;
         }
+
         public static bool hasNumbers(string text)
         {
             string specialChar = @"1234567890";

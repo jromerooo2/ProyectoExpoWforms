@@ -173,7 +173,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                string user, password, correo ,pin;
+                string user, correo ;
                 int id_empleado, id_cargo;
 
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
