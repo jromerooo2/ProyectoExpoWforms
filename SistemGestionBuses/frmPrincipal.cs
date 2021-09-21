@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controlador;
 using System.Windows.Forms;
 
 namespace SistemGestionBuses
@@ -135,6 +136,17 @@ namespace SistemGestionBuses
         private void cardUsers_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            logOut();
+        }
+
+        private void logOut()
+        {
+            ControladorLogin.LogOut(idUser);
+            Application.Restart();
         }
     }
 }

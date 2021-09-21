@@ -51,6 +51,15 @@ namespace Modelo
                 return 0;
             }
         }
+
+        public static void LogOut(int idUser)
+        {
+            string session = "UPDATE tb_usuarios SET sesion=0 WHERE id_usuario=BINARY ?param1";
+            MySqlCommand sesscmd = new MySqlCommand(string.Format(session), ModeloConexion.GetConnection());
+            sesscmd.Parameters.Add(new MySqlParameter("param1", idUser));
+            sesscmd.ExecuteNonQuery();
+        }
+
         public static List<int> getUserInfo(string username)
         {
             List<int> data = new List<int>();

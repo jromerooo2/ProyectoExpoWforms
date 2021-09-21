@@ -25,6 +25,11 @@ namespace Controlador
             res = ModeloLogin.getUserInfo(username);
             return res[1];
         }
+
+        public static void LogOut(int idUser)
+        {
+            ModeloLogin.LogOut(idUser);
+        }
     }
 
         public class AtributosLogin
