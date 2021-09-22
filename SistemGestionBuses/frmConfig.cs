@@ -39,6 +39,11 @@ namespace SistemGestionBuses
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnConfirmarPin_Click(object sender, EventArgs e)
         {
             MessageBox.Show(txtPin.Text);
