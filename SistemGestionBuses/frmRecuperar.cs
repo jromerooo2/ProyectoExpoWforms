@@ -21,7 +21,6 @@ namespace SistemGestionBuses
             txtNueva.ReadOnly = true;
             btnNueva.Enabled = false;
         }
-            
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -140,11 +139,12 @@ namespace SistemGestionBuses
 
         private void btnRecuPIN_Click(object sender, EventArgs e)
         {
-
             frmPin pin = new frmPin();
 
             if (!String.IsNullOrEmpty(txtUser.Text))
             {
+                ControladorRecuperar recu = new ControladorRecuperar();
+                recu.usuariorecu = txtUser.Text;
                 pin.Show();
             }
             else

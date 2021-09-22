@@ -19,6 +19,12 @@ namespace SistemGestionBuses
             InitializeComponent();
             CargarComboBoxes();
             CargarGrid();
+            txtNumeroMotor.MaxLength = 20; 
+            txtNumeroChasis.MaxLength = 20;
+            txtPlaca.MaxLength = 10;
+            txtVIN.MaxLength = 20;
+            txtAnio.MaxLength = 4;
+            txtCapacidad.MaxLength = 3;
         }
         DataTable unidades;
         public ControladorTransporte transportecontrol;
@@ -315,6 +321,45 @@ namespace SistemGestionBuses
         private void btnActualizarGrid_Click(object sender, EventArgs e)
         {
             CargarGrid();
+        }
+
+        private void txtAnio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAnio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        void SoloNumeros(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        void SoloLetras(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCapacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
         }
     }
 }

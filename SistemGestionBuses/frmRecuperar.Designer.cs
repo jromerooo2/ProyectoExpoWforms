@@ -108,7 +108,7 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Ingresa tu usuario y haz click sobre la opcion que escoges para recuperar tu cont" +
     "raseña ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
