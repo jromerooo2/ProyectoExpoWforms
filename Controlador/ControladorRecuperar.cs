@@ -21,20 +21,16 @@ namespace Controlador
         public string PINseguridad { get; set; }
 
         //Metodo para recuperar por PIN
-        public bool RecuperarByPIN_Controller()
-        {
-            return ModeloRecuperar.RestaurarClave(usuariorecu, PINseguridad);
-        }
+        //public bool RecuperarByPIN_Controller()
+        //{
+        //    return ModeloRecuperar.RestaurarClave(usuariorecu, PINseguridad);
+        //}
 
         public bool ValidarCredenciales_Controller()
         {
             return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
         }
 
-        //public bool ValidarCredencialesPIN_Controller()
-        //{
-        //    //return ModeloRecuperar.ValidarCredencialesPIN(usuarioadmin, claveadmin);
-        //}
 
         public bool ValidarCredencialesUsuario_Controller()
         {
@@ -70,6 +66,12 @@ namespace Controlador
         {
             string passMD5 = ValidacionesClass.Encrypt(nuevacontra);
             return ModeloRecuperar.RecuperarByPIN(PINseguridad, passMD5);
+        }
+
+        public bool ValidarDocumentePIN()
+        {
+            string DUI = documentoempleado;
+            return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, DUI);
         }
 
 

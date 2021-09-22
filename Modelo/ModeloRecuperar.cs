@@ -77,7 +77,7 @@ namespace Modelo
             try
             {
                 //int activo = 1;
-                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND a.id_empleado = b.id_empleado";
+                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND a.id_empleado = b.id_empleado";
                 MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());             
                 cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
                 cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));

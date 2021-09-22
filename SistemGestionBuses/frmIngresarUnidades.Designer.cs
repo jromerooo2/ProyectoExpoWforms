@@ -205,6 +205,7 @@
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(167, 20);
             this.txtCapacidad.TabIndex = 101;
+            this.txtCapacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapacidad_KeyPress);
             // 
             // txtVIN
             // 
@@ -219,6 +220,8 @@
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(167, 20);
             this.txtAnio.TabIndex = 99;
+            this.txtAnio.TextChanged += new System.EventHandler(this.txtAnio_TextChanged);
+            this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
             // 
             // label4
             // 

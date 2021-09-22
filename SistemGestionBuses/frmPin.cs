@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using Bunifu.Framework.UI;
+using Bunifu;
 
 namespace SistemGestionBuses
 {
@@ -19,10 +21,11 @@ namespace SistemGestionBuses
         }
 
         private void frmPin_Load(object sender, EventArgs e)
-        {          
+        {
+            btnConfirmar.Enabled = false;
+            txtCode.Enabled = false;
             btnNueva.Enabled = false;
             txtNueva.Enabled = false;
-
         }
 
 
@@ -67,6 +70,59 @@ namespace SistemGestionBuses
                     MessageBox.Show("No se ha actualizado tu contraseña");
                     Close();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son necesarios para ejercer la recuperación de contraseña", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnDUI_Click(object sender, EventArgs e)
+        {
+            ControladorRecuperar recu = new ControladorRecuperar();
+            if (!String.IsNullOrEmpty(txtDUI.Text))
+            {
+                string dui = txtDUI.Text;
+                recu.documentoempleado = dui;
+                //metodo para validar que el dui perteneza al usuario correcto
+                bool res = recu.ValidarCredencialesUsuario_Controller();
+                if (res == true)
+                {
+                    MessageBox.Show("Se confirmó tu identidad, continua el proceso", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCode.Enabled = true;
+                    btnConfirmar.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Documento erroneo, porfavor confirma que los datos sean los correctos", "Documento no correspondiente", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingresa el documento para ejercer la recuperación de contraseña", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtpNacimiento_onValueChanged(object sender, EventArgs e)
+        {
+            string mindatestring = "01/ 01/ 1971";
+            string maxdatestring = "01/ 01/ 2001";
+            DateTime mindate = Convert.ToDateTime(mindatestring);
+            DateTime maxdate = Convert.ToDateTime(maxdatestring);
+            if (dtpNacimiento.Value < mindate)
+            {
+                MessageBox.Show("Esta fecha no es valida personas mayores de 50 años no son permitidas", "Edad no permitida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                dtpNacimiento.Value = mindate;
+            }
+            if (dtpNacimiento.Value > maxdate)
+            {
+                MessageBox.Show("Esta fecha no es valida personas menores de 20 años no son permitidas", "Edad no permitida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                dtpNacimiento.Value = maxdate;
             }
         }
     }
