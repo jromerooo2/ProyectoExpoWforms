@@ -51,6 +51,11 @@ namespace Modelo
             }
         }
 
+        public static bool ValidarCredencialesUsuarios(string usuariorecu, string documentoempleado)
+        {
+            throw new NotImplementedException();
+        }
+
         public static bool ValidarCredenciales(string pusuarioAdmin, string pclaveAdmin)
         {
             bool retorno = false;
@@ -71,18 +76,18 @@ namespace Modelo
             }
         }
 
-        public static bool ValidarCredencialesUsuarios(string pusuario, string pdocumento)
+        public static bool ValidarCredencialesUsuariosPIN(string pusuario, string pdocumento, string pnaciemiento)
         {
             bool retorno = false;
             try
             {
                 //int activo = 1;
-                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND a.id_empleado = b.id_empleado";
+                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND b.nacimiento_empleado = BINARY ?param3 AND a.id_empleado = b.id_empleado";
                 MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());             
                 cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
                 cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param3", pnaciemiento));
                 retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
-                //cmdvalidar.Parameters.Add(new MySqlParameter("param3", activo));
                 return retorno;
             }
             catch (Exception)

@@ -19,18 +19,30 @@ namespace Controlador
         public string documentoempleado { get; set; }
         public string nuevacontra { get; set; }
         public string PINseguridad { get; set; }
+        public string fechanacimiento { get; set; }
 
-        //Metodo para recuperar por PIN
-        //public bool RecuperarByPIN_Controller()
-        //{
-        //    return ModeloRecuperar.RestaurarClave(usuariorecu, PINseguridad);
-        //}
+        #region MetodoPIN
+        public bool ValidarPINusuario(string pin)
+        {
+            return ModeloRecuperar.ValidarCredencialesPIN(pin);
+        }
+
+        public bool ActualizarContraPIN()
+        {
+            string passMD5 = ValidacionesClass.Encrypt(nuevacontra);
+            return ModeloRecuperar.RecuperarByPIN(PINseguridad, passMD5);
+        }
+
+        public bool ValidarDocumentosPIN()
+        {
+            return ModeloRecuperar.ValidarCredencialesUsuariosPIN(usuariorecu, documentoempleado, fechanacimiento);
+        }
+        #endregion
 
         public bool ValidarCredenciales_Controller()
         {
             return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
         }
-
 
         public bool ValidarCredencialesUsuario_Controller()
         {
@@ -43,10 +55,7 @@ namespace Controlador
             return ModeloRecuperar.RestaurarClave(usuariorecu, contraMD5);
         }
 
-        public bool ValidarCredencialesUsuario(string pin)
-        {
-            return ModeloRecuperar.ValidarCredencialesPIN(pin);
-        }
+
 
         static List<string> res = new List<string>();
         public static bool RecuperarMail(string user)
@@ -60,18 +69,6 @@ namespace Controlador
             //haciendolo MD5
             string passMD5 = ValidacionesClass.Encrypt(contra);
             return ModeloRecuperar.ActualizarContra(passMD5, res[0]);
-        }
-
-        public bool ActualizarContraPIN()
-        {
-            string passMD5 = ValidacionesClass.Encrypt(nuevacontra);
-            return ModeloRecuperar.RecuperarByPIN(PINseguridad, passMD5);
-        }
-
-        public bool ValidarDocumentePIN()
-        {
-            string DUI = documentoempleado;
-            return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, DUI);
         }
 
 

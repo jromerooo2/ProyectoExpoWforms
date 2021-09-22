@@ -39,11 +39,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDUI = new System.Windows.Forms.TextBox();
-            this.btnDUI = new System.Windows.Forms.Button();
+            this.btnIdentidad = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.CardValidacion = new Bunifu.Framework.UI.BunifuCards();
             this.dtpNacimiento = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panelBar = new System.Windows.Forms.Panel();
@@ -53,12 +52,12 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.ElipseMain = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtConfirmacionNueva = new System.Windows.Forms.TextBox();
             this.btnVerContra2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnVerContra1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.CardPIN = new Bunifu.Framework.UI.BunifuCards();
             this.DragControlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1.SuspendLayout();
+            this.CardValidacion.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
@@ -66,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContra2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContra1)).BeginInit();
-            this.bunifuCards2.SuspendLayout();
+            this.CardPIN.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNueva
@@ -174,20 +173,20 @@
             this.txtDUI.Size = new System.Drawing.Size(224, 20);
             this.txtDUI.TabIndex = 3;
             // 
-            // btnDUI
+            // btnIdentidad
             // 
-            this.btnDUI.BackColor = System.Drawing.Color.Black;
-            this.btnDUI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDUI.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDUI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDUI.Location = new System.Drawing.Point(143, 353);
-            this.btnDUI.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDUI.Name = "btnDUI";
-            this.btnDUI.Size = new System.Drawing.Size(152, 51);
-            this.btnDUI.TabIndex = 38;
-            this.btnDUI.Text = "Confirmar Identidad";
-            this.btnDUI.UseVisualStyleBackColor = false;
-            this.btnDUI.Click += new System.EventHandler(this.btnDUI_Click);
+            this.btnIdentidad.BackColor = System.Drawing.Color.Black;
+            this.btnIdentidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIdentidad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIdentidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnIdentidad.Location = new System.Drawing.Point(143, 353);
+            this.btnIdentidad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIdentidad.Name = "btnIdentidad";
+            this.btnIdentidad.Size = new System.Drawing.Size(152, 51);
+            this.btnIdentidad.TabIndex = 38;
+            this.btnIdentidad.Text = "Confirmar Identidad";
+            this.btnIdentidad.UseVisualStyleBackColor = false;
+            this.btnIdentidad.Click += new System.EventHandler(this.btnDUI_Click);
             // 
             // label3
             // 
@@ -202,53 +201,34 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "Ingresa el usuario a recuperar:";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 74);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 40;
+            this.txtUser.Location = new System.Drawing.Point(105, 74);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(224, 20);
+            this.txtUser.TabIndex = 40;
             // 
-            // bunifuCards1
+            // CardValidacion
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.bunifuCards1.BorderRadius = 5;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.Maroon;
-            this.bunifuCards1.Controls.Add(this.dateTimePicker1);
-            this.bunifuCards1.Controls.Add(this.btnDUI);
-            this.bunifuCards1.Controls.Add(this.textBox1);
-            this.bunifuCards1.Controls.Add(this.dtpNacimiento);
-            this.bunifuCards1.Controls.Add(this.label3);
-            this.bunifuCards1.Controls.Add(this.txtDUI);
-            this.bunifuCards1.Controls.Add(this.label2);
-            this.bunifuCards1.Controls.Add(this.label5);
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 42);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(427, 464);
-            this.bunifuCards1.TabIndex = 42;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.WindowText;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 223);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2001, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1971, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.Value = new System.DateTime(2001, 12, 31, 0, 0, 0, 0);
+            this.CardValidacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.CardValidacion.BorderRadius = 5;
+            this.CardValidacion.BottomSahddow = true;
+            this.CardValidacion.color = System.Drawing.Color.Maroon;
+            this.CardValidacion.Controls.Add(this.btnIdentidad);
+            this.CardValidacion.Controls.Add(this.txtUser);
+            this.CardValidacion.Controls.Add(this.dtpNacimiento);
+            this.CardValidacion.Controls.Add(this.label3);
+            this.CardValidacion.Controls.Add(this.txtDUI);
+            this.CardValidacion.Controls.Add(this.label2);
+            this.CardValidacion.Controls.Add(this.label5);
+            this.CardValidacion.LeftSahddow = false;
+            this.CardValidacion.Location = new System.Drawing.Point(0, 42);
+            this.CardValidacion.Name = "CardValidacion";
+            this.CardValidacion.RightSahddow = true;
+            this.CardValidacion.ShadowDepth = 20;
+            this.CardValidacion.Size = new System.Drawing.Size(427, 464);
+            this.CardValidacion.TabIndex = 42;
             // 
             // dtpNacimiento
             // 
@@ -372,13 +352,13 @@
             this.label6.TabIndex = 96;
             this.label6.Text = "Confirmar contraseña:";
             // 
-            // textBox2
+            // txtConfirmacionNueva
             // 
-            this.textBox2.Location = new System.Drawing.Point(54, 303);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 20);
-            this.textBox2.TabIndex = 97;
+            this.txtConfirmacionNueva.Location = new System.Drawing.Point(54, 303);
+            this.txtConfirmacionNueva.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmacionNueva.Name = "txtConfirmacionNueva";
+            this.txtConfirmacionNueva.Size = new System.Drawing.Size(267, 20);
+            this.txtConfirmacionNueva.TabIndex = 97;
             // 
             // btnVerContra2
             // 
@@ -408,29 +388,29 @@
             this.btnVerContra1.TabStop = false;
             this.btnVerContra1.Zoom = 10;
             // 
-            // bunifuCards2
+            // CardPIN
             // 
-            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.bunifuCards2.BorderRadius = 5;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.color = System.Drawing.Color.Black;
-            this.bunifuCards2.Controls.Add(this.btnVerContra2);
-            this.bunifuCards2.Controls.Add(this.btnVerContra1);
-            this.bunifuCards2.Controls.Add(this.textBox2);
-            this.bunifuCards2.Controls.Add(this.btnNueva);
-            this.bunifuCards2.Controls.Add(this.label6);
-            this.bunifuCards2.Controls.Add(this.btnConfirmar);
-            this.bunifuCards2.Controls.Add(this.lblIngresoCodigo);
-            this.bunifuCards2.Controls.Add(this.txtCode);
-            this.bunifuCards2.Controls.Add(this.txtNueva);
-            this.bunifuCards2.Controls.Add(this.label4);
-            this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(432, 45);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(380, 461);
-            this.bunifuCards2.TabIndex = 103;
+            this.CardPIN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.CardPIN.BorderRadius = 5;
+            this.CardPIN.BottomSahddow = true;
+            this.CardPIN.color = System.Drawing.Color.Black;
+            this.CardPIN.Controls.Add(this.btnVerContra2);
+            this.CardPIN.Controls.Add(this.btnVerContra1);
+            this.CardPIN.Controls.Add(this.txtConfirmacionNueva);
+            this.CardPIN.Controls.Add(this.btnNueva);
+            this.CardPIN.Controls.Add(this.label6);
+            this.CardPIN.Controls.Add(this.btnConfirmar);
+            this.CardPIN.Controls.Add(this.lblIngresoCodigo);
+            this.CardPIN.Controls.Add(this.txtCode);
+            this.CardPIN.Controls.Add(this.txtNueva);
+            this.CardPIN.Controls.Add(this.label4);
+            this.CardPIN.LeftSahddow = false;
+            this.CardPIN.Location = new System.Drawing.Point(432, 45);
+            this.CardPIN.Name = "CardPIN";
+            this.CardPIN.RightSahddow = true;
+            this.CardPIN.ShadowDepth = 20;
+            this.CardPIN.Size = new System.Drawing.Size(380, 461);
+            this.CardPIN.TabIndex = 103;
             // 
             // DragControlMain
             // 
@@ -447,14 +427,14 @@
             this.ClientSize = new System.Drawing.Size(812, 504);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuCards1);
-            this.Controls.Add(this.bunifuCards2);
+            this.Controls.Add(this.CardValidacion);
+            this.Controls.Add(this.CardPIN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPin";
             this.Text = "frmPin";
             this.Load += new System.EventHandler(this.frmPin_Load);
-            this.bunifuCards1.ResumeLayout(false);
-            this.bunifuCards1.PerformLayout();
+            this.CardValidacion.ResumeLayout(false);
+            this.CardValidacion.PerformLayout();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
@@ -462,8 +442,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContra2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContra1)).EndInit();
-            this.bunifuCards2.ResumeLayout(false);
-            this.bunifuCards2.PerformLayout();
+            this.CardPIN.ResumeLayout(false);
+            this.CardPIN.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,10 +459,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDUI;
-        private System.Windows.Forms.Button btnDUI;
+        private System.Windows.Forms.Button btnIdentidad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.TextBox txtUser;
+        private Bunifu.Framework.UI.BunifuCards CardValidacion;
         private Bunifu.Framework.UI.BunifuDatepicker dtpNacimiento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelBar;
@@ -491,12 +471,11 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuElipse ElipseMain;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtConfirmacionNueva;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuImageButton btnVerContra2;
         private Bunifu.Framework.UI.BunifuImageButton btnVerContra1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Bunifu.Framework.UI.BunifuCards CardPIN;
         private Bunifu.Framework.UI.BunifuDragControl DragControlMain;
     }
 }

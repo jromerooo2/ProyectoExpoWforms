@@ -22,10 +22,12 @@ namespace SistemGestionBuses
 
         private void frmPin_Load(object sender, EventArgs e)
         {
+            CardPIN.Enabled = false;
             btnConfirmar.Enabled = false;
             txtCode.Enabled = false;
             btnNueva.Enabled = false;
             txtNueva.Enabled = false;
+            txtConfirmacionNueva.Enabled = false;
         }
 
 
@@ -35,7 +37,7 @@ namespace SistemGestionBuses
             //recu.PINseguridad = txtCode.Text;
             if (!String.IsNullOrEmpty(txtCode.Text))
             {
-                bool res = recu.ValidarCredencialesUsuario(txtCode.Text);
+                bool res = recu.ValidarPINusuario(txtCode.Text);
                 if (res)
                 {
                     MessageBox.Show("Se ha confirmado tu identidad");
@@ -80,17 +82,18 @@ namespace SistemGestionBuses
         private void btnDUI_Click(object sender, EventArgs e)
         {
             ControladorRecuperar recu = new ControladorRecuperar();
-            if (!String.IsNullOrEmpty(txtDUI.Text))
+            if (!String.IsNullOrEmpty(txtDUI.Text) && !String.IsNullOrEmpty(txtUser.Text))
             {
-                string dui = txtDUI.Text;
-                recu.documentoempleado = dui;
-                //metodo para validar que el dui perteneza al usuario correcto
-                bool res = recu.ValidarCredencialesUsuario_Controller();
+                //Parametros del controlador
+                recu.usuariorecu = Convert.ToString(txtUser.Text);
+                recu.documentoempleado = Convert.ToString(txtDUI.Text);
+                recu.fechanacimiento = Convert.ToString(dtpNacimiento.Value);
+                //metodo para validar que el dui y la fecha de nacimiento perteneza al usuario correcto
+                bool res = recu.ValidarDocumentosPIN();
                 if (res == true)
                 {
                     MessageBox.Show("Se confirmó tu identidad, continua el proceso", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtCode.Enabled = true;
-                    btnConfirmar.Enabled = true;
+                    CardPIN.Enabled = true;
                 }
                 else
                 {
