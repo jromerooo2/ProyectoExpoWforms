@@ -13,7 +13,6 @@ namespace Modelo
         {
             bool res1 = false;
             bool res2 = false;
-            bool res3 = false;
             try
             {
                 string query = "SELECT * FROM tb_usuarios WHERE nombre_usuario = BINARY ?param1  AND estado = BINARY ?param2";
