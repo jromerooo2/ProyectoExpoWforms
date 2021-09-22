@@ -47,6 +47,12 @@ namespace Controlador
             //haciendolo MD5
             return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, id_cargo);
         }
+        public static bool ActualizarContraPin(string contra, string pin, int id)
+        {
+            //haciendolo MD5
+            string send = ValidacionesClass.Encrypt(contra);
+            return ModeloUsuario.ActualizarContraPin(send, pin, id);
+        }
 
         public static DataTable GetOnlineUsers()
         {

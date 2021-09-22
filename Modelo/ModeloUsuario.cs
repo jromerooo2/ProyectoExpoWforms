@@ -63,6 +63,20 @@ namespace Modelo
             }
         }
 
+        public static bool ActualizarContraPin(string send, string pin, int id)
+        {
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena='" + send + "', pin= '" + pin + "' WHERE id_usuario= '" + id + "'"), ModeloConexion.GetConnection());
+                return Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
+
         public static void PrimerUso(int idlogged)
         {
             try

@@ -153,5 +153,10 @@ namespace SistemGestionBuses
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void panelBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

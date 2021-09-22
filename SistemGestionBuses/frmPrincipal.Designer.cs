@@ -512,6 +512,7 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(1073, 58);
             this.panelBar.TabIndex = 96;
+            this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
             // bunifuImageButton5
             // 
