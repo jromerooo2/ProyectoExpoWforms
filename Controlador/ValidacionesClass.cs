@@ -41,10 +41,13 @@ namespace Controlador
         }
         public static bool hasSpecialChars(string text)
         {
-            var specialChars = new Regex("^[ +-/'=]*$");
+            string specialChar = "-+/= ";
+            foreach (var item in specialChar)
+            {
+                if (text.Contains(item)) return true;
+            }
 
-            if (specialChars.IsMatch(text)) return true;
-            else return false;
+            return false;
         }
 
 

@@ -29,7 +29,22 @@ namespace SistemGestionBuses
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(txtContra.Text))
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarContra_Click(object sender, EventArgs e)
+        {
+            bool specialChars = ValidacionesClass.hasSpecialChars(txtContra.Text);
+            if (specialChars)
+            {
+                MessageBox.Show("Por favor utiliza caracteres validos");
+            }
+            else
             {
                 txtContra.Enabled = false;
                 btnConfirmarContra.Enabled = false;
@@ -39,24 +54,19 @@ namespace SistemGestionBuses
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnConfirmarPin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(txtPin.Text);
-            MessageBox.Show(txtContra.Text);
-            if (!String.IsNullOrWhiteSpace(txtPin.Text))
+            if (!ValidacionesClass.hasSpecialChars(txtPin.Text))
             {
-
-                MessageBox.Show(Convert.ToString(idu));
                 bool res = ControladorUsuario.ActualizarContraPin(txtContra.Text, txtPin.Text, idu);
                 if (res)
                 {
                     MessageBox.Show("Felicidades, Has configurado con exito tu cuenta", "Confirmación", MessageBoxButtons.OK);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Por favor utiliza únicamente números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

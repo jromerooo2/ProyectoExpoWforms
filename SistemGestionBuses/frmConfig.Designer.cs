@@ -207,6 +207,7 @@
             this.btnConfirmarContra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmarContra.Textcolor = System.Drawing.Color.White;
             this.btnConfirmarContra.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarContra.Click += new System.EventHandler(this.btnConfirmarContra_Click);
             // 
             // frmConfig
             // 
