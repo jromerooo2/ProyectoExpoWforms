@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 23-09-2021 a las 04:17:31
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.9
+-- Hôte : 127.0.0.1
+-- Généré le : jeu. 23 sep. 2021 à 01:20
+-- Version du serveur : 10.4.19-MariaDB
+-- Version de PHP : 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,14 +18,14 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `dbsistemaviajes`
+-- Base de données : `dbsistemaviajes`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `tbusuariosview`
--- (Véase abajo para la vista actual)
+-- Doublure de structure pour la vue `tbusuariosview`
+-- (Voir ci-dessous la vue réelle)
 --
 CREATE TABLE `tbusuariosview` (
 `id_usuario` int(11)
@@ -34,32 +34,13 @@ CREATE TABLE `tbusuariosview` (
 ,`contrasena` varchar(50)
 ,`nombres_empleado` varchar(30)
 ,`cargo` varchar(45)
+,`foto_usuario` mediumblob
 );
 
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `tbvistaunidad`
--- (Véase abajo para la vista actual)
---
-CREATE TABLE `tbvistaunidad` (
-`anio` int(4)
-,`VIN` varchar(20)
-,`capacidad` int(3)
-,`placa` varchar(15)
-,`tipo_placa` varchar(3)
-,`tipo_unidad` varchar(30)
-,`modelo` varchar(45)
-,`marca` varchar(45)
-,`estado_unidad` varchar(30)
-,`numero_motor` varchar(45)
-,`numero_chasis` varchar(45)
-);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tb_cargo`
+-- Structure de la table `tb_cargo`
 --
 
 CREATE TABLE `tb_cargo` (
@@ -68,7 +49,7 @@ CREATE TABLE `tb_cargo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_cargo`
+-- Déchargement des données de la table `tb_cargo`
 --
 
 INSERT INTO `tb_cargo` (`id_cargo`, `cargo`) VALUES
@@ -80,7 +61,7 @@ INSERT INTO `tb_cargo` (`id_cargo`, `cargo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_cliente`
+-- Structure de la table `tb_cliente`
 --
 
 CREATE TABLE `tb_cliente` (
@@ -94,7 +75,7 @@ CREATE TABLE `tb_cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_cliente`
+-- Déchargement des données de la table `tb_cliente`
 --
 
 INSERT INTO `tb_cliente` (`id_cliente`, `nombres_cliente`, `apellidos_cliente`, `telefono_cliente`, `id_tipo_cliente`, `direccion_cliente`, `correo_cliente`) VALUES
@@ -103,7 +84,7 @@ INSERT INTO `tb_cliente` (`id_cliente`, `nombres_cliente`, `apellidos_cliente`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_cliente_viaje`
+-- Structure de la table `tb_cliente_viaje`
 --
 
 CREATE TABLE `tb_cliente_viaje` (
@@ -115,7 +96,7 @@ CREATE TABLE `tb_cliente_viaje` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_conductores`
+-- Structure de la table `tb_conductores`
 --
 
 CREATE TABLE `tb_conductores` (
@@ -129,7 +110,7 @@ CREATE TABLE `tb_conductores` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_departamentos`
+-- Structure de la table `tb_departamentos`
 --
 
 CREATE TABLE `tb_departamentos` (
@@ -138,7 +119,7 @@ CREATE TABLE `tb_departamentos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_departamentos`
+-- Déchargement des données de la table `tb_departamentos`
 --
 
 INSERT INTO `tb_departamentos` (`id_departamento`, `departamento`) VALUES
@@ -160,7 +141,7 @@ INSERT INTO `tb_departamentos` (`id_departamento`, `departamento`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_detalle_factura`
+-- Structure de la table `tb_detalle_factura`
 --
 
 CREATE TABLE `tb_detalle_factura` (
@@ -174,7 +155,7 @@ CREATE TABLE `tb_detalle_factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_direccion_detalle`
+-- Structure de la table `tb_direccion_detalle`
 --
 
 CREATE TABLE `tb_direccion_detalle` (
@@ -191,7 +172,7 @@ CREATE TABLE `tb_direccion_detalle` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_empleados`
+-- Structure de la table `tb_empleados`
 --
 
 CREATE TABLE `tb_empleados` (
@@ -206,23 +187,23 @@ CREATE TABLE `tb_empleados` (
   `id_estado_empleado` int(11) NOT NULL,
   `id_cargo` int(11) NOT NULL,
   `id_municipio` int(11) NOT NULL,
-  `nacimiento_empleado` datetime DEFAULT NULL
+  `nacimiento_empleado` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_empleados`
+-- Déchargement des données de la table `tb_empleados`
 --
 
 INSERT INTO `tb_empleados` (`id_empleado`, `nombres_empleado`, `apellidos_empleado`, `DUI`, `NIT`, `direccion_empleado`, `telefono_empleado`, `id_genero`, `id_estado_empleado`, `id_cargo`, `id_municipio`, `nacimiento_empleado`) VALUES
-(5, 'Jose Santiago', 'Merino Herrera', '1234567-8', '12345678-9', 'Mejicanos', '1234-5678', 2, 1, 2, 148, '2000-10-12 00:00:00'),
-(7, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2004-08-31 00:00:00'),
-(9, 'Juan Pablo', 'Romero Ramos', '12345678', '67891234', 'en los alpes uwu', '78561232', 1, 1, 1, 26, '2021-09-20 00:00:00'),
-(10, 'Jhansi', ' Giovanni', '12345678', '8765654332', 'multi', '78845621', 1, 1, 1, 26, '2021-09-20 00:00:00');
+(5, 'Jose Santiago', 'Merino Herrera', '1234567-8', '12345678-9', 'Mejicanos', '1234-5678', 2, 1, 2, 148, '2004-08-31'),
+(7, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2004-08-31'),
+(8, 'Juan', 'Romero', '21231313', '12132', 'asdada', '13123', 1, 1, 1, 26, '2021-09-02'),
+(9, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2030-02-20');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_estado_empleado`
+-- Structure de la table `tb_estado_empleado`
 --
 
 CREATE TABLE `tb_estado_empleado` (
@@ -231,7 +212,7 @@ CREATE TABLE `tb_estado_empleado` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_estado_empleado`
+-- Déchargement des données de la table `tb_estado_empleado`
 --
 
 INSERT INTO `tb_estado_empleado` (`id_estado_empleado`, `estado_empleado`) VALUES
@@ -243,7 +224,7 @@ INSERT INTO `tb_estado_empleado` (`id_estado_empleado`, `estado_empleado`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_estado_factura`
+-- Structure de la table `tb_estado_factura`
 --
 
 CREATE TABLE `tb_estado_factura` (
@@ -254,7 +235,7 @@ CREATE TABLE `tb_estado_factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_estado_unidad`
+-- Structure de la table `tb_estado_unidad`
 --
 
 CREATE TABLE `tb_estado_unidad` (
@@ -263,7 +244,7 @@ CREATE TABLE `tb_estado_unidad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_estado_unidad`
+-- Déchargement des données de la table `tb_estado_unidad`
 --
 
 INSERT INTO `tb_estado_unidad` (`id_estado_unidad`, `estado_unidad`) VALUES
@@ -276,7 +257,7 @@ INSERT INTO `tb_estado_unidad` (`id_estado_unidad`, `estado_unidad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_estado_usuarios`
+-- Structure de la table `tb_estado_usuarios`
 --
 
 CREATE TABLE `tb_estado_usuarios` (
@@ -285,7 +266,7 @@ CREATE TABLE `tb_estado_usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_estado_usuarios`
+-- Déchargement des données de la table `tb_estado_usuarios`
 --
 
 INSERT INTO `tb_estado_usuarios` (`id_estado_usuario`, `estado`) VALUES
@@ -296,7 +277,7 @@ INSERT INTO `tb_estado_usuarios` (`id_estado_usuario`, `estado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_estado_viaje`
+-- Structure de la table `tb_estado_viaje`
 --
 
 CREATE TABLE `tb_estado_viaje` (
@@ -305,7 +286,7 @@ CREATE TABLE `tb_estado_viaje` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_estado_viaje`
+-- Déchargement des données de la table `tb_estado_viaje`
 --
 
 INSERT INTO `tb_estado_viaje` (`id_estado_viaje`, `estado_viaje`) VALUES
@@ -317,7 +298,7 @@ INSERT INTO `tb_estado_viaje` (`id_estado_viaje`, `estado_viaje`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_factura`
+-- Structure de la table `tb_factura`
 --
 
 CREATE TABLE `tb_factura` (
@@ -331,7 +312,7 @@ CREATE TABLE `tb_factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_genero`
+-- Structure de la table `tb_genero`
 --
 
 CREATE TABLE `tb_genero` (
@@ -340,7 +321,7 @@ CREATE TABLE `tb_genero` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_genero`
+-- Déchargement des données de la table `tb_genero`
 --
 
 INSERT INTO `tb_genero` (`id_genero`, `genero`) VALUES
@@ -350,7 +331,7 @@ INSERT INTO `tb_genero` (`id_genero`, `genero`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_mantenimiento`
+-- Structure de la table `tb_mantenimiento`
 --
 
 CREATE TABLE `tb_mantenimiento` (
@@ -365,7 +346,7 @@ CREATE TABLE `tb_mantenimiento` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_marca`
+-- Structure de la table `tb_marca`
 --
 
 CREATE TABLE `tb_marca` (
@@ -374,7 +355,7 @@ CREATE TABLE `tb_marca` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_marca`
+-- Déchargement des données de la table `tb_marca`
 --
 
 INSERT INTO `tb_marca` (`id_marca`, `marca`) VALUES
@@ -383,7 +364,7 @@ INSERT INTO `tb_marca` (`id_marca`, `marca`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_metodo_pago`
+-- Structure de la table `tb_metodo_pago`
 --
 
 CREATE TABLE `tb_metodo_pago` (
@@ -392,7 +373,7 @@ CREATE TABLE `tb_metodo_pago` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_metodo_pago`
+-- Déchargement des données de la table `tb_metodo_pago`
 --
 
 INSERT INTO `tb_metodo_pago` (`id_metodo_pago`, `metodo_pago`) VALUES
@@ -403,7 +384,7 @@ INSERT INTO `tb_metodo_pago` (`id_metodo_pago`, `metodo_pago`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_modelo`
+-- Structure de la table `tb_modelo`
 --
 
 CREATE TABLE `tb_modelo` (
@@ -412,7 +393,7 @@ CREATE TABLE `tb_modelo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_modelo`
+-- Déchargement des données de la table `tb_modelo`
 --
 
 INSERT INTO `tb_modelo` (`id_modelo`, `modelo`) VALUES
@@ -421,7 +402,7 @@ INSERT INTO `tb_modelo` (`id_modelo`, `modelo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_municipios`
+-- Structure de la table `tb_municipios`
 --
 
 CREATE TABLE `tb_municipios` (
@@ -431,7 +412,7 @@ CREATE TABLE `tb_municipios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_municipios`
+-- Déchargement des données de la table `tb_municipios`
 --
 
 INSERT INTO `tb_municipios` (`id_municipio`, `municipio`, `id_departamento`) VALUES
@@ -701,7 +682,7 @@ INSERT INTO `tb_municipios` (`id_municipio`, `municipio`, `id_departamento`) VAL
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_tipo_cliente`
+-- Structure de la table `tb_tipo_cliente`
 --
 
 CREATE TABLE `tb_tipo_cliente` (
@@ -710,7 +691,7 @@ CREATE TABLE `tb_tipo_cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_tipo_cliente`
+-- Déchargement des données de la table `tb_tipo_cliente`
 --
 
 INSERT INTO `tb_tipo_cliente` (`id_tipo_cliente`, `tipo_cliente`) VALUES
@@ -720,7 +701,7 @@ INSERT INTO `tb_tipo_cliente` (`id_tipo_cliente`, `tipo_cliente`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_tipo_licencia`
+-- Structure de la table `tb_tipo_licencia`
 --
 
 CREATE TABLE `tb_tipo_licencia` (
@@ -731,7 +712,7 @@ CREATE TABLE `tb_tipo_licencia` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_tipo_placa`
+-- Structure de la table `tb_tipo_placa`
 --
 
 CREATE TABLE `tb_tipo_placa` (
@@ -740,7 +721,7 @@ CREATE TABLE `tb_tipo_placa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_tipo_placa`
+-- Déchargement des données de la table `tb_tipo_placa`
 --
 
 INSERT INTO `tb_tipo_placa` (`id_tipo_placa`, `tipo_placa`) VALUES
@@ -749,7 +730,7 @@ INSERT INTO `tb_tipo_placa` (`id_tipo_placa`, `tipo_placa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_tipo_unidad`
+-- Structure de la table `tb_tipo_unidad`
 --
 
 CREATE TABLE `tb_tipo_unidad` (
@@ -758,7 +739,7 @@ CREATE TABLE `tb_tipo_unidad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_tipo_unidad`
+-- Déchargement des données de la table `tb_tipo_unidad`
 --
 
 INSERT INTO `tb_tipo_unidad` (`id_tipo_unidad`, `tipo_unidad`) VALUES
@@ -769,7 +750,7 @@ INSERT INTO `tb_tipo_unidad` (`id_tipo_unidad`, `tipo_unidad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_tipo_viaje`
+-- Structure de la table `tb_tipo_viaje`
 --
 
 CREATE TABLE `tb_tipo_viaje` (
@@ -778,7 +759,7 @@ CREATE TABLE `tb_tipo_viaje` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_tipo_viaje`
+-- Déchargement des données de la table `tb_tipo_viaje`
 --
 
 INSERT INTO `tb_tipo_viaje` (`id_tipo_viaje`, `tipo_viaje`) VALUES
@@ -788,7 +769,7 @@ INSERT INTO `tb_tipo_viaje` (`id_tipo_viaje`, `tipo_viaje`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_unidad_transporte`
+-- Structure de la table `tb_unidad_transporte`
 --
 
 CREATE TABLE `tb_unidad_transporte` (
@@ -807,7 +788,7 @@ CREATE TABLE `tb_unidad_transporte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_unidad_transporte`
+-- Déchargement des données de la table `tb_unidad_transporte`
 --
 
 INSERT INTO `tb_unidad_transporte` (`id_unidad_transporte`, `id_marca`, `anio`, `VIN`, `capacidad`, `id_modelo`, `placa`, `id_tipo_placa`, `id_tipo_unidad`, `id_estado_unidad`, `numero_motor`, `numero_chasis`) VALUES
@@ -818,7 +799,7 @@ INSERT INTO `tb_unidad_transporte` (`id_unidad_transporte`, `id_marca`, `anio`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_usuarios`
+-- Structure de la table `tb_usuarios`
 --
 
 CREATE TABLE `tb_usuarios` (
@@ -829,23 +810,23 @@ CREATE TABLE `tb_usuarios` (
   `contrasena` varchar(50) NOT NULL,
   `cargo_usuario` int(11) NOT NULL DEFAULT 4,
   `estado` int(11) NOT NULL,
-  `pin` varchar(8) DEFAULT NULL
+  `pin` varchar(8) NOT NULL,
+  `foto_usuario` mediumblob DEFAULT NULL,
+  `sesion` int(11) NOT NULL,
+  `primer_uso` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tb_usuarios`
+-- Déchargement des données de la table `tb_usuarios`
 --
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `id_empleado`, `nombre_usuario`, `correo_usuario`, `contrasena`, `cargo_usuario`, `estado`, `pin`) VALUES
-(1, 5, 'admin', 'jsantiago.merino@outlook.com', '81dc9bdb52d04dc20036dbd8313ed055', 2, 1, '4321'),
-(28, 7, 'mafer', 'santiago.merino2004@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1, 1, '4321'),
-(29, 9, 'Josue Guinea', 'josueguinea@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1, 1, '1412'),
-(35, 10, 'Profe Jhansi ', 'jhansi_aguilar@ricaldone.edu.sv', 'ec6a6536ca304edf844d1d248a4f08dc', 1, 1, '1234');
+INSERT INTO `tb_usuarios` (`id_usuario`, `id_empleado`, `nombre_usuario`, `correo_usuario`, `contrasena`, `cargo_usuario`, `estado`, `pin`, `foto_usuario`, `sesion`, `primer_uso`) VALUES
+(36, 8, 'jromerooo', 'juan.romeroramos9@gmail.com', 'fbae3291d90999a33b2577f800a49227', 2, 1, '87889012', NULL, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tb_viajes`
+-- Structure de la table `tb_viajes`
 --
 
 CREATE TABLE `tb_viajes` (
@@ -866,40 +847,31 @@ CREATE TABLE `tb_viajes` (
 -- --------------------------------------------------------
 
 --
--- Estructura para la vista `tbusuariosview`
+-- Structure de la vue `tbusuariosview`
 --
 DROP TABLE IF EXISTS `tbusuariosview`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbusuariosview`  AS SELECT `a`.`id_usuario` AS `id_usuario`, `a`.`nombre_usuario` AS `nombre_usuario`, `a`.`correo_usuario` AS `correo_usuario`, `a`.`contrasena` AS `contrasena`, `b`.`nombres_empleado` AS `nombres_empleado`, `c`.`cargo` AS `cargo` FROM ((`tb_usuarios` `a` join `tb_empleados` `b`) join `tb_cargo` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `a`.`cargo_usuario` = `c`.`id_cargo` ;
-
--- --------------------------------------------------------
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbusuariosview`  AS SELECT `a`.`id_usuario` AS `id_usuario`, `a`.`nombre_usuario` AS `nombre_usuario`, `a`.`correo_usuario` AS `correo_usuario`, `a`.`contrasena` AS `contrasena`, `b`.`nombres_empleado` AS `nombres_empleado`, `c`.`cargo` AS `cargo`, `a`.`foto_usuario` AS `foto_usuario` FROM ((`tb_usuarios` `a` join `tb_empleados` `b`) join `tb_cargo` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `a`.`cargo_usuario` = `c`.`id_cargo` ;
 
 --
--- Estructura para la vista `tbvistaunidad`
---
-DROP TABLE IF EXISTS `tbvistaunidad`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbvistaunidad`  AS SELECT `e`.`anio` AS `anio`, `e`.`VIN` AS `VIN`, `e`.`capacidad` AS `capacidad`, `e`.`placa` AS `placa`, `a`.`tipo_placa` AS `tipo_placa`, `b`.`tipo_unidad` AS `tipo_unidad`, `c`.`modelo` AS `modelo`, `d`.`marca` AS `marca`, `f`.`estado_unidad` AS `estado_unidad`, `e`.`numero_motor` AS `numero_motor`, `e`.`numero_chasis` AS `numero_chasis` FROM (((((`tb_tipo_placa` `a` join `tb_tipo_unidad` `b`) join `tb_modelo` `c`) join `tb_marca` `d`) join `tb_unidad_transporte` `e`) join `tb_estado_unidad` `f`) WHERE `a`.`id_tipo_placa` = `e`.`id_tipo_placa` AND `b`.`id_tipo_unidad` = `e`.`id_tipo_unidad` AND `c`.`id_modelo` = `e`.`id_modelo` AND `d`.`id_marca` = `e`.`id_marca` AND `f`.`id_estado_unidad` = `e`.`id_estado_unidad` ;
-
---
--- Índices para tablas volcadas
+-- Index pour les tables déchargées
 --
 
 --
--- Indices de la tabla `tb_cargo`
+-- Index pour la table `tb_cargo`
 --
 ALTER TABLE `tb_cargo`
   ADD PRIMARY KEY (`id_cargo`);
 
 --
--- Indices de la tabla `tb_cliente`
+-- Index pour la table `tb_cliente`
 --
 ALTER TABLE `tb_cliente`
   ADD PRIMARY KEY (`id_cliente`),
   ADD KEY `fk_cliente_tipo` (`id_tipo_cliente`);
 
 --
--- Indices de la tabla `tb_cliente_viaje`
+-- Index pour la table `tb_cliente_viaje`
 --
 ALTER TABLE `tb_cliente_viaje`
   ADD PRIMARY KEY (`id_cliente_viaje`),
@@ -907,7 +879,7 @@ ALTER TABLE `tb_cliente_viaje`
   ADD KEY `fk_tb_cliente_viaje_tb_cliente1_idx` (`id_cliente`);
 
 --
--- Indices de la tabla `tb_conductores`
+-- Index pour la table `tb_conductores`
 --
 ALTER TABLE `tb_conductores`
   ADD PRIMARY KEY (`id_conductores`),
@@ -915,13 +887,13 @@ ALTER TABLE `tb_conductores`
   ADD KEY `fk_conductoes_tipo_licencia_idx` (`id_tipo_licencia`);
 
 --
--- Indices de la tabla `tb_departamentos`
+-- Index pour la table `tb_departamentos`
 --
 ALTER TABLE `tb_departamentos`
   ADD PRIMARY KEY (`id_departamento`);
 
 --
--- Indices de la tabla `tb_detalle_factura`
+-- Index pour la table `tb_detalle_factura`
 --
 ALTER TABLE `tb_detalle_factura`
   ADD PRIMARY KEY (`id_detalle_factura`),
@@ -929,14 +901,14 @@ ALTER TABLE `tb_detalle_factura`
   ADD KEY `fk_tb_detalle_factura_tb_cliente_viaje1_idx` (`id_cliente_viaje`);
 
 --
--- Indices de la tabla `tb_direccion_detalle`
+-- Index pour la table `tb_direccion_detalle`
 --
 ALTER TABLE `tb_direccion_detalle`
   ADD PRIMARY KEY (`id_direccion_detalle`),
   ADD KEY `fk_tb_direccion_detalle_tb_viajes1_idx` (`id_viaje`);
 
 --
--- Indices de la tabla `tb_empleados`
+-- Index pour la table `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
   ADD PRIMARY KEY (`id_empleado`),
@@ -946,37 +918,37 @@ ALTER TABLE `tb_empleados`
   ADD KEY `fk_empleado_municipio_idx` (`id_municipio`);
 
 --
--- Indices de la tabla `tb_estado_empleado`
+-- Index pour la table `tb_estado_empleado`
 --
 ALTER TABLE `tb_estado_empleado`
   ADD PRIMARY KEY (`id_estado_empleado`);
 
 --
--- Indices de la tabla `tb_estado_factura`
+-- Index pour la table `tb_estado_factura`
 --
 ALTER TABLE `tb_estado_factura`
   ADD PRIMARY KEY (`id_estado_factura`);
 
 --
--- Indices de la tabla `tb_estado_unidad`
+-- Index pour la table `tb_estado_unidad`
 --
 ALTER TABLE `tb_estado_unidad`
   ADD PRIMARY KEY (`id_estado_unidad`);
 
 --
--- Indices de la tabla `tb_estado_usuarios`
+-- Index pour la table `tb_estado_usuarios`
 --
 ALTER TABLE `tb_estado_usuarios`
   ADD PRIMARY KEY (`id_estado_usuario`);
 
 --
--- Indices de la tabla `tb_estado_viaje`
+-- Index pour la table `tb_estado_viaje`
 --
 ALTER TABLE `tb_estado_viaje`
   ADD PRIMARY KEY (`id_estado_viaje`);
 
 --
--- Indices de la tabla `tb_factura`
+-- Index pour la table `tb_factura`
 --
 ALTER TABLE `tb_factura`
   ADD PRIMARY KEY (`id_factura`),
@@ -984,75 +956,75 @@ ALTER TABLE `tb_factura`
   ADD KEY `fk_tb_factura_tb_estado_factura1_idx` (`id_estado_factura`);
 
 --
--- Indices de la tabla `tb_genero`
+-- Index pour la table `tb_genero`
 --
 ALTER TABLE `tb_genero`
   ADD PRIMARY KEY (`id_genero`);
 
 --
--- Indices de la tabla `tb_mantenimiento`
+-- Index pour la table `tb_mantenimiento`
 --
 ALTER TABLE `tb_mantenimiento`
   ADD PRIMARY KEY (`id_mantenimiento`),
   ADD KEY `fk_unidad_mantenimiento` (`id_unidad_transporte`);
 
 --
--- Indices de la tabla `tb_marca`
+-- Index pour la table `tb_marca`
 --
 ALTER TABLE `tb_marca`
   ADD PRIMARY KEY (`id_marca`);
 
 --
--- Indices de la tabla `tb_metodo_pago`
+-- Index pour la table `tb_metodo_pago`
 --
 ALTER TABLE `tb_metodo_pago`
   ADD PRIMARY KEY (`id_metodo_pago`);
 
 --
--- Indices de la tabla `tb_modelo`
+-- Index pour la table `tb_modelo`
 --
 ALTER TABLE `tb_modelo`
   ADD PRIMARY KEY (`id_modelo`);
 
 --
--- Indices de la tabla `tb_municipios`
+-- Index pour la table `tb_municipios`
 --
 ALTER TABLE `tb_municipios`
   ADD PRIMARY KEY (`id_municipio`),
   ADD KEY `fk_municipio_departamento` (`id_departamento`);
 
 --
--- Indices de la tabla `tb_tipo_cliente`
+-- Index pour la table `tb_tipo_cliente`
 --
 ALTER TABLE `tb_tipo_cliente`
   ADD PRIMARY KEY (`id_tipo_cliente`);
 
 --
--- Indices de la tabla `tb_tipo_licencia`
+-- Index pour la table `tb_tipo_licencia`
 --
 ALTER TABLE `tb_tipo_licencia`
   ADD PRIMARY KEY (`id_tipo_licencia`);
 
 --
--- Indices de la tabla `tb_tipo_placa`
+-- Index pour la table `tb_tipo_placa`
 --
 ALTER TABLE `tb_tipo_placa`
   ADD PRIMARY KEY (`id_tipo_placa`);
 
 --
--- Indices de la tabla `tb_tipo_unidad`
+-- Index pour la table `tb_tipo_unidad`
 --
 ALTER TABLE `tb_tipo_unidad`
   ADD PRIMARY KEY (`id_tipo_unidad`);
 
 --
--- Indices de la tabla `tb_tipo_viaje`
+-- Index pour la table `tb_tipo_viaje`
 --
 ALTER TABLE `tb_tipo_viaje`
   ADD PRIMARY KEY (`id_tipo_viaje`);
 
 --
--- Indices de la tabla `tb_unidad_transporte`
+-- Index pour la table `tb_unidad_transporte`
 --
 ALTER TABLE `tb_unidad_transporte`
   ADD PRIMARY KEY (`id_unidad_transporte`),
@@ -1063,7 +1035,7 @@ ALTER TABLE `tb_unidad_transporte`
   ADD KEY `fk_unidad_marca` (`id_marca`);
 
 --
--- Indices de la tabla `tb_usuarios`
+-- Index pour la table `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
   ADD PRIMARY KEY (`id_usuario`),
@@ -1075,7 +1047,7 @@ ALTER TABLE `tb_usuarios`
   ADD KEY `FK_estado_usuarios` (`estado`);
 
 --
--- Indices de la tabla `tb_viajes`
+-- Index pour la table `tb_viajes`
 --
 ALTER TABLE `tb_viajes`
   ADD PRIMARY KEY (`id_viaje`),
@@ -1086,210 +1058,210 @@ ALTER TABLE `tb_viajes`
   ADD KEY `fk_viaje_tipo_viaje` (`id_tipo_viaje`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT de la tabla `tb_cargo`
+-- AUTO_INCREMENT pour la table `tb_cargo`
 --
 ALTER TABLE `tb_cargo`
   MODIFY `id_cargo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `tb_cliente`
+-- AUTO_INCREMENT pour la table `tb_cliente`
 --
 ALTER TABLE `tb_cliente`
   MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tb_cliente_viaje`
+-- AUTO_INCREMENT pour la table `tb_cliente_viaje`
 --
 ALTER TABLE `tb_cliente_viaje`
   MODIFY `id_cliente_viaje` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_conductores`
+-- AUTO_INCREMENT pour la table `tb_conductores`
 --
 ALTER TABLE `tb_conductores`
   MODIFY `id_conductores` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_departamentos`
+-- AUTO_INCREMENT pour la table `tb_departamentos`
 --
 ALTER TABLE `tb_departamentos`
   MODIFY `id_departamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT de la tabla `tb_detalle_factura`
+-- AUTO_INCREMENT pour la table `tb_detalle_factura`
 --
 ALTER TABLE `tb_detalle_factura`
   MODIFY `id_detalle_factura` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_direccion_detalle`
+-- AUTO_INCREMENT pour la table `tb_direccion_detalle`
 --
 ALTER TABLE `tb_direccion_detalle`
   MODIFY `id_direccion_detalle` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_empleados`
+-- AUTO_INCREMENT pour la table `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de la tabla `tb_estado_empleado`
+-- AUTO_INCREMENT pour la table `tb_estado_empleado`
 --
 ALTER TABLE `tb_estado_empleado`
   MODIFY `id_estado_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tb_estado_factura`
+-- AUTO_INCREMENT pour la table `tb_estado_factura`
 --
 ALTER TABLE `tb_estado_factura`
   MODIFY `id_estado_factura` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_estado_unidad`
+-- AUTO_INCREMENT pour la table `tb_estado_unidad`
 --
 ALTER TABLE `tb_estado_unidad`
   MODIFY `id_estado_unidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tb_estado_viaje`
+-- AUTO_INCREMENT pour la table `tb_estado_viaje`
 --
 ALTER TABLE `tb_estado_viaje`
   MODIFY `id_estado_viaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `tb_factura`
+-- AUTO_INCREMENT pour la table `tb_factura`
 --
 ALTER TABLE `tb_factura`
   MODIFY `id_factura` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_genero`
+-- AUTO_INCREMENT pour la table `tb_genero`
 --
 ALTER TABLE `tb_genero`
   MODIFY `id_genero` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tb_mantenimiento`
+-- AUTO_INCREMENT pour la table `tb_mantenimiento`
 --
 ALTER TABLE `tb_mantenimiento`
   MODIFY `id_mantenimiento` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_marca`
+-- AUTO_INCREMENT pour la table `tb_marca`
 --
 ALTER TABLE `tb_marca`
   MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tb_metodo_pago`
+-- AUTO_INCREMENT pour la table `tb_metodo_pago`
 --
 ALTER TABLE `tb_metodo_pago`
   MODIFY `id_metodo_pago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `tb_modelo`
+-- AUTO_INCREMENT pour la table `tb_modelo`
 --
 ALTER TABLE `tb_modelo`
   MODIFY `id_modelo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tb_municipios`
+-- AUTO_INCREMENT pour la table `tb_municipios`
 --
 ALTER TABLE `tb_municipios`
   MODIFY `id_municipio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
--- AUTO_INCREMENT de la tabla `tb_tipo_cliente`
+-- AUTO_INCREMENT pour la table `tb_tipo_cliente`
 --
 ALTER TABLE `tb_tipo_cliente`
   MODIFY `id_tipo_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tb_tipo_licencia`
+-- AUTO_INCREMENT pour la table `tb_tipo_licencia`
 --
 ALTER TABLE `tb_tipo_licencia`
   MODIFY `id_tipo_licencia` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tb_tipo_placa`
+-- AUTO_INCREMENT pour la table `tb_tipo_placa`
 --
 ALTER TABLE `tb_tipo_placa`
   MODIFY `id_tipo_placa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tb_tipo_unidad`
+-- AUTO_INCREMENT pour la table `tb_tipo_unidad`
 --
 ALTER TABLE `tb_tipo_unidad`
   MODIFY `id_tipo_unidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `tb_tipo_viaje`
+-- AUTO_INCREMENT pour la table `tb_tipo_viaje`
 --
 ALTER TABLE `tb_tipo_viaje`
   MODIFY `id_tipo_viaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tb_unidad_transporte`
+-- AUTO_INCREMENT pour la table `tb_unidad_transporte`
 --
 ALTER TABLE `tb_unidad_transporte`
   MODIFY `id_unidad_transporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de la tabla `tb_usuarios`
+-- AUTO_INCREMENT pour la table `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT de la tabla `tb_viajes`
+-- AUTO_INCREMENT pour la table `tb_viajes`
 --
 ALTER TABLE `tb_viajes`
   MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Restricciones para tablas volcadas
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Filtros para la tabla `tb_cliente`
+-- Contraintes pour la table `tb_cliente`
 --
 ALTER TABLE `tb_cliente`
   ADD CONSTRAINT `fk_cliente_tipo` FOREIGN KEY (`id_tipo_cliente`) REFERENCES `tb_tipo_cliente` (`id_tipo_cliente`);
 
 --
--- Filtros para la tabla `tb_cliente_viaje`
+-- Contraintes pour la table `tb_cliente_viaje`
 --
 ALTER TABLE `tb_cliente_viaje`
   ADD CONSTRAINT `fk_tb_cliente_viaje_tb_cliente1` FOREIGN KEY (`id_cliente`) REFERENCES `tb_cliente` (`id_cliente`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_tb_cliente_viaje_tb_viajes1` FOREIGN KEY (`id_viaje`) REFERENCES `tb_viajes` (`id_viaje`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `tb_conductores`
+-- Contraintes pour la table `tb_conductores`
 --
 ALTER TABLE `tb_conductores`
   ADD CONSTRAINT `fk_conductoes_tipo_licencia` FOREIGN KEY (`id_tipo_licencia`) REFERENCES `tb_tipo_licencia` (`id_tipo_licencia`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_conductor_empleado` FOREIGN KEY (`id_empleado`) REFERENCES `tb_empleados` (`id_empleado`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `tb_detalle_factura`
+-- Contraintes pour la table `tb_detalle_factura`
 --
 ALTER TABLE `tb_detalle_factura`
   ADD CONSTRAINT `fk_tb_detalle_factura_tb_cliente_viaje1` FOREIGN KEY (`id_cliente_viaje`) REFERENCES `tb_cliente_viaje` (`id_cliente_viaje`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_tb_detalle_factura_tb_factura1` FOREIGN KEY (`id_factura`) REFERENCES `tb_factura` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `tb_direccion_detalle`
+-- Contraintes pour la table `tb_direccion_detalle`
 --
 ALTER TABLE `tb_direccion_detalle`
   ADD CONSTRAINT `fk_tb_direccion_detalle_tb_viajes1` FOREIGN KEY (`id_viaje`) REFERENCES `tb_viajes` (`id_viaje`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `tb_empleados`
+-- Contraintes pour la table `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
   ADD CONSTRAINT `fk_conductor_estado` FOREIGN KEY (`id_estado_empleado`) REFERENCES `tb_estado_empleado` (`id_estado_empleado`),
@@ -1298,26 +1270,26 @@ ALTER TABLE `tb_empleados`
   ADD CONSTRAINT `fk_empleado_usuario` FOREIGN KEY (`id_cargo`) REFERENCES `tb_cargo` (`id_cargo`);
 
 --
--- Filtros para la tabla `tb_factura`
+-- Contraintes pour la table `tb_factura`
 --
 ALTER TABLE `tb_factura`
   ADD CONSTRAINT `fk_tb_factura_tb_estado_factura1` FOREIGN KEY (`id_estado_factura`) REFERENCES `tb_estado_factura` (`id_estado_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_tb_factura_tb_metodo_pago1` FOREIGN KEY (`id_metodo_pago`) REFERENCES `tb_metodo_pago` (`id_metodo_pago`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `tb_mantenimiento`
+-- Contraintes pour la table `tb_mantenimiento`
 --
 ALTER TABLE `tb_mantenimiento`
   ADD CONSTRAINT `fk_unidad_mantenimiento` FOREIGN KEY (`id_unidad_transporte`) REFERENCES `tb_unidad_transporte` (`id_unidad_transporte`);
 
 --
--- Filtros para la tabla `tb_municipios`
+-- Contraintes pour la table `tb_municipios`
 --
 ALTER TABLE `tb_municipios`
   ADD CONSTRAINT `fk_municipio_departamento` FOREIGN KEY (`id_departamento`) REFERENCES `tb_departamentos` (`id_departamento`);
 
 --
--- Filtros para la tabla `tb_unidad_transporte`
+-- Contraintes pour la table `tb_unidad_transporte`
 --
 ALTER TABLE `tb_unidad_transporte`
   ADD CONSTRAINT `fk_tipo_unidad` FOREIGN KEY (`id_tipo_unidad`) REFERENCES `tb_tipo_unidad` (`id_tipo_unidad`),
@@ -1327,13 +1299,13 @@ ALTER TABLE `tb_unidad_transporte`
   ADD CONSTRAINT `fk_unidad_tipo_placa` FOREIGN KEY (`id_tipo_placa`) REFERENCES `tb_tipo_placa` (`id_tipo_placa`);
 
 --
--- Filtros para la tabla `tb_usuarios`
+-- Contraintes pour la table `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
   ADD CONSTRAINT `fk_estado_usuario` FOREIGN KEY (`estado`) REFERENCES `tb_estado_usuarios` (`id_estado_usuario`);
 
 --
--- Filtros para la tabla `tb_viajes`
+-- Contraintes pour la table `tb_viajes`
 --
 ALTER TABLE `tb_viajes`
   ADD CONSTRAINT `fk_viaje_conductor` FOREIGN KEY (`id_empleado`) REFERENCES `tb_empleados` (`id_empleado`),

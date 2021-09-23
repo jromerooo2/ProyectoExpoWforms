@@ -141,7 +141,7 @@
             this.cmbEstadoUnidad.Location = new System.Drawing.Point(9, 299);
             this.cmbEstadoUnidad.Name = "cmbEstadoUnidad";
             this.cmbEstadoUnidad.Size = new System.Drawing.Size(166, 21);
-            this.cmbEstadoUnidad.TabIndex = 106;
+            this.cmbEstadoUnidad.TabIndex = 6;
             // 
             // txtNombreUnidad
             // 
@@ -151,7 +151,7 @@
             this.txtNombreUnidad.Name = "txtNombreUnidad";
             this.txtNombreUnidad.ReadOnly = true;
             this.txtNombreUnidad.Size = new System.Drawing.Size(163, 20);
-            this.txtNombreUnidad.TabIndex = 104;
+            this.txtNombreUnidad.TabIndex = 12;
             this.txtNombreUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -168,9 +168,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(198, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(142, 18);
@@ -183,43 +183,48 @@
             this.cmbTipoPlaca.Location = new System.Drawing.Point(196, 246);
             this.cmbTipoPlaca.Name = "cmbTipoPlaca";
             this.cmbTipoPlaca.Size = new System.Drawing.Size(166, 21);
-            this.cmbTipoPlaca.TabIndex = 104;
+            this.cmbTipoPlaca.TabIndex = 11;
             // 
             // txtNumeroChasis
             // 
             this.txtNumeroChasis.Location = new System.Drawing.Point(197, 195);
+            this.txtNumeroChasis.MaxLength = 17;
             this.txtNumeroChasis.Name = "txtNumeroChasis";
             this.txtNumeroChasis.Size = new System.Drawing.Size(167, 20);
-            this.txtNumeroChasis.TabIndex = 103;
+            this.txtNumeroChasis.TabIndex = 10;
             // 
             // txtNumeroMotor
             // 
             this.txtNumeroMotor.Location = new System.Drawing.Point(12, 247);
+            this.txtNumeroMotor.MaxLength = 17;
             this.txtNumeroMotor.Name = "txtNumeroMotor";
             this.txtNumeroMotor.Size = new System.Drawing.Size(167, 20);
-            this.txtNumeroMotor.TabIndex = 102;
+            this.txtNumeroMotor.TabIndex = 5;
             // 
             // txtCapacidad
             // 
             this.txtCapacidad.Location = new System.Drawing.Point(12, 195);
+            this.txtCapacidad.MaxLength = 3;
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(167, 20);
-            this.txtCapacidad.TabIndex = 101;
+            this.txtCapacidad.TabIndex = 4;
             this.txtCapacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapacidad_KeyPress);
             // 
             // txtVIN
             // 
             this.txtVIN.Location = new System.Drawing.Point(12, 138);
+            this.txtVIN.MaxLength = 17;
             this.txtVIN.Name = "txtVIN";
             this.txtVIN.Size = new System.Drawing.Size(167, 20);
-            this.txtVIN.TabIndex = 100;
+            this.txtVIN.TabIndex = 3;
             // 
             // txtAnio
             // 
             this.txtAnio.Location = new System.Drawing.Point(12, 87);
+            this.txtAnio.MaxLength = 4;
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(167, 20);
-            this.txtAnio.TabIndex = 99;
+            this.txtAnio.TabIndex = 2;
             this.txtAnio.TextChanged += new System.EventHandler(this.txtAnio_TextChanged);
             this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
             // 
@@ -257,7 +262,7 @@
             this.btnLimpiarCampos.Location = new System.Drawing.Point(197, 329);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(166, 43);
-            this.btnLimpiarCampos.TabIndex = 56;
+            this.btnLimpiarCampos.TabIndex = 14;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
@@ -287,7 +292,7 @@
             this.btnCrearUnidad.Location = new System.Drawing.Point(9, 329);
             this.btnCrearUnidad.Name = "btnCrearUnidad";
             this.btnCrearUnidad.Size = new System.Drawing.Size(170, 43);
-            this.btnCrearUnidad.TabIndex = 57;
+            this.btnCrearUnidad.TabIndex = 13;
             this.btnCrearUnidad.Text = "Agregar unidad";
             this.btnCrearUnidad.UseVisualStyleBackColor = false;
             this.btnCrearUnidad.Click += new System.EventHandler(this.btnCrearUnidad_Click);
@@ -364,7 +369,7 @@
             this.cmbTipoUnidad.Location = new System.Drawing.Point(197, 138);
             this.cmbTipoUnidad.Name = "cmbTipoUnidad";
             this.cmbTipoUnidad.Size = new System.Drawing.Size(166, 21);
-            this.cmbTipoUnidad.TabIndex = 67;
+            this.cmbTipoUnidad.TabIndex = 9;
             // 
             // cmbMarca
             // 
@@ -372,15 +377,16 @@
             this.cmbMarca.Location = new System.Drawing.Point(12, 36);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(167, 21);
-            this.cmbMarca.TabIndex = 58;
+            this.cmbMarca.TabIndex = 1;
             this.cmbMarca.Click += new System.EventHandler(this.cmbMarca_Click);
             // 
             // txtPlaca
             // 
             this.txtPlaca.Location = new System.Drawing.Point(196, 85);
+            this.txtPlaca.MaxLength = 15;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(167, 20);
-            this.txtPlaca.TabIndex = 64;
+            this.txtPlaca.TabIndex = 8;
             // 
             // cmbModelo
             // 
@@ -388,7 +394,7 @@
             this.cmbModelo.Location = new System.Drawing.Point(197, 36);
             this.cmbModelo.Name = "cmbModelo";
             this.cmbModelo.Size = new System.Drawing.Size(166, 21);
-            this.cmbModelo.TabIndex = 61;
+            this.cmbModelo.TabIndex = 7;
             // 
             // btnActualizarGrid
             // 
@@ -403,7 +409,7 @@
             this.btnActualizarGrid.Location = new System.Drawing.Point(301, 303);
             this.btnActualizarGrid.Name = "btnActualizarGrid";
             this.btnActualizarGrid.Size = new System.Drawing.Size(138, 43);
-            this.btnActualizarGrid.TabIndex = 92;
+            this.btnActualizarGrid.TabIndex = 17;
             this.btnActualizarGrid.Text = "Actualizar Grid";
             this.btnActualizarGrid.UseVisualStyleBackColor = false;
             this.btnActualizarGrid.Click += new System.EventHandler(this.btnActualizarGrid_Click);
@@ -459,7 +465,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(157, 303);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(138, 43);
-            this.btnEliminar.TabIndex = 73;
+            this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar Unidad";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -487,7 +493,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(13, 303);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(138, 43);
-            this.btnActualizar.TabIndex = 74;
+            this.btnActualizar.TabIndex = 15;
             this.btnActualizar.Text = "Actualizar Unidad";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
