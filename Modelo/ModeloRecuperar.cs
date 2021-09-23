@@ -76,17 +76,17 @@ namespace Modelo
             }
         }
 
-        public static bool ValidarCredencialesUsuariosPIN(string pusuario, string pdocumento, string pnaciemiento)
+        public static bool ValidarCredencialesUsuariosPIN(string pusuario, string pdocumento, string pnit)
         {
             bool retorno = false;
             try
             {
                 //int activo = 1;
-                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND b.nacimiento_empleado = BINARY ?param3 AND a.id_empleado = b.id_empleado";
+                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND b.NIT = BINARY ?param3 AND a.id_empleado = b.id_empleado";
                 MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());             
                 cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
                 cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));
-                cmdvalidar.Parameters.Add(new MySqlParameter("param3", pnaciemiento));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param3", pnit));
                 retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
                 return retorno;
             }
@@ -111,12 +111,12 @@ namespace Modelo
             }
         }
 
-        public static bool RecuperarByPIN(string pin, string newpassword)
+        public static bool RecuperarByPIN(string pin, string newpassword, string user)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena = '" + newpassword + "' WHERE pin = '" + pin + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena = '" + newpassword + "' WHERE pin = '" + pin + "' AND nombre_usuario = '"+user+"'"), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return retorno;
             }

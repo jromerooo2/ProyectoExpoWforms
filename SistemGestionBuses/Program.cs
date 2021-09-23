@@ -16,8 +16,9 @@ namespace SistemGestionBuses
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConfig(2, "karlaramos", 47));
+            Application.Run(new frmPin());
             //pasen siempre a frmLogin plis - Aviso Parroquial
+            //new frmConfig(id_cargo, "username", id_usuario)
         }
     }
 }

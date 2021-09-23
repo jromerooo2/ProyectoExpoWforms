@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.CardValidacion = new Bunifu.Framework.UI.BunifuCards();
-            this.dtpNacimiento = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.txtNIT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -57,6 +57,7 @@
             this.btnVerContra1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.CardPIN = new Bunifu.Framework.UI.BunifuCards();
             this.DragControlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.CardValidacion.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
@@ -117,7 +118,7 @@
             this.btnConfirmar.TabIndex = 32;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click_1);
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lblIngresoCodigo
             // 
@@ -215,9 +216,9 @@
             this.CardValidacion.BorderRadius = 5;
             this.CardValidacion.BottomSahddow = true;
             this.CardValidacion.color = System.Drawing.Color.Maroon;
+            this.CardValidacion.Controls.Add(this.txtNIT);
             this.CardValidacion.Controls.Add(this.btnIdentidad);
             this.CardValidacion.Controls.Add(this.txtUser);
-            this.CardValidacion.Controls.Add(this.dtpNacimiento);
             this.CardValidacion.Controls.Add(this.label3);
             this.CardValidacion.Controls.Add(this.txtDUI);
             this.CardValidacion.Controls.Add(this.label2);
@@ -230,22 +231,13 @@
             this.CardValidacion.Size = new System.Drawing.Size(427, 464);
             this.CardValidacion.TabIndex = 42;
             // 
-            // dtpNacimiento
+            // txtNIT
             // 
-            this.dtpNacimiento.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.dtpNacimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.dtpNacimiento.BorderRadius = 0;
-            this.dtpNacimiento.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimiento.ForeColor = System.Drawing.Color.Black;
-            this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNacimiento.FormatCustom = "dd/mm/yyyy";
-            this.dtpNacimiento.Location = new System.Drawing.Point(105, 189);
-            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(224, 30);
-            this.dtpNacimiento.TabIndex = 44;
-            this.dtpNacimiento.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dtpNacimiento.onValueChanged += new System.EventHandler(this.dtpNacimiento_onValueChanged);
+            this.txtNIT.Location = new System.Drawing.Point(105, 187);
+            this.txtNIT.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNIT.Name = "txtNIT";
+            this.txtNIT.Size = new System.Drawing.Size(224, 20);
+            this.txtNIT.TabIndex = 44;
             // 
             // label5
             // 
@@ -253,12 +245,12 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(29, 141);
+            this.label5.Location = new System.Drawing.Point(13, 141);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(384, 28);
+            this.label5.Size = new System.Drawing.Size(387, 28);
             this.label5.TabIndex = 43;
-            this.label5.Text = "Ingresa tu fecha de nacimiento:";
+            this.label5.Text = "  Ingresa el NIT correspondiente:";
             // 
             // panelBar
             // 
@@ -373,6 +365,7 @@
             this.btnVerContra2.TabIndex = 102;
             this.btnVerContra2.TabStop = false;
             this.btnVerContra2.Zoom = 10;
+            this.btnVerContra2.Click += new System.EventHandler(this.btnVerContra2_Click);
             // 
             // btnVerContra1
             // 
@@ -387,6 +380,7 @@
             this.btnVerContra1.TabIndex = 101;
             this.btnVerContra1.TabStop = false;
             this.btnVerContra1.Zoom = 10;
+            this.btnVerContra1.Click += new System.EventHandler(this.btnVerContra1_Click);
             // 
             // CardPIN
             // 
@@ -418,6 +412,13 @@
             this.DragControlMain.Horizontal = true;
             this.DragControlMain.TargetControl = this.panelBar;
             this.DragControlMain.Vertical = true;
+            // 
+            // nfConfirmacion
+            // 
+            this.nfConfirmacion.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.nfConfirmacion.Icon = ((System.Drawing.Icon)(resources.GetObject("nfConfirmacion.Icon")));
+            this.nfConfirmacion.Text = "Confirmación";
+            this.nfConfirmacion.Visible = true;
             // 
             // frmPin
             // 
@@ -463,8 +464,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUser;
         private Bunifu.Framework.UI.BunifuCards CardValidacion;
-        private Bunifu.Framework.UI.BunifuDatepicker dtpNacimiento;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
@@ -477,5 +476,8 @@
         private Bunifu.Framework.UI.BunifuImageButton btnVerContra1;
         private Bunifu.Framework.UI.BunifuCards CardPIN;
         private Bunifu.Framework.UI.BunifuDragControl DragControlMain;
+        private System.Windows.Forms.TextBox txtNIT;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NotifyIcon nfConfirmacion;
     }
 }
