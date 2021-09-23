@@ -27,9 +27,9 @@ namespace SistemGestionBuses
             btnNueva.Enabled = false;
             txtNueva.Enabled = false;
             txtConfirmacionNueva.Enabled = false;
+            txtNueva.UseSystemPasswordChar = true;
+            txtConfirmacionNueva.UseSystemPasswordChar = true;
         }
-
-
 
         private void btnNueva_Click_1(object sender, EventArgs e)
         {
@@ -117,6 +117,7 @@ namespace SistemGestionBuses
             if (!String.IsNullOrEmpty(txtCode.Text))
             {
                 recu.PINseguridad = txtCode.Text;
+                recu.usuariorecu = txtUser.Text;
                 bool res = recu.ValidarPINusuario(txtCode.Text);
                 if (res == true)
                 {

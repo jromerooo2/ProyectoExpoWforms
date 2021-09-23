@@ -24,7 +24,7 @@ namespace Controlador
         #region MetodoPIN
         public bool ValidarPINusuario(string pin)
         {
-            return ModeloRecuperar.ValidarCredencialesPIN(pin);
+            return ModeloRecuperar.ValidarCredencialesPIN(pin, usuariorecu);
         }
 
         public bool ActualizarContraPIN()
