@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoEmpleado));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,15 +67,12 @@
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-
-            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.mainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dragControlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -116,17 +114,22 @@
             this.panel2.Size = new System.Drawing.Size(727, 284);
             this.panel2.TabIndex = 32;
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtTelefono.Location = new System.Drawing.Point(492, 156);
+            this.txtTelefono.Mask = "+000-0000-0000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(206, 24);
+            this.txtTelefono.TabIndex = 10;
+            // 
             // txtNIT
             // 
             this.txtNIT.Location = new System.Drawing.Point(30, 200);
             this.txtNIT.Mask = "0000-000000-000-0";
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(257, 20);
-
-            this.txtNIT.TabIndex = 66;
-
             this.txtNIT.TabIndex = 4;
-
             // 
             // TxtDUI
             // 
@@ -134,11 +137,7 @@
             this.TxtDUI.Mask = "00000000-0";
             this.TxtDUI.Name = "TxtDUI";
             this.TxtDUI.Size = new System.Drawing.Size(254, 20);
-
-            this.TxtDUI.TabIndex = 65;
-
             this.TxtDUI.TabIndex = 3;
-
             // 
             // label8
             // 
@@ -151,16 +150,6 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Telefono del empleado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(492, 155);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(206, 24);
-            this.txtTelefono.TabIndex = 63;
-
             // 
             // lblApellido
             // 
@@ -214,7 +203,7 @@
             this.dtNacimiento.Location = new System.Drawing.Point(498, 242);
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dtNacimiento.TabIndex = 57;
+            this.dtNacimiento.TabIndex = 11;
             this.dtNacimiento.ValueChanged += new System.EventHandler(this.dtNacimiento_ValueChanged);
             // 
             // label6
@@ -291,7 +280,7 @@
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(100, 24);
-            this.txtId.TabIndex = 36;
+            this.txtId.TabIndex = 12;
             // 
             // cmbGenero
             // 
@@ -412,7 +401,7 @@
             this.BtnConectar.Location = new System.Drawing.Point(153, 185);
             this.BtnConectar.Name = "BtnConectar";
             this.BtnConectar.Size = new System.Drawing.Size(111, 51);
-            this.BtnConectar.TabIndex = 20;
+            this.BtnConectar.TabIndex = 18;
             this.BtnConectar.Text = "Conectar";
             this.BtnConectar.UseVisualStyleBackColor = false;
             this.BtnConectar.Click += new System.EventHandler(this.BtnConectar_Click);
@@ -443,7 +432,7 @@
             this.button3.Location = new System.Drawing.Point(21, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 51);
-            this.button3.TabIndex = 19;
+            this.button3.TabIndex = 17;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.BtnLimpiar_Click);
@@ -463,7 +452,7 @@
             this.BtnEliminar.Location = new System.Drawing.Point(153, 117);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(111, 48);
-            this.BtnEliminar.TabIndex = 18;
+            this.BtnEliminar.TabIndex = 16;
             this.BtnEliminar.Text = "Eliminar Empleado";
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_click);
@@ -483,7 +472,7 @@
             this.BtnActualizar.Location = new System.Drawing.Point(21, 116);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(111, 48);
-            this.BtnActualizar.TabIndex = 17;
+            this.BtnActualizar.TabIndex = 15;
             this.BtnActualizar.Text = "Modificar Empleado";
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_click);
@@ -503,7 +492,7 @@
             this.button4.Location = new System.Drawing.Point(153, 52);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(111, 49);
-            this.button4.TabIndex = 16;
+            this.button4.TabIndex = 14;
             this.button4.Text = "Actualizar grid de datos";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.BtnGrid_Click);
@@ -523,7 +512,7 @@
             this.BtnAgregar.Location = new System.Drawing.Point(21, 52);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(111, 49);
-            this.BtnAgregar.TabIndex = 15;
+            this.BtnAgregar.TabIndex = 13;
             this.BtnAgregar.Text = "Agregar Empleado";
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.btnAgregar_click);
@@ -549,7 +538,7 @@
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.ReadOnly = true;
             this.dgvEmpleado.Size = new System.Drawing.Size(1028, 206);
-            this.dgvEmpleado.TabIndex = 29;
+            this.dgvEmpleado.TabIndex = 19;
             this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEmpleado_CellClick);
             // 
             // pictureBox2
@@ -574,16 +563,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
-            // 
-
-            // txtTelefono
-            // 
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtTelefono.Location = new System.Drawing.Point(492, 156);
-            this.txtTelefono.Mask = "+000-0000-0000";
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(206, 24);
-            this.txtTelefono.TabIndex = 65;
             // 
             // mainElipse
             // 
