@@ -15,71 +15,53 @@ namespace SistemGestionBuses
 {
     public partial class frmMantenimientos : Form
     {
+        public DataTable datosCond;
+        public ControladorMantenimiento objMant;
+        //cmb Cargar Unidad
+        void CargarUnidad()
+        {
+            try
+            {
+                DataTable dataUnidad = ControladorMantenimiento.ObtenerUnidad();
+                cmbUnidad.DataSource = dataUnidad;
+                cmbUnidad.DisplayMember = "placa";
+                cmbUnidad.ValueMember = "id_unidad_transporte";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar las Unidades.", "Error de carga.",
+                                                                MessageBoxButtons.OK,
+                                                                MessageBoxIcon.Error);
+            }
+        }
+        //CREAR DATOS
+        void EnvioDatos()
+        {
+            try
+            {
+                int  id_unidad_transporte;
+                string descripcion, fecha;
+                double monto_mantenimiento,ultimo_kilometraje;
+               
+                id_unidad_transporte = Convert.ToInt16(cmbUnidad.SelectedValue);
+                monto_mantenimiento =Convert.ToDouble(txtMonto);
+                ultimo_kilometraje = Convert.ToDouble(TxtKilom);
+                descripcion = TxtDescripcion.Text;
+                fecha = DtMant.Text;
+                //Instanciar Objeto
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Oops!, ocurrió un error al registrar el mantenimiento, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public frmMantenimientos()
         {
             InitializeComponent();
         }
-
-        public DataTable DataGridView_useonly;
-        public ControladorMantenimiento objmaintenance;
         
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtDescripcion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtMonto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtUltimoKilom_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DtFecha_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtMonto_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        /*DATA UPDATE*/
-
-
-
-
-
-        /*DATA DELETE*/
-
-
-
     }
-
- 
-    }
+}
 
