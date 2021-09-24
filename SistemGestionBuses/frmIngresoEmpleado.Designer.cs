@@ -66,8 +66,7 @@
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-<<<<<<< Updated upstream
-=======
+
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.mainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
@@ -75,7 +74,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dragControlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
->>>>>>> Stashed changes
+
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -123,11 +122,11 @@
             this.txtNIT.Mask = "0000-000000-000-0";
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(257, 20);
-<<<<<<< Updated upstream
+
             this.txtNIT.TabIndex = 66;
-=======
+
             this.txtNIT.TabIndex = 4;
->>>>>>> Stashed changes
+
             // 
             // TxtDUI
             // 
@@ -135,11 +134,11 @@
             this.TxtDUI.Mask = "00000000-0";
             this.TxtDUI.Name = "TxtDUI";
             this.TxtDUI.Size = new System.Drawing.Size(254, 20);
-<<<<<<< Updated upstream
+
             this.TxtDUI.TabIndex = 65;
-=======
+
             this.TxtDUI.TabIndex = 3;
->>>>>>> Stashed changes
+
             // 
             // label8
             // 
@@ -152,7 +151,7 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Telefono del empleado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-<<<<<<< Updated upstream
+
             // 
             // txtTelefono
             // 
@@ -161,8 +160,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(206, 24);
             this.txtTelefono.TabIndex = 63;
-=======
->>>>>>> Stashed changes
+
             // 
             // lblApellido
             // 
@@ -577,8 +575,7 @@
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
-<<<<<<< Updated upstream
-=======
+
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -634,7 +631,6 @@
             this.dragControlMain.TargetControl = this.panelBar;
             this.dragControlMain.Vertical = true;
             // 
->>>>>>> Stashed changes
             // frmIngresoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
