@@ -244,6 +244,7 @@
             this.BtnAgregar.TabIndex = 15;
             this.BtnAgregar.Text = "Agregar Mantenimiento";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // panel2
             // 
@@ -290,7 +291,7 @@
             // 
             this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonto.Location = new System.Drawing.Point(314, 125);
-            this.txtMonto.Mask = "0.000,00";
+            this.txtMonto.Mask = "0000.00";
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(150, 24);
             this.txtMonto.TabIndex = 90;
@@ -299,7 +300,7 @@
             // 
             this.TxtKilom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKilom.Location = new System.Drawing.Point(314, 63);
-            this.TxtKilom.Mask = "000.000";
+            this.TxtKilom.Mask = "000000";
             this.TxtKilom.Name = "TxtKilom";
             this.TxtKilom.Size = new System.Drawing.Size(150, 24);
             this.TxtKilom.TabIndex = 89;

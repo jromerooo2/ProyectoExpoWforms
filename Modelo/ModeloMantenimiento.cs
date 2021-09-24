@@ -50,13 +50,13 @@ namespace Modelo
             }
         }
         //CRUD Mantenimiento
-        public static bool RegistrarMantenimiento(int pId, int pUnidad, double pMonto, double pKilometraje,string pDescripcion,string pFecha )
+        public static bool RegistrarMantenimiento( int pUnidad, double pMonto, double pKilometraje,string pDescripcion,string pFecha )
         {
             bool retorno = false;
             try
             {
                 //INCERCION
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_mantenimiento (id_mantenimiento, id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')",pId,pUnidad,pMonto,pKilometraje,pDescripcion,pFecha), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_mantenimiento ( id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha) VALUES ('{0}','{1}','{2}','{3}','{4}')",pUnidad,pMonto,pKilometraje,pDescripcion,pFecha), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 //RETORNO

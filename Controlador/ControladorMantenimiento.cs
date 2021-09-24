@@ -34,10 +34,9 @@ namespace Controlador
         public string descripcion { get; set; }
         public string fecha { get; set; }
         //CONSTRUCTOR
-        public ControladorMantenimiento(int pId, int pUnidad, double pMonto, double pKilometraje, string pDescripcion, string pFecha)
+        public ControladorMantenimiento( int pUnidad, double pMonto, double pKilometraje, string pDescripcion, string pFecha)
         {
             //Atributo = parametro
-            id_mantenimiento = pId;
             id_unidad_transporte = pUnidad;
             monto_mantenimiento = pMonto;
             ultimo_kilometraje = pKilometraje;
@@ -47,7 +46,7 @@ namespace Controlador
         //CRUD Mantenimiento
         public bool EnviarDatosControlador()
         {
-            return ModeloMantenimiento.RegistrarMantenimiento(id_mantenimiento, id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
+            return ModeloMantenimiento.RegistrarMantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
         }
     }
 }
