@@ -23,20 +23,6 @@ namespace SistemGestionBuses
         public DataTable DataGridView_useonly;
         public ControladorMantenimiento objmaintenance;
         
-        //DISPLAYING COMBO BOXES 
-
-        /*DATA INSERT*/
-        //REGISTERING MAINTENANCE
-        
-
-
-
-        void LoadDataGridView()
-        {
-            DataGridView_useonly = ControladorMantenimiento.LoadMaintenance_Controller();
-            DgvMaintenance.DataSource = DataGridView_useonly;
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 

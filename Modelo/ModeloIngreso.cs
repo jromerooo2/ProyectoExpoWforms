@@ -179,6 +179,7 @@ namespace Modelo
                 return data = null;
             }
         }
+        //
         public static DataTable ObtenerListaEmpleados()
         {
             DataTable data;
@@ -312,25 +313,7 @@ namespace Modelo
                 return retorno;
             }   
         }
-        //Obtener Lista de Empleado
-        public static DataTable ObtenerEmpleado()
-        {
-            DataTable data;
-            try
-            {
-                string instruccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
-                MySqlCommand cmdEmpl = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEmpl);
-                data = new DataTable();
-                adp.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
 
-                return data = null;
-            }
-        }
         //Update Empleado
         public static bool ActualizarEmpleado(int pId,string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
         {

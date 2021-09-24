@@ -10,11 +10,7 @@ namespace Controlador
 {
    public class ControladorIngreso
     {
-        //dt Empleado
-        public static DataTable CargarEmpleado_Controlador()
-        {
-            return ModeloIngreso.ObtenerListaEmpleados();
-        }
+
         //cmb Municipio
         public static DataTable ObtenerMunicipios()
         {

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoEmpleado));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNIT = new System.Windows.Forms.MaskedTextBox();
+            this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
-            this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
@@ -105,18 +105,33 @@
             this.panel2.Size = new System.Drawing.Size(727, 284);
             this.panel2.TabIndex = 32;
             // 
+            // txtNIT
+            // 
+            this.txtNIT.Location = new System.Drawing.Point(30, 200);
+            this.txtNIT.Mask = "0000-000000-000-0";
+            this.txtNIT.Name = "txtNIT";
+            this.txtNIT.Size = new System.Drawing.Size(257, 20);
+            this.txtNIT.TabIndex = 66;
+            // 
+            // TxtDUI
+            // 
+            this.TxtDUI.Location = new System.Drawing.Point(30, 146);
+            this.TxtDUI.Mask = "00000000-0";
+            this.TxtDUI.Name = "TxtDUI";
+            this.TxtDUI.Size = new System.Drawing.Size(254, 20);
+            this.TxtDUI.TabIndex = 65;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label8.Location = new System.Drawing.Point(492, 132);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 20);
+            this.label8.Size = new System.Drawing.Size(180, 22);
             this.label8.TabIndex = 64;
             this.label8.Text = "Telefono del empleado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtTelefono
             // 
@@ -129,11 +144,11 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.lblApellido.Location = new System.Drawing.Point(30, 68);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(173, 20);
+            this.lblApellido.Size = new System.Drawing.Size(183, 22);
             this.lblApellido.TabIndex = 62;
             this.lblApellido.Text = "Apellidos del empleado";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -149,11 +164,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label11.Location = new System.Drawing.Point(30, 172);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 20);
+            this.label11.Size = new System.Drawing.Size(35, 22);
             this.label11.TabIndex = 60;
             this.label11.Text = "NIT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -161,11 +176,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label9.Location = new System.Drawing.Point(338, 244);
+            this.label9.Location = new System.Drawing.Point(325, 241);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 20);
+            this.label9.Size = new System.Drawing.Size(167, 22);
             this.label9.TabIndex = 58;
             this.label9.Text = "Fecha de nacimiento";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -182,11 +197,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label6.Location = new System.Drawing.Point(495, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 20);
+            this.label6.Size = new System.Drawing.Size(83, 22);
             this.label6.TabIndex = 56;
             this.label6.Text = "Dirección";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -203,11 +218,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label7.Location = new System.Drawing.Point(30, 120);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 20);
+            this.label7.Size = new System.Drawing.Size(35, 22);
             this.label7.TabIndex = 51;
             this.label7.Text = "DUI";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -215,11 +230,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label12.Location = new System.Drawing.Point(30, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(165, 20);
+            this.label12.Size = new System.Drawing.Size(175, 22);
             this.label12.TabIndex = 50;
             this.label12.Text = "Nombre del empleado";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -235,11 +250,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label10.Location = new System.Drawing.Point(30, 242);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 20);
+            this.label10.Size = new System.Drawing.Size(102, 22);
             this.label10.TabIndex = 44;
             this.label10.Text = "ID empleado";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -267,11 +282,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label5.Location = new System.Drawing.Point(339, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.Size = new System.Drawing.Size(65, 22);
             this.label5.TabIndex = 25;
             this.label5.Text = "Genero";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -312,33 +327,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label4.Location = new System.Drawing.Point(339, 172);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
+            this.label4.Size = new System.Drawing.Size(83, 22);
             this.label4.TabIndex = 21;
             this.label4.Text = "Municipio";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.label1.Location = new System.Drawing.Point(339, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.Size = new System.Drawing.Size(60, 22);
             this.label1.TabIndex = 20;
             this.label1.Text = "Estado";
             // 
             // lblIngreso
             // 
             this.lblIngreso.AutoSize = true;
-            this.lblIngreso.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngreso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngreso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.lblIngreso.Location = new System.Drawing.Point(339, 68);
             this.lblIngreso.Name = "lblIngreso";
-            this.lblIngreso.Size = new System.Drawing.Size(48, 20);
+            this.lblIngreso.Size = new System.Drawing.Size(55, 22);
             this.lblIngreso.TabIndex = 0;
             this.lblIngreso.Text = "Cargo";
             // 
@@ -533,22 +548,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
-            // 
-            // TxtDUI
-            // 
-            this.TxtDUI.Location = new System.Drawing.Point(30, 146);
-            this.TxtDUI.Mask = "00000000-0";
-            this.TxtDUI.Name = "TxtDUI";
-            this.TxtDUI.Size = new System.Drawing.Size(254, 20);
-            this.TxtDUI.TabIndex = 65;
-            // 
-            // txtNIT
-            // 
-            this.txtNIT.Location = new System.Drawing.Point(30, 200);
-            this.txtNIT.Mask = "0000-000000-000-0";
-            this.txtNIT.Name = "txtNIT";
-            this.txtNIT.Size = new System.Drawing.Size(257, 20);
-            this.txtNIT.TabIndex = 66;
             // 
             // frmIngresoEmpleado
             // 
