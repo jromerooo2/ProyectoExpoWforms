@@ -79,17 +79,19 @@
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(429, 220);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPass.MaxLength = 50;
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(198, 29);
-            this.txtPass.TabIndex = 16;           
+            this.txtPass.TabIndex = 16;
             // 
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(429, 145);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.MaxLength = 50;
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(198, 29);
@@ -109,12 +111,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 15F);
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 32);
+            this.label2.Location = new System.Drawing.Point(33, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 26);
+            this.label2.Size = new System.Drawing.Size(180, 35);
             this.label2.TabIndex = 13;
             this.label2.Text = "Inicia Sesión ";
             this.label2.Click += new System.EventHandler(this.label2_Click);

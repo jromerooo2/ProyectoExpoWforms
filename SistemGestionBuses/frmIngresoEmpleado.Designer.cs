@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoEmpleado));
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
             this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -66,20 +66,32 @@
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+<<<<<<< Updated upstream
+=======
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.mainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panelBar = new System.Windows.Forms.Panel();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.dragControlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+>>>>>>> Stashed changes
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.txtNIT);
             this.panel2.Controls.Add(this.TxtDUI);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.lblApellido);
             this.panel2.Controls.Add(this.TxtApellidos);
             this.panel2.Controls.Add(this.label11);
@@ -100,7 +112,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblIngreso);
-            this.panel2.Location = new System.Drawing.Point(318, 74);
+            this.panel2.Location = new System.Drawing.Point(318, 132);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(727, 284);
             this.panel2.TabIndex = 32;
@@ -111,7 +123,11 @@
             this.txtNIT.Mask = "0000-000000-000-0";
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(257, 20);
+<<<<<<< Updated upstream
             this.txtNIT.TabIndex = 66;
+=======
+            this.txtNIT.TabIndex = 4;
+>>>>>>> Stashed changes
             // 
             // TxtDUI
             // 
@@ -119,7 +135,11 @@
             this.TxtDUI.Mask = "00000000-0";
             this.TxtDUI.Name = "TxtDUI";
             this.TxtDUI.Size = new System.Drawing.Size(254, 20);
+<<<<<<< Updated upstream
             this.TxtDUI.TabIndex = 65;
+=======
+            this.TxtDUI.TabIndex = 3;
+>>>>>>> Stashed changes
             // 
             // label8
             // 
@@ -132,6 +152,7 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Telefono del empleado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             // 
             // txtTelefono
             // 
@@ -140,6 +161,8 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(206, 24);
             this.txtTelefono.TabIndex = 63;
+=======
+>>>>>>> Stashed changes
             // 
             // lblApellido
             // 
@@ -157,9 +180,10 @@
             // 
             this.TxtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidos.Location = new System.Drawing.Point(30, 91);
+            this.TxtApellidos.MaxLength = 50;
             this.TxtApellidos.Name = "TxtApellidos";
             this.TxtApellidos.Size = new System.Drawing.Size(254, 24);
-            this.TxtApellidos.TabIndex = 61;
+            this.TxtApellidos.TabIndex = 2;
             // 
             // label11
             // 
@@ -193,6 +217,7 @@
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dtNacimiento.TabIndex = 57;
+            this.dtNacimiento.ValueChanged += new System.EventHandler(this.dtNacimiento_ValueChanged);
             // 
             // label6
             // 
@@ -210,10 +235,11 @@
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(495, 41);
+            this.TxtDireccion.MaxLength = 150;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(203, 72);
-            this.TxtDireccion.TabIndex = 55;
+            this.TxtDireccion.TabIndex = 9;
             // 
             // label7
             // 
@@ -243,9 +269,10 @@
             // 
             this.TxtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombres.Location = new System.Drawing.Point(30, 39);
+            this.TxtNombres.MaxLength = 50;
             this.TxtNombres.Name = "TxtNombres";
             this.TxtNombres.Size = new System.Drawing.Size(254, 24);
-            this.TxtNombres.TabIndex = 45;
+            this.TxtNombres.TabIndex = 1;
             // 
             // label10
             // 
@@ -276,7 +303,7 @@
             this.cmbGenero.Location = new System.Drawing.Point(339, 142);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(121, 26);
-            this.cmbGenero.TabIndex = 26;
+            this.cmbGenero.TabIndex = 7;
             this.cmbGenero.Click += new System.EventHandler(this.cmbGenero_click);
             // 
             // label5
@@ -299,7 +326,7 @@
             this.cmbCargo.Location = new System.Drawing.Point(339, 90);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(121, 26);
-            this.cmbCargo.TabIndex = 24;
+            this.cmbCargo.TabIndex = 6;
             this.cmbCargo.Click += new System.EventHandler(this.cmbCargo_click);
             // 
             // CmbEstado
@@ -310,7 +337,7 @@
             this.CmbEstado.Location = new System.Drawing.Point(339, 38);
             this.CmbEstado.Name = "CmbEstado";
             this.CmbEstado.Size = new System.Drawing.Size(121, 26);
-            this.CmbEstado.TabIndex = 23;
+            this.CmbEstado.TabIndex = 5;
             this.CmbEstado.Click += new System.EventHandler(this.cmbEstado_click);
             // 
             // cmbMunicipio
@@ -321,7 +348,7 @@
             this.cmbMunicipio.Location = new System.Drawing.Point(339, 194);
             this.cmbMunicipio.Name = "cmbMunicipio";
             this.cmbMunicipio.Size = new System.Drawing.Size(121, 26);
-            this.cmbMunicipio.TabIndex = 22;
+            this.cmbMunicipio.TabIndex = 8;
             this.cmbMunicipio.Click += new System.EventHandler(this.cmbMunicipios_Click);
             // 
             // label4
@@ -367,7 +394,7 @@
             this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.BtnAgregar);
-            this.panel1.Location = new System.Drawing.Point(17, 102);
+            this.panel1.Location = new System.Drawing.Point(17, 160);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 256);
             this.panel1.TabIndex = 31;
@@ -509,7 +536,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label2.Location = new System.Drawing.Point(311, 33);
+            this.label2.Location = new System.Drawing.Point(310, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(486, 43);
             this.label2.TabIndex = 30;
@@ -518,8 +545,9 @@
             // 
             // dgvEmpleado
             // 
+            this.dgvEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleado.Location = new System.Drawing.Point(17, 374);
+            this.dgvEmpleado.Location = new System.Drawing.Point(17, 431);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.ReadOnly = true;
             this.dgvEmpleado.Size = new System.Drawing.Size(1028, 206);
@@ -533,7 +561,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1069, 592);
+            this.pictureBox2.Size = new System.Drawing.Size(1069, 649);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 61;
             this.pictureBox2.TabStop = false;
@@ -542,25 +570,85 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(86, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(91, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
+<<<<<<< Updated upstream
+=======
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtTelefono.Location = new System.Drawing.Point(492, 156);
+            this.txtTelefono.Mask = "+000-0000-0000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(206, 24);
+            this.txtTelefono.TabIndex = 65;
+            // 
+            // mainElipse
+            // 
+            this.mainElipse.ElipseRadius = 5;
+            this.mainElipse.TargetControl = this;
+            // 
+            // panelBar
+            // 
+            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.bunifuImageButton2);
+            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(1069, 43);
+            this.panelBar.TabIndex = 99;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(1022, 3);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(35, 31);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 96;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this.panel1;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 5;
+            this.bunifuElipse2.TargetControl = this.panel2;
+            // 
+            // dragControlMain
+            // 
+            this.dragControlMain.Fixed = true;
+            this.dragControlMain.Horizontal = true;
+            this.dragControlMain.TargetControl = this.panelBar;
+            this.dragControlMain.Vertical = true;
+            // 
+>>>>>>> Stashed changes
             // frmIngresoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1069, 592);
+            this.ClientSize = new System.Drawing.Size(1069, 649);
+            this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIngresoEmpleado";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmIngresoConductores_Load);
@@ -571,6 +659,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,10 +700,16 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox TxtApellidos;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox txtNIT;
         private System.Windows.Forms.MaskedTextBox TxtDUI;
+        private System.Windows.Forms.MaskedTextBox txtTelefono;
+        private Bunifu.Framework.UI.BunifuElipse mainElipse;
+        private System.Windows.Forms.Panel panelBar;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuDragControl dragControlMain;
     }
 }
