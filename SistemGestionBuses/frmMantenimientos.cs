@@ -43,8 +43,8 @@ namespace SistemGestionBuses
                 string descripcion, fecha;
                 double monto_mantenimiento,ultimo_kilometraje;
                 id_unidad_transporte = Convert.ToInt16(cmbUnidad.SelectedValue);
-                monto_mantenimiento =Convert.ToDouble(txtMonto);
-                ultimo_kilometraje = Convert.ToDouble(TxtKilom);
+                monto_mantenimiento =Convert.ToDouble(txtMonto.Text);
+                ultimo_kilometraje = Convert.ToDouble(TxtKilom.Text);
                 descripcion = TxtDescripcion.Text;
                 fecha = DtMant.Text;
                 //Instanciar Objeto
@@ -52,14 +52,14 @@ namespace SistemGestionBuses
                 bool respuesta = objMant.EnviarDatosControlador();
                 if (respuesta==true)
                 {
-                    MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mantenimiento registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mantenimiento no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            
+
 
             }
             catch (Exception)
@@ -71,6 +71,7 @@ namespace SistemGestionBuses
         public frmMantenimientos()
         {
             InitializeComponent();
+            CargarUnidad();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
