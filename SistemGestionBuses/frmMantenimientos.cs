@@ -15,7 +15,7 @@ namespace SistemGestionBuses
 {
     public partial class frmMantenimientos : Form
     {
-        public DataTable datosCond;
+        public DataTable datosMan;
         public ControladorMantenimiento objMant;
         //cmb Cargar Unidad
         void CargarUnidad()
@@ -33,6 +33,15 @@ namespace SistemGestionBuses
                                                                 MessageBoxButtons.OK,
                                                                 MessageBoxIcon.Error);
             }
+        }
+        //CARGAR GRID DE DATOS
+        void CargarGridDatos()
+        {
+            CargarUnidad();
+            datosMan = ControladorMantenimiento.CargarMantenimiento_Controlador();
+            DgvMantenimiento.DataSource = datosMan;
+            DgvMantenimiento.Columns[0].Visible = false;
+
         }
         //CREAR DATOS
         void EnvioDatos()

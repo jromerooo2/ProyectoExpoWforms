@@ -32,7 +32,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DgvMaintenance = new System.Windows.Forms.DataGridView();
+            this.DgvMantenimiento = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnConectar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMantenimiento)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,13 +97,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
-            // DgvMaintenance
+            // DgvMantenimiento
             // 
-            this.DgvMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvMaintenance.Location = new System.Drawing.Point(12, 368);
-            this.DgvMaintenance.Name = "DgvMaintenance";
-            this.DgvMaintenance.Size = new System.Drawing.Size(871, 276);
-            this.DgvMaintenance.TabIndex = 83;
+            this.DgvMantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMantenimiento.Location = new System.Drawing.Point(12, 368);
+            this.DgvMantenimiento.Name = "DgvMantenimiento";
+            this.DgvMantenimiento.Size = new System.Drawing.Size(871, 276);
+            this.DgvMantenimiento.TabIndex = 83;
             // 
             // panel1
             // 
@@ -388,6 +388,7 @@
             // 
             // TxtDescripcion
             // 
+            this.TxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDescripcion.Location = new System.Drawing.Point(16, 61);
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
@@ -426,7 +427,7 @@
             this.ClientSize = new System.Drawing.Size(898, 667);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.DgvMaintenance);
+            this.Controls.Add(this.DgvMantenimiento);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
@@ -436,7 +437,7 @@
             this.Text = "Mantenimiento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMantenimiento)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -451,7 +452,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView DgvMaintenance;
+        private System.Windows.Forms.DataGridView DgvMantenimiento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnConectar;
         private System.Windows.Forms.Label label6;
