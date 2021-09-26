@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controlador;
 
 namespace SistemGestionBuses
 {
     public partial class frmIngresoConductores : Form
     {
-        public frmIngresoConductores()
+        public static string nombres;
+        public static string apellidos;
+        public frmIngresoConductores(string pnombres, string papellidos)
         {
             InitializeComponent();
+            nombres = pnombres;
+            apellidos = papellidos;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -22,14 +27,19 @@ namespace SistemGestionBuses
             this.Close();
         }
 
-        private void picBackground_Click(object sender, EventArgs e)
+        private void txtNombreConduc_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtUser_TextChanged(object sender, EventArgs e)
+        void getNamesDriver()
         {
+            //ControladorIngreso.CargarNombresConduc();
+        }
 
+        private void frmIngresoConductores_Load(object sender, EventArgs e)
+        {
+            getNamesDriver();
         }
     }
 }

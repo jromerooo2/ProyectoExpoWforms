@@ -42,6 +42,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.cmbUnidad = new System.Windows.Forms.ComboBox();
             this.lblUnidad = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.MaskedTextBox();
@@ -54,8 +56,6 @@
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).BeginInit();
@@ -102,7 +102,7 @@
             this.DgvMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvMaintenance.Location = new System.Drawing.Point(12, 368);
             this.DgvMaintenance.Name = "DgvMaintenance";
-            this.DgvMaintenance.Size = new System.Drawing.Size(871, 248);
+            this.DgvMaintenance.Size = new System.Drawing.Size(871, 276);
             this.DgvMaintenance.TabIndex = 83;
             // 
             // panel1
@@ -266,6 +266,27 @@
             this.panel2.Size = new System.Drawing.Size(581, 256);
             this.panel2.TabIndex = 87;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label10.Location = new System.Drawing.Point(16, 186);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(167, 24);
+            this.label10.TabIndex = 94;
+            this.label10.Text = "ID Mantenimiento";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(16, 212);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(78, 24);
+            this.txtId.TabIndex = 93;
+            // 
             // cmbUnidad
             // 
             this.cmbUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -397,27 +418,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label10.Location = new System.Drawing.Point(16, 186);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 24);
-            this.label10.TabIndex = 94;
-            this.label10.Text = "ID Mantenimiento";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(16, 212);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(78, 24);
-            this.txtId.TabIndex = 93;
             // 
             // frmMantenimientos
             // 
