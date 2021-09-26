@@ -79,6 +79,20 @@ namespace SistemGestionBuses
             CargarUnidad();
 
         }
+
+        private void BtnConectar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection objvalor;
+            objvalor = ControladorConexion.GetConn();
+            if (objvalor != null)
+            {
+                MessageBox.Show("Conexión se estableció con exito.");
+            }
+            else
+            {
+                MessageBox.Show("Error al establecer conexión.");
+            }
+        }
     }
 }
 
