@@ -156,7 +156,7 @@ namespace SistemGestionBuses
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (id_cargo == 1)
                     {
-                        //frmIngresoConductores conduc = new frmIngresoConductores();
+                        frmIngresoConductores conduc = new frmIngresoConductores(nombre_empleado, apellido_empleado);
                         this.SendToBack();
                         this.Enabled = false;                     
                         conduc.Show();
