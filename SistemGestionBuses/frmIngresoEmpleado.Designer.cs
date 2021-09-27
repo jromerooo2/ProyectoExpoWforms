@@ -540,6 +540,7 @@
             this.dgvEmpleado.Size = new System.Drawing.Size(1028, 206);
             this.dgvEmpleado.TabIndex = 19;
             this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEmpleado_CellClick);
+            this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
             // 
             // pictureBox2
             // 

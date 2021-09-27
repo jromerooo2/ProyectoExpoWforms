@@ -129,6 +129,11 @@ namespace Controlador
         {
             return ModeloIngreso.ObtenerNombreConduc(id_empleado);
         }
+
+        public static DataTable CargarConductores_Controller()
+        {
+            return ModeloIngreso.ObtenerListaConductores();
+        }
          
         public bool IngresarDatosControlador()
         {

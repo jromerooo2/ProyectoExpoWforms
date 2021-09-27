@@ -438,7 +438,7 @@ namespace Modelo
             string empleado;
             try
             {              
-                string instruccion = "SELECT CONCAT (a.apellidos_empleado, ',' , a.nombres_empleado) AS empleado FROM tb_empleados a WHERE a.id_empleado = BINARY ?param1;";
+                string instruccion = "SELECT CONCAT (a.apellidos_empleado, ', ' , a.nombres_empleado) AS Empleado FROM tb_empleados a WHERE a.id_empleado = BINARY ?param1;";
                 MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdid.Parameters.Add(new MySqlParameter("param1", pid));
                 empleado = Convert.ToString(cmdid.ExecuteScalar());
@@ -462,6 +462,24 @@ namespace Modelo
             catch (Exception)
             {
                 return retorno;
+            }
+        }
+
+        public static DataTable ObtenerListaConductores()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tbconductoresview";
+                MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
             }
         }
 
