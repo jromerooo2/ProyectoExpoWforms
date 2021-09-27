@@ -74,7 +74,7 @@ namespace SistemGestionBuses
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             int code = Convert.ToInt32(txtCode.Text);
-            if (ControladorRecuperar.ConfirmCodes(code))
+            if (ControladorRecuperar.ConfirmCode(code))
             {
                 MessageBox.Show("Se ha confirmado tu identidad, puedes continuar");
 

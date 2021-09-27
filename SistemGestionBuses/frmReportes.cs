@@ -4,6 +4,7 @@ using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iText.Layout.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,16 @@ namespace SistemGestionBuses
             PdfFont fontC = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
 
             string[] columnas = {"Nombres", "Apellidos", "Teléfono" , "Dirección", "Correo Electrónico"};
+            float[] tamanios = { 4, 4, 4, 4, 3 };
+
+            Table tb = new Table(UnitValue.CreatePercentArray(tamanios));
+            tb.SetWidth(UnitValue.CreatePercentValue(100));
+
+            foreach(string title in columnas)
+            {
+                tb.AddHeaderCell(new Cell().Add(new Paragraph(title).SetFont(font)));
+            }
+            document.Add(tb);
             document.Close();
             MessageBox.Show("Se ha generado un documento PDF con el reporte.");
         }
