@@ -129,7 +129,7 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

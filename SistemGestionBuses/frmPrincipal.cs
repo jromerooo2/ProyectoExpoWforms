@@ -160,5 +160,11 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void cardReportes_Paint(object sender, PaintEventArgs e)
+        {
+            frmReportes reportes = new frmReportes();
+            reportes.Show();
+        }
     }
 }
