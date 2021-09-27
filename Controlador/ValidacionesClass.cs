@@ -46,7 +46,6 @@ namespace Controlador
             {
                 if (text.Contains(item)) return true;
             }
-
             return false;
         }
 

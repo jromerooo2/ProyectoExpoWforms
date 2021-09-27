@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+
 
 namespace SistemGestionBuses
 {
@@ -75,6 +77,7 @@ namespace SistemGestionBuses
                 dgvUsuarios.Columns[3].Visible = false;
                 dgvUsuarios.Columns[4].HeaderText = "Empleados";
                 dgvUsuarios.Columns[5].HeaderText = "Cargo";
+                //dgvUsuarios.Columns[6].Visible = false;
             }
             catch (Exception )
             {
@@ -169,18 +172,23 @@ namespace SistemGestionBuses
         }
         public ControladorUsuario objCond = new ControladorUsuario();
 
+        public static byte[] img;
         void EnvioDatos()
         {
             try
             {
                 string user, correo ;
                 int id_empleado, id_cargo;
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                 img = ms.ToArray();
+
 
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
                 user = txtUser.Text;
                 correo = txtCorreo.Text;
                 id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado);
+                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, img);
                 if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -243,6 +251,10 @@ namespace SistemGestionBuses
                 BtnAgregar.Enabled = true;
             }
 
+            List<string> img = ControladorUsuario.GetUserImg(dgvUsuarios[0, i].Value.ToString());
+
+            //byte[] byteImgArray = Convert.ToByte(img[0]);
+
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
             txtUser.Text = dgvUsuarios[1, i].Value.ToString();
             txtCorreo.Text = dgvUsuarios[2, i].Value.ToString();
@@ -256,6 +268,7 @@ namespace SistemGestionBuses
             cmbCargo.DataSource = ControladorUsuario.cargarCargo(id_cargo);
             cmbCargo.DisplayMember = "cargo";
             cmbCargo.ValueMember = "id_cargo";
+             
         }
 
         private void cmbCargo_SelectedIndexChanged(object sender, EventArgs e)
@@ -307,16 +320,15 @@ namespace SistemGestionBuses
 
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "jpeg|*.jpeg|png|*.png|jpg|*.jpg";
             DialogResult rs = dlg.ShowDialog();
 
             if (rs == DialogResult.OK)
             {
-                string path = dlg.FileName.ToString();
-                // imageUser.ImageLocation = path;
-                imageUser.Show();
                 imageUser.Image = Image.FromFile(dlg.FileName);
             }
         }
@@ -325,5 +337,25 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void btnRestablecer_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt16(txtId.Text);
+            string name = txtUser.Text;
+            if (MessageBox.Show("¿Estas seguro de restablecer la contraseña por defecto a: " + txtUser.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                RestablecerDefault(id, name);
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error restableciendo la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void RestablecerDefault(int id, string name)
+        {
+            ControladorUsuario.RestablecerDef(id, name);
+                
+         }
     }
 }

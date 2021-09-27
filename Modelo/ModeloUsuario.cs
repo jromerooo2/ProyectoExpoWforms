@@ -77,6 +77,41 @@ namespace Modelo
             }
         }
 
+        public static void RestablecerDefault(int id, string nombre)
+        {
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET contrasena='"+nombre+"' WHERE id_usuario= '" + id + "'"), ModeloConexion.GetConnection());
+                   cmdupdate.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static List<string> GetUserImg(string v)
+        {
+            List<string> data = new List<string>();
+            try
+            {
+                string query = "SELECT  foto_usuario FROM tb_usuarios WHERE id_usuario= v";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+
+                MySqlDataReader reader = cmdselect.ExecuteReader();
+                while (reader.Read())
+                {
+                    data.Add(reader.GetString(0));
+                }
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data;
+            }
+        }
+
         public static void PrimerUso(int idlogged)
         {
             try
@@ -191,14 +226,14 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password)
+        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password, byte[] img)
         {
             bool res = false;
             string pin = "12345678";
             try
             {
                 int estado = 1;
-                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}', '{6}')", pid_empleado, user, correo, password, cargo, estado, pin), ModeloConexion.GetConnection());
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin, foto_usuario) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}')", pid_empleado, user, correo, password, cargo, estado, pin, img), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(insert.ExecuteNonQuery());
                 return res;
             }

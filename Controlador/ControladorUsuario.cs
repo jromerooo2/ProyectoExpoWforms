@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Modelo;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Controlador
 {
@@ -15,12 +18,12 @@ namespace Controlador
             return ModeloUsuario.CargarEmpleados();
         }
 
-        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado)
+        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado, byte[] img)
         {
             //haciendolo MD5
             string defaultt = user + "123";
             string password  = ValidacionesClass.Encrypt(defaultt);
-            return ModeloUsuario.RegistrarUser(idEmpleado, user, correo, idCargo, password);
+            return ModeloUsuario.RegistrarUser(idEmpleado, user, correo, idCargo, password, img);
         }
 
         public static DataTable CargarUsuarios()
@@ -67,6 +70,18 @@ namespace Controlador
         public static void PrimerUso(int idlogged)
         {
             ModeloUsuario.PrimerUso(idlogged);
+        }
+
+        public static List<string> GetUserImg(string v)
+        {
+            return ModeloUsuario.GetUserImg(v);
+        }
+
+        public static void RestablecerDef(int id, string user)
+        {
+            string defaultt = user + "123";
+            string password = ValidacionesClass.Encrypt(defaultt);
+            ModeloUsuario.RestablecerDefault(id, password);
         }
     }
 }

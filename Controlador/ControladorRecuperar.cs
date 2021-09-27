@@ -56,7 +56,7 @@ namespace Controlador
         }
 
 
-
+        #region Correo
         static List<string> res = new List<string>();
         public static bool RecuperarMail(string user)
         {
@@ -113,5 +113,6 @@ namespace Controlador
                 return false;
             }
         }
+        #endregion
     }
 }

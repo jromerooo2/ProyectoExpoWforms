@@ -146,7 +146,9 @@ namespace SistemGestionBuses
         private void logOut()
         {
             ControladorLogin.LogOut(idUser);
-            Application.Restart();
+            Close();
+            frmLogin login = new frmLogin();
+            login.Show();
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
