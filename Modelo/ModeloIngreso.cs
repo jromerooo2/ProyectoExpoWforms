@@ -437,8 +437,8 @@ namespace Modelo
         {
             string empleado;
             try
-            {
-                string instruccion = "SELECT CONCAT (a.nombres_empleado, ',' , a.apellidos_empleado) AS empleado FROM tb_empleados a WHERE a.id_empleado = BINARY ?param1;";
+            {              
+                string instruccion = "SELECT CONCAT (a.apellidos_empleado, ',' , a.nombres_empleado) AS empleado FROM tb_empleados a WHERE a.id_empleado = BINARY ?param1;";
                 MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdid.Parameters.Add(new MySqlParameter("param1", pid));
                 empleado = Convert.ToString(cmdid.ExecuteScalar());
