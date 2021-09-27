@@ -86,11 +86,6 @@ namespace SistemGestionBuses
                 MessageBox.Show("Oops!, ocurrió un error al agregar clientes, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void label5_Click(object sender, EventArgs e)
         {
 
