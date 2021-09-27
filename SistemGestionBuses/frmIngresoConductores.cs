@@ -14,6 +14,7 @@ namespace SistemGestionBuses
     public partial class frmIngresoConductores : Form
     {
         public static int id_empleado;
+        DataTable datosConductores;
 
         public frmIngresoConductores(int pid_empleado)
         {            
@@ -23,6 +24,7 @@ namespace SistemGestionBuses
             string empleado = ControladorIngreso.CargarNombresConduc_Controller();
             txtId.Text = id_empleado.ToString();
             txtNombreConduc.Text = empleado;
+            CargarGridDatos();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -43,6 +45,29 @@ namespace SistemGestionBuses
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        void CargarGridDatos()
+        {
+            datosConductores = ControladorIngreso.CargarConductores_Controller();
+            dgvConductores.DataSource = datosConductores;
+            dgvConductores.Columns[0].HeaderText = "Empleado";
+            dgvConductores.Columns[1].HeaderText = "Licencia";
+            dgvConductores.Columns[2].HeaderText = "F.Expiración";
+            dgvConductores.Columns[3].HeaderText = "Tipo Licencia";
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtLicencia.Text.Trim() == "")
+            {
+
+            }
         }
     }
 }

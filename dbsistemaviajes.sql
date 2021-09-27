@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2021 a las 23:36:44
+-- Tiempo de generación: 27-09-2021 a las 07:55:10
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -24,6 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura Stand-in para la vista `tbconductoresview`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `tbconductoresview` (
+`empleado` varchar(62)
+,`numero_licencia` varchar(45)
+,`fecha_exp_licencia` varchar(45)
+,`tipo_licencia` varchar(45)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura Stand-in para la vista `tbusuariosview`
 -- (Véase abajo para la vista actual)
 --
@@ -35,20 +48,6 @@ CREATE TABLE `tbusuariosview` (
 ,`nombres_empleado` varchar(30)
 ,`cargo` varchar(45)
 ,`foto_usuario` mediumblob
-);
-
--- --------------------------------------------------------
-
---
--- Estructura Stand-in para la vista `tbvistaconductores`
--- (Véase abajo para la vista actual)
---
-CREATE TABLE `tbvistaconductores` (
-`nombres_empleado` varchar(30)
-,`apellidos_empleado` varchar(30)
-,`numero_licencia` varchar(45)
-,`fecha_exp_licencia` varchar(45)
-,`tipo_licencia` varchar(45)
 );
 
 -- --------------------------------------------------------
@@ -140,6 +139,13 @@ CREATE TABLE `tb_conductores` (
   `fecha_exp_licencia` varchar(45) DEFAULT NULL,
   `id_tipo_licencia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tb_conductores`
+--
+
+INSERT INTO `tb_conductores` (`id_conductores`, `id_empleado`, `numero_licencia`, `fecha_exp_licencia`, `id_tipo_licencia`) VALUES
+(2, 22, '1234567', '2021/05/23', 1);
 
 -- --------------------------------------------------------
 
@@ -233,7 +239,7 @@ INSERT INTO `tb_empleados` (`id_empleado`, `nombres_empleado`, `apellidos_emplea
 (7, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2004-08-31'),
 (8, 'Juan', 'Romero', '21231313', '12132', 'asdada', '13123', 1, 1, 1, 26, '2021-09-02'),
 (9, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2030-02-20'),
-(11, 'Josue ', 'Guinea', '12345678-9', '1234-567891-234-5', 'En su casita haciendo videos suscribete chaval', '+503-1234-5', 1, 1, 1, 26, '2000-10-12');
+(22, 'Josue ', 'Guinea', '12345678-9', '1234-567891-234-5', 'En su casita haciendo videos suscribete chaval', '+503-1234-5', 1, 1, 1, 26, '2000-10-12');
 
 -- --------------------------------------------------------
 
@@ -744,6 +750,13 @@ CREATE TABLE `tb_tipo_licencia` (
   `tipo_licencia` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `tb_tipo_licencia`
+--
+
+INSERT INTO `tb_tipo_licencia` (`id_tipo_licencia`, `tipo_licencia`) VALUES
+(1, 'pesada');
+
 -- --------------------------------------------------------
 
 --
@@ -882,20 +895,20 @@ CREATE TABLE `tb_viajes` (
 -- --------------------------------------------------------
 
 --
+-- Estructura para la vista `tbconductoresview`
+--
+DROP TABLE IF EXISTS `tbconductoresview`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbconductoresview`  AS SELECT concat(`a`.`apellidos_empleado`,', ',`a`.`nombres_empleado`) AS `empleado`, `b`.`numero_licencia` AS `numero_licencia`, `b`.`fecha_exp_licencia` AS `fecha_exp_licencia`, `c`.`tipo_licencia` AS `tipo_licencia` FROM ((`tb_empleados` `a` join `tb_conductores` `b`) join `tb_tipo_licencia` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `b`.`id_tipo_licencia` = `c`.`id_tipo_licencia` AND `a`.`id_cargo` = 1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura para la vista `tbusuariosview`
 --
 DROP TABLE IF EXISTS `tbusuariosview`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbusuariosview`  AS SELECT `a`.`id_usuario` AS `id_usuario`, `a`.`nombre_usuario` AS `nombre_usuario`, `a`.`correo_usuario` AS `correo_usuario`, `a`.`contrasena` AS `contrasena`, `b`.`nombres_empleado` AS `nombres_empleado`, `c`.`cargo` AS `cargo`, `a`.`foto_usuario` AS `foto_usuario` FROM ((`tb_usuarios` `a` join `tb_empleados` `b`) join `tb_cargo` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `a`.`cargo_usuario` = `c`.`id_cargo` ;
-
--- --------------------------------------------------------
-
---
--- Estructura para la vista `tbvistaconductores`
---
-DROP TABLE IF EXISTS `tbvistaconductores`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbvistaconductores`  AS SELECT `a`.`nombres_empleado` AS `nombres_empleado`, `a`.`apellidos_empleado` AS `apellidos_empleado`, `b`.`numero_licencia` AS `numero_licencia`, `b`.`fecha_exp_licencia` AS `fecha_exp_licencia`, `c`.`tipo_licencia` AS `tipo_licencia` FROM ((`tb_empleados` `a` join `tb_conductores` `b`) join `tb_tipo_licencia` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `b`.`id_tipo_licencia` = `c`.`id_tipo_licencia` AND `a`.`id_cargo` = 1 ;
 
 -- --------------------------------------------------------
 
@@ -1136,7 +1149,7 @@ ALTER TABLE `tb_cliente_viaje`
 -- AUTO_INCREMENT de la tabla `tb_conductores`
 --
 ALTER TABLE `tb_conductores`
-  MODIFY `id_conductores` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_conductores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_departamentos`
@@ -1160,7 +1173,7 @@ ALTER TABLE `tb_direccion_detalle`
 -- AUTO_INCREMENT de la tabla `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_estado_empleado`
@@ -1238,7 +1251,7 @@ ALTER TABLE `tb_tipo_cliente`
 -- AUTO_INCREMENT de la tabla `tb_tipo_licencia`
 --
 ALTER TABLE `tb_tipo_licencia`
-  MODIFY `id_tipo_licencia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tipo_licencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_tipo_placa`
