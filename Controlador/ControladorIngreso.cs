@@ -120,6 +120,16 @@ namespace Controlador
 
 
         #region CRUD Conductores
+        public int ObtenerIDEmpleado_Controller(string DUI, string NIT)
+        {
+            return ModeloIngreso.ObtenerIDEmpleado(DUI, NIT);
+        }
+
+        public static string CargarNombresConduc_Controller()
+        {
+            return ModeloIngreso.ObtenerNombreConduc(id_empleado);
+        }
+         
         public bool IngresarDatosControlador()
         {
             return ModeloIngreso.RegistrarConductor(id_empleado, licencia, id_tipo_licencia, fecha_exp_licencia);

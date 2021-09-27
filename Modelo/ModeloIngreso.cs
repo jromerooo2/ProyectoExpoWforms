@@ -413,6 +413,43 @@ namespace Modelo
         }
         #endregion
 
+
+        #region CRUD Conductor
+        public static int ObtenerIDEmpleado(string pdui, string pnit)
+        {
+            int id;
+            try
+            {
+                string instruccion = "SELECT id_empleado FROM tb_empleados a WHERE a.DUI = ?param1 AND a.NIT = BINARY ?param2";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", pdui));
+                cmdid.Parameters.Add(new MySqlParameter("param2", pnit));
+                id = Convert.ToInt32(cmdid.ExecuteScalar());
+                return id;
+            }
+            catch (Exception)
+            {
+                return id = 0;
+            }
+        }
+
+        public static string ObtenerNombreConduc(int pid)
+        {
+            string empleado;
+            try
+            {
+                string instruccion = "SELECT CONCAT (a.nombres_empleado, ',' , a.apellidos_empleado) AS empleado FROM tb_empleados a WHERE a.id_empleado = BINARY ?param1;";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", pid));
+                empleado = Convert.ToString(cmdid.ExecuteScalar());
+                return empleado;
+            }
+            catch (Exception)
+            {
+                return empleado = "#Error de carga!";
+            }
+        }
+
         public static bool RegistrarConductor(int pid_empleado, string plicencia, int pid_tipo_licencia, string pfecha_exp_licencia)
         {
             bool retorno = false;
@@ -427,6 +464,8 @@ namespace Modelo
                 return retorno;
             }
         }
+
+        #endregion
 
     }
 }

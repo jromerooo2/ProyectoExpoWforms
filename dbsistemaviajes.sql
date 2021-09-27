@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-09-2021 a las 04:17:31
+-- Tiempo de generación: 26-09-2021 a las 23:36:44
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -34,6 +34,21 @@ CREATE TABLE `tbusuariosview` (
 ,`contrasena` varchar(50)
 ,`nombres_empleado` varchar(30)
 ,`cargo` varchar(45)
+,`foto_usuario` mediumblob
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `tbvistaconductores`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `tbvistaconductores` (
+`nombres_empleado` varchar(30)
+,`apellidos_empleado` varchar(30)
+,`numero_licencia` varchar(45)
+,`fecha_exp_licencia` varchar(45)
+,`tipo_licencia` varchar(45)
 );
 
 -- --------------------------------------------------------
@@ -206,7 +221,7 @@ CREATE TABLE `tb_empleados` (
   `id_estado_empleado` int(11) NOT NULL,
   `id_cargo` int(11) NOT NULL,
   `id_municipio` int(11) NOT NULL,
-  `nacimiento_empleado` datetime DEFAULT NULL
+  `nacimiento_empleado` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -214,10 +229,11 @@ CREATE TABLE `tb_empleados` (
 --
 
 INSERT INTO `tb_empleados` (`id_empleado`, `nombres_empleado`, `apellidos_empleado`, `DUI`, `NIT`, `direccion_empleado`, `telefono_empleado`, `id_genero`, `id_estado_empleado`, `id_cargo`, `id_municipio`, `nacimiento_empleado`) VALUES
-(5, 'Jose Santiago', 'Merino Herrera', '1234567-8', '12345678-9', 'Mejicanos', '1234-5678', 2, 1, 2, 148, '2000-10-12 00:00:00'),
-(7, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2004-08-31 00:00:00'),
-(9, 'Juan Pablo', 'Romero Ramos', '12345678', '67891234', 'en los alpes uwu', '78561232', 1, 1, 1, 26, '2021-09-20 00:00:00'),
-(10, 'Jhansi', ' Giovanni', '12345678', '8765654332', 'multi', '78845621', 1, 1, 1, 26, '2021-09-20 00:00:00');
+(5, 'Jose Santiago', 'Merino Herrera', '1234567-8', '12345678-9', 'Mejicanos', '1234-5678', 2, 1, 2, 148, '2004-08-31'),
+(7, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2004-08-31'),
+(8, 'Juan', 'Romero', '21231313', '12132', 'asdada', '13123', 1, 1, 1, 26, '2021-09-02'),
+(9, 'Maria Fernanda', 'Merino Herrera', '65432413', '31243124', 'Mejicanos', '9876-5432', 1, 1, 1, 26, '2030-02-20'),
+(11, 'Josue ', 'Guinea', '12345678-9', '1234-567891-234-5', 'En su casita haciendo videos suscribete chaval', '+503-1234-5', 1, 1, 1, 26, '2000-10-12');
 
 -- --------------------------------------------------------
 
@@ -356,8 +372,8 @@ INSERT INTO `tb_genero` (`id_genero`, `genero`) VALUES
 CREATE TABLE `tb_mantenimiento` (
   `id_mantenimiento` int(11) NOT NULL,
   `id_unidad_transporte` int(11) NOT NULL,
-  `monto_mantenimiento` double(5,2) NOT NULL,
-  `ultimo_kilometraje` double(5,2) NOT NULL,
+  `monto_mantenimiento` double NOT NULL,
+  `ultimo_kilometraje` double NOT NULL,
   `descripcion` varchar(150) DEFAULT NULL,
   `fecha` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -829,18 +845,18 @@ CREATE TABLE `tb_usuarios` (
   `contrasena` varchar(50) NOT NULL,
   `cargo_usuario` int(11) NOT NULL DEFAULT 4,
   `estado` int(11) NOT NULL,
-  `pin` varchar(8) DEFAULT NULL
+  `pin` varchar(8) NOT NULL,
+  `foto_usuario` mediumblob DEFAULT NULL,
+  `sesion` int(11) NOT NULL,
+  `primer_uso` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_usuarios`
 --
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `id_empleado`, `nombre_usuario`, `correo_usuario`, `contrasena`, `cargo_usuario`, `estado`, `pin`) VALUES
-(1, 5, 'admin', 'jsantiago.merino@outlook.com', '81dc9bdb52d04dc20036dbd8313ed055', 2, 1, '4321'),
-(28, 7, 'mafer', 'santiago.merino2004@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1, 1, '4321'),
-(29, 9, 'Josue Guinea', 'josueguinea@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1, 1, '1412'),
-(35, 10, 'Profe Jhansi ', 'jhansi_aguilar@ricaldone.edu.sv', 'ec6a6536ca304edf844d1d248a4f08dc', 1, 1, '1234');
+INSERT INTO `tb_usuarios` (`id_usuario`, `id_empleado`, `nombre_usuario`, `correo_usuario`, `contrasena`, `cargo_usuario`, `estado`, `pin`, `foto_usuario`, `sesion`, `primer_uso`) VALUES
+(36, 8, 'jromerooo', 'juan.romeroramos9@gmail.com', 'fbae3291d90999a33b2577f800a49227', 2, 1, '87889012', NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -870,7 +886,16 @@ CREATE TABLE `tb_viajes` (
 --
 DROP TABLE IF EXISTS `tbusuariosview`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbusuariosview`  AS SELECT `a`.`id_usuario` AS `id_usuario`, `a`.`nombre_usuario` AS `nombre_usuario`, `a`.`correo_usuario` AS `correo_usuario`, `a`.`contrasena` AS `contrasena`, `b`.`nombres_empleado` AS `nombres_empleado`, `c`.`cargo` AS `cargo` FROM ((`tb_usuarios` `a` join `tb_empleados` `b`) join `tb_cargo` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `a`.`cargo_usuario` = `c`.`id_cargo` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbusuariosview`  AS SELECT `a`.`id_usuario` AS `id_usuario`, `a`.`nombre_usuario` AS `nombre_usuario`, `a`.`correo_usuario` AS `correo_usuario`, `a`.`contrasena` AS `contrasena`, `b`.`nombres_empleado` AS `nombres_empleado`, `c`.`cargo` AS `cargo`, `a`.`foto_usuario` AS `foto_usuario` FROM ((`tb_usuarios` `a` join `tb_empleados` `b`) join `tb_cargo` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `a`.`cargo_usuario` = `c`.`id_cargo` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `tbvistaconductores`
+--
+DROP TABLE IF EXISTS `tbvistaconductores`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbvistaconductores`  AS SELECT `a`.`nombres_empleado` AS `nombres_empleado`, `a`.`apellidos_empleado` AS `apellidos_empleado`, `b`.`numero_licencia` AS `numero_licencia`, `b`.`fecha_exp_licencia` AS `fecha_exp_licencia`, `c`.`tipo_licencia` AS `tipo_licencia` FROM ((`tb_empleados` `a` join `tb_conductores` `b`) join `tb_tipo_licencia` `c`) WHERE `a`.`id_empleado` = `b`.`id_empleado` AND `b`.`id_tipo_licencia` = `c`.`id_tipo_licencia` AND `a`.`id_cargo` = 1 ;
 
 -- --------------------------------------------------------
 
@@ -1135,7 +1160,7 @@ ALTER TABLE `tb_direccion_detalle`
 -- AUTO_INCREMENT de la tabla `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_estado_empleado`
@@ -1243,7 +1268,7 @@ ALTER TABLE `tb_unidad_transporte`
 -- AUTO_INCREMENT de la tabla `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_viajes`

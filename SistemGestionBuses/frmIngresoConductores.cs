@@ -13,33 +13,21 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresoConductores : Form
     {
-        public static string nombres;
-        public static string apellidos;
-        public frmIngresoConductores(string pnombres, string papellidos)
-        {
+        public static int id_empleado;
+
+        public frmIngresoConductores(int pid_empleado)
+        {            
             InitializeComponent();
-            nombres = pnombres;
-            apellidos = papellidos;
+            id_empleado = pid_empleado;
+            ControladorIngreso.id_empleado = pid_empleado;
+            string empleado = ControladorIngreso.CargarNombresConduc_Controller();
+            txtId.Text = id_empleado.ToString();
+            txtNombreConduc.Text = empleado;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtNombreConduc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        void getNamesDriver()
-        {
-            //ControladorIngreso.CargarNombresConduc();
-        }
-
-        private void frmIngresoConductores_Load(object sender, EventArgs e)
-        {
-            getNamesDriver();
         }
     }
 }

@@ -132,7 +132,6 @@ namespace SistemGestionBuses
         //CREAR DATOS
         void EnvioDatos()
         {
-
             try
             {
                 string nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, nacimiento_empleado;
@@ -156,7 +155,9 @@ namespace SistemGestionBuses
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (id_cargo == 1)
                     {
-                        frmIngresoConductores conduc = new frmIngresoConductores(nombre_empleado, apellido_empleado);
+                        int id = objCond.ObtenerIDEmpleado_Controller(DUI, NIT);
+                        CargarGridDatos();
+                        frmIngresoConductores conduc = new frmIngresoConductores(id);
                         this.SendToBack();
                         this.Enabled = false;                     
                         conduc.Show();
