@@ -10,11 +10,7 @@ namespace Controlador
 {
    public class ControladorIngreso
     {
-        //dt Empleado
-        public static DataTable CargarEmpleado_Controlador()
-        {
-            return ModeloIngreso.ObtenerListaEmpleados();
-        }
+
         //cmb Municipio
         public static DataTable ObtenerMunicipios()
         {
@@ -80,6 +76,17 @@ namespace Controlador
         public int id_estado_empleado { get; set; }
         public int id_cargo { get; set; }
         public  int id_municipio { get; set; }
+
+
+        //Atributos Empleados - Conductores
+        //public static int id_empleado { get; set; }
+        //public string nombres_empleado { get; set; }
+        //public string apellidos_empleado { get; set; }
+        //public int id_cargo { get; set; }
+        public string licencia { get; set; }
+        public string fecha_exp_licencia { get; set; }
+        public int id_tipo_licencia { get; set; }
+
         //CONSTRUCTOR
         public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
         {
@@ -110,5 +117,28 @@ namespace Controlador
         {
             return ModeloIngreso.EliminarEmpleado(id_empleado);
         }
+
+
+        #region CRUD Conductores
+        public int ObtenerIDEmpleado_Controller(string DUI, string NIT)
+        {
+            return ModeloIngreso.ObtenerIDEmpleado(DUI, NIT);
+        }
+
+        public static string CargarNombresConduc_Controller()
+        {
+            return ModeloIngreso.ObtenerNombreConduc(id_empleado);
+        }
+
+        public static DataTable CargarConductores_Controller()
+        {
+            return ModeloIngreso.ObtenerListaConductores();
+        }
+         
+        public bool IngresarDatosControlador()
+        {
+            return ModeloIngreso.RegistrarConductor(id_empleado, licencia, id_tipo_licencia, fecha_exp_licencia);
+        }
+        #endregion
     }
 }

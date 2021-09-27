@@ -28,53 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantenimientos));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TxtID_mant = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CmbPlaca = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.CmbModelo = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtID_unidad = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnUpdate = new System.Windows.Forms.Button();
-            this.BtnFieldsClean = new System.Windows.Forms.Button();
-            this.BtnAdd = new System.Windows.Forms.Button();
-            this.TxtUltimoKilom = new System.Windows.Forms.TextBox();
-            this.DtFecha = new System.Windows.Forms.DateTimePicker();
-            this.TxtMonto = new System.Windows.Forms.TextBox();
-            this.TxtDescripcion = new System.Windows.Forms.TextBox();
-            this.CmbMarca = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DgvMaintenance = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.DgvMantenimiento = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnConectar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.cmbUnidad = new System.Windows.Forms.ComboBox();
+            this.lblUnidad = new System.Windows.Forms.Label();
+            this.txtMonto = new System.Windows.Forms.MaskedTextBox();
+            this.TxtKilom = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DtMant = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelBar = new System.Windows.Forms.Panel();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMantenimiento)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(864, 461);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -82,302 +82,18 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label5.Location = new System.Drawing.Point(140, 32);
+            this.label5.Location = new System.Drawing.Point(140, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(256, 43);
             this.label5.TabIndex = 78;
             this.label5.Text = "Mantenimiento";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.TxtID_mant);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.CmbPlaca);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.CmbModelo);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.TxtID_unidad);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.BtnDelete);
-            this.groupBox1.Controls.Add(this.BtnUpdate);
-            this.groupBox1.Controls.Add(this.BtnFieldsClean);
-            this.groupBox1.Controls.Add(this.BtnAdd);
-            this.groupBox1.Controls.Add(this.TxtUltimoKilom);
-            this.groupBox1.Controls.Add(this.DtFecha);
-            this.groupBox1.Controls.Add(this.TxtMonto);
-            this.groupBox1.Controls.Add(this.TxtDescripcion);
-            this.groupBox1.Controls.Add(this.CmbMarca);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(39, 102);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 283);
-            this.groupBox1.TabIndex = 81;
-            this.groupBox1.TabStop = false;
-            // 
-            // TxtID_mant
-            // 
-            this.TxtID_mant.Location = new System.Drawing.Point(525, 188);
-            this.TxtID_mant.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtID_mant.Multiline = true;
-            this.TxtID_mant.Name = "TxtID_mant";
-            this.TxtID_mant.ReadOnly = true;
-            this.TxtID_mant.Size = new System.Drawing.Size(98, 26);
-            this.TxtID_mant.TabIndex = 104;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label9.Location = new System.Drawing.Point(379, 191);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 20);
-            this.label9.TabIndex = 103;
-            this.label9.Text = "ID mantenimiento:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // CmbPlaca
-            // 
-            this.CmbPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPlaca.FormattingEnabled = true;
-            this.CmbPlaca.Location = new System.Drawing.Point(534, 44);
-            this.CmbPlaca.Name = "CmbPlaca";
-            this.CmbPlaca.Size = new System.Drawing.Size(223, 28);
-            this.CmbPlaca.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label8.Location = new System.Drawing.Point(530, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 20);
-            this.label8.TabIndex = 102;
-            this.label8.Text = "Placa:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // CmbModelo
-            // 
-            this.CmbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbModelo.FormattingEnabled = true;
-            this.CmbModelo.Location = new System.Drawing.Point(314, 45);
-            this.CmbModelo.Name = "CmbModelo";
-            this.CmbModelo.Size = new System.Drawing.Size(193, 28);
-            this.CmbModelo.TabIndex = 1;
-            this.CmbModelo.Click += new System.EventHandler(this.CmbModelo_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(310, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
-            this.label7.TabIndex = 100;
-            this.label7.Text = "Modelo:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // TxtID_unidad
-            // 
-            this.TxtID_unidad.Location = new System.Drawing.Point(314, 100);
-            this.TxtID_unidad.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtID_unidad.Multiline = true;
-            this.TxtID_unidad.Name = "TxtID_unidad";
-            this.TxtID_unidad.ReadOnly = true;
-            this.TxtID_unidad.Size = new System.Drawing.Size(193, 27);
-            this.TxtID_unidad.TabIndex = 99;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(310, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 20);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "ID vehículo:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnDelete.Location = new System.Drawing.Point(429, 220);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(132, 49);
-            this.BtnDelete.TabIndex = 9;
-            this.BtnDelete.Text = "Eliminar Mantenimiento";
-            this.BtnDelete.UseVisualStyleBackColor = false;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnUpdate.Location = new System.Drawing.Point(224, 220);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(132, 49);
-            this.BtnUpdate.TabIndex = 8;
-            this.BtnUpdate.Text = "Actualizar mantenimiento";
-            this.BtnUpdate.UseVisualStyleBackColor = false;
-            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
-            // BtnFieldsClean
-            // 
-            this.BtnFieldsClean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnFieldsClean.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnFieldsClean.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnFieldsClean.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnFieldsClean.Location = new System.Drawing.Point(625, 220);
-            this.BtnFieldsClean.Name = "BtnFieldsClean";
-            this.BtnFieldsClean.Size = new System.Drawing.Size(132, 49);
-            this.BtnFieldsClean.TabIndex = 10;
-            this.BtnFieldsClean.Text = "Limpiar Campos";
-            this.BtnFieldsClean.UseVisualStyleBackColor = false;
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAdd.Location = new System.Drawing.Point(22, 220);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(132, 49);
-            this.BtnAdd.TabIndex = 7;
-            this.BtnAdd.Text = "Agregar Mantenimiento";
-            this.BtnAdd.UseVisualStyleBackColor = false;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // TxtUltimoKilom
-            // 
-            this.TxtUltimoKilom.Location = new System.Drawing.Point(534, 152);
-            this.TxtUltimoKilom.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtUltimoKilom.Multiline = true;
-            this.TxtUltimoKilom.Name = "TxtUltimoKilom";
-            this.TxtUltimoKilom.Size = new System.Drawing.Size(223, 24);
-            this.TxtUltimoKilom.TabIndex = 6;
-            // 
-            // DtFecha
-            // 
-            this.DtFecha.CustomFormat = "yyyy-MM-dd";
-            this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtFecha.Location = new System.Drawing.Point(314, 151);
-            this.DtFecha.Name = "DtFecha";
-            this.DtFecha.Size = new System.Drawing.Size(193, 25);
-            this.DtFecha.TabIndex = 4;
-            // 
-            // TxtMonto
-            // 
-            this.TxtMonto.Location = new System.Drawing.Point(534, 98);
-            this.TxtMonto.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtMonto.Multiline = true;
-            this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.Size = new System.Drawing.Size(223, 27);
-            this.TxtMonto.TabIndex = 5;
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(22, 98);
-            this.TxtDescripcion.Multiline = true;
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(282, 116);
-            this.TxtDescripcion.TabIndex = 3;
-            // 
-            // CmbMarca
-            // 
-            this.CmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbMarca.FormattingEnabled = true;
-            this.CmbMarca.Location = new System.Drawing.Point(22, 44);
-            this.CmbMarca.Name = "CmbMarca";
-            this.CmbMarca.Size = new System.Drawing.Size(282, 28);
-            this.CmbMarca.TabIndex = 0;
-            this.CmbMarca.Click += new System.EventHandler(this.CmbMarca_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(310, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "Fecha:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label3.Location = new System.Drawing.Point(18, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
-            this.label3.TabIndex = 85;
-            this.label3.Text = "Descripción:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(530, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
-            this.label2.TabIndex = 84;
-            this.label2.Text = "Último Kilometrake:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(530, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 20);
-            this.label1.TabIndex = 83;
-            this.label1.Text = "Monto del mantenimiento:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label12.Location = new System.Drawing.Point(18, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 20);
-            this.label12.TabIndex = 82;
-            this.label12.Text = "Marca:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(39, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(39, 60);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(95, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -393,68 +109,477 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 190);
             this.dataGridView1.TabIndex = 83;
             // 
-            // DgvMaintenance
+            // DgvMantenimiento
             // 
-            this.DgvMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvMaintenance.Location = new System.Drawing.Point(39, 391);
-            this.DgvMaintenance.Name = "DgvMaintenance";
-            this.DgvMaintenance.Size = new System.Drawing.Size(776, 58);
-            this.DgvMaintenance.TabIndex = 83;
-            this.DgvMaintenance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMaintenance_CellClick);
+            this.DgvMantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMantenimiento.Location = new System.Drawing.Point(15, 419);
+            this.DgvMantenimiento.Name = "DgvMantenimiento";
+            this.DgvMantenimiento.Size = new System.Drawing.Size(871, 236);
+            this.DgvMantenimiento.TabIndex = 83;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.BtnConectar);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.BtnEliminar);
+            this.panel1.Controls.Add(this.BtnActualizar);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.BtnAgregar);
+            this.panel1.Location = new System.Drawing.Point(12, 146);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 256);
+            this.panel1.TabIndex = 84;
+            // 
+            // BtnConectar
+            // 
+            this.BtnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnConectar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnConectar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnConectar.FlatAppearance.BorderSize = 2;
+            this.BtnConectar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnConectar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnConectar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConectar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConectar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnConectar.Location = new System.Drawing.Point(144, 184);
+            this.BtnConectar.Name = "BtnConectar";
+            this.BtnConectar.Size = new System.Drawing.Size(128, 51);
+            this.BtnConectar.TabIndex = 20;
+            this.BtnConectar.Text = "Conectar";
+            this.BtnConectar.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label6.Location = new System.Drawing.Point(82, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 35);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Acciones";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button3.Location = new System.Drawing.Point(12, 184);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(126, 51);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Limpiar campos";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnEliminar.FlatAppearance.BorderSize = 2;
+            this.BtnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnEliminar.Location = new System.Drawing.Point(144, 116);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(128, 48);
+            this.BtnEliminar.TabIndex = 18;
+            this.BtnEliminar.Text = "Eliminar Mantenimiento";
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnActualizar.FlatAppearance.BorderSize = 2;
+            this.BtnActualizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnActualizar.Location = new System.Drawing.Point(12, 115);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(126, 48);
+            this.BtnActualizar.TabIndex = 17;
+            this.BtnActualizar.Text = "Modificar Mantenimiento";
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button4.Location = new System.Drawing.Point(144, 51);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 49);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Actualizar grid de datos";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnAgregar.FlatAppearance.BorderSize = 2;
+            this.BtnAgregar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnAgregar.Location = new System.Drawing.Point(12, 51);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(126, 49);
+            this.BtnAgregar.TabIndex = 15;
+            this.BtnAgregar.Text = "Agregar Mantenimiento";
+            this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.txtId);
+            this.panel2.Controls.Add(this.cmbUnidad);
+            this.panel2.Controls.Add(this.lblUnidad);
+            this.panel2.Controls.Add(this.txtMonto);
+            this.panel2.Controls.Add(this.TxtKilom);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.DtMant);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.TxtDescripcion);
+            this.panel2.Location = new System.Drawing.Point(305, 146);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(581, 256);
+            this.panel2.TabIndex = 87;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label10.Location = new System.Drawing.Point(16, 186);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(167, 24);
+            this.label10.TabIndex = 94;
+            this.label10.Text = "ID Mantenimiento";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(16, 212);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(78, 24);
+            this.txtId.TabIndex = 93;
+            // 
+            // cmbUnidad
+            // 
+            this.cmbUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUnidad.FormattingEnabled = true;
+            this.cmbUnidad.Location = new System.Drawing.Point(314, 187);
+            this.cmbUnidad.Name = "cmbUnidad";
+            this.cmbUnidad.Size = new System.Drawing.Size(154, 26);
+            this.cmbUnidad.TabIndex = 92;
+            // 
+            // lblUnidad
+            // 
+            this.lblUnidad.AutoSize = true;
+            this.lblUnidad.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblUnidad.Location = new System.Drawing.Point(314, 156);
+            this.lblUnidad.Name = "lblUnidad";
+            this.lblUnidad.Size = new System.Drawing.Size(78, 24);
+            this.lblUnidad.TabIndex = 91;
+            this.lblUnidad.Text = "Unidad ";
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(314, 125);
+            this.txtMonto.Mask = "0000.00";
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(150, 24);
+            this.txtMonto.TabIndex = 90;
+            // 
+            // TxtKilom
+            // 
+            this.TxtKilom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtKilom.Location = new System.Drawing.Point(314, 63);
+            this.TxtKilom.Mask = "000000";
+            this.TxtKilom.Name = "TxtKilom";
+            this.TxtKilom.Size = new System.Drawing.Size(150, 24);
+            this.TxtKilom.TabIndex = 89;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label7.Location = new System.Drawing.Point(314, 94);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(248, 24);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "Monto del mantenimiento:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label2.Location = new System.Drawing.Point(314, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 24);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Último Kilometrake:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label3.Location = new System.Drawing.Point(16, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 24);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "Descripción:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DtMant
+            // 
+            this.DtMant.CustomFormat = "yyyy-MM-dd";
+            this.DtMant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtMant.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtMant.Location = new System.Drawing.Point(196, 210);
+            this.DtMant.Name = "DtMant";
+            this.DtMant.Size = new System.Drawing.Size(102, 26);
+            this.DtMant.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label4.Location = new System.Drawing.Point(196, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "Fecha:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TxtDescripcion
+            // 
+            this.TxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDescripcion.Location = new System.Drawing.Point(16, 61);
+            this.TxtDescripcion.Multiline = true;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(282, 116);
+            this.TxtDescripcion.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label1.Location = new System.Drawing.Point(327, 462);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 20);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Monto del mantenimiento:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(898, 667);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panelBar
+            // 
+            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.bunifuImageButton5);
+            this.panelBar.Controls.Add(this.bunifuImageButton4);
+            this.panelBar.Controls.Add(this.bunifuImageButton3);
+            this.panelBar.Controls.Add(this.bunifuImageButton1);
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(898, 50);
+            this.panelBar.TabIndex = 105;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(777, 9);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 98;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(808, 9);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(35, 31);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 97;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(849, 9);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 96;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(18, 9);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 30);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 94;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // frmMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 461);
-            this.Controls.Add(this.DgvMaintenance);
+            this.ClientSize = new System.Drawing.Size(898, 667);
+            this.Controls.Add(this.panelBar);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DgvMantenimiento);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMantenimientos";
             this.Text = "Mantenimiento";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMaintenance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMantenimiento)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox TxtDescripcion;
-        private System.Windows.Forms.ComboBox CmbMarca;
-        private System.Windows.Forms.Button BtnUpdate;
-        private System.Windows.Forms.Button BtnFieldsClean;
-        private System.Windows.Forms.Button BtnAdd;
-        private System.Windows.Forms.TextBox TxtUltimoKilom;
-        private System.Windows.Forms.DateTimePicker DtFecha;
-        private System.Windows.Forms.TextBox TxtMonto;
-        private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox TxtID_unidad;
+        private System.Windows.Forms.DataGridView DgvMantenimiento;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BtnConectar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox CmbModelo;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button BtnActualizar;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView DgvMaintenance;
-        private System.Windows.Forms.ComboBox CmbPlaca;
-        private System.Windows.Forms.TextBox TxtID_mant;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker DtMant;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtDescripcion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.MaskedTextBox TxtKilom;
+        private System.Windows.Forms.MaskedTextBox txtMonto;
+        private System.Windows.Forms.ComboBox cmbUnidad;
+        private System.Windows.Forms.Label lblUnidad;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Panel panelBar;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

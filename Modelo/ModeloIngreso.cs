@@ -11,6 +11,7 @@ namespace Modelo
 {
     public class ModeloIngreso
     {
+        #region COMBO BOX - INNER JOIN 
         //Cargar Estado
         public static DataTable CargarEstado()
         {
@@ -179,6 +180,7 @@ namespace Modelo
                 return data = null;
             }
         }
+        //Cargar Empleados
         public static DataTable ObtenerListaEmpleados()
         {
             DataTable data;
@@ -198,6 +200,8 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        //Cargar Clientes
         public static DataTable ObtenerListaCliente()
         {
             DataTable data;
@@ -294,6 +298,9 @@ namespace Modelo
             }
         }
 
+        #endregion
+
+        #region CRUD Empleado
         //CRUD Empleado
         public static bool RegistrarEmpleado(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero,int pEstado,int pCargo,int pMunicipio, string pNacimiento )
         {
@@ -312,25 +319,7 @@ namespace Modelo
                 return retorno;
             }   
         }
-        //Obtener Lista de Empleado
-        public static DataTable ObtenerEmpleado()
-        {
-            DataTable data;
-            try
-            {
-                string instruccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
-                MySqlCommand cmdEmpl = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEmpl);
-                data = new DataTable();
-                adp.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
 
-                return data = null;
-            }
-        }
         //Update Empleado
         public static bool ActualizarEmpleado(int pId,string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
         {
@@ -367,6 +356,9 @@ namespace Modelo
                 return retorno = false;
             }
         }
+        #endregion
+
+        #region CRUD Cliente
         //Igreso datos cliente
         public static bool AgregarCliente(string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
         {
@@ -385,6 +377,8 @@ namespace Modelo
                 return retorno;
             }
         }
+
+        //Actualizar Cliente
         public static bool ActualizarCliente(int pIdCliente, string pNomCliente, string pApeCliente, string pTelCliente, string pDirCliente, string pCorCliente, int pTipCliente)
         {
             bool res = false;
@@ -400,6 +394,7 @@ namespace Modelo
             }
         }
 
+        //Eliminar Cliente
         public static bool EliminarCliente(int IdCliente)
         {
             bool res = false;
@@ -416,5 +411,79 @@ namespace Modelo
                 throw;
             }
         }
+        #endregion
+
+
+        #region CRUD Conductor
+        public static int ObtenerIDEmpleado(string pdui, string pnit)
+        {
+            int id;
+            try
+            {
+                string instruccion = "SELECT id_empleado FROM tb_empleados a WHERE a.DUI = ?param1 AND a.NIT = BINARY ?param2";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", pdui));
+                cmdid.Parameters.Add(new MySqlParameter("param2", pnit));
+                id = Convert.ToInt32(cmdid.ExecuteScalar());
+                return id;
+            }
+            catch (Exception)
+            {
+                return id = 0;
+            }
+        }
+
+        public static string ObtenerNombreConduc(int pid)
+        {
+            string empleado;
+            try
+            {              
+                string instruccion = "SELECT CONCAT (a.apellidos_empleado, ', ' , a.nombres_empleado) AS Empleado FROM tb_empleados a WHERE a.id_empleado = BINARY ?param1;";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", pid));
+                empleado = Convert.ToString(cmdid.ExecuteScalar());
+                return empleado;
+            }
+            catch (Exception)
+            {
+                return empleado = "#Error de carga!";
+            }
+        }
+
+        public static bool RegistrarConductor(int pid_empleado, string plicencia, int pid_tipo_licencia, string pfecha_exp_licencia)
+        {
+            bool retorno = false;
+            try
+            { 
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_conductores (id_empleado, numero_licencia, fecha_exp_licencia, id_tipo_licencia) VALUES ('{0}', '{1}', '{2}', '{3}')", pid_empleado, plicencia, pid_tipo_licencia, pfecha_exp_licencia), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
+
+        public static DataTable ObtenerListaConductores()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tbconductoresview";
+                MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        #endregion
+
     }
 }

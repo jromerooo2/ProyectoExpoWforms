@@ -16,26 +16,26 @@ namespace Controlador
         public string usuarioadmin { get; set; }
         public string claveadmin { get; set; }
         public string usuariorecu { get; set; }
-        public string documentoempleado { get; set; }
+        public string DUI { get; set; }
         public string nuevacontra { get; set; }
         public string PINseguridad { get; set; }
-        public string fechanacimiento { get; set; }
+        public string NIT { get; set; }
 
         #region MetodoPIN
         public bool ValidarPINusuario(string pin)
         {
-            return ModeloRecuperar.ValidarCredencialesPIN(pin);
+            return ModeloRecuperar.ValidarCredencialesPIN(pin, usuariorecu);
         }
 
         public bool ActualizarContraPIN()
         {
             string passMD5 = ValidacionesClass.Encrypt(nuevacontra);
-            return ModeloRecuperar.RecuperarByPIN(PINseguridad, passMD5);
+            return ModeloRecuperar.RecuperarByPIN(PINseguridad, passMD5, usuariorecu);
         }
 
         public bool ValidarDocumentosPIN()
         {
-            return ModeloRecuperar.ValidarCredencialesUsuariosPIN(usuariorecu, documentoempleado, fechanacimiento);
+            return ModeloRecuperar.ValidarCredencialesUsuariosPIN(usuariorecu, DUI, NIT);
         }
         #endregion
 
@@ -46,7 +46,7 @@ namespace Controlador
 
         public bool ValidarCredencialesUsuario_Controller()
         {
-            return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, documentoempleado);
+            return ModeloRecuperar.ValidarCredencialesUsuarios(usuariorecu, DUI);
         }
 
         public bool RestaurarContra_Controller()

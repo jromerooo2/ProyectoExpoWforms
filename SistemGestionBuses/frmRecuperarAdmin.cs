@@ -64,7 +64,7 @@ namespace SistemGestionBuses
             {
                 ControladorRecuperar recu = new ControladorRecuperar();
                 recu.usuariorecu = txtUsuarioRecu.Text;
-                recu.documentoempleado = txtDUI.Text;
+                recu.DUI = txtDUI.Text;
                 bool respuesta = recu.ValidarCredencialesUsuario_Controller();
                 if (respuesta == true)
                 {

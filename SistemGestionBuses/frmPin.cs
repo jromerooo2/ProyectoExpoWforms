@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
-using Bunifu.Framework.UI;
-using Bunifu;
+using System.IO;
 
 namespace SistemGestionBuses
 {
@@ -28,55 +27,53 @@ namespace SistemGestionBuses
             btnNueva.Enabled = false;
             txtNueva.Enabled = false;
             txtConfirmacionNueva.Enabled = false;
-        }
-
-
-        private void btnConfirmar_Click_1(object sender, EventArgs e)
-        {
-            ControladorRecuperar recu = new ControladorRecuperar();
-            //recu.PINseguridad = txtCode.Text;
-            if (!String.IsNullOrEmpty(txtCode.Text))
-            {
-                bool res = recu.ValidarPINusuario(txtCode.Text);
-                if (res)
-                {
-                    MessageBox.Show("Se ha confirmado tu identidad");
-                    txtNueva.Enabled = true;
-                    btnNueva.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("No se ha confirmado tu identidad");
-                }
-            }
-
-
+            txtNueva.UseSystemPasswordChar = true;
+            txtConfirmacionNueva.UseSystemPasswordChar = true;
         }
 
         private void btnNueva_Click_1(object sender, EventArgs e)
         {
             ControladorRecuperar recu = new ControladorRecuperar();
-            if (!String.IsNullOrEmpty(txtNueva.Text))
+            if (!String.IsNullOrEmpty(txtNueva.Text) || !String.IsNullOrEmpty(txtConfirmacionNueva.Text))
             {
+                string contra = txtNueva.Text;
+                string confirmacion = txtConfirmacionNueva.Text;
                 recu.PINseguridad = txtCode.Text;
                 recu.nuevacontra = txtNueva.Text;
-
-                bool res = recu.ActualizarContraPIN();
-                if (res)
+                recu.usuariorecu = txtUser.Text;
+                if (confirmacion.Equals(contra))
                 {
-                    MessageBox.Show("Se ha actualizado tu contraseña");
-                    Close();
+                    bool res = recu.ActualizarContraPIN();
+                    if (res)
+                    {
+                        NotificacionRecuperación();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No realizo la actualización de tu contraseña, contacta al administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Close();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se ha actualizado tu contraseña");
-                    Close();
+                    MessageBox.Show("La confirmación de la contraseña y la contraseña no coinciden, porfavor verifica ambos campos", "No coinciden", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
                 MessageBox.Show("Todos los campos son necesarios para ejercer la recuperación de contraseña", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        void NotificacionRecuperación()
+        {
+            nfConfirmacion.Icon = new System.Drawing.Icon(Path.GetFullPath(@"../../Resources/icons8_checked.ico"));
+            nfConfirmacion.Text = "Usuario recuperado y actualizado";
+            nfConfirmacion.Visible = true;
+            nfConfirmacion.BalloonTipTitle = "Confirmación de recuperación";
+            nfConfirmacion.BalloonTipText = "La contraseña fue recuperada y actualizada con exito, inicia sesión con tus nuevas creedenciales en Locus System";
+            nfConfirmacion.ShowBalloonTip(150);
         }
 
         private void btnDUI_Click(object sender, EventArgs e)
@@ -86,14 +83,17 @@ namespace SistemGestionBuses
             {
                 //Parametros del controlador
                 recu.usuariorecu = Convert.ToString(txtUser.Text);
-                recu.documentoempleado = Convert.ToString(txtDUI.Text);
-                recu.fechanacimiento = Convert.ToString(dtpNacimiento.Value);
+                recu.DUI = Convert.ToString(txtDUI.Text);
+                recu.NIT = Convert.ToString(txtNIT.Text);
                 //metodo para validar que el dui y la fecha de nacimiento perteneza al usuario correcto
                 bool res = recu.ValidarDocumentosPIN();
                 if (res == true)
                 {
                     MessageBox.Show("Se confirmó tu identidad, continua el proceso", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CardPIN.Enabled = true;
+                    CardValidacion.Enabled = false;
+                    txtCode.Enabled = true;
+                    btnConfirmar.Enabled = true;
                 }
                 else
                 {
@@ -111,21 +111,55 @@ namespace SistemGestionBuses
             this.Close();
         }
 
-        private void dtpNacimiento_onValueChanged(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            string mindatestring = "01/ 01/ 1971";
-            string maxdatestring = "01/ 01/ 2001";
-            DateTime mindate = Convert.ToDateTime(mindatestring);
-            DateTime maxdate = Convert.ToDateTime(maxdatestring);
-            if (dtpNacimiento.Value < mindate)
+            ControladorRecuperar recu = new ControladorRecuperar();
+            if (!String.IsNullOrEmpty(txtCode.Text))
             {
-                MessageBox.Show("Esta fecha no es valida personas mayores de 50 años no son permitidas", "Edad no permitida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                dtpNacimiento.Value = mindate;
+                recu.PINseguridad = txtCode.Text;
+                recu.usuariorecu = txtUser.Text;
+                bool res = recu.ValidarPINusuario(txtCode.Text);
+                if (res == true)
+                {
+                    MessageBox.Show("Se ha confirmado tu PIN de seguridad", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCode.Enabled = false;
+                    btnConfirmar.Enabled = false;
+                    txtConfirmacionNueva.Enabled = true;
+                    txtNueva.Enabled = true;
+                    btnNueva.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Porfavor confirma que el PIN es correcto", "PIN incorrrecto", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
             }
-            if (dtpNacimiento.Value > maxdate)
+            else
             {
-                MessageBox.Show("Esta fecha no es valida personas menores de 20 años no son permitidas", "Edad no permitida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                dtpNacimiento.Value = maxdate;
+                MessageBox.Show("Porfavor ingresa tu PIN de seguridad para recuperar tu contraseña", "Campo vació", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void btnVerContra1_Click(object sender, EventArgs e)
+        {
+            if (txtNueva.UseSystemPasswordChar == true)
+            {
+                txtNueva.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtNueva.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void btnVerContra2_Click(object sender, EventArgs e)
+        {
+            if (txtConfirmacionNueva.UseSystemPasswordChar == true)
+            {
+                txtConfirmacionNueva.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtConfirmacionNueva.UseSystemPasswordChar = true;
             }
         }
     }

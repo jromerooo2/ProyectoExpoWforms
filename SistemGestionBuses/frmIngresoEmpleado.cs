@@ -116,11 +116,22 @@ namespace SistemGestionBuses
             CargarDatos();
             datosCond = ControladorIngreso.CargarEmpleadoControlador();
             dgvEmpleado.DataSource = datosCond;
+            dgvEmpleado.Columns[0].Visible = false;
+            dgvEmpleado.Columns[1].HeaderText = "Nombres";
+            dgvEmpleado.Columns[2].HeaderText = "Apellidos";
+            dgvEmpleado.Columns[3].HeaderText = "DUI";
+            dgvEmpleado.Columns[4].HeaderText = "NIT";
+            dgvEmpleado.Columns[5].HeaderText = "Dirección";
+            dgvEmpleado.Columns[6].HeaderText = "Teléfono";
+            dgvEmpleado.Columns[7].HeaderText = "Género";
+            dgvEmpleado.Columns[8].HeaderText = "Estado";
+            dgvEmpleado.Columns[9].HeaderText = "Cargo";
+            dgvEmpleado.Columns[10].HeaderText = "Municipio";
+            dgvEmpleado.Columns[11].HeaderText = "F.Nacimiento";
         }
         //CREAR DATOS
         void EnvioDatos()
         {
-
             try
             {
                 string nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, nacimiento_empleado;
@@ -144,9 +155,11 @@ namespace SistemGestionBuses
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (id_cargo == 1)
                     {
-                        frmIngresoConductores conduc = new frmIngresoConductores();
+                        int id = objCond.ObtenerIDEmpleado_Controller(DUI, NIT);
+                        CargarGridDatos();
+                        frmIngresoConductores conduc = new frmIngresoConductores(id);
                         this.SendToBack();
-                        this.Enabled = false;
+                        this.Enabled = false;                     
                         conduc.Show();
                     }
                 }
@@ -342,7 +355,53 @@ namespace SistemGestionBuses
             LimpiarCampos();
         }
 
+        private void dtNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            ValidarFechaNacimiento();
+        }
 
+        void ValidarFechaNacimiento()
+        {
+            DateTime hoy = DateTime.Today;
+            if (dtNacimiento.Value.Date >= hoy)
+            {
+                MessageBox.Show("Fecha invalida, no puedes seleccionar la fecha actual o una fecha futura", "Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else if (dtNacimiento.Value.Date.AddYears(18) >= hoy)
+            {
+                MessageBox.Show("Fecha invalida, el empleado es menor de edad", "Error de ingreso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 //nombres_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, correo_cliente, id_tipo_cliente
