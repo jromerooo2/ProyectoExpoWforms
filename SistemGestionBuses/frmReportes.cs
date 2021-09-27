@@ -6,6 +6,7 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using System;
+using Controlador;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,6 @@ namespace SistemGestionBuses
 
         private void cardClientes_Paint(object sender, PaintEventArgs e)
         {
-            pdfCliente();
         }
 
         private void pdfCliente()
@@ -54,9 +54,28 @@ namespace SistemGestionBuses
             {
                 tb.AddHeaderCell(new Cell().Add(new Paragraph(title).SetFont(font)));
             }
+            List<string> data = new List<string>();
+
+             data  = ControladorReportes.GetDataCliente();
+
+            for (int i = 0; i < columnas.Length; i++)
+            {
+                tb.AddCell(new Cell().Add(new Paragraph(data[i].ToString()).SetFont(fontC)));
+            }
+
             document.Add(tb);
             document.Close();
             MessageBox.Show("Se ha generado un documento PDF con el reporte.");
+        }
+
+        private void cardClientes_Click(object sender, EventArgs e)
+        {
+            pdfCliente();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            pdfCliente();
         }
     }
 }

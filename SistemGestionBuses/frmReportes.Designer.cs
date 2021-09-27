@@ -169,6 +169,7 @@
             this.cardClientes.ShadowDepth = 20;
             this.cardClientes.Size = new System.Drawing.Size(267, 196);
             this.cardClientes.TabIndex = 100;
+            this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
             this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
             // 
             // label8
@@ -194,6 +195,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // bunifuCards1
             // 
