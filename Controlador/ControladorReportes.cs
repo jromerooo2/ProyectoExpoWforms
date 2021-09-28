@@ -14,5 +14,14 @@ namespace Controlador
         {
             return ModeloReportes.GetDataClientes();
         }
+        public static List<string> GetDataTransportes()
+        {
+            return ModeloReportes.GetDataTransportes();
+        }
+
+        public static List<string> GetDataEmpleados()
+        {
+            return ModeloReportes.GetDataEmpleados();
+        }
     }
 }
