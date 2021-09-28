@@ -58,9 +58,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(705, 565);
+            this.pictureBox2.Size = new System.Drawing.Size(940, 695);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -68,20 +68,19 @@
             // txtPin
             // 
             this.txtPin.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtPin.Location = new System.Drawing.Point(202, 402);
-            this.txtPin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPin.Location = new System.Drawing.Point(269, 495);
+            this.txtPin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPin.Name = "txtPin";
-            this.txtPin.Size = new System.Drawing.Size(254, 20);
+            this.txtPin.Size = new System.Drawing.Size(337, 22);
             this.txtPin.TabIndex = 33;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 421);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(44, 518);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 25);
+            this.label5.Size = new System.Drawing.Size(0, 34);
             this.label5.TabIndex = 32;
             // 
             // label6
@@ -89,10 +88,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 19F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(142, 341);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(189, 420);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(428, 30);
+            this.label6.Size = new System.Drawing.Size(527, 38);
             this.label6.TabIndex = 31;
             this.label6.Text = "2- Configura tu pin de seguridad.";
             // 
@@ -118,15 +116,15 @@
             this.btnConfirmarPin.IconVisible = true;
             this.btnConfirmarPin.IconZoom = 90D;
             this.btnConfirmarPin.IsTab = false;
-            this.btnConfirmarPin.Location = new System.Drawing.Point(257, 441);
-            this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmarPin.Location = new System.Drawing.Point(343, 543);
+            this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmarPin.Name = "btnConfirmarPin";
             this.btnConfirmarPin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirmarPin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnConfirmarPin.OnHoverTextColor = System.Drawing.Color.DimGray;
             this.btnConfirmarPin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnConfirmarPin.selected = false;
-            this.btnConfirmarPin.Size = new System.Drawing.Size(136, 48);
+            this.btnConfirmarPin.Size = new System.Drawing.Size(181, 59);
             this.btnConfirmarPin.TabIndex = 30;
             this.btnConfirmarPin.Text = "Confirmar";
             this.btnConfirmarPin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,20 +135,19 @@
             // txtContra
             // 
             this.txtContra.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtContra.Location = new System.Drawing.Point(202, 216);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Location = new System.Drawing.Point(269, 266);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(254, 20);
+            this.txtContra.Size = new System.Drawing.Size(337, 22);
             this.txtContra.TabIndex = 29;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 227);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(44, 279);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 25);
+            this.label4.Size = new System.Drawing.Size(0, 34);
             this.label4.TabIndex = 28;
             // 
             // label3
@@ -158,10 +155,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Window;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(142, 162);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(189, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(347, 32);
+            this.label3.Size = new System.Drawing.Size(434, 40);
             this.label3.TabIndex = 27;
             this.label3.Text = "1- Cambia tu Contraseña";
             // 
@@ -170,10 +166,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(112, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(466, 22);
+            this.label2.Size = new System.Drawing.Size(614, 30);
             this.label2.TabIndex = 25;
             this.label2.Text = "Por favor, configura tu perfil antes de iniciar sesión";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -183,10 +178,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(137, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 38);
+            this.label1.Size = new System.Drawing.Size(557, 47);
             this.label1.TabIndex = 24;
             this.label1.Text = "Bienvenido a Locus System.";
             // 
@@ -212,15 +206,15 @@
             this.btnConfirmarContra.IconVisible = true;
             this.btnConfirmarContra.IconZoom = 90D;
             this.btnConfirmarContra.IsTab = false;
-            this.btnConfirmarContra.Location = new System.Drawing.Point(257, 240);
-            this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmarContra.Location = new System.Drawing.Point(343, 295);
+            this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmarContra.Name = "btnConfirmarContra";
             this.btnConfirmarContra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirmarContra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnConfirmarContra.OnHoverTextColor = System.Drawing.Color.DimGray;
             this.btnConfirmarContra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnConfirmarContra.selected = false;
-            this.btnConfirmarContra.Size = new System.Drawing.Size(136, 48);
+            this.btnConfirmarContra.Size = new System.Drawing.Size(181, 59);
             this.btnConfirmarContra.TabIndex = 23;
             this.btnConfirmarContra.Text = "Confirmar";
             this.btnConfirmarContra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,8 +231,9 @@
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(705, 50);
+            this.panelBar.Size = new System.Drawing.Size(940, 62);
             this.panelBar.TabIndex = 96;
             // 
             // bunifuImageButton5
@@ -248,9 +243,10 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(626, 8);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(834, 10);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 38);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -264,9 +260,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(656, 9);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(875, 11);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 38);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -280,9 +277,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(18, 9);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 30);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
@@ -296,9 +294,9 @@
             // 
             // frmConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 565);
+            this.ClientSize = new System.Drawing.Size(940, 695);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.txtPin);
             this.Controls.Add(this.label5);
@@ -312,7 +310,7 @@
             this.Controls.Add(this.btnConfirmarContra);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmConfig";
             this.Text = "frmConfig";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
