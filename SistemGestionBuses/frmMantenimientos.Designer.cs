@@ -189,6 +189,7 @@
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Mantenimiento";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 

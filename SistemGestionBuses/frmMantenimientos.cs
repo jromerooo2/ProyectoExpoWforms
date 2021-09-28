@@ -162,6 +162,28 @@ namespace SistemGestionBuses
         {
             ActualizarMantenimiento();
         }
+
+        //EliminarMantenimiento
+        void EliminarMantenimiento()
+        {
+            ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
+            bool respuesta = objMant.RetornoDelete_mantenimiento();
+            if (respuesta == true)
+            {
+                MessageBox.Show("Mantenimiento eliminado con éxito", "Confirmación de eliminación",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Mantenimiento no pudo ser eliminado", "Confirmación de eliminación",
+        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarMantenimiento();
+        }
     }
 }
 

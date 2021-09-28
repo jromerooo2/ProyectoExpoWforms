@@ -122,5 +122,22 @@ namespace Modelo
             }
         }
 
+        //Delete Maintenance
+        public static bool EliminarMantenimiento(int pid)
+        {
+            bool delete = false;
+            try
+            {
+                string query = "DELETE FROM tb_mantenimiento WHERE id_mantenimiento = '"+pid+"'";
+                MySqlCommand cmdelete = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                delete = Convert.ToBoolean(cmdelete.ExecuteNonQuery());
+                return delete;
+            }
+            catch (Exception)
+            {
+                return delete;
+            }
+        }
+
     }
 }
