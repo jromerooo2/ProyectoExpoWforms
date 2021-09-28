@@ -17,7 +17,7 @@ namespace SistemGestionBuses
     {
 
         public static int man;
-        public frmMantenimientos()
+        public frmMantenimientos(int pman)
         {
             InitializeComponent();
             BtnActualizar.Enabled = false;
