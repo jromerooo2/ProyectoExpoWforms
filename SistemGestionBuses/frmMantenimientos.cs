@@ -17,12 +17,11 @@ namespace SistemGestionBuses
     {
 
         public static int man;
-        public frmMantenimientos(int pman)
+        public frmMantenimientos()
         {
             InitializeComponent();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
-            man = pman;
             if (man == 2 || man == 3)
             {
                 BtnAgregar.Enabled = true;
