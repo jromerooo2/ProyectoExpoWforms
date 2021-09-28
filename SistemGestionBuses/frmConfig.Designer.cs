@@ -117,7 +117,7 @@
             this.btnConfirmarPin.IconZoom = 90D;
             this.btnConfirmarPin.IsTab = false;
             this.btnConfirmarPin.Location = new System.Drawing.Point(343, 543);
-            this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmarPin.Name = "btnConfirmarPin";
             this.btnConfirmarPin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirmarPin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -130,6 +130,7 @@
             this.btnConfirmarPin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmarPin.Textcolor = System.Drawing.Color.White;
             this.btnConfirmarPin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarPin.Click += new System.EventHandler(this.btnConfirmarPin_Click_1);
             // 
             // txtContra
             // 
@@ -206,7 +207,7 @@
             this.btnConfirmarContra.IconZoom = 90D;
             this.btnConfirmarContra.IsTab = false;
             this.btnConfirmarContra.Location = new System.Drawing.Point(343, 295);
-            this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmarContra.Name = "btnConfirmarContra";
             this.btnConfirmarContra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirmarContra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -230,7 +231,7 @@
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(940, 62);
             this.panelBar.TabIndex = 96;
@@ -243,7 +244,7 @@
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
             this.bunifuImageButton5.Location = new System.Drawing.Point(834, 10);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(33, 38);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,7 +261,7 @@
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
             this.bunifuImageButton3.Location = new System.Drawing.Point(875, 11);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Size = new System.Drawing.Size(36, 38);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -277,7 +278,7 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(24, 11);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

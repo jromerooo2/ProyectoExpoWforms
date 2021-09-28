@@ -74,6 +74,25 @@ namespace SistemGestionBuses
             this.Close();
         }
 
+        private void btnConfirmarPin_Click_1(object sender, EventArgs e)
+        {
+            if (!ValidacionesClass.hasSpecialChars(txtPin.Text))
+            {
+                bool res = ControladorUsuario.ActualizarContraPin(txtContra.Text, txtPin.Text, idu);
+                if (res)
+                {
+                    MessageBox.Show("Felicidades, Has configurado con exito tu cuenta", "Confirmación", MessageBoxButtons.OK);
+                    Close();
+                    frmLogin next = new frmLogin();
+                    next.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor utiliza únicamente números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnConfirmarPin_Click(object sender, EventArgs e)
         {
             if (!ValidacionesClass.hasSpecialChars(txtPin.Text))
@@ -82,6 +101,8 @@ namespace SistemGestionBuses
                 if (res)
                 {
                     MessageBox.Show("Felicidades, Has configurado con exito tu cuenta", "Confirmación", MessageBoxButtons.OK);
+                    frmLogin next = new frmLogin();
+                    next.Show();
                 }
             }
             else
