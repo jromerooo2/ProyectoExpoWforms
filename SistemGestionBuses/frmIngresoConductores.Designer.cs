@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoConductores));
+<<<<<<< Updated upstream
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+>>>>>>> Stashed changes
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
@@ -49,7 +52,6 @@
             this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.picBackground = new System.Windows.Forms.PictureBox();
-            this.dgvConductores = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dragCtrlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -57,14 +59,15 @@
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.dgvConductores = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLimpiar
@@ -297,11 +300,16 @@
             this.picBackground.Location = new System.Drawing.Point(0, 0);
             this.picBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBackground.Name = "picBackground";
+<<<<<<< Updated upstream
             this.picBackground.Size = new System.Drawing.Size(1213, 716);
+=======
+            this.picBackground.Size = new System.Drawing.Size(910, 582);
+>>>>>>> Stashed changes
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBackground.TabIndex = 78;
             this.picBackground.TabStop = false;
             // 
+<<<<<<< Updated upstream
             // dgvConductores
             // 
             this.dgvConductores.AllowUserToAddRows = false;
@@ -350,6 +358,8 @@
             this.dgvConductores.Size = new System.Drawing.Size(683, 463);
             this.dgvConductores.TabIndex = 80;
             // 
+=======
+>>>>>>> Stashed changes
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
@@ -443,15 +453,31 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // dgvConductores
+            // 
+            this.dgvConductores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.dgvConductores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConductores.Location = new System.Drawing.Point(366, 181);
+            this.dgvConductores.Name = "dgvConductores";
+            this.dgvConductores.RowHeadersVisible = false;
+            this.dgvConductores.Size = new System.Drawing.Size(498, 376);
+            this.dgvConductores.TabIndex = 107;
+            this.dgvConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConductores_CellClick);
+            // 
             // frmIngresoConductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1213, 716);
+=======
+            this.ClientSize = new System.Drawing.Size(910, 582);
+            this.Controls.Add(this.dgvConductores);
+>>>>>>> Stashed changes
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dgvConductores);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.picBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -461,12 +487,12 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,7 +514,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox picBackground;
         private Bunifu.Framework.UI.BunifuDatepicker dtpExpLicencia;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvConductores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuDragControl dragCtrlMain;
@@ -496,5 +521,13 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.MaskedTextBox txtLicencia;
+        private System.Windows.Forms.TextBox txtIDConduc;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.DataGridView dgvConductores;
+>>>>>>> Stashed changes
     }
 }
