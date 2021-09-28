@@ -14,6 +14,7 @@ namespace SistemGestionBuses
     public partial class frmIngresoConductores : Form
     {
         public static int id_empleado;
+        string empleado;
         DataTable datosConductores;
 
         public frmIngresoConductores(int pid_empleado)
@@ -21,15 +22,29 @@ namespace SistemGestionBuses
             InitializeComponent();
             id_empleado = pid_empleado;
             ControladorIngreso.id_empleado = pid_empleado;
-            string empleado = ControladorIngreso.CargarNombresConduc_Controller();
-            txtId.Text = id_empleado.ToString();
+            empleado = ControladorIngreso.CargarNombresConduc_Controller();
+            txtIDEmpl.Text = id_empleado.ToString();
             txtNombreConduc.Text = empleado;
-            CargarGridDatos();
-        }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+            CargarGridDatos();
+            CargarTipoLicencia();
+        }
+        //CMB tipo licencia
+        void CargarTipoLicencia()
         {
-            
+            try
+            {
+                DataTable dataTipo = ControladorIngreso.ObtenerTipoLicencia();
+                cmbTipoLicencia.DataSource = dataTipo;
+                cmbTipoLicencia.DisplayMember = "tipo_licencia";
+                cmbTipoLicencia.ValueMember = "id_tipo_licencia";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los cargo.", "Error de carga.",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
@@ -47,11 +62,6 @@ namespace SistemGestionBuses
             this.Close();
         }
 
-        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         void CargarGridDatos()
         {
             datosConductores = ControladorIngreso.CargarConductores_Controller();
@@ -60,14 +70,142 @@ namespace SistemGestionBuses
             dgvConductores.Columns[1].HeaderText = "Licencia";
             dgvConductores.Columns[2].HeaderText = "F.Expiración";
             dgvConductores.Columns[3].HeaderText = "Tipo Licencia";
+            //dgvConductores.Columns[4].Visible = false;
+        }
+
+        void EnvioDatos()
+        {
+            string licencia = txtLicencia.Text;
+            if (licencia.Contains("123456789")|| licencia.Trim().Length == 18)
+            {
+                try
+                {                 
+                    string fecha_expiracion = Convert.ToString(dtpExpLicencia.Value);
+                    int id_tipo_licencia = Convert.ToInt32(cmbTipoLicencia.SelectedValue);
+                    //Se envian los datos al controlador directamente por a la clase y no por objeto ya que el metodo es statico porque el constructor no me permite trabajar todos los cruds.
+                    bool res = ControladorIngreso.IngresarDatosConductores(id_empleado, licencia, id_tipo_licencia, fecha_expiracion);
+                    if (res == true)
+                    {
+                        MessageBox.Show("Los datos del empleado fueron registrados exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se registraron los datos del conductor", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Contacta al administrador, el registro no funciona correctamente", "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }               
+            }
+            else
+            {
+                MessageBox.Show("La licencia es obligatoria para registrar al conductor", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void dgvConductores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            BtnEliminar.Enabled = true;
+            BtnActualizar.Enabled = true;
+            BtnAgregar.Enabled = false;
+
+            int i = dgvConductores.CurrentRow.Index;
+
+            txtIDConduc.Text = dgvConductores[4, i].Value.ToString();
+            txtLicencia.Text = dgvConductores[1, i].Value.ToString();
+            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
+            dtpExpLicencia.Text = Convert.ToString(dgvConductores[2, i]);
+
+            int id_licencia = Convert.ToInt16(dgvConductores[3, i]);
+            cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
+            cmbTipoLicencia.DisplayMember = "tipo_licencia";
+            cmbTipoLicencia.ValueMember = "id_tipo_licencia";
+         
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de actualizar a: " + empleado + "?",
+            "Confirmar actualización", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ActualizarDatos();
+                CargarGridDatos();
+            }            
+        }
+
+        void ActualizarDatos()
+        {          
+            string licencia = txtLicencia.Text;
+            int id_conductor = Convert.ToInt32(txtIDConduc.Text);
+            string fecha_expiracion = Convert.ToString(dtpExpLicencia.Value);
+            int id_tipo_licencia = Convert.ToInt32(cmbTipoLicencia.SelectedValue);
+            //Se envian los datos al controlador directamente por a la clase y no por objeto ya que el metodo es statico porque el constructor no me permite trabajar todos los cruds.
+            if (sameOrnot(licencia, fecha_expiracion, id_tipo_licencia) == true)
+            {
+                bool res = ControladorIngreso.ActualizarDatosConductores(id_conductor, id_empleado, licencia, id_tipo_licencia, fecha_expiracion);
+                if (res == true)
+                {
+                    MessageBox.Show("Los datos del empleado fueron registrados exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No pudo ser actualizado el registro", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Los datos son los mismos, porfavor confirma que actualizaste los campos deseados", "Registro Identico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        void EliminarDatos()
+        {
+            //Se envia el id del conductor directo al controlador
+            ControladorIngreso.id_conductor = Convert.ToInt16(txtIDConduc.Text);
+            bool respuesta = ControladorIngreso.EliminarDatosConductor();
+            if (respuesta == true)
+            {
+                MessageBox.Show("El registro ha sido eliminado correctamente", "Confirmacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El registro no fue eliminado", "Confirmacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool sameOrnot(string licencia, string fecha_expiracion, int id_tipo_licencia)
+        {
+            int i = dgvConductores.CurrentRow.Index;
+
+            int tipo0 = Convert.ToInt16(dgvConductores[3, i].Value);
+            string fecha0 = dgvConductores[2, i].Value.ToString();
+            string licencia0 = dgvConductores[1, i].Value.ToString();          
+
+            if (licencia == licencia0 || fecha_expiracion == fecha0 || id_tipo_licencia == tipo0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void frmIngresoConductores_Load(object sender, EventArgs e)
+        {
+            BtnAgregar.Enabled = true;
+            BtnEliminar.Enabled = false;
+            BtnActualizar.Enabled = false;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtLicencia.Text.Trim() == "")
-            {
-
-            }
+            EnvioDatos();
+            CargarGridDatos();
         }
     }
 }

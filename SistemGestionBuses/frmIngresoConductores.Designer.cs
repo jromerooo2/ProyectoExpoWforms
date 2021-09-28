@@ -30,23 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoConductores));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.BtnAgregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.txtIDConduc = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLicencia = new System.Windows.Forms.MaskedTextBox();
+            this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
+            this.txtIDEmpl = new System.Windows.Forms.TextBox();
             this.dtpExpLicencia = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.txtLicencia = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtNombreConduc = new System.Windows.Forms.TextBox();
-            this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.picBackground = new System.Windows.Forms.PictureBox();
             this.dgvConductores = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -83,7 +85,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.btnLimpiar.Location = new System.Drawing.Point(26, 315);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(114, 48);
+            this.btnLimpiar.Size = new System.Drawing.Size(130, 48);
             this.btnLimpiar.TabIndex = 19;
             this.btnLimpiar.Text = "Limpiar campos";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -100,9 +102,9 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(169, 261);
+            this.BtnEliminar.Location = new System.Drawing.Point(177, 261);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(114, 48);
+            this.BtnEliminar.Size = new System.Drawing.Size(124, 48);
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Conductor";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -119,12 +121,38 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnActualizar.Location = new System.Drawing.Point(169, 315);
+            this.BtnActualizar.Location = new System.Drawing.Point(177, 315);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(114, 48);
+            this.BtnActualizar.Size = new System.Drawing.Size(124, 48);
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Conductor";
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.BtnAgregar);
+            this.panel2.Controls.Add(this.txtIDConduc);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtLicencia);
+            this.panel2.Controls.Add(this.BtnEliminar);
+            this.panel2.Controls.Add(this.cmbTipoLicencia);
+            this.panel2.Controls.Add(this.btnLimpiar);
+            this.panel2.Controls.Add(this.BtnActualizar);
+            this.panel2.Controls.Add(this.txtIDEmpl);
+            this.panel2.Controls.Add(this.dtpExpLicencia);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lblApellido);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.txtNombreConduc);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(31, 181);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(317, 376);
+            this.panel2.TabIndex = 77;
             // 
             // BtnAgregar
             // 
@@ -141,42 +169,59 @@
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnAgregar.Location = new System.Drawing.Point(26, 261);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(114, 48);
-            this.BtnAgregar.TabIndex = 15;
+            this.BtnAgregar.Size = new System.Drawing.Size(130, 48);
+            this.BtnAgregar.TabIndex = 75;
             this.BtnAgregar.Text = "Agregar Conductor";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // panel2
+            // txtIDConduc
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panel2.Controls.Add(this.BtnEliminar);
-            this.panel2.Controls.Add(this.btnLimpiar);
-            this.panel2.Controls.Add(this.BtnActualizar);
-            this.panel2.Controls.Add(this.txtId);
-            this.panel2.Controls.Add(this.dtpExpLicencia);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.BtnAgregar);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.lblApellido);
-            this.panel2.Controls.Add(this.txtLicencia);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.txtNombreConduc);
-            this.panel2.Controls.Add(this.cmbTipoLicencia);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(32, 181);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 376);
-            this.panel2.TabIndex = 77;
+            this.txtIDConduc.Enabled = false;
+            this.txtIDConduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDConduc.Location = new System.Drawing.Point(180, 222);
+            this.txtIDConduc.Name = "txtIDConduc";
+            this.txtIDConduc.ReadOnly = true;
+            this.txtIDConduc.Size = new System.Drawing.Size(121, 22);
+            this.txtIDConduc.TabIndex = 74;
             // 
-            // txtId
+            // label2
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(245, 224);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(34, 22);
-            this.txtId.TabIndex = 67;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.label2.Location = new System.Drawing.Point(176, 199);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "ID Conduc:";
+            // 
+            // txtLicencia
+            // 
+            this.txtLicencia.Location = new System.Drawing.Point(26, 91);
+            this.txtLicencia.Mask = "N°999-999999-999-9";
+            this.txtLicencia.Name = "txtLicencia";
+            this.txtLicencia.Size = new System.Drawing.Size(148, 22);
+            this.txtLicencia.TabIndex = 2;
+            // 
+            // cmbTipoLicencia
+            // 
+            this.cmbTipoLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoLicencia.FormattingEnabled = true;
+            this.cmbTipoLicencia.Location = new System.Drawing.Point(180, 91);
+            this.cmbTipoLicencia.Name = "cmbTipoLicencia";
+            this.cmbTipoLicencia.Size = new System.Drawing.Size(121, 24);
+            this.cmbTipoLicencia.TabIndex = 22;
+            // 
+            // txtIDEmpl
+            // 
+            this.txtIDEmpl.Enabled = false;
+            this.txtIDEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDEmpl.Location = new System.Drawing.Point(30, 222);
+            this.txtIDEmpl.Name = "txtIDEmpl";
+            this.txtIDEmpl.ReadOnly = true;
+            this.txtIDEmpl.Size = new System.Drawing.Size(126, 22);
+            this.txtIDEmpl.TabIndex = 67;
             // 
             // dtpExpLicencia
             // 
@@ -188,7 +233,7 @@
             this.dtpExpLicencia.Location = new System.Drawing.Point(26, 151);
             this.dtpExpLicencia.Margin = new System.Windows.Forms.Padding(4);
             this.dtpExpLicencia.Name = "dtpExpLicencia";
-            this.dtpExpLicencia.Size = new System.Drawing.Size(253, 42);
+            this.dtpExpLicencia.Size = new System.Drawing.Size(266, 42);
             this.dtpExpLicencia.TabIndex = 72;
             this.dtpExpLicencia.Value = new System.DateTime(2021, 9, 17, 8, 10, 17, 110);
             // 
@@ -197,11 +242,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(235, 199);
+            this.label7.Location = new System.Drawing.Point(30, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 20);
+            this.label7.Size = new System.Drawing.Size(69, 20);
             this.label7.TabIndex = 68;
-            this.label7.Text = "ID:";
+            this.label7.Text = "ID Empl:";
             // 
             // label6
             // 
@@ -226,15 +271,6 @@
             this.lblApellido.Text = "Licencia:";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtLicencia
-            // 
-            this.txtLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLicencia.Location = new System.Drawing.Point(26, 91);
-            this.txtLicencia.Name = "txtLicencia";
-            this.txtLicencia.ShortcutsEnabled = false;
-            this.txtLicencia.Size = new System.Drawing.Size(253, 22);
-            this.txtLicencia.TabIndex = 61;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -254,38 +290,28 @@
             this.txtNombreConduc.Name = "txtNombreConduc";
             this.txtNombreConduc.ReadOnly = true;
             this.txtNombreConduc.ShortcutsEnabled = false;
-            this.txtNombreConduc.Size = new System.Drawing.Size(253, 22);
+            this.txtNombreConduc.Size = new System.Drawing.Size(266, 22);
             this.txtNombreConduc.TabIndex = 45;
-            // 
-            // cmbTipoLicencia
-            // 
-            this.cmbTipoLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoLicencia.FormattingEnabled = true;
-            this.cmbTipoLicencia.Location = new System.Drawing.Point(26, 222);
-            this.cmbTipoLicencia.Name = "cmbTipoLicencia";
-            this.cmbTipoLicencia.Size = new System.Drawing.Size(167, 24);
-            this.cmbTipoLicencia.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(26, 199);
+            this.label4.Location = new System.Drawing.Point(176, 68);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Tipo de Licencia:";
+            this.label4.Text = "Clase:";
             // 
             // picBackground
             // 
             this.picBackground.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBackground.Image")));
             this.picBackground.Location = new System.Drawing.Point(0, 0);
             this.picBackground.Margin = new System.Windows.Forms.Padding(2);
             this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(910, 582);
+            this.picBackground.Size = new System.Drawing.Size(886, 582);
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBackground.TabIndex = 78;
             this.picBackground.TabStop = false;
@@ -296,23 +322,23 @@
             this.dgvConductores.AllowUserToDeleteRows = false;
             this.dgvConductores.AllowUserToResizeColumns = false;
             this.dgvConductores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvConductores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvConductores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvConductores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConductores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.dgvConductores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConductores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dgvConductores.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvConductores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConductores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConductores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvConductores.ColumnHeadersHeight = 40;
             this.dgvConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvConductores.DoubleBuffered = true;
@@ -324,18 +350,19 @@
             this.dgvConductores.Name = "dgvConductores";
             this.dgvConductores.ReadOnly = true;
             this.dgvConductores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConductores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConductores.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvConductores.RowHeadersWidth = 30;
             this.dgvConductores.Size = new System.Drawing.Size(512, 376);
             this.dgvConductores.TabIndex = 80;
+            this.dgvConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConductores_CellClick);
             // 
             // label1
             // 
@@ -362,7 +389,7 @@
             // 
             this.dragCtrlMain.Fixed = true;
             this.dragCtrlMain.Horizontal = true;
-            this.dragCtrlMain.TargetControl = null;
+            this.dragCtrlMain.TargetControl = this.panelBar;
             this.dragCtrlMain.Vertical = true;
             // 
             // panelBar
@@ -439,7 +466,6 @@
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // frmIngresoConductores
             // 
@@ -455,6 +481,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIngresoConductores";
             this.Text = "frmIngresoConductores";
+            this.Load += new System.EventHandler(this.frmIngresoConductores_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
@@ -473,13 +500,11 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtIDEmpl;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox txtLicencia;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNombreConduc;
         private System.Windows.Forms.ComboBox cmbTipoLicencia;
@@ -495,5 +520,9 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.MaskedTextBox txtLicencia;
+        private System.Windows.Forms.TextBox txtIDConduc;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnAgregar;
     }
 }
