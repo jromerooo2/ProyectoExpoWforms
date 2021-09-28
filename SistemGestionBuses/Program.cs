@@ -16,8 +16,7 @@ namespace SistemGestionBuses
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
-
+            Application.Run(new frmMantenimientos());
             //pasen siempre a frmLogin plis - Aviso Parroquial
             //new frmConfig(id_cargo, "username", id_usuario)
         }
