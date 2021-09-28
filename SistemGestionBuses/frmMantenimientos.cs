@@ -48,6 +48,13 @@ namespace SistemGestionBuses
             datosMan = ControladorMantenimiento.CargarMantenimiento_Controlador();
             DgvMantenimiento.DataSource = datosMan;
             DgvMantenimiento.Columns[0].Visible = false;
+            DgvMantenimiento.Columns[1].HeaderText = "Unidad de transporte";
+            DgvMantenimiento.Columns[2].HeaderText = "Monto del Mantenimiento";
+            DgvMantenimiento.Columns[3].HeaderText = "Ultimo Kilometraje";
+            DgvMantenimiento.Columns[4].HeaderText = "Descripcion del Mantenimiento";
+            DgvMantenimiento.Columns[5].HeaderText = "Fecha";
+
+
 
         }
         //CREAR DATOS
@@ -123,7 +130,7 @@ namespace SistemGestionBuses
                 ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
                 objMant = new ControladorMantenimiento(id_unidad_transporte,
                     monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
-                bool respuesta = objMant.RetornoUpdate_mantenimiento();
+                bool respuesta = objMant.ActualizarMantenimientoControlador();
                 if (respuesta == true)
                 {
                     MessageBox.Show("Mantenimiento actualizado con éxito", "Confirmación de actualización",
@@ -137,8 +144,7 @@ namespace SistemGestionBuses
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -155,7 +161,7 @@ namespace SistemGestionBuses
 
             //Cargando data a los comboboxes
             int idunidad = Convert.ToInt16(DgvMantenimiento[1,posicion].Value.ToString());
-            cmbUnidad.DataSource = ControladorMantenimiento.ActualizarUnidad_Controller(idunidad);
+            cmbUnidad.DataSource = ControladorMantenimiento.CargarUnidadInner_controlador(idunidad);
             cmbUnidad.ValueMember = "id_unidad_transporte";
             cmbUnidad.DisplayMember = "placa";
         }
@@ -169,7 +175,7 @@ namespace SistemGestionBuses
         void EliminarMantenimiento()
         {
             ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
-            bool respuesta = objMant.RetornoDelete_mantenimiento();
+            bool respuesta = ControladorMantenimiento.EliminarMantenimientoControlador();
             if (respuesta == true)
             {
                 MessageBox.Show("Mantenimiento eliminado con éxito", "Confirmación de eliminación",
@@ -184,10 +190,12 @@ namespace SistemGestionBuses
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Deseas eliminar el vehículo con matrícula"+cmbUnidad.SelectedValue+"?", "Confirmación de eliminación",
+            if (MessageBox.Show("¿Está seguro de eliminar a: " + cmbUnidad.Text + "?",
+                "Confirmar eliminación",
                         MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
             {
                 EliminarMantenimiento();
+                CargarGridDatos();
             }
         }
     }
