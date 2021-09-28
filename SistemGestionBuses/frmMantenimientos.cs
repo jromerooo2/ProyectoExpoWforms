@@ -29,6 +29,12 @@ namespace SistemGestionBuses
             }
         }
 
+        private void frmMantenimientos_Load(object sender, EventArgs e)
+        {
+            CargarGridDatos();
+            CargarUnidad();
+        }
+
         public DataTable datosMan;
         public ControladorMantenimiento objMant;
         //cmb Cargar Unidad
