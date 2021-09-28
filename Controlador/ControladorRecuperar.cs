@@ -102,7 +102,7 @@ namespace Controlador
             smtp.Send(message);
 
         }
-        public static bool ConfirmCodes(int codeFromLaVista)
+        public static bool ConfirmCode(int codeFromLaVista)
         {
             if (codeFromLaVista == code)
             {
