@@ -38,8 +38,8 @@ namespace SistemGestionBuses
                 if (res)
                 {
                     MessageBox.Show("Enviado con exito");
-                    lblNuevaContra.Visible = true;
-                    lblIngresoCodigo.Visible = true;
+                    //lblNuevaContra.Visible = true;
+                    //lblIngresoCodigo.Visible = true;
                     txtCode.Visible = true;
                     txtNueva.Visible = true;
                     btnNueva.Visible = true;
@@ -47,6 +47,7 @@ namespace SistemGestionBuses
                     txtUser.ReadOnly = true;
                     btnMetodo1.Enabled = false;
                     btnMetodo2.Enabled = false;
+                    btnRecuPIN.Enabled = false;
                     txtCode.ReadOnly = false;
                     btnConfirmar.Enabled = true;
                 }
@@ -124,8 +125,8 @@ namespace SistemGestionBuses
         {
             txtNueva.Visible = false;
             txtCode.Visible = false;
-            lblIngresoCodigo.Visible = false;
-            lblNuevaContra.Visible = false;
+            //lblIngresoCodigo.Visible = false;
+            //lblNuevaContra.Visible = false;
             btnConfirmar.Visible = false;
             btnNueva.Visible = false;
         }

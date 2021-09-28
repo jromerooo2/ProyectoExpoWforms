@@ -226,7 +226,7 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password, byte[] img)
+        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password, string img)
         {
             bool res = false;
             string pin = "12345678";
