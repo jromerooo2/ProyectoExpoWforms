@@ -10,7 +10,7 @@ namespace Controlador
 {
    public class ControladorIngreso
     {
-
+        #region CMB - INNER
         //cmb Municipio
         public static DataTable ObtenerMunicipios()
         {
@@ -62,6 +62,7 @@ namespace Controlador
         {
             return ModeloIngreso.ObtenerListaEmpleados();
         }
+        #endregion
 
         //ATRIBUTOS 
         public static int id_empleado { get; set; }
@@ -86,6 +87,7 @@ namespace Controlador
         public string licencia { get; set; }
         public string fecha_exp_licencia { get; set; }
         public int id_tipo_licencia { get; set; }
+        public static int id_conductor { get; set; }
 
         //CONSTRUCTOR
         public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
@@ -120,24 +122,51 @@ namespace Controlador
 
 
         #region CRUD Conductores
+        //Obtener el ID del forms de empleados por medio del DUI y el NIT
         public int ObtenerIDEmpleado_Controller(string DUI, string NIT)
         {
             return ModeloIngreso.ObtenerIDEmpleado(DUI, NIT);
         }
-
+        //Cargar el nombre del empleado concatenado
         public static string CargarNombresConduc_Controller()
         {
             return ModeloIngreso.ObtenerNombreConduc(id_empleado);
         }
-
+        //Cargar toda la tabla de los conductores
         public static DataTable CargarConductores_Controller()
         {
             return ModeloIngreso.ObtenerListaConductores();
         }
-         
-        public bool IngresarDatosControlador()
+
+        //Cargar el combobox tipo licencia
+        public static DataTable ObtenerTipoLicencia()
         {
-            return ModeloIngreso.RegistrarConductor(id_empleado, licencia, id_tipo_licencia, fecha_exp_licencia);
+            return ModeloIngreso.ObtenerTipoLicencia();
+        }
+
+        //Cargar cmb inner tipo licencia
+
+        public static DataTable ObtenerTipoLicenciaInner(int id_marca)
+        {
+            return ModeloIngreso.ObtenerTipoLicenciaInner(id_marca);
+        }
+
+        //CREATE conductores
+        public static bool IngresarDatosConductores(int pid_empleado, string plicencia, int pid_tipo_licencia, string pfecha_exp_licencia)
+        {
+            return ModeloIngreso.RegistrarConductor(pid_empleado, plicencia, pid_tipo_licencia, pfecha_exp_licencia);
+        }
+
+        //UPDATER conductores
+        public static bool ActualizarDatosConductores(int id_conductor, int id_empleado, string licencia, int id_tipo_licencia, string fecha_exp)
+        {
+            return ModeloIngreso.ActualizarConductor(id_conductor, id_empleado, licencia, id_tipo_licencia, fecha_exp);
+        }
+        
+        //DELETE conductores
+        public static bool EliminarDatosConductor()
+        { 
+            return ModeloIngreso.EliminarConductor(id_conductor);
         }
         #endregion
     }

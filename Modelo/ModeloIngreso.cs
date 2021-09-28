@@ -408,7 +408,6 @@ namespace Modelo
             catch (Exception)
             {
                 return res;
-                throw;
             }
         }
         #endregion
@@ -450,12 +449,13 @@ namespace Modelo
             }
         }
 
+        //CREATE
         public static bool RegistrarConductor(int pid_empleado, string plicencia, int pid_tipo_licencia, string pfecha_exp_licencia)
         {
             bool retorno = false;
             try
             { 
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_conductores (id_empleado, numero_licencia, fecha_exp_licencia, id_tipo_licencia) VALUES ('{0}', '{1}', '{2}', '{3}')", pid_empleado, plicencia, pid_tipo_licencia, pfecha_exp_licencia), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_conductores (id_empleado, numero_licencia, fecha_exp_licencia, id_tipo_licencia) VALUES ('{0}', '{1}', '{2}', '{3}')", pid_empleado, plicencia, pfecha_exp_licencia, pid_tipo_licencia), ModeloConexion.GetConnection());
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 return retorno;
             }
@@ -465,6 +465,40 @@ namespace Modelo
             }
         }
 
+        //UPDATE Conductor
+        public static bool ActualizarConductor(int id_conductor ,int id_empleado,string licencia, int id_tipo_licencia, string fecha_exp)
+        {
+            bool res = false;
+            try
+            {
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_conductores SET id_empleado = '" + id_empleado + "', numero_licencia = '" + licencia + "', fecha_exp_licencia = '" + fecha_exp + "', id_tipo_licencia = '" + id_tipo_licencia + "' WHERE id_conductores = '" + id_conductor + "' "), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+            }
+        }
+
+        //DELETE conductor
+        public static bool EliminarConductor(int id)
+        {
+            bool res = false;
+            try
+            {
+                string query = "DELETE FROM tb_conductores WHERE id_conductores = '"+ id +"'";
+                MySqlCommand cmd = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmd.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+            }
+        }
+
+        //DGV
         public static DataTable ObtenerListaConductores()
         {
             DataTable data;
@@ -483,6 +517,45 @@ namespace Modelo
             }
         }
 
+        //CMB tipo licencia
+        public static DataTable ObtenerTipoLicencia()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_licencia";
+                MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+
+        //Inner Join tipo de licencia
+        public static DataTable ObtenerTipoLicenciaInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_tipo_licencia WHERE id_tipo_licencia = ?param1";
+                MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdtipoest.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
         #endregion
 
     }
