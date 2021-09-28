@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using WebSocketSharp;
+using WebSocketSharp;
 using System.Windows.Forms;
 
 namespace SistemGestionBuses
@@ -20,7 +20,7 @@ namespace SistemGestionBuses
 
         private void frmTrack_Load(object sender, EventArgs e)
         {
-            //WebSocket ws = new WebSocket("ws://simple-websocket-server-echo.glitch.me/");
+            WebSocket ws = new WebSocket("ws://simple-websocket-server-echo.glitch.me/");
         }
     }
 }

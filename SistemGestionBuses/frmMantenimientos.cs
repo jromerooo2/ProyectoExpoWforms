@@ -139,7 +139,7 @@ namespace SistemGestionBuses
                 ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
                 objMant = new ControladorMantenimiento(id_unidad_transporte,
                     monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
-                bool respuesta = objMant.ActualizarMantenimientoController();
+                bool respuesta = objMant.ActualizarMantenimientoControlador();
                 if (respuesta == true)
                 {
                     MessageBox.Show("Mantenimiento actualizado con éxito", "Confirmación de actualización",
@@ -185,7 +185,7 @@ namespace SistemGestionBuses
         void EliminarMantenimiento()
         {
             ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
-            bool respuesta = ControladorMantenimiento.EliminarMantenimientoContolador();
+            bool respuesta = ControladorMantenimiento.EliminarMantenimientoControlador();
             if (respuesta == true)
             {
                 MessageBox.Show("Mantenimiento eliminado con éxito", "Confirmación de eliminación",
