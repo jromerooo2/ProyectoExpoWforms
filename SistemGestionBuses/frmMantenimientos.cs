@@ -22,10 +22,7 @@ namespace SistemGestionBuses
             InitializeComponent();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
-            if (man == 2 || man == 3)
-            {
-                BtnAgregar.Enabled = true;
-            }
+            BtnAgregar.Enabled = true;
         }
 
         private void frmMantenimientos_Load(object sender, EventArgs e)
@@ -216,12 +213,9 @@ namespace SistemGestionBuses
         void Botones_valid()
         {
             int v = DgvMantenimiento.CurrentRow.Index;
-            if (man == 2 || man == 3)
-            {
-                BtnActualizar.Enabled = true;
-                BtnEliminar.Enabled = true;
-                BtnAgregar.Enabled = true;
-            }
+            BtnAgregar.Enabled = true;
+            BtnActualizar.Enabled = true;
+            BtnEliminar.Enabled = true;
         }
     }
 }
