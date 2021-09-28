@@ -134,9 +134,9 @@
             this.BtnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConectar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConectar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnConectar.Location = new System.Drawing.Point(144, 184);
+            this.BtnConectar.Location = new System.Drawing.Point(146, 184);
             this.BtnConectar.Name = "BtnConectar";
-            this.BtnConectar.Size = new System.Drawing.Size(128, 51);
+            this.BtnConectar.Size = new System.Drawing.Size(127, 51);
             this.BtnConectar.TabIndex = 20;
             this.BtnConectar.Text = "Conectar";
             this.BtnConectar.UseVisualStyleBackColor = false;
@@ -164,7 +164,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(12, 184);
+            this.button3.Location = new System.Drawing.Point(146, 117);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 51);
             this.button3.TabIndex = 19;
@@ -183,9 +183,9 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(144, 116);
+            this.BtnEliminar.Location = new System.Drawing.Point(12, 117);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(128, 48);
+            this.BtnEliminar.Size = new System.Drawing.Size(128, 51);
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Mantenimiento";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -203,9 +203,9 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnActualizar.Location = new System.Drawing.Point(12, 115);
+            this.BtnActualizar.Location = new System.Drawing.Point(146, 51);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(126, 48);
+            this.BtnActualizar.Size = new System.Drawing.Size(126, 49);
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Mantenimiento";
             this.BtnActualizar.UseVisualStyleBackColor = false;
@@ -223,9 +223,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.Location = new System.Drawing.Point(144, 51);
+            this.button4.Location = new System.Drawing.Point(13, 185);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 49);
+            this.button4.Size = new System.Drawing.Size(127, 49);
             this.button4.TabIndex = 16;
             this.button4.Text = "Actualizar grid de datos";
             this.button4.UseVisualStyleBackColor = false;
@@ -242,7 +242,7 @@
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAgregar.Location = new System.Drawing.Point(12, 51);
+            this.BtnAgregar.Location = new System.Drawing.Point(13, 51);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(126, 49);
             this.BtnAgregar.TabIndex = 15;

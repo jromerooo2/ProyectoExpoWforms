@@ -55,21 +55,13 @@ namespace Controlador
             return ModeloMantenimiento.ActualizarUnidad_Inner(placa);
         }
 
-<<<<<<< HEAD
         public bool ActualizarMantenimientoController ()
-=======
-        public bool RetornoUpdate_mantenimiento()
->>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
         {
             return ModeloMantenimiento.ActualializarMantenimiento(id_mantenimiento,id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
         }
 
         //Delete Mantenimiento
-<<<<<<< HEAD
         public static bool EliminarMantenimientoContolador()
-=======
-        public bool RetornoDelete_mantenimiento()
->>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
         {
             return ModeloMantenimiento.EliminarMantenimiento(id_mantenimiento);
         }
