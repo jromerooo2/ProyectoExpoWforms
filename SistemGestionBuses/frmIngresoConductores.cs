@@ -104,6 +104,25 @@ namespace SistemGestionBuses
             }
         }
 
+        private void dgvConductores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            BtnEliminar.Enabled = true;
+            BtnActualizar.Enabled = true;
+            BtnAgregar.Enabled = false;
+
+            int i = dgvConductores.CurrentRow.Index;
+
+            txtIDConduc.Text = dgvConductores[4, i].Value.ToString();
+            txtLicencia.Text = dgvConductores[1, i].Value.ToString();
+            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
+            dtpExpLicencia.Text = Convert.ToString(dgvConductores[2, i]);
+
+            int id_licencia = Convert.ToInt16(dgvConductores[3, i]);
+            cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
+            cmbTipoLicencia.DisplayMember = "tipo_licencia";
+            cmbTipoLicencia.ValueMember = "id_tipo_licencia";
+         
+        }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
@@ -162,11 +181,11 @@ namespace SistemGestionBuses
         {
             int i = dgvConductores.CurrentRow.Index;
 
-            int tipo0 = dgvConductores[3, i].Value.ToString());
+            int tipo0 = Convert.ToInt16(dgvConductores[3, i].Value);
             string fecha0 = dgvConductores[2, i].Value.ToString();
             string licencia0 = dgvConductores[1, i].Value.ToString();          
 
-            if (!licencia.Equals(licencia0) || !fecha_expiracion.Equals(fecha0) || !id_tipo_licencia.Equals(tipo0))
+            if (licencia == licencia0 || fecha_expiracion == fecha0 || id_tipo_licencia == tipo0)
             {
                 return false;
             }
@@ -187,26 +206,6 @@ namespace SistemGestionBuses
         {
             EnvioDatos();
             CargarGridDatos();
-        }
-
-        private void dgvConductores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            BtnEliminar.Enabled = true;
-            BtnActualizar.Enabled = true;
-            BtnAgregar.Enabled = false;
-
-            int i = dgvConductores.CurrentRow.Index;
-
-            txtIDConduc.Text = dgvConductores[4, i].Value.ToString();
-            txtLicencia.Text = dgvConductores[1, i].Value.ToString();
-            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
-            dtpExpLicencia.Text = Convert.ToString(dgvConductores[2, i]);
-
-            string id_licencia = dgvConductores[3, i].Value.ToString();
-            cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
-            cmbTipoLicencia.DisplayMember = "tipo_licencia";
-            cmbTipoLicencia.ValueMember = "id_tipo_licencia";
-            CargarTipoLicencia();
         }
     }
 }
