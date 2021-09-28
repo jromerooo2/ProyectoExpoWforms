@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantenimientos));
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,7 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.DtMant = new System.Windows.Forms.DateTimePicker();
+            this.DtFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -107,6 +105,7 @@
             this.DgvMantenimiento.Name = "DgvMantenimiento";
             this.DgvMantenimiento.Size = new System.Drawing.Size(871, 236);
             this.DgvMantenimiento.TabIndex = 83;
+            this.DgvMantenimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMantenimiento_CellClick);
             // 
             // panel1
             // 
@@ -126,7 +125,7 @@
             // BtnConectar
             // 
             this.BtnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnConectar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnConectar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnConectar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnConectar.FlatAppearance.BorderSize = 2;
             this.BtnConectar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -156,7 +155,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button3.FlatAppearance.BorderSize = 2;
             this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -175,7 +174,7 @@
             // BtnEliminar
             // 
             this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnEliminar.FlatAppearance.BorderSize = 2;
             this.BtnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -194,7 +193,7 @@
             // BtnActualizar
             // 
             this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnActualizar.FlatAppearance.BorderSize = 2;
             this.BtnActualizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -209,11 +208,12 @@
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Mantenimiento";
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.button4.FlatAppearance.BorderSize = 2;
             this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -232,7 +232,7 @@
             // BtnAgregar
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.BtnAgregar.FlatAppearance.BorderSize = 2;
             this.BtnAgregar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -261,7 +261,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.DtMant);
+            this.panel2.Controls.Add(this.DtFecha);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.TxtDescripcion);
             this.panel2.Location = new System.Drawing.Point(305, 146);
@@ -367,15 +367,15 @@
             this.label3.Text = "Descripción:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // DtMant
+            // DtFecha
             // 
-            this.DtMant.CustomFormat = "yyyy-MM-dd";
-            this.DtMant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtMant.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtMant.Location = new System.Drawing.Point(196, 210);
-            this.DtMant.Name = "DtMant";
-            this.DtMant.Size = new System.Drawing.Size(102, 26);
-            this.DtMant.TabIndex = 4;
+            this.DtFecha.CustomFormat = "yyyy-MM-dd";
+            this.DtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtFecha.Location = new System.Drawing.Point(196, 210);
+            this.DtFecha.Name = "DtFecha";
+            this.DtFecha.Size = new System.Drawing.Size(102, 26);
+            this.DtFecha.TabIndex = 4;
             // 
             // label4
             // 
@@ -431,13 +431,6 @@
             this.panelBar.Size = new System.Drawing.Size(898, 50);
             this.panelBar.TabIndex = 105;
             // 
-            // bunifuImageButton5
-            // 
-
-            // 
-            // bunifuElipse1
-            // 
-            // 
             // frmMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,7 +455,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,7 +477,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker DtMant;
+        private System.Windows.Forms.DateTimePicker DtFecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.Label label1;

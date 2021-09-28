@@ -44,7 +44,7 @@ namespace SistemGestionBuses
 
         }
         //CREAR DATOS
-        void EnvioDatos()
+        void RegistroDatos()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace SistemGestionBuses
                 monto_mantenimiento =Convert.ToDouble(txtMonto.Text);
                 ultimo_kilometraje = Convert.ToDouble(TxtKilom.Text);
                 descripcion = TxtDescripcion.Text;
-                fecha = DtMant.Text;
+                fecha = DtFecha.Text;
                 //Instanciar Objeto
                 objMant = new ControladorMantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
                 bool respuesta = objMant.EnviarDatosControlador();
@@ -104,24 +104,63 @@ namespace SistemGestionBuses
             }
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        //ActualizarMantenimiento
+        void ActualizarMantenimiento()
         {
+            try
+            {
+                int id_unidad_transporte;
+                string descripcion, fecha;
+                double monto_mantenimiento, ultimo_kilometraje;
+                id_unidad_transporte = Convert.ToInt16(cmbUnidad.SelectedValue);
+                monto_mantenimiento = Convert.ToDouble(txtMonto.Text);
+                ultimo_kilometraje = Convert.ToDouble(TxtKilom.Text);
+                descripcion = TxtDescripcion.Text;
+                fecha = DtFecha.Text;
+                //Instanciar Objeto
+                ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
+                objMant = new ControladorMantenimiento(id_unidad_transporte,
+                    monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
+                bool respuesta = objMant.RetornoUpdate_mantenimiento();
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Mantenimiento actualizado con éxito", "Confirmación de actualización",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Mantenimiento no pudo ser actualizado", "Confirmación de actualización",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
         }
 
-        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        private void DgvMantenimiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            int posicion = DgvMantenimiento.CurrentRow.Index;
+
+            //Cargando data a los textboxes
+            txtId.Text = DgvMantenimiento[0, posicion].Value.ToString();
+            txtMonto.Text = DgvMantenimiento[2, posicion].Value.ToString();
+            TxtKilom.Text = DgvMantenimiento[3, posicion].Value.ToString();
+            TxtDescripcion.Text = DgvMantenimiento[4, posicion].Value.ToString();
+            DtFecha.Text = DgvMantenimiento[5, posicion].Value.ToString();
+
+            //Cargando data a los comboboxes
+            int idunidad = Convert.ToInt16(DgvMantenimiento[1,posicion].Value.ToString());
+            cmbUnidad.DataSource = ControladorMantenimiento.ActualizarUnidad_Controller(idunidad);
+            cmbUnidad.ValueMember = "id_unidad_transporte";
+            cmbUnidad.DisplayMember = "placa";
         }
 
-        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            ActualizarMantenimiento();
         }
     }
 }
