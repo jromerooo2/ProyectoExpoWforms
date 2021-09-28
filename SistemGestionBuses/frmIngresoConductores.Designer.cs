@@ -55,7 +55,6 @@
             this.dragCtrlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2.SuspendLayout();
@@ -64,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -81,9 +79,10 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(26, 315);
+            this.btnLimpiar.Location = new System.Drawing.Point(35, 388);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(114, 48);
+            this.btnLimpiar.Size = new System.Drawing.Size(152, 59);
             this.btnLimpiar.TabIndex = 19;
             this.btnLimpiar.Text = "Limpiar campos";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -100,9 +99,10 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(169, 261);
+            this.BtnEliminar.Location = new System.Drawing.Point(225, 321);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(114, 48);
+            this.BtnEliminar.Size = new System.Drawing.Size(152, 59);
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Conductor";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -119,9 +119,10 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnActualizar.Location = new System.Drawing.Point(169, 315);
+            this.BtnActualizar.Location = new System.Drawing.Point(225, 388);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(114, 48);
+            this.BtnActualizar.Size = new System.Drawing.Size(152, 59);
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Conductor";
             this.BtnActualizar.UseVisualStyleBackColor = false;
@@ -139,9 +140,10 @@
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAgregar.Location = new System.Drawing.Point(26, 261);
+            this.BtnAgregar.Location = new System.Drawing.Point(35, 321);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(114, 48);
+            this.BtnAgregar.Size = new System.Drawing.Size(152, 59);
             this.BtnAgregar.TabIndex = 15;
             this.BtnAgregar.Text = "Agregar Conductor";
             this.BtnAgregar.UseVisualStyleBackColor = false;
@@ -164,18 +166,20 @@
             this.panel2.Controls.Add(this.cmbTipoLicencia);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(32, 181);
+            this.panel2.Location = new System.Drawing.Point(43, 223);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 376);
+            this.panel2.Size = new System.Drawing.Size(407, 463);
             this.panel2.TabIndex = 77;
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(245, 224);
+            this.txtId.Location = new System.Drawing.Point(327, 276);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(34, 22);
+            this.txtId.Size = new System.Drawing.Size(44, 26);
             this.txtId.TabIndex = 67;
             // 
             // dtpExpLicencia
@@ -185,10 +189,10 @@
             this.dtpExpLicencia.ForeColor = System.Drawing.Color.White;
             this.dtpExpLicencia.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpExpLicencia.FormatCustom = "dd/mm/yyyy";
-            this.dtpExpLicencia.Location = new System.Drawing.Point(26, 151);
-            this.dtpExpLicencia.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpExpLicencia.Location = new System.Drawing.Point(35, 186);
+            this.dtpExpLicencia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dtpExpLicencia.Name = "dtpExpLicencia";
-            this.dtpExpLicencia.Size = new System.Drawing.Size(253, 42);
+            this.dtpExpLicencia.Size = new System.Drawing.Size(337, 52);
             this.dtpExpLicencia.TabIndex = 72;
             this.dtpExpLicencia.Value = new System.DateTime(2021, 9, 17, 8, 10, 17, 110);
             // 
@@ -197,9 +201,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(235, 199);
+            this.label7.Location = new System.Drawing.Point(313, 245);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 20);
+            this.label7.Size = new System.Drawing.Size(34, 24);
             this.label7.TabIndex = 68;
             this.label7.Text = "ID:";
             // 
@@ -208,9 +213,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(26, 127);
+            this.label6.Location = new System.Drawing.Point(35, 156);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(257, 20);
+            this.label6.Size = new System.Drawing.Size(323, 24);
             this.label6.TabIndex = 65;
             this.label6.Text = "Fecha de expiración de la licencia:";
             // 
@@ -219,9 +225,10 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.lblApellido.Location = new System.Drawing.Point(26, 68);
+            this.lblApellido.Location = new System.Drawing.Point(35, 84);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(73, 20);
+            this.lblApellido.Size = new System.Drawing.Size(92, 24);
             this.lblApellido.TabIndex = 62;
             this.lblApellido.Text = "Licencia:";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -229,10 +236,11 @@
             // txtLicencia
             // 
             this.txtLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLicencia.Location = new System.Drawing.Point(26, 91);
+            this.txtLicencia.Location = new System.Drawing.Point(35, 112);
+            this.txtLicencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLicencia.Name = "txtLicencia";
             this.txtLicencia.ShortcutsEnabled = false;
-            this.txtLicencia.Size = new System.Drawing.Size(253, 22);
+            this.txtLicencia.Size = new System.Drawing.Size(336, 26);
             this.txtLicencia.TabIndex = 61;
             // 
             // label12
@@ -240,9 +248,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label12.Location = new System.Drawing.Point(26, 11);
+            this.label12.Location = new System.Drawing.Point(35, 14);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(168, 20);
+            this.label12.Size = new System.Drawing.Size(213, 24);
             this.label12.TabIndex = 50;
             this.label12.Text = "Nombre del Conductor";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -250,20 +259,22 @@
             // txtNombreConduc
             // 
             this.txtNombreConduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreConduc.Location = new System.Drawing.Point(26, 34);
+            this.txtNombreConduc.Location = new System.Drawing.Point(35, 42);
+            this.txtNombreConduc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreConduc.Name = "txtNombreConduc";
             this.txtNombreConduc.ReadOnly = true;
             this.txtNombreConduc.ShortcutsEnabled = false;
-            this.txtNombreConduc.Size = new System.Drawing.Size(253, 22);
+            this.txtNombreConduc.Size = new System.Drawing.Size(336, 26);
             this.txtNombreConduc.TabIndex = 45;
             // 
             // cmbTipoLicencia
             // 
             this.cmbTipoLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoLicencia.FormattingEnabled = true;
-            this.cmbTipoLicencia.Location = new System.Drawing.Point(26, 222);
+            this.cmbTipoLicencia.Location = new System.Drawing.Point(35, 273);
+            this.cmbTipoLicencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipoLicencia.Name = "cmbTipoLicencia";
-            this.cmbTipoLicencia.Size = new System.Drawing.Size(167, 24);
+            this.cmbTipoLicencia.Size = new System.Drawing.Size(221, 28);
             this.cmbTipoLicencia.TabIndex = 22;
             // 
             // label4
@@ -271,9 +282,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(26, 199);
+            this.label4.Location = new System.Drawing.Point(35, 245);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.Size = new System.Drawing.Size(165, 24);
             this.label4.TabIndex = 21;
             this.label4.Text = "Tipo de Licencia:";
             // 
@@ -283,9 +295,9 @@
             this.picBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBackground.Image")));
             this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(2);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(910, 582);
+            this.picBackground.Size = new System.Drawing.Size(1213, 716);
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBackground.TabIndex = 78;
             this.picBackground.TabStop = false;
@@ -320,7 +332,8 @@
             this.dgvConductores.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvConductores.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.dgvConductores.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvConductores.Location = new System.Drawing.Point(374, 181);
+            this.dgvConductores.Location = new System.Drawing.Point(499, 223);
+            this.dgvConductores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvConductores.Name = "dgvConductores";
             this.dgvConductores.ReadOnly = true;
             this.dgvConductores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -334,16 +347,17 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvConductores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConductores.RowHeadersWidth = 30;
-            this.dgvConductores.Size = new System.Drawing.Size(512, 376);
+            this.dgvConductores.Size = new System.Drawing.Size(683, 463);
             this.dgvConductores.TabIndex = 80;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(156, 53);
+            this.label1.Location = new System.Drawing.Point(208, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 92);
+            this.label1.Size = new System.Drawing.Size(513, 113);
             this.label1.TabIndex = 101;
             this.label1.Text = "Administración de \r\nconductores.\r\n";
             // 
@@ -351,9 +365,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 65);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 100;
             this.pictureBox1.TabStop = false;
@@ -369,12 +384,12 @@
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panelBar.Controls.Add(this.bunifuImageButton5);
-            this.panelBar.Controls.Add(this.bunifuImageButton4);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(910, 50);
+            this.panelBar.Size = new System.Drawing.Size(1213, 62);
             this.panelBar.TabIndex = 106;
             // 
             // bunifuImageButton5
@@ -384,30 +399,15 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(789, 9);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(1096, 11);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 38);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
             this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(820, 9);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(35, 31);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 97;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
             // 
             // bunifuImageButton3
             // 
@@ -416,9 +416,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(861, 9);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(1148, 11);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 38);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -432,9 +433,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(18, 9);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 30);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
@@ -443,9 +445,9 @@
             // 
             // frmIngresoConductores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 582);
+            this.ClientSize = new System.Drawing.Size(1213, 716);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -453,6 +455,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.picBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmIngresoConductores";
             this.Text = "frmIngresoConductores";
             this.panel2.ResumeLayout(false);
@@ -462,7 +465,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
@@ -492,7 +494,6 @@
         private Bunifu.Framework.UI.BunifuDragControl dragCtrlMain;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }

@@ -73,7 +73,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +82,6 @@
             this.panelGrid.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -91,9 +89,10 @@
             // cmbUnidadTransporte
             // 
             this.cmbUnidadTransporte.FormattingEnabled = true;
-            this.cmbUnidadTransporte.Location = new System.Drawing.Point(14, 253);
+            this.cmbUnidadTransporte.Location = new System.Drawing.Point(19, 311);
+            this.cmbUnidadTransporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUnidadTransporte.Name = "cmbUnidadTransporte";
-            this.cmbUnidadTransporte.Size = new System.Drawing.Size(155, 21);
+            this.cmbUnidadTransporte.Size = new System.Drawing.Size(205, 24);
             this.cmbUnidadTransporte.TabIndex = 76;
             this.cmbUnidadTransporte.Text = "unidad transporte";
             // 
@@ -101,9 +100,10 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 55);
+            this.label1.Location = new System.Drawing.Point(163, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 74);
+            this.label1.Size = new System.Drawing.Size(231, 91);
             this.label1.TabIndex = 75;
             this.label1.Text = "Viajes";
             // 
@@ -117,9 +117,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(16, 293);
+            this.button2.Location = new System.Drawing.Point(21, 361);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 43);
+            this.button2.Size = new System.Drawing.Size(184, 53);
             this.button2.TabIndex = 74;
             this.button2.Text = "Actualizar Viaje";
             this.button2.UseVisualStyleBackColor = false;
@@ -134,9 +135,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(160, 293);
+            this.button1.Location = new System.Drawing.Point(213, 361);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 43);
+            this.button1.Size = new System.Drawing.Size(184, 53);
             this.button1.TabIndex = 73;
             this.button1.Text = "Eliminar Viaje";
             this.button1.UseVisualStyleBackColor = false;
@@ -145,9 +147,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 68);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(139, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
@@ -155,25 +158,28 @@
             // cmbTipoDestino
             // 
             this.cmbTipoDestino.FormattingEnabled = true;
-            this.cmbTipoDestino.Location = new System.Drawing.Point(188, 135);
+            this.cmbTipoDestino.Location = new System.Drawing.Point(251, 166);
+            this.cmbTipoDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipoDestino.Name = "cmbTipoDestino";
-            this.cmbTipoDestino.Size = new System.Drawing.Size(166, 21);
+            this.cmbTipoDestino.Size = new System.Drawing.Size(220, 24);
             this.cmbTipoDestino.TabIndex = 67;
             this.cmbTipoDestino.Text = "tipo destino";
             // 
             // txtTarifaViaje
             // 
-            this.txtTarifaViaje.Location = new System.Drawing.Point(14, 308);
+            this.txtTarifaViaje.Location = new System.Drawing.Point(19, 379);
+            this.txtTarifaViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTarifaViaje.Name = "txtTarifaViaje";
-            this.txtTarifaViaje.Size = new System.Drawing.Size(158, 20);
+            this.txtTarifaViaje.Size = new System.Drawing.Size(209, 22);
             this.txtTarifaViaje.TabIndex = 65;
             this.txtTarifaViaje.Text = "tarifa";
             // 
             // txtNombreViaje
             // 
-            this.txtNombreViaje.Location = new System.Drawing.Point(187, 36);
+            this.txtNombreViaje.Location = new System.Drawing.Point(249, 44);
+            this.txtNombreViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreViaje.Name = "txtNombreViaje";
-            this.txtNombreViaje.Size = new System.Drawing.Size(167, 20);
+            this.txtNombreViaje.Size = new System.Drawing.Size(221, 22);
             this.txtNombreViaje.TabIndex = 64;
             this.txtNombreViaje.Text = "nombre viaje";
             // 
@@ -181,35 +187,39 @@
             // 
             this.dtpFechaRetorno.CustomFormat = "dd/mm/yyyy";
             this.dtpFechaRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaRetorno.Location = new System.Drawing.Point(189, 192);
+            this.dtpFechaRetorno.Location = new System.Drawing.Point(252, 236);
+            this.dtpFechaRetorno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaRetorno.Name = "dtpFechaRetorno";
-            this.dtpFechaRetorno.Size = new System.Drawing.Size(165, 20);
+            this.dtpFechaRetorno.Size = new System.Drawing.Size(219, 22);
             this.dtpFechaRetorno.TabIndex = 62;
             // 
             // cmbConductor
             // 
             this.cmbConductor.FormattingEnabled = true;
-            this.cmbConductor.Location = new System.Drawing.Point(188, 86);
+            this.cmbConductor.Location = new System.Drawing.Point(251, 106);
+            this.cmbConductor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbConductor.Name = "cmbConductor";
-            this.cmbConductor.Size = new System.Drawing.Size(166, 21);
+            this.cmbConductor.Size = new System.Drawing.Size(220, 24);
             this.cmbConductor.TabIndex = 61;
             this.cmbConductor.Text = "conductor";
             // 
             // cmbEstadoViaje
             // 
             this.cmbEstadoViaje.FormattingEnabled = true;
-            this.cmbEstadoViaje.Location = new System.Drawing.Point(13, 192);
+            this.cmbEstadoViaje.Location = new System.Drawing.Point(17, 236);
+            this.cmbEstadoViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstadoViaje.Name = "cmbEstadoViaje";
-            this.cmbEstadoViaje.Size = new System.Drawing.Size(158, 21);
+            this.cmbEstadoViaje.Size = new System.Drawing.Size(209, 24);
             this.cmbEstadoViaje.TabIndex = 59;
             this.cmbEstadoViaje.Text = "estado viaje";
             // 
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(12, 36);
+            this.cmbCliente.Location = new System.Drawing.Point(16, 44);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(158, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(209, 24);
             this.cmbCliente.TabIndex = 58;
             this.cmbCliente.Text = "cliente";
             // 
@@ -224,9 +234,10 @@
             this.btnCrearViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearViaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearViaje.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearViaje.Location = new System.Drawing.Point(14, 359);
+            this.btnCrearViaje.Location = new System.Drawing.Point(19, 442);
+            this.btnCrearViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCrearViaje.Name = "btnCrearViaje";
-            this.btnCrearViaje.Size = new System.Drawing.Size(158, 43);
+            this.btnCrearViaje.Size = new System.Drawing.Size(211, 53);
             this.btnCrearViaje.TabIndex = 57;
             this.btnCrearViaje.Text = "Crear Viaje";
             this.btnCrearViaje.UseVisualStyleBackColor = false;
@@ -241,9 +252,10 @@
             this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(189, 359);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(252, 442);
+            this.btnLimpiarCampos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(158, 43);
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(211, 53);
             this.btnLimpiarCampos.TabIndex = 56;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -254,9 +266,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(986, 530);
+            this.pictureBox2.Size = new System.Drawing.Size(1315, 652);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 55;
             this.pictureBox2.TabStop = false;
@@ -293,17 +305,19 @@
             this.panelFormularios.Controls.Add(this.dtpFechaRetorno);
             this.panelFormularios.Controls.Add(this.txtNombreViaje);
             this.panelFormularios.Controls.Add(this.cmbConductor);
-            this.panelFormularios.Location = new System.Drawing.Point(606, 86);
+            this.panelFormularios.Location = new System.Drawing.Point(808, 106);
+            this.panelFormularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(368, 419);
+            this.panelFormularios.Size = new System.Drawing.Size(491, 516);
             this.panelFormularios.TabIndex = 77;
             // 
             // cmbMunicipios
             // 
             this.cmbMunicipios.FormattingEnabled = true;
-            this.cmbMunicipios.Location = new System.Drawing.Point(189, 307);
+            this.cmbMunicipios.Location = new System.Drawing.Point(252, 378);
+            this.cmbMunicipios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbMunicipios.Name = "cmbMunicipios";
-            this.cmbMunicipios.Size = new System.Drawing.Size(155, 21);
+            this.cmbMunicipios.Size = new System.Drawing.Size(205, 24);
             this.cmbMunicipios.TabIndex = 99;
             this.cmbMunicipios.Text = "unidad transporte";
             // 
@@ -312,9 +326,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(186, 288);
+            this.label10.Location = new System.Drawing.Point(248, 354);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 18);
+            this.label10.Size = new System.Drawing.Size(94, 23);
             this.label10.TabIndex = 98;
             this.label10.Text = "Municipio:";
             // 
@@ -323,9 +338,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 115);
+            this.label9.Location = new System.Drawing.Point(15, 142);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 18);
+            this.label9.Size = new System.Drawing.Size(212, 23);
             this.label9.TabIndex = 96;
             this.label9.Text = "Fecha de inicio del viaje:";
             // 
@@ -333,18 +349,20 @@
             // 
             this.dtpFechaPartida.CustomFormat = "dd/mm/yyyy";
             this.dtpFechaPartida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaPartida.Location = new System.Drawing.Point(14, 136);
+            this.dtpFechaPartida.Location = new System.Drawing.Point(19, 167);
+            this.dtpFechaPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaPartida.Name = "dtpFechaPartida";
-            this.dtpFechaPartida.Size = new System.Drawing.Size(157, 20);
+            this.dtpFechaPartida.Size = new System.Drawing.Size(208, 22);
             this.dtpFechaPartida.TabIndex = 95;
             // 
             // dtpHoraPartida
             // 
             this.dtpHoraPartida.CustomFormat = "dd/mm/yyyy";
             this.dtpHoraPartida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraPartida.Location = new System.Drawing.Point(12, 87);
+            this.dtpHoraPartida.Location = new System.Drawing.Point(16, 107);
+            this.dtpHoraPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpHoraPartida.Name = "dtpHoraPartida";
-            this.dtpHoraPartida.Size = new System.Drawing.Size(157, 20);
+            this.dtpHoraPartida.Size = new System.Drawing.Size(208, 22);
             this.dtpHoraPartida.TabIndex = 94;
             // 
             // label16
@@ -352,9 +370,10 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(186, 229);
+            this.label16.Location = new System.Drawing.Point(248, 282);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(168, 18);
+            this.label16.Size = new System.Drawing.Size(219, 23);
             this.label16.TabIndex = 93;
             this.label16.Text = "Hora de retorno del viaje:";
             // 
@@ -362,9 +381,10 @@
             // 
             this.dtpHoraRetorno.CustomFormat = "";
             this.dtpHoraRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraRetorno.Location = new System.Drawing.Point(187, 253);
+            this.dtpHoraRetorno.Location = new System.Drawing.Point(249, 311);
+            this.dtpHoraRetorno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpHoraRetorno.Name = "dtpHoraRetorno";
-            this.dtpHoraRetorno.Size = new System.Drawing.Size(167, 20);
+            this.dtpHoraRetorno.Size = new System.Drawing.Size(221, 22);
             this.dtpHoraRetorno.TabIndex = 92;
             // 
             // label12
@@ -372,9 +392,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(184, 15);
+            this.label12.Location = new System.Drawing.Point(245, 18);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 18);
+            this.label12.Size = new System.Drawing.Size(148, 23);
             this.label12.TabIndex = 87;
             this.label12.Text = "Nombre del viaje";
             // 
@@ -383,9 +404,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(184, 64);
+            this.label11.Location = new System.Drawing.Point(245, 79);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 18);
+            this.label11.Size = new System.Drawing.Size(173, 23);
             this.label11.TabIndex = 86;
             this.label11.Text = "Conductor asignado:";
             // 
@@ -394,9 +416,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(11, 231);
+            this.label8.Location = new System.Drawing.Point(15, 284);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 18);
+            this.label8.Size = new System.Drawing.Size(185, 23);
             this.label8.TabIndex = 83;
             this.label8.Text = "Unidad de transporte:\r\n";
             // 
@@ -405,9 +428,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(185, 114);
+            this.label7.Location = new System.Drawing.Point(247, 140);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 18);
+            this.label7.Size = new System.Drawing.Size(120, 23);
             this.label7.TabIndex = 82;
             this.label7.Text = "Tipo de viaje:";
             // 
@@ -416,9 +440,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(10, 171);
+            this.label6.Location = new System.Drawing.Point(13, 210);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 18);
+            this.label6.Size = new System.Drawing.Size(144, 23);
             this.label6.TabIndex = 81;
             this.label6.Text = "Estado del viaje:";
             // 
@@ -427,9 +452,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 66);
+            this.label5.Location = new System.Drawing.Point(15, 81);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 18);
+            this.label5.Size = new System.Drawing.Size(197, 23);
             this.label5.TabIndex = 80;
             this.label5.Text = "Hora de incio del viaje:";
             // 
@@ -438,9 +464,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(186, 171);
+            this.label4.Location = new System.Drawing.Point(248, 210);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 18);
+            this.label4.Size = new System.Drawing.Size(229, 23);
             this.label4.TabIndex = 79;
             this.label4.Text = "Fecha de retorno del viaje:";
             // 
@@ -449,9 +476,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(11, 288);
+            this.label3.Location = new System.Drawing.Point(15, 354);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 18);
+            this.label3.Size = new System.Drawing.Size(60, 23);
             this.label3.TabIndex = 78;
             this.label3.Text = "Tarifa:";
             // 
@@ -460,9 +488,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 15);
+            this.label2.Location = new System.Drawing.Point(12, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.Size = new System.Drawing.Size(73, 23);
             this.label2.TabIndex = 77;
             this.label2.Text = "Cliente:";
             // 
@@ -471,19 +500,21 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 14);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 17);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(560, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 322);
             this.dataGridView1.TabIndex = 82;
             // 
             // txtIDviaje
             // 
             this.txtIDviaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDviaje.Location = new System.Drawing.Point(489, 308);
+            this.txtIDviaje.Location = new System.Drawing.Point(652, 379);
+            this.txtIDviaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDviaje.Name = "txtIDviaje";
             this.txtIDviaje.ReadOnly = true;
-            this.txtIDviaje.Size = new System.Drawing.Size(87, 28);
+            this.txtIDviaje.Size = new System.Drawing.Size(115, 34);
             this.txtIDviaje.TabIndex = 90;
             this.txtIDviaje.Text = "ID viaje";
             this.txtIDviaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -493,9 +524,10 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(494, 287);
+            this.label14.Location = new System.Drawing.Point(659, 353);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 18);
+            this.label14.Size = new System.Drawing.Size(101, 23);
             this.label14.TabIndex = 91;
             this.label14.Text = "ID del viaje";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -509,6 +541,7 @@
             // 
             this.DragControlGeneral.Fixed = true;
             this.DragControlGeneral.Horizontal = true;
+            this.DragControlGeneral.TargetControl = null;
             this.DragControlGeneral.Vertical = true;
             // 
             // panelGrid
@@ -520,9 +553,10 @@
             this.panelGrid.Controls.Add(this.button2);
             this.panelGrid.Controls.Add(this.label14);
             this.panelGrid.Controls.Add(this.dataGridView1);
-            this.panelGrid.Location = new System.Drawing.Point(12, 152);
+            this.panelGrid.Location = new System.Drawing.Point(16, 187);
+            this.panelGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(588, 353);
+            this.panelGrid.Size = new System.Drawing.Size(784, 434);
             this.panelGrid.TabIndex = 93;
             // 
             // button3
@@ -535,9 +569,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(304, 293);
+            this.button3.Location = new System.Drawing.Point(405, 361);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 43);
+            this.button3.Size = new System.Drawing.Size(184, 53);
             this.button3.TabIndex = 92;
             this.button3.Text = "Actualizar Grid";
             this.button3.UseVisualStyleBackColor = false;
@@ -556,12 +591,12 @@
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panelBar.Controls.Add(this.bunifuImageButton5);
-            this.panelBar.Controls.Add(this.bunifuImageButton4);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(986, 50);
+            this.panelBar.Size = new System.Drawing.Size(1315, 62);
             this.panelBar.TabIndex = 106;
             // 
             // bunifuImageButton5
@@ -571,30 +606,15 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(865, 9);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(1208, 11);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 38);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
             this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(896, 9);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(35, 31);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 97;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuImageButton3
             // 
@@ -603,9 +623,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(937, 9);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(1249, 11);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 38);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -619,9 +640,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(18, 9);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 30);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
@@ -630,10 +652,10 @@
             // 
             // frmIngresarViaje
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(986, 530);
+            this.ClientSize = new System.Drawing.Size(1315, 652);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelFormularios);
@@ -641,6 +663,7 @@
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmIngresarViaje";
             this.Text = "frmIngresarViaje";
             this.Load += new System.EventHandler(this.frmIngresarViaje_Load);
@@ -653,7 +676,6 @@
             this.panelGrid.PerformLayout();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
@@ -705,7 +727,6 @@
         private System.Windows.Forms.ComboBox cmbMunicipios;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }

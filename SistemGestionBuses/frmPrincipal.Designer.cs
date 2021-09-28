@@ -59,7 +59,6 @@
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,7 +79,6 @@
             this.bunifuCards6.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +114,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(57, 33);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(113, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -153,7 +151,7 @@
             // 
             this.pictureUsers.Image = ((System.Drawing.Image)(resources.GetObject("pictureUsers.Image")));
             this.pictureUsers.Location = new System.Drawing.Point(41, 33);
-            this.pictureUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureUsers.Margin = new System.Windows.Forms.Padding(4);
             this.pictureUsers.Name = "pictureUsers";
             this.pictureUsers.Size = new System.Drawing.Size(169, 113);
             this.pictureUsers.TabIndex = 12;
@@ -177,7 +175,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(43, 36);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(179, 111);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -202,7 +200,7 @@
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(59, 34);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(120, 91);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -227,7 +225,7 @@
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(59, 33);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(151, 113);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,8 +249,8 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(40, 38);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(33, 35);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(131, 87);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -277,7 +275,7 @@
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
             this.pictureBox9.Location = new System.Drawing.Point(55, 23);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(131, 109);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -320,7 +318,7 @@
             this.cardUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardUsers.LeftSahddow = false;
             this.cardUsers.Location = new System.Drawing.Point(67, 215);
-            this.cardUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardUsers.Margin = new System.Windows.Forms.Padding(4);
             this.cardUsers.Name = "cardUsers";
             this.cardUsers.RightSahddow = true;
             this.cardUsers.ShadowDepth = 20;
@@ -340,7 +338,7 @@
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(389, 215);
-            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
@@ -359,7 +357,7 @@
             this.bunifuCards2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards2.LeftSahddow = false;
             this.bunifuCards2.Location = new System.Drawing.Point(713, 215);
-            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
@@ -379,7 +377,7 @@
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
             this.cardEmpleado.Location = new System.Drawing.Point(67, 437);
-            this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
             this.cardEmpleado.ShadowDepth = 20;
@@ -404,7 +402,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(57, 36);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(151, 113);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -423,7 +421,7 @@
             this.cardMantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardMantenimientos.LeftSahddow = false;
             this.cardMantenimientos.Location = new System.Drawing.Point(389, 437);
-            this.cardMantenimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardMantenimientos.Margin = new System.Windows.Forms.Padding(4);
             this.cardMantenimientos.Name = "cardMantenimientos";
             this.cardMantenimientos.RightSahddow = true;
             this.cardMantenimientos.ShadowDepth = 20;
@@ -442,7 +440,7 @@
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
             this.cardClientes.Location = new System.Drawing.Point(713, 437);
-            this.cardClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardClientes.Margin = new System.Windows.Forms.Padding(4);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
             this.cardClientes.ShadowDepth = 20;
@@ -462,12 +460,13 @@
             this.cardReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardReportes.LeftSahddow = false;
             this.cardReportes.Location = new System.Drawing.Point(217, 652);
-            this.cardReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardReportes.Margin = new System.Windows.Forms.Padding(4);
             this.cardReportes.Name = "cardReportes";
             this.cardReportes.RightSahddow = true;
             this.cardReportes.ShadowDepth = 20;
             this.cardReportes.Size = new System.Drawing.Size(267, 196);
             this.cardReportes.TabIndex = 25;
+            this.cardReportes.Click += new System.EventHandler(this.cardReportes_Click);
             this.cardReportes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardReportes_Paint);
             // 
             // bunifuCards6
@@ -481,7 +480,7 @@
             this.bunifuCards6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards6.LeftSahddow = false;
             this.bunifuCards6.Location = new System.Drawing.Point(568, 652);
-            this.bunifuCards6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCards6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 20;
@@ -494,10 +493,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panelBar.Controls.Add(this.bunifuImageButton5);
-            this.panelBar.Controls.Add(this.bunifuImageButton4);
             this.panelBar.Controls.Add(this.bunifuImageButton2);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(1073, 58);
             this.panelBar.TabIndex = 96;
@@ -510,8 +508,8 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(912, 11);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(967, 11);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(33, 34);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -519,22 +517,6 @@
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
             this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(953, 11);
-            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(47, 34);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 97;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
             // 
             // bunifuImageButton2
             // 
@@ -544,7 +526,7 @@
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
             this.bunifuImageButton2.Location = new System.Drawing.Point(1008, 12);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(37, 33);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -585,7 +567,7 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
@@ -616,7 +598,6 @@
             this.bunifuCards6.PerformLayout();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -655,7 +636,6 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards6;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

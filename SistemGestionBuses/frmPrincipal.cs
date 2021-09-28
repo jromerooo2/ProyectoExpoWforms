@@ -112,7 +112,8 @@ namespace SistemGestionBuses
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-
+            frmReportes reportes = new frmReportes();
+            reportes.Show();
         }
 
         private void cardClientes_Click(object sender, EventArgs e)
@@ -162,6 +163,11 @@ namespace SistemGestionBuses
         }
 
         private void cardReportes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cardReportes_Click(object sender, EventArgs e)
         {
             frmReportes reportes = new frmReportes();
             reportes.Show();

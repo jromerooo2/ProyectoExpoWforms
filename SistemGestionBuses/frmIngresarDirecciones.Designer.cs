@@ -59,7 +59,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -68,7 +67,6 @@
             this.panel1.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -97,7 +95,7 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.cmbMunicipio_final);
             this.panel4.Location = new System.Drawing.Point(663, 92);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(643, 421);
             this.panel4.TabIndex = 97;
@@ -106,7 +104,7 @@
             // txtDireccion_inicio_longt
             // 
             this.txtDireccion_inicio_longt.Location = new System.Drawing.Point(20, 166);
-            this.txtDireccion_inicio_longt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion_inicio_longt.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion_inicio_longt.Multiline = true;
             this.txtDireccion_inicio_longt.Name = "txtDireccion_inicio_longt";
             this.txtDireccion_inicio_longt.Size = new System.Drawing.Size(184, 93);
@@ -129,7 +127,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(429, 366);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(185, 24);
             this.comboBox4.TabIndex = 104;
@@ -151,7 +149,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(221, 366);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(185, 24);
             this.comboBox3.TabIndex = 102;
@@ -173,7 +171,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(19, 366);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(185, 24);
             this.comboBox2.TabIndex = 100;
@@ -194,7 +192,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(428, 50);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 221);
@@ -217,7 +215,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(427, 303);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 24);
             this.comboBox1.TabIndex = 97;
@@ -238,7 +236,7 @@
             // txtDireccion_final
             // 
             this.txtDireccion_final.Location = new System.Drawing.Point(223, 49);
-            this.txtDireccion_final.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion_final.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion_final.Multiline = true;
             this.txtDireccion_final.Name = "txtDireccion_final";
             this.txtDireccion_final.Size = new System.Drawing.Size(187, 210);
@@ -261,7 +259,7 @@
             // 
             this.cmbMunicipio_inicio.FormattingEnabled = true;
             this.cmbMunicipio_inicio.Location = new System.Drawing.Point(16, 303);
-            this.cmbMunicipio_inicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMunicipio_inicio.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMunicipio_inicio.Name = "cmbMunicipio_inicio";
             this.cmbMunicipio_inicio.Size = new System.Drawing.Size(185, 24);
             this.cmbMunicipio_inicio.TabIndex = 68;
@@ -270,7 +268,7 @@
             // txtDireccion_inicio
             // 
             this.txtDireccion_inicio.Location = new System.Drawing.Point(20, 52);
-            this.txtDireccion_inicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion_inicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion_inicio.Multiline = true;
             this.txtDireccion_inicio.Name = "txtDireccion_inicio";
             this.txtDireccion_inicio.Size = new System.Drawing.Size(184, 93);
@@ -306,7 +304,7 @@
             // 
             this.cmbMunicipio_final.FormattingEnabled = true;
             this.cmbMunicipio_final.Location = new System.Drawing.Point(221, 302);
-            this.cmbMunicipio_final.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMunicipio_final.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMunicipio_final.Name = "cmbMunicipio_final";
             this.cmbMunicipio_final.Size = new System.Drawing.Size(188, 24);
             this.cmbMunicipio_final.TabIndex = 90;
@@ -335,7 +333,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnCargarMapa);
             this.panel1.Location = new System.Drawing.Point(663, 544);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(643, 107);
             this.panel1.TabIndex = 100;
@@ -343,7 +341,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(429, 20);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 71);
             this.button3.TabIndex = 2;
@@ -353,7 +351,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(223, 20);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 71);
             this.button2.TabIndex = 1;
@@ -363,7 +361,7 @@
             // btnCargarMapa
             // 
             this.btnCargarMapa.Location = new System.Drawing.Point(19, 20);
-            this.btnCargarMapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCargarMapa.Margin = new System.Windows.Forms.Padding(4);
             this.btnCargarMapa.Name = "btnCargarMapa";
             this.btnCargarMapa.Size = new System.Drawing.Size(187, 71);
             this.btnCargarMapa.TabIndex = 0;
@@ -380,7 +378,7 @@
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemory = 5;
             this.gMapControl1.Location = new System.Drawing.Point(24, 142);
-            this.gMapControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gMapControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -414,11 +412,10 @@
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panelBar.Controls.Add(this.bunifuImageButton5);
-            this.panelBar.Controls.Add(this.bunifuImageButton4);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(1323, 62);
             this.panelBar.TabIndex = 104;
@@ -430,8 +427,8 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(1161, 11);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(1216, 11);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(33, 38);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -439,23 +436,6 @@
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
             this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(1203, 11);
-            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(47, 38);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 97;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuImageButton3
             // 
@@ -465,7 +445,7 @@
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
             this.bunifuImageButton3.Location = new System.Drawing.Point(1257, 11);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Size = new System.Drawing.Size(36, 38);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -482,7 +462,7 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(24, 11);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -509,7 +489,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIngresarDirecciones";
             this.Text = "frmIngresarDirecciones";
             this.Load += new System.EventHandler(this.frmIngresarDirecciones_Load);
@@ -519,7 +499,6 @@
             this.panel1.ResumeLayout(false);
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
@@ -557,7 +536,6 @@
         private System.Windows.Forms.TextBox txtDireccion_inicio_longt;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
