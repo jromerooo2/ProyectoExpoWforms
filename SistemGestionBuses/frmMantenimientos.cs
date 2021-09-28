@@ -85,7 +85,7 @@ namespace SistemGestionBuses
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            EnvioDatos();
+            RegistroDatos();
             CargarUnidad();
 
         }
@@ -182,7 +182,11 @@ namespace SistemGestionBuses
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            EliminarMantenimiento();
+            if (MessageBox.Show("¿Deseas eliminar el vehículo con matrícula"+cmbUnidad.SelectedValue+"?", "Confirmación de eliminación",
+                        MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
+            {
+                EliminarMantenimiento();
+            }
         }
     }
 }
