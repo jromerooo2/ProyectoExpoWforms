@@ -15,11 +15,24 @@ namespace SistemGestionBuses
 {
     public partial class frmMantenimientos : Form
     {
-        public frmMantenimientos()
+
+        public static int man;
+        public frmMantenimientos(int pman)
         {
             InitializeComponent();
-            CargarUnidad();
+            BtnActualizar.Enabled = false;
+            BtnEliminar.Enabled = false;
+            man = pman;
+            if (man == 2 || man == 3)
+            {
+                BtnAgregar.Enabled = true;
+            }
+        }
+
+        private void frmMantenimientos_Load(object sender, EventArgs e)
+        {
             CargarGridDatos();
+            CargarUnidad();
         }
 
         public DataTable datosMan;
@@ -150,6 +163,7 @@ namespace SistemGestionBuses
 
         private void DgvMantenimiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Botones_valid();
             int posicion = DgvMantenimiento.CurrentRow.Index;
 
             //Cargando data a los textboxes
@@ -196,6 +210,18 @@ namespace SistemGestionBuses
             {
                 EliminarMantenimiento();
                 CargarGridDatos();
+            }
+        }
+
+        //Botones eliminar y actualizar habilitados
+        void Botones_valid()
+        {
+            int v = DgvMantenimiento.CurrentRow.Index;
+            if (man == 2 || man == 3)
+            {
+                BtnActualizar.Enabled = true;
+                BtnEliminar.Enabled = true;
+                BtnAgregar.Enabled = true;
             }
         }
     }
