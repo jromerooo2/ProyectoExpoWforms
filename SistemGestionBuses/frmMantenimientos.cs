@@ -15,6 +15,13 @@ namespace SistemGestionBuses
 {
     public partial class frmMantenimientos : Form
     {
+        public frmMantenimientos()
+        {
+            InitializeComponent();
+            CargarUnidad();
+            CargarGridDatos();
+        }
+
         public DataTable datosMan;
         public ControladorMantenimiento objMant;
         //cmb Cargar Unidad
@@ -76,11 +83,6 @@ namespace SistemGestionBuses
 
                 MessageBox.Show("Oops!, ocurrió un error al registrar el mantenimiento, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        public frmMantenimientos()
-        {
-            InitializeComponent();
-            CargarUnidad();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
