@@ -17,15 +17,12 @@ namespace SistemGestionBuses
     {
 
         public static int man;
-        public frmMantenimientos()
+        public frmMantenimientos(int pman)
         {
             InitializeComponent();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
-            if (man == 2 || man == 3)
-            {
-                BtnAgregar.Enabled = true;
-            }
+            BtnAgregar.Enabled = true;
         }
 
         private void frmMantenimientos_Load(object sender, EventArgs e)
@@ -142,7 +139,7 @@ namespace SistemGestionBuses
                 ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
                 objMant = new ControladorMantenimiento(id_unidad_transporte,
                     monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
-                bool respuesta = objMant.ActualizarMantenimientoControlador();
+                bool respuesta = objMant.ActualizarMantenimientoController();
                 if (respuesta == true)
                 {
                     MessageBox.Show("Mantenimiento actualizado con éxito", "Confirmación de actualización",
@@ -188,7 +185,7 @@ namespace SistemGestionBuses
         void EliminarMantenimiento()
         {
             ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
-            bool respuesta = ControladorMantenimiento.EliminarMantenimientoControlador();
+            bool respuesta = ControladorMantenimiento.EliminarMantenimientoContolador();
             if (respuesta == true)
             {
                 MessageBox.Show("Mantenimiento eliminado con éxito", "Confirmación de eliminación",
@@ -216,12 +213,9 @@ namespace SistemGestionBuses
         void Botones_valid()
         {
             int v = DgvMantenimiento.CurrentRow.Index;
-            if (man == 2 || man == 3)
-            {
-                BtnActualizar.Enabled = true;
-                BtnEliminar.Enabled = true;
-                BtnAgregar.Enabled = true;
-            }
+            BtnAgregar.Enabled = true;
+            BtnActualizar.Enabled = true;
+            BtnEliminar.Enabled = true;
         }
     }
 }

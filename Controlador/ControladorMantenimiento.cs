@@ -50,15 +50,18 @@ namespace Controlador
         }
 
         //Update Mantenimiento
+        public static DataTable ActualizarUnidad_Controller(int placa)
+        {
+            return ModeloMantenimiento.ActualizarUnidad_Inner(placa);
+        }
 
-
-        public bool  ActualizarMantenimientoControlador()
+        public bool ActualizarMantenimientoController ()
         {
             return ModeloMantenimiento.ActualializarMantenimiento(id_mantenimiento,id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
         }
 
         //Delete Mantenimiento
-        public static bool EliminarMantenimientoControlador()
+        public static bool EliminarMantenimientoContolador()
         {
             return ModeloMantenimiento.EliminarMantenimiento(id_mantenimiento);
         }
