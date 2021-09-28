@@ -71,6 +71,7 @@ namespace SistemGestionBuses
             {
                 DataTable data = ControladorUsuario.CargarUsuarios();
                 dgvUsuarios.DataSource = data;
+
                 dgvUsuarios.Columns[0].Visible = false;
                 dgvUsuarios.Columns[1].HeaderText = "Nombre de Usuario";
                 dgvUsuarios.Columns[2].HeaderText = "Correo Electrónico";
@@ -172,23 +173,24 @@ namespace SistemGestionBuses
         }
         public ControladorUsuario objCond = new ControladorUsuario();
 
-        public static byte[] img;
         void EnvioDatos()
         {
             try
             {
+                byte[] img;
                 string user, correo ;
                 int id_empleado, id_cargo;
                 MemoryStream ms = new MemoryStream();
                 pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
                  img = ms.ToArray();
+                string encoded = Convert.ToBase64String(img);
 
 
-                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
+                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue) +1;
                 user = txtUser.Text;
                 correo = txtCorreo.Text;
                 id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, img);
+                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, encoded);
                 if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);

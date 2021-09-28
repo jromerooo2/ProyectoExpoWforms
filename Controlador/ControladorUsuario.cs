@@ -18,7 +18,7 @@ namespace Controlador
             return ModeloUsuario.CargarEmpleados();
         }
 
-        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado, byte[] img)
+        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado, string img)
         {
             //haciendolo MD5
             string defaultt = user + "123";
