@@ -89,9 +89,10 @@
             this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(69)))), ((int)(((byte)(99)))));
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 59);
+            this.lblUsuario.Location = new System.Drawing.Point(16, 73);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(220, 40);
+            this.lblUsuario.Size = new System.Drawing.Size(273, 49);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "¡Bienvenido!";
             // 
@@ -101,9 +102,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(69)))), ((int)(((byte)(99)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(15, 102);
+            this.label2.Location = new System.Drawing.Point(20, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(418, 63);
+            this.label2.Size = new System.Drawing.Size(533, 75);
             this.label2.TabIndex = 2;
             this.label2.Text = "Controla las acciones que te han sido asignadas\r\na través de este panel de contro" +
     "l.\r\n\r\n";
@@ -111,7 +113,12 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+<<<<<<< HEAD
             this.pictureBox2.Location = new System.Drawing.Point(33, 26);
+=======
+            this.pictureBox2.Location = new System.Drawing.Point(57, 33);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(113, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -125,9 +132,16 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(49, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 19);
+=======
+            this.label4.Location = new System.Drawing.Point(73, 161);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label4.TabIndex = 11;
             this.label4.Text = "Unidades";
             // 
@@ -137,17 +151,23 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(562, 184);
+            this.label5.Location = new System.Drawing.Point(749, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 19);
+            this.label5.Size = new System.Drawing.Size(0, 23);
             this.label5.TabIndex = 12;
             // 
             // pictureUsers
             // 
             this.pictureUsers.Image = ((System.Drawing.Image)(resources.GetObject("pictureUsers.Image")));
+<<<<<<< HEAD
             this.pictureUsers.Location = new System.Drawing.Point(31, 27);
+=======
+            this.pictureUsers.Location = new System.Drawing.Point(41, 33);
+            this.pictureUsers.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureUsers.Name = "pictureUsers";
-            this.pictureUsers.Size = new System.Drawing.Size(127, 92);
+            this.pictureUsers.Size = new System.Drawing.Size(169, 113);
             this.pictureUsers.TabIndex = 12;
             this.pictureUsers.TabStop = false;
             this.pictureUsers.Click += new System.EventHandler(this.pictureUsers_Click);
@@ -158,18 +178,32 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label10.Location = new System.Drawing.Point(59, 131);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 19);
+=======
+            this.label10.Location = new System.Drawing.Point(83, 161);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label10.TabIndex = 11;
             this.label10.Text = "Usuarios";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+<<<<<<< HEAD
             this.pictureBox4.Location = new System.Drawing.Point(24, 31);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(134, 90);
+=======
+            this.pictureBox4.Location = new System.Drawing.Point(43, 36);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(179, 111);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
@@ -181,16 +215,28 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(49, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 19);
+=======
+            this.label3.Location = new System.Drawing.Point(65, 161);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label3.TabIndex = 11;
             this.label3.Text = "Empleados";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+<<<<<<< HEAD
             this.pictureBox6.Location = new System.Drawing.Point(33, 27);
+=======
+            this.pictureBox6.Location = new System.Drawing.Point(59, 34);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(120, 91);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -204,18 +250,30 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label8.Location = new System.Drawing.Point(69, 131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 19);
+=======
+            this.label8.Location = new System.Drawing.Point(92, 161);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label8.TabIndex = 11;
             this.label8.Text = "Clientes";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+<<<<<<< HEAD
             this.pictureBox7.Location = new System.Drawing.Point(44, 27);
+=======
+            this.pictureBox7.Location = new System.Drawing.Point(59, 33);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(113, 92);
+            this.pictureBox7.Size = new System.Drawing.Size(151, 113);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
@@ -227,16 +285,28 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label9.Location = new System.Drawing.Point(73, 131);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 19);
+=======
+            this.label9.Location = new System.Drawing.Point(97, 161);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label9.TabIndex = 11;
             this.label9.Text = "Viajes";
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+<<<<<<< HEAD
             this.pictureBox8.Location = new System.Drawing.Point(26, 29);
+=======
+            this.pictureBox8.Location = new System.Drawing.Point(33, 35);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(131, 87);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -250,16 +320,28 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label6.Location = new System.Drawing.Point(64, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 19);
+=======
+            this.label6.Location = new System.Drawing.Point(85, 161);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label6.TabIndex = 11;
             this.label6.Text = "Reportes";
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+<<<<<<< HEAD
             this.pictureBox9.Location = new System.Drawing.Point(33, 19);
+=======
+            this.pictureBox9.Location = new System.Drawing.Point(55, 23);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(131, 109);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -272,9 +354,16 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label11.Location = new System.Drawing.Point(41, 131);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(145, 19);
+=======
+            this.label11.Location = new System.Drawing.Point(55, 161);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(182, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label11.TabIndex = 11;
             this.label11.Text = "Viajes Finalizados";
             // 
@@ -284,9 +373,10 @@
             this.lblUser.BackColor = System.Drawing.Color.White;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 10.75F);
             this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUser.Location = new System.Drawing.Point(580, 82);
+            this.lblUser.Location = new System.Drawing.Point(773, 101);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 20);
+            this.lblUser.Size = new System.Drawing.Size(0, 21);
             this.lblUser.TabIndex = 18;
             // 
             // cardUsers
@@ -299,11 +389,20 @@
             this.cardUsers.Controls.Add(this.pictureUsers);
             this.cardUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardUsers.LeftSahddow = false;
+<<<<<<< HEAD
             this.cardUsers.Location = new System.Drawing.Point(36, 175);
             this.cardUsers.Name = "cardUsers";
             this.cardUsers.RightSahddow = true;
             this.cardUsers.ShadowDepth = 20;
             this.cardUsers.Size = new System.Drawing.Size(186, 159);
+=======
+            this.cardUsers.Location = new System.Drawing.Point(67, 215);
+            this.cardUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.cardUsers.Name = "cardUsers";
+            this.cardUsers.RightSahddow = true;
+            this.cardUsers.ShadowDepth = 20;
+            this.cardUsers.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.cardUsers.TabIndex = 20;
             this.cardUsers.Click += new System.EventHandler(this.cardUsers_Click);
             this.cardUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.cardUsers_Paint);
@@ -318,11 +417,20 @@
             this.bunifuCards1.Controls.Add(this.pictureBox2);
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
+<<<<<<< HEAD
             this.bunifuCards1.Location = new System.Drawing.Point(248, 175);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(186, 159);
+=======
+            this.bunifuCards1.Location = new System.Drawing.Point(389, 215);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.bunifuCards1.TabIndex = 21;
             this.bunifuCards1.Click += new System.EventHandler(this.bunifuCards1_Click);
             // 
@@ -336,11 +444,20 @@
             this.bunifuCards2.Controls.Add(this.pictureBox7);
             this.bunifuCards2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards2.LeftSahddow = false;
+<<<<<<< HEAD
             this.bunifuCards2.Location = new System.Drawing.Point(456, 175);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(186, 159);
+=======
+            this.bunifuCards2.Location = new System.Drawing.Point(713, 215);
+            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.bunifuCards2.TabIndex = 22;
             this.bunifuCards2.Click += new System.EventHandler(this.bunifuCards2_Click);
             this.bunifuCards2.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards2_Paint);
@@ -355,11 +472,20 @@
             this.cardEmpleado.Controls.Add(this.pictureBox4);
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
+<<<<<<< HEAD
             this.cardEmpleado.Location = new System.Drawing.Point(36, 355);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
             this.cardEmpleado.ShadowDepth = 20;
             this.cardEmpleado.Size = new System.Drawing.Size(186, 159);
+=======
+            this.cardEmpleado.Location = new System.Drawing.Point(67, 437);
+            this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.cardEmpleado.Name = "cardEmpleado";
+            this.cardEmpleado.RightSahddow = true;
+            this.cardEmpleado.ShadowDepth = 20;
+            this.cardEmpleado.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.cardEmpleado.TabIndex = 23;
             this.cardEmpleado.Click += new System.EventHandler(this.bunifuCards3_Click);
             // 
@@ -369,18 +495,30 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.label7.Location = new System.Drawing.Point(29, 131);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 19);
+=======
+            this.label7.Location = new System.Drawing.Point(52, 161);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 23);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.label7.TabIndex = 11;
             this.label7.Text = "Mantenimientos";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+<<<<<<< HEAD
             this.pictureBox5.Location = new System.Drawing.Point(33, 29);
+=======
+            this.pictureBox5.Location = new System.Drawing.Point(57, 36);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(113, 92);
+            this.pictureBox5.Size = new System.Drawing.Size(151, 113);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
@@ -396,11 +534,20 @@
             this.cardMantenimientos.Controls.Add(this.pictureBox5);
             this.cardMantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardMantenimientos.LeftSahddow = false;
+<<<<<<< HEAD
             this.cardMantenimientos.Location = new System.Drawing.Point(248, 355);
             this.cardMantenimientos.Name = "cardMantenimientos";
             this.cardMantenimientos.RightSahddow = true;
             this.cardMantenimientos.ShadowDepth = 20;
             this.cardMantenimientos.Size = new System.Drawing.Size(186, 159);
+=======
+            this.cardMantenimientos.Location = new System.Drawing.Point(389, 437);
+            this.cardMantenimientos.Margin = new System.Windows.Forms.Padding(4);
+            this.cardMantenimientos.Name = "cardMantenimientos";
+            this.cardMantenimientos.RightSahddow = true;
+            this.cardMantenimientos.ShadowDepth = 20;
+            this.cardMantenimientos.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.cardMantenimientos.TabIndex = 24;
             this.cardMantenimientos.Click += new System.EventHandler(this.cardMantenimientos_Click);
             // 
@@ -414,11 +561,20 @@
             this.cardClientes.Controls.Add(this.pictureBox6);
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
+<<<<<<< HEAD
             this.cardClientes.Location = new System.Drawing.Point(672, 175);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
             this.cardClientes.ShadowDepth = 20;
             this.cardClientes.Size = new System.Drawing.Size(186, 159);
+=======
+            this.cardClientes.Location = new System.Drawing.Point(713, 437);
+            this.cardClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.cardClientes.Name = "cardClientes";
+            this.cardClientes.RightSahddow = true;
+            this.cardClientes.ShadowDepth = 20;
+            this.cardClientes.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.cardClientes.TabIndex = 25;
             this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
             this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
@@ -433,11 +589,20 @@
             this.cardReportes.Controls.Add(this.pictureBox8);
             this.cardReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardReportes.LeftSahddow = false;
+<<<<<<< HEAD
             this.cardReportes.Location = new System.Drawing.Point(456, 355);
             this.cardReportes.Name = "cardReportes";
             this.cardReportes.RightSahddow = true;
             this.cardReportes.ShadowDepth = 20;
             this.cardReportes.Size = new System.Drawing.Size(186, 159);
+=======
+            this.cardReportes.Location = new System.Drawing.Point(217, 652);
+            this.cardReportes.Margin = new System.Windows.Forms.Padding(4);
+            this.cardReportes.Name = "cardReportes";
+            this.cardReportes.RightSahddow = true;
+            this.cardReportes.ShadowDepth = 20;
+            this.cardReportes.Size = new System.Drawing.Size(267, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.cardReportes.TabIndex = 25;
             this.cardReportes.Click += new System.EventHandler(this.cardReportes_Click);
             this.cardReportes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardReportes_Paint);
@@ -452,11 +617,20 @@
             this.bunifuCards6.Controls.Add(this.pictureBox9);
             this.bunifuCards6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards6.LeftSahddow = false;
+<<<<<<< HEAD
             this.bunifuCards6.Location = new System.Drawing.Point(672, 355);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 20;
             this.bunifuCards6.Size = new System.Drawing.Size(186, 159);
+=======
+            this.bunifuCards6.Location = new System.Drawing.Point(568, 652);
+            this.bunifuCards6.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards6.Name = "bunifuCards6";
+            this.bunifuCards6.RightSahddow = true;
+            this.bunifuCards6.ShadowDepth = 20;
+            this.bunifuCards6.Size = new System.Drawing.Size(277, 196);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.bunifuCards6.TabIndex = 26;
             // 
             // panelBar
@@ -467,8 +641,13 @@
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton2);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
+<<<<<<< HEAD
             this.panelBar.Size = new System.Drawing.Size(892, 47);
+=======
+            this.panelBar.Size = new System.Drawing.Size(1073, 58);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.panelBar.TabIndex = 96;
             this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
@@ -479,9 +658,14 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
+<<<<<<< HEAD
             this.bunifuImageButton5.Location = new System.Drawing.Point(855, 9);
+=======
+            this.bunifuImageButton5.Location = new System.Drawing.Point(967, 11);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 28);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 34);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -495,9 +679,14 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
+<<<<<<< HEAD
             this.bunifuImageButton2.Location = new System.Drawing.Point(808, 9);
+=======
+            this.bunifuImageButton2.Location = new System.Drawing.Point(1008, 12);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(28, 27);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(37, 33);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 94;
             this.bunifuImageButton2.TabStop = false;
@@ -509,17 +698,26 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
+<<<<<<< HEAD
             this.pictureBox1.Size = new System.Drawing.Size(892, 561);
+=======
+            this.pictureBox1.Size = new System.Drawing.Size(1073, 885);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(892, 561);
+=======
+            this.ClientSize = new System.Drawing.Size(1073, 885);
+>>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.bunifuCards6);
             this.Controls.Add(this.cardReportes);
@@ -535,6 +733,7 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
