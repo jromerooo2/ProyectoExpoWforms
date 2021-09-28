@@ -78,7 +78,7 @@ namespace SistemGestionBuses
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            frmMantenimientos mantenimientos = new frmMantenimientos();
+            frmMantenimientos mantenimientos = new frmMantenimientos(cargouser);
             mantenimientos.Show();
         }
 
@@ -124,7 +124,7 @@ namespace SistemGestionBuses
 
         private void cardMantenimientos_Click(object sender, EventArgs e)
         {
-            frmMantenimientos mantenimientos = new frmMantenimientos();
+            frmMantenimientos mantenimientos = new frmMantenimientos(cargouser);
             mantenimientos.Show();
         }
 
