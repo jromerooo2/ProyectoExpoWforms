@@ -146,7 +146,7 @@ namespace Controlador
 
         //Cargar cmb inner tipo licencia
 
-        public static DataTable ObtenerTipoLicenciaInner(int id_marca)
+        public static DataTable ObtenerTipoLicenciaInner(string id_marca)
         {
             return ModeloIngreso.ObtenerTipoLicenciaInner(id_marca);
         }

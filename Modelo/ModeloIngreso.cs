@@ -538,12 +538,12 @@ namespace Modelo
 
 
         //Inner Join tipo de licencia
-        public static DataTable ObtenerTipoLicenciaInner(int id)
+        public static DataTable ObtenerTipoLicenciaInner(string id)
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_tipo_licencia WHERE id_tipo_licencia = ?param1";
+                string instruccion = "SELECT * FROM tb_tipo_licencia WHERE tipo_licencia = ?param1";
                 MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdtipoest.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
