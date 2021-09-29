@@ -20,18 +20,7 @@ namespace SistemGestionBuses
 
         private void frmTrack_Load(object sender, EventArgs e)
         {
-            using (WebSocket ws = new WebSocket("ws://frequent-cultured-timbale.glitch.me/"))
-            {
-                ws.Connect();
-                ws.OnMessage += Ws_OnMessage;
-                ws.Send("Hello Server");
-            }        
-
-        }
-
-        private void Ws_OnMessage(object sender, MessageEventArgs e)
-        {
-            MessageBox.Show("Received from server" + e.Data);
+            WebSocket ws = new WebSocket("ws://simple-websocket-server-echo.glitch.me/");
         }
     }
 }

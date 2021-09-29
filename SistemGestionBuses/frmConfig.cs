@@ -74,8 +74,12 @@ namespace SistemGestionBuses
             this.Close();
         }
 
+<<<<<<< HEAD
         public frmLogin login = new frmLogin();
         private void btnConfirmarPin_Click(object sender, EventArgs e)
+=======
+        private void btnConfirmarPin_Click_1(object sender, EventArgs e)
+>>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
         {
             if (!ValidacionesClass.hasSpecialChars(txtPin.Text))
             {
@@ -83,12 +87,9 @@ namespace SistemGestionBuses
                 if (res)
                 {
                     MessageBox.Show("Felicidades, Has configurado con exito tu cuenta", "Confirmación", MessageBoxButtons.OK);
-                    Hide();
-                    login.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Close();
+                    frmLogin next = new frmLogin();
+                    next.Show();
                 }
             }
             else
@@ -97,11 +98,23 @@ namespace SistemGestionBuses
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btnConfirmarPin_Click(object sender, EventArgs e)
         {
-
+            if (!ValidacionesClass.hasSpecialChars(txtPin.Text))
+            {
+                bool res = ControladorUsuario.ActualizarContraPin(txtContra.Text, txtPin.Text, idu);
+                if (res)
+                {
+                    MessageBox.Show("Felicidades, Has configurado con exito tu cuenta", "Confirmación", MessageBoxButtons.OK);
+                    frmLogin next = new frmLogin();
+                    next.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor utiliza únicamente números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
 
 
 

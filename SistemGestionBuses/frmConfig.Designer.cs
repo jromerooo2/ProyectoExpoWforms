@@ -64,7 +64,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // txtPin
             // 
@@ -131,7 +130,11 @@
             this.btnConfirmarPin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmarPin.Textcolor = System.Drawing.Color.White;
             this.btnConfirmarPin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnConfirmarPin.Click += new System.EventHandler(this.btnConfirmarPin_Click);
+=======
+            this.btnConfirmarPin.Click += new System.EventHandler(this.btnConfirmarPin_Click_1);
+>>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             // 
             // txtContra
             // 

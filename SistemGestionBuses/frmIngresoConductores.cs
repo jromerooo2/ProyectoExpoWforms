@@ -25,6 +25,13 @@ namespace SistemGestionBuses
             empleado = ControladorIngreso.CargarNombresConduc_Controller();
             txtIDEmpl.Text = id_empleado.ToString();
             txtNombreConduc.Text = empleado;
+            BtnAgregar.Enabled = true;
+            BtnEliminar.Enabled = false;
+            BtnActualizar.Enabled = false;
+
+            BtnEliminar.Enabled = false;
+            BtnActualizar.Enabled = false;
+            BtnAgregar.Enabled = true;
 
             CargarGridDatos();
             CargarTipoLicencia();
@@ -104,26 +111,6 @@ namespace SistemGestionBuses
             }
         }
 
-        private void dgvConductores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            BtnEliminar.Enabled = true;
-            BtnActualizar.Enabled = true;
-            BtnAgregar.Enabled = false;
-
-            int i = dgvConductores.CurrentRow.Index;
-
-            txtIDConduc.Text = dgvConductores[4, i].Value.ToString();
-            txtLicencia.Text = dgvConductores[1, i].Value.ToString();
-            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
-            dtpExpLicencia.Text = Convert.ToString(dgvConductores[2, i]);
-
-            string id_licencia = dgvConductores[3, i].ToString();
-            cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
-            cmbTipoLicencia.DisplayMember = "tipo_licencia";
-            cmbTipoLicencia.ValueMember = "id_tipo_licencia";
-         
-        }
-
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro de actualizar a: " + empleado + "?",
@@ -136,13 +123,24 @@ namespace SistemGestionBuses
         }
 
         void ActualizarDatos()
-        {          
+        {
+<<<<<<< Updated upstream
+            //string para comparar que los valores no sean los mismos
+            string string_tipo_licencia = cmbTipoLicencia.Text;
+=======
+            //String para comparar si se modifico el tipo de licencia
+            string string_licencia_tipo = cmbTipoLicencia.Text;
+>>>>>>> Stashed changes
             string licencia = txtLicencia.Text;
             int id_conductor = Convert.ToInt32(txtIDConduc.Text);
             string fecha_expiracion = Convert.ToString(dtpExpLicencia.Value);
-            int id_tipo_licencia = Convert.ToInt32(cmbTipoLicencia.SelectedValue);
+            int id_tipo_licencia = Convert.ToInt16(cmbTipoLicencia.SelectedValue);
             //Se envian los datos al controlador directamente por a la clase y no por objeto ya que el metodo es statico porque el constructor no me permite trabajar todos los cruds.
-            if (sameOrnot(licencia, fecha_expiracion, id_tipo_licencia) == true)
+<<<<<<< Updated upstream
+            if (sameOrnot(licencia, fecha_expiracion, string_tipo_licencia) == false)
+=======
+            if (sameOrnot(licencia, fecha_expiracion, string_licencia_tipo) == false)
+>>>>>>> Stashed changes
             {
                 bool res = ControladorIngreso.ActualizarDatosConductores(id_conductor, id_empleado, licencia, id_tipo_licencia, fecha_expiracion);
                 if (res == true)
@@ -177,15 +175,19 @@ namespace SistemGestionBuses
             }
         }
 
-        private bool sameOrnot(string licencia, string fecha_expiracion, int id_tipo_licencia)
+        private bool sameOrnot(string licencia, string fecha_expiracion, string id_tipo_licencia)
         {
             int i = dgvConductores.CurrentRow.Index;
 
-            int tipo0 = Convert.ToInt32(dgvConductores[3, i].Value);
+            string tipo0 = dgvConductores[3, i].Value.ToString();
             string fecha0 = dgvConductores[2, i].Value.ToString();
             string licencia0 = dgvConductores[1, i].Value.ToString();          
 
-            if (licencia == licencia0 || fecha_expiracion == fecha0 || id_tipo_licencia == tipo0)
+<<<<<<< Updated upstream
+            if (!licencia.Equals(licencia0) || !fecha_expiracion.Equals(fecha0) || !id_tipo_licencia.Equals(tipo0))
+=======
+            if (licencia.Equals(licencia0) || fecha_expiracion.Equals(fecha0) || id_tipo_licencia.Equals(tipo0))
+>>>>>>> Stashed changes
             {
                 return false;
             }
@@ -202,10 +204,119 @@ namespace SistemGestionBuses
             BtnActualizar.Enabled = false;
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
+        private void dgvConductores_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            BtnEliminar.Enabled = true;
+            BtnActualizar.Enabled = true;
+            BtnAgregar.Enabled = false;
+
+            int i = dgvConductores.CurrentRow.Index;
+
+            txtIDConduc.Text = dgvConductores[4, i].Value.ToString();
+            txtLicencia.Text = dgvConductores[1, i].Value.ToString();
+            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
+            dtpExpLicencia.Text = Convert.ToString(dgvConductores[2, i]);
+
+            string id_licencia = dgvConductores[3, i].ToString();
+            cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
+            cmbTipoLicencia.DisplayMember = "tipo_licencia";
+            cmbTipoLicencia.ValueMember = "id_tipo_licencia";
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        void LimpiarCampos()
+        {
+            txtLicencia.Clear();
+            txtIDConduc.Clear();
+            txtIDEmpl.Clear();
+            cmbTipoLicencia.SelectedIndex = 1;
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarDatos();
+            CargarGridDatos();
+        }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
         {
             EnvioDatos();
             CargarGridDatos();
+        }
+
+<<<<<<< Updated upstream
+        private void BtnActualizar_Click_1(object sender, EventArgs e)
+        {
+            ActualizarDatos();
+            CargarGridDatos();
+        }
+
+        private void dtpExpLicencia_onValueChanged(object sender, EventArgs e)
+        {
+            ValidarFechaNacimiento();
+        }
+
+        void ValidarFechaNacimiento()
+        {
+            DateTime hoy = DateTime.Today;
+            if (dtpExpLicencia.Value.Date <= hoy)
+            {
+                MessageBox.Show("Fecha invalida, la fecha de expiración debe ser una fecha futura", "Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else if (dtpExpLicencia.Value.Date.AddYears(1) >= hoy)
+            {
+                MessageBox.Show("Fecha invalida, la fecha de expiración de la licencia debe ser como minimo, dentro de un año", "Error de ingreso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+=======
+        private void dgvConductores_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            BtnEliminar.Enabled = true;
+            BtnActualizar.Enabled = true;
+            BtnAgregar.Enabled = false;
+
+            int i = dgvConductores.CurrentRow.Index;
+
+            txtIDConduc.Text = dgvConductores[4, i].Value.ToString();
+            txtLicencia.Text = dgvConductores[1, i].Value.ToString();
+            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
+            dtpExpLicencia.Text = Convert.ToString(dgvConductores[2, i]);
+
+            string id_licencia = dgvConductores[3, i].ToString();
+            cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
+            cmbTipoLicencia.DisplayMember = "tipo_licencia";
+            cmbTipoLicencia.ValueMember = "id_tipo_licencia";
+
+            CargarTipoLicencia();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarDatos();
+            CargarGridDatos();
+            BtnAgregar.Enabled = true;
+            BtnEliminar.Enabled = false;
+            BtnActualizar.Enabled = false;
+        }
+
+        private void BtnActualizar_Click_1(object sender, EventArgs e)
+        {
+            ActualizarDatos();
+            CargarGridDatos();
+            BtnAgregar.Enabled = true;
+            BtnEliminar.Enabled = false;
+            BtnActualizar.Enabled = false;
+        }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            EnvioDatos();
+            CargarGridDatos();
+>>>>>>> Stashed changes
         }
     }
 }
