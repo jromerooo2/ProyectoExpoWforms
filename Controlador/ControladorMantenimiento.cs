@@ -11,65 +11,61 @@ namespace Controlador
 {
     public class ControladorMantenimiento
     {
-        //dt Mantenimiento
-        public static DataTable CargarMantenimiento_Controlador()
-        {
-            return ModeloMantenimiento.ObtenerMantenimiento();
-        }
-        //cmb Unidad
-        public static DataTable ObtenerUnidad()
+        public static DataTable RetornoCargarUnidad()
         {
             return ModeloMantenimiento.CargarUnidad();
         }
-        //cmb Unidad inner
-        public static DataTable CargarUnidadInner_controlador(int id)
-        {
-            return ModeloMantenimiento.CargarUnidadInner(id);
-        }
-        //ATRIBUTOS 
+
+        //ATRIBUTOS
         public static int id_mantenimiento { get; set; }
+
         public int id_unidad_transporte { get; set; }
+
         public double monto_mantenimiento { get; set; }
+
         public double ultimo_kilometraje { get; set; }
+
         public string descripcion { get; set; }
+
         public string fecha { get; set; }
-        //CONSTRUCTOR
-        public ControladorMantenimiento( int pUnidad, double pMonto, double pKilometraje, string pDescripcion, string pFecha)
+
+        //CONSTRUTOR
+        //Atributos = Parámetros
+        public ControladorMantenimiento(int pUnidad, double pMonto, double pUKilometraje,
+                                string pDescripcion, string pfecha)
         {
-            //Atributo = parametro
             id_unidad_transporte = pUnidad;
             monto_mantenimiento = pMonto;
-            ultimo_kilometraje = pKilometraje;
+            ultimo_kilometraje = pUKilometraje;
             descripcion = pDescripcion;
-            fecha = pFecha;
-        }
-        //CRUD Mantenimiento
-        public bool EnviarDatosControlador()
-        {
-            return ModeloMantenimiento.RegistrarMantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
+            fecha = pfecha;
         }
 
-        //Update Mantenimiento
-        public static DataTable ActualizarUnidad_Controller(int placa)
+        //CRUD
+        //Registro_Mantenimiento
+        public static DataTable ObtenerMantenimiento()
         {
-            return ModeloMantenimiento.ActualizarUnidad_Inner(placa);
+            return ModeloMantenimiento.ObtenerListaMantenimiento();
         }
 
-<<<<<<< HEAD
-        public bool ActualizarMantenimientoController ()
-=======
-        public bool RetornoUpdate_mantenimiento()
->>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
+        public bool RegistrarMantenimiento()
         {
-            return ModeloMantenimiento.ActualializarMantenimiento(id_mantenimiento,id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
+            return ModeloMantenimiento.RegistroMantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
         }
 
-        //Delete Mantenimiento
-<<<<<<< HEAD
-        public static bool EliminarMantenimientoContolador()
-=======
-        public bool RetornoDelete_mantenimiento()
->>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
+        //ActualizaciónMantenimiento
+        public static DataTable CargarUnidadInner_Controller(int id)
+        {
+            return ModeloMantenimiento.CargarUnidad_Inner(id);
+        }
+
+        public bool ActualizarMantenimiento_Controller()
+        {
+            return ModeloMantenimiento.ActualizacionMantenimiento(id_mantenimiento, id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
+        }
+
+        //EliminaciónMantenimiento
+        public static bool EliminarMantenimiento_Controller()
         {
             return ModeloMantenimiento.EliminarMantenimiento(id_mantenimiento);
         }

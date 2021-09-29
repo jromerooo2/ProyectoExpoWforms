@@ -74,10 +74,7 @@ namespace SistemGestionBuses
             this.Close();
         }
 
-<<<<<<< HEAD
         public frmLogin login = new frmLogin();
-=======
->>>>>>> parent of 380952f (Merge branch 'dev' of https://github.com/jromerooo2/ProyectoExpoWforms into dev)
         private void btnConfirmarPin_Click(object sender, EventArgs e)
         {
             if (!ValidacionesClass.hasSpecialChars(txtPin.Text))

@@ -11,34 +11,14 @@ namespace Modelo
     public class ModeloMantenimiento
     {
 
-        //Cargar Unidad
+        //CargandoCombobox
         public static DataTable CargarUnidad()
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_unidad_transporte";
-                MySqlCommand cmdunidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdunidad);
-                data = new DataTable();
-                adp.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
-                return data = null;
-            }
-
-        }
-        //Unidad Inner
-        public static DataTable CargarUnidadInner(int id)
-        {
-            DataTable data;
-            try
-            {
-                string instruccion = "SELECT * FROM tb_unidad_transporte WHERE id_unidad_transporte = ?param1";
-                MySqlCommand cmdunidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                cmdunidad.Parameters.Add(new MySqlParameter("param1", id));
+                string query = "SELECT * FROM tb_unidad_transporte";
+                MySqlCommand cmdunidad = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdunidad);
                 data = new DataTable();
                 adp.Fill(data);
@@ -49,54 +29,69 @@ namespace Modelo
                 return data = null;
             }
         }
-        //CRUD Mantenimiento
-        public static bool RegistrarMantenimiento( int pUnidad, double pMonto, double pKilometraje,string pDescripcion,string pFecha )
+
+        //CRUD
+        //Registro_Mantenimiento
+        public static bool RegistroMantenimiento(int pUnidad, double pMonto, double pUKilometraje,
+                                string pDescripcion, string pfecha)
         {
-            bool retorno = false;
+            bool Registro = false;
             try
             {
-                //INCERCION
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_mantenimiento ( id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha) VALUES ('{0}','{1}','{2}','{3}','{4}')",pUnidad,pMonto,pKilometraje,pDescripcion,pFecha), ModeloConexion.GetConnection());
-                //VERIFICACION
-                retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
-                //RETORNO
-                return retorno;
+                MySqlCommand cmdunidad = new MySqlCommand(string.Format("INSERT INTO tb_mantenimiento(id_unidad_transporte,monto_mantenimiento,ultimo_kilometraje,descripcion,fecha) VALUES ('{0}','{1}','{2}','{3}','{4}')", pUnidad, pMonto, pUKilometraje, pDescripcion, pfecha), ModeloConexion.GetConnection());
+                Registro = Convert.ToBoolean(cmdunidad.ExecuteNonQuery());
+                return Registro;
             }
             catch (Exception)
             {
-                return retorno;
+                return Registro;
             }
         }
-        //Obtener Lista de Mantenimiento
-        public static DataTable ObtenerMantenimiento()
+
+        public static DataTable ObtenerListaMantenimiento()
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM dbsistemaviajes.tb_mantenimiento;";
-                MySqlCommand cmdMante = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdMante);
+                string query = "SELECT * FROM tb_mantenimiento";
+                MySqlCommand cmdMan = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdMan);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
             }
             catch (Exception)
             {
-
                 return data = null;
             }
         }
 
-        //Update Maintenance
-        public static DataTable ActualizarUnidad_Inner(int placa)
+        //ActualizaciónMantenimiento
+        public static bool ActualizacionMantenimiento(int pMant, int pUnidad, double pMonto, double pUKilometraje,
+                                string pDescripcion, string pfecha)
+        {
+            bool update = false;
+            try
+            {
+                MySqlCommand cmdact = new MySqlCommand(string.Format("UPDATE tb_mantenimiento SET id_unidad_transporte = '" + pUnidad + "', monto_mantenimiento = '" + pMonto + "', ultimo_kilometraje = '" + pUKilometraje + "', descripcion = '" + pDescripcion + "', fecha = '" + pfecha + "' WHERE id_mantenimiento = '" + pMant + "'"), ModeloConexion.GetConnection());
+                update = Convert.ToBoolean(cmdact.ExecuteNonQuery());
+                return update;
+            }
+            catch (Exception)
+            {
+                return update;
+            }
+        }
+
+        public static DataTable CargarUnidad_Inner(int id)
         {
             DataTable data;
             try
             {
                 string query = "SELECT * FROM tb_unidad_transporte WHERE id_unidad_transporte = ?param";
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                cmdupdate.Parameters.Add(new MySqlParameter("param", placa));
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdupdate);
+                MySqlCommand cmdinner = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdinner.Parameters.Add(new MySqlParameter("param", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdinner);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
@@ -107,35 +102,20 @@ namespace Modelo
             }
         }
 
-        public static bool ActualializarMantenimiento(int pMantenimiento, int pUnidad, double pMonto, double pKilometraje, string pDescripcion, string pFecha)
-        {
-            bool update = false;
-            try
-            {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_mantenimiento SET id_unidad_transporte = '"+pUnidad+"', monto_mantenimiento = '"+pMonto+"', ultimo_kilometraje = '"+pKilometraje+"', descripcion = '"+pDescripcion+"', fecha = '"+pFecha+"' WHERE id_mantenimiento = '"+pMantenimiento+"'"), ModeloConexion.GetConnection());
-                update = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
-                return update;
-            }
-            catch (Exception)
-            {
-                return update;
-            }
-        }
-
-        //Delete Maintenance
+        //EliminaciónMantenimiento
         public static bool EliminarMantenimiento(int pid)
         {
-            bool delete = false;
+            bool eliminar = false;
             try
             {
-                string query = "DELETE FROM tb_mantenimiento WHERE id_mantenimiento = '"+pid+"'";
-                MySqlCommand cmdelete = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                delete = Convert.ToBoolean(cmdelete.ExecuteNonQuery());
-                return delete;
+                string query = "DELETE FROM tb_mantenimiento WHERE id_mantenimiento = '" + pid + "'";
+                MySqlCommand cmdeliminar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                eliminar = Convert.ToBoolean(cmdeliminar.ExecuteNonQuery());
+                return eliminar;
             }
             catch (Exception)
             {
-                return delete;
+                return eliminar;
             }
         }
 
