@@ -72,12 +72,6 @@ namespace SistemGestionBuses
             DgvMantenimiento.Columns[3].HeaderText = "Ultimo Kilometraje";
             DgvMantenimiento.Columns[4].HeaderText = "Descripcion del Mantenimiento";
             DgvMantenimiento.Columns[5].HeaderText = "Fecha";
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
         }
 
         //CRUD
@@ -135,14 +129,8 @@ namespace SistemGestionBuses
                 descripcion = TxtDescripcion.Text;
                 fecha = DtFecha.Text;
                 ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
-<<<<<<< HEAD
                 objMant = new ControladorMantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
                 bool respuesta = objMant.ActualizarMantenimiento_Controller();
-=======
-                objMant = new ControladorMantenimiento(id_unidad_transporte,
-                    monto_mantenimiento,ultimo_kilometraje,descripcion,fecha);
-                bool respuesta = objMant.ActualizarMantenimientoControlador();
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
                 if (respuesta == true)
                 {
                     MessageBox.Show("Mantenimiento actualizado con éxito",
@@ -156,12 +144,8 @@ namespace SistemGestionBuses
             }
             catch (Exception)
             {
-<<<<<<< HEAD
                 MessageBox.Show("Oops!, se produjo un error externo al actualizar mantenimiento.", "Error Crítico",
                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-=======
-                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             }
         }
 
@@ -178,14 +162,8 @@ namespace SistemGestionBuses
             TxtDescripcion.Text = DgvMantenimiento[4, posicion].Value.ToString();
             DtFecha.Text = DgvMantenimiento[5, posicion].Value.ToString();
 
-<<<<<<< HEAD
             int idUnidad = Convert.ToInt16(DgvMantenimiento[1, posicion].Value.ToString());
             cmbUnidad.DataSource = ControladorMantenimiento.CargarUnidadInner_Controller(idUnidad);
-=======
-            //Cargando data a los comboboxes
-            int idunidad = Convert.ToInt16(DgvMantenimiento[1,posicion].Value.ToString());
-            cmbUnidad.DataSource = ControladorMantenimiento.CargarUnidadInner_controlador(idunidad);
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             cmbUnidad.ValueMember = "id_unidad_transporte";
             cmbUnidad.DisplayMember = "placa";
         }
@@ -210,11 +188,7 @@ namespace SistemGestionBuses
         void EliminarMantenimiento()
         {
             ControladorMantenimiento.id_mantenimiento = Convert.ToInt16(txtId.Text);
-<<<<<<< HEAD
             bool respuesta = ControladorMantenimiento.EliminarMantenimiento_Controller();
-=======
-            bool respuesta = ControladorMantenimiento.EliminarMantenimientoControlador();
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             if (respuesta == true)
             {
                 MessageBox.Show("Mantenimiento eliminado con éxito", "Confirmación de eliminación",
@@ -229,19 +203,10 @@ namespace SistemGestionBuses
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (MessageBox.Show("¿Deseas eliminar el vehículo con matrícula " + cmbUnidad.SelectedValue + "?", "Confirmación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 EliminarMantenimiento();
                 CargarDataGridView();
-=======
-            if (MessageBox.Show("¿Está seguro de eliminar a: " + cmbUnidad.Text + "?",
-                "Confirmar eliminación",
-                        MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
-            {
-                EliminarMantenimiento();
-                CargarGridDatos();
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             }
         }
 

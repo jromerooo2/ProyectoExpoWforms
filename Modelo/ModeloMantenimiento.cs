@@ -66,7 +66,6 @@ namespace Modelo
             }
         }
 
-<<<<<<< HEAD
         //ActualizaciónMantenimiento
         public static bool ActualizacionMantenimiento(int pMant, int pUnidad, double pMonto, double pUKilometraje,
                                 string pDescripcion, string pfecha)
@@ -85,15 +84,10 @@ namespace Modelo
         }
 
         public static DataTable CargarUnidad_Inner(int id)
-=======
-        //Update Mantenimiento
-        public static bool ActualializarMantenimiento( int pMantenimiento, int pUnidad, double pMonto, double pKilometraje, string pDescripcion, string pFecha)
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
         {
             DataTable data;
             try
             {
-<<<<<<< HEAD
                 string query = "SELECT * FROM tb_unidad_transporte WHERE id_unidad_transporte = ?param";
                 MySqlCommand cmdinner = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 cmdinner.Parameters.Add(new MySqlParameter("param", id));
@@ -101,11 +95,6 @@ namespace Modelo
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
-=======
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_mantenimiento SET id_unidad_transporte = '"+pUnidad+"', monto_mantenimiento = '"+pMonto+"', ultimo_kilometraje = '"+pKilometraje+"', descripcion = '"+pDescripcion+"', fecha = '"+pFecha+"' WHERE id_mantenimiento = '"+pMantenimiento+"' "), ModeloConexion.GetConnection());
-                update = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
-                return update;
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             }
             catch (Exception)
             {
@@ -116,7 +105,6 @@ namespace Modelo
         //EliminaciónMantenimiento
         public static bool EliminarMantenimiento(int pid)
         {
-<<<<<<< HEAD
             bool eliminar = false;
             try
             {
@@ -128,19 +116,6 @@ namespace Modelo
             catch (Exception)
             {
                 return eliminar;
-=======
-            bool retorno;
-            try
-            {
-                string query = "DELETE FROM tb_mantenimiento WHERE id_mantenimiento = '"+pid+"'";
-                MySqlCommand cmdelete = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                retorno = Convert.ToBoolean(cmdelete.ExecuteNonQuery());
-                return retorno;
-            }
-            catch (Exception)
-            {
-                return retorno=false;
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             }
         }
 

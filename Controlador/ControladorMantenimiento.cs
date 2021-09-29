@@ -53,7 +53,6 @@ namespace Controlador
             return ModeloMantenimiento.RegistroMantenimiento(id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
         }
 
-<<<<<<< HEAD
         //ActualizaciónMantenimiento
         public static DataTable CargarUnidadInner_Controller(int id)
         {
@@ -61,23 +60,12 @@ namespace Controlador
         }
 
         public bool ActualizarMantenimiento_Controller()
-=======
-        //Update Mantenimiento
-
-
-        public bool  ActualizarMantenimientoControlador()
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
         {
             return ModeloMantenimiento.ActualizacionMantenimiento(id_mantenimiento, id_unidad_transporte, monto_mantenimiento, ultimo_kilometraje, descripcion, fecha);
         }
 
-<<<<<<< HEAD
         //EliminaciónMantenimiento
         public static bool EliminarMantenimiento_Controller()
-=======
-        //Delete Mantenimiento
-        public static bool EliminarMantenimientoControlador()
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
         {
             return ModeloMantenimiento.EliminarMantenimiento(id_mantenimiento);
         }

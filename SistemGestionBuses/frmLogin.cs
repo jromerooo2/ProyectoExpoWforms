@@ -60,7 +60,6 @@ namespace SistemGestionBuses
                 ControladorUsuario.PrimerUso(idlogged);
                 frmConfig next = new frmConfig(cargo, user, idlogged);
                 next.Show();
-                next.BringToFront();
                 Hide();
             }
 

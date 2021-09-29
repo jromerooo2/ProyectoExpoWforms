@@ -19,7 +19,6 @@ namespace SistemGestionBuses
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
             Application.Run(new frmLogin());
 =======
             Application.Run(new frmIngresoConductores(5));
@@ -30,9 +29,6 @@ namespace SistemGestionBuses
 =======
             Application.Run(new frmLogin());
 >>>>>>> parent of d829722 (..)
-=======
-            Application.Run(new frmLogin());
->>>>>>> f0184ca8a29df5abea7e5d6837914031d6bebc38
             //pasen siempre a frmLogin plis - Aviso Parroquial
             //new frmConfig(id_cargo, "username", id_usuario)
         }
