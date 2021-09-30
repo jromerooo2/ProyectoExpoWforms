@@ -75,6 +75,7 @@ namespace SistemGestionBuses
         }
 
         public frmLogin login = new frmLogin();
+
         private void btnConfirmarPin_Click(object sender, EventArgs e)
         {
             if (!ValidacionesClass.hasSpecialChars(txtPin.Text))
