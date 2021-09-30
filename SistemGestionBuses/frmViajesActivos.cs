@@ -16,5 +16,10 @@ namespace SistemGestionBuses
         {
             InitializeComponent();
         }
+
+        private void frmViajesActivos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

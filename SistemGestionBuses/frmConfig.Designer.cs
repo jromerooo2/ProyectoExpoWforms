@@ -99,13 +99,13 @@
             // 
             // btnConfirmarPin
             // 
-            this.btnConfirmarPin.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnConfirmarPin.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnConfirmarPin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnConfirmarPin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirmarPin.BorderRadius = 5;
             this.btnConfirmarPin.ButtonText = "Confirmar";
             this.btnConfirmarPin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmarPin.DisabledColor = System.Drawing.Color.Gray;
+            this.btnConfirmarPin.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.btnConfirmarPin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConfirmarPin.Iconcolor = System.Drawing.Color.Transparent;
             this.btnConfirmarPin.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnConfirmarPin.Iconimage")));
@@ -122,9 +122,9 @@
             this.btnConfirmarPin.Location = new System.Drawing.Point(257, 441);
             this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmarPin.Name = "btnConfirmarPin";
-            this.btnConfirmarPin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnConfirmarPin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnConfirmarPin.OnHoverTextColor = System.Drawing.Color.DimGray;
+            this.btnConfirmarPin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnConfirmarPin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnConfirmarPin.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarPin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnConfirmarPin.selected = false;
             this.btnConfirmarPin.Size = new System.Drawing.Size(136, 48);
@@ -193,13 +193,13 @@
             // 
             // btnConfirmarContra
             // 
-            this.btnConfirmarContra.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnConfirmarContra.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnConfirmarContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnConfirmarContra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirmarContra.BorderRadius = 5;
             this.btnConfirmarContra.ButtonText = "Confirmar";
             this.btnConfirmarContra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmarContra.DisabledColor = System.Drawing.Color.Gray;
+            this.btnConfirmarContra.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.btnConfirmarContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConfirmarContra.Iconcolor = System.Drawing.Color.Transparent;
             this.btnConfirmarContra.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnConfirmarContra.Iconimage")));
@@ -216,9 +216,9 @@
             this.btnConfirmarContra.Location = new System.Drawing.Point(257, 252);
             this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmarContra.Name = "btnConfirmarContra";
-            this.btnConfirmarContra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnConfirmarContra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnConfirmarContra.OnHoverTextColor = System.Drawing.Color.DimGray;
+            this.btnConfirmarContra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnConfirmarContra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnConfirmarContra.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarContra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnConfirmarContra.selected = false;
             this.btnConfirmarContra.Size = new System.Drawing.Size(136, 48);
@@ -239,7 +239,7 @@
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(705, 50);
+            this.panelBar.Size = new System.Drawing.Size(705, 45);
             this.panelBar.TabIndex = 96;
             // 
             // bunifuImageButton5
@@ -249,9 +249,9 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(626, 8);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(629, 8);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(22, 27);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -265,9 +265,9 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(656, 9);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(657, 9);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(26, 26);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -283,7 +283,7 @@
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(18, 9);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 30);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 25);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
