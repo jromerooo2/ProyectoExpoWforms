@@ -39,6 +39,7 @@ namespace Controlador
         }
         #endregion
 
+        #region MetodoAdmin
         public bool ValidarCredenciales_Controller()
         {
             return ModeloRecuperar.ValidarCredenciales(usuarioadmin, claveadmin);
@@ -54,7 +55,7 @@ namespace Controlador
             string contraMD5 = ValidacionesClass.Encrypt(nuevacontra);
             return ModeloRecuperar.RestaurarClave(usuariorecu, contraMD5);
         }
-
+        #endregion
 
         #region Correo
         static List<string> res = new List<string>();
@@ -103,6 +104,46 @@ namespace Controlador
 
         }
         public static bool ConfirmCode(int codeFromLaVista)
+        {
+            if (codeFromLaVista == code)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region PrimerUso
+        public static void confirmMailFirstUse(string mail)
+        {
+
+            code = rnd.Next(123123, 999999);
+            const string p = "trackonyou";
+
+
+            MailMessage message = new MailMessage();
+            SmtpClient smtp = new SmtpClient();
+
+            message.From = new MailAddress("systemlocus@gmail.com");
+
+            //Enter your email blow and also change in database too
+
+            message.To.Add(new MailAddress(mail));
+            message.Subject = "Confirma tu cuenta";
+            message.Body = "Escribe este codigo en el espacio de texto para verificar tu identidad\n" + code + "\n Gracias!";
+
+            smtp.Port = 587;
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential("systemlocus@gmail.com", p);
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Send(message);
+        }
+        public static bool CodeFirstUse(int codeFromLaVista)
         {
             if (codeFromLaVista == code)
             {
