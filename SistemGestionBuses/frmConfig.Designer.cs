@@ -58,7 +58,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(705, 565);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,7 +70,7 @@
             // 
             this.txtPin.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtPin.Location = new System.Drawing.Point(202, 402);
-            this.txtPin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPin.Margin = new System.Windows.Forms.Padding(2);
             this.txtPin.Name = "txtPin";
             this.txtPin.Size = new System.Drawing.Size(254, 20);
             this.txtPin.TabIndex = 33;
@@ -100,9 +100,9 @@
             // btnConfirmarPin
             // 
             this.btnConfirmarPin.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnConfirmarPin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnConfirmarPin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnConfirmarPin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirmarPin.BorderRadius = 0;
+            this.btnConfirmarPin.BorderRadius = 5;
             this.btnConfirmarPin.ButtonText = "Confirmar";
             this.btnConfirmarPin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmarPin.DisabledColor = System.Drawing.Color.Gray;
@@ -120,7 +120,7 @@
             this.btnConfirmarPin.IconZoom = 90D;
             this.btnConfirmarPin.IsTab = false;
             this.btnConfirmarPin.Location = new System.Drawing.Point(257, 441);
-            this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmarPin.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmarPin.Name = "btnConfirmarPin";
             this.btnConfirmarPin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirmarPin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -130,7 +130,7 @@
             this.btnConfirmarPin.Size = new System.Drawing.Size(136, 48);
             this.btnConfirmarPin.TabIndex = 30;
             this.btnConfirmarPin.Text = "Confirmar";
-            this.btnConfirmarPin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfirmarPin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfirmarPin.Textcolor = System.Drawing.Color.White;
             this.btnConfirmarPin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarPin.Click += new System.EventHandler(this.btnConfirmarPin_Click);
@@ -139,7 +139,7 @@
             // 
             this.txtContra.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtContra.Location = new System.Drawing.Point(202, 216);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(254, 20);
             this.txtContra.TabIndex = 29;
@@ -194,9 +194,9 @@
             // btnConfirmarContra
             // 
             this.btnConfirmarContra.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnConfirmarContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnConfirmarContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnConfirmarContra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirmarContra.BorderRadius = 0;
+            this.btnConfirmarContra.BorderRadius = 5;
             this.btnConfirmarContra.ButtonText = "Confirmar";
             this.btnConfirmarContra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmarContra.DisabledColor = System.Drawing.Color.Gray;
@@ -213,8 +213,8 @@
             this.btnConfirmarContra.IconVisible = true;
             this.btnConfirmarContra.IconZoom = 90D;
             this.btnConfirmarContra.IsTab = false;
-            this.btnConfirmarContra.Location = new System.Drawing.Point(257, 240);
-            this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmarContra.Location = new System.Drawing.Point(257, 252);
+            this.btnConfirmarContra.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmarContra.Name = "btnConfirmarContra";
             this.btnConfirmarContra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirmarContra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -224,7 +224,7 @@
             this.btnConfirmarContra.Size = new System.Drawing.Size(136, 48);
             this.btnConfirmarContra.TabIndex = 23;
             this.btnConfirmarContra.Text = "Confirmar";
-            this.btnConfirmarContra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfirmarContra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfirmarContra.Textcolor = System.Drawing.Color.White;
             this.btnConfirmarContra.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarContra.Click += new System.EventHandler(this.btnConfirmarContra_Click);
@@ -313,7 +313,7 @@
             this.Controls.Add(this.btnConfirmarContra);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConfig";
             this.Text = "frmConfig";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
