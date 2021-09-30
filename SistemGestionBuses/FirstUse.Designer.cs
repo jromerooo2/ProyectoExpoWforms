@@ -75,6 +75,7 @@
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label13 = new System.Windows.Forms.Label();
             this.CardPaso1.SuspendLayout();
             this.CardPaso2.SuspendLayout();
             this.CardPaso3.SuspendLayout();
@@ -142,11 +143,12 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(62, 86);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
-            this.txtEmail.Size = new System.Drawing.Size(224, 20);
+            this.txtEmail.Size = new System.Drawing.Size(224, 22);
             this.txtEmail.TabIndex = 15;
             // 
             // label11
@@ -165,7 +167,7 @@
             // 
             this.btnUser.BackColor = System.Drawing.Color.Black;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUser.Location = new System.Drawing.Point(122, 181);
             this.btnUser.Margin = new System.Windows.Forms.Padding(2);
@@ -178,11 +180,12 @@
             // 
             // txtUser
             // 
+            this.txtUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(62, 149);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
-            this.txtUser.Size = new System.Drawing.Size(224, 20);
+            this.txtUser.Size = new System.Drawing.Size(224, 22);
             this.txtUser.TabIndex = 11;
             // 
             // label5
@@ -220,7 +223,7 @@
             // 
             this.btnReenviar.BackColor = System.Drawing.Color.Black;
             this.btnReenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReenviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReenviar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReenviar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReenviar.Location = new System.Drawing.Point(30, 107);
             this.btnReenviar.Margin = new System.Windows.Forms.Padding(2);
@@ -246,18 +249,20 @@
             // 
             // txtCode
             // 
+            this.txtCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(53, 69);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtCode.Name = "txtCode";
             this.txtCode.ShortcutsEnabled = false;
-            this.txtCode.Size = new System.Drawing.Size(224, 20);
+            this.txtCode.Size = new System.Drawing.Size(224, 22);
             this.txtCode.TabIndex = 16;
+            this.txtCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCode_KeyPress);
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.Black;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Location = new System.Drawing.Point(194, 107);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
@@ -330,18 +335,19 @@
             // 
             // txtConfirmacion
             // 
+            this.txtConfirmacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmacion.Location = new System.Drawing.Point(61, 212);
             this.txtConfirmacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmacion.Name = "txtConfirmacion";
             this.txtConfirmacion.ShortcutsEnabled = false;
-            this.txtConfirmacion.Size = new System.Drawing.Size(224, 20);
+            this.txtConfirmacion.Size = new System.Drawing.Size(224, 22);
             this.txtConfirmacion.TabIndex = 24;
             // 
             // btnPIN
             // 
             this.btnPIN.BackColor = System.Drawing.Color.Black;
             this.btnPIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPIN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPIN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPIN.Location = new System.Drawing.Point(122, 439);
             this.btnPIN.Margin = new System.Windows.Forms.Padding(2);
@@ -350,15 +356,18 @@
             this.btnPIN.TabIndex = 18;
             this.btnPIN.Text = "Confirmar";
             this.btnPIN.UseVisualStyleBackColor = false;
+            this.btnPIN.Click += new System.EventHandler(this.btnPIN_Click);
             // 
             // txtPIN
             // 
+            this.txtPIN.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPIN.Location = new System.Drawing.Point(110, 391);
             this.txtPIN.Margin = new System.Windows.Forms.Padding(2);
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.ShortcutsEnabled = false;
-            this.txtPIN.Size = new System.Drawing.Size(135, 20);
+            this.txtPIN.Size = new System.Drawing.Size(135, 22);
             this.txtPIN.TabIndex = 16;
+            this.txtPIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPIN_KeyPress);
             // 
             // label14
             // 
@@ -387,20 +396,21 @@
             // 
             // txtNueva
             // 
+            this.txtNueva.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNueva.Location = new System.Drawing.Point(61, 146);
             this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva.Name = "txtNueva";
             this.txtNueva.ShortcutsEnabled = false;
-            this.txtNueva.Size = new System.Drawing.Size(224, 20);
+            this.txtNueva.Size = new System.Drawing.Size(224, 22);
             this.txtNueva.TabIndex = 20;
             // 
             // btnNueva
             // 
             this.btnNueva.BackColor = System.Drawing.Color.Black;
             this.btnNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNueva.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNueva.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNueva.Location = new System.Drawing.Point(122, 251);
+            this.btnNueva.Location = new System.Drawing.Point(121, 251);
             this.btnNueva.Margin = new System.Windows.Forms.Padding(2);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(109, 51);
@@ -456,19 +466,22 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(61, 302);
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(118, 298);
+            this.txtTelefono.Mask = "+000-0000-0000";
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(224, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(106, 22);
             this.txtTelefono.TabIndex = 128;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(61, 189);
+            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(39, 182);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
-            this.txtDireccion.Size = new System.Drawing.Size(224, 62);
+            this.txtDireccion.Size = new System.Drawing.Size(272, 69);
             this.txtDireccion.TabIndex = 127;
             // 
             // label12
@@ -499,7 +512,7 @@
             // 
             this.btnInfo.BackColor = System.Drawing.Color.Black;
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnInfo.Location = new System.Drawing.Point(118, 341);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
@@ -508,6 +521,7 @@
             this.btnInfo.TabIndex = 18;
             this.btnInfo.Text = "Confirmar";
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // label16
             // 
@@ -523,11 +537,12 @@
             // 
             // txtNameEnterprise
             // 
-            this.txtNameEnterprise.Location = new System.Drawing.Point(61, 86);
+            this.txtNameEnterprise.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameEnterprise.Location = new System.Drawing.Point(39, 86);
             this.txtNameEnterprise.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameEnterprise.Name = "txtNameEnterprise";
             this.txtNameEnterprise.ShortcutsEnabled = false;
-            this.txtNameEnterprise.Size = new System.Drawing.Size(224, 20);
+            this.txtNameEnterprise.Size = new System.Drawing.Size(272, 22);
             this.txtNameEnterprise.TabIndex = 20;
             // 
             // label17
@@ -550,7 +565,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(93, 28);
             this.label18.TabIndex = 122;
-            this.label18.Text = "Paso 3";
+            this.label18.Text = "Paso 4";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MainElipse
@@ -561,6 +576,7 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.label13);
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -612,15 +628,16 @@
             // 
             this.btnFinalizar.BackColor = System.Drawing.Color.Black;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFinalizar.Location = new System.Drawing.Point(875, 580);
             this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(109, 51);
             this.btnFinalizar.TabIndex = 129;
-            this.btnFinalizar.Text = "Ingresar";
+            this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // nfConfirmacion
             // 
@@ -631,6 +648,18 @@
             // 
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(18, 8);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(185, 28);
+            this.label13.TabIndex = 130;
+            this.label13.Text = "Locus Systems.";
             // 
             // FirstUse
             // 
@@ -664,6 +693,7 @@
             this.CardPaso4.ResumeLayout(false);
             this.CardPaso4.PerformLayout();
             this.panelBar.ResumeLayout(false);
+            this.panelBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
@@ -718,5 +748,6 @@
         private System.Windows.Forms.NotifyIcon nfConfirmacion;
         private System.Windows.Forms.Button btnReenviar;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label13;
     }
 }
