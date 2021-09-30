@@ -41,7 +41,7 @@ namespace Controlador
         }
         public static bool hasSpecialChars(string text)
         {
-            string specialChar = "-+/= ";
+            string specialChar = "-+/=";
             foreach (var item in specialChar)
             {
                 if (text.Contains(item)) return true;
