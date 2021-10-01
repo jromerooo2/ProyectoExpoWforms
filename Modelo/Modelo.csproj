@@ -99,6 +99,7 @@
     <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloMantenimiento.cs" />
     <Compile Include="ModeloRecuperar.cs" />
+    <Compile Include="ModeloReportes.cs" />
     <Compile Include="ModeloTransporte.cs" />
     <Compile Include="ModeloUsuario.cs" />
     <Compile Include="ModeloViaje.cs" />

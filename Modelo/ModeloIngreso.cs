@@ -556,6 +556,43 @@ namespace Modelo
                 return data = null;
             }
         }
+        //cmb departamentos
+        public static DataTable GetDepartamentos()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_departamentos";
+                MySqlCommand cmdtipoest = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipoest);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+
+        public static bool SaveDir(string partida, string final, string adicional)
+        {
+            bool retorno = false;
+            try
+            {
+                //INCERCION
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle(direccion_partida, direccion_destino, direccion_adicional) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", partida, final, adicional),  ModeloConexion.GetConnection() );
+                //VERIFICACION
+                retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
+                //RETORNO
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
         #endregion
 
     }

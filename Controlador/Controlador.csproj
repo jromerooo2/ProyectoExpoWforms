@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorConexion.cs" />
+    <Compile Include="ControladorDirecciones.cs" />
     <Compile Include="ControladorIngreso.cs" />
     <Compile Include="ControladorIngresoCliente.cs" />
     <Compile Include="ControladorLogin.cs" />
@@ -104,7 +105,6 @@
     <Compile Include="ControladorTransporte.cs" />
     <Compile Include="ControladorUsuario.cs" />
     <Compile Include="ControladorViaje.cs" />
-    <Compile Include="ModeloReportes.cs" />
     <Compile Include="ValidacionesClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
