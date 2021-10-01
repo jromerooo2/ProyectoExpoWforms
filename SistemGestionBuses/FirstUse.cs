@@ -290,8 +290,8 @@ namespace SistemGestionBuses
                 bool res2 = usercontrol.RegistrarPRIMERUsuario(user, password, email, cargo, id, PIN);
                 if (res2 == true)
                 {
-                    Close();
                     NotificacionConfirmacion();
+                    Close();                 
                     frmLogin login = new frmLogin();
                     login.Show();
                 }
