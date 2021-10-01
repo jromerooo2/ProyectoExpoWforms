@@ -162,7 +162,7 @@
             this.cardClientes.Controls.Add(this.pictureBox6);
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
-            this.cardClientes.Location = new System.Drawing.Point(41, 231);
+            this.cardClientes.Location = new System.Drawing.Point(41, 301);
             this.cardClientes.Margin = new System.Windows.Forms.Padding(4);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
@@ -207,7 +207,7 @@
             this.bunifuCards1.Controls.Add(this.pictureBox2);
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(345, 231);
+            this.bunifuCards1.Location = new System.Drawing.Point(358, 301);
             this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
@@ -252,7 +252,7 @@
             this.cardEmpleado.Controls.Add(this.pictureBox4);
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
-            this.cardEmpleado.Location = new System.Drawing.Point(636, 231);
+            this.cardEmpleado.Location = new System.Drawing.Point(657, 301);
             this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
