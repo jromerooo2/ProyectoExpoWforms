@@ -90,6 +90,7 @@ namespace SistemGestionBuses
         private void frmIngresarDirecciones_Load(object sender, EventArgs e)
         {
              dt = new DataTable();
+            txtDesc.Visible = false;
             dt.Columns.Add(new DataColumn("Descripción", typeof(string)));
             dt.Columns.Add(new DataColumn("Lat", typeof(double)));
             dt.Columns.Add(new DataColumn("Long", typeof(double)));
@@ -177,6 +178,15 @@ namespace SistemGestionBuses
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvPuntos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int filseleccionada = e.RowIndex;
+            txtlatitud.Text = dgvPuntos.Rows[filseleccionada].Cells[1].Value.ToString();
+            txtlongitud.Text = dgvPuntos.Rows[filseleccionada].Cells[2].Value.ToString();
+            marker.Position = new PointLatLng(Convert.ToDouble(txtlatitud.Text), Convert.ToDouble(txtlongitud.Text));
+            gMapControl1.Position = marker.Position;
         }
     }
 }

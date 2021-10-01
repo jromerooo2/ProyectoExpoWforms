@@ -57,6 +57,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cmbViajes = new System.Windows.Forms.ComboBox();
             this.dgvPuntos = new System.Windows.Forms.DataGridView();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtlatitud = new System.Windows.Forms.TextBox();
+            this.txtlongitud = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,6 +76,11 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.label);
+            this.panel4.Controls.Add(this.txtlongitud);
+            this.panel4.Controls.Add(this.txtlatitud);
+            this.panel4.Controls.Add(this.txtDesc);
             this.panel4.Controls.Add(this.dgvPuntos);
             this.panel4.Controls.Add(this.cmbViajes);
             this.panel4.Controls.Add(this.label7);
@@ -410,9 +420,64 @@
             this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPuntos.Location = new System.Drawing.Point(224, 254);
             this.dgvPuntos.Name = "dgvPuntos";
+            this.dgvPuntos.ReadOnly = true;
             this.dgvPuntos.RowTemplate.Height = 24;
             this.dgvPuntos.Size = new System.Drawing.Size(214, 150);
             this.dgvPuntos.TabIndex = 112;
+            this.dgvPuntos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPuntos_CellMouseClick);
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(26, 335);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(112, 29);
+            this.txtDesc.TabIndex = 113;
+            // 
+            // txtlatitud
+            // 
+            this.txtlatitud.Location = new System.Drawing.Point(445, 281);
+            this.txtlatitud.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlatitud.Multiline = true;
+            this.txtlatitud.Name = "txtlatitud";
+            this.txtlatitud.ReadOnly = true;
+            this.txtlatitud.Size = new System.Drawing.Size(166, 29);
+            this.txtlatitud.TabIndex = 114;
+            // 
+            // txtlongitud
+            // 
+            this.txtlongitud.Location = new System.Drawing.Point(445, 351);
+            this.txtlongitud.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlongitud.Multiline = true;
+            this.txtlongitud.Name = "txtlongitud";
+            this.txtlongitud.ReadOnly = true;
+            this.txtlongitud.Size = new System.Drawing.Size(166, 29);
+            this.txtlongitud.TabIndex = 115;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(445, 254);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(73, 23);
+            this.label.TabIndex = 116;
+            this.label.Text = "Latitud:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(445, 324);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 23);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "Longitud:";
             // 
             // frmIngresarDirecciones
             // 
@@ -473,5 +538,10 @@
         private System.Windows.Forms.ComboBox cmbViajes;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvPuntos;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox txtlongitud;
+        private System.Windows.Forms.TextBox txtlatitud;
+        private System.Windows.Forms.Label label1;
     }
 }
