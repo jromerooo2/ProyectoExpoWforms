@@ -471,6 +471,23 @@ namespace Modelo
             }
         }
 
+        public static int ObtenerIDEmpleadoFirstUse(string nombre_empleado)
+        {
+            int id;
+            try
+            {
+                string instruccion = "SELECT id_empleado FROM tb_empleados a WHERE a.nombres_empleado = BINARY ?param1";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", nombre_empleado));
+                id = Convert.ToInt32(cmdid.ExecuteScalar());
+                return id;
+            }
+            catch (Exception)
+            {
+                return id = 0;
+            }
+        }
+
         public static string ObtenerNombreConduc(int pid)
         {
             string empleado;

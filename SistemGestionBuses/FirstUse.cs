@@ -285,11 +285,7 @@ namespace SistemGestionBuses
                 string email = txtEmail.Text;
                 string password = txtNueva.Text;
                 string PIN = txtPIN.Text;
-                AtributosLogin.username = user;
-                ControladorLogin.GetCargo();
-                cargo = ControladorLogin.res[0];
-                ControladorLogin.GetId();               
-                int id = ControladorLogin.res[1];
+                int id = control.ObtenerIDEmpleado_Controller(dui, nit);
                 ControladorUsuario usercontrol = new ControladorUsuario();
                 bool res2 = usercontrol.RegistrarPRIMERUsuario(user, password, email, cargo, id, PIN);
                 if (res2 == true)
