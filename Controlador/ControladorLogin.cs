@@ -14,7 +14,7 @@ namespace Controlador
                 string passwordMD5 = ValidacionesClass.Encrypt(password);               
                 return ModeloLogin.Login(username, passwordMD5);
             }
-        static List<int> res = new List<int>();
+        public static List<int> res = new List<int>();
         public static int GetCargo()
         {
             res = ModeloLogin.getUserInfo(username);
