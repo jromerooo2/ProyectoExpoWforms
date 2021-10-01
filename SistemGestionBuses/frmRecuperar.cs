@@ -53,7 +53,7 @@ namespace SistemGestionBuses
                 }
                 else
                 {
-                    MessageBox.Show("Algo fallo en el proceso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Verifica que exista un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }

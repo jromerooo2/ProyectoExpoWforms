@@ -33,7 +33,7 @@ namespace SistemGestionBuses
         private void cardClientes_Paint(object sender, PaintEventArgs e)
         {
         }
-
+        #region pdfclientes
         private void pdf(string[] columnas, float[] tamanios)
         {
             PdfWriter pdfw = new PdfWriter("ReporteClientes.pdf");
@@ -65,7 +65,7 @@ namespace SistemGestionBuses
             document.Close();
             MessageBox.Show("Se ha generado un documento PDF con el reporte.");
         }
-
+        #endregion pdfclientes
         //Defining array of sizes and columns to grab from BD 
         public string[] columnasCliente = { "Nombres", "Apellidos", "Teléfono", "Dirección", "Correo Electrónico" };
         public float[] tamaniosCliente = { 4, 4, 4, 4, 4 };
@@ -98,7 +98,7 @@ namespace SistemGestionBuses
             //pdf(columnasTransporte, tamaniosTransporte, 2);
             pdfTransporte(columnasTransporte, tamaniosTransporte);
         }
-
+        #region pdftransporte
         private void pdfTransporte(string[] columnas, float[] tamanios)
         {
             PdfWriter pdfw = new PdfWriter("ReporteTransporte.pdf");
@@ -131,7 +131,7 @@ namespace SistemGestionBuses
             document.Close();
             MessageBox.Show("Se ha generado un documento PDF con el reporte.");
         }
-
+        #endregion pdftransporte
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             pdfTransporte(columnasTransporte, tamaniosTransporte);
@@ -148,7 +148,7 @@ namespace SistemGestionBuses
         }
 
 
-
+        #region pdfempleado
         private void pdfEmpleado(string[] columnas, float[] tamanios)
         {
             PdfWriter pdfw = new PdfWriter("ReportEmpleados.pdf");
@@ -181,5 +181,6 @@ namespace SistemGestionBuses
             document.Close();
             MessageBox.Show("Se ha generado un documento PDF con el reporte.");
         }
+        #endregion pdfempleado
     }
 }
