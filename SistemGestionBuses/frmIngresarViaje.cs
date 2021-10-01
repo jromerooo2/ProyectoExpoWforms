@@ -17,20 +17,19 @@ namespace SistemGestionBuses
         public frmIngresarViaje()
         {
             InitializeComponent();
+            dgvViajes.AutoGenerateColumns = true;
             CargarDatosCMB();
             CargarGridDatos();
         }
-        public DataTable datosViajes;
 
         public bool Vacio()
         {
-            if (txtNombreViaje.Text.Trim() == "" &&
-            txtTarifaViaje.Text.Trim() == "" &&
-            cmbCliente.SelectedIndex == 0 &&
-            cmbConductor.SelectedIndex == 0 &&
-            cmbEstadoViaje.SelectedIndex == 0 &&
-            cmbTipoDestino.SelectedIndex == 0 &&
-            cmbCliente.SelectedIndex == 0)
+            if (txtNombreViaje.Text.Trim() == "" ||
+            txtTarifaViaje.Text.Trim() == "" ||
+            cmbCliente.SelectedIndex == -1 ||
+            cmbConductor.SelectedIndex == -1 ||
+            cmbEstadoViaje.SelectedIndex == -1 ||
+            cmbTipoDestino.SelectedIndex == -1)
             {
                 return true;
             }
@@ -43,8 +42,10 @@ namespace SistemGestionBuses
 
         void CargarGridDatos()
         {
-            datosViajes = ControladorViaje.ViajesController();
-            dataGridView1.DataSource = datosViajes;
+            //MessageBox.Show(dtpFechaPartida.Text);
+            //MessageBox.Show(dtpFechaRetorno.Text);
+            DataTable data = ControladorViaje.ObtenerViajes();
+            dgvViajes.DataSource = data;
         }
 
         //Metodo para limpiar los campos
@@ -65,7 +66,7 @@ namespace SistemGestionBuses
         {
             try
             {
-                CargarUnidadTransporte();
+                CargarCliente();
                 CargarTipoUnidadTransporte();
                 CargarMunicipios();
                 CargarConductor();
@@ -83,14 +84,14 @@ namespace SistemGestionBuses
 
         //Region de todos los metodos para cargar los combobox
         #region CMB
-        void CargarUnidadTransporte()
+        void CargarCliente()
         {
             try
             {
-                DataTable dataUnidad = ControladorViaje.ObtenerUnidad();
+                DataTable dataUnidad = ControladorViaje.ObtenerCliente();
                 cmbCliente.DataSource = dataUnidad;
-                cmbCliente.DisplayMember = "id_unidad_transporte";
-                cmbCliente.ValueMember = "id_unidad_transporte";
+                cmbCliente.DisplayMember = "nombres_cliente";
+                cmbCliente.ValueMember = "id_cliente";
             }
             catch (Exception)
             {
@@ -141,8 +142,8 @@ namespace SistemGestionBuses
             {
                 DataTable dataTransporte = ControladorViaje.ObtenerTipoUnidadTransporte();
                 cmbUnidadTransporte.DataSource = dataTransporte;
-                cmbUnidadTransporte.DisplayMember = "tipo_unidad";
-                cmbUnidadTransporte.ValueMember = "id_tipo_unidad";
+                cmbUnidadTransporte.DisplayMember = "id_unidad_transporte";
+                cmbUnidadTransporte.ValueMember = "id_unidad_transporte";
             }
             catch (Exception)
             {
@@ -209,21 +210,22 @@ namespace SistemGestionBuses
         void EnvioDatos()
         {
             
-            string nombreViaje, fecha_partida, hora_partida, fecha_retorno, hora_retorno,tarifa ;
-            int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio;
+            string nombreViaje, fecha_partida, fecha_retorno,tarifa ;
+            int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio, id_cliente;
             nombreViaje = txtNombreViaje.Text;
-            fecha_partida = dtpFechaRetorno.Text;
-            hora_partida = dtpHoraRetorno.Text;
+            fecha_partida = dtpFechaPartida.Text;
             fecha_retorno = dtpFechaRetorno.Text;
-            hora_retorno = dtpHoraRetorno.Text;
             tarifa = txtTarifaViaje.Text;
-            id_unidad = Convert.ToInt32(cmbUnidadTransporte.SelectedValue);
-            id_estado_viaje = Convert.ToInt32(cmbEstadoViaje.SelectedValue);
-            id_tipo_viaje = Convert.ToInt32(cmbTipoDestino.SelectedValue);
-            id_conductor = Convert.ToInt32(cmbConductor.SelectedValue);
-            id_municipio = Convert.ToInt32(cmbMunicipios.SelectedValue);
+            id_unidad = Convert.ToInt16(cmbUnidadTransporte.SelectedValue);
+            id_estado_viaje = Convert.ToInt16(cmbEstadoViaje.SelectedValue);
+            id_cliente = Convert.ToInt16(cmbCliente.SelectedValue);
+            id_tipo_viaje = Convert.ToInt16(cmbTipoDestino.SelectedValue) ;
+            id_conductor = Convert.ToInt16(cmbConductor.SelectedValue);
+            id_municipio = Convert.ToInt16(cmbMunicipios.SelectedValue);
             //Llamar a la clase por objeto
-            ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_unidad, id_conductor, fecha_partida, hora_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio);
+            MessageBox.Show(fecha_partida);
+            MessageBox.Show(fecha_retorno);
+            ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_cliente, id_unidad, id_conductor, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
             bool res = viajeController.EnviarDatos_ControllerViaje();
             if (res == true)
             {
@@ -244,12 +246,12 @@ namespace SistemGestionBuses
         private void frmIngresarViaje_Load(object sender, EventArgs e)
         {
             CargarDatosCMB();
+            CargarGridDatos();
             LimpiarCampos();
         }
 
         private void btnCrearViaje_Click(object sender, EventArgs e)
         {
-            Vacio();
             if (Vacio() == true)
             {
                 MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -303,6 +305,31 @@ namespace SistemGestionBuses
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CargarGridDatos();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panelGrid_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbConductor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

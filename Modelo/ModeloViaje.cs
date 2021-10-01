@@ -17,7 +17,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_tipo_unidad ORDER BY tipo_unidad ASC";
+                string instruccion = "SELECT * FROM tb_unidad_transporte";
                 MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
                 data = new DataTable();
@@ -29,12 +29,12 @@ namespace Modelo
                 return data = null;
             }
         }
-        public static DataTable CargarUnidadTransporte()
+        public static DataTable ObtenerCliente()
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tb_unidad_transporte";
+                string instruccion = "SELECT * FROM tb_cliente";
                 MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
                 data = new DataTable();
@@ -70,7 +70,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM tb_empleados";
+                string query = "SELECT * FROM tb_empleados WHERE id_cargo=1";
                 MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
                 data = new DataTable();
@@ -179,13 +179,13 @@ namespace Modelo
         #endregion
 
         #region CRUD
-        public static bool RegistrarViaje(string pNombre_viaje, int pidUnidad, int pidConductor,string pfecha_inicio,  string phora_inicio, string ptarifa, int pidEstado_viaje, int pidTipo_viaje, string pfecha_retorno, string phora_retorno, int pidMunicipio)
+        public static bool RegistrarViaje(string pNombre_viaje,int pidCliente,int pidUnidad, int pidConductor,string pfecha_inicio, string ptarifa, int pidEstado_viaje, int pidTipo_viaje, string pfecha_retorno, int pidMunicipio)
         {
             bool retorno = false;
             try
             {
                 //INCERCION
-                MySqlCommand cmdinsertviaje = new MySqlCommand(string.Format("INSET INTO tb_viajes (nombre_viaje, id_unidad, id_empleado, fecha_inicio, hora_inicio, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, hora_retorno, id_municipio) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}', '{9}', '{10}')", pNombre_viaje, pidUnidad, pidConductor, pfecha_inicio, phora_inicio , ptarifa, pidEstado_viaje, pidTipo_viaje, pfecha_retorno, phora_retorno, pidMunicipio), ModeloConexion.GetConnection());
+                MySqlCommand cmdinsertviaje = new MySqlCommand(string.Format("INSERT INTO tb_viajes (nombre_viaje,cliente,id_unidad, id_empleado, fecha_inicio, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}', '{9}')", pNombre_viaje, pidCliente, pidUnidad, pidConductor, pfecha_inicio , ptarifa, pidEstado_viaje, pidTipo_viaje, pfecha_retorno, pidMunicipio), ModeloConexion.GetConnection());
                 //VERIFICACION
                 retorno = Convert.ToBoolean(cmdinsertviaje.ExecuteNonQuery());
                 //RETORNO
@@ -203,10 +203,9 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM tb_viajes;";
-                MySqlCommand cmdViajes = new MySqlCommand(string.Format(query),
-                    ModeloConexion.GetConnection());
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmdViajes);
+                string query = "SELECT * FROM tb_viajes";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
