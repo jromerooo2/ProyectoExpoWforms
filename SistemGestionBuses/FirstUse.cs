@@ -291,7 +291,7 @@ namespace SistemGestionBuses
                 if (res2 == true)
                 {
                     Close();
-                    NotificaciónConfirmación();
+                    NotificacionConfirmacion();
                     frmLogin login = new frmLogin();
                     login.Show();
                 }
@@ -306,7 +306,7 @@ namespace SistemGestionBuses
             }
         }
 
-        void NotificaciónConfirmación()
+        void NotificacionConfirmacion()
         {
             nfConfirmacion.Icon = new System.Drawing.Icon(Path.GetFullPath(@"../../Resources/icons8_checked.ico"));
             nfConfirmacion.Text = "Primer usuario registrado exitosamente";
