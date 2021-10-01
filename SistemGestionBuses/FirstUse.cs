@@ -20,7 +20,7 @@ namespace SistemGestionBuses
             CardPaso2.Enabled = false;
             CardPaso3.Enabled = false;
             CardPaso4.Enabled = false;
-            btnFinalizar.Enabled = true;
+            btnFinalizar.Enabled = false;
             CargarMunicipio();
         }
 
@@ -236,6 +236,7 @@ namespace SistemGestionBuses
                     {
                         if (NIT.Length == 17 && DUI.Length == 10)
                         {
+                            CardPaso4.Enabled = false;
                             btnFinalizar.Enabled = true;
                             NotificacionConfirmacionInfo();
                         }
@@ -272,7 +273,7 @@ namespace SistemGestionBuses
             //id_estado = activo
             int estado = 1;
             //id_genero = undefined xd
-            int genero = 3;
+            int genero = 1;
             //id_cargo = admin
             int cargo = 2;
             int id_muni = Convert.ToInt32(cmbMunicipio.SelectedValue);
@@ -282,11 +283,13 @@ namespace SistemGestionBuses
             {
                 string user = txtUser.Text;
                 string email = txtEmail.Text;
-                string password = ValidacionesClass.Encrypt(txtNueva.Text);
+                string password = txtNueva.Text;
+                string PIN = txtPIN.Text;
                 AtributosLogin.username = user;
+                cargo = ControladorLogin.GetCargo();
                 int id = ControladorLogin.GetId();
                 ControladorUsuario usercontrol = new ControladorUsuario();
-                bool res2 = usercontrol.RegistrarUsuario(user, email, cargo, id, null);
+                bool res2 = usercontrol.RegistrarPRIMERUsuario(user, password, email, cargo, id, PIN);
                 if (res2 == true)
                 {
                     Close();
@@ -294,6 +297,14 @@ namespace SistemGestionBuses
                     frmLogin login = new frmLogin();
                     login.Show();
                 }
+                else
+                {
+                    MessageBox.Show("Usuario no registrado");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Empleado no registrado");
             }
         }
 

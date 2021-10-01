@@ -242,5 +242,23 @@ namespace Modelo
                 return res;
             }
         }
+        public static bool RegistrarPrimerUser(int pid_empleado, string user,string correo, int cargo, string password, string PIN)
+        {
+            bool res = false;
+            try
+            {
+                string img = null;
+                int estado = 1;
+                int primer_uso = 1;
+                int sesion = 0;
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin, foto_usuario, sesion, primer_uso) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", pid_empleado, user, correo, password, cargo, estado, PIN, img, primer_uso, sesion), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(insert.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+            }
+        }
     }
 }
