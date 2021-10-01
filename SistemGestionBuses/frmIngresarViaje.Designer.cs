@@ -496,6 +496,7 @@
             this.dgvViajes.RowTemplate.Height = 24;
             this.dgvViajes.Size = new System.Drawing.Size(746, 315);
             this.dgvViajes.TabIndex = 93;
+            this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellClick);
             this.dgvViajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3

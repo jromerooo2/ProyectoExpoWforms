@@ -30,16 +30,27 @@ namespace SistemGestionBuses
         {
             string direccion_inicio = txtDireccion_inicio.Text;
             string direccion_final = txtDireccion_final.Text;
+            int id_viaje = Convert.ToInt32(((DataRowView)cmbViajes.SelectedValue)["id_viaje"]);
             string adicional = txtAdicional.Text;
             string referencia1 = txtreferenciaInicio.Text;
             string referencia2 = txtreferenciaFinal.Text;
-            string referencia3 = txtreferenciaAdicional.Text;
-
-            gMapControl1.SetPositionByKeywords(direccion_inicio);
+            string referencia3 = txtreferenciaAdicional.Text;       
 
             if (!Empty(direccion_inicio, direccion_final, adicional, referencia1, referencia2, referencia3))
             {
-                ControladorDirecciones.Save(direccion_inicio, direccion_final, adicional, referencia1, referencia2, referencia3);
+                bool res = ControladorDirecciones.Save(id_viaje,direccion_inicio, direccion_final, adicional, referencia1, referencia2, referencia3);
+                if (res)
+                {
+                    MessageBox.Show("Dirección registrada exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido ingresar la dirección, si este problema persiste por favor contacta al administrador.", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son requeridos .", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -66,73 +77,66 @@ namespace SistemGestionBuses
         {
 
         }
-        void CargarDepartamentos()
-        {
-            try
-            {
-                DataTable dataMunicipio = ControladorIngreso.ObtenerMunicipios();
-                cmbDepaInicio.DataSource = dataMunicipio;
-                cmbDepaInicio.DisplayMember = "departamento";
-                cmbDepaInicio.ValueMember = "id_departamento";
 
-                cmbDepaFinal.DataSource = dataMunicipio;
-                cmbDepaFinal.DisplayMember = "departamento";
-                cmbDepaFinal.ValueMember = "id_departamento";
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
-                                                 MessageBoxButtons.OK,
-                                                 MessageBoxIcon.Error);
-            }
-        }
-        void CargarMunicipios()
-        {
-            try
-            {
-                DataTable dataMunicipio = ControladorIngreso.ObtenerMunicipios();
-                cmbMunicipioFinal.DataSource = dataMunicipio;
-                cmbMunicipioFinal.DisplayMember = "municipio";
-                cmbMunicipio.ValueMember = "id_municipio";
 
-                cmbMunicipio.DataSource = dataMunicipio;
-                cmbMunicipio.DisplayMember = "municipio";
-                cmbMunicipio.ValueMember = "id_municipio";
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
-                                                 MessageBoxButtons.OK,
-                                                 MessageBoxIcon.Error);
-            }
-        }
+
 
 
         GMarkerGoogle marker;
         GMapOverlay overlay;
         static double LatInicial = 13.69;
         static double LongInicial = -89.19;
+        DataTable dt;
         private void frmIngresarDirecciones_Load(object sender, EventArgs e)
         {
-            CargarDepartamentos();
-            CargarMunicipios();
+             dt = new DataTable();
+            dt.Columns.Add(new DataColumn("Descripción", typeof(string)));
+            dt.Columns.Add(new DataColumn("Lat", typeof(double)));
+            dt.Columns.Add(new DataColumn("Long", typeof(double)));
+
+            dt.Rows.Add("Ubicacion 1", LatInicial, LongInicial);
+            dgvPuntos.DataSource = dt;
+            dgvPuntos.Columns[1].Visible = false;
+            dgvPuntos.Columns[2].Visible = false;
+
+
+            CargarViajes();
             //Initial Settings
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(lat_ElSalvador , longt_ElSalvador);
+            gMapControl1.Position= new PointLatLng(lat_ElSalvador, longt_ElSalvador);
             gMapControl1.MinZoom = 0;
             gMapControl1.MaxZoom = 24;
             gMapControl1.AutoScroll = true;
             gMapControl1.Zoom = 10;
 
-            marker = new GMarkerGoogle(new PointLatLng(LatInicial, LongInicial), GMarkerGoogleType.blue);
-            overlay = new GMapOverlay();
+            marker = new GMarkerGoogle(new PointLatLng(LatInicial, LongInicial), GMarkerGoogleType.purple);
+            overlay = new GMapOverlay("Markers");
             overlay.Markers.Add(marker); //agregando el marker al overlay
+            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+            marker.ToolTipText = string.Format("Ubicación \n Latitud: {0} \n Longitud: {1}", LatInicial, LongInicial);
 
             //ahora al mapa xd
             gMapControl1.Overlays.Add(overlay);
 
+        }
+
+        private void CargarViajes()
+        {
+            try
+            {
+                DataTable dataMunicipio = ControladorIngreso.ObtenerViajes();
+                cmbViajes.DataSource = dataMunicipio;
+                cmbViajes.DisplayMember = "nombre_viaje";
+                cmbViajes.ValueMember = "id_viaje";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
         }
 
         private void btnCargarMapa_Click(object sender, EventArgs e)

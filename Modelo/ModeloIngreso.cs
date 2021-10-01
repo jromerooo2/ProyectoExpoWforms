@@ -30,6 +30,9 @@ namespace Modelo
                 return data = null;
             }
         }
+
+
+
         //Estado inner
         public static DataTable CargarEstadoInner(int id)
         {
@@ -142,6 +145,24 @@ namespace Modelo
             }
         }
 
+        public static DataTable ObtenerDepartamento()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_departamentos ORDER BY departamento ASC";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         //Municipio inner
         public static DataTable CargarMunicipioInner(int id)
         {
@@ -161,7 +182,25 @@ namespace Modelo
                 return data = null;
             }
         }
-    
+
+        public static DataTable ObtenerViajes()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tb_viajes";
+                MySqlCommand cmdCliente = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCliente);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         //Cargar Cliente
         public static DataTable CargarCliente()
         {
@@ -576,13 +615,13 @@ namespace Modelo
         }
 
 
-        public static bool SaveDir(string partida, string final, string adicional, string puntorefinicio, string pfinal, string padicional)
+        public static bool SaveDir(int id_viaje, string partida, string final, string adicional, string puntorefinicio, string pfinal, string padicional)
         {
             bool retorno = false;
             try
             {
 
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle(direccion_partida,punto_referencia_partida,direccion_destino, punto_referencia_destino ,direccion_adicional, punto_referencia_adicional) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", partida, puntorefinicio, final, pfinal, adicional, padicional),  ModeloConexion.GetConnection() );
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle(id_viaje, direccion_partida,punto_referencia_partida,direccion_destino, punto_referencia_destino ,direccion_adicional, punto_referencia_adicional) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",id_viaje, partida, puntorefinicio, final, pfinal, adicional, padicional),  ModeloConexion.GetConnection() );
 
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
 

@@ -9,9 +9,9 @@ namespace Controlador
 {
     public class ControladorDirecciones
     {
-        public static bool Save(string partida, string final, string adicional, string pinicio, string pfinal, string padicional)
+        public static bool Save(int id_viaje, string partida, string final, string adicional, string pinicio, string pfinal, string padicional)
         {
-            return ModeloIngreso.SaveDir(partida, final, adicional, pinicio, pfinal, padicional);
+            return ModeloIngreso.SaveDir(id_viaje, partida, final, adicional, pinicio, pfinal, padicional);
         }
     }
 }

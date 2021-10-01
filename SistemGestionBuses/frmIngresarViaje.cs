@@ -331,5 +331,10 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void dgvViajes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

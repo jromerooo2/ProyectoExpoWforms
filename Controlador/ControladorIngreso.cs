@@ -12,6 +12,10 @@ namespace Controlador
     {
         #region CMB - INNER
         //cmb Municipio
+        public static DataTable ObtenerDepartamento()
+        {
+            return ModeloIngreso.ObtenerDepartamento();
+        }
         public static DataTable ObtenerMunicipios()
         {
             return ModeloIngreso.CargarMunicipios();
@@ -72,6 +76,8 @@ namespace Controlador
         public string NIT { get; set; }
         public string direccion_empleado { get; set; }
         public string telefono_empleado { get; set; }
+
+
         public string nacimiento_empleado { get; set; }
         public int id_genero { get; set; }
         public int id_estado_empleado { get; set; }
@@ -136,6 +142,11 @@ namespace Controlador
         public static DataTable CargarConductores_Controller()
         {
             return ModeloIngreso.ObtenerListaConductores();
+        }
+
+        public static DataTable ObtenerViajes()
+        {
+            return ModeloIngreso.ObtenerViajes();
         }
 
         //Cargar el combobox tipo licencia
