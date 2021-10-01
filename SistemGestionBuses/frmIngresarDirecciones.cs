@@ -39,7 +39,7 @@ namespace SistemGestionBuses
 
             if (!Empty(direccion_inicio, direccion_final, adicional, referencia1, referencia2, referencia3))
             {
-                ControladorDirecciones.Save(direccion_inicio, direccion_final, adicional);
+                ControladorDirecciones.Save(direccion_inicio, direccion_final, adicional, referencia1, referencia2, referencia3);
             }
         }
 

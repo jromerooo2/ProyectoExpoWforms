@@ -20,7 +20,25 @@ namespace SistemGestionBuses
             CardPaso2.Enabled = false;
             CardPaso3.Enabled = false;
             CardPaso4.Enabled = false;
-            btnFinalizar.Enabled = false;
+            btnFinalizar.Enabled = true;
+            CargarMunicipio();
+        }
+
+        void CargarMunicipio()
+        {
+            try
+            {
+                DataTable dataMunicipio = ControladorIngreso.ObtenerMunicipios();
+                cmbMunicipio.DataSource = dataMunicipio;
+                cmbMunicipio.DisplayMember = "municipio";
+                cmbMunicipio.ValueMember = "id_municipio";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los municipios.", "Error de carga",
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+            }
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
@@ -169,7 +187,7 @@ namespace SistemGestionBuses
 
         private void txtPIN_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -181,7 +199,7 @@ namespace SistemGestionBuses
 
         private void txtCode_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -203,20 +221,27 @@ namespace SistemGestionBuses
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            string direccion, nombre_empr, telefono;
+            string direccion, nombre_empr, telefono, NIT, DUI;
             direccion = txtDireccion.Text;
             nombre_empr = txtNameEnterprise.Text;
             telefono = txtTelefono.Text;
-            if (!String.IsNullOrEmpty(direccion) || !String.IsNullOrWhiteSpace(direccion) || !String.IsNullOrEmpty(nombre_empr) || !String.IsNullOrWhiteSpace(nombre_empr) || !String.IsNullOrEmpty(telefono) || !String.IsNullOrWhiteSpace(telefono))
+            DUI = TxtDUI.Text;
+            NIT = txtNIT.Text;
+            int id_municipio = Convert.ToInt32(cmbMunicipio.SelectedValue);
+            if (!String.IsNullOrEmpty(direccion) || !String.IsNullOrEmpty(DUI) || !String.IsNullOrEmpty(nombre_empr) || !String.IsNullOrEmpty(NIT) || !String.IsNullOrEmpty(telefono))
             {
                 if (telefono.Trim().Length > 13)
                 {
                     if (direccion.Length >= 45)
                     {
-                        if (ValidacionesClass.hasSpecialChars(nombre_empr) == false)
+                        if (NIT.Length == 17 && DUI.Length == 10)
                         {
                             btnFinalizar.Enabled = true;
                             NotificacionConfirmacionInfo();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El NIT o el DUI no son validos, verifica que esten correctos", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -237,12 +262,54 @@ namespace SistemGestionBuses
 
         void EnviarDatos()
         {
+            string date = DateTime.Today.ToString();
+            string empresa, direccion, telefono, dui, nit;
+            empresa = txtNameEnterprise.Text;
+            direccion = txtDireccion.Text;
+            telefono = txtTelefono.Text;
+            dui = TxtDUI.Text;
+            nit = txtNIT.Text;
+            //id_estado = activo
+            int estado = 1;
+            //id_genero = undefined xd
+            int genero = 3;
+            //id_cargo = admin
+            int cargo = 2;
+            int id_muni = Convert.ToInt32(cmbMunicipio.SelectedValue);
+            ControladorIngreso control = new ControladorIngreso(empresa, empresa, dui, nit, direccion, telefono, genero, estado, cargo, id_muni, date);
+            bool res = control.EnviarDatosControlador();
+            if (res == true)
+            {
+                string user = txtUser.Text;
+                string email = txtEmail.Text;
+                string password = ValidacionesClass.Encrypt(txtNueva.Text);
+                AtributosLogin.username = user;
+                int id = ControladorLogin.GetId();
+                ControladorUsuario usercontrol = new ControladorUsuario();
+                bool res2 = usercontrol.RegistrarUsuario(user, email, cargo, id, null);
+                if (res2 == true)
+                {
+                    Close();
+                    NotificaciónConfirmación();
+                    frmLogin login = new frmLogin();
+                    login.Show();
+                }
+            }
+        }
 
+        void NotificaciónConfirmación()
+        {
+            nfConfirmacion.Icon = new System.Drawing.Icon(Path.GetFullPath(@"../../Resources/icons8_checked.ico"));
+            nfConfirmacion.Text = "Primer usuario registrado exitosamente";
+            nfConfirmacion.Visible = true;
+            nfConfirmacion.BalloonTipTitle = "Locus System esta listo para ti!";
+            nfConfirmacion.BalloonTipText = "Disfruta del sistema hecho por nuestro equipo de desarrollo, te acompañaremos en tus viajes, ingresa con tus nuevas creedenciales";
+            nfConfirmacion.ShowBalloonTip(150);
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-
+            EnviarDatos();
         }
     }
 }
