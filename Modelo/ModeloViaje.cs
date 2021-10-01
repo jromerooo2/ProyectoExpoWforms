@@ -216,20 +216,20 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarDirecciones(int pidViaje, List<string> pdirecciones, List<string> ppuntos_referencia)
-        {
-            bool retorno = false;
-                try
-                {
-                    MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle (id_viaje, direccion_partida, punto_referencia_partida, direccion_destino, punto_referencia_destino, direccion_adicional, punto_referencia_adicional) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", pidViaje, pdirecciones[0], ppuntos_referencia[0], pdirecciones[1], ppuntos_referencia[1], pdirecciones[2], ppuntos_referencia[2]), ModeloConexion.GetConnection());
-                    retorno = Convert.ToBoolean(cmdinsertdireccion.ExecuteNonQuery());
-                    return retorno;
-                }
-                catch (Exception)
-                {
-                    return retorno;
-                }
-        }
+        //public static bool RegistrarDirecciones(int pidViaje, List<string> pdirecciones, List<string> ppuntos_referencia)
+        //{
+        //    bool retorno = false;
+        //        try
+        //        {
+        //            MySqlCommand cmdinsertdireccion = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle (id_viaje, direccion_partida, punto_referencia_partida, direccion_destino, punto_referencia_destino, direccion_adicional, punto_referencia_adicional) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", pidViaje, pdirecciones[0], ppuntos_referencia[0], pdirecciones[1], ppuntos_referencia[1], pdirecciones[2], ppuntos_referencia[2]), ModeloConexion.GetConnection());
+        //            retorno = Convert.ToBoolean(cmdinsertdireccion.ExecuteNonQuery());
+        //            return retorno;
+        //        }
+        //        catch (Exception)
+        //        {
+        //            return retorno;
+        //        }
+        //}
         #endregion
     }
 }

@@ -31,6 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresarDirecciones));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnRutas = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtlongitud = new System.Windows.Forms.TextBox();
+            this.txtlatitud = new System.Windows.Forms.TextBox();
+            this.dgvPuntos = new System.Windows.Forms.DataGridView();
+            this.cmbViajes = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtreferenciaAdicional = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtreferenciaFinal = new System.Windows.Forms.TextBox();
@@ -51,25 +61,15 @@
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbViajes = new System.Windows.Forms.ComboBox();
-            this.dgvPuntos = new System.Windows.Forms.DataGridView();
-            this.txtlatitud = new System.Windows.Forms.TextBox();
-            this.txtlongitud = new System.Windows.Forms.TextBox();
-            this.label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnRutas = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -104,6 +104,143 @@
             this.panel4.Size = new System.Drawing.Size(643, 433);
             this.panel4.TabIndex = 97;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // btnRutas
+            // 
+            this.btnRutas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRutas.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutas.ForeColor = System.Drawing.Color.White;
+            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
+            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRutas.Location = new System.Drawing.Point(439, 270);
+            this.btnRutas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRutas.Name = "btnRutas";
+            this.btnRutas.Size = new System.Drawing.Size(172, 44);
+            this.btnRutas.TabIndex = 119;
+            this.btnRutas.Text = "Generar Rutas";
+            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutas.UseVisualStyleBackColor = false;
+            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.Location = new System.Drawing.Point(439, 380);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(172, 44);
+            this.btnEliminar.TabIndex = 118;
+            this.btnEliminar.Text = "Eliminar Punto";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 364);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 23);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "Longitud:";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(22, 304);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(73, 23);
+            this.label.TabIndex = 116;
+            this.label.Text = "Latitud:";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(438, 322);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(173, 50);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar Punto";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtlongitud
+            // 
+            this.txtlongitud.Location = new System.Drawing.Point(26, 391);
+            this.txtlongitud.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlongitud.Multiline = true;
+            this.txtlongitud.Name = "txtlongitud";
+            this.txtlongitud.ReadOnly = true;
+            this.txtlongitud.Size = new System.Drawing.Size(178, 29);
+            this.txtlongitud.TabIndex = 115;
+            // 
+            // txtlatitud
+            // 
+            this.txtlatitud.Location = new System.Drawing.Point(26, 331);
+            this.txtlatitud.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlatitud.Multiline = true;
+            this.txtlatitud.Name = "txtlatitud";
+            this.txtlatitud.ReadOnly = true;
+            this.txtlatitud.Size = new System.Drawing.Size(178, 29);
+            this.txtlatitud.TabIndex = 114;
+            // 
+            // dgvPuntos
+            // 
+            this.dgvPuntos.AllowUserToAddRows = false;
+            this.dgvPuntos.AllowUserToDeleteRows = false;
+            this.dgvPuntos.AllowUserToResizeColumns = false;
+            this.dgvPuntos.AllowUserToResizeRows = false;
+            this.dgvPuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPuntos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPuntos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.dgvPuntos.Location = new System.Drawing.Point(224, 249);
+            this.dgvPuntos.Name = "dgvPuntos";
+            this.dgvPuntos.ReadOnly = true;
+            this.dgvPuntos.RowTemplate.Height = 24;
+            this.dgvPuntos.Size = new System.Drawing.Size(196, 166);
+            this.dgvPuntos.TabIndex = 112;
+            this.dgvPuntos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuntos_CellContentClick);
+            this.dgvPuntos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPuntos_CellMouseClick);
+            // 
+            // cmbViajes
+            // 
+            this.cmbViajes.FormattingEnabled = true;
+            this.cmbViajes.Location = new System.Drawing.Point(26, 281);
+            this.cmbViajes.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbViajes.Name = "cmbViajes";
+            this.cmbViajes.Size = new System.Drawing.Size(178, 24);
+            this.cmbViajes.TabIndex = 111;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(22, 254);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 23);
+            this.label7.TabIndex = 110;
+            this.label7.Text = "Viaje:";
             // 
             // txtreferenciaAdicional
             // 
@@ -360,146 +497,9 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(22, 254);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 23);
-            this.label7.TabIndex = 110;
-            this.label7.Text = "Viaje:";
-            // 
-            // cmbViajes
-            // 
-            this.cmbViajes.FormattingEnabled = true;
-            this.cmbViajes.Location = new System.Drawing.Point(26, 281);
-            this.cmbViajes.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbViajes.Name = "cmbViajes";
-            this.cmbViajes.Size = new System.Drawing.Size(178, 24);
-            this.cmbViajes.TabIndex = 111;
-            // 
-            // dgvPuntos
-            // 
-            this.dgvPuntos.AllowUserToAddRows = false;
-            this.dgvPuntos.AllowUserToDeleteRows = false;
-            this.dgvPuntos.AllowUserToResizeColumns = false;
-            this.dgvPuntos.AllowUserToResizeRows = false;
-            this.dgvPuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPuntos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPuntos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.dgvPuntos.Location = new System.Drawing.Point(242, 254);
-            this.dgvPuntos.Name = "dgvPuntos";
-            this.dgvPuntos.ReadOnly = true;
-            this.dgvPuntos.RowTemplate.Height = 24;
-            this.dgvPuntos.Size = new System.Drawing.Size(196, 166);
-            this.dgvPuntos.TabIndex = 112;
-            this.dgvPuntos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuntos_CellContentClick);
-            this.dgvPuntos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPuntos_CellMouseClick);
-            // 
-            // txtlatitud
-            // 
-            this.txtlatitud.Location = new System.Drawing.Point(26, 331);
-            this.txtlatitud.Margin = new System.Windows.Forms.Padding(4);
-            this.txtlatitud.Multiline = true;
-            this.txtlatitud.Name = "txtlatitud";
-            this.txtlatitud.ReadOnly = true;
-            this.txtlatitud.Size = new System.Drawing.Size(178, 29);
-            this.txtlatitud.TabIndex = 114;
-            // 
-            // txtlongitud
-            // 
-            this.txtlongitud.Location = new System.Drawing.Point(26, 391);
-            this.txtlongitud.Margin = new System.Windows.Forms.Padding(4);
-            this.txtlongitud.Multiline = true;
-            this.txtlongitud.Name = "txtlongitud";
-            this.txtlongitud.ReadOnly = true;
-            this.txtlongitud.Size = new System.Drawing.Size(178, 29);
-            this.txtlongitud.TabIndex = 115;
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(22, 304);
-            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(73, 23);
-            this.label.TabIndex = 116;
-            this.label.Text = "Latitud:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 364);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 23);
-            this.label1.TabIndex = 117;
-            this.label1.Text = "Longitud:";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(459, 322);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(141, 50);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar Punto";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(459, 380);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(141, 44);
-            this.btnEliminar.TabIndex = 118;
-            this.btnEliminar.Text = "Eliminar Punto";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnRutas
-            // 
-            this.btnRutas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.btnRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRutas.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRutas.ForeColor = System.Drawing.Color.White;
-            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
-            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRutas.Location = new System.Drawing.Point(459, 270);
-            this.btnRutas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(141, 44);
-            this.btnRutas.TabIndex = 119;
-            this.btnRutas.Text = "Generar Rutas";
-            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.UseVisualStyleBackColor = false;
-            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(663, 533);
+            this.button2.Location = new System.Drawing.Point(784, 547);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 71);
@@ -510,7 +510,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(859, 533);
+            this.button3.Location = new System.Drawing.Point(1003, 547);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 71);
@@ -538,12 +538,12 @@
             this.Load += new System.EventHandler(this.frmIngresarDirecciones_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -54,6 +54,7 @@
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnCompartir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -72,8 +73,9 @@
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(842, 44);
+            this.panelBar.Size = new System.Drawing.Size(1123, 54);
             this.panelBar.TabIndex = 125;
             // 
             // bunifuImageButton5
@@ -83,9 +85,10 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(760, 8);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(1013, 10);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(27, 25);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(36, 31);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -99,9 +102,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(801, 8);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(1068, 10);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(29, 25);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(39, 31);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -115,9 +119,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(10, 9);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(13, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 24);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 30);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
@@ -145,13 +150,14 @@
             this.btnRastrear.IconVisible = true;
             this.btnRastrear.IconZoom = 50D;
             this.btnRastrear.IsTab = false;
-            this.btnRastrear.Location = new System.Drawing.Point(568, 339);
+            this.btnRastrear.Location = new System.Drawing.Point(757, 397);
+            this.btnRastrear.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnRastrear.Name = "btnRastrear";
             this.btnRastrear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnRastrear.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnRastrear.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRastrear.selected = false;
-            this.btnRastrear.Size = new System.Drawing.Size(241, 48);
+            this.btnRastrear.Size = new System.Drawing.Size(321, 59);
             this.btnRastrear.TabIndex = 126;
             this.btnRastrear.Text = "Rastrear Viajes Activos";
             this.btnRastrear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +179,9 @@
             this.toolStripLabel2,
             this.toolStripButton3,
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 440);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 542);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(842, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1123, 39);
             this.toolStrip1.TabIndex = 127;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -185,7 +191,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(32, 29);
+            this.toolStripButton1.Size = new System.Drawing.Size(32, 36);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // txtActiveUser
@@ -193,13 +199,13 @@
             this.txtActiveUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtActiveUser.ForeColor = System.Drawing.Color.White;
             this.txtActiveUser.Name = "txtActiveUser";
-            this.txtActiveUser.Size = new System.Drawing.Size(75, 29);
+            this.txtActiveUser.Size = new System.Drawing.Size(91, 36);
             this.txtActiveUser.Text = "active user";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // toolStripButton2
             // 
@@ -207,14 +213,14 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(32, 29);
+            this.toolStripButton2.Size = new System.Drawing.Size(32, 36);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel2.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 29);
+            this.toolStripLabel2.Size = new System.Drawing.Size(106, 36);
             this.toolStripLabel2.Text = "work position";
             // 
             // toolStripButton3
@@ -225,7 +231,7 @@
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(32, 29);
+            this.toolStripButton3.Size = new System.Drawing.Size(32, 36);
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -235,7 +241,7 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 29);
+            this.toolStripLabel1.Size = new System.Drawing.Size(67, 36);
             this.toolStripLabel1.Text = "Log Out";
             // 
             // label1
@@ -243,9 +249,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 112);
+            this.label1.Location = new System.Drawing.Point(24, 138);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 17);
+            this.label1.Size = new System.Drawing.Size(146, 21);
             this.label1.TabIndex = 128;
             this.label1.Text = "1. Activa tu GPS";
             // 
@@ -253,9 +260,10 @@
             // 
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 17);
+            this.label2.Location = new System.Drawing.Point(23, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 72);
+            this.label2.Size = new System.Drawing.Size(299, 89);
             this.label2.TabIndex = 129;
             this.label2.Text = "Pasos para compartir tu ubicación \r\ncon el sistema";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,20 +281,22 @@
             this.bunifuCards1.Controls.Add(this.label1);
             this.bunifuCards1.Controls.Add(this.label2);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(21, 77);
+            this.bunifuCards1.Location = new System.Drawing.Point(28, 95);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(259, 341);
+            this.bunifuCards1.Size = new System.Drawing.Size(345, 420);
             this.bunifuCards1.TabIndex = 130;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(16, 245);
+            this.label5.Location = new System.Drawing.Point(21, 302);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 30);
+            this.label5.Size = new System.Drawing.Size(320, 37);
             this.label5.TabIndex = 132;
             this.label5.Text = "4. Presiona el botón de \"Iniciar\".\r\n";
             // 
@@ -295,10 +305,11 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(-7, 275);
+            this.label6.Location = new System.Drawing.Point(-9, 338);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(248, 56);
+            this.label6.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.label6.Size = new System.Drawing.Size(331, 69);
             this.label6.TabIndex = 133;
             this.label6.Text = "5. Inicia tu viaje, Locus te acompañará hasta el final.\r\n";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,9 +318,10 @@
             // 
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 195);
+            this.label4.Location = new System.Drawing.Point(24, 240);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 39);
+            this.label4.Size = new System.Drawing.Size(260, 48);
             this.label4.TabIndex = 131;
             this.label4.Text = "3. Presiona este botón o escanea el codigo QR";
             // 
@@ -317,9 +329,10 @@
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(18, 147);
+            this.label3.Location = new System.Drawing.Point(24, 181);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 38);
+            this.label3.Size = new System.Drawing.Size(260, 47);
             this.label3.TabIndex = 130;
             this.label3.Text = "2. Verifica que tu conexión a internet sea estable.";
             // 
@@ -330,9 +343,10 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(568, 143);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(757, 176);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(169, 168);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(225, 207);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 99;
             this.bunifuImageButton2.TabStop = false;
@@ -342,9 +356,10 @@
             // 
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(575, 77);
+            this.label7.Location = new System.Drawing.Point(757, 67);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(224, 53);
+            this.label7.Size = new System.Drawing.Size(225, 65);
             this.label7.TabIndex = 134;
             this.label7.Text = "Viajes Activos\r\nactualmente:\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,10 +374,10 @@
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(707, 154);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(943, 190);
+            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(80, 73);
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(107, 90);
             this.bunifuMetroTextbox1.TabIndex = 137;
             this.bunifuMetroTextbox1.Text = "120!";
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -388,13 +403,14 @@
             this.btnCompartir.IconVisible = true;
             this.btnCompartir.IconZoom = 60D;
             this.btnCompartir.IsTab = false;
-            this.btnCompartir.Location = new System.Drawing.Point(312, 339);
+            this.btnCompartir.Location = new System.Drawing.Point(426, 397);
+            this.btnCompartir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnCompartir.Name = "btnCompartir";
             this.btnCompartir.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnCompartir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnCompartir.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCompartir.selected = false;
-            this.btnCompartir.Size = new System.Drawing.Size(241, 48);
+            this.btnCompartir.Size = new System.Drawing.Size(321, 59);
             this.btnCompartir.TabIndex = 138;
             this.btnCompartir.Text = "Compartir ubicación";
             this.btnCompartir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,20 +425,34 @@
             this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
             this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(326, 111);
+            this.bunifuImageButton4.Location = new System.Drawing.Point(435, 137);
+            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(200, 200);
+            this.bunifuImageButton4.Size = new System.Drawing.Size(267, 246);
             this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton4.TabIndex = 139;
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
             // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(422, 466);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(423, 49);
+            this.label8.TabIndex = 134;
+            this.label8.Text = "* Recuerda pedirle al conductor que active su ubicación para poder ver el viaje e" +
+    "n el mapa.";
+            // 
             // frmViajesActivos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.ClientSize = new System.Drawing.Size(842, 472);
+            this.ClientSize = new System.Drawing.Size(1123, 581);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.btnCompartir);
             this.Controls.Add(this.bunifuMetroTextbox1);
@@ -434,6 +464,7 @@
             this.Controls.Add(this.panelBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmViajesActivos";
             this.Load += new System.EventHandler(this.frmViajesActivos_Load);
             this.panelBar.ResumeLayout(false);
@@ -477,5 +508,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private Bunifu.Framework.UI.BunifuFlatButton btnCompartir;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
+        private System.Windows.Forms.Label label8;
     }
 }
