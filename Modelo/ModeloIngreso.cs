@@ -576,16 +576,16 @@ namespace Modelo
         }
 
 
-        public static bool SaveDir(string partida, string final, string adicional)
+        public static bool SaveDir(string partida, string final, string adicional, string puntorefinicio, string pfinal, string padicional)
         {
             bool retorno = false;
             try
             {
-                //INCERCION
-                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle(direccion_partida, direccion_destino, direccion_adicional) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", partida, final, adicional),  ModeloConexion.GetConnection() );
-                //VERIFICACION
+
+                MySqlCommand cmdinsert = new MySqlCommand(string.Format("INSERT INTO tb_direccion_detalle(direccion_partida,punto_referencia_partida,direccion_destino, punto_referencia_destino ,direccion_adicional, punto_referencia_adicional) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", partida, puntorefinicio, final, pfinal, adicional, padicional),  ModeloConexion.GetConnection() );
+
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
-                //RETORNO
+
                 return retorno;
             }
             catch (Exception)
