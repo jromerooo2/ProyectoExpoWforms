@@ -90,15 +90,15 @@ namespace SistemGestionBuses
         private void frmIngresarDirecciones_Load(object sender, EventArgs e)
         {
              dt = new DataTable();
-            txtDesc.Visible = false;
             dt.Columns.Add(new DataColumn("Descripción", typeof(string)));
             dt.Columns.Add(new DataColumn("Lat", typeof(double)));
-            dt.Columns.Add(new DataColumn("Long", typeof(double)));
-
-            dt.Rows.Add("Ubicacion 1", LatInicial, LongInicial);
+            dt.Columns.Add(new DataColumn("Long", typeof(double)));           
+            dt.Rows.Add( "Punto",LatInicial, LongInicial);
             dgvPuntos.DataSource = dt;
+
             dgvPuntos.Columns[1].Visible = false;
             dgvPuntos.Columns[2].Visible = false;
+
 
 
             CargarViajes();
@@ -179,14 +179,58 @@ namespace SistemGestionBuses
         {
 
         }
-
+        public int filseleccionada;
         private void dgvPuntos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int filseleccionada = e.RowIndex;
+             filseleccionada = e.RowIndex;
             txtlatitud.Text = dgvPuntos.Rows[filseleccionada].Cells[1].Value.ToString();
             txtlongitud.Text = dgvPuntos.Rows[filseleccionada].Cells[2].Value.ToString();
             marker.Position = new PointLatLng(Convert.ToDouble(txtlatitud.Text), Convert.ToDouble(txtlongitud.Text));
             gMapControl1.Position = marker.Position;
+        }
+
+        private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
+            double lng = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
+
+            txtlatitud.Text = lat.ToString();
+            txtlongitud.Text = lng.ToString();
+            marker.Position = new PointLatLng(Math.Round(lat, 2), Math.Round(lng, 2));
+            marker.ToolTipText = string.Format("Ubicacion: \n  Latitud: {0} \n  Longitud: {1} ", lat, lng);
+        }
+
+        private void dgvPuntos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            dt.Rows.Add("Punto",txtlatitud.Text, txtlongitud.Text);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dgvPuntos.Rows.RemoveAt(filseleccionada);
+        }
+
+        private void btnRutas_Click(object sender, EventArgs e)
+        {
+            GMapOverlay ruta = new GMapOverlay("capa rutas");
+            List<PointLatLng> puntos = new List<PointLatLng>();
+            double lat, lng;
+            for (int filas = 0; filas < dgvPuntos.Rows.Count; filas++)
+            {
+                lat = Convert.ToDouble(dgvPuntos.Rows[filas].Cells[1].Value);
+                lng = Convert.ToDouble(dgvPuntos.Rows[filas].Cells[2].Value);
+                puntos.Add(new PointLatLng(lat, lng));
+            }
+            GMapRoute puntosruta = new GMapRoute(puntos,"Ruta");
+            ruta.Routes.Add(puntosruta);
+            gMapControl1.Overlays.Add(ruta);
+            gMapControl1.Zoom = gMapControl1.Zoom + 1;
+            gMapControl1.Zoom = gMapControl1.Zoom - 1;
         }
     }
 }
