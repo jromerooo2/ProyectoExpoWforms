@@ -223,8 +223,7 @@ namespace SistemGestionBuses
             id_conductor = Convert.ToInt16(cmbConductor.SelectedValue);
             id_municipio = Convert.ToInt16(cmbMunicipios.SelectedValue);
             //Llamar a la clase por objeto
-            MessageBox.Show(fecha_partida);
-            MessageBox.Show(fecha_retorno);
+
             ControladorViaje viajeController = new ControladorViaje(nombreViaje, id_cliente, id_unidad, id_conductor, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
             bool res = viajeController.EnviarDatos_ControllerViaje();
             if (res == true)
@@ -436,6 +435,36 @@ namespace SistemGestionBuses
             {
                 MessageBox.Show("Oops!, ocurrió un error al eliminar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cmbCliente_Click(object sender, EventArgs e)
+        {
+            CargarDatosCMB();
+        }
+
+        private void cmbEstadoViaje_Click(object sender, EventArgs e)
+        {
+            CargarDatosCMB();
+        }
+
+        private void cmbTipoDestino_Click(object sender, EventArgs e)
+        {
+            CargarDatosCMB();
+        }
+
+        private void cmbUnidadTransporte_Click(object sender, EventArgs e)
+        {
+            CargarDatosCMB();
+        }
+
+        private void cmbConductor_Click(object sender, EventArgs e)
+        {
+            CargarDatosCMB();
+        }
+
+        private void cmbMunicipios_Click(object sender, EventArgs e)
+        {
+            CargarDatosCMB();
         }
     }
 }

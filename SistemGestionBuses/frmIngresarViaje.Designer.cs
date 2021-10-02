@@ -91,6 +91,7 @@
             this.cmbUnidadTransporte.Size = new System.Drawing.Size(205, 24);
             this.cmbUnidadTransporte.TabIndex = 76;
             this.cmbUnidadTransporte.Text = "unidad transporte";
+            this.cmbUnidadTransporte.Click += new System.EventHandler(this.cmbUnidadTransporte_Click);
             // 
             // label1
             // 
@@ -162,6 +163,7 @@
             this.cmbTipoDestino.Size = new System.Drawing.Size(207, 24);
             this.cmbTipoDestino.TabIndex = 67;
             this.cmbTipoDestino.Text = "tipo destino";
+            this.cmbTipoDestino.Click += new System.EventHandler(this.cmbTipoDestino_Click);
             // 
             // txtTarifaViaje
             // 
@@ -191,6 +193,7 @@
             this.cmbConductor.TabIndex = 61;
             this.cmbConductor.Text = "conductor";
             this.cmbConductor.SelectedIndexChanged += new System.EventHandler(this.cmbConductor_SelectedIndexChanged);
+            this.cmbConductor.Click += new System.EventHandler(this.cmbConductor_Click);
             // 
             // cmbEstadoViaje
             // 
@@ -201,6 +204,7 @@
             this.cmbEstadoViaje.Size = new System.Drawing.Size(209, 24);
             this.cmbEstadoViaje.TabIndex = 59;
             this.cmbEstadoViaje.Text = "estado viaje";
+            this.cmbEstadoViaje.Click += new System.EventHandler(this.cmbEstadoViaje_Click);
             // 
             // cmbCliente
             // 
@@ -211,6 +215,7 @@
             this.cmbCliente.Size = new System.Drawing.Size(209, 24);
             this.cmbCliente.TabIndex = 58;
             this.cmbCliente.Text = "cliente";
+            this.cmbCliente.Click += new System.EventHandler(this.cmbCliente_Click);
             // 
             // btnCrearViaje
             // 
@@ -316,6 +321,7 @@
             this.cmbMunicipios.Size = new System.Drawing.Size(205, 24);
             this.cmbMunicipios.TabIndex = 99;
             this.cmbMunicipios.Text = "unidad transporte";
+            this.cmbMunicipios.Click += new System.EventHandler(this.cmbMunicipios_Click);
             // 
             // label10
             // 
