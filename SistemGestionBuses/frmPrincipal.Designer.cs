@@ -62,10 +62,8 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -245,7 +243,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(44, 31);
+            this.pictureBox8.Location = new System.Drawing.Point(26, 31);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(131, 87);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -268,7 +266,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(44, 20);
+            this.pictureBox9.Location = new System.Drawing.Point(31, 19);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(131, 109);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -533,10 +531,8 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
             this.txtActiveUser,
             this.toolStripSeparator1,
-            this.toolStripButton2,
             this.txtCargoStrip,
             this.btnLogOut,
             this.toolStripLabel1});
@@ -546,21 +542,13 @@
             this.toolStrip1.TabIndex = 128;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(32, 30);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
             // txtActiveUser
             // 
             this.txtActiveUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtActiveUser.ForeColor = System.Drawing.Color.White;
+            this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
             this.txtActiveUser.Name = "txtActiveUser";
-            this.txtActiveUser.Size = new System.Drawing.Size(75, 30);
+            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
             this.txtActiveUser.Text = "active user";
             // 
             // toolStripSeparator1
@@ -568,20 +556,13 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(32, 30);
-            // 
             // txtCargoStrip
             // 
             this.txtCargoStrip.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
+            this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
             this.txtCargoStrip.Name = "txtCargoStrip";
-            this.txtCargoStrip.Size = new System.Drawing.Size(86, 30);
+            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
             this.txtCargoStrip.Text = "work position";
             // 
             // btnLogOut
@@ -699,10 +680,8 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel txtActiveUser;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripLabel txtCargoStrip;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
