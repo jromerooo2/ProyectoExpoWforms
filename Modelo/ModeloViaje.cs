@@ -29,6 +29,30 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        public static string GetActiveTrips(string today)
+        {
+
+                List<string> data = new List<string>();
+                try
+                {
+                    string query = "SELECT COUNT(id_viaje) FROM tb_viajes WHERE fecha_inicio = '"+today+"'";
+                    MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+
+                    MySqlDataReader reader = cmdselect.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        data.Add(reader.GetString(0));
+                    }
+                    return data[0];
+                }
+                catch (Exception)
+                {
+
+                    return data[0];
+                }
+         }
+
         public static DataTable ObtenerCliente()
         {
             DataTable data;

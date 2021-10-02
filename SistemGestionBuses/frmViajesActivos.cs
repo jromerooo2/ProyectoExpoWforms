@@ -20,7 +20,15 @@ namespace SistemGestionBuses
 
         private void frmViajesActivos_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(DateTime.Today.ToString("yyyy-dd-MM"));
 
+            metroText.Enabled = false;
+            GetActiveTrips();
+        }
+
+        private void GetActiveTrips()
+        {
+            metroText.Text = ControladorViaje.GetActiveTrips();
         }
 
         //Botón para desplegar la pagina para compartir la ubicación.

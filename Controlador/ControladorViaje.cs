@@ -20,6 +20,14 @@ namespace Controlador
         public string tarifa { get; set; }
         public int id_estado_viaje { get; set; }
         public int id_tipo_viaje { get; set; }
+
+        public static string GetActiveTrips()
+        {
+            string today = DateTime.Today.ToString("yyyy-MM-dd");
+
+            return ModeloViaje.GetActiveTrips(today);
+        }
+
         public string fecha_retorno { get; set; }
         public int id_municipio { get; set; }
 
