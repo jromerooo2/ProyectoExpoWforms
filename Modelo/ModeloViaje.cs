@@ -179,6 +179,7 @@ namespace Modelo
         #endregion
 
         #region CRUD
+        //Incersion de datos
         public static bool RegistrarViaje(string pNombre_viaje,int pidCliente,int pidUnidad, int pidConductor,string pfecha_inicio, string ptarifa, int pidEstado_viaje, int pidTipo_viaje, string pfecha_retorno, int pidMunicipio)
         {
             bool retorno = false;
@@ -193,6 +194,23 @@ namespace Modelo
             }
             catch (Exception)
             {
+                return retorno;
+            }
+        }
+        //Actualizar
+        public static bool ActualizarViaje(int pId,string pNombre_viaje, int pidCliente, int pidUnidad, int pidConductor, string pfecha_inicio, string ptarifa, int pidEstado_viaje, int pidTipo_viaje, string pfecha_retorno, int pidMunicipio)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdUpViaje = new MySqlCommand(string.Format("UPDATE tb_viajes SET nombre_viaje = '" + pNombre_viaje + "',cliente = '" + pidCliente + "',id_unidad = '" + pidUnidad + "',id_empleado = '" + pidConductor + "',fecha_inicio = '" + pfecha_inicio + "',tarifa = '" + ptarifa + "',id_estado_viaje = '" + pidEstado_viaje + "',id_tipo_viaje = '" + pidTipo_viaje + "',fecha_retorno = '" + pfecha_retorno + "',id_municipio = '" + pidMunicipio + "' WHERE id_viaje = '" + pId + "' "), ModeloConexion.GetConnection());
+                retorno = Convert.ToBoolean(cmdUpViaje.ExecuteNonQuery());
+                return retorno;
+
+            }
+            catch (Exception)
+            {
+
                 return retorno;
             }
         }
