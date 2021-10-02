@@ -236,40 +236,6 @@ namespace SistemGestionBuses
                 MessageBox.Show("Oops!, ocurrió un error al registrar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        void ActualizarDatos()
-        {
-            try
-            {
-                string nombreViaje, fecha_partida, fecha_retorno, tarifa;
-                int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio, id_cliente;
-                nombreViaje = txtNombreViaje.Text;
-                fecha_partida = dtpFechaPartida.Text;
-                fecha_retorno = dtpFechaRetorno.Text;
-                tarifa = txtTarifaViaje.Text;
-                id_unidad = Convert.ToInt16(cmbUnidadTransporte.SelectedValue);
-                id_estado_viaje = Convert.ToInt16(cmbEstadoViaje.SelectedValue);
-                id_cliente = Convert.ToInt16(cmbCliente.SelectedValue);
-                id_tipo_viaje = Convert.ToInt16(cmbTipoDestino.SelectedValue);
-                id_conductor = Convert.ToInt16(cmbConductor.SelectedValue);
-                id_municipio = Convert.ToInt16(cmbMunicipios.SelectedValue);
-                //Instanciar objeto
-                ControladorViaje viajeUpController = new ControladorViaje(nombreViaje, id_cliente, id_unidad, id_conductor, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
-                bool res = viajeUpController.EnviarDatos_ControllerViaje();
-                if (res == true)
-                {
-                    MessageBox.Show("Viaje Actualizado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Viaje no pudo ser actualizado", "Proceso de actualización incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
 
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -361,12 +327,7 @@ namespace SistemGestionBuses
 
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarDatos();
-        }
-
-        private void dvgViajes_Click(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int posicion = dgvViajes.CurrentRow.Index;
             //envio datos hacia texbox
