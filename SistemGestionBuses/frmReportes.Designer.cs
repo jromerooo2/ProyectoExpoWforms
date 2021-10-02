@@ -45,6 +45,12 @@
             this.cardEmpleado = new Bunifu.Framework.UI.BunifuCards();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
+            this.btnLogOut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
@@ -55,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.cardEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBar
@@ -66,9 +73,8 @@
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Location = new System.Drawing.Point(-2, -1);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(956, 65);
+            this.panelBar.Size = new System.Drawing.Size(717, 53);
             this.panelBar.TabIndex = 96;
             // 
             // bunifuImageButton1
@@ -78,10 +84,9 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(845, 14);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(634, 11);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(33, 41);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(25, 33);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 98;
             this.bunifuImageButton1.TabStop = false;
@@ -94,10 +99,9 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(794, 11);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(596, 9);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 41);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 33);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -110,10 +114,9 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(890, 11);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(668, 9);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 41);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 33);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -124,9 +127,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(34, 105);
+            this.label1.Location = new System.Drawing.Point(26, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 41);
+            this.label1.Size = new System.Drawing.Size(189, 34);
             this.label1.TabIndex = 97;
             this.label1.Text = "Reportes PDF";
             // 
@@ -135,9 +139,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label2.Location = new System.Drawing.Point(295, 105);
+            this.label2.Location = new System.Drawing.Point(221, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(582, 24);
+            this.label2.Size = new System.Drawing.Size(476, 18);
             this.label2.TabIndex = 98;
             this.label2.Text = "____________________________________________________\r\n";
             // 
@@ -145,9 +150,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.2F);
-            this.label3.Location = new System.Drawing.Point(37, 146);
+            this.label3.Location = new System.Drawing.Point(28, 119);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(482, 42);
+            this.label3.Size = new System.Drawing.Size(403, 34);
             this.label3.TabIndex = 99;
             this.label3.Text = "Haz click sobre las tarjetas para generar reportes en formato \r\nPDF para cada uno" +
     " de los campos que se te presentan.\r\n";
@@ -162,12 +168,11 @@
             this.cardClientes.Controls.Add(this.pictureBox6);
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
-            this.cardClientes.Location = new System.Drawing.Point(41, 301);
-            this.cardClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.cardClientes.Location = new System.Drawing.Point(31, 245);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
             this.cardClientes.ShadowDepth = 20;
-            this.cardClientes.Size = new System.Drawing.Size(267, 196);
+            this.cardClientes.Size = new System.Drawing.Size(200, 159);
             this.cardClientes.TabIndex = 100;
             this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
             this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
@@ -178,18 +183,16 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(92, 161);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(69, 131);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 23);
+            this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 11;
             this.label8.Text = "Clientes";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(59, 34);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(44, 28);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(120, 91);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -207,12 +210,11 @@
             this.bunifuCards1.Controls.Add(this.pictureBox2);
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(358, 301);
-            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards1.Location = new System.Drawing.Point(268, 245);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(267, 196);
+            this.bunifuCards1.Size = new System.Drawing.Size(200, 159);
             this.bunifuCards1.TabIndex = 101;
             this.bunifuCards1.Click += new System.EventHandler(this.bunifuCards1_Click);
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
@@ -223,18 +225,16 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(73, 161);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(55, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
+            this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 11;
             this.label4.Text = "Unidades";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 33);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(43, 27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(113, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -252,12 +252,11 @@
             this.cardEmpleado.Controls.Add(this.pictureBox4);
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
-            this.cardEmpleado.Location = new System.Drawing.Point(657, 301);
-            this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.cardEmpleado.Location = new System.Drawing.Point(493, 245);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
             this.cardEmpleado.ShadowDepth = 20;
-            this.cardEmpleado.Size = new System.Drawing.Size(267, 196);
+            this.cardEmpleado.Size = new System.Drawing.Size(200, 159);
             this.cardEmpleado.TabIndex = 102;
             this.cardEmpleado.Click += new System.EventHandler(this.cardEmpleado_Click);
             // 
@@ -267,30 +266,90 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(65, 161);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(49, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 23);
+            this.label5.Size = new System.Drawing.Size(96, 19);
             this.label5.TabIndex = 11;
             this.label5.Text = "Empleados";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(43, 36);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(32, 29);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(179, 111);
+            this.pictureBox4.Size = new System.Drawing.Size(134, 90);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtActiveUser,
+            this.toolStripSeparator1,
+            this.txtCargoStrip,
+            this.btnLogOut,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 461);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(714, 33);
+            this.toolStrip1.TabIndex = 129;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // txtActiveUser
+            // 
+            this.txtActiveUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveUser.ForeColor = System.Drawing.Color.White;
+            this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
+            this.txtActiveUser.Name = "txtActiveUser";
+            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
+            this.txtActiveUser.Text = "active user";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // txtCargoStrip
+            // 
+            this.txtCargoStrip.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
+            this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
+            this.txtCargoStrip.Name = "txtCargoStrip";
+            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
+            this.txtCargoStrip.Text = "work position";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
+            this.btnLogOut.Text = "toolStripButton3";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
+            this.toolStripLabel1.Text = "Log Out";
+            // 
             // frmReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 608);
+            this.ClientSize = new System.Drawing.Size(714, 494);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cardEmpleado);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.cardClientes);
@@ -299,6 +358,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmReportes";
             this.Text = "frmReportes";
             this.panelBar.ResumeLayout(false);
@@ -314,6 +374,8 @@
             this.cardEmpleado.ResumeLayout(false);
             this.cardEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +399,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel txtActiveUser;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel txtCargoStrip;
+        private System.Windows.Forms.ToolStripButton btnLogOut;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
