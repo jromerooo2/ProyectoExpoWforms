@@ -25,6 +25,10 @@ namespace SistemGestionBuses
             usuario = user;
             cargouser = cargo;
             idUser = idlogged;
+            txtActiveUser.Text = usuario;
+            string cargostring = ControladorLogin.getCargostring(cargouser);
+            txtCargoStrip.Text = cargostring;
+            //txtCargoStrip.Text = cargouser;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -141,7 +145,7 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            logOut();
+            
         }
 
         private void logOut()
@@ -183,6 +187,11 @@ namespace SistemGestionBuses
         {
             frmViajesActivos next = new frmViajesActivos();
             next.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            logOut();
         }
     }
 }

@@ -372,7 +372,6 @@ namespace Modelo
             }
             catch (Exception)
             {
-
                 return retorno;
             }
         }
