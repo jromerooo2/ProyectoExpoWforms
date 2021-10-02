@@ -104,6 +104,10 @@ namespace Controlador
         {
             return ModeloViaje.CargarMunicipioInner(id);
         }
+        public static DataTable CargarClienteInner(int id)
+        {
+            return ModeloViaje.ObtenerClienteInner(id);
+        }
         #endregion
     }
 }

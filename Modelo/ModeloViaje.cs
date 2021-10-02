@@ -46,25 +46,26 @@ namespace Modelo
                 return data = null;
             }
         }
+        public static DataTable ObtenerClienteInner(int id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT*FROM tb_viajes WHERE cliente = ?param1";
+                MySqlCommand cmdCli = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdCli.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdCli);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
 
-        ////Cargar Metodo Pago
-        //public static DataTable CargarMetodoPago()
-        //{
-        //    DataTable data;
-        //    try
-        //    {
-        //        string instruccion = "SELECT * FROM tb_metodo_pago";
-        //        MySqlCommand cmdMetodoPago = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-        //        MySqlDataAdapter adp = new MySqlDataAdapter(cmdMetodoPago);
-        //        data = new DataTable();
-        //        adp.Fill(data);
-        //        return data;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return data = null;
-        //    }
-        //}
+            }
+            catch (Exception)
+            {
+
+                return data = null;
+            }
+        }
         public static DataTable CargarConductores()
         {
             DataTable data;

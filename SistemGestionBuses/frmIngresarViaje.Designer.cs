@@ -241,7 +241,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(986, 530);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -473,12 +473,12 @@
             // 
             this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViajes.Location = new System.Drawing.Point(16, 17);
-            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvViajes.Name = "dgvViajes";
             this.dgvViajes.RowTemplate.Height = 24;
             this.dgvViajes.Size = new System.Drawing.Size(560, 256);
             this.dgvViajes.TabIndex = 93;
-            this.dgvViajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgViajes_Click);
             // 
             // button3
             // 

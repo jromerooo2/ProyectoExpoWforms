@@ -351,11 +351,6 @@ namespace SistemGestionBuses
             CargarGridDatos();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void panelGrid_Paint(object sender, PaintEventArgs e)
         {
 
@@ -371,9 +366,14 @@ namespace SistemGestionBuses
             ActualizarDatos();
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dvgViajes_Click(object sender, DataGridViewCellEventArgs e)
         {
-
+            int posicion = dgvViajes.CurrentRow.Index;
+            //envio datos hacia texbox
+            txtIDviaje.Text = dgvViajes[0, posicion].Value.ToString();
+            txtNombreViaje.Text = dgvViajes[1, posicion].Value.ToString();
+            int cliente = Convert.ToInt16(dgvViajes[2, posicion].Value.ToString());
+            cmbCliente.DataSource = ControladorViaje.CargarClienteInner(cliente);
         }
     }
 }
