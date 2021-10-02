@@ -17,8 +17,8 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM tb_unidad_transporte";
-                MySqlCommand cmdunidad = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                string instruccion = "SELECT * FROM tb_unidad_transporte";
+                MySqlCommand cmdunidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdunidad);
                 data = new DataTable();
                 adp.Fill(data);

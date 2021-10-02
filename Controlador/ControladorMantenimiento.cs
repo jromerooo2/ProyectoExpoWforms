@@ -54,6 +54,10 @@ namespace Controlador
         }
 
         //ActualizaciónMantenimiento
+        public static DataTable ObtenerUnidad()
+        {
+            return ModeloMantenimiento.CargarUnidad();
+        }
         public static DataTable CargarUnidadInner_Controller(int id)
         {
             return ModeloMantenimiento.CargarUnidad_Inner(id);
