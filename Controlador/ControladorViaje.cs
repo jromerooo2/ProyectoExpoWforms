@@ -96,13 +96,46 @@ namespace Controlador
 
         #region CMB Controller Inner 
         //cmb inner Municipio
-        public static DataTable CargarMunicipiosInner_controlador(int id)
+
+
+        public static object ObtenerClienteInner(string id_cliente)
         {
-            return ModeloViaje.CargarMunicipioInner(id);
+            return ModeloViaje.ObtenerClienteInner(id_cliente);
         }
-        public static DataTable CargarClienteInner(int id)
+
+        public static object ObtenerUnidadInner(string id_unidad)
         {
-            return ModeloViaje.ObtenerClienteInner(id);
+            return ModeloViaje.ObtenerUnidadInner(id_unidad); 
+        }
+
+        public static DataTable ObtenerConductoresInner(string id_empleado)
+        {
+            return ModeloViaje.ObtenerEmpleadoInner(id_empleado);
+        }
+
+        public static DataTable ObtenerEstadoInner(string id_estado)
+        {
+            return ModeloViaje.CargarEstadoViajeInner(id_estado);
+        }
+
+        public static DataTable ObtenerTipoViajeInner(string id_tipo)
+        {
+            return ModeloViaje.CargarTipoViajeInner(id_tipo);
+        }
+
+        public static DataTable ObtenerMunicipioInner(string id_tipo)
+        {
+            return ModeloViaje.CargarMunicipioInner(id_tipo);
+        }
+
+        public static bool Actualizar(string id_viaje, string nombreViaje, int id_cliente, int id_unidad, int id_conductor, string fecha_partida, string tarifa, int id_estado_viaje, int id_tipo_viaje, string fecha_retorno, int id_municipio)
+        {
+            return ModeloViaje.ActualizarViaje(id_viaje, nombreViaje, id_cliente, id_unidad, id_conductor, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
+        }
+
+        public static bool EliminarViaje(string text)
+        {
+            return ModeloViaje.EliminarViaje(text);
         }
         #endregion
     }

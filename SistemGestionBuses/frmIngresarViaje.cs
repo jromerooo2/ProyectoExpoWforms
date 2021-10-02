@@ -287,6 +287,36 @@ namespace SistemGestionBuses
             }
         }
 
+        void ActualizarDatos()
+        {
+
+            string nombreViaje, fecha_partida, fecha_retorno, tarifa, id_viaje;
+            int id_unidad, id_conductor, id_estado_viaje, id_tipo_viaje, id_municipio, id_cliente;
+            id_viaje = txtIDviaje.Text;
+            nombreViaje = txtNombreViaje.Text;
+            fecha_partida = dtpFechaPartida.Text;
+            fecha_retorno = dtpFechaRetorno.Text;
+            tarifa = txtTarifaViaje.Text;
+            id_unidad = Convert.ToInt16(cmbUnidadTransporte.SelectedValue);
+            id_estado_viaje = Convert.ToInt16(cmbEstadoViaje.SelectedValue);
+            id_cliente = Convert.ToInt16(cmbCliente.SelectedValue);
+            id_tipo_viaje = Convert.ToInt16(cmbTipoDestino.SelectedValue);
+            id_conductor = Convert.ToInt16(cmbConductor.SelectedValue);
+            id_municipio = Convert.ToInt16(cmbMunicipios.SelectedValue);
+
+            bool res = ControladorViaje.Actualizar(id_viaje, nombreViaje, id_cliente, id_unidad, id_conductor, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
+
+            if (res == true)
+            {
+                MessageBox.Show("Viaje Actualizado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarGridDatos();
+            }
+            else
+            {
+                MessageBox.Show("Oops!, ocurrió un error al actualizar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -329,12 +359,83 @@ namespace SistemGestionBuses
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion = dgvViajes.CurrentRow.Index;
-            //envio datos hacia texbox
-            txtIDviaje.Text = dgvViajes[0, posicion].Value.ToString();
-            txtNombreViaje.Text = dgvViajes[1, posicion].Value.ToString();
-            int cliente = Convert.ToInt16(dgvViajes[2, posicion].Value.ToString());
-            cmbCliente.DataSource = ControladorViaje.CargarClienteInner(cliente);
+            //int posicion = dgvViajes.CurrentRow.Index;
+            ////envio datos hacia texbox
+            //txtIDviaje.Text = dgvViajes[0, posicion].Value.ToString();
+            //txtNombreViaje.Text = dgvViajes[1, posicion].Value.ToString();
+            //int cliente = Convert.ToInt16(dgvViajes[2, posicion].Value.ToString());
+            //cmbCliente.DataSource = ControladorViaje.CargarClienteInner(cliente);
+        }
+
+        private void dgvViajes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvViajes.CurrentRow.Index;
+            txtIDviaje.Text = dgvViajes[0, i].Value.ToString();
+            txtNombreViaje.Text = dgvViajes[1, i].Value.ToString();
+            dtpFechaPartida.Text = dgvViajes[5, i].Value.ToString();
+            dtpFechaRetorno.Text = dgvViajes[9, i].Value.ToString();
+            txtTarifaViaje.Text = dgvViajes[6,i].Value.ToString();
+
+            string id_cliente = dgvViajes[2, i].Value.ToString();
+            cmbCliente.DataSource = ControladorViaje.ObtenerClienteInner(id_cliente);
+            cmbCliente.DisplayMember = "nombres_cliente";
+            cmbCliente.ValueMember = "id_cliente";
+
+            string id_unidad = dgvViajes[3, i].Value.ToString();
+            cmbUnidadTransporte.DataSource = ControladorViaje.ObtenerUnidadInner(id_unidad);
+            cmbUnidadTransporte.DisplayMember = "id_unidad_transporte";
+            cmbUnidadTransporte.ValueMember = "id_unidad_transporte";
+
+            string id_empleado = dgvViajes[4, i].Value.ToString();
+            DataTable dataMunicipio = ControladorViaje.ObtenerConductoresInner(id_empleado);
+            cmbConductor.DataSource = dataMunicipio;
+            cmbConductor.DisplayMember = "nombres_empleado";
+            cmbConductor.ValueMember = "id_empleado";
+
+
+            string id_estado = dgvViajes[7, i].Value.ToString();
+            cmbEstadoViaje.DataSource = ControladorViaje.ObtenerEstadoInner(id_estado);
+            cmbEstadoViaje.DisplayMember = "estado_viaje";
+            cmbEstadoViaje.ValueMember = "id_estado_viaje";
+
+            string id_tipo = dgvViajes[8, i].Value.ToString();
+            cmbTipoDestino.DataSource = ControladorViaje.ObtenerTipoViajeInner(id_tipo);
+            cmbTipoDestino.DisplayMember = "tipo_viaje";
+            cmbTipoDestino.ValueMember = "id_tipo_viaje";
+
+            string id_municipio = dgvViajes[10, i].Value.ToString();
+            cmbMunicipios.DataSource = ControladorViaje.ObtenerMunicipioInner(id_tipo);
+            cmbMunicipios.DisplayMember = "municipio";
+            cmbMunicipios.ValueMember = "id_municipio";
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarDatos();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("¿Estas seguro de eliminar al viaje : " + txtNombreViaje.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarDatos();
+            }
+            
+        }
+
+        private void EliminarDatos()
+        {
+            bool res = ControladorViaje.EliminarViaje(txtIDviaje.Text);
+
+            if (res == true)
+            {
+                MessageBox.Show("Viaje eliminado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarGridDatos();
+            }
+            else
+            {
+                MessageBox.Show("Oops!, ocurrió un error al eliminar el viaje, consulte con el administrador del sistema.", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

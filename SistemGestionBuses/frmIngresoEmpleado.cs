@@ -114,8 +114,9 @@ namespace SistemGestionBuses
         void CargarGridDatos()
         {
             CargarDatos();
-            datosCond = ControladorIngreso.CargarEmpleadoControlador();
-            dgvEmpleado.DataSource = datosCond;
+            DataTable datosemp = ControladorIngreso.CargarEmpleadoControlador();
+            dgvEmpleado.DataSource = datosemp;
+
             dgvEmpleado.Columns[0].Visible = false;
             dgvEmpleado.Columns[1].HeaderText = "Nombres";
             dgvEmpleado.Columns[2].HeaderText = "Apellidos";
@@ -201,6 +202,7 @@ namespace SistemGestionBuses
                 if (respuesta == true)
                 {
                     MessageBox.Show("Usuario actualizado exitosamente", "Confirmación de actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarGridDatos();
                 }
                 else
                 {

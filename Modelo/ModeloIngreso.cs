@@ -225,9 +225,8 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instuccion = "SELECT * FROM dbsistemaviajes.tb_empleados;";
-                MySqlCommand cmdListaEmpleado = new MySqlCommand(string.Format(instuccion),
-                    ModeloConexion.GetConnection());
+                string instuccion = "SELECT * FROM tb_empleados";
+                MySqlCommand cmdListaEmpleado = new MySqlCommand(string.Format(instuccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdListaEmpleado);
                 data = new DataTable();
                 adp.Fill(data);

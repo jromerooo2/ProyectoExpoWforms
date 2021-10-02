@@ -46,12 +46,12 @@ namespace Modelo
                 return data = null;
             }
         }
-        public static DataTable ObtenerClienteInner(int id)
+        public static DataTable ObtenerClienteInner(string id)
         {
             DataTable data;
             try
             {
-                string instruccion = "SELECT*FROM tb_viajes WHERE cliente = ?param1";
+                string instruccion = "SELECT * FROM tb_cliente WHERE id_cliente = ?param1";
                 MySqlCommand cmdCli = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdCli.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdCli);
@@ -101,6 +101,79 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        public static DataTable CargarEstadoViajeInner(string id)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_estado_viaje WHERE id_estado_viaje="+ id;
+                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static DataTable CargarTipoViajeInner(string id)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_tipo_viaje WHERE id_tipo_viaje=" + id;
+                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static bool EliminarViaje(string text)
+        {
+            bool res = false;
+            try
+            {
+                string query = "DELETE FROM tb_viajes  WHERE id_viaje=" + text;
+                MySqlCommand cmd = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                res = Convert.ToBoolean(cmd.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+                throw;
+            }
+        }
+
+        public static bool ActualizarViaje(string id_viaje, string nombreViaje, int id_cliente, int id_unidad, int id_conductor, string fecha_partida, string tarifa, int id_estado_viaje, int id_tipo_viaje, string fecha_retorno, int id_municipio)
+        {
+            bool retorno = false;
+            try
+            {
+                //Proceso de Actualizacion
+                MySqlCommand cmdUpEmpleado = new MySqlCommand(string.Format(" UPDATE tb_viajes  SET nombre_viaje = '" + nombreViaje + "',cliente = '" + id_cliente + "',id_unidad ='" + id_unidad+ "',id_empleado='" + id_conductor+ "',fecha_inicio= '" + fecha_partida+ "',tarifa= '" + tarifa+ "',id_estado_viaje = '" + id_estado_viaje+ "',id_tipo_viaje= '" + id_tipo_viaje+ "',fecha_retorno= '" + fecha_retorno+ "',id_municipio= '" + id_municipio+ "' WHERE id_viaje =" + id_viaje), ModeloConexion.GetConnection());
+                //Verificar Update
+                retorno = Convert.ToBoolean(cmdUpEmpleado.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno;
+            }
+        }
+
+
         //Cargar Cliente
         public static DataTable CargarCliente()
         {
@@ -119,6 +192,44 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        public static DataTable ObtenerUnidadInner(string id_unidad)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_unidad_transporte WHERE id_unidad_transporte="+id_unidad;
+                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static DataTable ObtenerEmpleadoInner(string id_empleado)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tb_empleados WHERE id_empleado=" + id_empleado;
+                MySqlCommand cmdEstadoViaje = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoViaje);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+
         //Cargar Municipios
         public static DataTable CargarMunicipios()
         {
@@ -159,7 +270,7 @@ namespace Modelo
 
         #region CMBInner
         //Municipio inner
-        public static DataTable CargarMunicipioInner(int id)
+        public static DataTable CargarMunicipioInner(string id)
         {
             DataTable data;
             try

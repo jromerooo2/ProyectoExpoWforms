@@ -87,6 +87,7 @@ namespace SistemGestionBuses
                     if (res == true)
                     {
                         MessageBox.Show("Los datos del empleado fueron registrados exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarGridDatos();
                     }
                     else
                     {
@@ -108,7 +109,7 @@ namespace SistemGestionBuses
         {
             BtnEliminar.Enabled = true;
             BtnActualizar.Enabled = true;
-            BtnAgregar.Enabled = false;
+            BtnAgregar.Enabled = true;
 
             int i = dgvConductores.CurrentRow.Index;
 
@@ -197,7 +198,8 @@ namespace SistemGestionBuses
 
         private void frmIngresoConductores_Load(object sender, EventArgs e)
         {
-            BtnAgregar.Enabled = true;
+            BtnAgregar.Enabled = false;
+
             BtnEliminar.Enabled = false;
             BtnActualizar.Enabled = false;
         }
@@ -205,6 +207,17 @@ namespace SistemGestionBuses
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             EnvioDatos();
+            CargarGridDatos();
+        }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            EnvioDatos();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarDatos();
             CargarGridDatos();
         }
     }
