@@ -18,6 +18,8 @@ namespace SistemGestionBuses
         public frmMantenimientos()
         {
             InitializeComponent();
+            CargarDataGridView();
+            CargarUnidadCMB();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
             BtnAgregar.Enabled = true;
@@ -52,8 +54,8 @@ namespace SistemGestionBuses
             {
                 DataTable datosUnidad = ControladorMantenimiento.RetornoCargarUnidad();
                 cmbUnidad.DataSource = datosUnidad;
-                cmbUnidad.ValueMember = "id_unidad_transporte";
                 cmbUnidad.DisplayMember = "placa";
+                cmbUnidad.ValueMember = "id_unidad_transporte";
             }
             catch (Exception)
             {

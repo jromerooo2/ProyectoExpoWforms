@@ -71,9 +71,10 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label5.Location = new System.Drawing.Point(140, 79);
+            this.label5.Location = new System.Drawing.Point(187, 97);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 43);
+            this.label5.Size = new System.Drawing.Size(319, 52);
             this.label5.TabIndex = 78;
             this.label5.Text = "Mantenimiento";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -82,9 +83,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(39, 60);
+            this.pictureBox3.Location = new System.Drawing.Point(52, 74);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(95, 80);
+            this.pictureBox3.Size = new System.Drawing.Size(127, 98);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 82;
             this.pictureBox3.TabStop = false;
@@ -100,10 +102,12 @@
             // 
             // DgvMantenimiento
             // 
+            this.DgvMantenimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvMantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvMantenimiento.Location = new System.Drawing.Point(15, 419);
+            this.DgvMantenimiento.Location = new System.Drawing.Point(32, 503);
+            this.DgvMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvMantenimiento.Name = "DgvMantenimiento";
-            this.DgvMantenimiento.Size = new System.Drawing.Size(871, 236);
+            this.DgvMantenimiento.Size = new System.Drawing.Size(1161, 290);
             this.DgvMantenimiento.TabIndex = 83;
             this.DgvMantenimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMantenimiento_CellClick);
             // 
@@ -117,9 +121,10 @@
             this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.BtnAgregar);
-            this.panel1.Location = new System.Drawing.Point(12, 146);
+            this.panel1.Location = new System.Drawing.Point(16, 180);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 256);
+            this.panel1.Size = new System.Drawing.Size(379, 315);
             this.panel1.TabIndex = 84;
             // 
             // BtnConectar
@@ -134,9 +139,10 @@
             this.BtnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConectar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConectar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnConectar.Location = new System.Drawing.Point(146, 184);
+            this.BtnConectar.Location = new System.Drawing.Point(195, 226);
+            this.BtnConectar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnConectar.Name = "BtnConectar";
-            this.BtnConectar.Size = new System.Drawing.Size(127, 51);
+            this.BtnConectar.Size = new System.Drawing.Size(169, 63);
             this.BtnConectar.TabIndex = 20;
             this.BtnConectar.Text = "Conectar";
             this.BtnConectar.UseVisualStyleBackColor = false;
@@ -146,9 +152,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(82, 3);
+            this.label6.Location = new System.Drawing.Point(109, 4);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 35);
+            this.label6.Size = new System.Drawing.Size(159, 43);
             this.label6.TabIndex = 22;
             this.label6.Text = "Acciones";
             // 
@@ -164,9 +171,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(146, 117);
+            this.button3.Location = new System.Drawing.Point(195, 144);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 51);
+            this.button3.Size = new System.Drawing.Size(168, 63);
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
@@ -183,9 +191,10 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(12, 117);
+            this.BtnEliminar.Location = new System.Drawing.Point(16, 144);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(128, 51);
+            this.BtnEliminar.Size = new System.Drawing.Size(171, 63);
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar Mantenimiento";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -203,9 +212,10 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnActualizar.Location = new System.Drawing.Point(146, 51);
+            this.BtnActualizar.Location = new System.Drawing.Point(195, 63);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(126, 49);
+            this.BtnActualizar.Size = new System.Drawing.Size(168, 60);
             this.BtnActualizar.TabIndex = 17;
             this.BtnActualizar.Text = "Modificar Mantenimiento";
             this.BtnActualizar.UseVisualStyleBackColor = false;
@@ -223,9 +233,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.Location = new System.Drawing.Point(13, 185);
+            this.button4.Location = new System.Drawing.Point(17, 228);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 49);
+            this.button4.Size = new System.Drawing.Size(169, 60);
             this.button4.TabIndex = 16;
             this.button4.Text = "Actualizar grid de datos";
             this.button4.UseVisualStyleBackColor = false;
@@ -242,9 +253,10 @@
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.BtnAgregar.Location = new System.Drawing.Point(13, 51);
+            this.BtnAgregar.Location = new System.Drawing.Point(17, 63);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(126, 49);
+            this.BtnAgregar.Size = new System.Drawing.Size(168, 60);
             this.BtnAgregar.TabIndex = 15;
             this.BtnAgregar.Text = "Agregar Mantenimiento";
             this.BtnAgregar.UseVisualStyleBackColor = false;
@@ -265,9 +277,10 @@
             this.panel2.Controls.Add(this.DtFecha);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.TxtDescripcion);
-            this.panel2.Location = new System.Drawing.Point(305, 146);
+            this.panel2.Location = new System.Drawing.Point(407, 180);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(581, 256);
+            this.panel2.Size = new System.Drawing.Size(775, 315);
             this.panel2.TabIndex = 87;
             // 
             // label10
@@ -275,9 +288,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label10.Location = new System.Drawing.Point(16, 186);
+            this.label10.Location = new System.Drawing.Point(21, 229);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 24);
+            this.label10.Size = new System.Drawing.Size(212, 29);
             this.label10.TabIndex = 94;
             this.label10.Text = "ID Mantenimiento";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -285,10 +299,11 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(16, 212);
+            this.txtId.Location = new System.Drawing.Point(21, 261);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(78, 24);
+            this.txtId.Size = new System.Drawing.Size(103, 28);
             this.txtId.TabIndex = 93;
             // 
             // cmbUnidad
@@ -296,9 +311,10 @@
             this.cmbUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUnidad.FormattingEnabled = true;
-            this.cmbUnidad.Location = new System.Drawing.Point(314, 187);
+            this.cmbUnidad.Location = new System.Drawing.Point(419, 230);
+            this.cmbUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUnidad.Name = "cmbUnidad";
-            this.cmbUnidad.Size = new System.Drawing.Size(154, 26);
+            this.cmbUnidad.Size = new System.Drawing.Size(204, 30);
             this.cmbUnidad.TabIndex = 92;
             // 
             // lblUnidad
@@ -306,28 +322,31 @@
             this.lblUnidad.AutoSize = true;
             this.lblUnidad.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.lblUnidad.Location = new System.Drawing.Point(314, 156);
+            this.lblUnidad.Location = new System.Drawing.Point(419, 192);
+            this.lblUnidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnidad.Name = "lblUnidad";
-            this.lblUnidad.Size = new System.Drawing.Size(78, 24);
+            this.lblUnidad.Size = new System.Drawing.Size(98, 29);
             this.lblUnidad.TabIndex = 91;
             this.lblUnidad.Text = "Unidad ";
             // 
             // txtMonto
             // 
             this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(314, 125);
+            this.txtMonto.Location = new System.Drawing.Point(419, 154);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMonto.Mask = "0000.00";
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(150, 24);
+            this.txtMonto.Size = new System.Drawing.Size(199, 28);
             this.txtMonto.TabIndex = 90;
             // 
             // TxtKilom
             // 
             this.TxtKilom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtKilom.Location = new System.Drawing.Point(314, 63);
+            this.TxtKilom.Location = new System.Drawing.Point(419, 78);
+            this.TxtKilom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtKilom.Mask = "000000";
             this.TxtKilom.Name = "TxtKilom";
-            this.TxtKilom.Size = new System.Drawing.Size(150, 24);
+            this.TxtKilom.Size = new System.Drawing.Size(199, 28);
             this.TxtKilom.TabIndex = 89;
             // 
             // label7
@@ -335,10 +354,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(314, 94);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(419, 116);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(248, 24);
+            this.label7.Size = new System.Drawing.Size(314, 29);
             this.label7.TabIndex = 88;
             this.label7.Text = "Monto del mantenimiento:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -348,10 +366,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(314, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(419, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 24);
+            this.label2.Size = new System.Drawing.Size(241, 29);
             this.label2.TabIndex = 84;
             this.label2.Text = "Último Kilometrake:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -361,9 +378,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label3.Location = new System.Drawing.Point(16, 32);
+            this.label3.Location = new System.Drawing.Point(21, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 24);
+            this.label3.Size = new System.Drawing.Size(151, 29);
             this.label3.TabIndex = 85;
             this.label3.Text = "Descripción:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -373,9 +391,10 @@
             this.DtFecha.CustomFormat = "yyyy-MM-dd";
             this.DtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtFecha.Location = new System.Drawing.Point(196, 210);
+            this.DtFecha.Location = new System.Drawing.Point(261, 258);
+            this.DtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DtFecha.Name = "DtFecha";
-            this.DtFecha.Size = new System.Drawing.Size(102, 26);
+            this.DtFecha.Size = new System.Drawing.Size(135, 30);
             this.DtFecha.TabIndex = 4;
             // 
             // label4
@@ -383,9 +402,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(196, 186);
+            this.label4.Location = new System.Drawing.Point(261, 229);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.Size = new System.Drawing.Size(88, 29);
             this.label4.TabIndex = 86;
             this.label4.Text = "Fecha:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -393,10 +413,11 @@
             // TxtDescripcion
             // 
             this.TxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDescripcion.Location = new System.Drawing.Point(16, 61);
+            this.TxtDescripcion.Location = new System.Drawing.Point(21, 75);
+            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(282, 116);
+            this.TxtDescripcion.Size = new System.Drawing.Size(375, 142);
             this.TxtDescripcion.TabIndex = 3;
             // 
             // label1
@@ -404,10 +425,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(327, 462);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(436, 569);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 20);
+            this.label1.Size = new System.Drawing.Size(248, 24);
             this.label1.TabIndex = 83;
             this.label1.Text = "Monto del mantenimiento:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -417,9 +437,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(898, 667);
+            this.pictureBox2.Size = new System.Drawing.Size(1197, 821);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -428,15 +448,16 @@
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(898, 50);
+            this.panelBar.Size = new System.Drawing.Size(1197, 62);
             this.panelBar.TabIndex = 105;
             // 
             // frmMantenimientos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 667);
+            this.ClientSize = new System.Drawing.Size(1197, 821);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -446,6 +467,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMantenimientos";
             this.Text = "Mantenimiento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
