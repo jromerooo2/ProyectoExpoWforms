@@ -57,12 +57,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBar = new System.Windows.Forms.Panel();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
+            this.btnLogOut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvMantenimiento)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -104,10 +118,16 @@
             // 
             this.DgvMantenimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvMantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< Updated upstream
             this.DgvMantenimiento.Location = new System.Drawing.Point(32, 503);
             this.DgvMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvMantenimiento.Name = "DgvMantenimiento";
             this.DgvMantenimiento.Size = new System.Drawing.Size(1161, 290);
+=======
+            this.DgvMantenimiento.Location = new System.Drawing.Point(12, 421);
+            this.DgvMantenimiento.Name = "DgvMantenimiento";
+            this.DgvMantenimiento.Size = new System.Drawing.Size(871, 191);
+>>>>>>> Stashed changes
             this.DgvMantenimiento.TabIndex = 83;
             this.DgvMantenimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMantenimiento_CellClick);
             // 
@@ -447,17 +467,139 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.bunifuImageButton5);
+            this.panelBar.Controls.Add(this.bunifuImageButton3);
+            this.panelBar.Controls.Add(this.bunifuImageButton1);
+            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
+<<<<<<< Updated upstream
             this.panelBar.Size = new System.Drawing.Size(1197, 62);
             this.panelBar.TabIndex = 105;
+=======
+            this.panelBar.Size = new System.Drawing.Size(898, 44);
+            this.panelBar.TabIndex = 126;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(816, 8);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(27, 25);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 98;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(857, 8);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(29, 25);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 96;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(10, 9);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 24);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 94;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtActiveUser,
+            this.toolStripSeparator1,
+            this.txtCargoStrip,
+            this.btnLogOut,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 634);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(898, 33);
+            this.toolStrip1.TabIndex = 129;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // txtActiveUser
+            // 
+            this.txtActiveUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveUser.ForeColor = System.Drawing.Color.White;
+            this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
+            this.txtActiveUser.Name = "txtActiveUser";
+            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
+            this.txtActiveUser.Text = "active user";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // txtCargoStrip
+            // 
+            this.txtCargoStrip.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
+            this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
+            this.txtCargoStrip.Name = "txtCargoStrip";
+            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
+            this.txtCargoStrip.Text = "work position";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
+            this.btnLogOut.Text = "toolStripButton3";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
+            this.toolStripLabel1.Text = "Log Out";
+>>>>>>> Stashed changes
             // 
             // frmMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1197, 821);
+=======
+            this.ClientSize = new System.Drawing.Size(898, 667);
+            this.Controls.Add(this.toolStrip1);
+>>>>>>> Stashed changes
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -478,6 +620,12 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,5 +660,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Panel panelBar;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel txtActiveUser;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel txtCargoStrip;
+        private System.Windows.Forms.ToolStripButton btnLogOut;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

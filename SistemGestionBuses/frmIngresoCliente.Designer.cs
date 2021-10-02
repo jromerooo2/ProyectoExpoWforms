@@ -62,6 +62,12 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
+            this.btnLogOut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDatosCliente
@@ -95,7 +102,7 @@
             this.dgvDatosCliente.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatosCliente.Location = new System.Drawing.Point(8, 336);
             this.dgvDatosCliente.Name = "dgvDatosCliente";
-            this.dgvDatosCliente.Size = new System.Drawing.Size(642, 155);
+            this.dgvDatosCliente.Size = new System.Drawing.Size(642, 125);
             this.dgvDatosCliente.TabIndex = 58;
             this.dgvDatosCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             // 
@@ -258,7 +265,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(662, 505);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -434,11 +441,73 @@
             this.bunifuDragControl1.TargetControl = this.panelBar;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtActiveUser,
+            this.toolStripSeparator1,
+            this.txtCargoStrip,
+            this.btnLogOut,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 470);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(662, 33);
+            this.toolStrip1.TabIndex = 129;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // txtActiveUser
+            // 
+            this.txtActiveUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveUser.ForeColor = System.Drawing.Color.White;
+            this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
+            this.txtActiveUser.Name = "txtActiveUser";
+            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
+            this.txtActiveUser.Text = "active user";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // txtCargoStrip
+            // 
+            this.txtCargoStrip.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
+            this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
+            this.txtCargoStrip.Name = "txtCargoStrip";
+            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
+            this.txtCargoStrip.Text = "work position";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
+            this.btnLogOut.Text = "toolStripButton3";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
+            this.toolStripLabel1.Text = "Log Out";
+            // 
             // frmIngresoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 503);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panel2);
@@ -459,6 +528,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -495,5 +566,11 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel txtActiveUser;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel txtCargoStrip;
+        private System.Windows.Forms.ToolStripButton btnLogOut;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

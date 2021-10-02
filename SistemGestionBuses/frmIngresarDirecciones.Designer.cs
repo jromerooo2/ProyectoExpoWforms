@@ -63,6 +63,12 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
+            this.btnLogOut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -98,10 +105,9 @@
             this.panel4.Controls.Add(this.txtDireccion_final);
             this.panel4.Controls.Add(this.txtDireccion_inicio);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(663, 92);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(497, 75);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(643, 433);
+            this.panel4.Size = new System.Drawing.Size(482, 352);
             this.panel4.TabIndex = 97;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -113,10 +119,9 @@
             this.btnRutas.ForeColor = System.Drawing.Color.White;
             this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
             this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRutas.Location = new System.Drawing.Point(439, 270);
-            this.btnRutas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRutas.Location = new System.Drawing.Point(329, 219);
             this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(172, 44);
+            this.btnRutas.Size = new System.Drawing.Size(129, 36);
             this.btnRutas.TabIndex = 119;
             this.btnRutas.Text = "Generar Rutas";
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,10 +136,9 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(439, 380);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(329, 309);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(172, 44);
+            this.btnEliminar.Size = new System.Drawing.Size(129, 36);
             this.btnEliminar.TabIndex = 118;
             this.btnEliminar.Text = "Eliminar Punto";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,10 +150,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 364);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(16, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 23);
+            this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 117;
             this.label1.Text = "Longitud:";
             // 
@@ -158,10 +161,9 @@
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(22, 304);
-            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Location = new System.Drawing.Point(16, 247);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(73, 23);
+            this.label.Size = new System.Drawing.Size(57, 18);
             this.label.TabIndex = 116;
             this.label.Text = "Latitud:";
             // 
@@ -172,10 +174,9 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(438, 322);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(328, 262);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(173, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(130, 41);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar Punto";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,22 +185,20 @@
             // 
             // txtlongitud
             // 
-            this.txtlongitud.Location = new System.Drawing.Point(26, 391);
-            this.txtlongitud.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlongitud.Location = new System.Drawing.Point(20, 318);
             this.txtlongitud.Multiline = true;
             this.txtlongitud.Name = "txtlongitud";
             this.txtlongitud.ReadOnly = true;
-            this.txtlongitud.Size = new System.Drawing.Size(178, 29);
+            this.txtlongitud.Size = new System.Drawing.Size(134, 24);
             this.txtlongitud.TabIndex = 115;
             // 
             // txtlatitud
             // 
-            this.txtlatitud.Location = new System.Drawing.Point(26, 331);
-            this.txtlatitud.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlatitud.Location = new System.Drawing.Point(20, 269);
             this.txtlatitud.Multiline = true;
             this.txtlatitud.Name = "txtlatitud";
             this.txtlatitud.ReadOnly = true;
-            this.txtlatitud.Size = new System.Drawing.Size(178, 29);
+            this.txtlatitud.Size = new System.Drawing.Size(134, 24);
             this.txtlatitud.TabIndex = 114;
             // 
             // dgvPuntos
@@ -212,11 +211,12 @@
             this.dgvPuntos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPuntos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.dgvPuntos.Location = new System.Drawing.Point(224, 249);
+            this.dgvPuntos.Location = new System.Drawing.Point(168, 202);
+            this.dgvPuntos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPuntos.Name = "dgvPuntos";
             this.dgvPuntos.ReadOnly = true;
             this.dgvPuntos.RowTemplate.Height = 24;
-            this.dgvPuntos.Size = new System.Drawing.Size(196, 166);
+            this.dgvPuntos.Size = new System.Drawing.Size(147, 135);
             this.dgvPuntos.TabIndex = 112;
             this.dgvPuntos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuntos_CellContentClick);
             this.dgvPuntos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPuntos_CellMouseClick);
@@ -224,10 +224,9 @@
             // cmbViajes
             // 
             this.cmbViajes.FormattingEnabled = true;
-            this.cmbViajes.Location = new System.Drawing.Point(26, 281);
-            this.cmbViajes.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbViajes.Location = new System.Drawing.Point(20, 228);
             this.cmbViajes.Name = "cmbViajes";
-            this.cmbViajes.Size = new System.Drawing.Size(178, 24);
+            this.cmbViajes.Size = new System.Drawing.Size(134, 21);
             this.cmbViajes.TabIndex = 111;
             // 
             // label7
@@ -235,20 +234,18 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(22, 254);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(16, 206);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 23);
+            this.label7.Size = new System.Drawing.Size(44, 18);
             this.label7.TabIndex = 110;
             this.label7.Text = "Viaje:";
             // 
             // txtreferenciaAdicional
             // 
-            this.txtreferenciaAdicional.Location = new System.Drawing.Point(427, 167);
-            this.txtreferenciaAdicional.Margin = new System.Windows.Forms.Padding(4);
+            this.txtreferenciaAdicional.Location = new System.Drawing.Point(320, 136);
             this.txtreferenciaAdicional.Multiline = true;
             this.txtreferenciaAdicional.Name = "txtreferenciaAdicional";
-            this.txtreferenciaAdicional.Size = new System.Drawing.Size(184, 75);
+            this.txtreferenciaAdicional.Size = new System.Drawing.Size(139, 62);
             this.txtreferenciaAdicional.TabIndex = 109;
             // 
             // label6
@@ -257,20 +254,18 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(424, 140);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(318, 114);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 23);
+            this.label6.Size = new System.Drawing.Size(136, 18);
             this.label6.TabIndex = 108;
             this.label6.Text = "Punto de referencia:";
             // 
             // txtreferenciaFinal
             // 
-            this.txtreferenciaFinal.Location = new System.Drawing.Point(224, 167);
-            this.txtreferenciaFinal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtreferenciaFinal.Location = new System.Drawing.Point(168, 136);
             this.txtreferenciaFinal.Multiline = true;
             this.txtreferenciaFinal.Name = "txtreferenciaFinal";
-            this.txtreferenciaFinal.Size = new System.Drawing.Size(184, 75);
+            this.txtreferenciaFinal.Size = new System.Drawing.Size(139, 62);
             this.txtreferenciaFinal.TabIndex = 107;
             // 
             // label5
@@ -279,20 +274,18 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(219, 140);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(164, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 23);
+            this.label5.Size = new System.Drawing.Size(136, 18);
             this.label5.TabIndex = 106;
             this.label5.Text = "Punto de referencia:";
             // 
             // txtreferenciaInicio
             // 
-            this.txtreferenciaInicio.Location = new System.Drawing.Point(20, 167);
-            this.txtreferenciaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtreferenciaInicio.Location = new System.Drawing.Point(15, 136);
             this.txtreferenciaInicio.Multiline = true;
             this.txtreferenciaInicio.Name = "txtreferenciaInicio";
-            this.txtreferenciaInicio.Size = new System.Drawing.Size(184, 75);
+            this.txtreferenciaInicio.Size = new System.Drawing.Size(139, 62);
             this.txtreferenciaInicio.TabIndex = 105;
             // 
             // label3
@@ -301,10 +294,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 140);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 23);
+            this.label3.Size = new System.Drawing.Size(136, 18);
             this.label3.TabIndex = 104;
             this.label3.Text = "Punto de referencia:";
             // 
@@ -313,20 +305,18 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(423, 26);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(317, 21);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(153, 23);
+            this.label18.Size = new System.Drawing.Size(118, 18);
             this.label18.TabIndex = 99;
             this.label18.Text = "Destino adicional:";
             // 
             // txtAdicional
             // 
-            this.txtAdicional.Location = new System.Drawing.Point(428, 50);
-            this.txtAdicional.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdicional.Location = new System.Drawing.Point(321, 41);
             this.txtAdicional.Multiline = true;
             this.txtAdicional.Name = "txtAdicional";
-            this.txtAdicional.Size = new System.Drawing.Size(187, 86);
+            this.txtAdicional.Size = new System.Drawing.Size(141, 71);
             this.txtAdicional.TabIndex = 98;
             // 
             // label10
@@ -334,29 +324,26 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(217, 25);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(163, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(191, 23);
+            this.label10.Size = new System.Drawing.Size(147, 18);
             this.label10.TabIndex = 95;
             this.label10.Text = "Destino final del viaje:";
             // 
             // txtDireccion_final
             // 
-            this.txtDireccion_final.Location = new System.Drawing.Point(223, 49);
-            this.txtDireccion_final.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion_final.Location = new System.Drawing.Point(167, 40);
             this.txtDireccion_final.Multiline = true;
             this.txtDireccion_final.Name = "txtDireccion_final";
-            this.txtDireccion_final.Size = new System.Drawing.Size(187, 87);
+            this.txtDireccion_final.Size = new System.Drawing.Size(141, 71);
             this.txtDireccion_final.TabIndex = 94;
             // 
             // txtDireccion_inicio
             // 
-            this.txtDireccion_inicio.Location = new System.Drawing.Point(20, 52);
-            this.txtDireccion_inicio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion_inicio.Location = new System.Drawing.Point(15, 42);
             this.txtDireccion_inicio.Multiline = true;
             this.txtDireccion_inicio.Name = "txtDireccion_inicio";
-            this.txtDireccion_inicio.Size = new System.Drawing.Size(184, 84);
+            this.txtDireccion_inicio.Size = new System.Drawing.Size(139, 69);
             this.txtDireccion_inicio.TabIndex = 88;
             // 
             // label13
@@ -365,10 +352,9 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(13, 26);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(10, 21);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(150, 23);
+            this.label13.Size = new System.Drawing.Size(117, 18);
             this.label13.TabIndex = 89;
             this.label13.Text = "Punto de partida:";
             // 
@@ -377,11 +363,11 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(1821, 945);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(1333, 646);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(1366, 768);
+            this.pictureBox2.MinimumSize = new System.Drawing.Size(1000, 525);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1333, 666);
+            this.pictureBox2.Size = new System.Drawing.Size(1000, 541);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 98;
             this.pictureBox2.TabStop = false;
@@ -396,8 +382,7 @@
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(24, 142);
-            this.gMapControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.gMapControl1.Location = new System.Drawing.Point(18, 115);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -411,7 +396,7 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(601, 508);
+            this.gMapControl1.Size = new System.Drawing.Size(451, 387);
             this.gMapControl1.TabIndex = 102;
             this.gMapControl1.Zoom = 0D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapDirections_Load);
@@ -421,10 +406,9 @@
             // 
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(17, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(632, 68);
+            this.label4.Size = new System.Drawing.Size(474, 55);
             this.label4.TabIndex = 103;
             this.label4.Text = "Ingresa las direcciones:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -436,9 +420,8 @@
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(1323, 62);
+            this.panelBar.Size = new System.Drawing.Size(992, 50);
             this.panelBar.TabIndex = 104;
             // 
             // bunifuImageButton5
@@ -448,10 +431,9 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(1216, 11);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(912, 9);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 38);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -465,10 +447,9 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(1257, 11);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(943, 9);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 38);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -482,10 +463,9 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 11);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(18, 9);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(28, 30);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 94;
             this.bunifuImageButton1.TabStop = false;
@@ -499,10 +479,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(784, 547);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(588, 444);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 71);
+            this.button2.Size = new System.Drawing.Size(141, 58);
             this.button2.TabIndex = 1;
             this.button2.Text = "Agregar Direccion";
             this.button2.UseVisualStyleBackColor = true;
@@ -510,20 +489,81 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1003, 547);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(752, 444);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 71);
+            this.button3.Size = new System.Drawing.Size(140, 58);
             this.button3.TabIndex = 2;
             this.button3.Text = "Limpiar Campos";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtActiveUser,
+            this.toolStripSeparator1,
+            this.txtCargoStrip,
+            this.btnLogOut,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 508);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(991, 33);
+            this.toolStrip1.TabIndex = 129;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // txtActiveUser
+            // 
+            this.txtActiveUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveUser.ForeColor = System.Drawing.Color.White;
+            this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
+            this.txtActiveUser.Name = "txtActiveUser";
+            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
+            this.txtActiveUser.Text = "active user";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // txtCargoStrip
+            // 
+            this.txtCargoStrip.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
+            this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
+            this.txtCargoStrip.Name = "txtCargoStrip";
+            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
+            this.txtCargoStrip.Text = "work position";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
+            this.btnLogOut.Text = "toolStripButton3";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
+            this.toolStripLabel1.Text = "Log Out";
+            // 
             // frmIngresarDirecciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1321, 666);
+            this.ClientSize = new System.Drawing.Size(991, 541);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.button2);
@@ -532,7 +572,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIngresarDirecciones";
             this.Text = "frmIngresarDirecciones";
             this.Load += new System.EventHandler(this.frmIngresarDirecciones_Load);
@@ -544,6 +583,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -583,5 +624,11 @@
         private System.Windows.Forms.Button btnRutas;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel txtActiveUser;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel txtCargoStrip;
+        private System.Windows.Forms.ToolStripButton btnLogOut;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
