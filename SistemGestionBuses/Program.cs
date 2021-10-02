@@ -16,7 +16,7 @@ namespace SistemGestionBuses
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIngresarViaje());
+            Application.Run(new frmIngresarDirecciones());
             //pasen siempre a frmLogin plis - Aviso Parroquial
             //new frmConfig(id_cargo, "username", id_usuario)
         }

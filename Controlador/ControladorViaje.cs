@@ -42,14 +42,10 @@ namespace Controlador
             fecha_retorno = pfechaRetorno;
             id_municipio = pidMunicipio;
         }
-        //CRUD
+
         public bool EnviarDatos_ControllerViaje()
         {
             return ModeloViaje.RegistrarViaje(nombre_viaje,id_cliente,id_unidad, id_empleado, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
-        }
-        public bool ActualizarViajeControlador()
-        {
-            return ModeloViaje.ActualizarViaje(id_viaje,nombre_viaje, id_cliente, id_unidad, id_empleado, fecha_partida, tarifa, id_estado_viaje, id_tipo_viaje, fecha_retorno, id_municipio);
         }
 
         public static DataTable ObtenerViajes()

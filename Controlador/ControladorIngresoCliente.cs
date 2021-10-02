@@ -51,7 +51,7 @@ namespace Controlador
             correo_cliente = pCorCliente;
             id_tipo_cliente = pTipCliente;
         }
-     //CRUD Cliente
+     
         public bool EnviarClientes()
         {
             return ModeloIngreso.AgregarCliente(nombres_cliente, apellidos_cliente, telefono_cliente, direccion_cliente, correo_cliente, id_tipo_cliente);
