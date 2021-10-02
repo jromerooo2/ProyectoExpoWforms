@@ -191,7 +191,7 @@ namespace SistemGestionBuses
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            logOut();
+            logOut;
         }
     }
 }
