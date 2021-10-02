@@ -30,6 +30,11 @@ namespace Controlador
         {
             ModeloLogin.LogOut(idUser);
         }
+
+        public static string getCargostring(int idcargo)
+        {
+            return ModeloLogin.getCargoString(idcargo);
+        }
     }
 
         public class AtributosLogin

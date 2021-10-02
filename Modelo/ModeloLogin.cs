@@ -98,6 +98,23 @@ namespace Modelo
                 return data;
             }
         }
+
+        public static string getCargoString(int id)
+        {
+            string retorno = "";
+            try
+            {
+                string query = "SELECT cargo FROM tb_cargo WHERE id_cargo = BINARY ?param1";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdselect.Parameters.Add(new MySqlParameter("param1", id));
+                retorno = Convert.ToString(cmdselect.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
     }
 
 }
