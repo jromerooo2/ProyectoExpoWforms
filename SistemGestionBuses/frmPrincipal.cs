@@ -175,7 +175,14 @@ namespace SistemGestionBuses
 
         private void bunifuCards6_Click(object sender, EventArgs e)
         {
+            frmViajesActivos next = new frmViajesActivos();
+            next.Show();
+        }
 
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            frmViajesActivos next = new frmViajesActivos();
+            next.Show();
         }
     }
 }

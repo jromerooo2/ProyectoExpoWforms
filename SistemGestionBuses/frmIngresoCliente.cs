@@ -73,6 +73,7 @@ namespace SistemGestionBuses
                 if (respuesta == true)
                 {
                     MessageBox.Show("Cliente agregado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarGridDatos();
                 }
                 else
                 {
@@ -223,8 +224,12 @@ namespace SistemGestionBuses
             if (Vacio() == true)
             {
                 MessageBox.Show("Todos los campos son requeridos", "Campos vaios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }           
-            EnvioDatos();
+            }
+            else
+            {
+                EnvioDatos();
+            }          
+
         }
 
         void EliminarDatos()
@@ -237,7 +242,7 @@ namespace SistemGestionBuses
             }
             else
             {
-                MessageBox.Show("El registro no se ha eliminado", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El registro no se ha eliminado debido a que el cliente está siendo utilizado ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
