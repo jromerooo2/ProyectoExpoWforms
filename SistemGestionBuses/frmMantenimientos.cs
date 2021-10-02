@@ -21,6 +21,7 @@ namespace SistemGestionBuses
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
             BtnAgregar.Enabled = true;
+            CargarUnidadCMB();
         }
 
         private void frmMantenimientos_Load(object sender, EventArgs e)
@@ -57,8 +58,8 @@ namespace SistemGestionBuses
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("No se pudo establecer conexión con la base", "Conexion",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
