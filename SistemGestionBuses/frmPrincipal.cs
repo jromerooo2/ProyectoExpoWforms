@@ -64,13 +64,13 @@ namespace SistemGestionBuses
 
         private void pictureUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios(cargouser, idUser);
+            frmUsuarios users = new frmUsuarios(cargouser, idUser, cargostring, usuario);
             users.Show();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            frmIngresoCliente clientes = new frmIngresoCliente();
+            frmIngresoCliente clientes = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
             clientes.Show();
         }
 
@@ -88,7 +88,7 @@ namespace SistemGestionBuses
 
         private void cardUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios(cargouser, idUser);
+            frmUsuarios users = new frmUsuarios(cargouser, idUser, cargostring, usuario);
             users.Show();
         }
 
@@ -116,13 +116,13 @@ namespace SistemGestionBuses
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            frmReportes reportes = new frmReportes();
+            frmReportes reportes = new frmReportes(usuario, cargostring, cargouser, idUser);
             reportes.Show();
         }
 
         private void cardClientes_Click(object sender, EventArgs e)
         {
-            frmIngresoCliente clientes = new frmIngresoCliente();
+            frmIngresoCliente clientes = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
             clientes.Show();
         }
 
@@ -147,7 +147,6 @@ namespace SistemGestionBuses
         {
             Close();
         }
-
         private void logOut()
         {
             ControladorLogin.LogOut(idUser);
@@ -173,7 +172,7 @@ namespace SistemGestionBuses
 
         private void cardReportes_Click(object sender, EventArgs e)
         {
-            frmReportes reportes = new frmReportes();
+            frmReportes reportes = new frmReportes(usuario, cargostring, cargouser, idUser);
             reportes.Show();
         }
 

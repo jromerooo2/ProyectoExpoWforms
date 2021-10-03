@@ -17,7 +17,7 @@ namespace SistemGestionBuses
         string empleado;
         DataTable datosConductores;
 
-        public frmIngresoConductores(int pid_empleado)
+        public frmIngresoConductores(int pid_empleado, string usuario, string cargostring, int cargouser)
         {            
             InitializeComponent();
             id_empleado = pid_empleado;

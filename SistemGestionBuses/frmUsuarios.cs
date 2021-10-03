@@ -17,13 +17,19 @@ namespace SistemGestionBuses
     {
         public static int cargouser;
         public static int IdUserLogged;
-        public frmUsuarios(int cargo, int idUser)
+        public static string cargostring;
+        public static string username;
+        public frmUsuarios(int cargo, int idUser, string cargo_string, string user)
         {
             InitializeComponent();
             BtnActualizar.Enabled = false;
             BtnEliminar.Enabled = false;
             cargouser = cargo;
             IdUserLogged = idUser;
+            username = user;
+            cargostring = cargo_string;
+            txtActiveUser.Text = username;
+            txtCargoStrip.Text = cargostring;
             if (cargouser == 2 || cargouser == 3)
             {
                 BtnAgregar.Enabled = true;
@@ -359,5 +365,23 @@ namespace SistemGestionBuses
             ControladorUsuario.RestablecerDef(id, name);
                 
          }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            ControladorLogin.LogOut(IdUserLogged);
+            Close();
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
     }
 }

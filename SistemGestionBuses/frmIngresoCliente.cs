@@ -16,11 +16,21 @@ namespace SistemGestionBuses
     {
         public DataTable datosClien;
         public ControladorIngresoCliente objCliente;
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
 
-        public frmIngresoCliente()
+        public frmIngresoCliente(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
-            
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoStrip.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
+
         }
         void CargarGridDatos()
         {
