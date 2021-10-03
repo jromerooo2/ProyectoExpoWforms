@@ -268,7 +268,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1069, 676);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -596,7 +596,7 @@
             // 
             this.dragControlMain.Fixed = true;
             this.dragControlMain.Horizontal = true;
-            this.dragControlMain.TargetControl = null;
+            this.dragControlMain.TargetControl = this.panelBar;
             this.dragControlMain.Vertical = true;
             // 
             // panelBar

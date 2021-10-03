@@ -16,6 +16,24 @@ namespace SistemGestionBuses
     {
         public DataTable datosCond;
         public ControladorIngreso objCond;
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
+
+        public frmIngresoEmpleado(string user, string cargo, int cargoid, int iduser)
+        {
+            InitializeComponent();
+            CargarDatos();
+            CargarGridDatos();
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoStrip.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
+        }
+
         //cmb Cargar Cargo
         void CargarCargo()
         {
@@ -230,13 +248,6 @@ namespace SistemGestionBuses
                 MessageBox.Show("El registro no fue eliminado", "Confirmación",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        public frmIngresoEmpleado()
-        {
-            InitializeComponent();
-            CargarDatos();
-            CargarGridDatos();
-
         }
 
         private void frmIngresoConductores_Load(object sender, EventArgs e)

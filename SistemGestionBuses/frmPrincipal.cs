@@ -76,7 +76,7 @@ namespace SistemGestionBuses
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            frmIngresoEmpleado empleado = new frmIngresoEmpleado();
+            frmIngresoEmpleado empleado = new frmIngresoEmpleado(usuario, cargostring, cargouser, idUser);
             empleado.Show();
         }
 
@@ -105,7 +105,7 @@ namespace SistemGestionBuses
 
         private void bunifuCards3_Click(object sender, EventArgs e)
         {
-            frmIngresoEmpleado empleado = new frmIngresoEmpleado();
+            frmIngresoEmpleado empleado = new frmIngresoEmpleado(usuario, cargostring, cargouser, idUser);
             empleado.Show();
         }
 
