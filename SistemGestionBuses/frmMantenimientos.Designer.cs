@@ -521,9 +521,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.label5.Location = new System.Drawing.Point(140, 79);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 43);
+            this.label5.Size = new System.Drawing.Size(271, 43);
             this.label5.TabIndex = 78;
-            this.label5.Text = "Mantenimiento";
+            this.label5.Text = "Mantenimientos";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // toolStrip2

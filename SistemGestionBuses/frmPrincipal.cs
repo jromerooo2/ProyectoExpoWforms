@@ -28,7 +28,6 @@ namespace SistemGestionBuses
             txtActiveUser.Text = usuario;
             string cargostring = ControladorLogin.getCargostring(cargouser);
             txtCargoStrip.Text = cargostring;
-            //txtCargoStrip.Text = cargouser;
         }
 
         private void label9_Click(object sender, EventArgs e)
