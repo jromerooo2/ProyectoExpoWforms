@@ -129,7 +129,7 @@ namespace SistemGestionBuses
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            PrimerUso();
         }
 
         void PrimerUso()
