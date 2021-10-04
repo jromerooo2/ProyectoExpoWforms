@@ -14,10 +14,20 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresarViaje : Form
     {
-        public frmIngresarViaje()
+        public static int cargouser;
+        public static int IdUserLogged;
+        public static string cargostring;
+        public static string username;
+        public frmIngresarViaje(int cargo, int idUser, string cargo_string, string user)
         {
             InitializeComponent();
             dgvViajes.AutoGenerateColumns = true;
+            cargouser = cargo;
+            IdUserLogged = idUser;
+            username = user;
+            cargostring = cargo_string;
+            txtActiveUser.Text = username;
+            txtCargoStrip.Text = cargostring;
             CargarDatosCMB();
             CargarGridDatos();
         }

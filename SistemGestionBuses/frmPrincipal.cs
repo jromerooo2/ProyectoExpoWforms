@@ -197,5 +197,51 @@ namespace SistemGestionBuses
         {
             logOut();
         }
+
+        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cardEmpleado_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cardMantenimientos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuCards6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmUsuarios ingresusuario = new frmUsuarios(cargouser, idUser, cargostring, usuario);
+            ingresusuario.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+            frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
+            viajes.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            frmIngresoCliente cliente = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
+            cliente.Show();
+            this.Hide();
+        }
     }
 }
