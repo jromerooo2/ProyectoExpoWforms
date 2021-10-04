@@ -147,7 +147,7 @@
             this.btnRastrear.IconZoom = 50D;
             this.btnRastrear.IsTab = false;
             this.btnRastrear.Location = new System.Drawing.Point(568, 323);
-            this.btnRastrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRastrear.Margin = new System.Windows.Forms.Padding(4);
             this.btnRastrear.Name = "btnRastrear";
             this.btnRastrear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnRastrear.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
@@ -345,7 +345,7 @@
             this.metroText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.metroText.isPassword = false;
             this.metroText.Location = new System.Drawing.Point(707, 154);
-            this.metroText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroText.Margin = new System.Windows.Forms.Padding(4);
             this.metroText.Name = "metroText";
             this.metroText.Size = new System.Drawing.Size(80, 73);
             this.metroText.TabIndex = 137;
@@ -374,7 +374,7 @@
             this.btnCompartir.IconZoom = 60D;
             this.btnCompartir.IsTab = false;
             this.btnCompartir.Location = new System.Drawing.Point(320, 323);
-            this.btnCompartir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompartir.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompartir.Name = "btnCompartir";
             this.btnCompartir.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnCompartir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));

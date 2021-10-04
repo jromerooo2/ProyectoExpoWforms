@@ -145,7 +145,12 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            Close();
+            frmLogin login = new frmLogin();
+            if (MessageBox.Show("Estas seguro de querer salir del sistema", "Confirmación de salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                logOut();
+                Close();
+            }
         }
         private void logOut()
         {

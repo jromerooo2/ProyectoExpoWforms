@@ -86,7 +86,8 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-
+            frmPrincipal main = new frmPrincipal(idcargo, username, idlogged);
+            main.Show();
         }
     }
 }

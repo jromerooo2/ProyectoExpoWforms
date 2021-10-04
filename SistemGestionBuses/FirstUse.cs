@@ -134,11 +134,14 @@ namespace SistemGestionBuses
             {
                 if (confirmacioncontra.Equals(nuevacontra))
                 {
+                    MessageBox.Show("Contraseña valida, continua con el proceso de primer uso del sistema ingresando tu PIN de seguridad", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtPIN.Enabled = true;
                     btnPIN.Enabled = true;
                 }
             }
         }
+
+
 
         private void btnReenviar_Click(object sender, EventArgs e)
         {
@@ -171,8 +174,11 @@ namespace SistemGestionBuses
             {
                 if (pin.Length > 9)
                 {
-                    CardPaso4.Enabled = true;
-                    CardPaso3.Enabled = false;
+                    if (MessageBox.Show("Deseas continuar con el proceso? Una vez confirmes y guardes, no podrás regresar a modificar la contraseña, hasta terminar el proceso del primer uso", "Confirmación Paso 3", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CardPaso4.Enabled = true;
+                        CardPaso3.Enabled = false;
+                    }
                 }
                 else
                 {

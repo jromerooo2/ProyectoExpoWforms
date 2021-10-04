@@ -125,7 +125,7 @@ namespace Modelo
             {
                 string query = "SELECT count(*) FROM tb_empleados;";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                count = Convert.ToInt16(cmdselect.ExecuteNonQuery());
+                count = Convert.ToInt16(cmdselect.ExecuteScalar());
                 return count;
             }
             catch (Exception)
@@ -142,7 +142,7 @@ namespace Modelo
             {
                 string query = "SELECT count(*) FROM tb_usuarios;";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                count = Convert.ToInt16(cmdselect.ExecuteNonQuery());
+                count = Convert.ToInt16(cmdselect.ExecuteScalar());
                 return count;
             }
             catch (Exception)

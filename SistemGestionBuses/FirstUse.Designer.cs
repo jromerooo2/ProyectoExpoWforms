@@ -58,6 +58,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.CardPaso4 = new Bunifu.Framework.UI.BunifuCards();
+            this.txtNIT = new System.Windows.Forms.MaskedTextBox();
+            this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
+            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -69,19 +75,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.MainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.MainDrag = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.label13 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
-            this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
-            this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.CardPaso1.SuspendLayout();
             this.CardPaso2.SuspendLayout();
             this.CardPaso3.SuspendLayout();
@@ -307,7 +307,7 @@
             this.CardPaso3.Controls.Add(this.txtNueva);
             this.CardPaso3.Controls.Add(this.btnNueva);
             this.CardPaso3.LeftSahddow = false;
-            this.CardPaso3.Location = new System.Drawing.Point(384, 126);
+            this.CardPaso3.Location = new System.Drawing.Point(385, 126);
             this.CardPaso3.Margin = new System.Windows.Forms.Padding(2);
             this.CardPaso3.Name = "CardPaso3";
             this.CardPaso3.RightSahddow = true;
@@ -476,6 +476,68 @@
             this.CardPaso4.Size = new System.Drawing.Size(350, 507);
             this.CardPaso4.TabIndex = 121;
             // 
+            // txtNIT
+            // 
+            this.txtNIT.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtNIT.Location = new System.Drawing.Point(183, 371);
+            this.txtNIT.Mask = "0000-000000-000-0";
+            this.txtNIT.Name = "txtNIT";
+            this.txtNIT.Size = new System.Drawing.Size(121, 22);
+            this.txtNIT.TabIndex = 136;
+            // 
+            // TxtDUI
+            // 
+            this.TxtDUI.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.TxtDUI.Location = new System.Drawing.Point(39, 371);
+            this.TxtDUI.Mask = "00000000-0";
+            this.TxtDUI.Name = "TxtDUI";
+            this.TxtDUI.Size = new System.Drawing.Size(106, 22);
+            this.TxtDUI.TabIndex = 135;
+            // 
+            // cmbMunicipio
+            // 
+            this.cmbMunicipio.FormattingEnabled = true;
+            this.cmbMunicipio.Location = new System.Drawing.Point(183, 299);
+            this.cmbMunicipio.Name = "cmbMunicipio";
+            this.cmbMunicipio.Size = new System.Drawing.Size(121, 21);
+            this.cmbMunicipio.TabIndex = 134;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(179, 268);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 28);
+            this.label21.TabIndex = 133;
+            this.label21.Text = "Municipio:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(35, 338);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(40, 28);
+            this.label20.TabIndex = 132;
+            this.label20.Text = "DUI:";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(186, 338);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 28);
+            this.label19.TabIndex = 129;
+            this.label19.Text = "NIT:";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -599,6 +661,18 @@
             this.panelBar.Size = new System.Drawing.Size(1141, 47);
             this.panelBar.TabIndex = 124;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(18, 8);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(185, 28);
+            this.label13.TabIndex = 130;
+            this.label13.Text = "Locus Systems.";
+            // 
             // bunifuImageButton5
             // 
             this.bunifuImageButton5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -663,80 +737,6 @@
             // 
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(18, 8);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(185, 28);
-            this.label13.TabIndex = 130;
-            this.label13.Text = "Locus Systems.";
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(186, 338);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 28);
-            this.label19.TabIndex = 129;
-            this.label19.Text = "NIT:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label20
-            // 
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(35, 338);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 28);
-            this.label20.TabIndex = 132;
-            this.label20.Text = "DUI:";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(179, 268);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 28);
-            this.label21.TabIndex = 133;
-            this.label21.Text = "Municipio:";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbMunicipio
-            // 
-            this.cmbMunicipio.FormattingEnabled = true;
-            this.cmbMunicipio.Location = new System.Drawing.Point(183, 299);
-            this.cmbMunicipio.Name = "cmbMunicipio";
-            this.cmbMunicipio.Size = new System.Drawing.Size(121, 21);
-            this.cmbMunicipio.TabIndex = 134;
-            // 
-            // TxtDUI
-            // 
-            this.TxtDUI.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.TxtDUI.Location = new System.Drawing.Point(39, 371);
-            this.TxtDUI.Mask = "00000000-0";
-            this.TxtDUI.Name = "TxtDUI";
-            this.TxtDUI.Size = new System.Drawing.Size(106, 22);
-            this.TxtDUI.TabIndex = 135;
-            // 
-            // txtNIT
-            // 
-            this.txtNIT.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtNIT.Location = new System.Drawing.Point(183, 371);
-            this.txtNIT.Mask = "0000-000000-000-0";
-            this.txtNIT.Name = "txtNIT";
-            this.txtNIT.Size = new System.Drawing.Size(121, 22);
-            this.txtNIT.TabIndex = 136;
             // 
             // FirstUse
             // 

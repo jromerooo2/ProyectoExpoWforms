@@ -222,7 +222,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(44, 27);
+            this.pictureBox7.Location = new System.Drawing.Point(44, 26);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(113, 92);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -259,7 +259,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(64, 131);
+            this.label6.Location = new System.Drawing.Point(54, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 19);
             this.label6.TabIndex = 11;
