@@ -68,7 +68,7 @@ namespace SistemGestionBuses
 
         private bool Empty(string user, string password)
         {
-            if (String.IsNullOrWhiteSpace(user) && String.IsNullOrWhiteSpace(password))
+            if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(password))
             {
                 return true;
             }

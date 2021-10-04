@@ -46,7 +46,7 @@ namespace SistemGestionBuses
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            frmIngresarViaje viajes = new frmIngresarViaje();
+            frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
             viajes.Show();
         }
 
@@ -134,7 +134,7 @@ namespace SistemGestionBuses
 
         private void bunifuCards2_Click(object sender, EventArgs e)
         {
-            frmIngresarViaje viajes = new frmIngresarViaje();
+            frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
             viajes.Show();
         }
 
