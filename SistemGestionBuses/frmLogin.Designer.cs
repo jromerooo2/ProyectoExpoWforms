@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.txtusername = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -83,28 +83,28 @@
             this.label6.Text = " ó";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtPass
+            // txtpassword
             // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(44, 197);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPass.MaxLength = 50;
-            this.txtPass.Multiline = true;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(198, 29);
-            this.txtPass.TabIndex = 16;
+            this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.Location = new System.Drawing.Point(44, 197);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpassword.MaxLength = 50;
+            this.txtpassword.Multiline = true;
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.Size = new System.Drawing.Size(198, 29);
+            this.txtpassword.TabIndex = 16;
             // 
-            // txtUser
+            // txtusername
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(44, 114);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUser.MaxLength = 50;
-            this.txtUser.Multiline = true;
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(198, 29);
-            this.txtUser.TabIndex = 15;
+            this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusername.Location = new System.Drawing.Point(44, 114);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtusername.MaxLength = 50;
+            this.txtusername.Multiline = true;
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(198, 29);
+            this.txtusername.TabIndex = 15;
             // 
             // pictureBox2
             // 
@@ -162,9 +162,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtPass);
+            this.panel1.Controls.Add(this.txtpassword);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.txtusername);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
@@ -302,8 +302,8 @@
         #endregion
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;

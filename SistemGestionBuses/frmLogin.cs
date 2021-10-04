@@ -26,8 +26,8 @@ namespace SistemGestionBuses
 
         void tryLogIn()
         {
-                string user = txtUser.Text;
-                string password = txtPass.Text;
+                string user = txtusername.Text;
+                string password = txtpassword.Text;
                 int count = 0;
 
                 AtributosLogin.username = user;
@@ -102,7 +102,9 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (!Empty(txtUser.Text, txtPass.Text))
+
+
+            if(!Empty(txtusername.Text, txtpassword.Text))
             {
                 tryLogIn();
             }
@@ -141,7 +143,6 @@ namespace SistemGestionBuses
             int res2 = ControladorLogin.comprobarUsuariosVacio();
             if (res > 0 && res2 > 0)
             {
-                InitializeComponent();
                 Show();
             }
             else

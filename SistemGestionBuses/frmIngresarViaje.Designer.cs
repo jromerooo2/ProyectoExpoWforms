@@ -224,7 +224,7 @@
             this.btnCrearViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearViaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearViaje.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearViaje.Location = new System.Drawing.Point(15, 321);
+            this.btnCrearViaje.Location = new System.Drawing.Point(12, 324);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(158, 43);
             this.btnCrearViaje.TabIndex = 57;
@@ -241,7 +241,7 @@
             this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(194, 321);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(194, 324);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(158, 43);
             this.btnLimpiarCampos.TabIndex = 56;
@@ -254,7 +254,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(986, 561);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +292,7 @@
             this.panelFormularios.Controls.Add(this.cmbConductor);
             this.panelFormularios.Location = new System.Drawing.Point(608, 115);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(368, 368);
+            this.panelFormularios.Size = new System.Drawing.Size(368, 390);
             this.panelFormularios.TabIndex = 77;
             // 
             // dtpFechaRetorno
@@ -487,7 +487,7 @@
             // 
             this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViajes.Location = new System.Drawing.Point(16, 17);
-            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvViajes.Name = "dgvViajes";
             this.dgvViajes.RowTemplate.Height = 24;
             this.dgvViajes.Size = new System.Drawing.Size(560, 256);

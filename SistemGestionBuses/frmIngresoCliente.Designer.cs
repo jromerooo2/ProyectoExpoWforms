@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoCliente));
             this.dgvDatosCliente = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,26 +84,26 @@
             // dgvDatosCliente
             // 
             this.dgvDatosCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatosCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatosCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatosCliente.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDatosCliente.Location = new System.Drawing.Point(8, 336);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatosCliente.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDatosCliente.Location = new System.Drawing.Point(188, 364);
             this.dgvDatosCliente.Name = "dgvDatosCliente";
-            this.dgvDatosCliente.Size = new System.Drawing.Size(642, 125);
+            this.dgvDatosCliente.Size = new System.Drawing.Size(489, 116);
             this.dgvDatosCliente.TabIndex = 58;
             this.dgvDatosCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             // 
@@ -111,7 +112,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(244, 74);
+            this.label5.Location = new System.Drawing.Point(242, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 57;
@@ -124,7 +125,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(355, 10);
+            this.label4.Location = new System.Drawing.Point(324, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 56;
@@ -136,7 +137,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 74);
+            this.label3.Location = new System.Drawing.Point(5, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 55;
@@ -148,7 +149,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(182, 10);
+            this.label2.Location = new System.Drawing.Point(157, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 18);
             this.label2.TabIndex = 54;
@@ -171,7 +172,7 @@
             // cmbTipCliente
             // 
             this.cmbTipCliente.FormattingEnabled = true;
-            this.cmbTipCliente.Location = new System.Drawing.Point(247, 145);
+            this.cmbTipCliente.Location = new System.Drawing.Point(245, 146);
             this.cmbTipCliente.Name = "cmbTipCliente";
             this.cmbTipCliente.Size = new System.Drawing.Size(211, 21);
             this.cmbTipCliente.TabIndex = 52;
@@ -179,27 +180,27 @@
             // 
             // txtDirCliente
             // 
-            this.txtDirCliente.Location = new System.Drawing.Point(10, 91);
+            this.txtDirCliente.Location = new System.Drawing.Point(10, 90);
             this.txtDirCliente.MaxLength = 100;
             this.txtDirCliente.Multiline = true;
             this.txtDirCliente.Name = "txtDirCliente";
-            this.txtDirCliente.Size = new System.Drawing.Size(205, 169);
+            this.txtDirCliente.Size = new System.Drawing.Size(205, 136);
             this.txtDirCliente.TabIndex = 51;
             this.txtDirCliente.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtApeCliente
             // 
-            this.txtApeCliente.Location = new System.Drawing.Point(185, 31);
+            this.txtApeCliente.Location = new System.Drawing.Point(160, 31);
             this.txtApeCliente.MaxLength = 30;
             this.txtApeCliente.Name = "txtApeCliente";
-            this.txtApeCliente.Size = new System.Drawing.Size(131, 20);
+            this.txtApeCliente.Size = new System.Drawing.Size(133, 20);
             this.txtApeCliente.TabIndex = 50;
             this.txtApeCliente.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.txtApeCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyApellido);
             // 
             // txtCorCliente
             // 
-            this.txtCorCliente.Location = new System.Drawing.Point(247, 91);
+            this.txtCorCliente.Location = new System.Drawing.Point(245, 92);
             this.txtCorCliente.MaxLength = 50;
             this.txtCorCliente.Name = "txtCorCliente";
             this.txtCorCliente.Size = new System.Drawing.Size(211, 20);
@@ -219,9 +220,9 @@
             // btnEliminarClientes
             // 
             this.btnEliminarClientes.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarClientes.Location = new System.Drawing.Point(336, 229);
+            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 207);
             this.btnEliminarClientes.Name = "btnEliminarClientes";
-            this.btnEliminarClientes.Size = new System.Drawing.Size(122, 31);
+            this.btnEliminarClientes.Size = new System.Drawing.Size(136, 41);
             this.btnEliminarClientes.TabIndex = 46;
             this.btnEliminarClientes.Text = "Eliminar cliente";
             this.btnEliminarClientes.UseVisualStyleBackColor = true;
@@ -230,9 +231,9 @@
             // btnActualizarCliente
             // 
             this.btnActualizarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 45);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 59);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
-            this.btnActualizarCliente.Size = new System.Drawing.Size(122, 46);
+            this.btnActualizarCliente.Size = new System.Drawing.Size(136, 43);
             this.btnActualizarCliente.TabIndex = 45;
             this.btnActualizarCliente.Text = "Actualizar clientes";
             this.btnActualizarCliente.UseVisualStyleBackColor = true;
@@ -241,9 +242,9 @@
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarCliente.Location = new System.Drawing.Point(336, 189);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(12, 158);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(122, 31);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(136, 43);
             this.btnAgregarCliente.TabIndex = 44;
             this.btnAgregarCliente.Text = "Agregar clientes";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
@@ -253,9 +254,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 84);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(148, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -263,11 +264,12 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(662, 521);
+            this.pictureBox2.Size = new System.Drawing.Size(699, 525);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
@@ -277,7 +279,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(244, 124);
+            this.label6.Location = new System.Drawing.Point(242, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 18);
             this.label6.TabIndex = 60;
@@ -287,9 +289,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 5);
+            this.button1.Location = new System.Drawing.Point(12, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 31);
+            this.button1.Size = new System.Drawing.Size(136, 43);
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
             this.button1.UseVisualStyleBackColor = true;
@@ -298,12 +300,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.txtTelCliente);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.cmbTipCliente);
             this.panel1.Controls.Add(this.txtIdCliente);
-            this.panel1.Controls.Add(this.btnEliminarClientes);
-            this.panel1.Controls.Add(this.btnAgregarCliente);
             this.panel1.Controls.Add(this.txtApeCliente);
             this.panel1.Controls.Add(this.txtCorCliente);
             this.panel1.Controls.Add(this.label2);
@@ -314,17 +315,17 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(179, 56);
+            this.panel1.Location = new System.Drawing.Point(188, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(471, 269);
+            this.panel1.Size = new System.Drawing.Size(489, 243);
             this.panel1.TabIndex = 78;
             // 
             // txtTelCliente
             // 
-            this.txtTelCliente.Location = new System.Drawing.Point(358, 31);
-            this.txtTelCliente.Mask = "0000-0000";
+            this.txtTelCliente.Location = new System.Drawing.Point(327, 31);
+            this.txtTelCliente.Mask = "+000-0000-0000";
             this.txtTelCliente.Name = "txtTelCliente";
-            this.txtTelCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCliente.Size = new System.Drawing.Size(114, 20);
             this.txtTelCliente.TabIndex = 63;
             // 
             // label7
@@ -332,7 +333,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(244, 179);
+            this.label7.Location = new System.Drawing.Point(457, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 18);
             this.label7.TabIndex = 62;
@@ -341,7 +342,7 @@
             // txtIdCliente
             // 
             this.txtIdCliente.Enabled = false;
-            this.txtIdCliente.Location = new System.Drawing.Point(247, 200);
+            this.txtIdCliente.Location = new System.Drawing.Point(420, 206);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(57, 20);
             this.txtIdCliente.TabIndex = 61;
@@ -352,17 +353,19 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnActualizarCliente);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(12, 164);
+            this.panel2.Controls.Add(this.btnAgregarCliente);
+            this.panel2.Controls.Add(this.btnEliminarClientes);
+            this.panel2.Location = new System.Drawing.Point(12, 220);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 161);
+            this.panel2.Size = new System.Drawing.Size(157, 260);
             this.panel2.TabIndex = 79;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(12, 97);
+            this.button2.Location = new System.Drawing.Point(12, 109);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 55);
+            this.button2.Size = new System.Drawing.Size(136, 43);
             this.button2.TabIndex = 62;
             this.button2.Text = "Actualizar Grid de datos";
             this.button2.UseVisualStyleBackColor = true;
@@ -378,7 +381,7 @@
             this.panelBar.Controls.Add(this.bunifuImageButton1);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(662, 50);
+            this.panelBar.Size = new System.Drawing.Size(699, 50);
             this.panelBar.TabIndex = 95;
             // 
             // bunifuImageButton5
@@ -388,7 +391,7 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(582, 8);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(619, 8);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(25, 31);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -404,7 +407,7 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(613, 9);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(650, 9);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Size = new System.Drawing.Size(27, 31);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -453,9 +456,9 @@
             this.txtCargoStrip,
             this.btnLogOut,
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 470);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 492);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(662, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(699, 33);
             this.toolStrip1.TabIndex = 129;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -502,11 +505,22 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(245, 183);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 43);
+            this.button3.TabIndex = 63;
+            this.button3.Text = "Asignar viaje";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // frmIngresoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 503);
+            this.ClientSize = new System.Drawing.Size(699, 525);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBar);
@@ -572,5 +586,6 @@
         private System.Windows.Forms.ToolStripLabel txtCargoStrip;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Button button3;
     }
 }
