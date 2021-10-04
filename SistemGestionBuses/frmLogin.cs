@@ -126,5 +126,28 @@ namespace SistemGestionBuses
         {
             Application.Exit();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void PrimerUso()
+        {
+            //Comprobar que no existan empleados
+            int res = ControladorLogin.comprobarEmpleadosVacio();
+            //Comprobar que no existan usuarios
+            int res2 = ControladorLogin.comprobarUsuariosVacio();
+            if (res > 0 && res2 > 0)
+            {
+                Show();
+            }
+            else
+            {
+                FirstUse primeruso = new FirstUse();
+                primeruso.Show();
+                Close();
+            }           
+        }
     }
 }
