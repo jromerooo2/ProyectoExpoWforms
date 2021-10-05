@@ -393,5 +393,16 @@ namespace SistemGestionBuses
         {
             Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Borrarcampos();
+        }
+        public void Borrarcampos()
+        {
+            txtCorreo.Text = "";
+            txtUser.Text = "";
+
+        }
     }
 }

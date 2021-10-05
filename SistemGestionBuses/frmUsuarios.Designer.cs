@@ -141,6 +141,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpiar campos";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnEliminar
             // 
@@ -432,11 +433,16 @@
             // 
             // dgvOnlineUsers
             // 
+            this.dgvOnlineUsers.AllowUserToAddRows = false;
+            this.dgvOnlineUsers.AllowUserToDeleteRows = false;
+            this.dgvOnlineUsers.AllowUserToResizeColumns = false;
+            this.dgvOnlineUsers.AllowUserToResizeRows = false;
             this.dgvOnlineUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOnlineUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOnlineUsers.Location = new System.Drawing.Point(39, 462);
             this.dgvOnlineUsers.Margin = new System.Windows.Forms.Padding(4);
             this.dgvOnlineUsers.Name = "dgvOnlineUsers";
+            this.dgvOnlineUsers.ReadOnly = true;
             this.dgvOnlineUsers.Size = new System.Drawing.Size(429, 230);
             this.dgvOnlineUsers.TabIndex = 78;
             // 
