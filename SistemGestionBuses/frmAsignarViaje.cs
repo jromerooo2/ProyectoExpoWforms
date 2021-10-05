@@ -108,10 +108,7 @@ namespace SistemGestionBuses
 
         private void dgvViajes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ()
-            {
 
-            }
             int fila = dgvViajes.CurrentRow.Index;
             txtNombreViaje.Text = dgvViajes[0, fila].Value.ToString();
             txtTarifa.Text = dgvViajes[1, fila].Value.ToString();
