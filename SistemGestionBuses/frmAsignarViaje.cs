@@ -19,8 +19,11 @@ namespace SistemGestionBuses
         public static string cargostring;
         public static string username;
         public static int idcargo;
+        //cliente
+        public static int idclient;
+        public static string clientestring;
 
-        public frmAsignarViaje(string user, string cargo, int cargoid, int iduser)
+        public frmAsignarViaje(string user, string cargo, int cargoid, int iduser, int clienteid)
         {
             InitializeComponent();
             username = user;
@@ -29,6 +32,8 @@ namespace SistemGestionBuses
             txtCargoStrip.Text = cargostring;
             idlogged = iduser;
             idcargo = cargoid;
+            //Cargar cliente
+            getCliente();
         }
 
         //Metodo para cargar el grid de datos
@@ -37,16 +42,17 @@ namespace SistemGestionBuses
 
         }
 
-        //Metodo para capturar los datos de la row del data grid seleccionada
-        void CapturarDatos()
-        {
-
-        }
-
         //Metodo para insertar los datos en la tabla cliente-viaje
         void AsignarViaje()
         {
 
+        }
+
+        //Metodo para obtener el nombre y apellido del cliente
+        void getCliente()
+        {          
+           clientestring = ControladorViaje.CargarNombreCliente(idclient);
+            txtCliente.Text = clientestring;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -75,6 +81,11 @@ namespace SistemGestionBuses
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void dgvViaje_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

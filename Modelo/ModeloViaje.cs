@@ -367,5 +367,23 @@ namespace Modelo
         //        }
         //}
         #endregion
+
+
+        public static string ObtenerClienteCompleto(int pid)
+        {
+            string empleado;
+            try
+            {
+                string instruccion = "SELECT CONCAT (a.apellidos_cliente, ', ' , a.nombres_cliente) AS Cliente FROM tb_empleados a WHERE a.id_cliente = BINARY ?param1;";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", pid));
+                empleado = Convert.ToString(cmdid.ExecuteScalar());
+                return empleado;
+            }
+            catch (Exception)
+            {
+                return empleado = "#Error de carga!";
+            }
+        }
     }
 }

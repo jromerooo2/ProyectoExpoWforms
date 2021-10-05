@@ -61,6 +61,11 @@ namespace Controlador
             return ModeloViaje.ObtenerViajes();
         }
 
+        public static string CargarNombreCliente(int id)
+        {
+            return ModeloViaje.ObtenerClienteCompleto(id);
+        }
+
         #region CMB Controller
         //cmb Cliente
         public static DataTable ObtenerCliente()

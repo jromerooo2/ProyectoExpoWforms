@@ -237,6 +237,7 @@
             this.dgvViaje.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvViaje.Size = new System.Drawing.Size(451, 317);
             this.dgvViaje.TabIndex = 137;
+            this.dgvViaje.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViaje_CellClick);
             // 
             // btnAsignar
             // 

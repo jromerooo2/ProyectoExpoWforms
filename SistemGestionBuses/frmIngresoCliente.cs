@@ -30,7 +30,7 @@ namespace SistemGestionBuses
             txtCargoStrip.Text = cargostring;
             idlogged = iduser;
             idcargo = cargoid;
-
+            btnAsignar.Enabled = false;
         }
         void CargarGridDatos()
         {
@@ -272,6 +272,8 @@ namespace SistemGestionBuses
                 cmbTipCliente.DataSource = ControladorIngresoCliente.ObtenerInner(id_tipo_cliente);
                 cmbTipCliente.DisplayMember = "tipo_cliente";
                 cmbTipCliente.ValueMember = "id_tipo_cliente";
+
+                btnAsignar.Enabled = true;
             }
         }
 
@@ -371,7 +373,8 @@ namespace SistemGestionBuses
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            frmAsignarViaje asignar = new frmAsignarViaje(username, cargostring, idcargo, idlogged);
+            int idcliente = Convert.ToInt32(txtIdCliente.Text);
+            frmAsignarViaje asignar = new frmAsignarViaje(username, cargostring, idcargo, idlogged, idcliente);
             asignar.Show();
             Close();
         }
@@ -381,6 +384,11 @@ namespace SistemGestionBuses
             DataView dv = datosClien.DefaultView;
             dv.RowFilter = "nombres_cliente LIKE '"+textBox1.Text+"%'";
             dgvDatosCliente.DataSource = dv;
+        }
+
+        private void txtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
