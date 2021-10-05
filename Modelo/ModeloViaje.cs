@@ -374,7 +374,7 @@ namespace Modelo
             string empleado;
             try
             {
-                string instruccion = "SELECT CONCAT (a.apellidos_cliente, ', ' , a.nombres_cliente) AS Cliente FROM tb_empleados a WHERE a.id_cliente = BINARY ?param1;";
+                string instruccion = "SELECT CONCAT (a.apellidos_cliente, ', ' , a.nombres_cliente) AS Cliente FROM tb_cliente a WHERE a.id_cliente = BINARY ?param1;";
                 MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 cmdid.Parameters.Add(new MySqlParameter("param1", pid));
                 empleado = Convert.ToString(cmdid.ExecuteScalar());
@@ -383,6 +383,24 @@ namespace Modelo
             catch (Exception)
             {
                 return empleado = "#Error de carga!";
+            }
+        }
+
+        public static DataTable ObtenerVistaViajes()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM tbviajesview";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
             }
         }
     }

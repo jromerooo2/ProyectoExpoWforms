@@ -33,13 +33,16 @@ namespace SistemGestionBuses
             idlogged = iduser;
             idcargo = cargoid;
             //Cargar cliente
-            getCliente();
+            idclient = clienteid;
+            clientestring = ControladorViaje.CargarNombreCliente(idclient);
+            txtCliente.Text = clientestring;
+            //getCliente();
         }
 
         //Metodo para cargar el grid de datos
         void CargarGrid()
         {
-
+            //ControladorViaje.
         }
 
         //Metodo para insertar los datos en la tabla cliente-viaje
@@ -52,7 +55,7 @@ namespace SistemGestionBuses
         void getCliente()
         {          
            clientestring = ControladorViaje.CargarNombreCliente(idclient);
-            txtCliente.Text = clientestring;
+           txtCliente.Text = clientestring;
         }
 
         private void label5_Click(object sender, EventArgs e)
