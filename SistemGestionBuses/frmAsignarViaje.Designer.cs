@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarViaje));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -83,12 +83,13 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(789, 582);
+            this.pictureBox2.Size = new System.Drawing.Size(1052, 716);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 95;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panelBar
             // 
@@ -98,8 +99,9 @@
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(789, 53);
+            this.panelBar.Size = new System.Drawing.Size(1052, 65);
             this.panelBar.TabIndex = 131;
             // 
             // bunifuImageButton1
@@ -109,9 +111,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(-245, 0);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(-327, 0);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(56, 53);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(75, 65);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 99;
             this.bunifuImageButton1.TabStop = false;
@@ -124,9 +127,10 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(709, 9);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(945, 11);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 33);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 41);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -140,9 +144,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(740, 9);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(987, 11);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 33);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 41);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
@@ -166,9 +171,9 @@
             this.txtCargoStrip,
             this.btnLogOut,
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 549);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 675);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(789, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(1052, 41);
             this.toolStrip1.TabIndex = 132;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -178,13 +183,13 @@
             this.txtActiveUser.ForeColor = System.Drawing.Color.White;
             this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
             this.txtActiveUser.Name = "txtActiveUser";
-            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
+            this.txtActiveUser.Size = new System.Drawing.Size(119, 38);
             this.txtActiveUser.Text = "active user";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
             // 
             // txtCargoStrip
             // 
@@ -192,7 +197,7 @@
             this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
             this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
             this.txtCargoStrip.Name = "txtCargoStrip";
-            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
+            this.txtCargoStrip.Size = new System.Drawing.Size(134, 38);
             this.txtCargoStrip.Text = "work position";
             // 
             // btnLogOut
@@ -203,7 +208,7 @@
             this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
+            this.btnLogOut.Size = new System.Drawing.Size(32, 38);
             this.btnLogOut.Text = "toolStripButton3";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -213,7 +218,7 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(67, 38);
             this.toolStripLabel1.Text = "Log Out";
             // 
             // btnAsignar
@@ -237,14 +242,15 @@
             this.btnAsignar.IconVisible = true;
             this.btnAsignar.IconZoom = 80D;
             this.btnAsignar.IsTab = false;
-            this.btnAsignar.Location = new System.Drawing.Point(517, 478);
+            this.btnAsignar.Location = new System.Drawing.Point(689, 588);
+            this.btnAsignar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.btnAsignar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
             this.btnAsignar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnAsignar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAsignar.selected = false;
-            this.btnAsignar.Size = new System.Drawing.Size(167, 48);
+            this.btnAsignar.Size = new System.Drawing.Size(223, 59);
             this.btnAsignar.TabIndex = 138;
             this.btnAsignar.Text = "Asignar Viaje";
             this.btnAsignar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,10 +262,11 @@
             // 
             this.txtCliente.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliente.Location = new System.Drawing.Point(511, 150);
+            this.txtCliente.Location = new System.Drawing.Point(681, 185);
+            this.txtCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(239, 22);
+            this.txtCliente.Size = new System.Drawing.Size(317, 26);
             this.txtCliente.TabIndex = 140;
             this.txtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -268,9 +275,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(508, 130);
+            this.label1.Location = new System.Drawing.Point(677, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 141;
             this.label1.Text = "Cliente:";
             // 
@@ -278,10 +286,11 @@
             // 
             this.txtNombreViaje.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtNombreViaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreViaje.Location = new System.Drawing.Point(511, 209);
+            this.txtNombreViaje.Location = new System.Drawing.Point(681, 257);
+            this.txtNombreViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreViaje.Name = "txtNombreViaje";
             this.txtNombreViaje.ReadOnly = true;
-            this.txtNombreViaje.Size = new System.Drawing.Size(239, 22);
+            this.txtNombreViaje.Size = new System.Drawing.Size(317, 26);
             this.txtNombreViaje.TabIndex = 142;
             this.txtNombreViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -290,18 +299,20 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(510, 189);
+            this.label2.Location = new System.Drawing.Point(680, 233);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(139, 20);
             this.label2.TabIndex = 143;
             this.label2.Text = "Nombre del viaje:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(544, 299);
+            this.label3.Location = new System.Drawing.Point(725, 368);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 145;
             // 
             // label5
@@ -309,9 +320,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(514, 305);
+            this.label5.Location = new System.Drawing.Point(685, 375);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 17);
+            this.label5.Size = new System.Drawing.Size(118, 20);
             this.label5.TabIndex = 148;
             this.label5.Text = "Dirección final:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -320,11 +332,12 @@
             // 
             this.txtDirecFinal.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtDirecFinal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirecFinal.Location = new System.Drawing.Point(515, 325);
+            this.txtDirecFinal.Location = new System.Drawing.Point(687, 400);
+            this.txtDirecFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDirecFinal.Multiline = true;
             this.txtDirecFinal.Name = "txtDirecFinal";
             this.txtDirecFinal.ReadOnly = true;
-            this.txtDirecFinal.Size = new System.Drawing.Size(237, 47);
+            this.txtDirecFinal.Size = new System.Drawing.Size(315, 57);
             this.txtDirecFinal.TabIndex = 147;
             this.txtDirecFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDirecFinal.TextChanged += new System.EventHandler(this.bunifuCustomTextbox3_TextChanged);
@@ -333,20 +346,22 @@
             // 
             this.txtBuscar.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(33, 169);
+            this.txtBuscar.Location = new System.Drawing.Point(44, 208);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(243, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(323, 27);
             this.txtBuscar.TabIndex = 149;
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(281, 162);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(375, 199);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(39, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 150;
             this.pictureBox3.TabStop = false;
@@ -356,9 +371,10 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(510, 385);
+            this.label6.Location = new System.Drawing.Point(680, 474);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 17);
+            this.label6.Size = new System.Drawing.Size(156, 20);
             this.label6.TabIndex = 152;
             this.label6.Text = "Dirección adicional:";
             // 
@@ -366,11 +382,12 @@
             // 
             this.txtDirecAdicional.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtDirecAdicional.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirecAdicional.Location = new System.Drawing.Point(515, 405);
+            this.txtDirecAdicional.Location = new System.Drawing.Point(687, 498);
+            this.txtDirecAdicional.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDirecAdicional.Multiline = true;
             this.txtDirecAdicional.Name = "txtDirecAdicional";
             this.txtDirecAdicional.ReadOnly = true;
-            this.txtDirecAdicional.Size = new System.Drawing.Size(237, 52);
+            this.txtDirecAdicional.Size = new System.Drawing.Size(315, 63);
             this.txtDirecAdicional.TabIndex = 151;
             this.txtDirecAdicional.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -378,10 +395,11 @@
             // 
             this.txtTarifa.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtTarifa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTarifa.Location = new System.Drawing.Point(513, 267);
+            this.txtTarifa.Location = new System.Drawing.Point(684, 329);
+            this.txtTarifa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTarifa.Name = "txtTarifa";
             this.txtTarifa.ReadOnly = true;
-            this.txtTarifa.Size = new System.Drawing.Size(111, 22);
+            this.txtTarifa.Size = new System.Drawing.Size(147, 26);
             this.txtTarifa.TabIndex = 144;
             this.txtTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -390,9 +408,10 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(512, 247);
+            this.label7.Location = new System.Drawing.Point(683, 304);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 17);
+            this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 146;
             this.label7.Text = "Tarifa:";
             // 
@@ -401,9 +420,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(638, 247);
+            this.label4.Location = new System.Drawing.Point(851, 304);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 154;
             this.label4.Text = "Tipo viaje:";
             // 
@@ -412,9 +432,10 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 80);
+            this.label8.Location = new System.Drawing.Point(36, 98);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(283, 35);
+            this.label8.Size = new System.Drawing.Size(353, 43);
             this.label8.TabIndex = 155;
             this.label8.Text = "Asignación de viajes.";
             // 
@@ -422,10 +443,11 @@
             // 
             this.txtTipoViaje.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtTipoViaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoViaje.Location = new System.Drawing.Point(641, 267);
+            this.txtTipoViaje.Location = new System.Drawing.Point(855, 329);
+            this.txtTipoViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTipoViaje.Name = "txtTipoViaje";
             this.txtTipoViaje.ReadOnly = true;
-            this.txtTipoViaje.Size = new System.Drawing.Size(111, 22);
+            this.txtTipoViaje.Size = new System.Drawing.Size(147, 26);
             this.txtTipoViaje.TabIndex = 156;
             this.txtTipoViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -434,9 +456,10 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 130);
+            this.label9.Location = new System.Drawing.Point(40, 160);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(313, 17);
+            this.label9.Size = new System.Drawing.Size(382, 20);
             this.label9.TabIndex = 157;
             this.label9.Text = "Selecciona el viaje que deseas asignarle al cliente.";
             // 
@@ -453,23 +476,23 @@
             this.dgvViajes.AllowUserToDeleteRows = false;
             this.dgvViajes.AllowUserToResizeColumns = false;
             this.dgvViajes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvViajes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.dgvViajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvViajes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dgvViajes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvViajes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvViajes.ColumnHeadersHeight = 40;
             this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvViajes.DoubleBuffered = true;
@@ -477,21 +500,22 @@
             this.dgvViajes.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvViajes.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.dgvViajes.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvViajes.Location = new System.Drawing.Point(33, 198);
+            this.dgvViajes.Location = new System.Drawing.Point(44, 244);
+            this.dgvViajes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvViajes.Name = "dgvViajes";
             this.dgvViajes.ReadOnly = true;
             this.dgvViajes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvViajes.RowHeadersWidth = 30;
-            this.dgvViajes.Size = new System.Drawing.Size(452, 328);
+            this.dgvViajes.Size = new System.Drawing.Size(603, 404);
             this.dgvViajes.TabIndex = 158;
             this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellClick);
             // 
@@ -499,10 +523,11 @@
             // 
             this.txtID.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(709, 498);
+            this.txtID.Location = new System.Drawing.Point(945, 613);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(43, 22);
+            this.txtID.Size = new System.Drawing.Size(56, 26);
             this.txtID.TabIndex = 159;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -511,17 +536,18 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(727, 478);
+            this.label10.Location = new System.Drawing.Point(969, 588);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 17);
+            this.label10.Size = new System.Drawing.Size(29, 20);
             this.label10.TabIndex = 160;
             this.label10.Text = "ID:";
             // 
             // frmAsignarViaje
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 582);
+            this.ClientSize = new System.Drawing.Size(1052, 716);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.dgvViajes);
@@ -547,6 +573,7 @@
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAsignarViaje";
             this.Text = "frmAsignarViaje";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

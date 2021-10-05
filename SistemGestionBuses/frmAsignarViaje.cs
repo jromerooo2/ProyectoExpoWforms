@@ -129,5 +129,17 @@ namespace SistemGestionBuses
         {
             AsignarViaje();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = vistaviajes.DefaultView;
+            dv.RowFilter = "nombre_viaje LIKE '" + txtBuscar.Text + "%'";
+            dgvViajes.DataSource = dv;
+        }
     }
 }
