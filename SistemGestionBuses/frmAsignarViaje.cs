@@ -22,6 +22,9 @@ namespace SistemGestionBuses
         //cliente
         public static int idclient;
         public static string clientestring;
+        //idviaje
+        public static int idviaje;
+
 
         public frmAsignarViaje(string user, string cargo, int cargoid, int iduser, int clienteid)
         {
@@ -37,18 +40,35 @@ namespace SistemGestionBuses
             clientestring = ControladorViaje.CargarNombreCliente(idclient);
             txtCliente.Text = clientestring;
             //getCliente();
+            CargarGrid();
+            //Enabled
+            btnAsignar.Enabled = false;
         }
 
         //Metodo para cargar el grid de datos
         void CargarGrid()
         {
-            //ControladorViaje.
+            vistaviajes = ControladorViaje.CargarVistaViaje();
+            dgvViajes.DataSource = vistaviajes;
+            dgvViajes.Columns[0].HeaderText = "Viaje";
+            dgvViajes.Columns[1].HeaderText = "Tarifa";
+            dgvViajes.Columns[2].HeaderText = "Tipo viaje";
+            dgvViajes.Columns[3].HeaderText = "Destino";
+            dgvViajes.Columns[4].HeaderText = "Destino Adicional";
         }
 
         //Metodo para insertar los datos en la tabla cliente-viaje
         void AsignarViaje()
         {
-
+            bool res = ControladorViaje.AsignarViajeClienteControl(idclient, idviaje);
+            if (res == true)
+            {
+                MessageBox.Show("Se asigno un el viaje a cliente");
+            }
+            else
+            {
+                MessageBox.Show("No se asigno el viaje al cliente");
+            }
         }
 
         //Metodo para obtener el nombre y apellido del cliente
@@ -86,9 +106,31 @@ namespace SistemGestionBuses
             WindowState = FormWindowState.Minimized;
         }
 
-        private void dgvViaje_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvViajes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if ()
+            {
 
+            }
+            int fila = dgvViajes.CurrentRow.Index;
+            txtNombreViaje.Text = dgvViajes[0, fila].Value.ToString();
+            txtTarifa.Text = dgvViajes[1, fila].Value.ToString();
+            txtTipoViaje.Text = dgvViajes[2, fila].Value.ToString();
+            txtDirecFinal.Text = dgvViajes[3, fila].Value.ToString();
+            txtDirecAdicional.Text = dgvViajes[4, fila].Value.ToString();
+
+            //viaje
+            string nombreviaje = txtNombreViaje.Text;
+            idviaje = ControladorViaje.getID(nombreviaje);
+            txtID.Text = idviaje.ToString();
+
+            //enabled
+            btnAsignar.Enabled = true;
+        }
+
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+            AsignarViaje();
         }
     }
 }

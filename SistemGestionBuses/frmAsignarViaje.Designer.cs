@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarViaje));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -44,7 +45,6 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.dgvViaje = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnAsignar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCliente = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,14 +64,17 @@
             this.txtTipoViaje = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dgvViajes = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txtID = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -213,33 +216,6 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
-            // dgvViaje
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvViaje.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvViaje.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvViaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvViaje.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvViaje.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvViaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvViaje.DoubleBuffered = true;
-            this.dgvViaje.EnableHeadersVisualStyles = false;
-            this.dgvViaje.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgvViaje.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dgvViaje.Location = new System.Drawing.Point(33, 209);
-            this.dgvViaje.Name = "dgvViaje";
-            this.dgvViaje.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvViaje.Size = new System.Drawing.Size(451, 317);
-            this.dgvViaje.TabIndex = 137;
-            this.dgvViaje.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViaje_CellClick);
-            // 
             // btnAsignar
             // 
             this.btnAsignar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
@@ -261,7 +237,7 @@
             this.btnAsignar.IconVisible = true;
             this.btnAsignar.IconZoom = 80D;
             this.btnAsignar.IsTab = false;
-            this.btnAsignar.Location = new System.Drawing.Point(547, 478);
+            this.btnAsignar.Location = new System.Drawing.Point(517, 478);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.btnAsignar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
@@ -274,6 +250,7 @@
             this.btnAsignar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAsignar.Textcolor = System.Drawing.Color.White;
             this.btnAsignar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // txtCliente
             // 
@@ -470,11 +447,84 @@
             this.bunifuDragControl1.TargetControl = this.panelBar;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // dgvViajes
+            // 
+            this.dgvViajes.AllowUserToAddRows = false;
+            this.dgvViajes.AllowUserToDeleteRows = false;
+            this.dgvViajes.AllowUserToResizeColumns = false;
+            this.dgvViajes.AllowUserToResizeRows = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvViajes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.dgvViajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvViajes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.dgvViajes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvViajes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvViajes.ColumnHeadersHeight = 40;
+            this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvViajes.DoubleBuffered = true;
+            this.dgvViajes.EnableHeadersVisualStyles = false;
+            this.dgvViajes.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvViajes.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.dgvViajes.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvViajes.Location = new System.Drawing.Point(33, 198);
+            this.dgvViajes.Name = "dgvViajes";
+            this.dgvViajes.ReadOnly = true;
+            this.dgvViajes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvViajes.RowHeadersWidth = 30;
+            this.dgvViajes.Size = new System.Drawing.Size(452, 328);
+            this.dgvViajes.TabIndex = 158;
+            this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellClick);
+            // 
+            // txtID
+            // 
+            this.txtID.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(709, 498);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(43, 22);
+            this.txtID.TabIndex = 159;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(727, 478);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 17);
+            this.label10.TabIndex = 160;
+            this.label10.Text = "ID:";
+            // 
             // frmAsignarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 582);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.dgvViajes);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTipoViaje);
             this.Controls.Add(this.label8);
@@ -493,7 +543,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.btnAsignar);
-            this.Controls.Add(this.dgvViaje);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.pictureBox2);
@@ -507,8 +556,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,7 +576,6 @@
         private System.Windows.Forms.ToolStripLabel txtCargoStrip;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvViaje;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtCliente;
         private Bunifu.Framework.UI.BunifuFlatButton btnAsignar;
         private System.Windows.Forms.Label label5;
@@ -547,5 +595,8 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtTipoViaje;
         private System.Windows.Forms.Label label9;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvViajes;
+        private System.Windows.Forms.Label label10;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtID;
     }
 }
