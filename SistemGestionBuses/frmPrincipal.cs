@@ -227,21 +227,18 @@ namespace SistemGestionBuses
         {
             frmUsuarios ingresusuario = new frmUsuarios(cargouser, idUser, cargostring, usuario);
             ingresusuario.Show();
-            this.Hide();
         }
 
         private void pictureBox7_Click_1(object sender, EventArgs e)
         {
             frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
             viajes.Show();
-            this.Hide();
         }
 
         private void pictureBox6_Click_1(object sender, EventArgs e)
         {
             frmIngresoCliente cliente = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
             cliente.Show();
-            this.Hide();
         }
     }
 }

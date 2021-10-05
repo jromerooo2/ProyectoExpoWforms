@@ -14,7 +14,7 @@ namespace SistemGestionBuses
 {
     public partial class frmIngresoEmpleado : Form
     {
-        public DataTable datosCond;
+        public DataTable datosemp;
         public ControladorIngreso objCond;
         public static int idlogged;
         public static string cargostring;
@@ -132,7 +132,7 @@ namespace SistemGestionBuses
         void CargarGridDatos()
         {
             CargarDatos();
-            DataTable datosemp = ControladorIngreso.CargarEmpleadoControlador();
+             datosemp = ControladorIngreso.CargarEmpleadoControlador();
             dgvEmpleado.DataSource = datosemp;
 
             dgvEmpleado.Columns[0].Visible = false;
@@ -419,6 +419,18 @@ namespace SistemGestionBuses
         private void cmbMunicipio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = datosemp.DefaultView;
+            dv.RowFilter = "nombres_empleado LIKE '" + textBox1.Text+"%' ";
+            dgvEmpleado.DataSource = dv;
         }
     }
 }

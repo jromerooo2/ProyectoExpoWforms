@@ -383,5 +383,10 @@ namespace SistemGestionBuses
             frmLogin login = new frmLogin();
             login.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
