@@ -12,9 +12,21 @@ namespace SistemGestionBuses
 {
     public partial class frmAsignarViaje : Form
     {
+        DataTable vistaviajes;
+
         public frmAsignarViaje()
         {
             InitializeComponent();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomTextbox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
