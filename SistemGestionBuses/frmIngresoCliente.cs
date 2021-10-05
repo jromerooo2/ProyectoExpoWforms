@@ -375,5 +375,12 @@ namespace SistemGestionBuses
             asignar.Show();
             Close();
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            DataView dv = datosClien.DefaultView;
+            dv.RowFilter = "nombres_cliente LIKE '"+textBox1.Text+"%'";
+            dgvDatosCliente.DataSource = dv;
+        }
     }
 }
