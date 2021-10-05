@@ -371,7 +371,7 @@ namespace SistemGestionBuses
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            frmAsignarViaje asignar = new frmAsignarViaje();
+            frmAsignarViaje asignar = new frmAsignarViaje(username, cargostring, idcargo, idlogged);
             asignar.Show();
             Close();
         }

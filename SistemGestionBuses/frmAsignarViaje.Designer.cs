@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarViaje));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -44,31 +44,32 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dgvViaje = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.btnAsignar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCliente = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtNombreViaje = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.bunifuCustomTextbox4 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtDirecFinal = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtBuscar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox5 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.bunifuCustomTextbox6 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtDirecAdicional = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtTarifa = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtTipoViaje = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +127,7 @@
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // bunifuImageButton3
             // 
@@ -141,6 +143,7 @@
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuElipse1
             // 
@@ -198,6 +201,7 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(32, 30);
             this.btnLogOut.Text = "toolStripButton3";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // toolStripLabel1
             // 
@@ -208,66 +212,66 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
-            // bunifuCustomDataGrid1
+            // dgvViaje
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(33, 170);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(451, 356);
-            this.bunifuCustomDataGrid1.TabIndex = 137;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvViaje.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvViaje.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvViaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvViaje.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViaje.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvViaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViaje.DoubleBuffered = true;
+            this.dgvViaje.EnableHeadersVisualStyles = false;
+            this.dgvViaje.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgvViaje.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgvViaje.Location = new System.Drawing.Point(33, 209);
+            this.dgvViaje.Name = "dgvViaje";
+            this.dgvViaje.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvViaje.Size = new System.Drawing.Size(451, 317);
+            this.dgvViaje.TabIndex = 137;
             // 
-            // bunifuFlatButton1
+            // btnAsignar
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 5;
-            this.bunifuFlatButton1.ButtonText = "Asignar Viaje";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 80D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(547, 478);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(167, 48);
-            this.bunifuFlatButton1.TabIndex = 138;
-            this.bunifuFlatButton1.Text = "Asignar Viaje";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.btnAsignar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.btnAsignar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAsignar.BorderRadius = 5;
+            this.btnAsignar.ButtonText = "Asignar Viaje";
+            this.btnAsignar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsignar.DisabledColor = System.Drawing.Color.DimGray;
+            this.btnAsignar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAsignar.Iconimage = null;
+            this.btnAsignar.Iconimage_right = null;
+            this.btnAsignar.Iconimage_right_Selected = null;
+            this.btnAsignar.Iconimage_Selected = null;
+            this.btnAsignar.IconMarginLeft = 0;
+            this.btnAsignar.IconMarginRight = 0;
+            this.btnAsignar.IconRightVisible = true;
+            this.btnAsignar.IconRightZoom = 0D;
+            this.btnAsignar.IconVisible = true;
+            this.btnAsignar.IconZoom = 80D;
+            this.btnAsignar.IsTab = false;
+            this.btnAsignar.Location = new System.Drawing.Point(547, 478);
+            this.btnAsignar.Name = "btnAsignar";
+            this.btnAsignar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.btnAsignar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnAsignar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAsignar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAsignar.selected = false;
+            this.btnAsignar.Size = new System.Drawing.Size(167, 48);
+            this.btnAsignar.TabIndex = 138;
+            this.btnAsignar.Text = "Asignar Viaje";
+            this.btnAsignar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAsignar.Textcolor = System.Drawing.Color.White;
+            this.btnAsignar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtCliente
             // 
@@ -291,15 +295,16 @@
             this.label1.TabIndex = 141;
             this.label1.Text = "Cliente:";
             // 
-            // bunifuCustomTextbox1
+            // txtNombreViaje
             // 
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(511, 209);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(239, 22);
-            this.bunifuCustomTextbox1.TabIndex = 142;
-            this.bunifuCustomTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombreViaje.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtNombreViaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreViaje.Location = new System.Drawing.Point(511, 209);
+            this.txtNombreViaje.Name = "txtNombreViaje";
+            this.txtNombreViaje.ReadOnly = true;
+            this.txtNombreViaje.Size = new System.Drawing.Size(239, 22);
+            this.txtNombreViaje.TabIndex = 142;
+            this.txtNombreViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -332,33 +337,34 @@
             this.label5.Text = "Dirección final:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // bunifuCustomTextbox3
+            // txtDirecFinal
             // 
-            this.bunifuCustomTextbox3.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox3.Location = new System.Drawing.Point(515, 325);
-            this.bunifuCustomTextbox3.Multiline = true;
-            this.bunifuCustomTextbox3.Name = "bunifuCustomTextbox3";
-            this.bunifuCustomTextbox3.Size = new System.Drawing.Size(237, 47);
-            this.bunifuCustomTextbox3.TabIndex = 147;
-            this.bunifuCustomTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuCustomTextbox3.TextChanged += new System.EventHandler(this.bunifuCustomTextbox3_TextChanged);
+            this.txtDirecFinal.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtDirecFinal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDirecFinal.Location = new System.Drawing.Point(515, 325);
+            this.txtDirecFinal.Multiline = true;
+            this.txtDirecFinal.Name = "txtDirecFinal";
+            this.txtDirecFinal.ReadOnly = true;
+            this.txtDirecFinal.Size = new System.Drawing.Size(237, 47);
+            this.txtDirecFinal.TabIndex = 147;
+            this.txtDirecFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDirecFinal.TextChanged += new System.EventHandler(this.bunifuCustomTextbox3_TextChanged);
             // 
-            // bunifuCustomTextbox4
+            // txtBuscar
             // 
-            this.bunifuCustomTextbox4.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox4.Location = new System.Drawing.Point(33, 130);
-            this.bunifuCustomTextbox4.Name = "bunifuCustomTextbox4";
-            this.bunifuCustomTextbox4.Size = new System.Drawing.Size(417, 23);
-            this.bunifuCustomTextbox4.TabIndex = 149;
-            this.bunifuCustomTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBuscar.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(33, 169);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(243, 23);
+            this.txtBuscar.TabIndex = 149;
+            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(455, 130);
+            this.pictureBox3.Location = new System.Drawing.Point(281, 162);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 30);
@@ -377,26 +383,28 @@
             this.label6.TabIndex = 152;
             this.label6.Text = "Dirección adicional:";
             // 
-            // bunifuCustomTextbox5
+            // txtDirecAdicional
             // 
-            this.bunifuCustomTextbox5.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox5.Location = new System.Drawing.Point(515, 405);
-            this.bunifuCustomTextbox5.Multiline = true;
-            this.bunifuCustomTextbox5.Name = "bunifuCustomTextbox5";
-            this.bunifuCustomTextbox5.Size = new System.Drawing.Size(237, 52);
-            this.bunifuCustomTextbox5.TabIndex = 151;
-            this.bunifuCustomTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDirecAdicional.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtDirecAdicional.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDirecAdicional.Location = new System.Drawing.Point(515, 405);
+            this.txtDirecAdicional.Multiline = true;
+            this.txtDirecAdicional.Name = "txtDirecAdicional";
+            this.txtDirecAdicional.ReadOnly = true;
+            this.txtDirecAdicional.Size = new System.Drawing.Size(237, 52);
+            this.txtDirecAdicional.TabIndex = 151;
+            this.txtDirecAdicional.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuCustomTextbox6
+            // txtTarifa
             // 
-            this.bunifuCustomTextbox6.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox6.Location = new System.Drawing.Point(513, 267);
-            this.bunifuCustomTextbox6.Name = "bunifuCustomTextbox6";
-            this.bunifuCustomTextbox6.Size = new System.Drawing.Size(111, 22);
-            this.bunifuCustomTextbox6.TabIndex = 144;
-            this.bunifuCustomTextbox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTarifa.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtTarifa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarifa.Location = new System.Drawing.Point(513, 267);
+            this.txtTarifa.Name = "txtTarifa";
+            this.txtTarifa.ReadOnly = true;
+            this.txtTarifa.Size = new System.Drawing.Size(111, 22);
+            this.txtTarifa.TabIndex = 144;
+            this.txtTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -420,16 +428,6 @@
             this.label4.TabIndex = 154;
             this.label4.Text = "Tipo viaje:";
             // 
-            // bunifuCustomTextbox2
-            // 
-            this.bunifuCustomTextbox2.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox2.Location = new System.Drawing.Point(639, 267);
-            this.bunifuCustomTextbox2.Name = "bunifuCustomTextbox2";
-            this.bunifuCustomTextbox2.Size = new System.Drawing.Size(111, 22);
-            this.bunifuCustomTextbox2.TabIndex = 153;
-            this.bunifuCustomTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -441,29 +439,52 @@
             this.label8.TabIndex = 155;
             this.label8.Text = "Asignación de viajes.";
             // 
+            // txtTipoViaje
+            // 
+            this.txtTipoViaje.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtTipoViaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoViaje.Location = new System.Drawing.Point(641, 267);
+            this.txtTipoViaje.Name = "txtTipoViaje";
+            this.txtTipoViaje.ReadOnly = true;
+            this.txtTipoViaje.Size = new System.Drawing.Size(111, 22);
+            this.txtTipoViaje.TabIndex = 156;
+            this.txtTipoViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(30, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(313, 17);
+            this.label9.TabIndex = 157;
+            this.label9.Text = "Selecciona el viaje que deseas asignarle al cliente.";
+            // 
             // frmAsignarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 582);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtTipoViaje);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.bunifuCustomTextbox2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.bunifuCustomTextbox5);
+            this.Controls.Add(this.txtDirecAdicional);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.bunifuCustomTextbox4);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.bunifuCustomTextbox3);
-            this.Controls.Add(this.bunifuCustomTextbox6);
+            this.Controls.Add(this.txtDirecFinal);
+            this.Controls.Add(this.txtTarifa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bunifuCustomTextbox1);
+            this.Controls.Add(this.txtNombreViaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCliente);
-            this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.btnAsignar);
+            this.Controls.Add(this.dgvViaje);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.pictureBox2);
@@ -477,7 +498,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -497,23 +518,24 @@
         private System.Windows.Forms.ToolStripLabel txtCargoStrip;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvViaje;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtCliente;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAsignar;
         private System.Windows.Forms.Label label5;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox3;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtDirecFinal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtNombreViaje;
         private System.Windows.Forms.Label label1;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox4;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox5;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtDirecAdicional;
         private System.Windows.Forms.Label label4;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox2;
         private System.Windows.Forms.Label label7;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox6;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtTarifa;
         private System.Windows.Forms.Label label8;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtTipoViaje;
+        private System.Windows.Forms.Label label9;
     }
 }
