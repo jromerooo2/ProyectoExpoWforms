@@ -182,5 +182,10 @@ namespace SistemGestionBuses
             MessageBox.Show("Se ha generado un documento PDF con el reporte.");
         }
         #endregion pdfempleado
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
