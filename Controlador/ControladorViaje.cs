@@ -61,9 +61,24 @@ namespace Controlador
             return ModeloViaje.ObtenerViajes();
         }
 
+        public static int getID(string viaje)
+        {
+            return ModeloViaje.ObtenerIDviaje(viaje);
+        }
+
+        public static bool AsignarViajeClienteControl(int idclient, int idtrip)
+        {
+            return ModeloViaje.AsignarViajeCliente(idclient, idtrip);
+        }
+
         public static string CargarNombreCliente(int id)
         {
             return ModeloViaje.ObtenerClienteCompleto(id);
+        }
+
+        public static DataTable CargarVistaViaje()
+        {
+            return ModeloViaje.ObtenerVistaViajes();
         }
 
         #region CMB Controller

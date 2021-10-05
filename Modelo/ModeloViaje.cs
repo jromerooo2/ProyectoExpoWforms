@@ -333,6 +333,24 @@ namespace Modelo
             }
         }
 
+        public static bool AsignarViajeCliente(int cliente, int viaje)
+        {
+            bool retorno = false;
+            try
+            {
+                //INCERCION
+                MySqlCommand cmdinsertviaje = new MySqlCommand(string.Format("INSERT INTO tb_cliente_viaje (id_viaje, id_cliente) VALUES('{0}','{1}')", viaje, cliente), ModeloConexion.GetConnection());
+                //VERIFICACION
+                retorno = Convert.ToBoolean(cmdinsertviaje.ExecuteNonQuery());
+                //RETORNO
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
+
         //Metodo para cargar los datos en el grid de datos
         public static DataTable ObtenerViajes()
         {
@@ -401,6 +419,23 @@ namespace Modelo
             catch (Exception)
             {
                 return data = null;
+            }
+        }
+
+        public static int ObtenerIDviaje(string nametrip)
+        {
+            int viaje = 0;
+            try
+            {
+                string instruccion = "SELECT (id_viaje) FROM tb_viajes WHERE nombre_viaje = BINARY ?param1;";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", nametrip));
+                viaje = Convert.ToInt16(cmdid.ExecuteScalar());
+                return viaje;
+            }
+            catch (Exception)
+            {
+                return viaje;
             }
         }
     }
