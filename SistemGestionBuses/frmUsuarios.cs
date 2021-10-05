@@ -225,7 +225,8 @@ namespace SistemGestionBuses
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt16(txtId.Text);
-            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtUser.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && id != IdUserLogged)
+
+            if (MessageBox.Show("¿Estas seguro de eliminar a: " + txtUser.Text + "?", "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && id != IdUserLogged )
             {
                 EliminarDatos();
                 cargarGridDatos();
@@ -271,6 +272,16 @@ namespace SistemGestionBuses
             cmbEmpleado.DataSource = ControladorUsuario.cargarUsuario(id_empleado);
             cmbEmpleado.DisplayMember = "nombres_empleado";
             cmbEmpleado.ValueMember = "id_empleado";
+
+            int id = Convert.ToInt16(txtId.Text);
+            if (id == IdUserLogged)
+            {
+                cmbCargo.Enabled = false;
+            }
+            else
+            {
+                cmbCargo.Enabled = true;
+            }
 
             string id_cargo = dgvUsuarios[5, i].Value.ToString();
             cmbCargo.DataSource = ControladorUsuario.cargarCargo(id_cargo);
