@@ -95,7 +95,7 @@
             this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Location = new System.Drawing.Point(39, 133);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 252);
             this.panel1.TabIndex = 73;
@@ -114,7 +114,7 @@
             this.btnRestablecer.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestablecer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.btnRestablecer.Location = new System.Drawing.Point(120, 182);
-            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestablecer.Name = "btnRestablecer";
             this.btnRestablecer.Size = new System.Drawing.Size(148, 59);
             this.btnRestablecer.TabIndex = 20;
@@ -135,7 +135,7 @@
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button3.Location = new System.Drawing.Point(205, 30);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 65);
             this.button3.TabIndex = 19;
@@ -155,7 +155,7 @@
             this.BtnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnEliminar.Location = new System.Drawing.Point(205, 111);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(148, 59);
             this.BtnEliminar.TabIndex = 18;
@@ -176,7 +176,7 @@
             this.BtnActualizar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnActualizar.Location = new System.Drawing.Point(29, 111);
-            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(148, 59);
             this.BtnActualizar.TabIndex = 17;
@@ -198,7 +198,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.BtnAgregar.Location = new System.Drawing.Point(29, 32);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(148, 60);
             this.BtnAgregar.TabIndex = 15;
@@ -222,7 +222,7 @@
             this.panel2.Controls.Add(this.cmbEmpleado);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(425, 133);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(943, 252);
             this.panel2.TabIndex = 74;
@@ -240,7 +240,7 @@
             this.button2.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.button2.Location = new System.Drawing.Point(764, 190);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 42);
             this.button2.TabIndex = 20;
@@ -251,7 +251,7 @@
             // imageUser
             // 
             this.imageUser.Location = new System.Drawing.Point(751, 63);
-            this.imageUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imageUser.Margin = new System.Windows.Forms.Padding(4);
             this.imageUser.Name = "imageUser";
             this.imageUser.Size = new System.Drawing.Size(175, 114);
             this.imageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +263,7 @@
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(784, 20);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(55, 28);
             this.txtId.TabIndex = 67;
@@ -285,7 +285,7 @@
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(51, 142);
-            this.cmbCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCargo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(308, 30);
             this.cmbCargo.TabIndex = 66;
@@ -321,7 +321,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(421, 142);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.ShortcutsEnabled = false;
             this.txtCorreo.Size = new System.Drawing.Size(268, 28);
@@ -344,7 +344,7 @@
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(45, 78);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
@@ -357,7 +357,7 @@
             this.cmbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpleado.FormattingEnabled = true;
             this.cmbEmpleado.Location = new System.Drawing.Point(421, 76);
-            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmpleado.Name = "cmbEmpleado";
             this.cmbEmpleado.Size = new System.Drawing.Size(268, 30);
             this.cmbEmpleado.TabIndex = 22;
@@ -395,7 +395,7 @@
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(475, 462);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.Size = new System.Drawing.Size(888, 230);
             this.dgvUsuarios.TabIndex = 71;
@@ -435,7 +435,7 @@
             this.dgvOnlineUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOnlineUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOnlineUsers.Location = new System.Drawing.Point(39, 462);
-            this.dgvOnlineUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvOnlineUsers.Margin = new System.Windows.Forms.Padding(4);
             this.dgvOnlineUsers.Name = "dgvOnlineUsers";
             this.dgvOnlineUsers.Size = new System.Drawing.Size(429, 230);
             this.dgvOnlineUsers.TabIndex = 78;
@@ -460,7 +460,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(395, 415);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -472,7 +472,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(720, 409);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(63, 43);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -484,7 +484,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(263, 82);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -566,7 +566,7 @@
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(1395, 65);
             this.panelBar.TabIndex = 130;
@@ -579,13 +579,14 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(4, 4);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(75, 65);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuImageButton1.TabIndex = 99;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuImageButton5
             // 
@@ -595,7 +596,7 @@
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
             this.bunifuImageButton5.Location = new System.Drawing.Point(1288, 11);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(33, 41);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -612,7 +613,7 @@
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
             this.bunifuImageButton3.Location = new System.Drawing.Point(1329, 11);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Size = new System.Drawing.Size(36, 41);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -647,7 +648,7 @@
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
