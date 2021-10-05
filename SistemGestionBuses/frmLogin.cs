@@ -16,6 +16,7 @@ namespace SistemGestionBuses
         public frmLogin()
         {
             InitializeComponent();
+            //PrimerUso();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,8 +26,8 @@ namespace SistemGestionBuses
 
         void tryLogIn()
         {
-                string user = txtUser.Text;
-                string password = txtPass.Text;
+                string user = txtusername.Text;
+                string password = txtpassword.Text;
                 int count = 0;
 
                 AtributosLogin.username = user;
@@ -67,7 +68,7 @@ namespace SistemGestionBuses
 
         private bool Empty(string user, string password)
         {
-            if (String.IsNullOrWhiteSpace(user) && String.IsNullOrWhiteSpace(password))
+            if (String.IsNullOrEmpty(user) || String.IsNullOrEmpty(password))
             {
                 return true;
             }
@@ -101,7 +102,9 @@ namespace SistemGestionBuses
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (!Empty(txtUser.Text, txtPass.Text))
+
+
+            if(!Empty(txtusername.Text, txtpassword.Text))
             {
                 tryLogIn();
             }
@@ -125,6 +128,31 @@ namespace SistemGestionBuses
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            PrimerUso();
+        }
+
+        void PrimerUso()
+        {
+            //Comprobar que no existan empleados
+            int res = ControladorLogin.comprobarEmpleadosVacio();
+            //Comprobar que no existan usuarios
+            int res2 = ControladorLogin.comprobarUsuariosVacio();
+            if (res > 0 && res2 > 0)
+            {
+                Show();
+            }
+            else
+            {
+                Hide();
+                SendToBack();
+                FirstUse primeruso = new FirstUse();
+                primeruso.Show();
+               
+            }           
         }
     }
 }

@@ -16,6 +16,7 @@ namespace SistemGestionBuses
         public static string usuario;
         public static int cargouser;
         public static int idUser;
+        public static string cargostring;
 
 
         public frmPrincipal(int cargo, string user, int idlogged)
@@ -26,9 +27,8 @@ namespace SistemGestionBuses
             cargouser = cargo;
             idUser = idlogged;
             txtActiveUser.Text = usuario;
-            string cargostring = ControladorLogin.getCargostring(cargouser);
+            cargostring = ControladorLogin.getCargostring(cargouser);
             txtCargoStrip.Text = cargostring;
-            //txtCargoStrip.Text = cargouser;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace SistemGestionBuses
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            frmIngresarViaje viajes = new frmIngresarViaje();
+            frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
             viajes.Show();
         }
 
@@ -64,19 +64,19 @@ namespace SistemGestionBuses
 
         private void pictureUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios(cargouser, idUser);
+            frmUsuarios users = new frmUsuarios(cargouser, idUser, cargostring, usuario);
             users.Show();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            frmIngresoCliente clientes = new frmIngresoCliente();
+            frmIngresoCliente clientes = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
             clientes.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            frmIngresoEmpleado empleado = new frmIngresoEmpleado();
+            frmIngresoEmpleado empleado = new frmIngresoEmpleado(usuario, cargostring, cargouser, idUser);
             empleado.Show();
         }
 
@@ -88,7 +88,7 @@ namespace SistemGestionBuses
 
         private void cardUsers_Click(object sender, EventArgs e)
         {
-            frmUsuarios users = new frmUsuarios(cargouser, idUser);
+            frmUsuarios users = new frmUsuarios(cargouser, idUser, cargostring, usuario);
             users.Show();
         }
 
@@ -105,7 +105,7 @@ namespace SistemGestionBuses
 
         private void bunifuCards3_Click(object sender, EventArgs e)
         {
-            frmIngresoEmpleado empleado = new frmIngresoEmpleado();
+            frmIngresoEmpleado empleado = new frmIngresoEmpleado(usuario, cargostring, cargouser, idUser);
             empleado.Show();
         }
 
@@ -116,13 +116,13 @@ namespace SistemGestionBuses
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            frmReportes reportes = new frmReportes();
+            frmReportes reportes = new frmReportes(usuario, cargostring, cargouser, idUser);
             reportes.Show();
         }
 
         private void cardClientes_Click(object sender, EventArgs e)
         {
-            frmIngresoCliente clientes = new frmIngresoCliente();
+            frmIngresoCliente clientes = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
             clientes.Show();
         }
 
@@ -134,7 +134,7 @@ namespace SistemGestionBuses
 
         private void bunifuCards2_Click(object sender, EventArgs e)
         {
-            frmIngresarViaje viajes = new frmIngresarViaje();
+            frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
             viajes.Show();
         }
 
@@ -145,9 +145,13 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            
+            frmLogin login = new frmLogin();
+            if (MessageBox.Show("Estas seguro de querer salir del sistema", "Confirmación de salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                logOut();
+                Close();
+            }
         }
-
         private void logOut()
         {
             ControladorLogin.LogOut(idUser);
@@ -173,25 +177,71 @@ namespace SistemGestionBuses
 
         private void cardReportes_Click(object sender, EventArgs e)
         {
-            frmReportes reportes = new frmReportes();
+            frmReportes reportes = new frmReportes(usuario, cargostring, cargouser, idUser);
             reportes.Show();
         }
 
         private void bunifuCards6_Click(object sender, EventArgs e)
         {
-            frmViajesActivos next = new frmViajesActivos();
+            frmViajesActivos next = new frmViajesActivos(usuario, cargostring, cargouser, idUser);
             next.Show();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            frmViajesActivos next = new frmViajesActivos();
+            frmViajesActivos next = new frmViajesActivos(usuario, cargostring, cargouser, idUser);
             next.Show();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             logOut();
+        }
+
+        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cardEmpleado_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cardMantenimientos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuCards6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmUsuarios ingresusuario = new frmUsuarios(cargouser, idUser, cargostring, usuario);
+            ingresusuario.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+            frmIngresarViaje viajes = new frmIngresarViaje(cargouser, idUser, cargostring, usuario);
+            viajes.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            frmIngresoCliente cliente = new frmIngresoCliente(usuario, cargostring, cargouser, idUser);
+            cliente.Show();
+            this.Hide();
         }
     }
 }

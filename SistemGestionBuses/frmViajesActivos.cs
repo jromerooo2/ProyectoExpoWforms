@@ -13,11 +13,33 @@ namespace SistemGestionBuses
 {
     public partial class frmViajesActivos : Form
     {
-        public frmViajesActivos()
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
+        public frmViajesActivos(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoUser.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
+            Permisos();
         }
 
+        void Permisos()
+        {
+            if (idcargo == 2)
+            {
+                btnRastrear.Enabled = true;
+            }
+            else
+            {
+                btnRastrear.Enabled = false;
+            }
+        }
         private void frmViajesActivos_Load(object sender, EventArgs e)
         {
             MessageBox.Show(DateTime.Today.ToString("yyyy-dd-MM"));
@@ -46,7 +68,10 @@ namespace SistemGestionBuses
         //Boton para cerrar sesión.
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string user = txtActiveUser.Text;
+            ControladorLogin.LogOut(idlogged);
+            Close();
+            frmLogin login = new frmLogin();
+            login.Show();
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
@@ -61,8 +86,7 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            frmPrincipal main = new frmPrincipal(1, "user", 5);
-            this.Close();
+            frmPrincipal main = new frmPrincipal(idcargo, username, idlogged);
             main.Show();
         }
     }

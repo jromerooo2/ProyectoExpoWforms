@@ -7,13 +7,13 @@ using Modelo;
 
 namespace Controlador
 {
-       public class ControladorLogin : AtributosLogin
+    public class ControladorLogin : AtributosLogin
+    {
+        public static int Login()
         {
-            public static int Login()
-            {
-                string passwordMD5 = ValidacionesClass.Encrypt(password);               
-                return ModeloLogin.Login(username, passwordMD5);
-            }
+            string passwordMD5 = ValidacionesClass.Encrypt(password);
+            return ModeloLogin.Login(username, passwordMD5);
+        }
         public static List<int> res = new List<int>();
         public static int GetCargo()
         {
@@ -35,6 +35,20 @@ namespace Controlador
         {
             return ModeloLogin.getCargoString(idcargo);
         }
+
+
+        #region ComprobarPrimerUso
+        public static int comprobarEmpleadosVacio()
+        {
+            return ModeloLogin.EmpleadosVacio();
+        }
+
+        public static int comprobarUsuariosVacio()
+        {
+            return ModeloLogin.UsuariosVacio();
+        }
+
+        #endregion
     }
 
         public class AtributosLogin

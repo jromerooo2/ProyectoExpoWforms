@@ -16,11 +16,21 @@ namespace SistemGestionBuses
     {
         public DataTable datosClien;
         public ControladorIngresoCliente objCliente;
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
 
-        public frmIngresoCliente()
+        public frmIngresoCliente(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
-            
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoStrip.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
+
         }
         void CargarGridDatos()
         {
@@ -357,6 +367,13 @@ namespace SistemGestionBuses
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            frmAsignarViaje asignar = new frmAsignarViaje();
+            asignar.Show();
+            Close();
         }
     }
 }

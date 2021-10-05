@@ -20,9 +20,19 @@ namespace SistemGestionBuses
 {
     public partial class frmReportes : Form
     {
-        public frmReportes()
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
+        public frmReportes(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoStrip.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
@@ -185,7 +195,7 @@ namespace SistemGestionBuses
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

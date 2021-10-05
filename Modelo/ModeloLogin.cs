@@ -58,7 +58,7 @@ namespace Modelo
                 {
                     return 2;
                 }
-                
+
             }
             catch (Exception)
             {
@@ -115,6 +115,43 @@ namespace Modelo
                 return retorno;
             }
         }
+
+
+        #region PrimerUso
+        public static int EmpleadosVacio()
+        {
+            int count = 0;
+            try
+            {
+                string query = "SELECT count(*) FROM tb_empleados;";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                count = Convert.ToInt16(cmdselect.ExecuteScalar());
+                return count;
+            }
+            catch (Exception)
+            {
+
+                return count;
+            }
+        }
+
+        public static int UsuariosVacio()
+        {
+            int count = 0;
+            try
+            {
+                string query = "SELECT count(*) FROM tb_usuarios;";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                count = Convert.ToInt16(cmdselect.ExecuteScalar());
+                return count;
+            }
+            catch (Exception)
+            {
+
+                return count;
+            }
+        }
+        #endregion
     }
 
 }
