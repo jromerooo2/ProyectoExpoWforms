@@ -186,6 +186,7 @@
             // txtlongitud
             // 
             this.txtlongitud.Location = new System.Drawing.Point(20, 318);
+            this.txtlongitud.MaxLength = 100;
             this.txtlongitud.Multiline = true;
             this.txtlongitud.Name = "txtlongitud";
             this.txtlongitud.ReadOnly = true;
@@ -195,6 +196,7 @@
             // txtlatitud
             // 
             this.txtlatitud.Location = new System.Drawing.Point(20, 269);
+            this.txtlatitud.MaxLength = 100;
             this.txtlatitud.Multiline = true;
             this.txtlatitud.Name = "txtlatitud";
             this.txtlatitud.ReadOnly = true;
@@ -212,7 +214,7 @@
             this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPuntos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.dgvPuntos.Location = new System.Drawing.Point(168, 202);
-            this.dgvPuntos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPuntos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPuntos.Name = "dgvPuntos";
             this.dgvPuntos.ReadOnly = true;
             this.dgvPuntos.RowTemplate.Height = 24;
@@ -243,6 +245,7 @@
             // txtreferenciaAdicional
             // 
             this.txtreferenciaAdicional.Location = new System.Drawing.Point(320, 136);
+            this.txtreferenciaAdicional.MaxLength = 200;
             this.txtreferenciaAdicional.Multiline = true;
             this.txtreferenciaAdicional.Name = "txtreferenciaAdicional";
             this.txtreferenciaAdicional.Size = new System.Drawing.Size(139, 62);
@@ -263,6 +266,7 @@
             // txtreferenciaFinal
             // 
             this.txtreferenciaFinal.Location = new System.Drawing.Point(168, 136);
+            this.txtreferenciaFinal.MaxLength = 200;
             this.txtreferenciaFinal.Multiline = true;
             this.txtreferenciaFinal.Name = "txtreferenciaFinal";
             this.txtreferenciaFinal.Size = new System.Drawing.Size(139, 62);
@@ -283,6 +287,7 @@
             // txtreferenciaInicio
             // 
             this.txtreferenciaInicio.Location = new System.Drawing.Point(15, 136);
+            this.txtreferenciaInicio.MaxLength = 200;
             this.txtreferenciaInicio.Multiline = true;
             this.txtreferenciaInicio.Name = "txtreferenciaInicio";
             this.txtreferenciaInicio.Size = new System.Drawing.Size(139, 62);
@@ -314,6 +319,7 @@
             // txtAdicional
             // 
             this.txtAdicional.Location = new System.Drawing.Point(321, 41);
+            this.txtAdicional.MaxLength = 200;
             this.txtAdicional.Multiline = true;
             this.txtAdicional.Name = "txtAdicional";
             this.txtAdicional.Size = new System.Drawing.Size(141, 71);
@@ -333,6 +339,7 @@
             // txtDireccion_final
             // 
             this.txtDireccion_final.Location = new System.Drawing.Point(167, 40);
+            this.txtDireccion_final.MaxLength = 200;
             this.txtDireccion_final.Multiline = true;
             this.txtDireccion_final.Name = "txtDireccion_final";
             this.txtDireccion_final.Size = new System.Drawing.Size(141, 71);
@@ -341,6 +348,7 @@
             // txtDireccion_inicio
             // 
             this.txtDireccion_inicio.Location = new System.Drawing.Point(15, 42);
+            this.txtDireccion_inicio.MaxLength = 200;
             this.txtDireccion_inicio.Multiline = true;
             this.txtDireccion_inicio.Name = "txtDireccion_inicio";
             this.txtDireccion_inicio.Size = new System.Drawing.Size(139, 69);
@@ -363,7 +371,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.MaximumSize = new System.Drawing.Size(1366, 768);
             this.pictureBox2.MinimumSize = new System.Drawing.Size(1000, 525);
             this.pictureBox2.Name = "pictureBox2";

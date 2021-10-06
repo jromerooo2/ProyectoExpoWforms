@@ -136,7 +136,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(54, 63);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtCode.MaxLength = 50;
+            this.txtCode.MaxLength = 15;
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(267, 20);
             this.txtCode.TabIndex = 30;
