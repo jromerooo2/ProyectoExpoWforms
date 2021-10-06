@@ -75,6 +75,7 @@
             this.txtPin.Name = "txtPin";
             this.txtPin.Size = new System.Drawing.Size(254, 20);
             this.txtPin.TabIndex = 33;
+            this.txtPin.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -145,6 +146,7 @@
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(254, 20);
             this.txtContra.TabIndex = 29;
+            this.txtContra.UseSystemPasswordChar = true;
             // 
             // label4
             // 

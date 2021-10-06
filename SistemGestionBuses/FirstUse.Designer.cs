@@ -58,6 +58,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.CardPaso4 = new Bunifu.Framework.UI.BunifuCards();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cmbMunicipio = new System.Windows.Forms.ComboBox();
@@ -79,7 +80,6 @@
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.MainDrag = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.CardPaso1.SuspendLayout();
@@ -483,6 +483,22 @@
             this.CardPaso4.Size = new System.Drawing.Size(350, 507);
             this.CardPaso4.TabIndex = 121;
             // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(237)))), ((int)(((byte)(80)))));
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFinalizar.Location = new System.Drawing.Point(183, 425);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(121, 51);
+            this.btnFinalizar.TabIndex = 129;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
             // txtNIT
             // 
             this.txtNIT.Font = new System.Drawing.Font("Century Gothic", 9F);
@@ -559,7 +575,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(39, 192);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDireccion.MaxLength = 50;
+            this.txtDireccion.MaxLength = 150;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
@@ -720,22 +736,6 @@
             this.MainDrag.Horizontal = true;
             this.MainDrag.TargetControl = this.panelBar;
             this.MainDrag.Vertical = true;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(237)))), ((int)(((byte)(80)))));
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFinalizar.Location = new System.Drawing.Point(183, 425);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(121, 51);
-            this.btnFinalizar.TabIndex = 129;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // nfConfirmacion
             // 

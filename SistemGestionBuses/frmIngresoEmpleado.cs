@@ -131,22 +131,22 @@ namespace SistemGestionBuses
         //CARGAR GRID DATOS
         void CargarGridDatos()
         {
-            CargarDatos();
+            //CargarDatos();
              datosemp = ControladorIngreso.CargarEmpleadoControlador();
             dgvEmpleado.DataSource = datosemp;
 
-            dgvEmpleado.Columns[0].Visible = false;
-            dgvEmpleado.Columns[1].HeaderText = "Nombres";
-            dgvEmpleado.Columns[2].HeaderText = "Apellidos";
-            dgvEmpleado.Columns[3].HeaderText = "DUI";
-            dgvEmpleado.Columns[4].HeaderText = "NIT";
-            dgvEmpleado.Columns[5].HeaderText = "Dirección";
-            dgvEmpleado.Columns[6].HeaderText = "Teléfono";
-            dgvEmpleado.Columns[7].HeaderText = "Género";
-            dgvEmpleado.Columns[8].HeaderText = "Estado";
-            dgvEmpleado.Columns[9].HeaderText = "Cargo";
-            dgvEmpleado.Columns[10].HeaderText = "Municipio";
-            dgvEmpleado.Columns[11].HeaderText = "F.Nacimiento";
+            //dgvEmpleado.Columns[0].Visible = false;
+            //dgvEmpleado.Columns[1].HeaderText = "Nombres";
+            //dgvEmpleado.Columns[2].HeaderText = "Apellidos";
+            //dgvEmpleado.Columns[3].HeaderText = "DUI";
+            //dgvEmpleado.Columns[4].HeaderText = "NIT";
+            //dgvEmpleado.Columns[5].HeaderText = "Dirección";
+            //dgvEmpleado.Columns[6].HeaderText = "Teléfono";
+            //dgvEmpleado.Columns[7].HeaderText = "Género";
+            //dgvEmpleado.Columns[8].HeaderText = "Estado";
+            //dgvEmpleado.Columns[9].HeaderText = "Cargo";
+            //dgvEmpleado.Columns[10].HeaderText = "Municipio";
+            //dgvEmpleado.Columns[11].HeaderText = "F.Nacimiento";
         }
         //CREAR DATOS
         void EnvioDatos()

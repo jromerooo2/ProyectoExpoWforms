@@ -135,7 +135,7 @@ namespace SistemGestionBuses
             {
                 if (confirmacioncontra.Equals(nuevacontra))
                 {
-                    MessageBox.Show("Contraseña valida, continua con el proceso de primer uso del sistema ingresando tu PIN de seguridad", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Contraseña valida, continua con el proceso de primer uso del sistema ingresando tu PIN de seguridad", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtPIN.Enabled = true;
                     btnPIN.Enabled = true;
                 }
@@ -239,7 +239,7 @@ namespace SistemGestionBuses
             {
                 if (telefono.Trim().Length > 13)
                 {
-                    if (direccion.Length >= 45)
+                    if (direccion.Length >= 30)
                     {
                         if (NIT.Length == 17 && DUI.Length == 10)
                         {

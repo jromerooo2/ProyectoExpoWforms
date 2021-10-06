@@ -234,7 +234,6 @@ namespace Modelo
             }
             catch (Exception)
             {
-
                 return data = null;
             }
         }

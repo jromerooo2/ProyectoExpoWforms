@@ -450,7 +450,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(494, 287);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(77, 18);
@@ -472,7 +472,7 @@
             // 
             // panelGrid
             // 
-            this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.panelGrid.Controls.Add(this.dgvViajes);
             this.panelGrid.Controls.Add(this.btnActualizarGrid);
             this.panelGrid.Controls.Add(this.btnEliminar);
@@ -487,6 +487,7 @@
             // 
             // dgvViajes
             // 
+            this.dgvViajes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViajes.Location = new System.Drawing.Point(16, 17);
             this.dgvViajes.Margin = new System.Windows.Forms.Padding(2);
