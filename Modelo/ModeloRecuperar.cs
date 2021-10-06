@@ -51,11 +51,6 @@ namespace Modelo
             }
         }
 
-        public static bool ValidarCredencialesUsuarios(string usuariorecu, string documentoempleado)
-        {
-            throw new NotImplementedException();
-        }
-
         public static bool ValidarCredenciales(string pusuarioAdmin, string pclaveAdmin)
         {
             bool retorno = false;
