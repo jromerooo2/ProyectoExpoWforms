@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SistemGestionBuses
 {
@@ -85,7 +86,6 @@ namespace SistemGestionBuses
 
         public string[] columnasEmpleado = { "Nombres", "Apellidos", "DUI", "NIT", "Direccion", "Telefóno", "Nacimiento"};
         public float[] tamaniosEmpleado = { 4, 4, 4, 4, 4, 4, 4};
-
 
 
         private void cardClientes_Click(object sender, EventArgs e)

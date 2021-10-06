@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
@@ -99,19 +100,26 @@ namespace SistemGestionBuses
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
-
-
             if(!Empty(txtusername.Text, txtpassword.Text))
             {
                 tryLogIn();
+                Task otask = new Task(Algo);
+                otask.Start();
+                await otask; 
             }
             else
             {
                 MessageBox.Show("Por favor ingresa datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        }
+
+        //Metodos para pantalla de carga
+        public void Algo()
+        {
+            Thread.Sleep(5000);
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
