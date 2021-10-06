@@ -531,7 +531,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_conductores SET id_empleado = '" + id_empleado + "', numero_licencia = '" + licencia + "', fecha_exp_licencia = '" + fecha_exp + "', id_tipo_licencia = '" + id_tipo_licencia + "' WHERE id_conductores = '" + id_conductor + "' "), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_conductores SET id_empleado = '" + id_empleado + "', numero_licencia = '" + licencia + "', fecha_exp_licencia = '" + fecha_exp + "', id_tipo_licencia = '" + id_tipo_licencia + "' WHERE id_empleado = '" + id_empleado + "' "), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }
