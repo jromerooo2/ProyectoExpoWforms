@@ -42,7 +42,7 @@ namespace SistemGestionBuses
         {
             if (!checkFrmsOpen("frmUnidades"))
             {
-                frmUnidades unidades = new frmUnidades();
+                frmUnidades unidades = new frmUnidades(usuario, cargostring, cargouser, idUser);
                 unidades.Show();
             }
 
@@ -121,7 +121,7 @@ namespace SistemGestionBuses
         {
             if (!checkFrmsOpen("frmUnidades"))
             {
-                frmUnidades unidades = new frmUnidades();
+                frmUnidades unidades = new frmUnidades(usuario, cargostring, cargouser, idUser);
                 unidades.Show();
             }
         }

@@ -14,9 +14,20 @@ namespace SistemGestionBuses
 {
     public partial class frmUnidades : Form
     {
-        public frmUnidades()
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
+        public frmUnidades(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
+            //tool strip
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoStrip.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
             CargarComboBoxes();
             CargarGrid();
             txtNumeroMotor.MaxLength = 20; 
@@ -375,6 +386,16 @@ namespace SistemGestionBuses
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            ControladorLogin.LogOut(idlogged);
+        }
+
+        private void panelBar_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
