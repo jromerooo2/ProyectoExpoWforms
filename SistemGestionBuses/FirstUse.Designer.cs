@@ -152,6 +152,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(62, 86);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(224, 22);
@@ -189,6 +190,7 @@
             this.txtUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(62, 149);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
             this.txtUser.Size = new System.Drawing.Size(224, 22);
@@ -258,6 +260,7 @@
             this.txtCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(53, 69);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCode.MaxLength = 6;
             this.txtCode.Name = "txtCode";
             this.txtCode.ShortcutsEnabled = false;
             this.txtCode.Size = new System.Drawing.Size(224, 22);
@@ -344,6 +347,7 @@
             this.txtConfirmacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmacion.Location = new System.Drawing.Point(61, 210);
             this.txtConfirmacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmacion.MaxLength = 50;
             this.txtConfirmacion.Name = "txtConfirmacion";
             this.txtConfirmacion.ShortcutsEnabled = false;
             this.txtConfirmacion.Size = new System.Drawing.Size(224, 22);
@@ -369,6 +373,7 @@
             this.txtPIN.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPIN.Location = new System.Drawing.Point(109, 389);
             this.txtPIN.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPIN.MaxLength = 15;
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.ShortcutsEnabled = false;
             this.txtPIN.Size = new System.Drawing.Size(135, 22);
@@ -405,6 +410,7 @@
             this.txtNueva.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNueva.Location = new System.Drawing.Point(61, 144);
             this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNueva.MaxLength = 50;
             this.txtNueva.Name = "txtNueva";
             this.txtNueva.ShortcutsEnabled = false;
             this.txtNueva.Size = new System.Drawing.Size(224, 22);
@@ -552,6 +558,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(39, 192);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
@@ -616,6 +623,7 @@
             this.txtNameEnterprise.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameEnterprise.Location = new System.Drawing.Point(39, 86);
             this.txtNameEnterprise.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNameEnterprise.MaxLength = 50;
             this.txtNameEnterprise.Name = "txtNameEnterprise";
             this.txtNameEnterprise.ShortcutsEnabled = false;
             this.txtNameEnterprise.Size = new System.Drawing.Size(272, 22);
