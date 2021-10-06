@@ -24,8 +24,6 @@ namespace SistemGestionBuses
         public frmIngresoEmpleado(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
-            CargarDatos();
-            CargarGridDatos();
             username = user;
             txtActiveUser.Text = username;
             cargostring = cargo;
@@ -132,21 +130,21 @@ namespace SistemGestionBuses
         void CargarGridDatos()
         {
             //CargarDatos();
-             datosemp = ControladorIngreso.CargarEmpleadoControlador();
-            dgvEmpleado.DataSource = datosemp;
+             DataTable datosemp2 = ControladorIngreso.CargarEmpleadoControlador();
+            dataGridView1.DataSource = datosemp2;
 
-            //dgvEmpleado.Columns[0].Visible = false;
-            //dgvEmpleado.Columns[1].HeaderText = "Nombres";
-            //dgvEmpleado.Columns[2].HeaderText = "Apellidos";
-            //dgvEmpleado.Columns[3].HeaderText = "DUI";
-            //dgvEmpleado.Columns[4].HeaderText = "NIT";
-            //dgvEmpleado.Columns[5].HeaderText = "Dirección";
-            //dgvEmpleado.Columns[6].HeaderText = "Teléfono";
-            //dgvEmpleado.Columns[7].HeaderText = "Género";
-            //dgvEmpleado.Columns[8].HeaderText = "Estado";
-            //dgvEmpleado.Columns[9].HeaderText = "Cargo";
-            //dgvEmpleado.Columns[10].HeaderText = "Municipio";
-            //dgvEmpleado.Columns[11].HeaderText = "F.Nacimiento";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Nombres";
+            dataGridView1.Columns[2].HeaderText = "Apellidos";
+            dataGridView1.Columns[3].HeaderText = "DUI";
+            dataGridView1.Columns[4].HeaderText = "NIT";
+            dataGridView1.Columns[5].HeaderText = "Dirección";
+            dataGridView1.Columns[6].HeaderText = "Teléfono";
+            dataGridView1.Columns[7].HeaderText = "Género";
+            dataGridView1.Columns[8].HeaderText = "Estado";
+            dataGridView1.Columns[9].HeaderText = "Cargo";
+            dataGridView1.Columns[10].HeaderText = "Municipio";
+            dataGridView1.Columns[11].HeaderText = "F.Nacimiento";
         }
         //CREAR DATOS
         void EnvioDatos()
@@ -294,37 +292,37 @@ namespace SistemGestionBuses
         private void DgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Capturar el numero de fila a la cual se le dio click
-            int posicion = dgvEmpleado.CurrentRow.Index;
+            int posicion = dataGridView1.CurrentRow.Index;
             //envio datos hacia texbox
-            txtId.Text = dgvEmpleado[0, posicion].Value.ToString();
-            TxtNombres.Text= dgvEmpleado[1, posicion].Value.ToString();
-            TxtApellidos.Text = dgvEmpleado[2, posicion].Value.ToString();
-            TxtDUI.Text = dgvEmpleado[3, posicion].Value.ToString();
-            txtNIT.Text = dgvEmpleado[4, posicion].Value.ToString();
-            TxtDireccion.Text = dgvEmpleado[5, posicion].Value.ToString();
-            txtTelefono.Text = dgvEmpleado[6, posicion].Value.ToString();
+            txtId.Text = dataGridView1[0, posicion].Value.ToString();
+            TxtNombres.Text= dataGridView1[1, posicion].Value.ToString();
+            TxtApellidos.Text = dataGridView1[2, posicion].Value.ToString();
+            TxtDUI.Text = dataGridView1[3, posicion].Value.ToString();
+            txtNIT.Text = dataGridView1[4, posicion].Value.ToString();
+            TxtDireccion.Text = dataGridView1[5, posicion].Value.ToString();
+            txtTelefono.Text = dataGridView1[6, posicion].Value.ToString();
             //Envio de datos a cmb
-            int id_genero = Convert.ToInt16(dgvEmpleado[7, posicion].Value.ToString());
+            int id_genero = Convert.ToInt16(dataGridView1[7, posicion].Value.ToString());
             cmbGenero.DataSource = ControladorIngreso.CargarGeneroInner_controlador(id_genero);
             cmbGenero.DisplayMember = "genero";
             cmbGenero.ValueMember = "id_genero";
 
-            int id_estado_empleado = Convert.ToInt16(dgvEmpleado[8, posicion].Value.ToString());
+            int id_estado_empleado = Convert.ToInt16(dataGridView1[8, posicion].Value.ToString());
             CmbEstado.DataSource = ControladorIngreso.CargarEstadoInner_controlador(id_estado_empleado);
             CmbEstado.DisplayMember = "estado_empleado";
             CmbEstado.ValueMember = "id_estado_empleado";
 
-            int id_cargo = Convert.ToInt16(dgvEmpleado[9, posicion].Value.ToString());
+            int id_cargo = Convert.ToInt16(dataGridView1[9, posicion].Value.ToString());
             cmbCargo.DataSource = ControladorIngreso.CargarCargoInner_controlador(id_cargo);
             cmbCargo.DisplayMember = "cargo";
             cmbCargo.ValueMember = "id_cargo";
 
-            int id_municipio = Convert.ToInt16(dgvEmpleado[10, posicion].Value.ToString());
+            int id_municipio = Convert.ToInt16(dataGridView1[10, posicion].Value.ToString());
             cmbMunicipio.DataSource = ControladorIngreso.CargarMunicipiosInner_controlador(id_municipio);
             cmbMunicipio.DisplayMember = "municipio";
             cmbMunicipio.ValueMember = "id_municipio";
             //Fecha de nacimiento
-            dtNacimiento.Text = dgvEmpleado[11, posicion].Value.ToString();
+            dtNacimiento.Text = dataGridView1[11, posicion].Value.ToString();
 
         }
 
@@ -425,8 +423,188 @@ namespace SistemGestionBuses
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             DataView dv = datosemp.DefaultView;
-            dv.RowFilter = "nombres_empleado LIKE '" + textBox1.Text+"%' ";
-            dgvEmpleado.DataSource = dv;
+            dv.RowFilter = "nombres_empleado LIKE '" + textBox1.Text + "%' ";
+            dataGridView1.DataSource = dv;
+        }
+
+        private void dgvEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtNIT_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void TxtDUI_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblApellido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtApellidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNombres_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIngreso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void txtActiveUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCargoStrip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

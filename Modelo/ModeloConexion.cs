@@ -24,7 +24,8 @@ namespace Modelo
                                               "; database = " + database +
                                               "; uid = " + user +
                                               "; pwd = " + password +
-                                              "; port = " + puerto);
+                                              "; port = " + puerto+
+                                              ";convert zero datetime=True");
                 rtrn.Open();
                 return rtrn;
             }

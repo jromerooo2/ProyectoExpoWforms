@@ -225,16 +225,16 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instuccion = "SELECT * FROM tb_empleados";
+                string instuccion = "SELECT * FROM tb_empleados ";
                 MySqlCommand cmdListaEmpleado = new MySqlCommand(string.Format(instuccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdListaEmpleado);
                 data = new DataTable();
                 adp.Fill(data);
                 return data;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return data = null;
+                throw ex;
             }
         }
 
