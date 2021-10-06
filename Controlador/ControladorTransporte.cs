@@ -12,7 +12,7 @@ namespace Controlador
     {
 
         //Atributos
-        public static int id_unidad_transporte { get; set; }
+        public static string id_unidad_transporte { get; set; }
         public int id_marca { get; set; }
         public int anio { get; set; }
         public string VIN { get; set; }

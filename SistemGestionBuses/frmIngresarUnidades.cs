@@ -70,18 +70,18 @@ namespace SistemGestionBuses
             unidades = ControladorTransporte.ObtenerUnidadesController();
             dgvUnidades.DataSource = unidades;
             //dgvunidades.columns[0].headertext = "id usuario";
-            //dgvunidades.columns[0].visible = false;
-            dgvUnidades.Columns[0].HeaderText = "Año";
-            dgvUnidades.Columns[1].HeaderText = "VIN";
-            dgvUnidades.Columns[2].HeaderText = "Capacidad";
-            dgvUnidades.Columns[3].HeaderText = "Placa";
-            dgvUnidades.Columns[4].HeaderText = "Tipo de Placa";
-            dgvUnidades.Columns[5].HeaderText = "Tipo de Unidad";
-            dgvUnidades.Columns[6].HeaderText = "Modelo";
-            dgvUnidades.Columns[7].HeaderText = "Marca";
-            dgvUnidades.Columns[8].HeaderText = "Estado de la Unidad";
-            dgvUnidades.Columns[9].HeaderText = "Número de Motor";
-            dgvUnidades.Columns[10].HeaderText = "Número de Chasis";
+            dgvUnidades.Columns[0].Visible = false;
+            dgvUnidades.Columns[1].HeaderText = "Año";
+            dgvUnidades.Columns[2].HeaderText = "VIN";
+            dgvUnidades.Columns[3].HeaderText = "Capacidad";
+            dgvUnidades.Columns[4].HeaderText = "Placa";
+            dgvUnidades.Columns[5].HeaderText = "Tipo de Placa";
+            dgvUnidades.Columns[6].HeaderText = "Tipo de Unidad";
+            dgvUnidades.Columns[7].HeaderText = "Modelo";
+            dgvUnidades.Columns[8].HeaderText = "Marca";
+            dgvUnidades.Columns[9].HeaderText = "Estado de la Unidad";
+            dgvUnidades.Columns[10].HeaderText = "Número de Motor";
+            dgvUnidades.Columns[11].HeaderText = "Número de Chasis";
         }
 
         #region CMB
@@ -221,7 +221,7 @@ namespace SistemGestionBuses
 
         void EliminarUnidad()
         {
-            ControladorTransporte.id_unidad_transporte = Convert.ToInt16(txtIDunidad.Text);
+            ControladorTransporte.id_unidad_transporte = txtIDunidad.Text;
             bool res = ControladorTransporte.EliminarUnidad();
             if (res == true)
             {
@@ -248,30 +248,30 @@ namespace SistemGestionBuses
         {
             int i = dgvUnidades.CurrentRow.Index;
             txtIDunidad.Text = dgvUnidades[0,i].Value.ToString();
-            txtAnio.Text = dgvUnidades[0, i].Value.ToString();
-            txtVIN.Text = dgvUnidades[1, i].Value.ToString();
-            txtCapacidad.Text = dgvUnidades[2, i].Value.ToString();
-            txtPlaca.Text = dgvUnidades[3, i].Value.ToString();
-            txtNumeroMotor.Text = dgvUnidades[9, i].Value.ToString();
-            txtNumeroChasis.Text = dgvUnidades[10, i].Value.ToString();
+            txtAnio.Text = dgvUnidades[1, i].Value.ToString();
+            txtVIN.Text = dgvUnidades[2, i].Value.ToString();
+            txtCapacidad.Text = dgvUnidades[3, i].Value.ToString();
+            txtPlaca.Text = dgvUnidades[4, i].Value.ToString();
+            txtNumeroMotor.Text = dgvUnidades[10, i].Value.ToString();
+            txtNumeroChasis.Text = dgvUnidades[11, i].Value.ToString();
 
-            string id_marca = dgvUnidades[7, i].Value.ToString();
+            string id_marca = dgvUnidades[8, i].Value.ToString();
             cmbMarca.DataSource = ControladorTransporte.ObtenerMarcasInner(id_marca);
             cmbMarca.DisplayMember = "marca";
             cmbMarca.ValueMember = "id_marca";
-            string id_modelo = dgvUnidades[6, i].Value.ToString();
+            string id_modelo = dgvUnidades[7, i].Value.ToString();
             cmbModelo.DataSource = ControladorTransporte.ObtenerModeloInner(id_modelo);
             cmbModelo.DisplayMember = "modelo";
             cmbModelo.ValueMember = "id_modelo";
-            string id_tipo_placa =dgvUnidades[4, i].Value.ToString();
+            string id_tipo_placa =dgvUnidades[5, i].Value.ToString();
             cmbTipoPlaca.DataSource = ControladorTransporte.ObtenerTipoPlacaInner(id_tipo_placa);
             cmbTipoPlaca.DisplayMember = "tipo_placa";
             cmbTipoPlaca.ValueMember = "id_tipo_placa";
-            string id_tipo_unidad = dgvUnidades[5, i].Value.ToString();
+            string id_tipo_unidad = dgvUnidades[6, i].Value.ToString();
             cmbTipoUnidad.DataSource = ControladorTransporte.ObtenerTipoUnidadInner(id_tipo_unidad);
             cmbTipoUnidad.DisplayMember = "tipo_unidad";
             cmbTipoUnidad.ValueMember = "id_tipo_unidad";
-            string id_estado_unidad = dgvUnidades[8, i].Value.ToString();
+            string id_estado_unidad = dgvUnidades[9, i].Value.ToString();
             cmbEstadoUnidad.DataSource = ControladorTransporte.ObtenerEstadoUnidadInner(id_estado_unidad);
             cmbEstadoUnidad.DisplayMember = "estado_unidad";
             cmbEstadoUnidad.ValueMember = "id_estado_unidad";
@@ -301,16 +301,16 @@ namespace SistemGestionBuses
             placa = txtPlaca.Text;
             id_estado_unidad = Convert.ToInt32(cmbEstadoUnidad.SelectedValue);
 
-            ControladorTransporte.id_unidad_transporte = Convert.ToInt16(txtIDunidad.Text);
+            ControladorTransporte.id_unidad_transporte = txtIDunidad.Text;
             transportecontrol = new ControladorTransporte(id_marca, anio, VIN, capacidad, id_modelo, placa, id_tipo_placa, id_tipo_unidad,id_estado_unidad, numero_motor, numero_chasis);
             bool res = transportecontrol.ActualizarUnidadController();
             if (res == true)
             {
-                MessageBox.Show("Unidad de transporte registrada exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Unidad de transporte actualizada exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("La unidad no pudo ser registrada", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La unidad no pudo ser actualizada", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
