@@ -15,7 +15,11 @@ namespace SistemGestionBuses
 {
     public partial class frmMantenimientos : Form
     {
-        public frmMantenimientos()
+        public static int idlogged;
+        public static string cargostring;
+        public static string username;
+        public static int idcargo;
+        public frmMantenimientos(string user, string cargo, int cargoid, int iduser)
         {
             InitializeComponent();
             CargarDataGridView();
@@ -24,6 +28,14 @@ namespace SistemGestionBuses
             BtnEliminar.Enabled = false;
             BtnAgregar.Enabled = true;
             CargarUnidadCMB();
+
+            //tool strip
+            username = user;
+            txtActiveUser.Text = username;
+            cargostring = cargo;
+            txtCargoStrip.Text = cargostring;
+            idlogged = iduser;
+            idcargo = cargoid;
         }
 
         private void frmMantenimientos_Load(object sender, EventArgs e)

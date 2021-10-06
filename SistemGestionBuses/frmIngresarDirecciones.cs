@@ -21,9 +21,20 @@ namespace SistemGestionBuses
         static double lat_ElSalvador = 13.69;
         static double longt_ElSalvador = -89.19;
 
-        public frmIngresarDirecciones()
+        public static int cargouser;
+        public static int IdUserLogged;
+        public static string cargostring;
+        public static string username;
+
+        public frmIngresarDirecciones(int cargo, int idUser, string cargo_string, string user)
         {
             InitializeComponent();
+            cargouser = cargo;
+            IdUserLogged = idUser;
+            username = user;
+            cargostring = cargo_string;
+            txtActiveUser.Text = username;
+            txtCargoStrip.Text = cargostring;
         }
 
         void ColocarDirecciones()
