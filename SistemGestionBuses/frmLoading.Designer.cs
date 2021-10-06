@@ -39,11 +39,13 @@
             // 
             this.MiLoading.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MiLoading.Location = new System.Drawing.Point(0, 0);
+            this.MiLoading.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MiLoading.Name = "MiLoading";
-            this.MiLoading.Size = new System.Drawing.Size(800, 450);
+            this.MiLoading.Size = new System.Drawing.Size(1067, 554);
             this.MiLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MiLoading.TabIndex = 0;
             this.MiLoading.TabStop = false;
+            this.MiLoading.Click += new System.EventHandler(this.MiLoading_Click);
             // 
             // bunifuElipse1
             // 
@@ -59,11 +61,12 @@
             // 
             // frmLoading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.MiLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLoading";
             this.Opacity = 0.9D;
             this.ShowIcon = false;
