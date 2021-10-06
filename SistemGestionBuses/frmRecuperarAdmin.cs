@@ -22,6 +22,9 @@ namespace SistemGestionBuses
             btnNuevaContrasena.Enabled = false;
             txtConfirmacionContra.Enabled = false;
             txtNueva.Enabled = false;
+            txtClaveAdmin.UseSystemPasswordChar = true;
+            txtNueva.UseSystemPasswordChar = true;
+            txtConfirmacionContra.UseSystemPasswordChar = true;
         }
 
         private void label7_Click(object sender, EventArgs e)
