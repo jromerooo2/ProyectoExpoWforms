@@ -241,6 +241,10 @@ namespace SistemGestionBuses
             if (res == true)
             {
                 MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmIngresarDirecciones direcciones = new frmIngresarDirecciones();
+                direcciones.Show();
+                direcciones.BringToFront();
+                this.WindowState = FormWindowState.Minimized;
             }
             else
             {
@@ -485,6 +489,14 @@ namespace SistemGestionBuses
         private void dgvViajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmIngresarDirecciones direcciones = new frmIngresarDirecciones();
+            direcciones.Show();
+            direcciones.BringToFront();
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
