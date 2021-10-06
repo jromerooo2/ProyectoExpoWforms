@@ -352,6 +352,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="not-found.png" />
     <Content Include="pantalla-carga.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

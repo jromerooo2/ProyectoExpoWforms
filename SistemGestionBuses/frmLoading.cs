@@ -23,5 +23,10 @@ namespace SistemGestionBuses
             MiLoading.Load("pantalla-carga.gif");
             MiLoading.Location = new Point(this.Width / 2 , this.Height);
         }
+
+        private void MiLoading_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

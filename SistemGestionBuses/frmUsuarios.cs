@@ -187,17 +187,31 @@ namespace SistemGestionBuses
             {
                 string user, correo ;
                 int id_empleado, id_cargo;
-
-                MemoryStream ms = new MemoryStream();
-                userImg.Image.Save(ms, userImg.Image.RawFormat);
-                byte[] aByte = ms.ToArray();
-
-
-                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue) +1;
+                id_cargo = Convert.ToInt16(cmbCargo.SelectedValue) + 1;
                 user = txtUser.Text;
                 correo = txtCorreo.Text;
                 id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, aByte);
+                bool respuesta = false;
+
+
+
+
+                if (userImg.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    userImg.Image.Save(ms, userImg.Image.RawFormat);
+                    byte[] aByte = ms.ToArray();
+                    respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, aByte);
+                }
+                else
+                {
+                    MemoryStream defaulti = new MemoryStream();
+                    pbImage.Image.Save(defaulti, pbImage.Image.RawFormat);
+                    byte[] bByte = defaulti.ToArray();
+                    respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, bByte);
+                }
+
+
                 if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -420,6 +434,7 @@ namespace SistemGestionBuses
         }
         public void Borrarcampos()
         {
+            userImg.Image = null;
             txtCorreo.Text = "";
             txtUser.Text = "";
 
