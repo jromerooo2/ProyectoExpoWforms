@@ -212,7 +212,7 @@ namespace SistemGestionBuses
         {
             txtAnio.Clear();
             txtCapacidad.Clear();
-            txtNombreUnidad.Clear();
+            //txtNombreUnidad.Clear();
             txtNumeroChasis.Clear();
             txtNumeroMotor.Clear();
             txtPlaca.Clear();
