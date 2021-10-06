@@ -21,16 +21,27 @@ namespace SistemGestionBuses
         static double lat_ElSalvador = 13.69;
         static double longt_ElSalvador = -89.19;
 
-        public frmIngresarDirecciones()
+        public static int cargouser;
+        public static int IdUserLogged;
+        public static string cargostring;
+        public static string username;
+
+        public frmIngresarDirecciones(int cargo, int idUser, string cargo_string, string user)
         {
             InitializeComponent();
+            cargouser = cargo;
+            IdUserLogged = idUser;
+            username = user;
+            cargostring = cargo_string;
+            txtActiveUser.Text = username;
+            txtCargoStrip.Text = cargostring;
         }
 
         void ColocarDirecciones()
         {
             string direccion_inicio = txtDireccion_inicio.Text;
             string direccion_final = txtDireccion_final.Text;
-            int id_viaje = Convert.ToInt32(((DataRowView)cmbViajes.SelectedValue)["id_viaje"]);
+            int id_viaje = Convert.ToInt32(cmbViajes.SelectedValue);
             string adicional = txtAdicional.Text;
             string referencia1 = txtreferenciaInicio.Text;
             string referencia2 = txtreferenciaFinal.Text;
@@ -57,8 +68,7 @@ namespace SistemGestionBuses
         private bool Empty(string txt1, string txt2, string txt3, string txt4, string txt5, string txt6)
         {
             if (!String.IsNullOrWhiteSpace(txt1) && !String.IsNullOrWhiteSpace(txt2) &&
-                !String.IsNullOrWhiteSpace(txt3) && !String.IsNullOrWhiteSpace(txt4) &&
-                !String.IsNullOrWhiteSpace(txt5) && !String.IsNullOrWhiteSpace(txt6))
+                !String.IsNullOrWhiteSpace(txt4) && !String.IsNullOrWhiteSpace(txt5))
             {
                 return false;
             }

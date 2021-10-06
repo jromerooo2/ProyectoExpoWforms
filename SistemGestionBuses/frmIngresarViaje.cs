@@ -241,6 +241,10 @@ namespace SistemGestionBuses
             if (res == true)
             {
                 MessageBox.Show("Viaje registrado exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmIngresarDirecciones direcciones = new frmIngresarDirecciones(cargouser, IdUserLogged, cargostring, username);
+                direcciones.Show();
+                direcciones.BringToFront();
+                this.WindowState = FormWindowState.Minimized;
             }
             else
             {
@@ -485,6 +489,31 @@ namespace SistemGestionBuses
         private void dgvViajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (!checkFrmsOpen("frmIngresarDirecciones"))
+            {
+                frmIngresarDirecciones direcciones = new frmIngresarDirecciones(cargouser, IdUserLogged, cargostring, username);
+                direcciones.Show();
+                direcciones.BringToFront();
+                this.WindowState = FormWindowState.Minimized;
+            }         
+        }
+
+        public static bool checkFrmsOpen(string frmName)
+        {
+            FormCollection fc = Application.OpenForms;
+
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == frmName)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

@@ -102,7 +102,7 @@ namespace SistemGestionBuses
         {
             if (!checkFrmsOpen("frmMantenimientos"))
             {
-                frmMantenimientos mantenimientos = new frmMantenimientos();
+                frmMantenimientos mantenimientos = new frmMantenimientos(usuario, cargostring, cargouser, idUser);
                 mantenimientos.Show();
             }
         }
@@ -169,7 +169,7 @@ namespace SistemGestionBuses
         {
             if (!checkFrmsOpen("frmMantenimientos"))
             {
-                frmMantenimientos mantenimientos = new frmMantenimientos();
+                frmMantenimientos mantenimientos = new frmMantenimientos(usuario, cargostring, cargouser, idUser);
                 mantenimientos.Show();
             }
 

@@ -77,6 +77,7 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFormularios.SuspendLayout();
@@ -211,7 +212,7 @@
             this.btnCrearViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearViaje.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearViaje.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearViaje.Location = new System.Drawing.Point(12, 324);
+            this.btnCrearViaje.Location = new System.Drawing.Point(12, 293);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(158, 43);
             this.btnCrearViaje.TabIndex = 57;
@@ -228,7 +229,7 @@
             this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(194, 324);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(191, 293);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(158, 43);
             this.btnLimpiarCampos.TabIndex = 56;
@@ -278,9 +279,9 @@
             this.panelFormularios.Controls.Add(this.txtNombreViaje);
             this.panelFormularios.Controls.Add(this.cmbConductor);
             this.panelFormularios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelFormularios.Location = new System.Drawing.Point(608, 115);
+            this.panelFormularios.Location = new System.Drawing.Point(606, 152);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(368, 390);
+            this.panelFormularios.Size = new System.Drawing.Size(368, 353);
             this.panelFormularios.TabIndex = 77;
             // 
             // dtpFechaRetorno
@@ -478,7 +479,7 @@
             // 
             this.DragControlGeneral.Fixed = true;
             this.DragControlGeneral.Horizontal = true;
-            this.DragControlGeneral.TargetControl = null;
+            this.DragControlGeneral.TargetControl = this.panelBar;
             this.DragControlGeneral.Vertical = true;
             // 
             // panelGrid
@@ -657,12 +658,32 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(816, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 43);
+            this.button1.TabIndex = 101;
+            this.button1.Text = "Asignar Direcciones";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmIngresarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(986, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label1);
@@ -740,5 +761,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbEstadoViaje;
         private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.Button button1;
     }
 }
