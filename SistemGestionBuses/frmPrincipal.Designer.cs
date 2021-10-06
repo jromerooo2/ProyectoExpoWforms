@@ -45,15 +45,27 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.cardUsers = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.cardEmpleado = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards8 = new Bunifu.Framework.UI.BunifuCards();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cardMantenimientos = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards9 = new Bunifu.Framework.UI.BunifuCards();
             this.cardClientes = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards7 = new Bunifu.Framework.UI.BunifuCards();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.cardReportes = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards10 = new Bunifu.Framework.UI.BunifuCards();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards11 = new Bunifu.Framework.UI.BunifuCards();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -65,47 +77,35 @@
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.bunifuCards7 = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.bunifuCards8 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards9 = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.bunifuCards10 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards11 = new Bunifu.Framework.UI.BunifuCards();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.cardUsers.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuCards1.SuspendLayout();
+            this.bunifuCards4.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
+            this.bunifuCards5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.cardEmpleado.SuspendLayout();
+            this.bunifuCards8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.cardMantenimientos.SuspendLayout();
+            this.bunifuCards9.SuspendLayout();
             this.cardClientes.SuspendLayout();
+            this.bunifuCards7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.cardReportes.SuspendLayout();
+            this.bunifuCards10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.bunifuCards6.SuspendLayout();
+            this.bunifuCards11.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            this.bunifuCards3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.bunifuCards4.SuspendLayout();
-            this.bunifuCards5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.bunifuCards7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.bunifuCards8.SuspendLayout();
-            this.bunifuCards9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.bunifuCards10.SuspendLayout();
-            this.bunifuCards11.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -136,9 +136,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(10, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 14);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 85);
+            this.pictureBox2.Size = new System.Drawing.Size(63, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -182,9 +182,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(6, -9);
+            this.pictureBox4.Location = new System.Drawing.Point(20, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(88, 109);
+            this.pictureBox4.Size = new System.Drawing.Size(68, 89);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
@@ -208,7 +208,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(56, 121);
+            this.label8.Location = new System.Drawing.Point(56, 129);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 11;
@@ -241,9 +241,9 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(8, -5);
+            this.pictureBox9.Location = new System.Drawing.Point(8, -2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox9.Size = new System.Drawing.Size(79, 99);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
@@ -291,6 +291,33 @@
             this.cardUsers.Click += new System.EventHandler(this.cardUsers_Click);
             this.cardUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.cardUsers_Paint);
             // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.BackColor = System.Drawing.Color.White;
+            this.bunifuCards3.BorderRadius = 100;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.White;
+            this.bunifuCards3.Controls.Add(this.pictureBox3);
+            this.bunifuCards3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(42, 27);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards3.TabIndex = 21;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(76, 71);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // bunifuCards1
             // 
             this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
@@ -309,6 +336,22 @@
             this.bunifuCards1.TabIndex = 21;
             this.bunifuCards1.Click += new System.EventHandler(this.bunifuCards1_Click);
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // bunifuCards4
+            // 
+            this.bunifuCards4.BackColor = System.Drawing.Color.White;
+            this.bunifuCards4.BorderRadius = 100;
+            this.bunifuCards4.BottomSahddow = true;
+            this.bunifuCards4.color = System.Drawing.Color.White;
+            this.bunifuCards4.Controls.Add(this.pictureBox2);
+            this.bunifuCards4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards4.LeftSahddow = false;
+            this.bunifuCards4.Location = new System.Drawing.Point(43, 26);
+            this.bunifuCards4.Name = "bunifuCards4";
+            this.bunifuCards4.RightSahddow = true;
+            this.bunifuCards4.ShadowDepth = 20;
+            this.bunifuCards4.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards4.TabIndex = 22;
             // 
             // bunifuCards2
             // 
@@ -329,6 +372,33 @@
             this.bunifuCards2.Click += new System.EventHandler(this.bunifuCards2_Click);
             this.bunifuCards2.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards2_Paint);
             // 
+            // bunifuCards5
+            // 
+            this.bunifuCards5.BackColor = System.Drawing.Color.White;
+            this.bunifuCards5.BorderRadius = 100;
+            this.bunifuCards5.BottomSahddow = true;
+            this.bunifuCards5.color = System.Drawing.Color.White;
+            this.bunifuCards5.Controls.Add(this.pictureBox7);
+            this.bunifuCards5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards5.LeftSahddow = false;
+            this.bunifuCards5.Location = new System.Drawing.Point(45, 26);
+            this.bunifuCards5.Name = "bunifuCards5";
+            this.bunifuCards5.RightSahddow = true;
+            this.bunifuCards5.ShadowDepth = 20;
+            this.bunifuCards5.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards5.TabIndex = 23;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(14, 11);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(69, 78);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 12;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click_1);
+            // 
             // cardEmpleado
             // 
             this.cardEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
@@ -348,6 +418,22 @@
             this.cardEmpleado.Click += new System.EventHandler(this.bunifuCards3_Click);
             this.cardEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.cardEmpleado_Paint);
             // 
+            // bunifuCards8
+            // 
+            this.bunifuCards8.BackColor = System.Drawing.Color.White;
+            this.bunifuCards8.BorderRadius = 100;
+            this.bunifuCards8.BottomSahddow = true;
+            this.bunifuCards8.color = System.Drawing.Color.White;
+            this.bunifuCards8.Controls.Add(this.pictureBox4);
+            this.bunifuCards8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards8.LeftSahddow = false;
+            this.bunifuCards8.Location = new System.Drawing.Point(42, 28);
+            this.bunifuCards8.Name = "bunifuCards8";
+            this.bunifuCards8.RightSahddow = true;
+            this.bunifuCards8.ShadowDepth = 20;
+            this.bunifuCards8.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards8.TabIndex = 22;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -363,9 +449,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 10);
+            this.pictureBox5.Location = new System.Drawing.Point(10, 19);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(103, 80);
+            this.pictureBox5.Size = new System.Drawing.Size(78, 65);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
@@ -390,6 +476,22 @@
             this.cardMantenimientos.Click += new System.EventHandler(this.cardMantenimientos_Click);
             this.cardMantenimientos.Paint += new System.Windows.Forms.PaintEventHandler(this.cardMantenimientos_Paint);
             // 
+            // bunifuCards9
+            // 
+            this.bunifuCards9.BackColor = System.Drawing.Color.White;
+            this.bunifuCards9.BorderRadius = 100;
+            this.bunifuCards9.BottomSahddow = true;
+            this.bunifuCards9.color = System.Drawing.Color.White;
+            this.bunifuCards9.Controls.Add(this.pictureBox5);
+            this.bunifuCards9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards9.LeftSahddow = false;
+            this.bunifuCards9.Location = new System.Drawing.Point(43, 18);
+            this.bunifuCards9.Name = "bunifuCards9";
+            this.bunifuCards9.RightSahddow = true;
+            this.bunifuCards9.ShadowDepth = 20;
+            this.bunifuCards9.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards9.TabIndex = 23;
+            // 
             // cardClientes
             // 
             this.cardClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
@@ -408,6 +510,33 @@
             this.cardClientes.TabIndex = 25;
             this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
             this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
+            // 
+            // bunifuCards7
+            // 
+            this.bunifuCards7.BackColor = System.Drawing.Color.White;
+            this.bunifuCards7.BorderRadius = 100;
+            this.bunifuCards7.BottomSahddow = true;
+            this.bunifuCards7.color = System.Drawing.Color.White;
+            this.bunifuCards7.Controls.Add(this.pictureBox6);
+            this.bunifuCards7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards7.LeftSahddow = false;
+            this.bunifuCards7.Location = new System.Drawing.Point(38, 26);
+            this.bunifuCards7.Name = "bunifuCards7";
+            this.bunifuCards7.RightSahddow = true;
+            this.bunifuCards7.ShadowDepth = 20;
+            this.bunifuCards7.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards7.TabIndex = 24;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(22, 10);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(52, 72);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click_1);
             // 
             // cardReportes
             // 
@@ -428,6 +557,33 @@
             this.cardReportes.Click += new System.EventHandler(this.cardReportes_Click);
             this.cardReportes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardReportes_Paint);
             // 
+            // bunifuCards10
+            // 
+            this.bunifuCards10.BackColor = System.Drawing.Color.White;
+            this.bunifuCards10.BorderRadius = 100;
+            this.bunifuCards10.BottomSahddow = true;
+            this.bunifuCards10.color = System.Drawing.Color.White;
+            this.bunifuCards10.Controls.Add(this.pictureBox8);
+            this.bunifuCards10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards10.LeftSahddow = false;
+            this.bunifuCards10.Location = new System.Drawing.Point(45, 18);
+            this.bunifuCards10.Name = "bunifuCards10";
+            this.bunifuCards10.RightSahddow = true;
+            this.bunifuCards10.ShadowDepth = 20;
+            this.bunifuCards10.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards10.TabIndex = 24;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(14, 10);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(76, 78);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 12;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
             // bunifuCards6
             // 
             this.bunifuCards6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
@@ -446,6 +602,22 @@
             this.bunifuCards6.TabIndex = 26;
             this.bunifuCards6.Click += new System.EventHandler(this.bunifuCards6_Click);
             this.bunifuCards6.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards6_Paint);
+            // 
+            // bunifuCards11
+            // 
+            this.bunifuCards11.BackColor = System.Drawing.Color.White;
+            this.bunifuCards11.BorderRadius = 100;
+            this.bunifuCards11.BottomSahddow = true;
+            this.bunifuCards11.color = System.Drawing.Color.White;
+            this.bunifuCards11.Controls.Add(this.pictureBox9);
+            this.bunifuCards11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuCards11.LeftSahddow = false;
+            this.bunifuCards11.Location = new System.Drawing.Point(38, 24);
+            this.bunifuCards11.Name = "bunifuCards11";
+            this.bunifuCards11.RightSahddow = true;
+            this.bunifuCards11.ShadowDepth = 20;
+            this.bunifuCards11.Size = new System.Drawing.Size(103, 100);
+            this.bunifuCards11.TabIndex = 25;
             // 
             // panelBar
             // 
@@ -574,178 +746,6 @@
             this.bunifuDragControl1.TargetControl = this.panelBar;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // bunifuCards3
-            // 
-            this.bunifuCards3.BackColor = System.Drawing.Color.White;
-            this.bunifuCards3.BorderRadius = 100;
-            this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.White;
-            this.bunifuCards3.Controls.Add(this.pictureBox3);
-            this.bunifuCards3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(42, 27);
-            this.bunifuCards3.Name = "bunifuCards3";
-            this.bunifuCards3.RightSahddow = true;
-            this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards3.TabIndex = 21;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(82, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // bunifuCards4
-            // 
-            this.bunifuCards4.BackColor = System.Drawing.Color.White;
-            this.bunifuCards4.BorderRadius = 100;
-            this.bunifuCards4.BottomSahddow = true;
-            this.bunifuCards4.color = System.Drawing.Color.White;
-            this.bunifuCards4.Controls.Add(this.pictureBox2);
-            this.bunifuCards4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards4.LeftSahddow = false;
-            this.bunifuCards4.Location = new System.Drawing.Point(43, 26);
-            this.bunifuCards4.Name = "bunifuCards4";
-            this.bunifuCards4.RightSahddow = true;
-            this.bunifuCards4.ShadowDepth = 20;
-            this.bunifuCards4.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards4.TabIndex = 22;
-            // 
-            // bunifuCards5
-            // 
-            this.bunifuCards5.BackColor = System.Drawing.Color.White;
-            this.bunifuCards5.BorderRadius = 100;
-            this.bunifuCards5.BottomSahddow = true;
-            this.bunifuCards5.color = System.Drawing.Color.White;
-            this.bunifuCards5.Controls.Add(this.pictureBox7);
-            this.bunifuCards5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards5.LeftSahddow = false;
-            this.bunifuCards5.Location = new System.Drawing.Point(45, 26);
-            this.bunifuCards5.Name = "bunifuCards5";
-            this.bunifuCards5.RightSahddow = true;
-            this.bunifuCards5.ShadowDepth = 20;
-            this.bunifuCards5.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards5.TabIndex = 23;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(10, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(81, 88);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click_1);
-            // 
-            // bunifuCards7
-            // 
-            this.bunifuCards7.BackColor = System.Drawing.Color.White;
-            this.bunifuCards7.BorderRadius = 100;
-            this.bunifuCards7.BottomSahddow = true;
-            this.bunifuCards7.color = System.Drawing.Color.White;
-            this.bunifuCards7.Controls.Add(this.pictureBox6);
-            this.bunifuCards7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards7.LeftSahddow = false;
-            this.bunifuCards7.Location = new System.Drawing.Point(38, 27);
-            this.bunifuCards7.Name = "bunifuCards7";
-            this.bunifuCards7.RightSahddow = true;
-            this.bunifuCards7.ShadowDepth = 20;
-            this.bunifuCards7.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards7.TabIndex = 24;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(17, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(70, 85);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click_1);
-            // 
-            // bunifuCards8
-            // 
-            this.bunifuCards8.BackColor = System.Drawing.Color.White;
-            this.bunifuCards8.BorderRadius = 100;
-            this.bunifuCards8.BottomSahddow = true;
-            this.bunifuCards8.color = System.Drawing.Color.White;
-            this.bunifuCards8.Controls.Add(this.pictureBox4);
-            this.bunifuCards8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards8.LeftSahddow = false;
-            this.bunifuCards8.Location = new System.Drawing.Point(42, 28);
-            this.bunifuCards8.Name = "bunifuCards8";
-            this.bunifuCards8.RightSahddow = true;
-            this.bunifuCards8.ShadowDepth = 20;
-            this.bunifuCards8.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards8.TabIndex = 22;
-            // 
-            // bunifuCards9
-            // 
-            this.bunifuCards9.BackColor = System.Drawing.Color.White;
-            this.bunifuCards9.BorderRadius = 100;
-            this.bunifuCards9.BottomSahddow = true;
-            this.bunifuCards9.color = System.Drawing.Color.White;
-            this.bunifuCards9.Controls.Add(this.pictureBox5);
-            this.bunifuCards9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards9.LeftSahddow = false;
-            this.bunifuCards9.Location = new System.Drawing.Point(43, 18);
-            this.bunifuCards9.Name = "bunifuCards9";
-            this.bunifuCards9.RightSahddow = true;
-            this.bunifuCards9.ShadowDepth = 20;
-            this.bunifuCards9.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards9.TabIndex = 23;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(97, 87);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 12;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // bunifuCards10
-            // 
-            this.bunifuCards10.BackColor = System.Drawing.Color.White;
-            this.bunifuCards10.BorderRadius = 100;
-            this.bunifuCards10.BottomSahddow = true;
-            this.bunifuCards10.color = System.Drawing.Color.White;
-            this.bunifuCards10.Controls.Add(this.pictureBox8);
-            this.bunifuCards10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards10.LeftSahddow = false;
-            this.bunifuCards10.Location = new System.Drawing.Point(45, 18);
-            this.bunifuCards10.Name = "bunifuCards10";
-            this.bunifuCards10.RightSahddow = true;
-            this.bunifuCards10.ShadowDepth = 20;
-            this.bunifuCards10.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards10.TabIndex = 24;
-            // 
-            // bunifuCards11
-            // 
-            this.bunifuCards11.BackColor = System.Drawing.Color.White;
-            this.bunifuCards11.BorderRadius = 100;
-            this.bunifuCards11.BottomSahddow = true;
-            this.bunifuCards11.color = System.Drawing.Color.White;
-            this.bunifuCards11.Controls.Add(this.pictureBox9);
-            this.bunifuCards11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuCards11.LeftSahddow = false;
-            this.bunifuCards11.Location = new System.Drawing.Point(38, 24);
-            this.bunifuCards11.Name = "bunifuCards11";
-            this.bunifuCards11.RightSahddow = true;
-            this.bunifuCards11.ShadowDepth = 20;
-            this.bunifuCards11.Size = new System.Drawing.Size(103, 100);
-            this.bunifuCards11.TabIndex = 25;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -776,39 +776,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.cardUsers.ResumeLayout(false);
             this.cardUsers.PerformLayout();
+            this.bunifuCards3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
+            this.bunifuCards4.ResumeLayout(false);
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
+            this.bunifuCards5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.cardEmpleado.ResumeLayout(false);
             this.cardEmpleado.PerformLayout();
+            this.bunifuCards8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.cardMantenimientos.ResumeLayout(false);
             this.cardMantenimientos.PerformLayout();
+            this.bunifuCards9.ResumeLayout(false);
             this.cardClientes.ResumeLayout(false);
             this.cardClientes.PerformLayout();
+            this.bunifuCards7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.cardReportes.ResumeLayout(false);
             this.cardReportes.PerformLayout();
+            this.bunifuCards10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.bunifuCards6.ResumeLayout(false);
             this.bunifuCards6.PerformLayout();
+            this.bunifuCards11.ResumeLayout(false);
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.bunifuCards3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.bunifuCards4.ResumeLayout(false);
-            this.bunifuCards5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.bunifuCards7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.bunifuCards8.ResumeLayout(false);
-            this.bunifuCards9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.bunifuCards10.ResumeLayout(false);
-            this.bunifuCards11.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

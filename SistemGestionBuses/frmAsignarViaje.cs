@@ -63,11 +63,12 @@ namespace SistemGestionBuses
             bool res = ControladorViaje.AsignarViajeClienteControl(idclient, idviaje);
             if (res == true)
             {
-                MessageBox.Show("Se asigno un el viaje a cliente");
+                string viajestring = txtNombreViaje.Text;
+                MessageBox.Show("Se le asigno el viaje: " + viajestring +" a: " + clientestring, "Confirmación de asignación de viajes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("No se asigno el viaje al cliente");
+                MessageBox.Show("El cliente ya tiene asignado un viaje, si quieres modificarlo, ingresa a la interfaz de 'Viajes asignados'", "Asignado previamente", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
