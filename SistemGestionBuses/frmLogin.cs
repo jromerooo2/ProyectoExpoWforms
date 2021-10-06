@@ -41,13 +41,12 @@ namespace SistemGestionBuses
                          //mostrar siguiente forms
                         int cargo = ControladorLogin.GetCargo();
                         int idlogged = ControladorLogin.GetId();
-                        frmPrincipal next = new frmPrincipal(cargo, user, idlogged);
-                        next.Show();
+                        CargarPantalla(res, cargo, user, idlogged);
                         Hide();
                 }
              if (res == 2)
                 {
-                        MessageBox.Show("Datos Incorrectos, Intentalo De Nuevo");
+                        MessageBox.Show("Datos Incorrectos, Intentalo De Nuevo", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         count++;
                         if (count >= 3)
                         {
@@ -60,8 +59,7 @@ namespace SistemGestionBuses
                 int idlogged = ControladorLogin.GetId();
 
                 ControladorUsuario.PrimerUso(idlogged);
-                frmConfig next = new frmConfig(cargo, user, idlogged);
-                next.Show();
+                CargarPantalla(res ,cargo, user, idlogged);
                 Hide();
             }
 
@@ -101,17 +99,11 @@ namespace SistemGestionBuses
 
         }
 
-        private async void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if(!Empty(txtusername.Text, txtpassword.Text))
             {
-                this.Hide();
-                Mostrar();              
-                Task otask = new Task(Algo);
-                otask.Start();
-                await otask;
                 tryLogIn();
-                Esconder();
             }
             else
             {
@@ -122,6 +114,25 @@ namespace SistemGestionBuses
 
         #region Loading
         //Metodos para pantalla de carga
+        public async void CargarPantalla(int res, int cargouser, string username, int id)
+        {
+            this.Hide();
+            Mostrar();
+            Task otask = new Task(Algo);
+            otask.Start();
+            await otask;
+            Esconder();
+            if (res == 1)
+            {
+                frmPrincipal main = new frmPrincipal(cargouser, username, id);
+                main.Show();
+            }
+            if (res == 3)
+            {
+                frmConfig main = new frmConfig(cargouser, username, id);
+                main.Show();
+            }       
+        }
         public void Algo()
         {
             Thread.Sleep(3500);
