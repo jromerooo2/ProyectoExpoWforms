@@ -293,7 +293,7 @@ namespace SistemGestionBuses
             MemoryStream defaulti = new MemoryStream();
             pbImage.Image.Save(defaulti, pbImage.Image.RawFormat);
             byte[] bByte = defaulti.ToArray();
-            ControladorIngreso control = new ControladorIngreso(empresa, empresa, dui, nit, direccion, telefono, genero, estado, cargo, id_muni, date);
+            ControladorIngreso control = new ControladorIngreso(empresa, empresa, dui, nit, direccion, telefono, genero, estado, cargo, id_muni);
             bool res = control.EnviarDatosControlador();
             if (res == true)
             {

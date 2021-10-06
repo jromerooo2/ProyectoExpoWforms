@@ -96,7 +96,7 @@ namespace Controlador
         public static int id_conductor { get; set; }
 
         //CONSTRUCTOR
-        public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio, string pNacimiento)
+        public ControladorIngreso(string pNombre, string pApellido, string pDUI, string pNIT, string pDireccion, string pTelefono, int pGenero, int pEstado, int pCargo, int pMunicipio)
         {
             //Atributo = parametro
             nombres_empleado = pNombre;
@@ -104,8 +104,7 @@ namespace Controlador
             DUI = pDUI;
             NIT = pNIT;
             direccion_empleado = pDireccion;
-            telefono_empleado = pTelefono;
-            nacimiento_empleado = pNacimiento;            
+            telefono_empleado = pTelefono;  
             id_genero = pGenero;
             id_estado_empleado = pEstado;
             id_cargo = pCargo;
@@ -115,11 +114,11 @@ namespace Controlador
         //CRUD empleado
         public bool EnviarDatosControlador()
         {
-            return ModeloIngreso.RegistrarEmpleado(nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
+            return ModeloIngreso.RegistrarEmpleado(nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio);
         }     
         public bool ActualizarDatosControlador()
         {
-            return ModeloIngreso.ActualizarEmpleado( id_empleado,nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio, nacimiento_empleado);
+            return ModeloIngreso.ActualizarEmpleado( id_empleado,nombres_empleado, apellidos_empleado, DUI, NIT, direccion_empleado, telefono_empleado, id_genero, id_estado_empleado, id_cargo, id_municipio);
         }
         public static bool EliminarEmpleadoControlador()
         {

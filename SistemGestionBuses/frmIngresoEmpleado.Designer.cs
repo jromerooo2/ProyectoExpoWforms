@@ -39,6 +39,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -51,8 +52,6 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -82,8 +81,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelBar.SuspendLayout();
@@ -92,7 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,7 +108,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 315);
             this.panel1.TabIndex = 31;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // BtnConectar
             // 
@@ -144,7 +141,6 @@
             this.label3.Size = new System.Drawing.Size(159, 43);
             this.label3.TabIndex = 22;
             this.label3.Text = "Acciones";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button3
             // 
@@ -264,7 +260,20 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Administracion de Empleados";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // dgvEmpleados
+            // 
+            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Location = new System.Drawing.Point(23, 529);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.ReadOnly = true;
+            this.dgvEmpleados.Size = new System.Drawing.Size(1347, 196);
+            this.dgvEmpleados.TabIndex = 19;
+            this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEmpleado_CellClick);
+            this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
             // 
             // pictureBox2
             // 
@@ -304,8 +313,6 @@
             this.panel2.Controls.Add(this.lblApellido);
             this.panel2.Controls.Add(this.TxtApellidos);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.dtNacimiento);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.TxtDireccion);
             this.panel2.Controls.Add(this.label7);
@@ -337,7 +344,6 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(273, 28);
             this.txtTelefono.TabIndex = 10;
-            this.txtTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefono_MaskInputRejected);
             // 
             // txtNIT
             // 
@@ -347,7 +353,6 @@
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(341, 22);
             this.txtNIT.TabIndex = 4;
-            this.txtNIT.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtNIT_MaskInputRejected);
             // 
             // TxtDUI
             // 
@@ -357,7 +362,6 @@
             this.TxtDUI.Name = "TxtDUI";
             this.TxtDUI.Size = new System.Drawing.Size(337, 22);
             this.TxtDUI.TabIndex = 3;
-            this.TxtDUI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TxtDUI_MaskInputRejected);
             // 
             // label8
             // 
@@ -371,7 +375,6 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Telefono del empleado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // lblApellido
             // 
@@ -385,7 +388,6 @@
             this.lblApellido.TabIndex = 62;
             this.lblApellido.Text = "Apellidos del empleado";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblApellido.Click += new System.EventHandler(this.lblApellido_Click);
             // 
             // TxtApellidos
             // 
@@ -396,7 +398,6 @@
             this.TxtApellidos.Name = "TxtApellidos";
             this.TxtApellidos.Size = new System.Drawing.Size(337, 28);
             this.TxtApellidos.TabIndex = 2;
-            this.TxtApellidos.TextChanged += new System.EventHandler(this.TxtApellidos_TextChanged);
             // 
             // label11
             // 
@@ -410,32 +411,6 @@
             this.label11.TabIndex = 60;
             this.label11.Text = "NIT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label9.Location = new System.Drawing.Point(433, 297);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(209, 26);
-            this.label9.TabIndex = 58;
-            this.label9.Text = "Fecha de nacimiento";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // dtNacimiento
-            // 
-            this.dtNacimiento.CustomFormat = "yyyy-MM-dd";
-            this.dtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNacimiento.Location = new System.Drawing.Point(664, 298);
-            this.dtNacimiento.Margin = new System.Windows.Forms.Padding(4);
-            this.dtNacimiento.Name = "dtNacimiento";
-            this.dtNacimiento.Size = new System.Drawing.Size(265, 22);
-            this.dtNacimiento.TabIndex = 11;
-            this.dtNacimiento.ValueChanged += new System.EventHandler(this.dtNacimiento_ValueChanged);
             // 
             // label6
             // 
@@ -449,7 +424,6 @@
             this.label6.TabIndex = 56;
             this.label6.Text = "Dirección";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // TxtDireccion
             // 
@@ -461,7 +435,6 @@
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(269, 88);
             this.TxtDireccion.TabIndex = 9;
-            this.TxtDireccion.TextChanged += new System.EventHandler(this.TxtDireccion_TextChanged);
             // 
             // label7
             // 
@@ -475,7 +448,6 @@
             this.label7.TabIndex = 51;
             this.label7.Text = "DUI";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label12
             // 
@@ -489,7 +461,6 @@
             this.label12.TabIndex = 50;
             this.label12.Text = "Nombre del empleado";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // TxtNombres
             // 
@@ -500,7 +471,6 @@
             this.TxtNombres.Name = "TxtNombres";
             this.TxtNombres.Size = new System.Drawing.Size(337, 28);
             this.TxtNombres.TabIndex = 1;
-            this.TxtNombres.TextChanged += new System.EventHandler(this.TxtNombres_TextChanged);
             // 
             // label10
             // 
@@ -514,7 +484,6 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "ID empleado";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtId
             // 
@@ -526,7 +495,6 @@
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(132, 28);
             this.txtId.TabIndex = 12;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // cmbGenero
             // 
@@ -538,7 +506,6 @@
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(160, 30);
             this.cmbGenero.TabIndex = 7;
-            this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
             this.cmbGenero.Click += new System.EventHandler(this.cmbGenero_click);
             // 
             // label5
@@ -553,7 +520,6 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Genero";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cmbCargo
             // 
@@ -565,7 +531,6 @@
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(160, 30);
             this.cmbCargo.TabIndex = 6;
-            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.cmbCargo_SelectedIndexChanged);
             this.cmbCargo.Click += new System.EventHandler(this.cmbCargo_click);
             // 
             // CmbEstado
@@ -578,7 +543,6 @@
             this.CmbEstado.Name = "CmbEstado";
             this.CmbEstado.Size = new System.Drawing.Size(160, 30);
             this.CmbEstado.TabIndex = 5;
-            this.CmbEstado.SelectedIndexChanged += new System.EventHandler(this.CmbEstado_SelectedIndexChanged);
             this.CmbEstado.Click += new System.EventHandler(this.cmbEstado_click);
             // 
             // cmbMunicipio
@@ -605,7 +569,6 @@
             this.label4.Size = new System.Drawing.Size(102, 26);
             this.label4.TabIndex = 21;
             this.label4.Text = "Municipio";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label1
             // 
@@ -618,7 +581,6 @@
             this.label1.Size = new System.Drawing.Size(74, 26);
             this.label1.TabIndex = 20;
             this.label1.Text = "Estado";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblIngreso
             // 
@@ -631,7 +593,6 @@
             this.lblIngreso.Size = new System.Drawing.Size(65, 26);
             this.lblIngreso.TabIndex = 0;
             this.lblIngreso.Text = "Cargo";
-            this.lblIngreso.Click += new System.EventHandler(this.lblIngreso_Click);
             // 
             // dragControlMain
             // 
@@ -651,7 +612,6 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(1425, 62);
             this.panelBar.TabIndex = 107;
-            this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
             // bunifuImageButton5
             // 
@@ -721,7 +681,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1387, 41);
             this.toolStrip1.TabIndex = 129;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // txtActiveUser
             // 
@@ -731,13 +690,11 @@
             this.txtActiveUser.Name = "txtActiveUser";
             this.txtActiveUser.Size = new System.Drawing.Size(119, 38);
             this.txtActiveUser.Text = "active user";
-            this.txtActiveUser.Click += new System.EventHandler(this.txtActiveUser_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
-            this.toolStripSeparator1.Click += new System.EventHandler(this.toolStripSeparator1_Click);
             // 
             // txtCargoStrip
             // 
@@ -747,7 +704,6 @@
             this.txtCargoStrip.Name = "txtCargoStrip";
             this.txtCargoStrip.Size = new System.Drawing.Size(134, 38);
             this.txtCargoStrip.Text = "work position";
-            this.txtCargoStrip.Click += new System.EventHandler(this.txtCargoStrip_Click);
             // 
             // btnLogOut
             // 
@@ -759,7 +715,6 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(32, 38);
             this.btnLogOut.Text = "toolStripButton3";
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // toolStripLabel1
             // 
@@ -769,7 +724,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(67, 38);
             this.toolStripLabel1.Text = "Log Out";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // textBox1
             // 
@@ -793,7 +747,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label13
             // 
@@ -804,16 +757,6 @@
             this.label13.Size = new System.Drawing.Size(151, 19);
             this.label13.TabIndex = 23;
             this.label13.Text = "Filtrar por nombre";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 528);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1347, 216);
-            this.dataGridView1.TabIndex = 131;
             // 
             // frmIngresoEmpleado
             // 
@@ -821,7 +764,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1387, 788);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
@@ -830,6 +772,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -838,6 +781,7 @@
             this.Load += new System.EventHandler(this.frmIngresoConductores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -848,7 +792,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -864,6 +807,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse mainElipse;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
@@ -877,8 +821,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox TxtApellidos;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtNacimiento;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label7;
@@ -907,6 +849,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
