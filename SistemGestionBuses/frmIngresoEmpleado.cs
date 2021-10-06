@@ -177,8 +177,7 @@ namespace SistemGestionBuses
                         int id = objCond.ObtenerIDEmpleado_Controller(DUI, NIT);
                         CargarGridDatos();
                         frmIngresoConductores conduc = new frmIngresoConductores(id, username, cargostring, idcargo);
-                        this.SendToBack();
-                        this.Enabled = false;                     
+                        this.SendToBack();           
                         conduc.Show();
                     }
                 }
