@@ -265,6 +265,7 @@ namespace SistemGestionBuses
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
 
             byte[] bytes = (byte[])dgvUsuarios.Rows[i].Cells[6].Value;
+
             MemoryStream ms = new MemoryStream(bytes);
 
             userImg.Image = Image.FromStream(ms);
