@@ -24,9 +24,17 @@ namespace Controlador
             return strBuilder.ToString();
         }
 
-        public static bool checkEmailAt(string correo)
+        public static bool IsValidEmail(string email)
         {
-            return correo.LastIndexOf("@") > -1 ? true : false;
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public static bool hasNumbers(string text)
@@ -41,7 +49,7 @@ namespace Controlador
         }
         public static bool hasSpecialChars(string text)
         {
-            string specialChar = "-+/=";
+            string specialChar = "-+/= ";
             foreach (var item in specialChar)
             {
                 if (text.Contains(item)) return true;

@@ -152,7 +152,7 @@ namespace SistemGestionBuses
             //pin = txtPin.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
 
-            if (!Empty(user, correo) && ValidacionesClass.checkEmailAt(correo))
+            if (!Empty(user, correo) && ValidacionesClass.IsValidEmail(correo))
             {
                 EnvioDatos();
                 cargarGridDatos();
@@ -315,7 +315,7 @@ namespace SistemGestionBuses
             correo = txtCorreo.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
             bool res = objCond.ActualizarUser(id,id_empleado, user, correo, id_cargo);
-            if (ValidacionesClass.checkEmailAt(correo))
+            if (ValidacionesClass.IsValidEmail(correo))
             {
                 if (res)
                 {

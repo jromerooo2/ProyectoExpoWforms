@@ -57,7 +57,7 @@ namespace SistemGestionBuses
             string user = txtUser.Text;
             if (!String.IsNullOrEmpty(user) && !String.IsNullOrWhiteSpace(user) && !String.IsNullOrEmpty(email) && !String.IsNullOrWhiteSpace(email))
             {
-                if (ValidacionesClass.checkEmailAt(email))
+                if (ValidacionesClass.IsValidEmail(email))
                 {
                     if (ValidacionesClass.hasSpecialChars(user) == false)
                     {
