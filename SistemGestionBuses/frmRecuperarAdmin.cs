@@ -108,8 +108,8 @@ namespace SistemGestionBuses
                     {
                         NotificacionRecuperación();
                         frmLogin nextLog = new frmLogin();
-                        nextLog.Show();
-                        this.Hide();
+                        nextLog.BringToFront();
+                        Close();
                     }
                     else
                     {

@@ -71,6 +71,24 @@ namespace Modelo
             }
         }
 
+        public static bool ValidarCredencialesUsuarioRecuperar(string usuario, string DUI)
+        {
+            bool retorno = false;
+            try
+            {
+                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2 AND a.id_empleado = b.id_empleado";
+                MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdvalidar.Parameters.Add(new MySqlParameter("param1", usuario));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param2", DUI));
+                retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
+
         public static bool ValidarCredencialesUsuariosPIN(string pusuario, string pdocumento, string pnit)
         {
             bool retorno = false;
@@ -91,24 +109,24 @@ namespace Modelo
             }
         }
 
-        public static bool ValidarCredencialesUsuariosAdmin(string pusuario, string pdocumento)
-        {
-            bool retorno = false;
-            try
-            {
-                //int activo = 1;
-                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2";
-                MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-                cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
-                cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));
-                retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
-                return retorno;
-            }
-            catch (Exception)
-            {
-                return retorno;
-            }
-        }
+        //public static bool ValidarCredencialesUsuariosAdmin(string pusuario, string pdocumento)
+        //{
+        //    bool retorno = false;
+        //    try
+        //    {
+        //        //int activo = 1;
+        //        string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2";
+        //        MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+        //        cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
+        //        cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));
+        //        retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
+        //        return retorno;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return retorno;
+        //    }
+        //}
 
         public static bool RestaurarClave(string usuario, string newpassword)
         {
