@@ -21,6 +21,7 @@ namespace SistemGestionBuses
             CardPaso3.Enabled = false;
             CardPaso4.Enabled = false;
             btnFinalizar.Enabled = false;
+            btnFinalizar.Visible = false;
             CargarMunicipio();
         }
 
@@ -242,7 +243,13 @@ namespace SistemGestionBuses
                     {
                         if (NIT.Length == 17 && DUI.Length == 10)
                         {
-                            CardPaso4.Enabled = false;
+                            txtNameEnterprise.Enabled = false;
+                            TxtDUI.Enabled = false;
+                            txtNIT.Enabled = false;
+                            cmbMunicipio.Enabled = false;
+                            txtTelefono.Enabled = false;
+                            txtDireccion.Enabled = false;
+                            btnFinalizar.Visible = true;
                             btnFinalizar.Enabled = true;
                             NotificacionConfirmacionInfo();
                         }
@@ -300,6 +307,7 @@ namespace SistemGestionBuses
                     Close();                 
                     frmLogin login = new frmLogin();
                     login.Show();
+                    login.Opacity = 100;
                 }
                 else
                 {

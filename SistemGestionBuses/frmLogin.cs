@@ -18,6 +18,7 @@ namespace SistemGestionBuses
         public frmLogin()
         {
             InitializeComponent();
+            //PrimerUso();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -178,11 +179,11 @@ namespace SistemGestionBuses
             //Comprobar que no existan usuarios
             int res2 = ControladorLogin.comprobarUsuariosVacio();
             if (res == 0 || res2 == 0)
-            {
-                Hide();
-                SendToBack();
+            {            
                 FirstUse primeruso = new FirstUse();
                 primeruso.Show();
+                this.SendToBack();
+                this.Opacity = 0;
             }
             else
             {

@@ -460,6 +460,7 @@
             this.CardPaso4.BorderRadius = 24;
             this.CardPaso4.BottomSahddow = true;
             this.CardPaso4.color = System.Drawing.Color.Transparent;
+            this.CardPaso4.Controls.Add(this.btnFinalizar);
             this.CardPaso4.Controls.Add(this.txtNIT);
             this.CardPaso4.Controls.Add(this.TxtDUI);
             this.CardPaso4.Controls.Add(this.cmbMunicipio);
@@ -597,7 +598,7 @@
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInfo.Location = new System.Drawing.Point(117, 439);
+            this.btnInfo.Location = new System.Drawing.Point(39, 427);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(109, 51);
@@ -727,10 +728,10 @@
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFinalizar.Location = new System.Drawing.Point(-10, 650);
+            this.btnFinalizar.Location = new System.Drawing.Point(183, 425);
             this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(1151, 38);
+            this.btnFinalizar.Size = new System.Drawing.Size(121, 51);
             this.btnFinalizar.TabIndex = 129;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
@@ -752,7 +753,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(1141, 685);
-            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.CardPaso4);
             this.Controls.Add(this.label17);
