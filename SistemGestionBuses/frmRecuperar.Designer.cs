@@ -74,7 +74,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1275, 572);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,7 +86,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(594, 124);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(109, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -98,7 +98,7 @@
             this.btnMetodo2.BackColor = System.Drawing.Color.Black;
             this.btnMetodo2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMetodo2.Location = new System.Drawing.Point(139, 128);
-            this.btnMetodo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMetodo2.Margin = new System.Windows.Forms.Padding(2);
             this.btnMetodo2.Name = "btnMetodo2";
             this.btnMetodo2.Size = new System.Drawing.Size(109, 51);
             this.btnMetodo2.TabIndex = 14;
@@ -111,7 +111,7 @@
             this.btnMetodo1.BackColor = System.Drawing.Color.Black;
             this.btnMetodo1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMetodo1.Location = new System.Drawing.Point(9, 128);
-            this.btnMetodo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMetodo1.Margin = new System.Windows.Forms.Padding(2);
             this.btnMetodo1.Name = "btnMetodo1";
             this.btnMetodo1.Size = new System.Drawing.Size(109, 51);
             this.btnMetodo1.TabIndex = 13;
@@ -134,7 +134,8 @@
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(91, 80);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCode.MaxLength = 50;
             this.txtCode.Name = "txtCode";
             this.txtCode.ShortcutsEnabled = false;
             this.txtCode.Size = new System.Drawing.Size(224, 20);
@@ -157,7 +158,7 @@
             this.btnConfirmar.BackColor = System.Drawing.Color.Black;
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Location = new System.Drawing.Point(148, 128);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(109, 51);
             this.btnConfirmar.TabIndex = 18;
@@ -168,7 +169,7 @@
             // txtNueva
             // 
             this.txtNueva.Location = new System.Drawing.Point(100, 80);
-            this.txtNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva.Name = "txtNueva";
             this.txtNueva.ShortcutsEnabled = false;
             this.txtNueva.Size = new System.Drawing.Size(224, 20);
@@ -179,7 +180,7 @@
             this.btnNueva.BackColor = System.Drawing.Color.Black;
             this.btnNueva.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNueva.Location = new System.Drawing.Point(166, 128);
-            this.btnNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNueva.Margin = new System.Windows.Forms.Padding(2);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(109, 51);
             this.btnNueva.TabIndex = 21;
@@ -192,7 +193,7 @@
             this.btnRecuPIN.BackColor = System.Drawing.Color.Black;
             this.btnRecuPIN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRecuPIN.Location = new System.Drawing.Point(270, 128);
-            this.btnRecuPIN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRecuPIN.Margin = new System.Windows.Forms.Padding(2);
             this.btnRecuPIN.Name = "btnRecuPIN";
             this.btnRecuPIN.Size = new System.Drawing.Size(109, 51);
             this.btnRecuPIN.TabIndex = 22;
@@ -203,7 +204,8 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(82, 80);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.ShortcutsEnabled = false;
             this.txtUser.Size = new System.Drawing.Size(224, 20);
@@ -320,7 +322,7 @@
             this.bunifuCards1.Controls.Add(this.btnConfirmar);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(446, 300);
-            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
@@ -353,7 +355,7 @@
             this.bunifuCards2.Controls.Add(this.label2);
             this.bunifuCards2.LeftSahddow = false;
             this.bunifuCards2.Location = new System.Drawing.Point(18, 300);
-            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
@@ -407,7 +409,7 @@
             this.bunifuCards3.Controls.Add(this.btnNueva);
             this.bunifuCards3.LeftSahddow = false;
             this.bunifuCards3.Location = new System.Drawing.Point(866, 300);
-            this.bunifuCards3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuCards3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
@@ -447,7 +449,7 @@
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRecuperar";
             this.Text = "Recupera Tu Cuenta";
             this.Load += new System.EventHandler(this.frmRecuperar_Load);

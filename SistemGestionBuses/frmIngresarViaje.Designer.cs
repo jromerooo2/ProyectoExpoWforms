@@ -52,8 +52,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbEstadoViaje = new System.Windows.Forms.ComboBox();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.txtIDviaje = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.ElipseGeneral = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -73,10 +77,6 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbEstadoViaje = new System.Windows.Forms.ComboBox();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFormularios.SuspendLayout();
@@ -169,6 +169,7 @@
             // txtTarifaViaje
             // 
             this.txtTarifaViaje.Location = new System.Drawing.Point(15, 254);
+            this.txtTarifaViaje.MaxLength = 12;
             this.txtTarifaViaje.Name = "txtTarifaViaje";
             this.txtTarifaViaje.Size = new System.Drawing.Size(158, 20);
             this.txtTarifaViaje.TabIndex = 65;
@@ -177,6 +178,7 @@
             // txtNombreViaje
             // 
             this.txtNombreViaje.Location = new System.Drawing.Point(189, 36);
+            this.txtNombreViaje.MaxLength = 50;
             this.txtNombreViaje.Name = "txtNombreViaje";
             this.txtNombreViaje.Size = new System.Drawing.Size(164, 20);
             this.txtNombreViaje.TabIndex = 64;
@@ -369,6 +371,17 @@
             this.label7.TabIndex = 82;
             this.label7.Text = "Tipo de viaje:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(191, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 18);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "Estado del viaje:";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -390,6 +403,37 @@
             this.label3.Size = new System.Drawing.Size(49, 18);
             this.label3.TabIndex = 78;
             this.label3.Text = "Tarifa:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "Cliente:";
+            // 
+            // cmbEstadoViaje
+            // 
+            this.cmbEstadoViaje.FormattingEnabled = true;
+            this.cmbEstadoViaje.Location = new System.Drawing.Point(190, 138);
+            this.cmbEstadoViaje.Name = "cmbEstadoViaje";
+            this.cmbEstadoViaje.Size = new System.Drawing.Size(158, 21);
+            this.cmbEstadoViaje.TabIndex = 59;
+            this.cmbEstadoViaje.Text = "estado viaje";
+            this.cmbEstadoViaje.Click += new System.EventHandler(this.cmbEstadoViaje_Click);
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(12, 36);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(158, 21);
+            this.cmbCliente.TabIndex = 58;
+            this.cmbCliente.Text = "cliente";
+            this.cmbCliente.Click += new System.EventHandler(this.cmbCliente_Click);
             // 
             // txtIDviaje
             // 
@@ -600,48 +644,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(191, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 18);
-            this.label6.TabIndex = 81;
-            this.label6.Text = "Estado del viaje:";
-            // 
-            // cmbEstadoViaje
-            // 
-            this.cmbEstadoViaje.FormattingEnabled = true;
-            this.cmbEstadoViaje.Location = new System.Drawing.Point(190, 138);
-            this.cmbEstadoViaje.Name = "cmbEstadoViaje";
-            this.cmbEstadoViaje.Size = new System.Drawing.Size(158, 21);
-            this.cmbEstadoViaje.TabIndex = 59;
-            this.cmbEstadoViaje.Text = "estado viaje";
-            this.cmbEstadoViaje.Click += new System.EventHandler(this.cmbEstadoViaje_Click);
-            // 
-            // cmbCliente
-            // 
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(12, 36);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(158, 21);
-            this.cmbCliente.TabIndex = 58;
-            this.cmbCliente.Text = "cliente";
-            this.cmbCliente.Click += new System.EventHandler(this.cmbCliente_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
-            this.label2.TabIndex = 77;
-            this.label2.Text = "Cliente:";
             // 
             // frmIngresarViaje
             // 
