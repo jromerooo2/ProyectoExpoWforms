@@ -33,7 +33,7 @@
             this.cmbUnidadTransporte = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbTipoDestino = new System.Windows.Forms.ComboBox();
             this.txtTarifaViaje = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@
             this.DragControlGeneral = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelGrid = new System.Windows.Forms.Panel();
             this.dgvViajes = new System.Windows.Forms.DataGridView();
-            this.btn = new System.Windows.Forms.Button();
+            this.btnActualizarGrid = new System.Windows.Forms.Button();
             this.ElipsePanelGrid = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
@@ -127,23 +127,23 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // button1
+            // btnEliminar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(160, 293);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 43);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "Eliminar Viaje";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(160, 293);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(138, 43);
+            this.btnEliminar.TabIndex = 73;
+            this.btnEliminar.Text = "Eliminar Viaje";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -430,8 +430,8 @@
             // 
             this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.panelGrid.Controls.Add(this.dgvViajes);
-            this.panelGrid.Controls.Add(this.btn);
-            this.panelGrid.Controls.Add(this.button1);
+            this.panelGrid.Controls.Add(this.btnActualizarGrid);
+            this.panelGrid.Controls.Add(this.btnEliminar);
             this.panelGrid.Controls.Add(this.txtIDviaje);
             this.panelGrid.Controls.Add(this.btnActualizar);
             this.panelGrid.Controls.Add(this.label14);
@@ -451,24 +451,25 @@
             this.dgvViajes.Size = new System.Drawing.Size(560, 256);
             this.dgvViajes.TabIndex = 93;
             this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellClick);
+            this.dgvViajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellContentClick);
             // 
-            // btn
+            // btnActualizarGrid
             // 
-            this.btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.ForeColor = System.Drawing.Color.White;
-            this.btn.Location = new System.Drawing.Point(304, 293);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(138, 43);
-            this.btn.TabIndex = 92;
-            this.btn.Text = "Actualizar Grid";
-            this.btn.UseVisualStyleBackColor = false;
-            this.btn.Click += new System.EventHandler(this.button3_Click);
+            this.btnActualizarGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnActualizarGrid.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnActualizarGrid.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnActualizarGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnActualizarGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarGrid.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarGrid.ForeColor = System.Drawing.Color.White;
+            this.btnActualizarGrid.Location = new System.Drawing.Point(304, 293);
+            this.btnActualizarGrid.Name = "btnActualizarGrid";
+            this.btnActualizarGrid.Size = new System.Drawing.Size(138, 43);
+            this.btnActualizarGrid.TabIndex = 92;
+            this.btnActualizarGrid.Text = "Actualizar Grid";
+            this.btnActualizarGrid.UseVisualStyleBackColor = false;
+            this.btnActualizarGrid.Click += new System.EventHandler(this.button3_Click);
             // 
             // ElipsePanelGrid
             // 
@@ -681,7 +682,7 @@
         private System.Windows.Forms.ComboBox cmbUnidadTransporte;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmbTipoDestino;
         private System.Windows.Forms.TextBox txtTarifaViaje;
@@ -705,7 +706,7 @@
         private Bunifu.Framework.UI.BunifuElipse ElipseGeneral;
         private Bunifu.Framework.UI.BunifuDragControl DragControlGeneral;
         private System.Windows.Forms.Panel panelGrid;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btnActualizarGrid;
         private Bunifu.Framework.UI.BunifuElipse ElipsePanelGrid;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ComboBox cmbMunicipios;

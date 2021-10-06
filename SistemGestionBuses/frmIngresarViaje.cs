@@ -30,6 +30,8 @@ namespace SistemGestionBuses
             txtCargoStrip.Text = cargostring;
             CargarDatosCMB();
             CargarGridDatos();
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         public bool Vacio()
@@ -416,6 +418,9 @@ namespace SistemGestionBuses
             cmbMunicipios.DataSource = ControladorViaje.ObtenerMunicipioInner(id_tipo);
             cmbMunicipios.DisplayMember = "municipio";
             cmbMunicipios.ValueMember = "id_municipio";
+
+            btnActualizar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -475,6 +480,11 @@ namespace SistemGestionBuses
         private void cmbMunicipios_Click(object sender, EventArgs e)
         {
             CargarDatosCMB();
+        }
+
+        private void dgvViajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
