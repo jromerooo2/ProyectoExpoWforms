@@ -312,6 +312,7 @@
             this.cmbUnidad.Name = "cmbUnidad";
             this.cmbUnidad.Size = new System.Drawing.Size(154, 26);
             this.cmbUnidad.TabIndex = 92;
+            this.cmbUnidad.SelectedIndexChanged += new System.EventHandler(this.cmbUnidad_SelectedIndexChanged_1);
             // 
             // txtId
             // 

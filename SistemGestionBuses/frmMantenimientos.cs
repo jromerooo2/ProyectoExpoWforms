@@ -169,6 +169,7 @@ namespace SistemGestionBuses
             cmbUnidad.DataSource = ControladorMantenimiento.CargarUnidadInner_Controller(idUnidad);
             cmbUnidad.ValueMember = "id_unidad_transporte";
             cmbUnidad.DisplayMember = "placa";
+            CargarUnidadCMB();
         }
 
         private void cmbUnidad_SelectedIndexChanged(object sender, EventArgs e)
@@ -241,6 +242,11 @@ namespace SistemGestionBuses
         private void bunifuImageButton3_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmbUnidad_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
