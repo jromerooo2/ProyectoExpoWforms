@@ -39,8 +39,6 @@
             this.txtTarifaViaje = new System.Windows.Forms.TextBox();
             this.txtNombreViaje = new System.Windows.Forms.TextBox();
             this.cmbConductor = new System.Windows.Forms.ComboBox();
-            this.cmbEstadoViaje = new System.Windows.Forms.ComboBox();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.btnCrearViaje = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -54,10 +52,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtIDviaje = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.ElipseGeneral = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -77,6 +73,10 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbEstadoViaje = new System.Windows.Forms.ComboBox();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFormularios.SuspendLayout();
@@ -192,26 +192,6 @@
             this.cmbConductor.Text = "conductor";
             this.cmbConductor.SelectedIndexChanged += new System.EventHandler(this.cmbConductor_SelectedIndexChanged);
             this.cmbConductor.Click += new System.EventHandler(this.cmbConductor_Click);
-            // 
-            // cmbEstadoViaje
-            // 
-            this.cmbEstadoViaje.FormattingEnabled = true;
-            this.cmbEstadoViaje.Location = new System.Drawing.Point(190, 138);
-            this.cmbEstadoViaje.Name = "cmbEstadoViaje";
-            this.cmbEstadoViaje.Size = new System.Drawing.Size(158, 21);
-            this.cmbEstadoViaje.TabIndex = 59;
-            this.cmbEstadoViaje.Text = "estado viaje";
-            this.cmbEstadoViaje.Click += new System.EventHandler(this.cmbEstadoViaje_Click);
-            // 
-            // cmbCliente
-            // 
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(12, 36);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(158, 21);
-            this.cmbCliente.TabIndex = 58;
-            this.cmbCliente.Text = "cliente";
-            this.cmbCliente.Click += new System.EventHandler(this.cmbCliente_Click);
             // 
             // btnCrearViaje
             // 
@@ -389,17 +369,6 @@
             this.label7.TabIndex = 82;
             this.label7.Text = "Tipo de viaje:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(191, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 18);
-            this.label6.TabIndex = 81;
-            this.label6.Text = "Estado del viaje:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -421,17 +390,6 @@
             this.label3.Size = new System.Drawing.Size(49, 18);
             this.label3.TabIndex = 78;
             this.label3.Text = "Tarifa:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
-            this.label2.TabIndex = 77;
-            this.label2.Text = "Cliente:";
             // 
             // txtIDviaje
             // 
@@ -642,6 +600,48 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(191, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 18);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "Estado del viaje:";
+            // 
+            // cmbEstadoViaje
+            // 
+            this.cmbEstadoViaje.FormattingEnabled = true;
+            this.cmbEstadoViaje.Location = new System.Drawing.Point(190, 138);
+            this.cmbEstadoViaje.Name = "cmbEstadoViaje";
+            this.cmbEstadoViaje.Size = new System.Drawing.Size(158, 21);
+            this.cmbEstadoViaje.TabIndex = 59;
+            this.cmbEstadoViaje.Text = "estado viaje";
+            this.cmbEstadoViaje.Click += new System.EventHandler(this.cmbEstadoViaje_Click);
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(12, 36);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(158, 21);
+            this.cmbCliente.TabIndex = 58;
+            this.cmbCliente.Text = "cliente";
+            this.cmbCliente.Click += new System.EventHandler(this.cmbCliente_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "Cliente:";
+            // 
             // frmIngresarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,20 +687,16 @@
         private System.Windows.Forms.TextBox txtTarifaViaje;
         private System.Windows.Forms.TextBox txtNombreViaje;
         private System.Windows.Forms.ComboBox cmbConductor;
-        private System.Windows.Forms.ComboBox cmbEstadoViaje;
-        private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Button btnCrearViaje;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelFormularios;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpFechaPartida;
         private System.Windows.Forms.Label label10;
@@ -725,5 +721,9 @@
         private System.Windows.Forms.ToolStripLabel txtCargoStrip;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbEstadoViaje;
+        private System.Windows.Forms.ComboBox cmbCliente;
     }
 }

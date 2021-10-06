@@ -105,6 +105,7 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(198, 29);
             this.txtusername.TabIndex = 15;
+            this.txtusername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusername_KeyPress);
             // 
             // pictureBox2
             // 

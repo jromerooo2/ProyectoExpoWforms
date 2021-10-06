@@ -153,5 +153,9 @@ namespace SistemGestionBuses
                
             }           
         }
+
+        private void txtusername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
     }
 }
