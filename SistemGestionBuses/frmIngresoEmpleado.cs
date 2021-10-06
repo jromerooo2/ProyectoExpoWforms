@@ -151,8 +151,7 @@ namespace SistemGestionBuses
         //CREAR DATOS
         void EnvioDatos()
         {
-            try
-            {
+            
                 string nombre_empleado, apellido_empleado, DUI, NIT, direccion_empleado, telefono_empleado, nacimiento_empleado;
                 int id_genero, id_estado_empleado, id_cargo, id_municipio;
                 nombre_empleado = TxtNombres.Text;
@@ -184,14 +183,12 @@ namespace SistemGestionBuses
                 else
                 {
                     MessageBox.Show("Usuario no pudo ser registrado", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }            
+            //catch (Exception)
+            //{
 
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    MessageBox.Show("Oops!, ocurrió un error al registrar al empleado, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         //ACTUALIZAR DATOS
