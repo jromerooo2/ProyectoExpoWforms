@@ -31,7 +31,7 @@ namespace Modelo
         }
 
         //Inner tipo unidad
-        public static DataTable ObtenerTipoUnidadInner(int id)
+        public static DataTable ObtenerTipoUnidadInner(string id)
         {
             DataTable data;
             try
@@ -89,7 +89,7 @@ namespace Modelo
         }
 
         //Estado inner
-        public static DataTable ObtenerTipoPlacasInner(int id)
+        public static DataTable ObtenerTipoPlacasInner(string id)
         {
             DataTable data;
             try
@@ -127,7 +127,7 @@ namespace Modelo
         }
 
         //Inner Modelos
-        public static DataTable ObtenerModelosInner(int id)
+        public static DataTable ObtenerModelosInner(string id)
         {
             DataTable data;
             try
@@ -165,7 +165,7 @@ namespace Modelo
         }
 
         //Inner Marcas
-        public static DataTable ObtenerMarcasInner(int id)
+        public static DataTable ObtenerMarcasInner(string id)
         {
             DataTable data;
             try
@@ -242,7 +242,7 @@ namespace Modelo
             }
         }
         //Inner estado unidad
-        public static DataTable ObtenerEstadoUnidadInner(int id)
+        public static DataTable ObtenerEstadoUnidadInner(string id)
         {
             DataTable data;
             try

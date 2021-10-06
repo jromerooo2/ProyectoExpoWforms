@@ -86,27 +86,27 @@ namespace Controlador
             return ModeloTransporte.ObtenerEstadoUnidad();
         }
 
-        public static DataTable ObtenerMarcasInner(int id)
+        public static DataTable ObtenerMarcasInner(string id)
         {
             return ModeloTransporte.ObtenerMarcasInner(id);
         }
 
-        public static DataTable ObtenerModeloInner(int id)
+        public static DataTable ObtenerModeloInner(string id)
         {
             return ModeloTransporte.ObtenerModelosInner(id);
         }
 
-        public static DataTable ObtenerTipoUnidadInner(int id)
+        public static DataTable ObtenerTipoUnidadInner(string id)
         {
             return ModeloTransporte.ObtenerTipoUnidadInner(id);
         }
 
-        public static DataTable ObtenerEstadoUnidadInner(int id)
+        public static DataTable ObtenerEstadoUnidadInner(string id)
         {
             return ModeloTransporte.ObtenerEstadoUnidadInner(id);
         }
 
-        public static DataTable ObtenerTipoPlacaInner(int id)
+        public static DataTable ObtenerTipoPlacaInner(string id)
         {
             return ModeloTransporte.ObtenerTipoPlacasInner(id);
         }
