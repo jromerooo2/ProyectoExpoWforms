@@ -156,6 +156,18 @@ namespace SistemGestionBuses
 
         private void txtusername_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtpassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
