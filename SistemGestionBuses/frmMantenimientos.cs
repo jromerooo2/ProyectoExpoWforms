@@ -237,6 +237,11 @@ namespace SistemGestionBuses
         {
 
         }
+
+        private void bunifuImageButton3_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 
