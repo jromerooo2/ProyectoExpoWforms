@@ -263,7 +263,12 @@ namespace SistemGestionBuses
             }
 
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
-            userImg.Image = b;
+
+            byte[] bytes = (byte[])dgvUsuarios.Rows[i].Cells[6].Value;
+
+            MemoryStream ms = new MemoryStream(bytes);
+
+            userImg.Image = Image.FromStream(ms);
             txtUser.Text = dgvUsuarios[1, i].Value.ToString();
             txtCorreo.Text = dgvUsuarios[2, i].Value.ToString();
 
