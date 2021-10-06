@@ -18,7 +18,7 @@ namespace Controlador
             return ModeloUsuario.CargarEmpleados();
         }
 
-        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado, string img)
+        public bool RegistrarUsuario(string user, string correo,int idCargo,int idEmpleado, byte[] img)
         {
             //haciendolo MD5
             string defaultt = user + "123";
@@ -52,10 +52,10 @@ namespace Controlador
             return ModeloUsuario.CargarCargoInner(id_empleado);
         }
 
-        public bool ActualizarUser(int id, int id_empleado, string user, string correo, int id_cargo)
+        public bool ActualizarUser(int id, int id_empleado, string user, string correo, int id_cargo, byte[] abyte)
         {
             //haciendolo MD5
-            return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, id_cargo);
+            return ModeloUsuario.ActualizarUser(id, id_empleado, user, correo, id_cargo, abyte);
         }
         public static bool ActualizarContraPin(string contra, string pin, int id)
         {
@@ -79,9 +79,9 @@ namespace Controlador
             ModeloUsuario.PrimerUso(idlogged);
         }
 
-        public static List<string> GetUserImg(string v)
+        public static Bitmap GetUserImg(string v)
         {
-            return ModeloUsuario.GetUserImg(v);
+            return ModeloUsuario.CargarImagen(v);
         }
 
         public static void RestablecerDef(int id, string user)

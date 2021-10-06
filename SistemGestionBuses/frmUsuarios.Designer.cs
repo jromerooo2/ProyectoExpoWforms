@@ -38,7 +38,7 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.imageUser = new System.Windows.Forms.PictureBox();
+            this.userImg = new System.Windows.Forms.PictureBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
@@ -72,7 +72,7 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).BeginInit();
@@ -211,7 +211,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.imageUser);
+            this.panel2.Controls.Add(this.userImg);
             this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.cmbCargo);
@@ -249,15 +249,15 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // imageUser
+            // userImg
             // 
-            this.imageUser.Location = new System.Drawing.Point(751, 63);
-            this.imageUser.Margin = new System.Windows.Forms.Padding(4);
-            this.imageUser.Name = "imageUser";
-            this.imageUser.Size = new System.Drawing.Size(175, 114);
-            this.imageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageUser.TabIndex = 72;
-            this.imageUser.TabStop = false;
+            this.userImg.Location = new System.Drawing.Point(751, 63);
+            this.userImg.Margin = new System.Windows.Forms.Padding(4);
+            this.userImg.Name = "userImg";
+            this.userImg.Size = new System.Drawing.Size(175, 114);
+            this.userImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userImg.TabIndex = 72;
+            this.userImg.TabStop = false;
             // 
             // txtId
             // 
@@ -661,7 +661,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).EndInit();
@@ -706,7 +706,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.PictureBox imageUser;
+        private System.Windows.Forms.PictureBox userImg;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnRestablecer;
         private System.Windows.Forms.ToolStrip toolStrip1;

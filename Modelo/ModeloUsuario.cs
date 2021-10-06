@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.IO;
 
 namespace Modelo
 {
@@ -28,6 +30,29 @@ namespace Modelo
             }
         }
 
+        public static Bitmap CargarImagen(string id)
+        {
+            Bitmap b;
+            try
+            {
+                string query = "SELECT foto_usuario FROM tb_usuarios WHERE id_usuario="+id;
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataReader reader = cmdtipomun.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    MemoryStream ms = new MemoryStream((byte[])reader["foto_usuario"]);
+                     b = new Bitmap(ms);
+                    return b;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public static DataTable CargarUsuarios()
         {
             DataTable data;
@@ -46,13 +71,14 @@ namespace Modelo
             }
         }
 
-        public static bool ActualizarUser(int id, int id_empleado, string user, string correo, int id_cargo)
+        public static bool ActualizarUser(int id, int id_empleado, string user, string correo, int id_cargo, byte[] img)
         {
             bool res = false;
             //string password = "1234";
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET id_empleado= '" + id_empleado+ "', nombre_usuario= '" + user+ "',  correo_usuario= '" + correo+ "', cargo_usuario=" + id_cargo+" WHERE id_usuario= '" + id + "'"), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_usuarios SET id_empleado= '" + id_empleado+ "', nombre_usuario= '" + user+ "',  correo_usuario= '" + correo+ "', cargo_usuario=" + id_cargo+", foto_usuario=@Imagen WHERE id_usuario= '" + id + "'"), ModeloConexion.GetConnection());
+                cmdupdate.Parameters.AddWithValue("Imagen",img);
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }
@@ -90,27 +116,6 @@ namespace Modelo
             }
         }
 
-        public static List<string> GetUserImg(string v)
-        {
-            List<string> data = new List<string>();
-            try
-            {
-                string query = "SELECT  foto_usuario FROM tb_usuarios WHERE id_usuario= v";
-                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
-
-                MySqlDataReader reader = cmdselect.ExecuteReader();
-                while (reader.Read())
-                {
-                    data.Add(reader.GetString(0));
-                }
-                return data;
-            }
-            catch (Exception)
-            {
-
-                return data;
-            }
-        }
 
         public static void PrimerUso(int idlogged)
         {
@@ -226,14 +231,15 @@ namespace Modelo
             }
         }
 
-        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password, string img)
+        public static bool RegistrarUser(int pid_empleado, string user, string correo, int cargo, string password, byte[] img)
         {
             bool res = false;
             string pin = "12345678";
             try
             {
                 int estado = 1;
-                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin, foto_usuario) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}')", pid_empleado, user, correo, password, cargo, estado, pin, img), ModeloConexion.GetConnection());
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin, foto_usuario) VALUES('"+pid_empleado+ "','"+user+"','"+ correo+"','"+ password+"','"+ cargo+"','"+ estado+"','"+ pin+ "', @Imagen)"), ModeloConexion.GetConnection());
+                insert.Parameters.AddWithValue("Imagen", img);
                 res = Convert.ToBoolean(insert.ExecuteNonQuery());
                 return res;
             }

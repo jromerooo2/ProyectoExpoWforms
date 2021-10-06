@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -84,7 +85,7 @@ namespace SistemGestionBuses
                 dgvUsuarios.Columns[3].Visible = false;
                 dgvUsuarios.Columns[4].HeaderText = "Empleados";
                 dgvUsuarios.Columns[5].HeaderText = "Cargo";
-                //dgvUsuarios.Columns[6].Visible = false;
+                dgvUsuarios.Columns[6].Visible = false;
             }
             catch (Exception )
             {
@@ -145,6 +146,7 @@ namespace SistemGestionBuses
             string user,correo;
             int id_empleado, id_cargo;
 
+
             id_cargo = Convert.ToInt16(cmbCargo.SelectedValue);
             user = txtUser.Text;
             //password = txtPassword.Text;
@@ -183,20 +185,19 @@ namespace SistemGestionBuses
         {
             try
             {
-                byte[] img;
                 string user, correo ;
                 int id_empleado, id_cargo;
+
                 MemoryStream ms = new MemoryStream();
-                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                 img = ms.ToArray();
-                string encoded = Convert.ToBase64String(img);
+                userImg.Image.Save(ms, userImg.Image.RawFormat);
+                byte[] aByte = ms.ToArray();
 
 
                 id_cargo = Convert.ToInt16(cmbCargo.SelectedValue) +1;
                 user = txtUser.Text;
                 correo = txtCorreo.Text;
                 id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, encoded);
+                bool respuesta = objCond.RegistrarUsuario(user, correo, id_cargo, id_empleado, aByte);
                 if (respuesta)
                 {
                     MessageBox.Show("Usuario registrado exitosamente", "Confirmación de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -253,6 +254,7 @@ namespace SistemGestionBuses
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dgvUsuarios.CurrentRow.Index;
+            Bitmap b = ControladorUsuario.GetUserImg(txtId.Text);
             if (cargouser == 2 || cargouser == 3)
             {
                 BtnActualizar.Enabled = true;
@@ -260,11 +262,8 @@ namespace SistemGestionBuses
                 BtnAgregar.Enabled = true;
             }
 
-            List<string> img = ControladorUsuario.GetUserImg(dgvUsuarios[0, i].Value.ToString());
-
-            //byte[] byteImgArray = Convert.ToByte(img[0]);
-
             txtId.Text = dgvUsuarios[0, i].Value.ToString();
+            userImg.Image = b;
             txtUser.Text = dgvUsuarios[1, i].Value.ToString();
             txtCorreo.Text = dgvUsuarios[2, i].Value.ToString();
 
@@ -314,7 +313,12 @@ namespace SistemGestionBuses
             user = txtUser.Text;
             correo = txtCorreo.Text;
             id_empleado = Convert.ToInt16(cmbEmpleado.SelectedValue);
-            bool res = objCond.ActualizarUser(id,id_empleado, user, correo, id_cargo);
+            //actu img
+            MemoryStream ms = new MemoryStream();
+            userImg.Image.Save(ms, userImg.Image.RawFormat);
+            byte[] aByte = ms.ToArray();
+
+            bool res = objCond.ActualizarUser(id,id_empleado, user, correo, id_cargo, aByte);
             if (ValidacionesClass.IsValidEmail(correo))
             {
                 if (res)
@@ -348,7 +352,7 @@ namespace SistemGestionBuses
 
             if (rs == DialogResult.OK)
             {
-                imageUser.Image = Image.FromFile(dlg.FileName);
+                userImg.Image = Image.FromFile(dlg.FileName);
             }
         }
 
