@@ -71,6 +71,7 @@
             this.txtPin.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtPin.Location = new System.Drawing.Point(202, 402);
             this.txtPin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPin.MaxLength = 50;
             this.txtPin.Name = "txtPin";
             this.txtPin.Size = new System.Drawing.Size(254, 20);
             this.txtPin.TabIndex = 33;
@@ -140,6 +141,7 @@
             this.txtContra.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtContra.Location = new System.Drawing.Point(202, 216);
             this.txtContra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContra.MaxLength = 50;
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(254, 20);
             this.txtContra.TabIndex = 29;
