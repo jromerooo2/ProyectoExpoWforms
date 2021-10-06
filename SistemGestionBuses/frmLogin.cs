@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
@@ -13,6 +14,7 @@ namespace SistemGestionBuses
 {
     public partial class frmLogin : Form
     {
+        frmLoading loading;
         public frmLogin()
         {
             InitializeComponent();
@@ -99,13 +101,17 @@ namespace SistemGestionBuses
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
-
-
             if(!Empty(txtusername.Text, txtpassword.Text))
             {
+                this.Hide();
+                Mostrar();              
+                Task otask = new Task(Algo);
+                otask.Start();
+                await otask;
                 tryLogIn();
+                Esconder();
             }
             else
             {
@@ -113,6 +119,26 @@ namespace SistemGestionBuses
             }
 
         }
+
+        #region Loading
+        //Metodos para pantalla de carga
+        public void Algo()
+        {
+            Thread.Sleep(3500);
+        }
+
+        public void Mostrar()
+        {
+            loading = new frmLoading();
+            loading.Show();
+        }
+        public void Esconder()
+        {
+            if (loading != null)
+                loading.Close();
+        }
+        #endregion
+
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {

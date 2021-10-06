@@ -185,6 +185,7 @@
             this.txtIDConduc.Enabled = false;
             this.txtIDConduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDConduc.Location = new System.Drawing.Point(194, 222);
+            this.txtIDConduc.MaxLength = 4;
             this.txtIDConduc.Name = "txtIDConduc";
             this.txtIDConduc.Size = new System.Drawing.Size(119, 22);
             this.txtIDConduc.TabIndex = 73;
@@ -205,6 +206,7 @@
             this.txtIDEmpl.Enabled = false;
             this.txtIDEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDEmpl.Location = new System.Drawing.Point(36, 222);
+            this.txtIDEmpl.MaxLength = 4;
             this.txtIDEmpl.Name = "txtIDEmpl";
             this.txtIDEmpl.Size = new System.Drawing.Size(119, 22);
             this.txtIDEmpl.TabIndex = 67;
@@ -317,7 +319,7 @@
             this.picBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBackground.Image")));
             this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(2);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(910, 582);
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

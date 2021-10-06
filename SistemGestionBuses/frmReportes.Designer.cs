@@ -50,6 +50,7 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.print = new System.Windows.Forms.PrintDialog();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -121,8 +122,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label2.Location = new System.Drawing.Point(221, 85);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(219, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(476, 18);
@@ -175,10 +176,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(44, 28);
+            this.pictureBox6.Location = new System.Drawing.Point(52, 29);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(120, 91);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.Size = new System.Drawing.Size(86, 82);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
@@ -217,10 +218,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(43, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 29);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.Size = new System.Drawing.Size(88, 82);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -260,7 +261,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(32, 29);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(134, 90);
+            this.pictureBox4.Size = new System.Drawing.Size(134, 82);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
@@ -327,6 +328,10 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
+            // print
+            // 
+            this.print.UseEXDialog = true;
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,5 +391,6 @@
         private System.Windows.Forms.ToolStripLabel txtCargoStrip;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.PrintDialog print;
     }
 }

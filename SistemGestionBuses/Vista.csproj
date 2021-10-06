@@ -188,6 +188,12 @@
     <Compile Include="frmIngresoEmpleado.Designer.cs">
       <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,9 @@
     <EmbeddedResource Include="frmIngresoEmpleado.resx">
       <DependentUpon>frmIngresoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +350,14 @@
       <Project>{a319a0cb-36f8-44f0-8407-c2055b9c5979}</Project>
       <Name>Controlador</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pantalla-carga.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
