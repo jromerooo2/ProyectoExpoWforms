@@ -61,9 +61,9 @@ namespace Controlador
         static List<string> res = new List<string>();
         public static bool RecuperarMail(string user)
         {
+            res = ModeloRecuperar.recuperarPassMail(user);
             if (res.Count != 0)
             {
-                res = ModeloRecuperar.recuperarPassMail(user);
                 mail(res[1]);
                 return true;
             }
