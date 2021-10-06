@@ -272,7 +272,7 @@ namespace SistemGestionBuses
             cmbEmpleado.DataSource = ControladorUsuario.cargarUsuario(id_empleado);
             cmbEmpleado.DisplayMember = "nombres_empleado";
             cmbEmpleado.ValueMember = "id_empleado";
-
+            
             int id = Convert.ToInt16(txtId.Text);
             if (id == IdUserLogged)
             {
