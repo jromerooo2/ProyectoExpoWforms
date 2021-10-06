@@ -47,7 +47,7 @@ namespace Controlador
 
         public bool ValidarCredencialesUsuario_Controller()
         {
-            return ModeloRecuperar.ValidarCredenciales(usuariorecu, DUI);
+            return ModeloRecuperar.ValidarCredencialesUsuariosAdmin(usuariorecu, DUI);
         }
 
         public bool RestaurarContra_Controller()

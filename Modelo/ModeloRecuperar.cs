@@ -91,6 +91,25 @@ namespace Modelo
             }
         }
 
+        public static bool ValidarCredencialesUsuariosAdmin(string pusuario, string pdocumento)
+        {
+            bool retorno = false;
+            try
+            {
+                //int activo = 1;
+                string query = "SELECT * FROM tb_usuarios a, tb_empleados b WHERE a.nombre_usuario = BINARY ?param1 AND b.DUI = BINARY ?param2";
+                MySqlCommand cmdvalidar = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                cmdvalidar.Parameters.Add(new MySqlParameter("param1", pusuario));
+                cmdvalidar.Parameters.Add(new MySqlParameter("param2", pdocumento));
+                retorno = Convert.ToBoolean(cmdvalidar.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
+
         public static bool RestaurarClave(string usuario, string newpassword)
         {
             bool retorno = false;
