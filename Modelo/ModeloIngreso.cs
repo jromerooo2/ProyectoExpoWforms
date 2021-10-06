@@ -384,6 +384,12 @@ namespace Modelo
                 string query = "DELETE FROM tb_empleados WHERE id_empleado = '" + pId + "'";
                 MySqlCommand cmdEli = new MySqlCommand(string.Format(query),
                                                         ModeloConexion.GetConnection());
+
+                string query2 = "DELETE FROM tb_usuarios WHERE id_empleado = '" + pId + "'";
+                MySqlCommand cmdEli2 = new MySqlCommand(string.Format(query2),
+                                                        ModeloConexion.GetConnection());
+                cmdEli2.ExecuteNonQuery();
+
                 retorno = Convert.ToBoolean(cmdEli.ExecuteNonQuery());
                 return retorno;
             }
