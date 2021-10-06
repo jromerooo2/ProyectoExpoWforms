@@ -26,11 +26,11 @@ namespace Controlador
             return ModeloUsuario.RegistrarUser(idEmpleado, user, correo, idCargo, password, img);
         }
 
-        public bool RegistrarPRIMERUsuario(string user, string password,string correo, int idCargo, int idEmpleado, string PIN)
+        public bool RegistrarPRIMERUsuario(string user, string password,string correo, int idCargo, int idEmpleado, string PIN, byte[] img)
         {
             //haciendolo MD5
             password = ValidacionesClass.Encrypt(password);
-            return ModeloUsuario.RegistrarPrimerUser(idEmpleado, user, correo,idCargo, password, PIN);
+            return ModeloUsuario.RegistrarPrimerUser(idEmpleado, user, correo,idCargo, password, PIN, img);
         }
 
         public static DataTable CargarUsuarios()

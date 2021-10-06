@@ -290,6 +290,9 @@ namespace SistemGestionBuses
             //id_cargo = admin
             int cargo = 2;
             int id_muni = Convert.ToInt32(cmbMunicipio.SelectedValue);
+            MemoryStream defaulti = new MemoryStream();
+            pbImage.Image.Save(defaulti, pbImage.Image.RawFormat);
+            byte[] bByte = defaulti.ToArray();
             ControladorIngreso control = new ControladorIngreso(empresa, empresa, dui, nit, direccion, telefono, genero, estado, cargo, id_muni, date);
             bool res = control.EnviarDatosControlador();
             if (res == true)
@@ -300,7 +303,7 @@ namespace SistemGestionBuses
                 string PIN = txtPIN.Text;
                 int id = control.ObtenerIDEmpleado_Controller(dui, nit);
                 ControladorUsuario usercontrol = new ControladorUsuario();
-                bool res2 = usercontrol.RegistrarPRIMERUsuario(user, password, email, cargo, id, PIN);
+                bool res2 = usercontrol.RegistrarPRIMERUsuario(user, password, email, cargo, id, PIN, bByte);
                 if (res2 == true)
                 {
                     NotificacionConfirmacion();

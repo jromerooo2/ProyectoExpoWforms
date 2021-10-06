@@ -82,6 +82,7 @@
             this.MainDrag = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.CardPaso1.SuspendLayout();
             this.CardPaso2.SuspendLayout();
             this.CardPaso3.SuspendLayout();
@@ -89,6 +90,7 @@
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -460,6 +462,7 @@
             this.CardPaso4.BorderRadius = 24;
             this.CardPaso4.BottomSahddow = true;
             this.CardPaso4.color = System.Drawing.Color.Transparent;
+            this.CardPaso4.Controls.Add(this.pbImage);
             this.CardPaso4.Controls.Add(this.btnFinalizar);
             this.CardPaso4.Controls.Add(this.txtNIT);
             this.CardPaso4.Controls.Add(this.TxtDUI);
@@ -747,6 +750,17 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // pbImage
+            // 
+            this.pbImage.Image = ((System.Drawing.Image)(resources.GetObject("pbImage.Image")));
+            this.pbImage.Location = new System.Drawing.Point(-89, 126);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(131, 50);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImage.TabIndex = 125;
+            this.pbImage.TabStop = false;
+            this.pbImage.Visible = false;
+            // 
             // FirstUse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -781,6 +795,7 @@
             this.panelBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -840,5 +855,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.MaskedTextBox TxtDUI;
         private System.Windows.Forms.MaskedTextBox txtNIT;
+        private System.Windows.Forms.PictureBox pbImage;
     }
 }

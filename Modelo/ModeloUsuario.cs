@@ -248,7 +248,8 @@ namespace Modelo
                 return res;
             }
         }
-        public static bool RegistrarPrimerUser(int pid_empleado, string user,string correo, int cargo, string password, string PIN)
+
+        public static bool RegistrarPrimerUser(int pid_empleado, string user,string correo, int cargo, string password, string PIN, byte[] img)
         {
             bool res = false;
             try
@@ -256,7 +257,8 @@ namespace Modelo
                 int estado = 1;
                 int primer_uso = 1;
                 int sesion = 0;
-                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin, foto_usuario, sesion, primer_uso) VALUES('{0}','{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}', '{8}')", pid_empleado, user, correo, password, cargo, estado, PIN, sesion, primer_uso), ModeloConexion.GetConnection());
+                MySqlCommand insert = new MySqlCommand(string.Format("INSERT INTO tb_usuarios(id_empleado, nombre_usuario, correo_usuario, contrasena, cargo_usuario, estado, pin, primer_uso, sesion, foto_usuario) VALUES('" + pid_empleado + "','" + user + "','" + correo + "','" + password + "','" + cargo + "','" + estado + "','" + PIN + "', '"+primer_uso+"','"+sesion+"',@Imagen)"), ModeloConexion.GetConnection());
+                insert.Parameters.AddWithValue("Imagen", img);
                 res = Convert.ToBoolean(insert.ExecuteNonQuery());
                 return res;
             }

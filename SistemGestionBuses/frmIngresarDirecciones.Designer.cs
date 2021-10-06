@@ -107,85 +107,90 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Location = new System.Drawing.Point(497, 75);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(482, 352);
+            this.panel4.Size = new System.Drawing.Size(482, 363);
             this.panel4.TabIndex = 97;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnRutas
             // 
-            this.btnRutas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnRutas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.btnRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRutas.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRutas.ForeColor = System.Drawing.Color.White;
-            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
+            this.btnRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutas.ForeColor = System.Drawing.Color.Black;
             this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRutas.Location = new System.Drawing.Point(329, 219);
+            this.btnRutas.Location = new System.Drawing.Point(330, 207);
             this.btnRutas.Name = "btnRutas";
             this.btnRutas.Size = new System.Drawing.Size(129, 36);
             this.btnRutas.TabIndex = 119;
             this.btnRutas.Text = "Generar Rutas";
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRutas.UseVisualStyleBackColor = false;
             this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(329, 309);
+            this.btnEliminar.Location = new System.Drawing.Point(330, 309);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(129, 36);
             this.btnEliminar.TabIndex = 118;
             this.btnEliminar.Text = "Eliminar Punto";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 296);
+            this.label1.Location = new System.Drawing.Point(16, 299);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 18);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 117;
             this.label1.Text = "Longitud:";
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(16, 247);
+            this.label.Location = new System.Drawing.Point(16, 250);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(57, 18);
+            this.label.Size = new System.Drawing.Size(57, 17);
             this.label.TabIndex = 116;
             this.label.Text = "Latitud:";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(328, 262);
+            this.btnAgregar.Location = new System.Drawing.Point(329, 260);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 41);
+            this.btnAgregar.Size = new System.Drawing.Size(130, 36);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar Punto";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtlongitud
             // 
-            this.txtlongitud.Location = new System.Drawing.Point(20, 318);
+            this.txtlongitud.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlongitud.Location = new System.Drawing.Point(20, 321);
             this.txtlongitud.MaxLength = 100;
             this.txtlongitud.Multiline = true;
             this.txtlongitud.Name = "txtlongitud";
@@ -195,7 +200,8 @@
             // 
             // txtlatitud
             // 
-            this.txtlatitud.Location = new System.Drawing.Point(20, 269);
+            this.txtlatitud.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlatitud.Location = new System.Drawing.Point(20, 272);
             this.txtlatitud.MaxLength = 100;
             this.txtlatitud.Multiline = true;
             this.txtlatitud.Name = "txtlatitud";
@@ -213,38 +219,40 @@
             this.dgvPuntos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
             this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPuntos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.dgvPuntos.Location = new System.Drawing.Point(168, 202);
+            this.dgvPuntos.Location = new System.Drawing.Point(168, 207);
             this.dgvPuntos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPuntos.Name = "dgvPuntos";
             this.dgvPuntos.ReadOnly = true;
             this.dgvPuntos.RowTemplate.Height = 24;
-            this.dgvPuntos.Size = new System.Drawing.Size(147, 135);
+            this.dgvPuntos.Size = new System.Drawing.Size(140, 138);
             this.dgvPuntos.TabIndex = 112;
             this.dgvPuntos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuntos_CellContentClick);
             this.dgvPuntos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPuntos_CellMouseClick);
             // 
             // cmbViajes
             // 
+            this.cmbViajes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbViajes.FormattingEnabled = true;
-            this.cmbViajes.Location = new System.Drawing.Point(20, 228);
+            this.cmbViajes.Location = new System.Drawing.Point(20, 221);
             this.cmbViajes.Name = "cmbViajes";
-            this.cmbViajes.Size = new System.Drawing.Size(134, 21);
+            this.cmbViajes.Size = new System.Drawing.Size(134, 25);
             this.cmbViajes.TabIndex = 111;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 206);
+            this.label7.Location = new System.Drawing.Point(16, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
+            this.label7.Size = new System.Drawing.Size(44, 17);
             this.label7.TabIndex = 110;
             this.label7.Text = "Viaje:";
             // 
             // txtreferenciaAdicional
             // 
-            this.txtreferenciaAdicional.Location = new System.Drawing.Point(320, 136);
+            this.txtreferenciaAdicional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreferenciaAdicional.Location = new System.Drawing.Point(320, 129);
             this.txtreferenciaAdicional.MaxLength = 200;
             this.txtreferenciaAdicional.Multiline = true;
             this.txtreferenciaAdicional.Name = "txtreferenciaAdicional";
@@ -255,17 +263,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(318, 114);
+            this.label6.Location = new System.Drawing.Point(318, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 18);
+            this.label6.Size = new System.Drawing.Size(139, 17);
             this.label6.TabIndex = 108;
             this.label6.Text = "Punto de referencia:";
             // 
             // txtreferenciaFinal
             // 
-            this.txtreferenciaFinal.Location = new System.Drawing.Point(168, 136);
+            this.txtreferenciaFinal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreferenciaFinal.Location = new System.Drawing.Point(168, 129);
             this.txtreferenciaFinal.MaxLength = 200;
             this.txtreferenciaFinal.Multiline = true;
             this.txtreferenciaFinal.Name = "txtreferenciaFinal";
@@ -276,17 +285,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(164, 114);
+            this.label5.Location = new System.Drawing.Point(164, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 18);
+            this.label5.Size = new System.Drawing.Size(139, 17);
             this.label5.TabIndex = 106;
             this.label5.Text = "Punto de referencia:";
             // 
             // txtreferenciaInicio
             // 
-            this.txtreferenciaInicio.Location = new System.Drawing.Point(15, 136);
+            this.txtreferenciaInicio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreferenciaInicio.Location = new System.Drawing.Point(15, 129);
             this.txtreferenciaInicio.MaxLength = 200;
             this.txtreferenciaInicio.Multiline = true;
             this.txtreferenciaInicio.Name = "txtreferenciaInicio";
@@ -297,28 +307,29 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 114);
+            this.label3.Location = new System.Drawing.Point(12, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 18);
+            this.label3.Size = new System.Drawing.Size(139, 17);
             this.label3.TabIndex = 104;
             this.label3.Text = "Punto de referencia:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(317, 21);
+            this.label18.Location = new System.Drawing.Point(317, 14);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(118, 18);
+            this.label18.Size = new System.Drawing.Size(125, 17);
             this.label18.TabIndex = 99;
             this.label18.Text = "Destino adicional:";
             // 
             // txtAdicional
             // 
-            this.txtAdicional.Location = new System.Drawing.Point(321, 41);
+            this.txtAdicional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdicional.Location = new System.Drawing.Point(321, 34);
             this.txtAdicional.MaxLength = 200;
             this.txtAdicional.Multiline = true;
             this.txtAdicional.Name = "txtAdicional";
@@ -328,17 +339,18 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(163, 20);
+            this.label10.Location = new System.Drawing.Point(163, 13);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 18);
+            this.label10.Size = new System.Drawing.Size(150, 17);
             this.label10.TabIndex = 95;
             this.label10.Text = "Destino final del viaje:";
             // 
             // txtDireccion_final
             // 
-            this.txtDireccion_final.Location = new System.Drawing.Point(167, 40);
+            this.txtDireccion_final.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion_final.Location = new System.Drawing.Point(167, 33);
             this.txtDireccion_final.MaxLength = 200;
             this.txtDireccion_final.Multiline = true;
             this.txtDireccion_final.Name = "txtDireccion_final";
@@ -347,7 +359,8 @@
             // 
             // txtDireccion_inicio
             // 
-            this.txtDireccion_inicio.Location = new System.Drawing.Point(15, 42);
+            this.txtDireccion_inicio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion_inicio.Location = new System.Drawing.Point(15, 35);
             this.txtDireccion_inicio.MaxLength = 200;
             this.txtDireccion_inicio.Multiline = true;
             this.txtDireccion_inicio.Name = "txtDireccion_inicio";
@@ -358,11 +371,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(10, 21);
+            this.label13.Location = new System.Drawing.Point(10, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 18);
+            this.label13.Size = new System.Drawing.Size(123, 17);
             this.label13.TabIndex = 89;
             this.label13.Text = "Punto de partida:";
             // 
@@ -486,22 +499,30 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(588, 444);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 58);
             this.button2.TabIndex = 1;
             this.button2.Text = "Agregar Direccion";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(752, 444);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 58);
             this.button3.TabIndex = 2;
             this.button3.Text = "Limpiar Campos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // toolStrip1
             // 
