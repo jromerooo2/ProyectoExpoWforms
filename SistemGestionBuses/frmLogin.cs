@@ -177,18 +177,18 @@ namespace SistemGestionBuses
             int res = ControladorLogin.comprobarEmpleadosVacio();
             //Comprobar que no existan usuarios
             int res2 = ControladorLogin.comprobarUsuariosVacio();
-            if (res > 0 && res2 > 0)
-            {
-                Show();
-            }
-            else
+            if (res == 0 || res2 == 0)
             {
                 Hide();
                 SendToBack();
                 FirstUse primeruso = new FirstUse();
                 primeruso.Show();
-               
-            }           
+            }
+            else
+            {
+                Show();
+            }
+        
         }
 
         private void txtusername_KeyPress(object sender, KeyPressEventArgs e)
