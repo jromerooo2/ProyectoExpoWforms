@@ -15,21 +15,13 @@ namespace SistemGestionBuses
     {
         public frmLoading()
         {
-            InitializeComponent();
-            Task otask = new Task(threaduwu);
-            otask.Start(); 
+            InitializeComponent(); 
         }
 
         private void frmLoading_Load(object sender, EventArgs e)
         {
             MiLoading.Load("pantalla-carga.gif");
-            MiLoading.Location = new Point(this.Width / 2 - MiLoading.Width / 2, this.Height / 2 - MiLoading.Height / 2);
-        }
-
-        public void threaduwu ()
-        {
-            Thread.Sleep(3000);
-            Close();
+            MiLoading.Location = new Point(this.Width / 2 , this.Height);
         }
     }
 }

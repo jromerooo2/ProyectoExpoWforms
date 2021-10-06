@@ -14,6 +14,7 @@ namespace SistemGestionBuses
 {
     public partial class frmLogin : Form
     {
+        frmLoading loading;
         public frmLogin()
         {
             InitializeComponent();
@@ -104,10 +105,13 @@ namespace SistemGestionBuses
         {
             if(!Empty(txtusername.Text, txtpassword.Text))
             {
-                tryLogIn();
+                this.Hide();
+                Mostrar();              
                 Task otask = new Task(Algo);
                 otask.Start();
-                await otask; 
+                await otask;
+                tryLogIn();
+                Esconder();
             }
             else
             {
@@ -116,11 +120,25 @@ namespace SistemGestionBuses
 
         }
 
+        #region Loading
         //Metodos para pantalla de carga
         public void Algo()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(3500);
         }
+
+        public void Mostrar()
+        {
+            loading = new frmLoading();
+            loading.Show();
+        }
+        public void Esconder()
+        {
+            if (loading != null)
+                loading.Close();
+        }
+        #endregion
+
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
