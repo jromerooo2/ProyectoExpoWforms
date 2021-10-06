@@ -169,7 +169,7 @@
             this.btnConfirmarAdmin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarAdmin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmarAdmin.Location = new System.Drawing.Point(143, 375);
-            this.btnConfirmarAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmarAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmarAdmin.Name = "btnConfirmarAdmin";
             this.btnConfirmarAdmin.Size = new System.Drawing.Size(119, 51);
             this.btnConfirmarAdmin.TabIndex = 32;
@@ -223,7 +223,7 @@
             // 
             this.txtClaveAdmin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtClaveAdmin.Location = new System.Drawing.Point(75, 324);
-            this.txtClaveAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClaveAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txtClaveAdmin.MaxLength = 50;
             this.txtClaveAdmin.Name = "txtClaveAdmin";
             this.txtClaveAdmin.Size = new System.Drawing.Size(246, 20);
@@ -235,7 +235,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(143, 65);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(119, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -260,7 +260,7 @@
             // 
             this.txtUsuarioAdmin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtUsuarioAdmin.Location = new System.Drawing.Point(75, 273);
-            this.txtUsuarioAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioAdmin.MaxLength = 50;
             this.txtUsuarioAdmin.Name = "txtUsuarioAdmin";
             this.txtUsuarioAdmin.Size = new System.Drawing.Size(246, 20);
@@ -348,7 +348,7 @@
             this.txtConfirmacionContra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConfirmacionContra.Location = new System.Drawing.Point(110, 401);
-            this.txtConfirmacionContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmacionContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmacionContra.MaxLength = 50;
             this.txtConfirmacionContra.Name = "txtConfirmacionContra";
             this.txtConfirmacionContra.Size = new System.Drawing.Size(224, 20);
@@ -375,7 +375,7 @@
             this.txtUsuarioRecu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuarioRecu.Location = new System.Drawing.Point(110, 103);
-            this.txtUsuarioRecu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioRecu.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioRecu.MaxLength = 50;
             this.txtUsuarioRecu.Name = "txtUsuarioRecu";
             this.txtUsuarioRecu.Size = new System.Drawing.Size(224, 20);
@@ -389,7 +389,7 @@
             this.btnNuevaContrasena.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaContrasena.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevaContrasena.Location = new System.Drawing.Point(161, 446);
-            this.btnNuevaContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevaContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevaContrasena.Name = "btnNuevaContrasena";
             this.btnNuevaContrasena.Size = new System.Drawing.Size(109, 51);
             this.btnNuevaContrasena.TabIndex = 44;
@@ -417,7 +417,8 @@
             this.txtDUI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDUI.Location = new System.Drawing.Point(110, 155);
-            this.txtDUI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDUI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDUI.MaxLength = 15;
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(224, 20);
             this.txtDUI.TabIndex = 40;
@@ -430,7 +431,7 @@
             this.btnConfirmarUsuario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmarUsuario.Location = new System.Drawing.Point(161, 192);
-            this.btnConfirmarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmarUsuario.Name = "btnConfirmarUsuario";
             this.btnConfirmarUsuario.Size = new System.Drawing.Size(109, 51);
             this.btnConfirmarUsuario.TabIndex = 35;
@@ -443,7 +444,7 @@
             this.txtNueva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNueva.Location = new System.Drawing.Point(110, 336);
-            this.txtNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva.MaxLength = 50;
             this.txtNueva.Name = "txtNueva";
             this.txtNueva.Size = new System.Drawing.Size(224, 20);
