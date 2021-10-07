@@ -259,8 +259,9 @@ namespace SistemGestionBuses
      
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            {
-                int i = dgvDatosCliente.CurrentRow.Index;
+            int i = dgvDatosCliente.CurrentRow.Index;
+            if (i >= 0 && dgvDatosCliente[0, i].Value.ToString() != "")
+            {             
                 txtIdCliente.Text = dgvDatosCliente[0, i].Value.ToString();
                 txtNomCliente.Text = dgvDatosCliente[1, i].Value.ToString();
                 txtApeCliente.Text = dgvDatosCliente[2, i].Value.ToString();
@@ -274,6 +275,10 @@ namespace SistemGestionBuses
                 cmbTipCliente.ValueMember = "id_tipo_cliente";
 
                 btnAsignar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un cliente", "Selección no valida" , MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -387,6 +392,11 @@ namespace SistemGestionBuses
         }
 
         private void txtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDatosCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

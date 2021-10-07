@@ -113,6 +113,7 @@
             this.dgvDatosCliente.Size = new System.Drawing.Size(489, 151);
             this.dgvDatosCliente.TabIndex = 58;
             this.dgvDatosCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
+            this.dgvDatosCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatosCliente_CellContentClick);
             // 
             // label5
             // 
@@ -226,35 +227,41 @@
             // 
             // btnEliminarClientes
             // 
+            this.btnEliminarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnEliminarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarClientes.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 57);
+            this.btnEliminarClientes.Location = new System.Drawing.Point(12, 60);
             this.btnEliminarClientes.Name = "btnEliminarClientes";
-            this.btnEliminarClientes.Size = new System.Drawing.Size(136, 41);
+            this.btnEliminarClientes.Size = new System.Drawing.Size(136, 38);
             this.btnEliminarClientes.TabIndex = 46;
             this.btnEliminarClientes.Text = "Eliminar cliente";
-            this.btnEliminarClientes.UseVisualStyleBackColor = true;
+            this.btnEliminarClientes.UseVisualStyleBackColor = false;
             this.btnEliminarClientes.Click += new System.EventHandler(this.BtnEliminarCliente_click);
             // 
             // btnActualizarCliente
             // 
+            this.btnActualizarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnActualizarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 105);
+            this.btnActualizarCliente.Location = new System.Drawing.Point(12, 108);
             this.btnActualizarCliente.Name = "btnActualizarCliente";
-            this.btnActualizarCliente.Size = new System.Drawing.Size(136, 43);
+            this.btnActualizarCliente.Size = new System.Drawing.Size(136, 40);
             this.btnActualizarCliente.TabIndex = 45;
             this.btnActualizarCliente.Text = "Actualizar clientes";
-            this.btnActualizarCliente.UseVisualStyleBackColor = true;
+            this.btnActualizarCliente.UseVisualStyleBackColor = false;
             this.btnActualizarCliente.Click += new System.EventHandler(this.btnAcualizar_Click);
             // 
             // btnAgregarCliente
             // 
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarCliente.Location = new System.Drawing.Point(9, 8);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(9, 11);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(136, 43);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(136, 40);
             this.btnAgregarCliente.TabIndex = 44;
             this.btnAgregarCliente.Text = "Agregar clientes";
-            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente1_Click);
             // 
             // pictureBox1
@@ -295,13 +302,15 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(9, 59);
+            this.button1.Location = new System.Drawing.Point(9, 62);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 43);
+            this.button1.Size = new System.Drawing.Size(136, 40);
             this.button1.TabIndex = 61;
             this.button1.Text = "Limpiar Campos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.BtnLimCampos_Click);
             // 
             // panel1
@@ -329,13 +338,15 @@
             // 
             // btnAsignar
             // 
+            this.btnAsignar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignar.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAsignar.Location = new System.Drawing.Point(245, 183);
+            this.btnAsignar.Location = new System.Drawing.Point(245, 186);
             this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(136, 43);
+            this.btnAsignar.Size = new System.Drawing.Size(136, 40);
             this.btnAsignar.TabIndex = 63;
             this.btnAsignar.Text = "Asignar viaje";
-            this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.UseVisualStyleBackColor = false;
             this.btnAsignar.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // txtTelCliente
@@ -378,13 +389,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(12, 8);
+            this.button2.Location = new System.Drawing.Point(12, 11);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 43);
+            this.button2.Size = new System.Drawing.Size(136, 40);
             this.button2.TabIndex = 62;
             this.button2.Text = "Actualizar Grid de datos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.BtnActualizarGrid_click);
             // 
             // panelBar
