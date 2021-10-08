@@ -56,7 +56,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tbvistaunidad;";
+                string instruccion = "SELECT * FROM tbvistaunidad";
                 MySqlCommand cmdUnidad = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdUnidad);
                 data = new DataTable();
