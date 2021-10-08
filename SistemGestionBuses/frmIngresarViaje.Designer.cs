@@ -43,7 +43,6 @@
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.dtpFechaRetorno = new System.Windows.Forms.DateTimePicker();
             this.cmbMunicipios = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,15 +61,15 @@
             this.label14 = new System.Windows.Forms.Label();
             this.ElipseGeneral = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DragControlGeneral = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panelBar = new System.Windows.Forms.Panel();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.dgvViajes = new System.Windows.Forms.DataGridView();
             this.btnActualizarGrid = new System.Windows.Forms.Button();
             this.ElipsePanelGrid = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panelBar = new System.Windows.Forms.Panel();
-            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -78,15 +77,16 @@
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.dtpFechaRetorno = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFormularios.SuspendLayout();
-            this.panelGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panelGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -284,16 +284,6 @@
             this.panelFormularios.Size = new System.Drawing.Size(368, 353);
             this.panelFormularios.TabIndex = 77;
             // 
-            // dtpFechaRetorno
-            // 
-            this.dtpFechaRetorno.CustomFormat = "yyyy-MM-dd";
-            this.dtpFechaRetorno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaRetorno.Location = new System.Drawing.Point(187, 88);
-            this.dtpFechaRetorno.Name = "dtpFechaRetorno";
-            this.dtpFechaRetorno.Size = new System.Drawing.Size(157, 22);
-            this.dtpFechaRetorno.TabIndex = 100;
-            // 
             // cmbMunicipios
             // 
             this.cmbMunicipios.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,62 +472,6 @@
             this.DragControlGeneral.TargetControl = this.panelBar;
             this.DragControlGeneral.Vertical = true;
             // 
-            // panelGrid
-            // 
-            this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.panelGrid.Controls.Add(this.dgvViajes);
-            this.panelGrid.Controls.Add(this.btnActualizarGrid);
-            this.panelGrid.Controls.Add(this.btnEliminar);
-            this.panelGrid.Controls.Add(this.txtIDviaje);
-            this.panelGrid.Controls.Add(this.btnActualizar);
-            this.panelGrid.Controls.Add(this.label14);
-            this.panelGrid.Location = new System.Drawing.Point(12, 152);
-            this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(588, 353);
-            this.panelGrid.TabIndex = 93;
-            this.panelGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGrid_Paint);
-            // 
-            // dgvViajes
-            // 
-            this.dgvViajes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvViajes.Location = new System.Drawing.Point(16, 17);
-            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvViajes.Name = "dgvViajes";
-            this.dgvViajes.RowTemplate.Height = 24;
-            this.dgvViajes.Size = new System.Drawing.Size(560, 256);
-            this.dgvViajes.TabIndex = 93;
-            this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellClick);
-            this.dgvViajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellContentClick);
-            // 
-            // btnActualizarGrid
-            // 
-            this.btnActualizarGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.btnActualizarGrid.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.btnActualizarGrid.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.btnActualizarGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.btnActualizarGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.btnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarGrid.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarGrid.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarGrid.Location = new System.Drawing.Point(304, 293);
-            this.btnActualizarGrid.Name = "btnActualizarGrid";
-            this.btnActualizarGrid.Size = new System.Drawing.Size(138, 43);
-            this.btnActualizarGrid.TabIndex = 92;
-            this.btnActualizarGrid.Text = "Actualizar Grid";
-            this.btnActualizarGrid.UseVisualStyleBackColor = false;
-            this.btnActualizarGrid.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // ElipsePanelGrid
-            // 
-            this.ElipsePanelGrid.ElipseRadius = 5;
-            this.ElipsePanelGrid.TargetControl = this.panelGrid;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this.panelFormularios;
-            // 
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
@@ -596,6 +530,62 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // panelGrid
+            // 
+            this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelGrid.Controls.Add(this.dgvViajes);
+            this.panelGrid.Controls.Add(this.btnActualizarGrid);
+            this.panelGrid.Controls.Add(this.btnEliminar);
+            this.panelGrid.Controls.Add(this.txtIDviaje);
+            this.panelGrid.Controls.Add(this.btnActualizar);
+            this.panelGrid.Controls.Add(this.label14);
+            this.panelGrid.Location = new System.Drawing.Point(12, 152);
+            this.panelGrid.Name = "panelGrid";
+            this.panelGrid.Size = new System.Drawing.Size(588, 353);
+            this.panelGrid.TabIndex = 93;
+            this.panelGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGrid_Paint);
+            // 
+            // dgvViajes
+            // 
+            this.dgvViajes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViajes.Location = new System.Drawing.Point(16, 17);
+            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvViajes.Name = "dgvViajes";
+            this.dgvViajes.RowTemplate.Height = 24;
+            this.dgvViajes.Size = new System.Drawing.Size(560, 256);
+            this.dgvViajes.TabIndex = 93;
+            this.dgvViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellClick);
+            this.dgvViajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViajes_CellContentClick);
+            // 
+            // btnActualizarGrid
+            // 
+            this.btnActualizarGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnActualizarGrid.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnActualizarGrid.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnActualizarGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.btnActualizarGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarGrid.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarGrid.ForeColor = System.Drawing.Color.White;
+            this.btnActualizarGrid.Location = new System.Drawing.Point(304, 293);
+            this.btnActualizarGrid.Name = "btnActualizarGrid";
+            this.btnActualizarGrid.Size = new System.Drawing.Size(138, 43);
+            this.btnActualizarGrid.TabIndex = 92;
+            this.btnActualizarGrid.Text = "Actualizar Grid";
+            this.btnActualizarGrid.UseVisualStyleBackColor = false;
+            this.btnActualizarGrid.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ElipsePanelGrid
+            // 
+            this.ElipsePanelGrid.ElipseRadius = 5;
+            this.ElipsePanelGrid.TargetControl = this.panelGrid;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this.panelFormularios;
             // 
             // toolStrip1
             // 
@@ -677,6 +667,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // dtpFechaRetorno
+            // 
+            this.dtpFechaRetorno.CustomFormat = "yyyy-MM-dd";
+            this.dtpFechaRetorno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaRetorno.Location = new System.Drawing.Point(190, 91);
+            this.dtpFechaRetorno.Name = "dtpFechaRetorno";
+            this.dtpFechaRetorno.Size = new System.Drawing.Size(157, 22);
+            this.dtpFechaRetorno.TabIndex = 101;
+            // 
             // frmIngresarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -699,13 +699,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelFormularios.ResumeLayout(false);
             this.panelFormularios.PerformLayout();
-            this.panelGrid.ResumeLayout(false);
-            this.panelGrid.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();
             this.panelBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panelGrid.ResumeLayout(false);
+            this.panelGrid.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -750,7 +750,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.DataGridView dgvViajes;
-        private System.Windows.Forms.DateTimePicker dtpFechaRetorno;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel txtActiveUser;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -762,5 +761,6 @@
         private System.Windows.Forms.ComboBox cmbEstadoViaje;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpFechaRetorno;
     }
 }

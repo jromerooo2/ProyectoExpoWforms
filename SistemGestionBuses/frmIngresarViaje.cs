@@ -58,6 +58,17 @@ namespace SistemGestionBuses
             //MessageBox.Show(dtpFechaRetorno.Text);
             DataTable data = ControladorViaje.ObtenerViajes();
             dgvViajes.DataSource = data;
+            dgvViajes.Columns[0].Visible = false;
+            dgvViajes.Columns[1].HeaderText = "Viaje";
+            dgvViajes.Columns[2].HeaderText = "Cliente";
+            dgvViajes.Columns[3].HeaderText = "Unidad";
+            dgvViajes.Columns[4].HeaderText = "Conductor";
+            dgvViajes.Columns[5].HeaderText = "F. Inicio";
+            dgvViajes.Columns[6].HeaderText = "Tarifa";
+            dgvViajes.Columns[7].HeaderText = "Estado";
+            dgvViajes.Columns[8].HeaderText = "Tipo";
+            dgvViajes.Columns[9].HeaderText = "F. Retorno";
+            dgvViajes.Columns[10].HeaderText = "Municipio";
         }
 
         //Metodo para limpiar los campos
