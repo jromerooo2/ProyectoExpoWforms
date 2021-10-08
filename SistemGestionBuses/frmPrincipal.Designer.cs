@@ -98,9 +98,10 @@
             this.lblUsuario.BackColor = System.Drawing.Color.White;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(29, 56);
+            this.lblUsuario.Location = new System.Drawing.Point(39, 69);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(220, 40);
+            this.lblUsuario.Size = new System.Drawing.Size(273, 49);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "¡Bienvenido!";
             // 
@@ -110,9 +111,10 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(32, 99);
+            this.label2.Location = new System.Drawing.Point(43, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(418, 63);
+            this.label2.Size = new System.Drawing.Size(533, 75);
             this.label2.TabIndex = 2;
             this.label2.Text = "Controla las acciones que te han sido asignadas\r\na través de este panel de contro" +
     "l.\r\n\r\n";
@@ -120,9 +122,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(53, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(71, 31);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 87);
+            this.pictureBox2.Size = new System.Drawing.Size(104, 107);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -134,9 +137,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(49, 131);
+            this.label4.Location = new System.Drawing.Point(65, 161);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 19);
+            this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 11;
             this.label4.Text = "Unidades";
             // 
@@ -146,9 +150,10 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(562, 184);
+            this.label5.Location = new System.Drawing.Point(749, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 19);
+            this.label5.Size = new System.Drawing.Size(0, 23);
             this.label5.TabIndex = 12;
             // 
             // label10
@@ -157,18 +162,20 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(64, 131);
+            this.label10.Location = new System.Drawing.Point(85, 161);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 19);
+            this.label10.Size = new System.Drawing.Size(90, 23);
             this.label10.TabIndex = 11;
             this.label10.Text = "Usuarios";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(53, 24);
+            this.pictureBox4.Location = new System.Drawing.Point(71, 30);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 94);
+            this.pictureBox4.Size = new System.Drawing.Size(123, 116);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
@@ -180,9 +187,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(51, 131);
+            this.label3.Location = new System.Drawing.Point(68, 161);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 19);
+            this.label3.Size = new System.Drawing.Size(118, 23);
             this.label3.TabIndex = 11;
             this.label3.Text = "Empleados";
             // 
@@ -192,9 +200,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(59, 129);
+            this.label8.Location = new System.Drawing.Point(79, 159);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 19);
+            this.label8.Size = new System.Drawing.Size(89, 23);
             this.label8.TabIndex = 11;
             this.label8.Text = "Clientes";
             // 
@@ -204,9 +213,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(69, 131);
+            this.label9.Location = new System.Drawing.Point(92, 161);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 19);
+            this.label9.Size = new System.Drawing.Size(69, 23);
             this.label9.TabIndex = 11;
             this.label9.Text = "Viajes";
             // 
@@ -216,18 +226,20 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(57, 131);
+            this.label6.Location = new System.Drawing.Point(76, 161);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 19);
+            this.label6.Size = new System.Drawing.Size(95, 23);
             this.label6.TabIndex = 11;
             this.label6.Text = "Reportes";
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(43, 24);
+            this.pictureBox9.Location = new System.Drawing.Point(57, 30);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(96, 94);
+            this.pictureBox9.Size = new System.Drawing.Size(128, 116);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
@@ -239,9 +251,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(34, 131);
+            this.label11.Location = new System.Drawing.Point(45, 161);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 19);
+            this.label11.Size = new System.Drawing.Size(147, 23);
             this.label11.TabIndex = 11;
             this.label11.Text = "Viajes Activos";
             // 
@@ -251,9 +264,10 @@
             this.lblUser.BackColor = System.Drawing.Color.White;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 10.75F);
             this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUser.Location = new System.Drawing.Point(580, 82);
+            this.lblUser.Location = new System.Drawing.Point(773, 101);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 20);
+            this.lblUser.Size = new System.Drawing.Size(0, 21);
             this.lblUser.TabIndex = 18;
             // 
             // cardUsers
@@ -266,11 +280,12 @@
             this.cardUsers.Controls.Add(this.label10);
             this.cardUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardUsers.LeftSahddow = false;
-            this.cardUsers.Location = new System.Drawing.Point(36, 175);
+            this.cardUsers.Location = new System.Drawing.Point(48, 215);
+            this.cardUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardUsers.Name = "cardUsers";
             this.cardUsers.RightSahddow = true;
             this.cardUsers.ShadowDepth = 20;
-            this.cardUsers.Size = new System.Drawing.Size(186, 159);
+            this.cardUsers.Size = new System.Drawing.Size(248, 196);
             this.cardUsers.TabIndex = 20;
             this.cardUsers.Click += new System.EventHandler(this.cardUsers_Click);
             this.cardUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.cardUsers_Paint);
@@ -278,9 +293,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(53, 25);
+            this.pictureBox3.Location = new System.Drawing.Point(71, 31);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(92, 87);
+            this.pictureBox3.Size = new System.Drawing.Size(123, 107);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
@@ -296,11 +312,12 @@
             this.bunifuCards1.Controls.Add(this.label4);
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(248, 175);
+            this.bunifuCards1.Location = new System.Drawing.Point(331, 215);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(186, 159);
+            this.bunifuCards1.Size = new System.Drawing.Size(248, 196);
             this.bunifuCards1.TabIndex = 21;
             this.bunifuCards1.Click += new System.EventHandler(this.bunifuCards1_Click);
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
@@ -315,11 +332,12 @@
             this.bunifuCards2.Controls.Add(this.label9);
             this.bunifuCards2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(456, 175);
+            this.bunifuCards2.Location = new System.Drawing.Point(608, 215);
+            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(186, 159);
+            this.bunifuCards2.Size = new System.Drawing.Size(248, 196);
             this.bunifuCards2.TabIndex = 22;
             this.bunifuCards2.Click += new System.EventHandler(this.bunifuCards2_Click);
             this.bunifuCards2.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards2_Paint);
@@ -327,9 +345,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(46, 25);
+            this.pictureBox7.Location = new System.Drawing.Point(61, 31);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(90, 87);
+            this.pictureBox7.Size = new System.Drawing.Size(120, 107);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
@@ -345,11 +364,12 @@
             this.cardEmpleado.Controls.Add(this.label3);
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
-            this.cardEmpleado.Location = new System.Drawing.Point(36, 355);
+            this.cardEmpleado.Location = new System.Drawing.Point(48, 437);
+            this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
             this.cardEmpleado.ShadowDepth = 20;
-            this.cardEmpleado.Size = new System.Drawing.Size(186, 159);
+            this.cardEmpleado.Size = new System.Drawing.Size(248, 196);
             this.cardEmpleado.TabIndex = 23;
             this.cardEmpleado.Click += new System.EventHandler(this.bunifuCards3_Click);
             this.cardEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.cardEmpleado_Paint);
@@ -360,9 +380,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(29, 131);
+            this.label7.Location = new System.Drawing.Point(39, 161);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 19);
+            this.label7.Size = new System.Drawing.Size(166, 23);
             this.label7.TabIndex = 11;
             this.label7.Text = "Mantenimientos";
             // 
@@ -376,11 +397,12 @@
             this.cardMantenimientos.Controls.Add(this.label7);
             this.cardMantenimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardMantenimientos.LeftSahddow = false;
-            this.cardMantenimientos.Location = new System.Drawing.Point(248, 355);
+            this.cardMantenimientos.Location = new System.Drawing.Point(331, 437);
+            this.cardMantenimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardMantenimientos.Name = "cardMantenimientos";
             this.cardMantenimientos.RightSahddow = true;
             this.cardMantenimientos.ShadowDepth = 20;
-            this.cardMantenimientos.Size = new System.Drawing.Size(186, 159);
+            this.cardMantenimientos.Size = new System.Drawing.Size(248, 196);
             this.cardMantenimientos.TabIndex = 24;
             this.cardMantenimientos.Click += new System.EventHandler(this.cardMantenimientos_Click);
             this.cardMantenimientos.Paint += new System.Windows.Forms.PaintEventHandler(this.cardMantenimientos_Paint);
@@ -388,9 +410,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(51, 24);
+            this.pictureBox5.Location = new System.Drawing.Point(68, 30);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(89, 94);
+            this.pictureBox5.Size = new System.Drawing.Size(119, 116);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
@@ -406,11 +429,12 @@
             this.cardClientes.Controls.Add(this.label8);
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
-            this.cardClientes.Location = new System.Drawing.Point(672, 175);
+            this.cardClientes.Location = new System.Drawing.Point(896, 215);
+            this.cardClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
             this.cardClientes.ShadowDepth = 20;
-            this.cardClientes.Size = new System.Drawing.Size(186, 159);
+            this.cardClientes.Size = new System.Drawing.Size(248, 196);
             this.cardClientes.TabIndex = 25;
             this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
             this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
@@ -418,9 +442,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(54, 25);
+            this.pictureBox6.Location = new System.Drawing.Point(72, 31);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(79, 87);
+            this.pictureBox6.Size = new System.Drawing.Size(105, 107);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
@@ -436,11 +461,12 @@
             this.cardReportes.Controls.Add(this.label6);
             this.cardReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardReportes.LeftSahddow = false;
-            this.cardReportes.Location = new System.Drawing.Point(456, 355);
+            this.cardReportes.Location = new System.Drawing.Point(608, 437);
+            this.cardReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardReportes.Name = "cardReportes";
             this.cardReportes.RightSahddow = true;
             this.cardReportes.ShadowDepth = 20;
-            this.cardReportes.Size = new System.Drawing.Size(186, 159);
+            this.cardReportes.Size = new System.Drawing.Size(248, 196);
             this.cardReportes.TabIndex = 25;
             this.cardReportes.Click += new System.EventHandler(this.cardReportes_Click);
             this.cardReportes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardReportes_Paint);
@@ -448,9 +474,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(46, 24);
+            this.pictureBox8.Location = new System.Drawing.Point(61, 30);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(96, 94);
+            this.pictureBox8.Size = new System.Drawing.Size(128, 116);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
@@ -466,11 +493,12 @@
             this.bunifuCards6.Controls.Add(this.label11);
             this.bunifuCards6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards6.LeftSahddow = false;
-            this.bunifuCards6.Location = new System.Drawing.Point(672, 355);
+            this.bunifuCards6.Location = new System.Drawing.Point(896, 437);
+            this.bunifuCards6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 20;
-            this.bunifuCards6.Size = new System.Drawing.Size(186, 159);
+            this.bunifuCards6.Size = new System.Drawing.Size(248, 196);
             this.bunifuCards6.TabIndex = 26;
             this.bunifuCards6.Click += new System.EventHandler(this.bunifuCards6_Click);
             this.bunifuCards6.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards6_Paint);
@@ -483,8 +511,9 @@
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton2);
             this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(892, 47);
+            this.panelBar.Size = new System.Drawing.Size(1189, 58);
             this.panelBar.TabIndex = 96;
             this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
@@ -495,9 +524,10 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(821, 11);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(1095, 14);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 28);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 34);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -511,9 +541,10 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(852, 12);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(1136, 15);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(28, 27);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(37, 33);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 94;
             this.bunifuImageButton2.TabStop = false;
@@ -532,9 +563,9 @@
             this.txtCargoStrip,
             this.btnLogOut,
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 528);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 649);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(892, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(1189, 41);
             this.toolStrip1.TabIndex = 128;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -544,13 +575,13 @@
             this.txtActiveUser.ForeColor = System.Drawing.Color.White;
             this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
             this.txtActiveUser.Name = "txtActiveUser";
-            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
+            this.txtActiveUser.Size = new System.Drawing.Size(119, 38);
             this.txtActiveUser.Text = "active user";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
             // 
             // txtCargoStrip
             // 
@@ -558,7 +589,7 @@
             this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
             this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
             this.txtCargoStrip.Name = "txtCargoStrip";
-            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
+            this.txtCargoStrip.Size = new System.Drawing.Size(134, 38);
             this.txtCargoStrip.Text = "work position";
             // 
             // btnLogOut
@@ -569,7 +600,7 @@
             this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
+            this.btnLogOut.Size = new System.Drawing.Size(32, 38);
             this.btnLogOut.Text = "toolStripButton3";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -579,7 +610,7 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(67, 38);
             this.toolStripLabel1.Text = "Log Out";
             // 
             // bunifuDragControl1
@@ -594,20 +625,20 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(1366, 768);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(1000, 525);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(1821, 945);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(1333, 646);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 561);
+            this.pictureBox1.Size = new System.Drawing.Size(1333, 690);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 129;
             this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 561);
+            this.ClientSize = new System.Drawing.Size(1189, 690);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.bunifuCards6);
@@ -624,6 +655,7 @@
             this.Controls.Add(this.cardUsers);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";

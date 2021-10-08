@@ -357,7 +357,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM tb_viajes";
+                string query = "SELECT * FROM tbviajesview";
                 MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
                 data = new DataTable();
