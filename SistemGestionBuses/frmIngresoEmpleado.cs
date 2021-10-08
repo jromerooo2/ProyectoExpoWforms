@@ -30,6 +30,12 @@ namespace SistemGestionBuses
             txtCargoStrip.Text = cargostring;
             idlogged = iduser;
             idcargo = cargoid;
+            if (idcargo == 1)
+            {
+                BtnAgregar.Enabled = false;
+                BtnActualizar.Enabled = false;
+                BtnEliminar.Enabled = false;
+            }
         }
 
         //cmb Cargar Cargo
@@ -425,6 +431,15 @@ namespace SistemGestionBuses
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            frmIngresoConductores conduc = new frmIngresoConductores(id, username, cargostring, idcargo);
+            MessageBox.Show("Solo podrás consultar, modificar y eliminar datos, la unica forma de agregar un conductor es por medio de agregar un empleado con el cargo respectivo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            conduc.Show();
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

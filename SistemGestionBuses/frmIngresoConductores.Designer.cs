@@ -400,7 +400,7 @@
             // 
             this.dragCtrlMain.Fixed = true;
             this.dragCtrlMain.Horizontal = true;
-            this.dragCtrlMain.TargetControl = null;
+            this.dragCtrlMain.TargetControl = this.panelBar;
             this.dragCtrlMain.Vertical = true;
             // 
             // panelBar
