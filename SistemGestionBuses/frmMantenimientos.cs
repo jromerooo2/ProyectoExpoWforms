@@ -166,7 +166,10 @@ namespace SistemGestionBuses
 
         private void DgvMantenimiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BtnAgregar.Enabled = true;
+            int i = DgvMantenimiento.CurrentRow.Index;
+            if (i >= 0 && DgvMantenimiento[0, i].Value.ToString() != "")
+            {
+                BtnAgregar.Enabled = true;
             BtnActualizar.Enabled = true;
             BtnEliminar.Enabled = true;
 
@@ -182,6 +185,11 @@ namespace SistemGestionBuses
             cmbUnidad.ValueMember = "id_unidad_transporte";
             cmbUnidad.DisplayMember = "placa";
             CargarUnidadCMB();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un Mantenimiento", "Selección no valida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void cmbUnidad_SelectedIndexChanged(object sender, EventArgs e)

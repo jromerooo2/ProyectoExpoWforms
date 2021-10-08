@@ -295,8 +295,11 @@ namespace SistemGestionBuses
 
         private void DgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Capturar el numero de fila a la cual se le dio click
-            int posicion = dgvEmpleados.CurrentRow.Index;
+            int i = dgvEmpleados.CurrentRow.Index;
+            if (i >= 0 && dgvEmpleados[0, i].Value.ToString() != "")
+            {
+                //Capturar el numero de fila a la cual se le dio click
+                int posicion = dgvEmpleados.CurrentRow.Index;
             //envio datos hacia texbox
             txtId.Text = dgvEmpleados[0, posicion].Value.ToString();
             TxtNombres.Text= dgvEmpleados[1, posicion].Value.ToString();
@@ -325,6 +328,11 @@ namespace SistemGestionBuses
             cmbMunicipio.DataSource = ControladorIngreso.CargarMunicipiosInner_controlador(id_municipio);
             cmbMunicipio.DisplayMember = "municipio";
             cmbMunicipio.ValueMember = "id_municipio";
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un empleado", "Selección no valida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
