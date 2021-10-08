@@ -21,6 +21,10 @@ namespace SistemGestionBuses
         {            
             InitializeComponent();
             id_empleado = pid_empleado;
+            if (id_empleado == 0)
+            {
+                BtnAgregar.Enabled = false;
+            }
             ControladorIngreso.id_empleado = pid_empleado;
             empleado = ControladorIngreso.CargarNombresConduc_Controller();
             txtIDEmpl.Text = id_empleado.ToString();
@@ -70,7 +74,7 @@ namespace SistemGestionBuses
             dgvConductores.Columns[1].Visible = false;
             dgvConductores.Columns[2].HeaderText = "Licencia";
             dgvConductores.Columns[3].HeaderText = "F. Expiración";
-            dgvConductores.Columns[4].HeaderText = "Tipo Licencia";
+            //dgvConductores.Columns[4].HeaderText = "Tipo Licencia";
             //dgvConductores.Columns[4].Visible = false;
         }
 
@@ -200,6 +204,7 @@ namespace SistemGestionBuses
         private void BtnAgregar_Click_1(object sender, EventArgs e)
         {
             EnvioDatos();
+            Close();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
