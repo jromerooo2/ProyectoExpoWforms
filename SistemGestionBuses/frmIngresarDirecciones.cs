@@ -192,11 +192,19 @@ namespace SistemGestionBuses
         public int filseleccionada;
         private void dgvPuntos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-             filseleccionada = e.RowIndex;
+            int i = dgvPuntos.CurrentRow.Index;
+            if (i >= 0 && dgvPuntos[0, i].Value.ToString() != "")
+            {
+                filseleccionada = e.RowIndex;
             txtlatitud.Text = dgvPuntos.Rows[filseleccionada].Cells[1].Value.ToString();
             txtlongitud.Text = dgvPuntos.Rows[filseleccionada].Cells[2].Value.ToString();
             marker.Position = new PointLatLng(Convert.ToDouble(txtlatitud.Text), Convert.ToDouble(txtlongitud.Text));
             gMapControl1.Position = marker.Position;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un cliente", "Selección no valida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
