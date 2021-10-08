@@ -229,7 +229,7 @@ namespace SistemGestionBuses
             }
             else
             {
-                MessageBox.Show("La unidad no pudo ser eliminada", "Confirmación de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La unidad no pudo ser eliminada, debido a que ya ha sido asignada a un viaje o mantenimiento", "Confirmación de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
