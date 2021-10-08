@@ -585,6 +585,7 @@
             this.label1.Size = new System.Drawing.Size(805, 82);
             this.label1.TabIndex = 96;
             this.label1.Text = "Unidades de transporte.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 

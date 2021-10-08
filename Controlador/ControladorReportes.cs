@@ -10,16 +10,16 @@ namespace Controlador
 {
     public class ControladorReportes
     {
-        public static List<string> GetDataCliente()
+        public static DataTable GetDataCliente()
         {
             return ModeloReportes.GetDataClientes();
         }
-        public static List<string> GetDataTransportes()
+        public static DataTable GetDataTransportes()
         {
             return ModeloReportes.GetDataTransportes();
         }
 
-        public static List<string> GetDataEmpleados()
+        public static DataTable GetDataEmpleados()
         {
             return ModeloReportes.GetDataEmpleados();
         }

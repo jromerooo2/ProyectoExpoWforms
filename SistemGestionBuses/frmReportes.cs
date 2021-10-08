@@ -8,14 +8,15 @@ using iText.Layout.Properties;
 using System;
 using Controlador;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System.IO;
+using Document = iTextSharp.text.Document;
+using PdfWriter = iTextSharp.text.pdf.PdfWriter;
+using Paragraph = iTextSharp.text.Paragraph;
 
 namespace SistemGestionBuses
 {
@@ -47,34 +48,51 @@ namespace SistemGestionBuses
         #region pdfclientes
         private void pdf(string[] columnas, float[] tamanios)
         {
-            PdfWriter pdfw = new PdfWriter("ReporteClientes.pdf");
-            PdfDocument pdf = new PdfDocument(pdfw);
-            Document document = new Document(pdf, PageSize.LETTER.Rotate());
-            //document.SetMargins(60, 20, 55, 20);
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter w = PdfWriter.GetInstance(doc, new FileStream(@"ReporteClientes.pdf", FileMode.Create));
+            doc.Open();
+            PdfContentByte content = w.DirectContent;
 
-            PdfFont font = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
-            PdfFont fontC = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
+            //setting font type, font size and font color
+            iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(
+        FontFactory.TIMES_ROMAN, 30, BaseColor.BLUE);
+            Paragraph prg = new iTextSharp.text.Paragraph();
+            prg.Alignment = Element.ALIGN_CENTER; // adjust the alignment of the heading
+            prg.Add(new Chunk("Clientes ", font)); //adding a heading to the PDF
+            doc.Add(prg); //add the component we created to the document
+            DataTable data = ControladorReportes.GetDataCliente();
+            dataGridView1.DataSource = data;
+            dataGridView1.Columns[0].HeaderText = "Nombre";
+            dataGridView1.Columns[1].HeaderText = "Apellido";
+            dataGridView1.Columns[2].HeaderText = "Teléfono";
+            dataGridView1.Columns[3].HeaderText = "Tipo Cliente";
+            dataGridView1.Columns[4].HeaderText = "Dirección";
+            dataGridView1.Columns[5].HeaderText = "Email";
 
-           Table tb = new Table(UnitValue.CreatePercentArray(tamanios));
-            tb.SetWidth(UnitValue.CreatePercentValue(100));
 
-            foreach(string title in columnas)
+            PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
             {
-                tb.AddHeaderCell(new Cell().Add(new Paragraph(title).SetFont(font)));
+                PdfPCell cell = new PdfPCell(); //create object from the pdfpcell class
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY; //set color of cells to gray
+                cell.AddElement(new Chunk(dataGridView1.Columns[j].HeaderText.ToUpper()));
+                table.AddCell(cell);
             }
-            List<string> data = new List<string>();
-
-            data = ControladorReportes.GetDataCliente();
-
-
-            for (int i = 0; i < columnas.Length; i++)
+            //add actual rows from grid to table
+            for (int i = 0; i < data.Rows.Count; i++)
             {
-                tb.AddCell(new Cell().Add(new Paragraph(data[i].ToString()).SetFont(fontC)));
+                table.WidthPercentage = 100; //set width of the table
+                for (int k = 0; k < data.Columns.Count; k++)
+                {
+                    if (dataGridView1[k, i].Value != null)
+                        // get the value of   each cell in the dataTable tblemp
+                        table.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                }
             }
-
-            document.Add(tb);
-            document.Close();
-            MessageBox.Show("Se ha generado un documento PDF con el reporte.");
+            //add the table to document
+            doc.Add(table);
+            doc.Close();
         }
         #endregion pdfclientes
         //Defining array of sizes and columns to grab from BD 
@@ -111,35 +129,60 @@ namespace SistemGestionBuses
         #region pdftransporte
         private void pdfTransporte(string[] columnas, float[] tamanios)
         {
-            PdfWriter pdfw = new PdfWriter("ReporteTransporte.pdf");
-            PdfDocument pdf = new PdfDocument(pdfw);
-            Document document = new Document(pdf, PageSize.LETTER.Rotate());
-            //document.SetMargins(60, 20, 55, 20);
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter w = PdfWriter.GetInstance(doc, new FileStream(@"ReporteTransporte.pdf", FileMode.Create));
+            doc.Open();
+            PdfContentByte content = w.DirectContent;
 
-            PdfFont font = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
-            PdfFont fontC = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
 
-            Table tb = new Table(UnitValue.CreatePercentArray(tamanios));
-            tb.SetWidth(UnitValue.CreatePercentValue(100));
+            //setting font type, font size and font color
+            iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(
+        FontFactory.TIMES_ROMAN, 30, BaseColor.BLUE);
+            Paragraph prg = new iTextSharp.text.Paragraph();
+            prg.Alignment = Element.ALIGN_CENTER; // adjust the alignment of the heading
+            prg.Add(new Chunk("Transportes ", font)); //adding a heading to the PDF
+            doc.Add(prg); //add the component we created to the document
+            DataTable data = ControladorReportes.GetDataTransportes();
+            dataGridView1.DataSource = data;
+            //"Año", "VIN", "Placa", "Tipo Unidad", "Modelo", "Estado","# del Motor", "# del Chasis"
+            dataGridView1.Columns[0].HeaderText = "# De Unidad";
+            dataGridView1.Columns[1].HeaderText = "Año";
+            dataGridView1.Columns[2].HeaderText = "VIN";
+            dataGridView1.Columns[3].HeaderText = "Capacidad";
+            dataGridView1.Columns[4].HeaderText = "Placa";
+            dataGridView1.Columns[5].HeaderText = "Tipo de Placa";
+            dataGridView1.Columns[6].HeaderText = "Tipo Unidad";
+            dataGridView1.Columns[7].HeaderText = "Modelo";
+            dataGridView1.Columns[8].HeaderText = "Marca";
+            dataGridView1.Columns[9].HeaderText = "Estado Unidad";
+            dataGridView1.Columns[10].HeaderText = "# de motor";
+            dataGridView1.Columns[11].HeaderText = "# del Chasis";
 
-            foreach (string title in columnas)
+            PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
             {
-                tb.AddHeaderCell(new Cell().Add(new Paragraph(title).SetFont(font)));
+                PdfPCell cell = new PdfPCell(); //create object from the pdfpcell class
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY; //set color of cells to gray
+                cell.AddElement(new Chunk(dataGridView1.Columns[j].HeaderText.ToUpper()));
+                table.AddCell(cell);
             }
-            List<string> data = new List<string>();
-
-                    data = ControladorReportes.GetDataTransportes();
-
-
-
-            for (int i = 0; i < columnas.Length; i++)
+            //add actual rows from grid to table
+            for (int i = 0; i < data.Rows.Count; i++)
             {
-                tb.AddCell(new Cell().Add(new Paragraph(data[i].ToString()).SetFont(fontC)));
+                table.WidthPercentage = 100; //set width of the table
+                for (int k = 0; k < data.Columns.Count; k++)
+                {
+                    if (dataGridView1[k, i].Value != null)
+                        // get the value of   each cell in the dataTable tblemp
+                        table.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                }
             }
+            //add the table to document
+            doc.Add(table);
+            doc.Close();
 
-            document.Add(tb);
-            document.Close();
-            MessageBox.Show("Se ha generado un documento PDF con el reporte.");
+
         }
         #endregion pdftransporte
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -161,41 +204,66 @@ namespace SistemGestionBuses
         #region pdfempleado
         private void pdfEmpleado(string[] columnas, float[] tamanios)
         {
-            PdfWriter pdfw = new PdfWriter("ReportEmpleados.pdf");
-            PdfDocument pdf = new PdfDocument(pdfw);
-            Document document = new Document(pdf, PageSize.LETTER.Rotate());
-            //document.SetMargins(60, 20, 55, 20);
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter w = PdfWriter.GetInstance(doc, new FileStream(@"ReporteEmpleados.pdf", FileMode.Create));
+            doc.Open();
+            PdfContentByte content = w.DirectContent;
 
-            PdfFont font = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
-            PdfFont fontC = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
+            //setting font type, font size and font color
+            iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(
+        FontFactory.TIMES_ROMAN, 30, BaseColor.BLUE);
+            Paragraph prg = new iTextSharp.text.Paragraph();
+            prg.Alignment = Element.ALIGN_CENTER; // adjust the alignment of the heading
+            prg.Add(new Chunk("Empleados ", font)); //adding a heading to the PDF
+            doc.Add(prg); //add the component we created to the document
 
-            Table tb = new Table(UnitValue.CreatePercentArray(tamanios));
-            tb.SetWidth(UnitValue.CreatePercentValue(100));
+            DataTable data = ControladorReportes.GetDataEmpleados();
+            dataGridView1.DataSource = data;
+            dataGridView1.Columns[0].HeaderText = "Nombres";
+            dataGridView1.Columns[1].HeaderText = "Apellidos";
+            dataGridView1.Columns[2].HeaderText = "DUI";
+            dataGridView1.Columns[3].HeaderText = "NIT";
+            dataGridView1.Columns[4].HeaderText = "Teléfono";
+            dataGridView1.Columns[5].HeaderText = "Cargo";
 
-            foreach (string title in columnas)
+
+            PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
             {
-                tb.AddHeaderCell(new Cell().Add(new Paragraph(title).SetFont(font)));
+                PdfPCell cell = new PdfPCell(); //create object from the pdfpcell class
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY; //set color of cells to gray
+                cell.AddElement(new Chunk(dataGridView1.Columns[j].HeaderText.ToUpper()));
+                table.AddCell(cell);
             }
-            List<string> data = new List<string>();
-
-            data = ControladorReportes.GetDataTransportes();
-
-
-
-            for (int i = 0; i < columnas.Length; i++)
+            //add actual rows from grid to table
+            for (int i = 0; i < data.Rows.Count; i++)
             {
-                tb.AddCell(new Cell().Add(new Paragraph(data[i].ToString()).SetFont(fontC)));
+                table.WidthPercentage = 100; //set width of the table
+                for (int k = 0; k < data.Columns.Count; k++)
+                {
+                    if (dataGridView1[k, i].Value != null)
+                        // get the value of   each cell in the dataTable tblemp
+                        table.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                }
             }
+            //add the table to document
+            doc.Add(table);
+            doc.Close();
 
-            document.Add(tb);
-            document.Close();
-            MessageBox.Show("Se ha generado un documento PDF con el reporte.");
+
+
         }
         #endregion pdfempleado
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void cardEmpleado_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

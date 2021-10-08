@@ -11,85 +11,57 @@ namespace Controlador
 {
     public class ModeloReportes
     {
-        public static List<string> GetDataClientes()
+        public static DataTable GetDataClientes()
         {
-            List<string> data = new List<string>();
-            try
-            {
-                string instruccion = "SELECT nombres_cliente, apellidos_cliente,telefono_cliente, direccion_cliente, correo_cliente FROM tb_cliente";
-                MySqlCommand cmd = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    data.Add(reader[0].ToString());
-                    data.Add(reader[1].ToString());
-                    data.Add(reader[2].ToString());
-                    data.Add(reader[3].ToString());
-                    data.Add(reader[4].ToString());
-                }
-                return data;
-
-
-            }
-            catch (Exception)
-            {
-                return data = null;
-            }
-        }
-
-        public static List<string> GetDataEmpleados()
-        {
-            List<string> data = new List<string>();
-            //  "Nombres", "Apellidos", "DUI", "NIT", "Direccion", "Telefóno", "Nacimiento"
-            try
-            {
-                string instruccion = "SELECT nombres_empleado, apellidos_empleado,DUI,NIT,direccion_empleado,telefono_empleado,nacimiento_empleado FROM tb_empleados";
-                MySqlCommand cmd = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    data.Add(reader[0].ToString());
-                    data.Add(reader[1].ToString());
-                    data.Add(reader[2].ToString());
-                    data.Add(reader[3].ToString());
-                    data.Add(reader[4].ToString());
-                    data.Add(reader[5].ToString());
-                    data.Add(reader[6].ToString());
-                }
-                return data;
-
-
-            }
-            catch (Exception)
-            {
-                return data = null;
-            }
-        }
-
-        public static List<string> GetDataTransportes()
-        {
-            List<string> data = new List<string>();
+            DataTable data;
             // "Año", "VIN", "Placa", "Tipo Unidad", "Modelo", "Estado","# del Motor", "# del Chasis"
             try
             {
-                string instruccion = "SELECT anio, VIN ,capacidad,placa, tipo_unidad,modelo,estado_unidad,numero_motor, numero_chasis FROM tbvistaunidad";
-                MySqlCommand cmd = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    data.Add(reader[0].ToString());
-                    data.Add(reader[1].ToString());
-                    data.Add(reader[2].ToString());
-                    data.Add(reader[3].ToString());
-                    data.Add(reader[4].ToString());
-                    data.Add(reader[5].ToString());
-                    data.Add(reader[6].ToString());
-                    data.Add(reader[7].ToString());
-                    data.Add(reader[8].ToString());
-                }
+                string query = "SELECT tb_cliente.nombres_cliente, tb_cliente.apellidos_cliente, tb_cliente.telefono_cliente,tb_tipo_cliente.id_tipo_cliente,tb_cliente.direccion_cliente, tb_cliente.correo_cliente FROM  tb_cliente INNER JOIN tb_tipo_cliente ON tb_cliente.id_tipo_cliente = tb_tipo_cliente.id_tipo_cliente";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
                 return data;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
+        public static DataTable GetDataEmpleados()
+        {
+            DataTable data;
+            // "Año", "VIN", "Placa", "Tipo Unidad", "Modelo", "Estado","# del Motor", "# del Chasis"
+            //nombres_empleado, apellidos_empleado,DUI,NIT,telefono_empleado,id_cargo  FROM tb_empleados
+            try
+            {
+                string query = "SELECT tb_empleados.nombres_empleado,tb_empleados.apellidos_empleado,tb_empleados.DUI,tb_empleados.NIT,tb_empleados.telefono_empleado,tb_cargo.cargo  FROM tb_empleados INNER JOIN tb_cargo ON tb_empleados.id_cargo = tb_cargo.id_cargo";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
 
+        public static DataTable GetDataTransportes()
+        {
+            DataTable data;
+            // "Año", "VIN", "Placa", "Tipo Unidad", "Modelo", "Estado","# del Motor", "# del Chasis"
+            try
+            {
+                string query = "SELECT * FROM tbvistaunidad";
+                MySqlCommand cmdtipomun = new MySqlCommand(string.Format(query), ModeloConexion.GetConnection());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipomun);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
             }
             catch (Exception)
             {
