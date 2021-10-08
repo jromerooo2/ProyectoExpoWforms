@@ -70,11 +70,7 @@ namespace SistemGestionBuses
         {
             datosConductores = ControladorIngreso.CargarConductores_Controller();
             dgvConductores.DataSource = datosConductores;
-            dgvConductores.Columns[0].HeaderText = "Empleado";
-            dgvConductores.Columns[1].Visible = false;
-            dgvConductores.Columns[2].HeaderText = "Licencia";
-            dgvConductores.Columns[3].HeaderText = "F. Expiración";
-            //dgvConductores.Columns[4].HeaderText = "Tipo Licencia";
+            dgvConductores.Columns[0].Visible = false; 
             //dgvConductores.Columns[4].Visible = false;
         }
 
@@ -154,19 +150,26 @@ namespace SistemGestionBuses
 
         void EliminarDatos()
         {
-            //Se envia el id del conductor directo al controlador
-            ControladorIngreso.id_conductor = Convert.ToInt16(txtIDConduc.Text);
-            bool respuesta = ControladorIngreso.EliminarDatosConductor();
-            if (respuesta == true)
+            ControladorIngreso.id_empleado = Convert.ToInt16(txtIDEmpl.Text);
+            empleado = ControladorIngreso.CargarNombresConduc_Controller();
+            if (MessageBox.Show("¿Está seguro de eliminar a: " + empleado + "?",
+                "Confirmar eliminación", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("El registro ha sido eliminado correctamente", "Confirmacion",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("El registro no fue eliminado", "Confirmacion",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                //Se envia el id del conductor directo al controlador
+                ControladorIngreso.id_conductor = Convert.ToInt16(txtIDConduc.Text);
+                bool respuesta = ControladorIngreso.EliminarDatosConductor();
+                if (respuesta == true)
+                {
+                    MessageBox.Show("El registro ha sido eliminado correctamente", "Confirmacion",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El registro no fue eliminado", "Confirmacion",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }          
         }
 
         private bool sameOrnot(string licencia, string fecha_expiracion, int id_tipo_licencia)
@@ -221,19 +224,23 @@ namespace SistemGestionBuses
 
             int i = dgvConductores.CurrentRow.Index;
 
-            txtIDConduc.Text = dgvConductores[1, i].Value.ToString();
+            txtIDConduc.Text = dgvConductores[0, i].Value.ToString();
             txtLicencia.Text = dgvConductores[2, i].Value.ToString();
-            txtNombreConduc.Text = dgvConductores[0, i].Value.ToString();
+            txtNombreConduc.Text = dgvConductores[1, i].Value.ToString();
             dtpExpLicencia.Text = Convert.ToString(dgvConductores[3, i]);
 
             string id_licencia = dgvConductores[4, i].ToString();
             cmbTipoLicencia.DataSource = ControladorIngreso.ObtenerTipoLicenciaInner(id_licencia);
             cmbTipoLicencia.DisplayMember = "tipo_licencia";
             cmbTipoLicencia.ValueMember = "id_tipo_licencia";
+
+            CargarTipoLicencia();
         }
 
         private void BtnActualizar_Click_1(object sender, EventArgs e)
         {
+            ControladorIngreso.id_empleado = Convert.ToInt16(txtIDEmpl.Text);
+            empleado = ControladorIngreso.CargarNombresConduc_Controller();
             if (MessageBox.Show("¿Está seguro de actualizar a: " + empleado + "?",
                 "Confirmar actualización", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)

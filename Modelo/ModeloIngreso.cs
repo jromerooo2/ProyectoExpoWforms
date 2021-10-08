@@ -474,6 +474,23 @@ namespace Modelo
             }
         }
 
+        public static int ObtenerIDEmpleadoVUsuario(int iduser)
+        {
+            int id;
+            try
+            {
+                string instruccion = "SELECT id_empleado FROM tb_empleados a AND tb_usuarios b WHERE a.id_empleado = ?param1 AND a.id_empleado = b.id_empleado";
+                MySqlCommand cmdid = new MySqlCommand(string.Format(instruccion), ModeloConexion.GetConnection());
+                cmdid.Parameters.Add(new MySqlParameter("param1", iduser));
+                id = Convert.ToInt32(cmdid.ExecuteScalar());
+                return id;
+            }
+            catch (Exception)
+            {
+                return id = 0;
+            }
+        }
+
         public static int ObtenerIDEmpleadoFirstUse(string nombre_empleado)
         {
             int id;
@@ -530,7 +547,7 @@ namespace Modelo
             bool res = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_conductores SET id_empleado = '" + id_empleado + "', numero_licencia = '" + licencia + "', fecha_exp_licencia = '" + fecha_exp + "', id_tipo_licencia = '" + id_tipo_licencia + "' WHERE id_conductores = '" + id_conductor + "' "), ModeloConexion.GetConnection());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tb_conductores SET numero_licencia = '" + licencia + "', fecha_exp_licencia = '" + fecha_exp + "', id_tipo_licencia = '" + id_tipo_licencia + "' WHERE id_conductores = '" + id_conductor + "' "), ModeloConexion.GetConnection());
                 res = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 return res;
             }

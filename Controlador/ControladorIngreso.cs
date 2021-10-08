@@ -124,11 +124,17 @@ namespace Controlador
         {
             return ModeloIngreso.EliminarEmpleado(id_empleado);
         }
+
         #region CRUD Conductores
         //Obtener el ID del forms de empleados por medio del DUI y el NIT
         public int ObtenerIDEmpleado_Controller(string DUI, string NIT)
         {
             return ModeloIngreso.ObtenerIDEmpleado(DUI, NIT);
+        }
+        //Obtener el ID del empleado por medio del id del usuario
+        public static int getIdEmpleado(int idusuario)
+        {
+            return ModeloIngreso.ObtenerIDEmpleadoVUsuario(idusuario);
         }
         //Cargar el nombre del empleado concatenado
         public static string CargarNombresConduc_Controller()

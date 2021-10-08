@@ -219,6 +219,14 @@ namespace SistemGestionBuses
                 {
                     MessageBox.Show("Usuario actualizado exitosamente", "Confirmación de actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarGridDatos();
+                    if (id_cargo == 1)
+                    {
+                        int id = objCond.ObtenerIDEmpleado_Controller(DUI, NIT);
+                        CargarGridDatos();
+                        frmIngresoConductores conduc = new frmIngresoConductores(id, username, cargostring, idcargo);
+                        this.SendToBack();
+                        conduc.Show();
+                    }
                 }
                 else
                 {
@@ -434,8 +442,8 @@ namespace SistemGestionBuses
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            int id = 0;
+        {         
+            int id = ControladorIngreso.getIdEmpleado(idlogged);
             frmIngresoConductores conduc = new frmIngresoConductores(id, username, cargostring, idcargo);
             MessageBox.Show("Solo podrás consultar, modificar y eliminar datos, la unica forma de agregar un conductor es por medio de agregar un empleado con el cargo respectivo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             conduc.Show();
