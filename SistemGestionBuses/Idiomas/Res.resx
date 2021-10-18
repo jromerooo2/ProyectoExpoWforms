@@ -151,54 +151,54 @@
     <value>Guardar</value>
   </data>
   <data name="paso1lbl1" xml:space="preserve">
-    <value>Ingrese su correo electrónico para administrar el sistema</value>
+    <value>Ingrese el correo principal para gestionar el sistema</value>
   </data>
   <data name="paso1lbl2" xml:space="preserve">
-    <value>Ingrese su usuario</value>
+    <value>Ingrese un nombre de usuario</value>
   </data>
   <data name="paso2" xml:space="preserve">
     <value>Paso 2</value>
   </data>
   <data name="paso2btn1" xml:space="preserve">
-    <value>Resend the code.</value>
+    <value>Reenviar código</value>
   </data>
   <data name="paso2btn2" xml:space="preserve">
-    <value>Confirm Code</value>
+    <value>Confirmar código</value>
   </data>
   <data name="paso2lbl1" xml:space="preserve">
-    <value>Enter the confirmation code we sent to your e-mail account, to confirm your identity</value>
+    <value>Ingrese el código de confirmación que se te envió al correo para confirmar la identidad</value>
   </data>
   <data name="paso3" xml:space="preserve">
-    <value>Step 3</value>
+    <value>Paso 3</value>
   </data>
   <data name="paso3btn" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="paso3lbl1" xml:space="preserve">
-    <value>The password has to contains a minimum of 10  characters, with a combination of letters and numbers.(Just some special characters are allowed)</value>
+    <value>La contraseña debe contener como mínimo 10 caracteres, con una combinación de letras y números. (Solo algunos simbolos son perimitidos )</value>
   </data>
   <data name="paso4" xml:space="preserve">
-    <value>Step 4</value>
+    <value>Paso 4</value>
   </data>
   <data name="paso4btn" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="paso4lbl1" xml:space="preserve">
-    <value>Enter the name of your enterprise, instituttion, entrepreneurship or bussines.</value>
+    <value>Ingresa el nombre de tu empresa, institución, emprendimiento o negocio.</value>
   </data>
   <data name="paso4lbl2" xml:space="preserve">
-    <value>Enter the adress where is located</value>
+    <value>Ingresa la dirección donde se encuentra:</value>
   </data>
   <data name="phonelbl" xml:space="preserve">
-    <value>Phone number</value>
+    <value>Teléfono</value>
   </data>
   <data name="pinlabel" xml:space="preserve">
-    <value>Enter a PIN of security. (Minimum 10 characters)</value>
+    <value>Ingrese un PIN de seguridad. (Mínimo de 10 caracteres).</value>
   </data>
   <data name="sesion" xml:space="preserve">
-    <value>Log In</value>
+    <value>Inicar sesión</value>
   </data>
   <data name="usuario" xml:space="preserve">
-    <value>User</value>
+    <value>usuario</value>
   </data>
 </root>
