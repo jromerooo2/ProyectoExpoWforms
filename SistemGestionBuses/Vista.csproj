@@ -257,12 +257,22 @@
     <Compile Include="frmViajesActivos.Designer.cs">
       <DependentUpon>frmViajesActivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResEnglish.Designer.cs">
+    <Compile Include="Idiomas\Res.es-SV.Designer.cs">
+      <DependentUpon>Res.es-SV.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ResEnglish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Idiomas\Res.en-US.Designer.cs">
+      <DependentUpon>Res.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Idiomas\ResMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResMain.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FirstUse.resx">
       <DependentUpon>FirstUse.cs</DependentUpon>
@@ -321,6 +331,14 @@
     <EmbeddedResource Include="frmViajesActivos.resx">
       <DependentUpon>frmViajesActivos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\Res.es-SV.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.es-SV.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\Res.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -330,9 +348,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ResEnglish.resx">
+    <EmbeddedResource Include="Idiomas\ResMain.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ResEnglish.Designer.cs</LastGenOutput>
+      <LastGenOutput>ResMain.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

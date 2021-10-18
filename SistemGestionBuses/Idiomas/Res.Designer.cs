@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemGestionBuses {
+namespace SistemGestionBuses.Idiomas {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SistemGestionBuses {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResEnglish {
+    internal class Res {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ResEnglish() {
+        internal Res() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SistemGestionBuses {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SistemGestionBuses.ResEnglish", typeof(ResEnglish).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SistemGestionBuses.Idiomas.Res", typeof(Res).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Save and continue.
+        ///   Busca una cadena traducida similar a Guardar y continuar.
         /// </summary>
         internal static string btnfinalizar {
             get {
@@ -70,7 +70,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Confirmation Code.
+        ///   Busca una cadena traducida similar a Código de confirmación.
         /// </summary>
         internal static string codigoconfir {
             get {
@@ -79,7 +79,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Confirm the password.
+        ///   Busca una cadena traducida similar a Confirmar contraseña.
         /// </summary>
         internal static string confirmacion_contra {
             get {
@@ -88,7 +88,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Password and PIN.
+        ///   Busca una cadena traducida similar a Contraseña y PIN.
         /// </summary>
         internal static string contra_pin {
             get {
@@ -97,7 +97,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Password.
+        ///   Busca una cadena traducida similar a Contraseña.
         /// </summary>
         internal static string contrasena {
             get {
@@ -106,7 +106,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Information.
+        ///   Busca una cadena traducida similar a Información.
         /// </summary>
         internal static string informacion {
             get {
@@ -115,7 +115,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter the data.
+        ///   Busca una cadena traducida similar a Ingresar datos.
         /// </summary>
         internal static string ingresadatos {
             get {
@@ -124,7 +124,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Municipality.
+        ///   Busca una cadena traducida similar a Municipio.
         /// </summary>
         internal static string municipiolbl {
             get {
@@ -133,7 +133,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Forgot Password?.
+        ///   Busca una cadena traducida similar a ¿Olvidó  su contraseña?.
         /// </summary>
         internal static string olvido_contrasena {
             get {
@@ -142,7 +142,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Step 1.
+        ///   Busca una cadena traducida similar a Paso 1.
         /// </summary>
         internal static string paso1 {
             get {
@@ -151,7 +151,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Save.
+        ///   Busca una cadena traducida similar a Guardar.
         /// </summary>
         internal static string paso1btn {
             get {
@@ -160,7 +160,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter the main e-mail to manage the system..
+        ///   Busca una cadena traducida similar a Ingrese el correo principal para gestionar el sistema.
         /// </summary>
         internal static string paso1lbl1 {
             get {
@@ -169,7 +169,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter your username..
+        ///   Busca una cadena traducida similar a Ingrese un nombre de usuario.
         /// </summary>
         internal static string paso1lbl2 {
             get {
@@ -178,7 +178,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Step 2.
+        ///   Busca una cadena traducida similar a Paso 2.
         /// </summary>
         internal static string paso2 {
             get {
@@ -187,7 +187,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Resend the code..
+        ///   Busca una cadena traducida similar a Reenviar código.
         /// </summary>
         internal static string paso2btn1 {
             get {
@@ -196,7 +196,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Confirm Code.
+        ///   Busca una cadena traducida similar a Confirmar código.
         /// </summary>
         internal static string paso2btn2 {
             get {
@@ -205,7 +205,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter the confirmation code we sent to your e-mail account, to confirm your identity.
+        ///   Busca una cadena traducida similar a Ingrese el código de confirmación que se te envió al correo para confirmar la identidad.
         /// </summary>
         internal static string paso2lbl1 {
             get {
@@ -214,7 +214,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Step 3.
+        ///   Busca una cadena traducida similar a Paso 3.
         /// </summary>
         internal static string paso3 {
             get {
@@ -223,7 +223,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Save.
+        ///   Busca una cadena traducida similar a Guardar.
         /// </summary>
         internal static string paso3btn {
             get {
@@ -232,7 +232,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a The password has to contains a minimum of 10  characters, with a combination of letters and numbers.(Just some special characters are allowed).
+        ///   Busca una cadena traducida similar a La contraseña debe contener como mínimo 10 caracteres, con una combinación de letras y números. (Solo algunos simbolos son perimitidos ).
         /// </summary>
         internal static string paso3lbl1 {
             get {
@@ -241,7 +241,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Step 4.
+        ///   Busca una cadena traducida similar a Paso 4.
         /// </summary>
         internal static string paso4 {
             get {
@@ -250,7 +250,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Save.
+        ///   Busca una cadena traducida similar a Guardar.
         /// </summary>
         internal static string paso4btn {
             get {
@@ -259,7 +259,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter the name of your enterprise, instituttion, entrepreneurship or bussines..
+        ///   Busca una cadena traducida similar a Ingresa el nombre de tu empresa, institución, emprendimiento o negocio..
         /// </summary>
         internal static string paso4lbl1 {
             get {
@@ -268,7 +268,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter the adress where is located.
+        ///   Busca una cadena traducida similar a Ingresa la dirección donde se encuentra:.
         /// </summary>
         internal static string paso4lbl2 {
             get {
@@ -277,7 +277,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Phone number.
+        ///   Busca una cadena traducida similar a Teléfono.
         /// </summary>
         internal static string phonelbl {
             get {
@@ -286,7 +286,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enter a PIN of security. (Minimum 10 characters).
+        ///   Busca una cadena traducida similar a Ingrese un PIN de seguridad. (Mínimo de 10 caracteres)..
         /// </summary>
         internal static string pinlabel {
             get {
@@ -295,7 +295,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Log In.
+        ///   Busca una cadena traducida similar a Inicar sesión.
         /// </summary>
         internal static string sesion {
             get {
@@ -304,7 +304,7 @@ namespace SistemGestionBuses {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a User.
+        ///   Busca una cadena traducida similar a usuario.
         /// </summary>
         internal static string usuario {
             get {
