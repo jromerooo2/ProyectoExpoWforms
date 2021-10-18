@@ -63,7 +63,7 @@ namespace SistemGestionBuses.Idiomas {
         /// <summary>
         ///   Busca una cadena traducida similar a Guardar y continuar.
         /// </summary>
-        internal static string btnfinalizar {
+        internal static string btnFinalizar {
             get {
                 return ResourceManager.GetString("btnfinalizar", resourceCulture);
             }
