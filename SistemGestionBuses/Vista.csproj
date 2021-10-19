@@ -257,6 +257,7 @@
     <Compile Include="frmViajesActivos.Designer.cs">
       <DependentUpon>frmViajesActivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Idiomas\Idioma.cs" />
     <Compile Include="Idiomas\Res.en-US.Designer.cs">
       <DependentUpon>Res.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>

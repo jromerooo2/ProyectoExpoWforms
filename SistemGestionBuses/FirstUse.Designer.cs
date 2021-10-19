@@ -83,8 +83,8 @@
             this.MainDrag = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.cmbUnidad = new System.Windows.Forms.ComboBox();
-            this.lblseleccionarIdioma = new System.Windows.Forms.Label();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.CardPaso1.SuspendLayout();
             this.CardPaso2.SuspendLayout();
             this.CardPaso3.SuspendLayout();
@@ -763,27 +763,35 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // cmbUnidad
+            // cmbIdioma
             // 
-            this.cmbUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbUnidad.FormattingEnabled = true;
-            this.cmbUnidad.Location = new System.Drawing.Point(936, 86);
-            this.cmbUnidad.Name = "cmbUnidad";
-            this.cmbUnidad.Size = new System.Drawing.Size(183, 26);
-            this.cmbUnidad.TabIndex = 125;
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(921, 86);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(198, 26);
+            this.cmbIdioma.TabIndex = 125;
             // 
-            // lblseleccionarIdioma
+            // BtnCambiarIdioma
             // 
-            this.lblseleccionarIdioma.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblseleccionarIdioma.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblseleccionarIdioma.Location = new System.Drawing.Point(954, 55);
-            this.lblseleccionarIdioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblseleccionarIdioma.Name = "lblseleccionarIdioma";
-            this.lblseleccionarIdioma.Size = new System.Drawing.Size(149, 28);
-            this.lblseleccionarIdioma.TabIndex = 126;
-            this.lblseleccionarIdioma.Text = "Seleccionar Idioma:";
-            this.lblseleccionarIdioma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(943, 53);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 126;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
             // 
             // FirstUse
             // 
@@ -791,8 +799,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(1141, 685);
-            this.Controls.Add(this.lblseleccionarIdioma);
-            this.Controls.Add(this.cmbUnidad);
+            this.Controls.Add(this.BtnCambiarIdioma);
+            this.Controls.Add(this.cmbIdioma);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.CardPaso4);
             this.Controls.Add(this.lblInformacion);
@@ -882,7 +890,7 @@
         private System.Windows.Forms.MaskedTextBox TxtDUI;
         private System.Windows.Forms.MaskedTextBox txtNIT;
         private System.Windows.Forms.PictureBox pbImage;
-        private System.Windows.Forms.Label lblseleccionarIdioma;
-        private System.Windows.Forms.ComboBox cmbUnidad;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

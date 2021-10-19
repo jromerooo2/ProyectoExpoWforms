@@ -11,6 +11,7 @@ using Controlador;
 using System.IO;
 using SistemGestionBuses.Idiomas;
 using System.Threading;
+using SistemGestionBuses.Properties;
 
 namespace SistemGestionBuses
 {
@@ -26,6 +27,7 @@ namespace SistemGestionBuses
             btnFinalizar.Visible = false;
             CargarMunicipio();
             CargarIdioma();
+            llenarIdiomas_Combobox();
         }
 
         void CargarMunicipio()
@@ -344,7 +346,7 @@ namespace SistemGestionBuses
         //Cambio de idioma
         public void CargarIdioma()
         {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
 
                 lblPaso1.Text = Res.lblPaso1;
                 lblPaso2.Text = Res.lblPaso2;
@@ -370,7 +372,20 @@ namespace SistemGestionBuses
                 lblNIT.Text = Res.lblNIT;
                 btnConfirmar.Text = Res.btnConfirmar;
                 btnFinalizar.Text = Res.btnFinalizar;
-                lblseleccionarIdioma.Text = Res.lblSeleccionarIdioma;
+                BtnCambiarIdioma.Text = Res.btnSeleccionarIdioma;
+        }
+
+        public void llenarIdiomas_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

@@ -189,7 +189,7 @@
   <data name="lblTeléfono" xml:space="preserve">
     <value>Teléfono</value>
   </data>
-  <data name="lblSeleccionarIdioma" xml:space="preserve">
+  <data name="btnSeleccionarIdioma" xml:space="preserve">
     <value>Seleccionar Idioma:</value>
   </data>
 </root>

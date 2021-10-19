@@ -88,6 +88,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Seleccionar Idioma:.
+        /// </summary>
+        internal static string btnSeleccionarIdioma {
+            get {
+                return ResourceManager.GetString("btnSeleccionarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Código de confirmación.
         /// </summary>
         internal static string lblCodConfirmacion {
@@ -264,15 +273,6 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblPINseguridad {
             get {
                 return ResourceManager.GetString("lblPINseguridad", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Seleccionar Idioma:.
-        /// </summary>
-        internal static string lblSeleccionarIdioma {
-            get {
-                return ResourceManager.GetString("lblSeleccionarIdioma", resourceCulture);
             }
         }
         

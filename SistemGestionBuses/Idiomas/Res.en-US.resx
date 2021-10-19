@@ -127,7 +127,7 @@
     <value>Resend code</value>
   </data>
   <data name="lblCodConfirmacion" xml:space="preserve">
-    <value>cofirmation code</value>
+    <value>confirmation code</value>
   </data>
   <data name="lblCodigo" xml:space="preserve">
     <value>Enter the confirmation code we sent to your e-mail account, to confirm your identity</value>
