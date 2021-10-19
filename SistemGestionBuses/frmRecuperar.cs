@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
+
 
 namespace SistemGestionBuses
 {
@@ -20,6 +24,8 @@ namespace SistemGestionBuses
             btnConfirmar.Enabled = false;
             txtNueva.ReadOnly = true;
             btnNueva.Enabled = false;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -171,6 +177,40 @@ namespace SistemGestionBuses
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        //Cambio de Idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblRecuperarCuenta.Text = Res.lblRecuperatucuenta;
+            lblPaso1.Text = Res.lblPaso1;
+            lblpaso2.Text = Res.lblPaso2;
+            lblPaso3.Text = Res.lblPaso3;
+            lblMetodorec.Text = Res.lblMetododerec;
+            lblIndicaRec.Text = Res.lblIndicacionesMetodoRec;
+            btnMetodo1.Text = Res.btnRecuperaCorreo;
+            btnMetodo2.Text = Res.btnContactaAdmin;
+            btnRecuPIN.Text = Res.btnPINdeSeguridad;
+            lblIngresoCodigo.Text = Res.lblCodigodeConf;
+            lblCodConIndica.Text = Res.lblIndicacionesCodigoConf;
+            btnConfirmar.Text = Res.btnConfirmar;
+            btnNueva.Text = Res.btnConfirmar;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

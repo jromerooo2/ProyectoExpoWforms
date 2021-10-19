@@ -34,7 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMetodo2 = new System.Windows.Forms.Button();
             this.btnMetodo1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRecuperarCuenta = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblIngresoCodigo = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -47,18 +47,20 @@
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblMetodorec = new System.Windows.Forms.Label();
+            this.lblIndicaRec = new System.Windows.Forms.Label();
+            this.lblPaso1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCodConIndica = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblpaso2 = new System.Windows.Forms.Label();
+            this.lblPaso3 = new System.Windows.Forms.Label();
+            this.lblNuevaContra = new System.Windows.Forms.Label();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblNuevaContraIndica = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBar.SuspendLayout();
@@ -120,17 +122,17 @@
             this.btnMetodo1.UseVisualStyleBackColor = false;
             this.btnMetodo1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // label1
+            // lblRecuperarCuenta
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(485, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 44);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Recupera tu cuenta";
+            this.lblRecuperarCuenta.AutoSize = true;
+            this.lblRecuperarCuenta.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Bold);
+            this.lblRecuperarCuenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblRecuperarCuenta.Location = new System.Drawing.Point(485, 62);
+            this.lblRecuperarCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRecuperarCuenta.Name = "lblRecuperarCuenta";
+            this.lblRecuperarCuenta.Size = new System.Drawing.Size(383, 44);
+            this.lblRecuperarCuenta.TabIndex = 10;
+            this.lblRecuperarCuenta.Text = "Recupera tu cuenta";
             // 
             // txtCode
             // 
@@ -275,42 +277,42 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // label3
+            // lblMetodorec
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(13, 247);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(311, 28);
-            this.label3.TabIndex = 109;
-            this.label3.Text = "Método de recuperación.\r\n";
+            this.lblMetodorec.AutoSize = true;
+            this.lblMetodorec.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMetodorec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblMetodorec.Location = new System.Drawing.Point(13, 247);
+            this.lblMetodorec.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMetodorec.Name = "lblMetodorec";
+            this.lblMetodorec.Size = new System.Drawing.Size(311, 28);
+            this.lblMetodorec.TabIndex = 109;
+            this.lblMetodorec.Text = "Método de recuperación.\r\n";
             // 
-            // label2
+            // lblIndicaRec
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(22, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(356, 58);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Ingresa tu usuario y haz click sobre la opcion que escoges para recuperar tu cont" +
+            this.lblIndicaRec.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIndicaRec.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblIndicaRec.Location = new System.Drawing.Point(22, 9);
+            this.lblIndicaRec.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIndicaRec.Name = "lblIndicaRec";
+            this.lblIndicaRec.Size = new System.Drawing.Size(356, 58);
+            this.lblIndicaRec.TabIndex = 12;
+            this.lblIndicaRec.Text = "Ingresa tu usuario y haz click sobre la opcion que escoges para recuperar tu cont" +
     "raseña ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIndicaRec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblPaso1
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(15, 219);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 28);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Paso 1";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaso1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPaso1.Location = new System.Drawing.Point(15, 219);
+            this.lblPaso1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaso1.Name = "lblPaso1";
+            this.lblPaso1.Size = new System.Drawing.Size(74, 28);
+            this.lblPaso1.TabIndex = 23;
+            this.lblPaso1.Text = "Paso 1";
+            this.lblPaso1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // bunifuCards1
             // 
@@ -318,7 +320,7 @@
             this.bunifuCards1.BorderRadius = 24;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Transparent;
-            this.bunifuCards1.Controls.Add(this.label6);
+            this.bunifuCards1.Controls.Add(this.lblCodConIndica);
             this.bunifuCards1.Controls.Add(this.txtCode);
             this.bunifuCards1.Controls.Add(this.btnConfirmar);
             this.bunifuCards1.LeftSahddow = false;
@@ -330,18 +332,18 @@
             this.bunifuCards1.Size = new System.Drawing.Size(386, 201);
             this.bunifuCards1.TabIndex = 110;
             // 
-            // label6
+            // lblCodConIndica
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(9, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(356, 58);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Ingresa el código de confirmación que se te envió al correo para confirmar tu ide" +
+            this.lblCodConIndica.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodConIndica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCodConIndica.Location = new System.Drawing.Point(9, 9);
+            this.lblCodConIndica.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodConIndica.Name = "lblCodConIndica";
+            this.lblCodConIndica.Size = new System.Drawing.Size(356, 58);
+            this.lblCodConIndica.TabIndex = 23;
+            this.lblCodConIndica.Text = "Ingresa el código de confirmación que se te envió al correo para confirmar tu ide" +
     "ntidad.\r\n";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCodConIndica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCards2
             // 
@@ -353,7 +355,7 @@
             this.bunifuCards2.Controls.Add(this.btnMetodo2);
             this.bunifuCards2.Controls.Add(this.btnMetodo1);
             this.bunifuCards2.Controls.Add(this.txtUser);
-            this.bunifuCards2.Controls.Add(this.label2);
+            this.bunifuCards2.Controls.Add(this.lblIndicaRec);
             this.bunifuCards2.LeftSahddow = false;
             this.bunifuCards2.Location = new System.Drawing.Point(18, 300);
             this.bunifuCards2.Margin = new System.Windows.Forms.Padding(2);
@@ -363,41 +365,41 @@
             this.bunifuCards2.Size = new System.Drawing.Size(400, 201);
             this.bunifuCards2.TabIndex = 111;
             // 
-            // label5
+            // lblpaso2
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(442, 219);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 28);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "Paso 2";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblpaso2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpaso2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblpaso2.Location = new System.Drawing.Point(442, 219);
+            this.lblpaso2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblpaso2.Name = "lblpaso2";
+            this.lblpaso2.Size = new System.Drawing.Size(88, 28);
+            this.lblpaso2.TabIndex = 112;
+            this.lblpaso2.Text = "Paso 2";
+            this.lblpaso2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // lblPaso3
             // 
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(862, 219);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 28);
-            this.label7.TabIndex = 113;
-            this.label7.Text = "Paso 3";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaso3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPaso3.Location = new System.Drawing.Point(862, 219);
+            this.lblPaso3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaso3.Name = "lblPaso3";
+            this.lblPaso3.Size = new System.Drawing.Size(93, 28);
+            this.lblPaso3.TabIndex = 113;
+            this.lblPaso3.Text = "Paso 3";
+            this.lblPaso3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // lblNuevaContra
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(860, 247);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 28);
-            this.label8.TabIndex = 114;
-            this.label8.Text = "Nueva contraseña\r\n";
+            this.lblNuevaContra.AutoSize = true;
+            this.lblNuevaContra.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevaContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNuevaContra.Location = new System.Drawing.Point(860, 247);
+            this.lblNuevaContra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNuevaContra.Name = "lblNuevaContra";
+            this.lblNuevaContra.Size = new System.Drawing.Size(226, 28);
+            this.lblNuevaContra.TabIndex = 114;
+            this.lblNuevaContra.Text = "Nueva contraseña\r\n";
             // 
             // bunifuCards3
             // 
@@ -405,7 +407,7 @@
             this.bunifuCards3.BorderRadius = 24;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.Transparent;
-            this.bunifuCards3.Controls.Add(this.label9);
+            this.bunifuCards3.Controls.Add(this.lblNuevaContraIndica);
             this.bunifuCards3.Controls.Add(this.txtNueva);
             this.bunifuCards3.Controls.Add(this.btnNueva);
             this.bunifuCards3.LeftSahddow = false;
@@ -417,18 +419,18 @@
             this.bunifuCards3.Size = new System.Drawing.Size(386, 201);
             this.bunifuCards3.TabIndex = 111;
             // 
-            // label9
+            // lblNuevaContraIndica
             // 
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(9, 9);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(356, 58);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Ingresa tu nueva contraseña y haz click en confirmar para guardar los cambios.\r\n\r" +
+            this.lblNuevaContraIndica.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevaContraIndica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNuevaContraIndica.Location = new System.Drawing.Point(9, 9);
+            this.lblNuevaContraIndica.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNuevaContraIndica.Name = "lblNuevaContraIndica";
+            this.lblNuevaContraIndica.Size = new System.Drawing.Size(356, 58);
+            this.lblNuevaContraIndica.TabIndex = 23;
+            this.lblNuevaContraIndica.Text = "Ingresa tu nueva contraseña y haz click en confirmar para guardar los cambios.\r\n\r" +
     "\n\r\n";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNuevaContraIndica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuDragControl1
             // 
@@ -437,23 +439,55 @@
             this.bunifuDragControl1.TargetControl = this.panelBar;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(1013, 98);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(208, 26);
+            this.cmbIdioma.TabIndex = 181;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(1049, 62);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 182;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
+            // 
             // frmRecuperar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1275, 572);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.BtnCambiarIdioma);
             this.Controls.Add(this.bunifuCards3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblNuevaContra);
+            this.Controls.Add(this.lblPaso3);
+            this.Controls.Add(this.lblpaso2);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblPaso1);
+            this.Controls.Add(this.lblMetodorec);
             this.Controls.Add(this.lblIngresoCodigo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRecuperarCuenta);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -484,7 +518,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMetodo2;
         private System.Windows.Forms.Button btnMetodo1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRecuperarCuenta;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lblIngresoCodigo;
         private System.Windows.Forms.Button btnConfirmar;
@@ -497,17 +531,19 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblpaso2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblIndicaRec;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCodConIndica;
+        private System.Windows.Forms.Label lblPaso1;
+        private System.Windows.Forms.Label lblMetodorec;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblNuevaContraIndica;
+        private System.Windows.Forms.Label lblNuevaContra;
+        private System.Windows.Forms.Label lblPaso3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

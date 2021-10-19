@@ -378,6 +378,9 @@
   <data name="btnConfirmarIdentidad" xml:space="preserve">
     <value>Confirmar Identidad</value>
   </data>
+  <data name="btnContactaAdmin" xml:space="preserve">
+    <value>Contacta al Administrador</value>
+  </data>
   <data name="btnCrearViaje" xml:space="preserve">
     <value>Crear Viaje</value>
   </data>
@@ -411,6 +414,12 @@
   <data name="btnModificarMan" xml:space="preserve">
     <value>Modificar Mantenimiento</value>
   </data>
+  <data name="btnPINdeSeguridad" xml:space="preserve">
+    <value>Recuperar por PIN de seguridad</value>
+  </data>
+  <data name="btnRecuperaCorreo" xml:space="preserve">
+    <value>Recuperar por Correo</value>
+  </data>
   <data name="btnVerConductores" xml:space="preserve">
     <value>Ver conductores</value>
   </data>
@@ -443,6 +452,9 @@
   </data>
   <data name="lblClienteViajes" xml:space="preserve">
     <value>Cliente:</value>
+  </data>
+  <data name="lblCodigodeConf" xml:space="preserve">
+    <value>Código de confirmación</value>
   </data>
   <data name="lblConductorAsignado" xml:space="preserve">
     <value>Conductor Asignado:</value>
@@ -504,6 +516,15 @@
   <data name="lblIDViaje" xml:space="preserve">
     <value>ID del viaje</value>
   </data>
+  <data name="lblIndicacionesCodigoConf" xml:space="preserve">
+    <value>Ingresa el código de confirmación que se te envió al correo para confirmar tu identidad.</value>
+  </data>
+  <data name="lblIndicacionesMetodoRec" xml:space="preserve">
+    <value>Ingresa tu usuario y haz click sobre la opción que escoges para recuperar tu contraseña</value>
+  </data>
+  <data name="lblIndicacionesNuevaContra" xml:space="preserve">
+    <value>Ingresa tu nueva contraseña y haz click en confirmar para guardar los cambios.</value>
+  </data>
   <data name="lblLicencia" xml:space="preserve">
     <value>Licencia:</value>
   </data>
@@ -512,6 +533,9 @@
   </data>
   <data name="lblMarca" xml:space="preserve">
     <value>Marca de la unidad:</value>
+  </data>
+  <data name="lblMetododerec" xml:space="preserve">
+    <value>Método de recuperación</value>
   </data>
   <data name="lblModelo" xml:space="preserve">
     <value>Modelo de la unidad:</value>
@@ -537,6 +561,9 @@
   <data name="lblNuevaContra" xml:space="preserve">
     <value>Nueva Contraseña:</value>
   </data>
+  <data name="lblNuevaContraseña" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
   <data name="lblNumerocel" xml:space="preserve">
     <value>Numero cel</value>
   </data>
@@ -551,6 +578,9 @@
   </data>
   <data name="lblPlaca" xml:space="preserve">
     <value>Matrícula/ Placa:</value>
+  </data>
+  <data name="lblRecuperatucuenta" xml:space="preserve">
+    <value>Recupera tu cuenta</value>
   </data>
   <data name="lblTelefonoEmpleado" xml:space="preserve">
     <value>Teléfono del empleado</value>

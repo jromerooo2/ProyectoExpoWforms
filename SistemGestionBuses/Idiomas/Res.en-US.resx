@@ -372,6 +372,9 @@
   <data name="btnConfirmarIdentidad" xml:space="preserve">
     <value>Confirm Identity</value>
   </data>
+  <data name="btnContactaAdmin" xml:space="preserve">
+    <value>Contact the manager</value>
+  </data>
   <data name="btnCrearViaje" xml:space="preserve">
     <value>Create Journey</value>
   </data>
@@ -399,6 +402,12 @@
   <data name="btnModificarMan" xml:space="preserve">
     <value>Update Maintenance</value>
   </data>
+  <data name="btnPINdeSeguridad" xml:space="preserve">
+    <value>Recover by security PIN</value>
+  </data>
+  <data name="btnRecuperaCorreo" xml:space="preserve">
+    <value>Retrieve by mail</value>
+  </data>
   <data name="hola" xml:space="preserve">
     <value />
   </data>
@@ -416,6 +425,9 @@
   </data>
   <data name="lblClienteViajes" xml:space="preserve">
     <value>Client:</value>
+  </data>
+  <data name="lblCodigodeConf" xml:space="preserve">
+    <value>Confirmation code</value>
   </data>
   <data name="lblConductorAsignado" xml:space="preserve">
     <value>Driver Assigned:</value>
@@ -471,6 +483,15 @@
   <data name="lblIDViaje" xml:space="preserve">
     <value>Journey ID</value>
   </data>
+  <data name="lblIndicacionesCodigoConf" xml:space="preserve">
+    <value>Enter the confirmation code that was sent to you in the email to confirm your identity.</value>
+  </data>
+  <data name="lblIndicacionesMetodoRec" xml:space="preserve">
+    <value>Enter your username and click on the option you choose to recover your password</value>
+  </data>
+  <data name="lblIndicacionesNuevaContra" xml:space="preserve">
+    <value>Enter your new password and click confirm to save the changes.</value>
+  </data>
   <data name="lblLicencia" xml:space="preserve">
     <value>License:</value>
   </data>
@@ -479,6 +500,9 @@
   </data>
   <data name="lblMarca" xml:space="preserve">
     <value>Unity Brand:</value>
+  </data>
+  <data name="lblMetododerec" xml:space="preserve">
+    <value>Recovery Method</value>
   </data>
   <data name="lblModelo" xml:space="preserve">
     <value>Unity Model:</value>
@@ -501,6 +525,9 @@
   <data name="lblNuevaContra" xml:space="preserve">
     <value>New Password:</value>
   </data>
+  <data name="lblNuevaContraseña" xml:space="preserve">
+    <value>New Password</value>
+  </data>
   <data name="lblNumerocel" xml:space="preserve">
     <value>Phone number</value>
   </data>
@@ -515,6 +542,9 @@
   </data>
   <data name="lblPlaca" xml:space="preserve">
     <value>Plate/ Car registration:</value>
+  </data>
+  <data name="lblRecuperatucuenta" xml:space="preserve">
+    <value>Recover your account</value>
   </data>
   <data name="lblTipoClientes" xml:space="preserve">
     <value>Client type</value>

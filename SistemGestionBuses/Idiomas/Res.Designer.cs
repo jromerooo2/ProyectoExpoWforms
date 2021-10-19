@@ -268,6 +268,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Contacta al Administrador.
+        /// </summary>
+        internal static string btnContactaAdmin {
+            get {
+                return ResourceManager.GetString("btnContactaAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Crear Viaje.
         /// </summary>
         internal static string btnCrearViaje {
@@ -408,6 +417,24 @@ namespace SistemGestionBuses.Idiomas {
         internal static string btnModificarMan {
             get {
                 return ResourceManager.GetString("btnModificarMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recuperar por PIN de seguridad.
+        /// </summary>
+        internal static string btnPINdeSeguridad {
+            get {
+                return ResourceManager.GetString("btnPINdeSeguridad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recuperar por Correo.
+        /// </summary>
+        internal static string btnRecuperaCorreo {
+            get {
+                return ResourceManager.GetString("btnRecuperaCorreo", resourceCulture);
             }
         }
         
@@ -588,6 +615,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblCodigo {
             get {
                 return ResourceManager.GetString("lblCodigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código de confirmación.
+        /// </summary>
+        internal static string lblCodigodeConf {
+            get {
+                return ResourceManager.GetString("lblCodigodeConf", resourceCulture);
             }
         }
         
@@ -925,6 +961,33 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa el código de confirmación que se te envió al correo para confirmar tu identidad..
+        /// </summary>
+        internal static string lblIndicacionesCodigoConf {
+            get {
+                return ResourceManager.GetString("lblIndicacionesCodigoConf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa tu usuario y haz click sobre la opción que escoges para recuperar tu contraseña.
+        /// </summary>
+        internal static string lblIndicacionesMetodoRec {
+            get {
+                return ResourceManager.GetString("lblIndicacionesMetodoRec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa tu nueva contraseña y haz click en confirmar para guardar los cambios..
+        /// </summary>
+        internal static string lblIndicacionesNuevaContra {
+            get {
+                return ResourceManager.GetString("lblIndicacionesNuevaContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Información.
         /// </summary>
         internal static string lblInformacion {
@@ -1020,6 +1083,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblMarca {
             get {
                 return ResourceManager.GetString("lblMarca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Método de recuperación.
+        /// </summary>
+        internal static string lblMetododerec {
+            get {
+                return ResourceManager.GetString("lblMetododerec", resourceCulture);
             }
         }
         
@@ -1128,6 +1200,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblNuevaContra {
             get {
                 return ResourceManager.GetString("lblNuevaContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nueva contraseña.
+        /// </summary>
+        internal static string lblNuevaContraseña {
+            get {
+                return ResourceManager.GetString("lblNuevaContraseña", resourceCulture);
             }
         }
         
@@ -1254,6 +1335,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblRecuperarContra {
             get {
                 return ResourceManager.GetString("lblRecuperarContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recupera tu cuenta.
+        /// </summary>
+        internal static string lblRecuperatucuenta {
+            get {
+                return ResourceManager.GetString("lblRecuperatucuenta", resourceCulture);
             }
         }
         
