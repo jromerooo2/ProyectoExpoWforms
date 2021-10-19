@@ -33,36 +33,38 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnRutas = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
+            this.lblLongitud = new System.Windows.Forms.Label();
+            this.lblLatitud = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtlongitud = new System.Windows.Forms.TextBox();
             this.txtlatitud = new System.Windows.Forms.TextBox();
             this.dgvPuntos = new System.Windows.Forms.DataGridView();
             this.cmbViajes = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblViaje = new System.Windows.Forms.Label();
             this.txtreferenciaAdicional = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblPuntoref1 = new System.Windows.Forms.Label();
             this.txtreferenciaFinal = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPuntoref = new System.Windows.Forms.Label();
             this.txtreferenciaInicio = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblPuntodeReferencia = new System.Windows.Forms.Label();
+            this.lblDestinoAdicional = new System.Windows.Forms.Label();
             this.txtAdicional = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblDestinoFinal = new System.Windows.Forms.Label();
             this.txtDireccion_final = new System.Windows.Forms.TextBox();
             this.txtDireccion_inicio = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblPuntoPartida = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblIngresaDirecciones = new System.Windows.Forms.Label();
             this.panelBar = new System.Windows.Forms.Panel();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregarDireccion = new System.Windows.Forms.Button();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -86,26 +88,26 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel4.Controls.Add(this.btnRutas);
             this.panel4.Controls.Add(this.btnEliminar);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label);
+            this.panel4.Controls.Add(this.lblLongitud);
+            this.panel4.Controls.Add(this.lblLatitud);
             this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Controls.Add(this.txtlongitud);
             this.panel4.Controls.Add(this.txtlatitud);
             this.panel4.Controls.Add(this.dgvPuntos);
             this.panel4.Controls.Add(this.cmbViajes);
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lblViaje);
             this.panel4.Controls.Add(this.txtreferenciaAdicional);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lblPuntoref1);
             this.panel4.Controls.Add(this.txtreferenciaFinal);
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.lblPuntoref);
             this.panel4.Controls.Add(this.txtreferenciaInicio);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.lblPuntodeReferencia);
+            this.panel4.Controls.Add(this.lblDestinoAdicional);
             this.panel4.Controls.Add(this.txtAdicional);
-            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.lblDestinoFinal);
             this.panel4.Controls.Add(this.txtDireccion_final);
             this.panel4.Controls.Add(this.txtDireccion_inicio);
-            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.lblPuntoPartida);
             this.panel4.Location = new System.Drawing.Point(497, 75);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(482, 363);
@@ -148,27 +150,27 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // label1
+            // lblLongitud
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 299);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 117;
-            this.label1.Text = "Longitud:";
+            this.lblLongitud.AutoSize = true;
+            this.lblLongitud.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLongitud.ForeColor = System.Drawing.Color.White;
+            this.lblLongitud.Location = new System.Drawing.Point(16, 299);
+            this.lblLongitud.Name = "lblLongitud";
+            this.lblLongitud.Size = new System.Drawing.Size(69, 17);
+            this.lblLongitud.TabIndex = 117;
+            this.lblLongitud.Text = "Longitud:";
             // 
-            // label
+            // lblLatitud
             // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(16, 250);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(57, 17);
-            this.label.TabIndex = 116;
-            this.label.Text = "Latitud:";
+            this.lblLatitud.AutoSize = true;
+            this.lblLatitud.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLatitud.ForeColor = System.Drawing.Color.White;
+            this.lblLatitud.Location = new System.Drawing.Point(16, 250);
+            this.lblLatitud.Name = "lblLatitud";
+            this.lblLatitud.Size = new System.Drawing.Size(57, 17);
+            this.lblLatitud.TabIndex = 116;
+            this.lblLatitud.Text = "Latitud:";
             // 
             // btnAgregar
             // 
@@ -239,16 +241,16 @@
             this.cmbViajes.Size = new System.Drawing.Size(134, 25);
             this.cmbViajes.TabIndex = 111;
             // 
-            // label7
+            // lblViaje
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 17);
-            this.label7.TabIndex = 110;
-            this.label7.Text = "Viaje:";
+            this.lblViaje.AutoSize = true;
+            this.lblViaje.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViaje.ForeColor = System.Drawing.Color.White;
+            this.lblViaje.Location = new System.Drawing.Point(16, 199);
+            this.lblViaje.Name = "lblViaje";
+            this.lblViaje.Size = new System.Drawing.Size(44, 17);
+            this.lblViaje.TabIndex = 110;
+            this.lblViaje.Text = "Viaje:";
             // 
             // txtreferenciaAdicional
             // 
@@ -260,17 +262,17 @@
             this.txtreferenciaAdicional.Size = new System.Drawing.Size(139, 62);
             this.txtreferenciaAdicional.TabIndex = 109;
             // 
-            // label6
+            // lblPuntoref1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(318, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 17);
-            this.label6.TabIndex = 108;
-            this.label6.Text = "Punto de referencia:";
+            this.lblPuntoref1.AutoSize = true;
+            this.lblPuntoref1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPuntoref1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntoref1.ForeColor = System.Drawing.Color.White;
+            this.lblPuntoref1.Location = new System.Drawing.Point(318, 107);
+            this.lblPuntoref1.Name = "lblPuntoref1";
+            this.lblPuntoref1.Size = new System.Drawing.Size(139, 17);
+            this.lblPuntoref1.TabIndex = 108;
+            this.lblPuntoref1.Text = "Punto de referencia:";
             // 
             // txtreferenciaFinal
             // 
@@ -282,17 +284,17 @@
             this.txtreferenciaFinal.Size = new System.Drawing.Size(139, 62);
             this.txtreferenciaFinal.TabIndex = 107;
             // 
-            // label5
+            // lblPuntoref
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(164, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 17);
-            this.label5.TabIndex = 106;
-            this.label5.Text = "Punto de referencia:";
+            this.lblPuntoref.AutoSize = true;
+            this.lblPuntoref.BackColor = System.Drawing.Color.Transparent;
+            this.lblPuntoref.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntoref.ForeColor = System.Drawing.Color.White;
+            this.lblPuntoref.Location = new System.Drawing.Point(164, 107);
+            this.lblPuntoref.Name = "lblPuntoref";
+            this.lblPuntoref.Size = new System.Drawing.Size(139, 17);
+            this.lblPuntoref.TabIndex = 106;
+            this.lblPuntoref.Text = "Punto de referencia:";
             // 
             // txtreferenciaInicio
             // 
@@ -304,28 +306,28 @@
             this.txtreferenciaInicio.Size = new System.Drawing.Size(139, 62);
             this.txtreferenciaInicio.TabIndex = 105;
             // 
-            // label3
+            // lblPuntodeReferencia
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 17);
-            this.label3.TabIndex = 104;
-            this.label3.Text = "Punto de referencia:";
+            this.lblPuntodeReferencia.AutoSize = true;
+            this.lblPuntodeReferencia.BackColor = System.Drawing.Color.Transparent;
+            this.lblPuntodeReferencia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntodeReferencia.ForeColor = System.Drawing.Color.White;
+            this.lblPuntodeReferencia.Location = new System.Drawing.Point(12, 107);
+            this.lblPuntodeReferencia.Name = "lblPuntodeReferencia";
+            this.lblPuntodeReferencia.Size = new System.Drawing.Size(139, 17);
+            this.lblPuntodeReferencia.TabIndex = 104;
+            this.lblPuntodeReferencia.Text = "Punto de referencia:";
             // 
-            // label18
+            // lblDestinoAdicional
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(317, 14);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(125, 17);
-            this.label18.TabIndex = 99;
-            this.label18.Text = "Destino adicional:";
+            this.lblDestinoAdicional.AutoSize = true;
+            this.lblDestinoAdicional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestinoAdicional.ForeColor = System.Drawing.Color.White;
+            this.lblDestinoAdicional.Location = new System.Drawing.Point(317, 14);
+            this.lblDestinoAdicional.Name = "lblDestinoAdicional";
+            this.lblDestinoAdicional.Size = new System.Drawing.Size(125, 17);
+            this.lblDestinoAdicional.TabIndex = 99;
+            this.lblDestinoAdicional.Text = "Destino adicional:";
             // 
             // txtAdicional
             // 
@@ -337,16 +339,16 @@
             this.txtAdicional.Size = new System.Drawing.Size(141, 71);
             this.txtAdicional.TabIndex = 98;
             // 
-            // label10
+            // lblDestinoFinal
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(163, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 17);
-            this.label10.TabIndex = 95;
-            this.label10.Text = "Destino final del viaje:";
+            this.lblDestinoFinal.AutoSize = true;
+            this.lblDestinoFinal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestinoFinal.ForeColor = System.Drawing.Color.White;
+            this.lblDestinoFinal.Location = new System.Drawing.Point(163, 13);
+            this.lblDestinoFinal.Name = "lblDestinoFinal";
+            this.lblDestinoFinal.Size = new System.Drawing.Size(150, 17);
+            this.lblDestinoFinal.TabIndex = 95;
+            this.lblDestinoFinal.Text = "Destino final del viaje:";
             // 
             // txtDireccion_final
             // 
@@ -368,17 +370,17 @@
             this.txtDireccion_inicio.Size = new System.Drawing.Size(139, 69);
             this.txtDireccion_inicio.TabIndex = 88;
             // 
-            // label13
+            // lblPuntoPartida
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(10, 14);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 17);
-            this.label13.TabIndex = 89;
-            this.label13.Text = "Punto de partida:";
+            this.lblPuntoPartida.AutoSize = true;
+            this.lblPuntoPartida.BackColor = System.Drawing.Color.Transparent;
+            this.lblPuntoPartida.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntoPartida.ForeColor = System.Drawing.Color.White;
+            this.lblPuntoPartida.Location = new System.Drawing.Point(10, 14);
+            this.lblPuntoPartida.Name = "lblPuntoPartida";
+            this.lblPuntoPartida.Size = new System.Drawing.Size(123, 17);
+            this.lblPuntoPartida.TabIndex = 89;
+            this.lblPuntoPartida.Text = "Punto de partida:";
             // 
             // pictureBox2
             // 
@@ -423,20 +425,22 @@
             this.gMapControl1.Load += new System.EventHandler(this.gMapDirections_Load);
             this.gMapControl1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gMapControl1_MouseDoubleClick);
             // 
-            // label4
+            // lblIngresaDirecciones
             // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(474, 55);
-            this.label4.TabIndex = 103;
-            this.label4.Text = "Ingresa las direcciones:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblIngresaDirecciones.BackColor = System.Drawing.Color.White;
+            this.lblIngresaDirecciones.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresaDirecciones.Location = new System.Drawing.Point(17, 58);
+            this.lblIngresaDirecciones.Name = "lblIngresaDirecciones";
+            this.lblIngresaDirecciones.Size = new System.Drawing.Size(474, 55);
+            this.lblIngresaDirecciones.TabIndex = 103;
+            this.lblIngresaDirecciones.Text = "Ingresa las direcciones:";
+            this.lblIngresaDirecciones.Click += new System.EventHandler(this.label4_Click);
             // 
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.BtnCambiarIdioma);
+            this.panelBar.Controls.Add(this.cmbIdioma);
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
@@ -444,6 +448,36 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(992, 50);
             this.panelBar.TabIndex = 104;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(103, 9);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 166;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(281, 12);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(194, 26);
+            this.cmbIdioma.TabIndex = 165;
             // 
             // bunifuImageButton5
             // 
@@ -498,32 +532,32 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // button2
+            // btnAgregarDireccion
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(588, 444);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Agregar Direccion";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAgregarDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnAgregarDireccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDireccion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDireccion.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarDireccion.Location = new System.Drawing.Point(588, 444);
+            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
+            this.btnAgregarDireccion.Size = new System.Drawing.Size(141, 58);
+            this.btnAgregarDireccion.TabIndex = 1;
+            this.btnAgregarDireccion.Text = "Agregar Direccion";
+            this.btnAgregarDireccion.UseVisualStyleBackColor = false;
+            this.btnAgregarDireccion.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnLimpiarCampos
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(752, 444);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 58);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Limpiar Campos";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnLimpiarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(752, 444);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(140, 58);
+            this.btnLimpiarCampos.TabIndex = 2;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             // 
             // toolStrip1
             // 
@@ -600,10 +634,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(991, 541);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.panelBar);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnAgregarDireccion);
+            this.Controls.Add(this.lblIngresaDirecciones);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
@@ -628,38 +662,38 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblDestinoAdicional;
         private System.Windows.Forms.TextBox txtAdicional;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblDestinoFinal;
         private System.Windows.Forms.TextBox txtDireccion_final;
         private System.Windows.Forms.TextBox txtDireccion_inicio;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblPuntoPartida;
         private System.Windows.Forms.PictureBox pictureBox2;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblIngresaDirecciones;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.TextBox txtreferenciaAdicional;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblPuntoref1;
         private System.Windows.Forms.TextBox txtreferenciaFinal;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPuntoref;
         private System.Windows.Forms.TextBox txtreferenciaInicio;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPuntodeReferencia;
         private System.Windows.Forms.ComboBox cmbViajes;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblViaje;
         private System.Windows.Forms.DataGridView dgvPuntos;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label lblLatitud;
         private System.Windows.Forms.TextBox txtlongitud;
         private System.Windows.Forms.TextBox txtlatitud;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLongitud;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnRutas;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLimpiarCampos;
+        private System.Windows.Forms.Button btnAgregarDireccion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel txtActiveUser;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -667,5 +701,7 @@
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
+        private System.Windows.Forms.ComboBox cmbIdioma;
     }
 }

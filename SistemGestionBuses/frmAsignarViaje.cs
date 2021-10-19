@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -43,6 +46,8 @@ namespace SistemGestionBuses
             CargarGrid();
             //Enabled
             btnAsignar.Enabled = false;
+            CargarIdioma();
+            llenarIdiomas_Combobox();
         }
 
         //Metodo para cargar el grid de datos
@@ -141,6 +146,36 @@ namespace SistemGestionBuses
             DataView dv = vistaviajes.DefaultView;
             dv.RowFilter = "nombre_viaje LIKE '" + txtBuscar.Text + "%'";
             dgvViajes.DataSource = dv;
+        }
+
+        //Cambiar Idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+                lblAsignarViaje.Text = Res.lblAsignaciondeViaje;
+                lblSelecciondeviaje.Text = Res.lblSeleccionViaje;
+                lblCliente.Text = Res.lblCliente;
+                lblNombreViaje.Text = Res.lblNombreViaje;
+                lblTarifa.Text = Res.lblTarifa;
+                lblTipoViaje.Text = Res.lblTipoViaje;
+                lblDireccionFinal.Text = Res.lblDireccionFinal;
+                lblDireccionadicional.Text = Res.lblDireccionAdicional;
+                btnAsignar.Text = Res.BtnAsignarViaje;
+                BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdiomas_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

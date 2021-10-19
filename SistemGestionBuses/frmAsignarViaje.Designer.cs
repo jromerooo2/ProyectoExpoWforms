@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarViaje));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -47,26 +47,28 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btnAsignar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCliente = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.txtNombreViaje = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombreViaje = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDireccionFinal = new System.Windows.Forms.Label();
             this.txtDirecFinal = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtBuscar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblDireccionadicional = new System.Windows.Forms.Label();
             this.txtDirecAdicional = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtTarifa = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTarifa = new System.Windows.Forms.Label();
+            this.lblTipoViaje = new System.Windows.Forms.Label();
+            this.lblAsignarViaje = new System.Windows.Forms.Label();
             this.txtTipoViaje = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblSelecciondeviaje = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dgvViajes = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txtID = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblIDAV = new System.Windows.Forms.Label();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -83,7 +85,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(789, 582);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -239,7 +241,7 @@
             this.btnAsignar.IconZoom = 80D;
             this.btnAsignar.IsTab = false;
             this.btnAsignar.Location = new System.Drawing.Point(517, 478);
-            this.btnAsignar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAsignar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.btnAsignar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
@@ -266,16 +268,16 @@
             this.txtCliente.TabIndex = 140;
             this.txtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // lblCliente
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(508, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
-            this.label1.TabIndex = 141;
-            this.label1.Text = "Cliente:";
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.BackColor = System.Drawing.Color.White;
+            this.lblCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(508, 130);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(54, 17);
+            this.lblCliente.TabIndex = 141;
+            this.lblCliente.Text = "Cliente:";
             // 
             // txtNombreViaje
             // 
@@ -289,16 +291,16 @@
             this.txtNombreViaje.TabIndex = 142;
             this.txtNombreViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // lblNombreViaje
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(510, 189);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
-            this.label2.TabIndex = 143;
-            this.label2.Text = "Nombre del viaje:";
+            this.lblNombreViaje.AutoSize = true;
+            this.lblNombreViaje.BackColor = System.Drawing.Color.White;
+            this.lblNombreViaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreViaje.Location = new System.Drawing.Point(510, 189);
+            this.lblNombreViaje.Name = "lblNombreViaje";
+            this.lblNombreViaje.Size = new System.Drawing.Size(114, 17);
+            this.lblNombreViaje.TabIndex = 143;
+            this.lblNombreViaje.Text = "Nombre del viaje:";
             // 
             // label3
             // 
@@ -308,17 +310,17 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 145;
             // 
-            // label5
+            // lblDireccionFinal
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(514, 305);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 17);
-            this.label5.TabIndex = 148;
-            this.label5.Text = "Dirección final:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblDireccionFinal.AutoSize = true;
+            this.lblDireccionFinal.BackColor = System.Drawing.Color.White;
+            this.lblDireccionFinal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionFinal.Location = new System.Drawing.Point(514, 305);
+            this.lblDireccionFinal.Name = "lblDireccionFinal";
+            this.lblDireccionFinal.Size = new System.Drawing.Size(97, 17);
+            this.lblDireccionFinal.TabIndex = 148;
+            this.lblDireccionFinal.Text = "Dirección final:";
+            this.lblDireccionFinal.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtDirecFinal
             // 
@@ -351,23 +353,23 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(281, 162);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 150;
             this.pictureBox3.TabStop = false;
             // 
-            // label6
+            // lblDireccionadicional
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(510, 385);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 17);
-            this.label6.TabIndex = 152;
-            this.label6.Text = "Dirección adicional:";
+            this.lblDireccionadicional.AutoSize = true;
+            this.lblDireccionadicional.BackColor = System.Drawing.Color.White;
+            this.lblDireccionadicional.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionadicional.Location = new System.Drawing.Point(510, 385);
+            this.lblDireccionadicional.Name = "lblDireccionadicional";
+            this.lblDireccionadicional.Size = new System.Drawing.Size(128, 17);
+            this.lblDireccionadicional.TabIndex = 152;
+            this.lblDireccionadicional.Text = "Dirección adicional:";
             // 
             // txtDirecAdicional
             // 
@@ -394,38 +396,38 @@
             this.txtTarifa.TabIndex = 144;
             this.txtTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label7
+            // lblTarifa
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(512, 247);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 17);
-            this.label7.TabIndex = 146;
-            this.label7.Text = "Tarifa:";
+            this.lblTarifa.AutoSize = true;
+            this.lblTarifa.BackColor = System.Drawing.Color.White;
+            this.lblTarifa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTarifa.Location = new System.Drawing.Point(512, 247);
+            this.lblTarifa.Name = "lblTarifa";
+            this.lblTarifa.Size = new System.Drawing.Size(43, 17);
+            this.lblTarifa.TabIndex = 146;
+            this.lblTarifa.Text = "Tarifa:";
             // 
-            // label4
+            // lblTipoViaje
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(638, 247);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
-            this.label4.TabIndex = 154;
-            this.label4.Text = "Tipo viaje:";
+            this.lblTipoViaje.AutoSize = true;
+            this.lblTipoViaje.BackColor = System.Drawing.Color.White;
+            this.lblTipoViaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoViaje.Location = new System.Drawing.Point(638, 247);
+            this.lblTipoViaje.Name = "lblTipoViaje";
+            this.lblTipoViaje.Size = new System.Drawing.Size(68, 17);
+            this.lblTipoViaje.TabIndex = 154;
+            this.lblTipoViaje.Text = "Tipo viaje:";
             // 
-            // label8
+            // lblAsignarViaje
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(283, 35);
-            this.label8.TabIndex = 155;
-            this.label8.Text = "Asignación de viajes.";
+            this.lblAsignarViaje.AutoSize = true;
+            this.lblAsignarViaje.BackColor = System.Drawing.Color.White;
+            this.lblAsignarViaje.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsignarViaje.Location = new System.Drawing.Point(27, 80);
+            this.lblAsignarViaje.Name = "lblAsignarViaje";
+            this.lblAsignarViaje.Size = new System.Drawing.Size(283, 35);
+            this.lblAsignarViaje.TabIndex = 155;
+            this.lblAsignarViaje.Text = "Asignación de viajes.";
             // 
             // txtTipoViaje
             // 
@@ -439,16 +441,16 @@
             this.txtTipoViaje.TabIndex = 156;
             this.txtTipoViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label9
+            // lblSelecciondeviaje
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(313, 17);
-            this.label9.TabIndex = 157;
-            this.label9.Text = "Selecciona el viaje que deseas asignarle al cliente.";
+            this.lblSelecciondeviaje.AutoSize = true;
+            this.lblSelecciondeviaje.BackColor = System.Drawing.Color.White;
+            this.lblSelecciondeviaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelecciondeviaje.Location = new System.Drawing.Point(30, 130);
+            this.lblSelecciondeviaje.Name = "lblSelecciondeviaje";
+            this.lblSelecciondeviaje.Size = new System.Drawing.Size(313, 17);
+            this.lblSelecciondeviaje.TabIndex = 157;
+            this.lblSelecciondeviaje.Text = "Selecciona el viaje que deseas asignarle al cliente.";
             // 
             // bunifuDragControl1
             // 
@@ -463,23 +465,23 @@
             this.dgvViajes.AllowUserToDeleteRows = false;
             this.dgvViajes.AllowUserToResizeColumns = false;
             this.dgvViajes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvViajes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.dgvViajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvViajes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dgvViajes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvViajes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvViajes.ColumnHeadersHeight = 40;
             this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvViajes.DoubleBuffered = true;
@@ -491,15 +493,15 @@
             this.dgvViajes.Name = "dgvViajes";
             this.dgvViajes.ReadOnly = true;
             this.dgvViajes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvViajes.RowHeadersWidth = 30;
             this.dgvViajes.Size = new System.Drawing.Size(452, 328);
             this.dgvViajes.TabIndex = 158;
@@ -516,41 +518,73 @@
             this.txtID.TabIndex = 159;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label10
+            // lblIDAV
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(727, 478);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 17);
-            this.label10.TabIndex = 160;
-            this.label10.Text = "ID:";
+            this.lblIDAV.AutoSize = true;
+            this.lblIDAV.BackColor = System.Drawing.Color.White;
+            this.lblIDAV.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDAV.Location = new System.Drawing.Point(727, 478);
+            this.lblIDAV.Name = "lblIDAV";
+            this.lblIDAV.Size = new System.Drawing.Size(23, 17);
+            this.lblIDAV.TabIndex = 160;
+            this.lblIDAV.Text = "ID:";
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(383, 80);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 162;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(561, 83);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(198, 26);
+            this.cmbIdioma.TabIndex = 161;
             // 
             // frmAsignarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 582);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.BtnCambiarIdioma);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.lblIDAV);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.dgvViajes);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblSelecciondeviaje);
             this.Controls.Add(this.txtTipoViaje);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblAsignarViaje);
+            this.Controls.Add(this.lblTipoViaje);
+            this.Controls.Add(this.lblDireccionadicional);
             this.Controls.Add(this.txtDirecAdicional);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblDireccionFinal);
+            this.Controls.Add(this.lblTarifa);
             this.Controls.Add(this.txtDirecFinal);
             this.Controls.Add(this.txtTarifa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblNombreViaje);
             this.Controls.Add(this.txtNombreViaje);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.toolStrip1);
@@ -588,25 +622,27 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtCliente;
         private Bunifu.Framework.UI.BunifuFlatButton btnAsignar;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDireccionFinal;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtDirecFinal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombreViaje;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtNombreViaje;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCliente;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDireccionadicional;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtDirecAdicional;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTipoViaje;
+        private System.Windows.Forms.Label lblTarifa;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtTarifa;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblAsignarViaje;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtTipoViaje;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblSelecciondeviaje;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvViajes;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblIDAV;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtID;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
+        private System.Windows.Forms.ComboBox cmbIdioma;
     }
 }

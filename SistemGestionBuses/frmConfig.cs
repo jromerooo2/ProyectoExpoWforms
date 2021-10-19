@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 
 namespace SistemGestionBuses
@@ -25,6 +28,8 @@ namespace SistemGestionBuses
 
             txtPin.Enabled = false;
             btnConfirmarPin.Enabled = false;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -103,7 +108,36 @@ namespace SistemGestionBuses
 
         }
 
+        //Cambiar Idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
 
+                lblBienvenidoLS.Text = Res.lblBienvenidoLocus;
+                lblconfigurarperfil.Text = Res.lblconfigurarPerfil;
+                lblCambiaContra.Text = Res.lblConfigurarContraseña;
+                lblConfiguraPIN.Text = Res.lblConfigurarPIN;
+                btnConfirmarContra.Text = Res.btnconfirmarcontraseñaLocus;
+                btnConfirmarPin.Text = Res.btnConfirmarPINLocus;
+        }
+
+        private void cmbIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
 
 
     }

@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 
 namespace SistemGestionBuses
@@ -35,6 +38,8 @@ namespace SistemGestionBuses
             cargostring = cargo_string;
             txtActiveUser.Text = username;
             txtCargoStrip.Text = cargostring;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
 
         void ColocarDirecciones()
@@ -249,6 +254,41 @@ namespace SistemGestionBuses
             gMapControl1.Overlays.Add(ruta);
             gMapControl1.Zoom = gMapControl1.Zoom + 1;
             gMapControl1.Zoom = gMapControl1.Zoom - 1;
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+                lblIngresaDirecciones.Text = Res.lblIngresaDirecciones;
+                lblPuntoPartida.Text = Res.lblPuntodePartida;
+                lblDestinoFinal.Text = Res.lblDestinoFinalViaje;
+                lblDestinoAdicional.Text = Res.lblDestinoAdicional;
+                lblPuntodeReferencia.Text = Res.lblPuntoReferencia;
+                lblPuntoref.Text = Res.lblPuntoReferencia;
+                lblPuntoref1.Text = Res.lblPuntoReferencia;
+                lblViaje.Text = Res.lblViajeDirecciones;
+                lblLatitud.Text = Res.lblLatitud;
+                lblLongitud.Text = Res.lblLongitud;
+                btnRutas.Text = Res.btnGenerarRutas;
+                btnAgregar.Text = Res.btnAgregarPunto;
+                btnEliminar.Text = Res.btnEliminarPunto;
+                btnAgregarDireccion.Text = Res.btnAgregarDireccion;
+                btnLimpiarCampos.Text = Res.btnLimpiarCampos;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

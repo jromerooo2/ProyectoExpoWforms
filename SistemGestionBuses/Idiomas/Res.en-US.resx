@@ -192,41 +192,122 @@
   <data name="lblSeleccionarIdioma" xml:space="preserve">
     <value>Select Idiom:</value>
   </data>
+  <data name="btnAgregarDireccion" xml:space="preserve">
+    <value>Add address</value>
+  </data>
+  <data name="btnAgregarPunto" xml:space="preserve">
+    <value>Add Point</value>
+  </data>
+  <data name="BtnAsignarViaje" xml:space="preserve">
+    <value>Assign jouney</value>
+  </data>
   <data name="btnCambiarIdioma" xml:space="preserve">
     <value>Select Idiom:</value>
+  </data>
+  <data name="btnconfirmarcontraseñaLocus" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="btnConfirmarPINLocus" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="btnEliminarPunto" xml:space="preserve">
+    <value>Delete Point</value>
+  </data>
+  <data name="btnGenerarRutas" xml:space="preserve">
+    <value>Generate routes</value>
   </data>
   <data name="btnIniciarSesion" xml:space="preserve">
     <value>Log in</value>
   </data>
+  <data name="btnLimpiarCampos" xml:space="preserve">
+    <value>Clean fields</value>
+  </data>
+  <data name="lblAsignaciondeViaje" xml:space="preserve">
+    <value>Journeys assignments</value>
+  </data>
   <data name="lblBienvenido" xml:space="preserve">
     <value>Control the actions that have been assigned to you through this control panel.</value>
+  </data>
+  <data name="lblBienvenidoLocus" xml:space="preserve">
+    <value>Welcome to Locus System</value>
+  </data>
+  <data name="lblCliente" xml:space="preserve">
+    <value>Client:</value>
   </data>
   <data name="lblClientes" xml:space="preserve">
     <value>Customers</value>
   </data>
+  <data name="lblconfigurarPerfil" xml:space="preserve">
+    <value>Please, configure your profile before logging in</value>
+  </data>
+  <data name="lblConfigurarPIN" xml:space="preserve">
+    <value>2- Configure you security PIN</value>
+  </data>
+  <data name="lblConfirmarContraseña" xml:space="preserve">
+    <value>1- Change your Password</value>
+  </data>
   <data name="lblContraseñaUsuario" xml:space="preserve">
     <value>Password:</value>
+  </data>
+  <data name="lblDestinoAdicional" xml:space="preserve">
+    <value>Additional destination:</value>
+  </data>
+  <data name="lblDestinoFinalViaje" xml:space="preserve">
+    <value>Final destination of the trip:</value>
+  </data>
+  <data name="lblDireccionAdicional" xml:space="preserve">
+    <value>Additional address:</value>
+  </data>
+  <data name="lblDireccionFinal" xml:space="preserve">
+    <value>final address:</value>
   </data>
   <data name="lblEmpleados" xml:space="preserve">
     <value>Employees</value>
   </data>
+  <data name="lblIngresaDirecciones" xml:space="preserve">
+    <value>Enter the addresses:</value>
+  </data>
   <data name="lblIniciarSesion" xml:space="preserve">
     <value>Log In</value>
+  </data>
+  <data name="lblLatitud" xml:space="preserve">
+    <value>Latitude:</value>
   </data>
   <data name="lblLogout" xml:space="preserve">
     <value>Log out</value>
   </data>
+  <data name="lblLongitud" xml:space="preserve">
+    <value>Lenght:</value>
+  </data>
   <data name="lblMantenimientos" xml:space="preserve">
     <value>Maintenances</value>
   </data>
+  <data name="lblNombreViaje" xml:space="preserve">
+    <value>Journey's name:</value>
+  </data>
   <data name="lblO" xml:space="preserve">
     <value>OR</value>
+  </data>
+  <data name="lblPuntodePartida" xml:space="preserve">
+    <value>Starting Point:</value>
+  </data>
+  <data name="lblPuntoReferencia" xml:space="preserve">
+    <value>Reference Point:</value>
   </data>
   <data name="lblRecuperarContra" xml:space="preserve">
     <value>recover your password</value>
   </data>
   <data name="lblReportes" xml:space="preserve">
     <value>Reports</value>
+  </data>
+  <data name="lblSeleccionViaje" xml:space="preserve">
+    <value>Select the trip you want to assign to the client.</value>
+  </data>
+  <data name="lblTarifa" xml:space="preserve">
+    <value>Rate:</value>
+  </data>
+  <data name="lblTipoViaje" xml:space="preserve">
+    <value>Journey type:</value>
   </data>
   <data name="lblUnidades" xml:space="preserve">
     <value>Unities</value>
@@ -239,6 +320,9 @@
   </data>
   <data name="lblUsuariosmenu" xml:space="preserve">
     <value>Users</value>
+  </data>
+  <data name="lblViajeDirecciones" xml:space="preserve">
+    <value>Journey:</value>
   </data>
   <data name="lblViajes" xml:space="preserve">
     <value>Journeys</value>
