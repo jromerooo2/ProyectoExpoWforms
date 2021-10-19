@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Controlador;
 using System.Windows.Forms;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -29,6 +32,8 @@ namespace SistemGestionBuses
             txtActiveUser.Text = usuario;
             cargostring = ControladorLogin.getCargostring(cargouser);
             txtCargoStrip.Text = cargostring;
+            CambiarIdioma();
+            llenarIdioma_Combobox();
         }
 
 
@@ -320,5 +325,35 @@ namespace SistemGestionBuses
                     return false;
         }
 
+        //CambiarIdioma
+        public void CambiarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+                lblUsuario.Text = Res.lblUsuarioprincipal;
+                lblBienvenido.Text = Res.lblBienvenido;
+                lblUsuariosPrincipal.Text = Res.lblUsuariosmenu;
+                lblUnidades.Text = Res.lblUnidades;
+                lblViajes.Text = Res.lblViajes;
+                lblClientes.Text = Res.lblClientes;
+                lblEmpleados.Text = Res.lblEmpleados;
+                lblMantenimientos.Text = Res.lblMantenimientos;
+                lblReportes.Text = Res.lblReportes;
+                lblViajesActivos.Text = Res.lblViajesActivos;
+                BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CambiarIdioma();
+        }
     }
 }

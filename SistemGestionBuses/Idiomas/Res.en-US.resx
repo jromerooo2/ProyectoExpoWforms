@@ -198,11 +198,26 @@
   <data name="btnIniciarSesion" xml:space="preserve">
     <value>Log in</value>
   </data>
+  <data name="lblBienvenido" xml:space="preserve">
+    <value>Control the actions that have been assigned to you through this control panel.</value>
+  </data>
+  <data name="lblClientes" xml:space="preserve">
+    <value>Customers</value>
+  </data>
   <data name="lblContraseñaUsuario" xml:space="preserve">
     <value>Password:</value>
   </data>
+  <data name="lblEmpleados" xml:space="preserve">
+    <value>Employees</value>
+  </data>
   <data name="lblIniciarSesion" xml:space="preserve">
     <value>Log In</value>
+  </data>
+  <data name="lblLogout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="lblMantenimientos" xml:space="preserve">
+    <value>Maintenances</value>
   </data>
   <data name="lblO" xml:space="preserve">
     <value>OR</value>
@@ -210,7 +225,25 @@
   <data name="lblRecuperarContra" xml:space="preserve">
     <value>recover your password</value>
   </data>
+  <data name="lblReportes" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="lblUnidades" xml:space="preserve">
+    <value>Unities</value>
+  </data>
   <data name="lblUsuario" xml:space="preserve">
     <value>Username:</value>
+  </data>
+  <data name="lblUsuarioprincipal" xml:space="preserve">
+    <value>¡Welcome!</value>
+  </data>
+  <data name="lblUsuariosmenu" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="lblViajes" xml:space="preserve">
+    <value>Journeys</value>
+  </data>
+  <data name="lblViajesActivos" xml:space="preserve">
+    <value>Active Journeys</value>
   </data>
 </root>
