@@ -117,88 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnfinalizar" xml:space="preserve">
-    <value>Guardar y continuar</value>
+  <data name="btnConfirmar" xml:space="preserve">
+    <value>Confirmar</value>
   </data>
-  <data name="codigoconfir" xml:space="preserve">
-    <value>Código de confirmación</value>
+  <data name="btnFinalizar" xml:space="preserve">
+    <value>Finalizar</value>
   </data>
-  <data name="confirmacion_contra" xml:space="preserve">
-    <value>Confirmar contraseña</value>
-  </data>
-  <data name="contrasena" xml:space="preserve">
-    <value>Contraseña</value>
-  </data>
-  <data name="contra_pin" xml:space="preserve">
-    <value>Contraseña y PIN</value>
-  </data>
-  <data name="informacion" xml:space="preserve">
-    <value>Información</value>
-  </data>
-  <data name="ingresadatos" xml:space="preserve">
-    <value>Ingresar datos</value>
-  </data>
-  <data name="municipiolbl" xml:space="preserve">
-    <value>Municipio</value>
-  </data>
-  <data name="olvido_contrasena" xml:space="preserve">
-    <value>¿Olvidó  su contraseña?</value>
-  </data>
-  <data name="paso1" xml:space="preserve">
-    <value>Paso 1</value>
-  </data>
-  <data name="paso1btn" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="paso1lbl1" xml:space="preserve">
-    <value>Ingrese el correo principal para gestionar el sistema</value>
-  </data>
-  <data name="paso1lbl2" xml:space="preserve">
-    <value>Ingrese un nombre de usuario</value>
-  </data>
-  <data name="paso2" xml:space="preserve">
-    <value>Paso 2</value>
-  </data>
-  <data name="paso2btn1" xml:space="preserve">
+  <data name="btnReenviar" xml:space="preserve">
     <value>Reenviar código</value>
   </data>
-  <data name="paso2btn2" xml:space="preserve">
-    <value>Confirmar código</value>
+  <data name="lblCodConfirmacion" xml:space="preserve">
+    <value>Código de confirmación</value>
   </data>
-  <data name="paso2lbl1" xml:space="preserve">
-    <value>Ingrese el código de confirmación que se te envió al correo para confirmar la identidad</value>
+  <data name="lblCodigo" xml:space="preserve">
+    <value>Ingresa el código de confirmación que se te enció al correo para confirmar la identidad.</value>
   </data>
-  <data name="paso3" xml:space="preserve">
-    <value>Paso 3</value>
+  <data name="lblConfirmacionContra" xml:space="preserve">
+    <value>Confirmación de contraseña:</value>
   </data>
-  <data name="paso3btn" xml:space="preserve">
-    <value>Guardar</value>
+  <data name="lblContraseña" xml:space="preserve">
+    <value>Contraseña:</value>
   </data>
-  <data name="paso3lbl1" xml:space="preserve">
-    <value>La contraseña debe contener como mínimo 10 caracteres, con una combinación de letras y números. (Solo algunos simbolos son perimitidos )</value>
+  <data name="lblContraseñaCondiciones" xml:space="preserve">
+    <value>La contraseña debe contenercomo mínimo 10 caracteres, con una combinación de letras y números. (Solo algunos símbolos son permitidos)</value>
   </data>
-  <data name="paso4" xml:space="preserve">
-    <value>Paso 4</value>
+  <data name="lblContraseñayPin" xml:space="preserve">
+    <value>Contraseña y PIN</value>
   </data>
-  <data name="paso4btn" xml:space="preserve">
-    <value>Guardar</value>
+  <data name="lblcorreo" xml:space="preserve">
+    <value>Ingresa el correo principal para gestionar el sistema</value>
   </data>
-  <data name="paso4lbl1" xml:space="preserve">
-    <value>Ingresa el nombre de tu empresa, institución, emprendimiento o negocio.</value>
-  </data>
-  <data name="paso4lbl2" xml:space="preserve">
+  <data name="lblDireccion" xml:space="preserve">
     <value>Ingresa la dirección donde se encuentra:</value>
   </data>
-  <data name="phonelbl" xml:space="preserve">
+  <data name="lblDUI" xml:space="preserve">
+    <value>DUI:</value>
+  </data>
+  <data name="lblEmpresa" xml:space="preserve">
+    <value>Ingrese el nombre de tu empresa, institución, emprendimiento o negocio.</value>
+  </data>
+  <data name="lblInformacion" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="lblIngresaDatos" xml:space="preserve">
+    <value>Ingresa los datos</value>
+  </data>
+  <data name="lblMunicipio" xml:space="preserve">
+    <value>Municipio</value>
+  </data>
+  <data name="lblNIT" xml:space="preserve">
+    <value>NIT:</value>
+  </data>
+  <data name="lblNombreUsuario" xml:space="preserve">
+    <value>Ingresa un nombre de usuario</value>
+  </data>
+  <data name="lblPaso1" xml:space="preserve">
+    <value>Paso 1</value>
+  </data>
+  <data name="lblPaso2" xml:space="preserve">
+    <value>Paso 2</value>
+  </data>
+  <data name="lblPaso3" xml:space="preserve">
+    <value>Paso 3</value>
+  </data>
+  <data name="lblPaso4" xml:space="preserve">
+    <value>Paso 4</value>
+  </data>
+  <data name="lblPINseguridad" xml:space="preserve">
+    <value>Ingresa un PIN de seguridad. (Mínimo de 10 caracteres).</value>
+  </data>
+  <data name="lblTeléfono" xml:space="preserve">
     <value>Teléfono</value>
   </data>
-  <data name="pinlabel" xml:space="preserve">
-    <value>Ingrese un PIN de seguridad. (Mínimo de 10 caracteres).</value>
-  </data>
-  <data name="sesion" xml:space="preserve">
-    <value>Inicar sesión</value>
-  </data>
-  <data name="usuario" xml:space="preserve">
-    <value>usuario</value>
+  <data name="lblSeleccionarIdioma" xml:space="preserve">
+    <value>Seleccionar Idioma:</value>
   </data>
 </root>

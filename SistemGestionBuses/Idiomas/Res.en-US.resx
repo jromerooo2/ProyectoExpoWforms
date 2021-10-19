@@ -117,88 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnfinalizar" xml:space="preserve">
-    <value>Save and continue</value>
-  </data>
-  <data name="codigoconfir" xml:space="preserve">
-    <value>Confirmation Code</value>
-  </data>
-  <data name="confirmacion_contra" xml:space="preserve">
-    <value>Confirm the password</value>
-  </data>
-  <data name="contrasena" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="contra_pin" xml:space="preserve">
-    <value>Password and PIN</value>
-  </data>
-  <data name="informacion" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="ingresadatos" xml:space="preserve">
-    <value>Enter the data</value>
-  </data>
-  <data name="municipiolbl" xml:space="preserve">
-    <value>Municipality</value>
-  </data>
-  <data name="olvido_contrasena" xml:space="preserve">
-    <value>Forgot Password?</value>
-  </data>
-  <data name="paso1" xml:space="preserve">
-    <value>Step 1</value>
-  </data>
-  <data name="paso1btn" xml:space="preserve">
+  <data name="btnConfirmar" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="paso1lbl1" xml:space="preserve">
-    <value>Enter the main e-mail to manage the system.</value>
+  <data name="btnFinalizar" xml:space="preserve">
+    <value>Finalize</value>
   </data>
-  <data name="paso1lbl2" xml:space="preserve">
-    <value>Enter your username.</value>
+  <data name="btnReenviar" xml:space="preserve">
+    <value>Resend code</value>
   </data>
-  <data name="paso2" xml:space="preserve">
-    <value>Step 2</value>
+  <data name="lblCodConfirmacion" xml:space="preserve">
+    <value>cofirmation code</value>
   </data>
-  <data name="paso2btn1" xml:space="preserve">
-    <value>Resend the code.</value>
-  </data>
-  <data name="paso2btn2" xml:space="preserve">
-    <value>Confirm Code</value>
-  </data>
-  <data name="paso2lbl1" xml:space="preserve">
+  <data name="lblCodigo" xml:space="preserve">
     <value>Enter the confirmation code we sent to your e-mail account, to confirm your identity</value>
   </data>
-  <data name="paso3" xml:space="preserve">
-    <value>Step 3</value>
+  <data name="lblConfirmacionContra" xml:space="preserve">
+    <value>Password confirmation</value>
   </data>
-  <data name="paso3btn" xml:space="preserve">
-    <value>Save</value>
+  <data name="lblContraseña" xml:space="preserve">
+    <value>Password:</value>
   </data>
-  <data name="paso3lbl1" xml:space="preserve">
+  <data name="lblContraseñaCondiciones" xml:space="preserve">
     <value>The password has to contains a minimum of 10  characters, with a combination of letters and numbers.(Just some special characters are allowed)</value>
   </data>
-  <data name="paso4" xml:space="preserve">
-    <value>Step 4</value>
+  <data name="lblContraseñayPin" xml:space="preserve">
+    <value>Password and PIN:</value>
   </data>
-  <data name="paso4btn" xml:space="preserve">
-    <value>Save</value>
+  <data name="lblcorreo" xml:space="preserve">
+    <value>Enter the main e-mail to manage the system.</value>
   </data>
-  <data name="paso4lbl1" xml:space="preserve">
+  <data name="lblDireccion" xml:space="preserve">
+    <value>Enter the address where it is:</value>
+  </data>
+  <data name="lblDUI" xml:space="preserve">
+    <value>DUI:</value>
+  </data>
+  <data name="lblEmpresa" xml:space="preserve">
     <value>Enter the name of your enterprise, instituttion, entrepreneurship or bussines.</value>
   </data>
-  <data name="paso4lbl2" xml:space="preserve">
-    <value>Enter the adress where is located</value>
+  <data name="lblInformacion" xml:space="preserve">
+    <value>Information</value>
   </data>
-  <data name="phonelbl" xml:space="preserve">
-    <value>Phone number</value>
+  <data name="lblIngresaDatos" xml:space="preserve">
+    <value>Enter data</value>
   </data>
-  <data name="pinlabel" xml:space="preserve">
-    <value>Enter a PIN of security. (Minimum 10 characters)</value>
+  <data name="lblMunicipio" xml:space="preserve">
+    <value>municipality:</value>
   </data>
-  <data name="sesion" xml:space="preserve">
-    <value>Log In</value>
+  <data name="lblNIT" xml:space="preserve">
+    <value>NIT:</value>
   </data>
-  <data name="usuario" xml:space="preserve">
-    <value>User</value>
+  <data name="lblNombreUsuario" xml:space="preserve">
+    <value>Enter the username</value>
+  </data>
+  <data name="lblPaso1" xml:space="preserve">
+    <value>Step 1</value>
+  </data>
+  <data name="lblPaso2" xml:space="preserve">
+    <value>Step 2</value>
+  </data>
+  <data name="lblPaso3" xml:space="preserve">
+    <value>Step 3</value>
+  </data>
+  <data name="lblPaso4" xml:space="preserve">
+    <value>Step 4</value>
+  </data>
+  <data name="lblPINseguridad" xml:space="preserve">
+    <value>Enter a security PIN. (Minimum of 10 characters).</value>
+  </data>
+  <data name="lblTeléfono" xml:space="preserve">
+    <value>Phone number:</value>
+  </data>
+  <data name="lblSeleccionarIdioma" xml:space="preserve">
+    <value>Select Idiom:</value>
   </data>
 </root>

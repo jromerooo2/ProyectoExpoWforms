@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using System.IO;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -23,6 +25,7 @@ namespace SistemGestionBuses
             btnFinalizar.Enabled = false;
             btnFinalizar.Visible = false;
             CargarMunicipio();
+            CargarIdioma();
         }
 
         void CargarMunicipio()
@@ -336,6 +339,38 @@ namespace SistemGestionBuses
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             EnviarDatos();
+        }
+
+        //Cambio de idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+
+                lblPaso1.Text = Res.lblPaso1;
+                lblPaso2.Text = Res.lblPaso2;
+                lblPaso3.Text = Res.lblPaso3;
+                lblPaso4.Text = Res.lblPaso4;
+                lblIngresardatos.Text = Res.lblIngresaDatos;
+                lblCorreo.Text = Res.lblcorreo;
+                lblUsername.Text = Res.lblNombreUsuario;
+                lblCodeConfirmation.Text = Res.lblCodigo;
+                lblIngresoCodigo.Text = Res.lblCodConfirmacion;
+                btnReenviar.Text = Res.btnReenviar;
+                lblContraseñaYPin.Text = Res.lblContraseñayPin;
+                lblcontraseñaI.Text = Res.lblContraseñaCondiciones;
+                lblcontraseña.Text = Res.lblContraseña;
+                lblConfirmacionContra.Text = Res.lblConfirmacionContra;
+                lblPIN.Text = Res.lblPINseguridad;
+                lblInformacion.Text = Res.lblInformacion;
+                lblNombreEmpresa.Text = Res.lblEmpresa;
+                lbldireccion.Text = Res.lblDireccion;
+                lbltelefono.Text = Res.lblTeléfono;
+                lblMunicipio.Text = Res.lblMunicipio;
+                lblDUI.Text = Res.lblDUI;
+                lblNIT.Text = Res.lblNIT;
+                btnConfirmar.Text = Res.btnConfirmar;
+                btnFinalizar.Text = Res.btnFinalizar;
+                lblseleccionarIdioma.Text = Res.lblSeleccionarIdioma;
         }
     }
 }

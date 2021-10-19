@@ -30,50 +30,51 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstUse));
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPaso1 = new System.Windows.Forms.Label();
+            this.lblIngresardatos = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
             this.CardPaso1 = new Bunifu.Framework.UI.BunifuCards();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.btnUser = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPaso2 = new System.Windows.Forms.Label();
             this.CardPaso2 = new Bunifu.Framework.UI.BunifuCards();
             this.btnReenviar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCodeConfirmation = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblIngresoCodigo = new System.Windows.Forms.Label();
             this.CardPaso3 = new Bunifu.Framework.UI.BunifuCards();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblcontraseña = new System.Windows.Forms.Label();
+            this.lblConfirmacionContra = new System.Windows.Forms.Label();
             this.txtConfirmacion = new System.Windows.Forms.TextBox();
             this.btnPIN = new System.Windows.Forms.Button();
             this.txtPIN = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPIN = new System.Windows.Forms.Label();
+            this.lblcontraseñaI = new System.Windows.Forms.Label();
             this.txtNueva = new System.Windows.Forms.TextBox();
             this.btnNueva = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblContraseñaYPin = new System.Windows.Forms.Label();
+            this.lblPaso3 = new System.Windows.Forms.Label();
             this.CardPaso4 = new Bunifu.Framework.UI.BunifuCards();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cmbMunicipio = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblMunicipio = new System.Windows.Forms.Label();
+            this.lblDUI = new System.Windows.Forms.Label();
+            this.lblNIT = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbldireccion = new System.Windows.Forms.Label();
+            this.lbltelefono = new System.Windows.Forms.Label();
             this.btnInfo = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblNombreEmpresa = new System.Windows.Forms.Label();
             this.txtNameEnterprise = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblInformacion = new System.Windows.Forms.Label();
+            this.lblPaso4 = new System.Windows.Forms.Label();
             this.MainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -82,52 +83,53 @@
             this.MainDrag = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.nfConfirmacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.cmbUnidad = new System.Windows.Forms.ComboBox();
+            this.lblseleccionarIdioma = new System.Windows.Forms.Label();
             this.CardPaso1.SuspendLayout();
             this.CardPaso2.SuspendLayout();
             this.CardPaso3.SuspendLayout();
             this.CardPaso4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // label4
+            // lblPaso1
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(25, 58);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 28);
-            this.label4.TabIndex = 112;
-            this.label4.Text = "Paso 1";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaso1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPaso1.Location = new System.Drawing.Point(25, 58);
+            this.lblPaso1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaso1.Name = "lblPaso1";
+            this.lblPaso1.Size = new System.Drawing.Size(74, 28);
+            this.lblPaso1.TabIndex = 112;
+            this.lblPaso1.Text = "Paso 1";
+            this.lblPaso1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lblIngresardatos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(23, 86);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 28);
-            this.label3.TabIndex = 113;
-            this.label3.Text = "Ingresa los datos:";
+            this.lblIngresardatos.AutoSize = true;
+            this.lblIngresardatos.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresardatos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIngresardatos.Location = new System.Drawing.Point(23, 86);
+            this.lblIngresardatos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngresardatos.Name = "lblIngresardatos";
+            this.lblIngresardatos.Size = new System.Drawing.Size(217, 28);
+            this.lblIngresardatos.TabIndex = 113;
+            this.lblIngresardatos.Text = "Ingresa los datos:";
             // 
-            // label2
+            // lblCorreo
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(26, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(297, 58);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Ingresa el correo principal para gestionar el sistema";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.Black;
+            this.lblCorreo.Location = new System.Drawing.Point(26, 27);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(297, 58);
+            this.lblCorreo.TabIndex = 12;
+            this.lblCorreo.Text = "Ingresa el correo principal para gestionar el sistema";
+            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CardPaso1
             // 
@@ -136,10 +138,10 @@
             this.CardPaso1.BottomSahddow = true;
             this.CardPaso1.color = System.Drawing.Color.Transparent;
             this.CardPaso1.Controls.Add(this.txtEmail);
-            this.CardPaso1.Controls.Add(this.label11);
+            this.CardPaso1.Controls.Add(this.lblUsername);
             this.CardPaso1.Controls.Add(this.btnUser);
             this.CardPaso1.Controls.Add(this.txtUser);
-            this.CardPaso1.Controls.Add(this.label2);
+            this.CardPaso1.Controls.Add(this.lblCorreo);
             this.CardPaso1.LeftSahddow = false;
             this.CardPaso1.Location = new System.Drawing.Point(19, 126);
             this.CardPaso1.Margin = new System.Windows.Forms.Padding(2);
@@ -160,17 +162,17 @@
             this.txtEmail.Size = new System.Drawing.Size(224, 22);
             this.txtEmail.TabIndex = 15;
             // 
-            // label11
+            // lblUsername
             // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(45, 109);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(258, 38);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Ingresa un nombre de usuario.";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.Black;
+            this.lblUsername.Location = new System.Drawing.Point(45, 109);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(258, 38);
+            this.lblUsername.TabIndex = 16;
+            this.lblUsername.Text = "Ingresa un nombre de usuario.";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUser
             // 
@@ -198,17 +200,17 @@
             this.txtUser.Size = new System.Drawing.Size(224, 22);
             this.txtUser.TabIndex = 11;
             // 
-            // label5
+            // lblPaso2
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(25, 387);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 28);
-            this.label5.TabIndex = 117;
-            this.label5.Text = "Paso 2";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaso2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPaso2.Location = new System.Drawing.Point(25, 387);
+            this.lblPaso2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaso2.Name = "lblPaso2";
+            this.lblPaso2.Size = new System.Drawing.Size(88, 28);
+            this.lblPaso2.TabIndex = 117;
+            this.lblPaso2.Text = "Paso 2";
+            this.lblPaso2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CardPaso2
             // 
@@ -217,7 +219,7 @@
             this.CardPaso2.BottomSahddow = true;
             this.CardPaso2.color = System.Drawing.Color.Transparent;
             this.CardPaso2.Controls.Add(this.btnReenviar);
-            this.CardPaso2.Controls.Add(this.label6);
+            this.CardPaso2.Controls.Add(this.lblCodeConfirmation);
             this.CardPaso2.Controls.Add(this.txtCode);
             this.CardPaso2.Controls.Add(this.btnConfirmar);
             this.CardPaso2.LeftSahddow = false;
@@ -244,18 +246,18 @@
             this.btnReenviar.UseVisualStyleBackColor = false;
             this.btnReenviar.Click += new System.EventHandler(this.btnReenviar_Click);
             // 
-            // label6
+            // lblCodeConfirmation
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(16, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(316, 58);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Ingresa el código de confirmación que se te envió al correo para confirmar la ide" +
+            this.lblCodeConfirmation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeConfirmation.ForeColor = System.Drawing.Color.Black;
+            this.lblCodeConfirmation.Location = new System.Drawing.Point(16, 9);
+            this.lblCodeConfirmation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodeConfirmation.Name = "lblCodeConfirmation";
+            this.lblCodeConfirmation.Size = new System.Drawing.Size(316, 58);
+            this.lblCodeConfirmation.TabIndex = 23;
+            this.lblCodeConfirmation.Text = "Ingresa el código de confirmación que se te envió al correo para confirmar la ide" +
     "ntidad.\r\n";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCodeConfirmation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCode
             // 
@@ -302,13 +304,13 @@
             this.CardPaso3.BorderRadius = 24;
             this.CardPaso3.BottomSahddow = true;
             this.CardPaso3.color = System.Drawing.Color.Transparent;
-            this.CardPaso3.Controls.Add(this.label10);
-            this.CardPaso3.Controls.Add(this.label1);
+            this.CardPaso3.Controls.Add(this.lblcontraseña);
+            this.CardPaso3.Controls.Add(this.lblConfirmacionContra);
             this.CardPaso3.Controls.Add(this.txtConfirmacion);
             this.CardPaso3.Controls.Add(this.btnPIN);
             this.CardPaso3.Controls.Add(this.txtPIN);
-            this.CardPaso3.Controls.Add(this.label14);
-            this.CardPaso3.Controls.Add(this.label9);
+            this.CardPaso3.Controls.Add(this.lblPIN);
+            this.CardPaso3.Controls.Add(this.lblcontraseñaI);
             this.CardPaso3.Controls.Add(this.txtNueva);
             this.CardPaso3.Controls.Add(this.btnNueva);
             this.CardPaso3.LeftSahddow = false;
@@ -320,29 +322,29 @@
             this.CardPaso3.Size = new System.Drawing.Size(350, 507);
             this.CardPaso3.TabIndex = 118;
             // 
-            // label10
+            // lblcontraseña
             // 
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(57, 114);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(228, 28);
-            this.label10.TabIndex = 122;
-            this.label10.Text = "Contraseña:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblcontraseña.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcontraseña.ForeColor = System.Drawing.Color.White;
+            this.lblcontraseña.Location = new System.Drawing.Point(57, 114);
+            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblcontraseña.Name = "lblcontraseña";
+            this.lblcontraseña.Size = new System.Drawing.Size(228, 28);
+            this.lblcontraseña.TabIndex = 122;
+            this.lblcontraseña.Text = "Contraseña:";
+            this.lblcontraseña.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // lblConfirmacionContra
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(57, 179);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 28);
-            this.label1.TabIndex = 121;
-            this.label1.Text = "Confirmación de contraseña:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblConfirmacionContra.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmacionContra.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmacionContra.Location = new System.Drawing.Point(57, 179);
+            this.lblConfirmacionContra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmacionContra.Name = "lblConfirmacionContra";
+            this.lblConfirmacionContra.Size = new System.Drawing.Size(228, 28);
+            this.lblConfirmacionContra.TabIndex = 121;
+            this.lblConfirmacionContra.Text = "Confirmación de contraseña:";
+            this.lblConfirmacionContra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtConfirmacion
             // 
@@ -382,30 +384,30 @@
             this.txtPIN.TabIndex = 16;
             this.txtPIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPIN_KeyPress);
             // 
-            // label14
+            // lblPIN
             // 
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(22, 319);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(306, 58);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "Ingresa un PIN de seguridad. \r\n(Minimo de 10 caracteres).";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPIN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPIN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPIN.Location = new System.Drawing.Point(22, 319);
+            this.lblPIN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPIN.Name = "lblPIN";
+            this.lblPIN.Size = new System.Drawing.Size(306, 58);
+            this.lblPIN.TabIndex = 23;
+            this.lblPIN.Text = "Ingresa un PIN de seguridad. \r\n(Minimo de 10 caracteres).";
+            this.lblPIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // lblcontraseñaI
             // 
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(18, 18);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(310, 81);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "La contraseña debe contener como minimo 10 carácteres,  con una combinación de le" +
+            this.lblcontraseñaI.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcontraseñaI.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblcontraseñaI.Location = new System.Drawing.Point(18, 18);
+            this.lblcontraseñaI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblcontraseñaI.Name = "lblcontraseñaI";
+            this.lblcontraseñaI.Size = new System.Drawing.Size(310, 81);
+            this.lblcontraseñaI.TabIndex = 23;
+            this.lblcontraseñaI.Text = "La contraseña debe contener como minimo 10 carácteres,  con una combinación de le" +
     "tras y números. (Solo algunos simbolos son permitidos)";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblcontraseñaI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNueva
             // 
@@ -433,28 +435,28 @@
             this.btnNueva.UseVisualStyleBackColor = false;
             this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
             // 
-            // label8
+            // lblContraseñaYPin
             // 
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(386, 86);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(326, 28);
-            this.label8.TabIndex = 120;
-            this.label8.Text = "Contraseña y PIN.";
+            this.lblContraseñaYPin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseñaYPin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblContraseñaYPin.Location = new System.Drawing.Point(386, 86);
+            this.lblContraseñaYPin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContraseñaYPin.Name = "lblContraseñaYPin";
+            this.lblContraseñaYPin.Size = new System.Drawing.Size(326, 28);
+            this.lblContraseñaYPin.TabIndex = 120;
+            this.lblContraseñaYPin.Text = "Contraseña y PIN.";
             // 
-            // label7
+            // lblPaso3
             // 
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(388, 58);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 28);
-            this.label7.TabIndex = 119;
-            this.label7.Text = "Paso 3";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaso3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPaso3.Location = new System.Drawing.Point(388, 58);
+            this.lblPaso3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaso3.Name = "lblPaso3";
+            this.lblPaso3.Size = new System.Drawing.Size(93, 28);
+            this.lblPaso3.TabIndex = 119;
+            this.lblPaso3.Text = "Paso 3";
+            this.lblPaso3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CardPaso4
             // 
@@ -467,15 +469,15 @@
             this.CardPaso4.Controls.Add(this.txtNIT);
             this.CardPaso4.Controls.Add(this.TxtDUI);
             this.CardPaso4.Controls.Add(this.cmbMunicipio);
-            this.CardPaso4.Controls.Add(this.label21);
-            this.CardPaso4.Controls.Add(this.label20);
-            this.CardPaso4.Controls.Add(this.label19);
+            this.CardPaso4.Controls.Add(this.lblMunicipio);
+            this.CardPaso4.Controls.Add(this.lblDUI);
+            this.CardPaso4.Controls.Add(this.lblNIT);
             this.CardPaso4.Controls.Add(this.txtTelefono);
             this.CardPaso4.Controls.Add(this.txtDireccion);
-            this.CardPaso4.Controls.Add(this.label12);
-            this.CardPaso4.Controls.Add(this.label15);
+            this.CardPaso4.Controls.Add(this.lbldireccion);
+            this.CardPaso4.Controls.Add(this.lbltelefono);
             this.CardPaso4.Controls.Add(this.btnInfo);
-            this.CardPaso4.Controls.Add(this.label16);
+            this.CardPaso4.Controls.Add(this.lblNombreEmpresa);
             this.CardPaso4.Controls.Add(this.txtNameEnterprise);
             this.CardPaso4.LeftSahddow = false;
             this.CardPaso4.Location = new System.Drawing.Point(753, 126);
@@ -485,6 +487,17 @@
             this.CardPaso4.ShadowDepth = 20;
             this.CardPaso4.Size = new System.Drawing.Size(350, 507);
             this.CardPaso4.TabIndex = 121;
+            // 
+            // pbImage
+            // 
+            this.pbImage.Image = ((System.Drawing.Image)(resources.GetObject("pbImage.Image")));
+            this.pbImage.Location = new System.Drawing.Point(-102, 114);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(131, 50);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImage.TabIndex = 125;
+            this.pbImage.TabStop = false;
+            this.pbImage.Visible = false;
             // 
             // btnFinalizar
             // 
@@ -528,41 +541,41 @@
             this.cmbMunicipio.Size = new System.Drawing.Size(121, 21);
             this.cmbMunicipio.TabIndex = 134;
             // 
-            // label21
+            // lblMunicipio
             // 
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(179, 268);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 28);
-            this.label21.TabIndex = 133;
-            this.label21.Text = "Municipio:";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMunicipio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMunicipio.ForeColor = System.Drawing.Color.White;
+            this.lblMunicipio.Location = new System.Drawing.Point(179, 268);
+            this.lblMunicipio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMunicipio.Name = "lblMunicipio";
+            this.lblMunicipio.Size = new System.Drawing.Size(110, 28);
+            this.lblMunicipio.TabIndex = 133;
+            this.lblMunicipio.Text = "Municipio:";
+            this.lblMunicipio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label20
+            // lblDUI
             // 
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(35, 338);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 28);
-            this.label20.TabIndex = 132;
-            this.label20.Text = "DUI:";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDUI.ForeColor = System.Drawing.Color.White;
+            this.lblDUI.Location = new System.Drawing.Point(35, 338);
+            this.lblDUI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.Size = new System.Drawing.Size(40, 28);
+            this.lblDUI.TabIndex = 132;
+            this.lblDUI.Text = "DUI:";
+            this.lblDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label19
+            // lblNIT
             // 
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(186, 338);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 28);
-            this.label19.TabIndex = 129;
-            this.label19.Text = "NIT:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNIT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNIT.ForeColor = System.Drawing.Color.White;
+            this.lblNIT.Location = new System.Drawing.Point(186, 338);
+            this.lblNIT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNIT.Name = "lblNIT";
+            this.lblNIT.Size = new System.Drawing.Size(40, 28);
+            this.lblNIT.TabIndex = 129;
+            this.lblNIT.Text = "NIT:";
+            this.lblNIT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtTelefono
             // 
@@ -585,29 +598,29 @@
             this.txtDireccion.Size = new System.Drawing.Size(272, 59);
             this.txtDireccion.TabIndex = 127;
             // 
-            // label12
+            // lbldireccion
             // 
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(57, 138);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(238, 52);
-            this.label12.TabIndex = 126;
-            this.label12.Text = "Ingresa la dirección donde se encuentra:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbldireccion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldireccion.ForeColor = System.Drawing.Color.White;
+            this.lbldireccion.Location = new System.Drawing.Point(57, 138);
+            this.lbldireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbldireccion.Name = "lbldireccion";
+            this.lbldireccion.Size = new System.Drawing.Size(238, 52);
+            this.lbldireccion.TabIndex = 126;
+            this.lbldireccion.Text = "Ingresa la dirección donde se encuentra:";
+            this.lbldireccion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // lbltelefono
             // 
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(35, 270);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 28);
-            this.label15.TabIndex = 124;
-            this.label15.Text = "Telefono:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbltelefono.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltelefono.ForeColor = System.Drawing.Color.White;
+            this.lbltelefono.Location = new System.Drawing.Point(35, 270);
+            this.lbltelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltelefono.Name = "lbltelefono";
+            this.lbltelefono.Size = new System.Drawing.Size(110, 28);
+            this.lbltelefono.TabIndex = 124;
+            this.lbltelefono.Text = "Telefono:";
+            this.lbltelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnInfo
             // 
@@ -626,17 +639,17 @@
             this.btnInfo.UseVisualStyleBackColor = false;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
-            // label16
+            // lblNombreEmpresa
             // 
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(18, 14);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(310, 70);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Ingresa el nombre de tu empresa, institución, emprendimiento o negocio.";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNombreEmpresa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEmpresa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(18, 14);
+            this.lblNombreEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreEmpresa.Name = "lblNombreEmpresa";
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(310, 70);
+            this.lblNombreEmpresa.TabIndex = 23;
+            this.lblNombreEmpresa.Text = "Ingresa el nombre de tu empresa, institución, emprendimiento o negocio.";
+            this.lblNombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNameEnterprise
             // 
@@ -649,28 +662,28 @@
             this.txtNameEnterprise.Size = new System.Drawing.Size(272, 22);
             this.txtNameEnterprise.TabIndex = 20;
             // 
-            // label17
+            // lblInformacion
             // 
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(755, 86);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(326, 28);
-            this.label17.TabIndex = 123;
-            this.label17.Text = "Información.";
+            this.lblInformacion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInformacion.Location = new System.Drawing.Point(755, 86);
+            this.lblInformacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(326, 28);
+            this.lblInformacion.TabIndex = 123;
+            this.lblInformacion.Text = "Información.";
             // 
-            // label18
+            // lblPaso4
             // 
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(757, 58);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(93, 28);
-            this.label18.TabIndex = 122;
-            this.label18.Text = "Paso 4";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaso4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPaso4.Location = new System.Drawing.Point(757, 58);
+            this.lblPaso4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaso4.Name = "lblPaso4";
+            this.lblPaso4.Size = new System.Drawing.Size(93, 28);
+            this.lblPaso4.TabIndex = 122;
+            this.lblPaso4.Text = "Paso 4";
+            this.lblPaso4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MainElipse
             // 
@@ -750,16 +763,27 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // pbImage
+            // cmbUnidad
             // 
-            this.pbImage.Image = ((System.Drawing.Image)(resources.GetObject("pbImage.Image")));
-            this.pbImage.Location = new System.Drawing.Point(-89, 126);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(131, 50);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImage.TabIndex = 125;
-            this.pbImage.TabStop = false;
-            this.pbImage.Visible = false;
+            this.cmbUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUnidad.FormattingEnabled = true;
+            this.cmbUnidad.Location = new System.Drawing.Point(936, 86);
+            this.cmbUnidad.Name = "cmbUnidad";
+            this.cmbUnidad.Size = new System.Drawing.Size(183, 26);
+            this.cmbUnidad.TabIndex = 125;
+            // 
+            // lblseleccionarIdioma
+            // 
+            this.lblseleccionarIdioma.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblseleccionarIdioma.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblseleccionarIdioma.Location = new System.Drawing.Point(954, 55);
+            this.lblseleccionarIdioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblseleccionarIdioma.Name = "lblseleccionarIdioma";
+            this.lblseleccionarIdioma.Size = new System.Drawing.Size(149, 28);
+            this.lblseleccionarIdioma.TabIndex = 126;
+            this.lblseleccionarIdioma.Text = "Seleccionar Idioma:";
+            this.lblseleccionarIdioma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FirstUse
             // 
@@ -767,18 +791,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(1141, 685);
+            this.Controls.Add(this.lblseleccionarIdioma);
+            this.Controls.Add(this.cmbUnidad);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.CardPaso4);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(this.lblPaso4);
             this.Controls.Add(this.CardPaso3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblContraseñaYPin);
+            this.Controls.Add(this.lblPaso3);
+            this.Controls.Add(this.lblPaso2);
             this.Controls.Add(this.CardPaso2);
             this.Controls.Add(this.lblIngresoCodigo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblPaso1);
+            this.Controls.Add(this.lblIngresardatos);
             this.Controls.Add(this.CardPaso1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FirstUse";
@@ -791,11 +817,11 @@
             this.CardPaso3.PerformLayout();
             this.CardPaso4.ResumeLayout(false);
             this.CardPaso4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panelBar.ResumeLayout(false);
             this.panelBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -803,42 +829,42 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPaso1;
+        private System.Windows.Forms.Label lblIngresardatos;
+        private System.Windows.Forms.Label lblCorreo;
         private Bunifu.Framework.UI.BunifuCards CardPaso1;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPaso2;
         private Bunifu.Framework.UI.BunifuCards CardPaso2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblCodeConfirmation;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lblIngresoCodigo;
         private Bunifu.Framework.UI.BunifuCards CardPaso3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblcontraseña;
+        private System.Windows.Forms.Label lblConfirmacionContra;
         private System.Windows.Forms.TextBox txtConfirmacion;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblcontraseñaI;
         private System.Windows.Forms.TextBox txtNueva;
         private System.Windows.Forms.Button btnNueva;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblContraseñaYPin;
+        private System.Windows.Forms.Label lblPaso3;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnPIN;
         private System.Windows.Forms.TextBox txtPIN;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblPIN;
         private Bunifu.Framework.UI.BunifuCards CardPaso4;
         private System.Windows.Forms.Button btnInfo;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblNombreEmpresa;
         private System.Windows.Forms.TextBox txtNameEnterprise;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblInformacion;
+        private System.Windows.Forms.Label lblPaso4;
         private System.Windows.Forms.MaskedTextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbldireccion;
+        private System.Windows.Forms.Label lbltelefono;
         private Bunifu.Framework.UI.BunifuElipse MainElipse;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
@@ -850,11 +876,13 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbMunicipio;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblMunicipio;
+        private System.Windows.Forms.Label lblDUI;
+        private System.Windows.Forms.Label lblNIT;
         private System.Windows.Forms.MaskedTextBox TxtDUI;
         private System.Windows.Forms.MaskedTextBox txtNIT;
         private System.Windows.Forms.PictureBox pbImage;
+        private System.Windows.Forms.Label lblseleccionarIdioma;
+        private System.Windows.Forms.ComboBox cmbUnidad;
     }
 }

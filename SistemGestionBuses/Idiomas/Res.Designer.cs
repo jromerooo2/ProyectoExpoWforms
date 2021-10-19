@@ -61,254 +61,227 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar y continuar.
+        ///   Busca una cadena traducida similar a Confirmar.
+        /// </summary>
+        internal static string btnConfirmar {
+            get {
+                return ResourceManager.GetString("btnConfirmar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Finalizar.
         /// </summary>
         internal static string btnFinalizar {
             get {
-                return ResourceManager.GetString("btnfinalizar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Código de confirmación.
-        /// </summary>
-        internal static string codigoconfir {
-            get {
-                return ResourceManager.GetString("codigoconfir", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Confirmar contraseña.
-        /// </summary>
-        internal static string confirmacion_contra {
-            get {
-                return ResourceManager.GetString("confirmacion_contra", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Contraseña y PIN.
-        /// </summary>
-        internal static string contra_pin {
-            get {
-                return ResourceManager.GetString("contra_pin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Contraseña.
-        /// </summary>
-        internal static string contrasena {
-            get {
-                return ResourceManager.GetString("contrasena", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Información.
-        /// </summary>
-        internal static string informacion {
-            get {
-                return ResourceManager.GetString("informacion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Ingresar datos.
-        /// </summary>
-        internal static string ingresadatos {
-            get {
-                return ResourceManager.GetString("ingresadatos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Municipio.
-        /// </summary>
-        internal static string municipiolbl {
-            get {
-                return ResourceManager.GetString("municipiolbl", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a ¿Olvidó  su contraseña?.
-        /// </summary>
-        internal static string olvido_contrasena {
-            get {
-                return ResourceManager.GetString("olvido_contrasena", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Paso 1.
-        /// </summary>
-        internal static string paso1 {
-            get {
-                return ResourceManager.GetString("paso1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Guardar.
-        /// </summary>
-        internal static string paso1btn {
-            get {
-                return ResourceManager.GetString("paso1btn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Ingrese el correo principal para gestionar el sistema.
-        /// </summary>
-        internal static string paso1lbl1 {
-            get {
-                return ResourceManager.GetString("paso1lbl1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Ingrese un nombre de usuario.
-        /// </summary>
-        internal static string paso1lbl2 {
-            get {
-                return ResourceManager.GetString("paso1lbl2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Paso 2.
-        /// </summary>
-        internal static string paso2 {
-            get {
-                return ResourceManager.GetString("paso2", resourceCulture);
+                return ResourceManager.GetString("btnFinalizar", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Reenviar código.
         /// </summary>
-        internal static string paso2btn1 {
+        internal static string btnReenviar {
             get {
-                return ResourceManager.GetString("paso2btn1", resourceCulture);
+                return ResourceManager.GetString("btnReenviar", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Confirmar código.
+        ///   Busca una cadena traducida similar a Código de confirmación.
         /// </summary>
-        internal static string paso2btn2 {
+        internal static string lblCodConfirmacion {
             get {
-                return ResourceManager.GetString("paso2btn2", resourceCulture);
+                return ResourceManager.GetString("lblCodConfirmacion", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ingrese el código de confirmación que se te envió al correo para confirmar la identidad.
+        ///   Busca una cadena traducida similar a Ingresa el código de confirmación que se te enció al correo para confirmar la identidad..
         /// </summary>
-        internal static string paso2lbl1 {
+        internal static string lblCodigo {
             get {
-                return ResourceManager.GetString("paso2lbl1", resourceCulture);
+                return ResourceManager.GetString("lblCodigo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Paso 3.
+        ///   Busca una cadena traducida similar a Confirmación de contraseña:.
         /// </summary>
-        internal static string paso3 {
+        internal static string lblConfirmacionContra {
             get {
-                return ResourceManager.GetString("paso3", resourceCulture);
+                return ResourceManager.GetString("lblConfirmacionContra", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar.
+        ///   Busca una cadena traducida similar a Contraseña:.
         /// </summary>
-        internal static string paso3btn {
+        internal static string lblContraseña {
             get {
-                return ResourceManager.GetString("paso3btn", resourceCulture);
+                return ResourceManager.GetString("lblContraseña", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a La contraseña debe contener como mínimo 10 caracteres, con una combinación de letras y números. (Solo algunos simbolos son perimitidos ).
+        ///   Busca una cadena traducida similar a La contraseña debe contenercomo mínimo 10 caracteres, con una combinación de letras y números. (Solo algunos símbolos son permitidos).
         /// </summary>
-        internal static string paso3lbl1 {
+        internal static string lblContraseñaCondiciones {
             get {
-                return ResourceManager.GetString("paso3lbl1", resourceCulture);
+                return ResourceManager.GetString("lblContraseñaCondiciones", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Paso 4.
+        ///   Busca una cadena traducida similar a Contraseña y PIN.
         /// </summary>
-        internal static string paso4 {
+        internal static string lblContraseñayPin {
             get {
-                return ResourceManager.GetString("paso4", resourceCulture);
+                return ResourceManager.GetString("lblContraseñayPin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar.
+        ///   Busca una cadena traducida similar a Ingresa el correo principal para gestionar el sistema.
         /// </summary>
-        internal static string paso4btn {
+        internal static string lblcorreo {
             get {
-                return ResourceManager.GetString("paso4btn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Ingresa el nombre de tu empresa, institución, emprendimiento o negocio..
-        /// </summary>
-        internal static string paso4lbl1 {
-            get {
-                return ResourceManager.GetString("paso4lbl1", resourceCulture);
+                return ResourceManager.GetString("lblcorreo", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Ingresa la dirección donde se encuentra:.
         /// </summary>
-        internal static string paso4lbl2 {
+        internal static string lblDireccion {
             get {
-                return ResourceManager.GetString("paso4lbl2", resourceCulture);
+                return ResourceManager.GetString("lblDireccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a DUI:.
+        /// </summary>
+        internal static string lblDUI {
+            get {
+                return ResourceManager.GetString("lblDUI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingrese el nombre de tu empresa, institución, emprendimiento o negocio..
+        /// </summary>
+        internal static string lblEmpresa {
+            get {
+                return ResourceManager.GetString("lblEmpresa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Información.
+        /// </summary>
+        internal static string lblInformacion {
+            get {
+                return ResourceManager.GetString("lblInformacion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa los datos.
+        /// </summary>
+        internal static string lblIngresaDatos {
+            get {
+                return ResourceManager.GetString("lblIngresaDatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Municipio.
+        /// </summary>
+        internal static string lblMunicipio {
+            get {
+                return ResourceManager.GetString("lblMunicipio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a NIT:.
+        /// </summary>
+        internal static string lblNIT {
+            get {
+                return ResourceManager.GetString("lblNIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa un nombre de usuario.
+        /// </summary>
+        internal static string lblNombreUsuario {
+            get {
+                return ResourceManager.GetString("lblNombreUsuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Paso 1.
+        /// </summary>
+        internal static string lblPaso1 {
+            get {
+                return ResourceManager.GetString("lblPaso1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Paso 2.
+        /// </summary>
+        internal static string lblPaso2 {
+            get {
+                return ResourceManager.GetString("lblPaso2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Paso 3.
+        /// </summary>
+        internal static string lblPaso3 {
+            get {
+                return ResourceManager.GetString("lblPaso3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Paso 4.
+        /// </summary>
+        internal static string lblPaso4 {
+            get {
+                return ResourceManager.GetString("lblPaso4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa un PIN de seguridad. (Mínimo de 10 caracteres)..
+        /// </summary>
+        internal static string lblPINseguridad {
+            get {
+                return ResourceManager.GetString("lblPINseguridad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seleccionar Idioma:.
+        /// </summary>
+        internal static string lblSeleccionarIdioma {
+            get {
+                return ResourceManager.GetString("lblSeleccionarIdioma", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Teléfono.
         /// </summary>
-        internal static string phonelbl {
+        internal static string lblTeléfono {
             get {
-                return ResourceManager.GetString("phonelbl", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Ingrese un PIN de seguridad. (Mínimo de 10 caracteres)..
-        /// </summary>
-        internal static string pinlabel {
-            get {
-                return ResourceManager.GetString("pinlabel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Inicar sesión.
-        /// </summary>
-        internal static string sesion {
-            get {
-                return ResourceManager.GetString("sesion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a usuario.
-        /// </summary>
-        internal static string usuario {
-            get {
-                return ResourceManager.GetString("usuario", resourceCulture);
+                return ResourceManager.GetString("lblTeléfono", resourceCulture);
             }
         }
     }
