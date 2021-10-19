@@ -61,11 +61,110 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar.
+        /// </summary>
+        internal static string btnActualizarCliente {
+            get {
+                return ResourceManager.GetString("btnActualizarCliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar Grid.
+        /// </summary>
+        internal static string btnActualizarGrid {
+            get {
+                return ResourceManager.GetString("btnActualizarGrid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar grid de datos.
+        /// </summary>
+        internal static string btnActualizarGriddedatos {
+            get {
+                return ResourceManager.GetString("btnActualizarGriddedatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar grid de datos.
+        /// </summary>
+        internal static string btnActualizarGridMan {
+            get {
+                return ResourceManager.GetString("btnActualizarGridMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar Unidad.
+        /// </summary>
+        internal static string btnActualizarUnidad {
+            get {
+                return ResourceManager.GetString("btnActualizarUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar Viaje.
+        /// </summary>
+        internal static string btnActualizarViaje {
+            get {
+                return ResourceManager.GetString("btnActualizarViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar Grid.
+        /// </summary>
+        internal static string btnActulizarGrid {
+            get {
+                return ResourceManager.GetString("btnActulizarGrid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar clientes.
+        /// </summary>
+        internal static string btnAgregarClientes {
+            get {
+                return ResourceManager.GetString("btnAgregarClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Conductor.
+        /// </summary>
+        internal static string btnAgregarConductor {
+            get {
+                return ResourceManager.GetString("btnAgregarConductor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Agregar Direccion.
         /// </summary>
         internal static string btnAgregarDireccion {
             get {
                 return ResourceManager.GetString("btnAgregarDireccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Empleado.
+        /// </summary>
+        internal static string btnAgregarEmpleado {
+            get {
+                return ResourceManager.GetString("btnAgregarEmpleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Mantenimiento.
+        /// </summary>
+        internal static string btnAgregarMan {
+            get {
+                return ResourceManager.GetString("btnAgregarMan", resourceCulture);
             }
         }
         
@@ -79,6 +178,24 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Unidad.
+        /// </summary>
+        internal static string btnAgregarUnidad {
+            get {
+                return ResourceManager.GetString("btnAgregarUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Asignar Direcciones.
+        /// </summary>
+        internal static string btnAsignarDirecciones {
+            get {
+                return ResourceManager.GetString("btnAsignarDirecciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Asignar Viaje.
         /// </summary>
         internal static string BtnAsignarViaje {
@@ -88,11 +205,29 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Asignar viaje.
+        /// </summary>
+        internal static string btnAsignarViajeCliente {
+            get {
+                return ResourceManager.GetString("btnAsignarViajeCliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Seleccionar Idioma:.
         /// </summary>
         internal static string btnCambiarIdioma {
             get {
                 return ResourceManager.GetString("btnCambiarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Conectar.
+        /// </summary>
+        internal static string btnConectar {
+            get {
+                return ResourceManager.GetString("btnConectar", resourceCulture);
             }
         }
         
@@ -115,6 +250,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Confirmar Identidad.
+        /// </summary>
+        internal static string btnConfirmarIdentidad {
+            get {
+                return ResourceManager.GetString("btnConfirmarIdentidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirmar.
         /// </summary>
         internal static string btnConfirmarPINLocus {
@@ -124,11 +268,74 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Crear Viaje.
+        /// </summary>
+        internal static string btnCrearViaje {
+            get {
+                return ResourceManager.GetString("btnCrearViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar cliente.
+        /// </summary>
+        internal static string btnEliminarCliente {
+            get {
+                return ResourceManager.GetString("btnEliminarCliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar Conductor.
+        /// </summary>
+        internal static string btnEliminarConductor {
+            get {
+                return ResourceManager.GetString("btnEliminarConductor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar Empleado.
+        /// </summary>
+        internal static string btnEliminarEmpleado {
+            get {
+                return ResourceManager.GetString("btnEliminarEmpleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar Mantenimiento.
+        /// </summary>
+        internal static string btnEliminarMan {
+            get {
+                return ResourceManager.GetString("btnEliminarMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Eliminar Punto.
         /// </summary>
         internal static string btnEliminarPunto {
             get {
                 return ResourceManager.GetString("btnEliminarPunto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar Unidad.
+        /// </summary>
+        internal static string btnEliminarUnidad {
+            get {
+                return ResourceManager.GetString("btnEliminarUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar Viaje.
+        /// </summary>
+        internal static string btnEliminarViaje {
+            get {
+                return ResourceManager.GetString("btnEliminarViaje", resourceCulture);
             }
         }
         
@@ -169,6 +376,42 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Limpiar Campos.
+        /// </summary>
+        internal static string btnLimpiarCamposunidades {
+            get {
+                return ResourceManager.GetString("btnLimpiarCamposunidades", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Conductor.
+        /// </summary>
+        internal static string btnModificarConductor {
+            get {
+                return ResourceManager.GetString("btnModificarConductor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Empleado.
+        /// </summary>
+        internal static string btnModificarEmpleado {
+            get {
+                return ResourceManager.GetString("btnModificarEmpleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Mantenimiento.
+        /// </summary>
+        internal static string btnModificarMan {
+            get {
+                return ResourceManager.GetString("btnModificarMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Reenviar código.
         /// </summary>
         internal static string btnReenviar {
@@ -183,6 +426,78 @@ namespace SistemGestionBuses.Idiomas {
         internal static string btnSeleccionarIdioma {
             get {
                 return ResourceManager.GetString("btnSeleccionarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ver conductores.
+        /// </summary>
+        internal static string btnVerConductores {
+            get {
+                return ResourceManager.GetString("btnVerConductores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string hola {
+            get {
+                return ResourceManager.GetString("hola", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Acciones.
+        /// </summary>
+        internal static string lblAcciones {
+            get {
+                return ResourceManager.GetString("lblAcciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Administración de conductores.
+        /// </summary>
+        internal static string lblAdminConductores {
+            get {
+                return ResourceManager.GetString("lblAdminConductores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Administración de Empleados.
+        /// </summary>
+        internal static string lblAdministraicionEmpleados {
+            get {
+                return ResourceManager.GetString("lblAdministraicionEmpleados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Año de la unidad:.
+        /// </summary>
+        internal static string lblAnioVehiculo {
+            get {
+                return ResourceManager.GetString("lblAnioVehiculo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Apellidos del empleado.
+        /// </summary>
+        internal static string lblApellidoEmpleado {
+            get {
+                return ResourceManager.GetString("lblApellidoEmpleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Apellidos.
+        /// </summary>
+        internal static string lblApellidos {
+            get {
+                return ResourceManager.GetString("lblApellidos", resourceCulture);
             }
         }
         
@@ -214,6 +529,24 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Capacidad de la unidad:.
+        /// </summary>
+        internal static string lblCapacidadUnidad {
+            get {
+                return ResourceManager.GetString("lblCapacidadUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargo.
+        /// </summary>
+        internal static string lblCargo {
+            get {
+                return ResourceManager.GetString("lblCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cliente:.
         /// </summary>
         internal static string lblCliente {
@@ -232,6 +565,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cliente:.
+        /// </summary>
+        internal static string lblClienteViajes {
+            get {
+                return ResourceManager.GetString("lblClienteViajes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Código de confirmación.
         /// </summary>
         internal static string lblCodConfirmacion {
@@ -246,6 +588,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblCodigo {
             get {
                 return ResourceManager.GetString("lblCodigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Conductor Asignado:.
+        /// </summary>
+        internal static string lblConductorAsignado {
+            get {
+                return ResourceManager.GetString("lblConductorAsignado", resourceCulture);
             }
         }
         
@@ -282,6 +633,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblConfirmacionContra {
             get {
                 return ResourceManager.GetString("lblConfirmacionContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirmar Contraseña:.
+        /// </summary>
+        internal static string lblConfirmarContra {
+            get {
+                return ResourceManager.GetString("lblConfirmarContra", resourceCulture);
             }
         }
         
@@ -331,6 +691,24 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Correo.
+        /// </summary>
+        internal static string lblCorreoClientes {
+            get {
+                return ResourceManager.GetString("lblCorreoClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción:.
+        /// </summary>
+        internal static string lblDescripcion {
+            get {
+                return ResourceManager.GetString("lblDescripcion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Destino adicional:.
         /// </summary>
         internal static string lblDestinoAdicional {
@@ -367,6 +745,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Direccion.
+        /// </summary>
+        internal static string lblDireccionClientes {
+            get {
+                return ResourceManager.GetString("lblDireccionClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Dirección final:.
         /// </summary>
         internal static string lblDireccionFinal {
@@ -385,6 +772,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa el DUI correspondiente:.
+        /// </summary>
+        internal static string lblDUICo {
+            get {
+                return ResourceManager.GetString("lblDUICo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Empleados.
         /// </summary>
         internal static string lblEmpleados {
@@ -399,6 +795,132 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblEmpresa {
             get {
                 return ResourceManager.GetString("lblEmpresa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado.
+        /// </summary>
+        internal static string lblEstado {
+            get {
+                return ResourceManager.GetString("lblEstado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado de la unidad:.
+        /// </summary>
+        internal static string lblEstadoUnidad {
+            get {
+                return ResourceManager.GetString("lblEstadoUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado del viaje:.
+        /// </summary>
+        internal static string lblEstadoViaje {
+            get {
+                return ResourceManager.GetString("lblEstadoViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha:.
+        /// </summary>
+        internal static string lblFecha {
+            get {
+                return ResourceManager.GetString("lblFecha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha de inicio del viaje:.
+        /// </summary>
+        internal static string lblFechaInicioViaje {
+            get {
+                return ResourceManager.GetString("lblFechaInicioViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha de exporación de la licencia:.
+        /// </summary>
+        internal static string lblFechaLimiteLicencia {
+            get {
+                return ResourceManager.GetString("lblFechaLimiteLicencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha de retorno del viaje:.
+        /// </summary>
+        internal static string lblFecharetornoViaje {
+            get {
+                return ResourceManager.GetString("lblFecharetornoViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Filtrar por nombre.
+        /// </summary>
+        internal static string lblFiltrarporNombre {
+            get {
+                return ResourceManager.GetString("lblFiltrarporNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Genero.
+        /// </summary>
+        internal static string lblGenero {
+            get {
+                return ResourceManager.GetString("lblGenero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID Conduc:.
+        /// </summary>
+        internal static string lblIDconductor {
+            get {
+                return ResourceManager.GetString("lblIDconductor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID Empl:.
+        /// </summary>
+        internal static string lblIDempleado {
+            get {
+                return ResourceManager.GetString("lblIDempleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID Mantenimiento.
+        /// </summary>
+        internal static string lblIDMan {
+            get {
+                return ResourceManager.GetString("lblIDMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID de la unidad.
+        /// </summary>
+        internal static string lblIDunidad {
+            get {
+                return ResourceManager.GetString("lblIDunidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID del viaje.
+        /// </summary>
+        internal static string lblIDViaje {
+            get {
+                return ResourceManager.GetString("lblIDViaje", resourceCulture);
             }
         }
         
@@ -448,6 +970,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Licencia:.
+        /// </summary>
+        internal static string lblLicencia {
+            get {
+                return ResourceManager.GetString("lblLicencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Log out.
         /// </summary>
         internal static string lblLogout {
@@ -468,9 +999,45 @@ namespace SistemGestionBuses.Idiomas {
         /// <summary>
         ///   Busca una cadena traducida similar a Mantenimientos.
         /// </summary>
+        internal static string lblMantenimiento {
+            get {
+                return ResourceManager.GetString("lblMantenimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mantenimientos.
+        /// </summary>
         internal static string lblMantenimientos {
             get {
                 return ResourceManager.GetString("lblMantenimientos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Marca de la unidad:.
+        /// </summary>
+        internal static string lblMarca {
+            get {
+                return ResourceManager.GetString("lblMarca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modelo de la unidad:.
+        /// </summary>
+        internal static string lblModelo {
+            get {
+                return ResourceManager.GetString("lblModelo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Monto del mantenimiento:.
+        /// </summary>
+        internal static string lblMontoMan {
+            get {
+                return ResourceManager.GetString("lblMontoMan", resourceCulture);
             }
         }
         
@@ -493,6 +1060,42 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa el NIT correspondiente:.
+        /// </summary>
+        internal static string lblNITCo {
+            get {
+                return ResourceManager.GetString("lblNITCo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre del Conductor.
+        /// </summary>
+        internal static string lblNombreConductor {
+            get {
+                return ResourceManager.GetString("lblNombreConductor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre del empleado.
+        /// </summary>
+        internal static string lblNombreEmpleado {
+            get {
+                return ResourceManager.GetString("lblNombreEmpleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombres.
+        /// </summary>
+        internal static string lblNombres {
+            get {
+                return ResourceManager.GetString("lblNombres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ingresa un nombre de usuario.
         /// </summary>
         internal static string lblNombreUsuario {
@@ -507,6 +1110,51 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblNombreViaje {
             get {
                 return ResourceManager.GetString("lblNombreViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre del viaje:.
+        /// </summary>
+        internal static string lblNombreViajePrincipal {
+            get {
+                return ResourceManager.GetString("lblNombreViajePrincipal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nueva Contraseña:.
+        /// </summary>
+        internal static string lblNuevaContra {
+            get {
+                return ResourceManager.GetString("lblNuevaContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Numero cel.
+        /// </summary>
+        internal static string lblNumerocel {
+            get {
+                return ResourceManager.GetString("lblNumerocel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Número de chasis.
+        /// </summary>
+        internal static string lblNumeroChasis {
+            get {
+                return ResourceManager.GetString("lblNumeroChasis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Número de motor.
+        /// </summary>
+        internal static string lblNumeroMotor {
+            get {
+                return ResourceManager.GetString("lblNumeroMotor", resourceCulture);
             }
         }
         
@@ -556,11 +1204,29 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa el PIN de seguridad:.
+        /// </summary>
+        internal static string lblPINsec {
+            get {
+                return ResourceManager.GetString("lblPINsec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ingresa un PIN de seguridad. (Mínimo de 10 caracteres)..
         /// </summary>
         internal static string lblPINseguridad {
             get {
                 return ResourceManager.GetString("lblPINseguridad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Matrícula/ Placa:.
+        /// </summary>
+        internal static string lblPlaca {
+            get {
+                return ResourceManager.GetString("lblPlaca", resourceCulture);
             }
         }
         
@@ -628,11 +1294,83 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Teléfono del empleado.
+        /// </summary>
+        internal static string lblTelefonoEmpleado {
+            get {
+                return ResourceManager.GetString("lblTelefonoEmpleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo cliente.
+        /// </summary>
+        internal static string lblTipoClientes {
+            get {
+                return ResourceManager.GetString("lblTipoClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo de Licencia:.
+        /// </summary>
+        internal static string lblTipoLicencia {
+            get {
+                return ResourceManager.GetString("lblTipoLicencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo de placa:.
+        /// </summary>
+        internal static string lblTipoPlaca {
+            get {
+                return ResourceManager.GetString("lblTipoPlaca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo de la unidad:.
+        /// </summary>
+        internal static string lblTipoUnidad {
+            get {
+                return ResourceManager.GetString("lblTipoUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Tipo viaje:.
         /// </summary>
         internal static string lblTipoViaje {
             get {
                 return ResourceManager.GetString("lblTipoViaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo de viaje:.
+        /// </summary>
+        internal static string lblTipoViajePrincipal {
+            get {
+                return ResourceManager.GetString("lblTipoViajePrincipal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a último Kilimetraje:.
+        /// </summary>
+        internal static string lblUltimoK {
+            get {
+                return ResourceManager.GetString("lblUltimoK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Unidad.
+        /// </summary>
+        internal static string lblUnidad {
+            get {
+                return ResourceManager.GetString("lblUnidad", resourceCulture);
             }
         }
         
@@ -646,11 +1384,38 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Unidades de transporte..
+        /// </summary>
+        internal static string lblUnidadestransporte {
+            get {
+                return ResourceManager.GetString("lblUnidadestransporte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Unidad de Transporte:.
+        /// </summary>
+        internal static string lblUnidadTransporte {
+            get {
+                return ResourceManager.GetString("lblUnidadTransporte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Usuario:.
         /// </summary>
         internal static string lblUsuario {
             get {
                 return ResourceManager.GetString("lblUsuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingresa el usuario a recuperar:.
+        /// </summary>
+        internal static string lblUsuarioArecuperar {
+            get {
+                return ResourceManager.GetString("lblUsuarioArecuperar", resourceCulture);
             }
         }
         
@@ -696,6 +1461,24 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblViajesActivos {
             get {
                 return ResourceManager.GetString("lblViajesActivos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Viajes.
+        /// </summary>
+        internal static string lblViajesPrincipal {
+            get {
+                return ResourceManager.GetString("lblViajesPrincipal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a VIN:.
+        /// </summary>
+        internal static string lblVIN {
+            get {
+                return ResourceManager.GetString("lblVIN", resourceCulture);
             }
         }
     }

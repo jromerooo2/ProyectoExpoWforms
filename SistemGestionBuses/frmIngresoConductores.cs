@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -32,6 +35,8 @@ namespace SistemGestionBuses
 
             CargarGridDatos();
             CargarTipoLicencia();
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
         //CMB tipo licencia
         void CargarTipoLicencia()
@@ -262,6 +267,38 @@ namespace SistemGestionBuses
         private void picBackground_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblAdministraciondeConductores.Text = Res.lblAdminConductores;
+            lblNombreConductor.Text = Res.lblNombreConductor;
+            lblLicencia.Text = Res.lblLicencia;
+            lblTipoLicencia.Text = Res.lblTipoLicencia;
+            lblFechalimiteLicencia.Text = Res.lblFechaLimiteLicencia;
+            lblIDemple.Text = Res.lblIDempleado;
+            lblIDCond.Text = Res.lblIDconductor;
+            BtnAgregar.Text = Res.btnAgregarConductor;
+            btnLimpiar.Text = Res.btnLimpiarCampos;
+            BtnEliminar.Text = Res.btnEliminarConductor;
+            BtnActualizar.Text = Res.btnModificarConductor;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

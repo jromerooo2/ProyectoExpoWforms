@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using MySql.Data.MySqlClient;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -31,6 +34,8 @@ namespace SistemGestionBuses
             idlogged = iduser;
             idcargo = cargoid;
             btnAsignar.Enabled = false;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
         void CargarGridDatos()
         {
@@ -399,6 +404,40 @@ namespace SistemGestionBuses
         private void dgvDatosCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblNombres.Text = Res.lblNombres;
+            lblApellidos.Text = Res.lblApellidos;
+            lblNumerocel.Text = Res.lblNumerocel;
+            lblDireccion.Text = Res.lblDireccion;
+            lblCorreo.Text = Res.lblCorreoClientes;
+            lblTipoCliente.Text = Res.lblTipoClientes;
+            lblFiltrarporNombre.Text = Res.lblFiltrarporNombre;
+            btnAsignar.Text = Res.btnAsignarViajeCliente;
+            btnAgregarCliente.Text = Res.btnAgregarClientes;
+            btnLimpiarCampos.Text = Res.btnLimpiarCampos;
+            btnActualizarCliente.Text = Res.btnActualizarCliente;
+            btnEliminarClientes.Text = Res.btnEliminarCliente;
+            btnActualizarGrid.Text = Res.btnActualizarGrid;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

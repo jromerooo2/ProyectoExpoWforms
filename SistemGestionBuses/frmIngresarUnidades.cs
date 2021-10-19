@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -36,6 +39,8 @@ namespace SistemGestionBuses
             txtVIN.MaxLength = 20;
             txtAnio.MaxLength = 4;
             txtCapacidad.MaxLength = 3;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
         DataTable unidades;
         public ControladorTransporte transportecontrol;
@@ -401,6 +406,45 @@ namespace SistemGestionBuses
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+                lblUnidadesTransporte.Text = Res.lblUnidadestransporte;
+                lblMarca.Text = Res.lblMarca;
+                lblModelo.Text = Res.lblModelo;
+                lblAnio.Text = Res.lblAnioVehiculo;
+                lblPlaca.Text = Res.lblPlaca;
+                lblVIN.Text = Res.lblVIN;
+                lblTipoUnidad.Text = Res.lblTipoUnidad;
+                lblCapacidadUnidad.Text = Res.lblCapacidadUnidad;
+                lblNumeroChasis.Text = Res.lblNumeroChasis;
+                lblNúmeroMotor.Text = Res.lblNumeroMotor;
+                lblTipoPlaca.Text = Res.lblTipoPlaca;
+                lblEstadoUnidad.Text = Res.lblEstadoUnidad;
+                lblIDunidad.Text = Res.lblIDunidad;
+                btnCrearUnidad.Text = Res.btnAgregarUnidad;
+                btnLimpiarCampos.Text = Res.btnLimpiarCampos;
+                btnActualizar.Text = Res.btnActualizarUnidad;
+                btnEliminar.Text = Res.btnEliminarUnidad;
+                btnActualizarGrid.Text = Res.btnActualizarGrid;
+                BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

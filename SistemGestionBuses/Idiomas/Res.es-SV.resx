@@ -330,4 +330,226 @@
   <data name="lblViajesActivos" xml:space="preserve">
     <value>Viajes Activos</value>
   </data>
+  <data name="btnActualizarCliente" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="btnActualizarGrid" xml:space="preserve">
+    <value>Actualizar Grid</value>
+  </data>
+  <data name="btnActualizarGridMan" xml:space="preserve">
+    <value>Actualizar grid de datos</value>
+  </data>
+  <data name="btnActualizarUnidad" xml:space="preserve">
+    <value>Actualizar Unidad</value>
+  </data>
+  <data name="btnActualizarViaje" xml:space="preserve">
+    <value>Actualizar Viaje</value>
+  </data>
+  <data name="btnActulizarGrid" xml:space="preserve">
+    <value>Actualizar Grid</value>
+  </data>
+  <data name="btnAgregarClientes" xml:space="preserve">
+    <value>Agregar clientes</value>
+  </data>
+  <data name="btnAgregarConductor" xml:space="preserve">
+    <value>Agregar Conductor</value>
+  </data>
+  <data name="btnAgregarMan" xml:space="preserve">
+    <value>Agregar Mantenimiento</value>
+  </data>
+  <data name="btnAgregarUnidad" xml:space="preserve">
+    <value>Agregar Unidad</value>
+  </data>
+  <data name="btnAsignarDirecciones" xml:space="preserve">
+    <value>Asignar Direcciones</value>
+  </data>
+  <data name="btnAsignarViajeCliente" xml:space="preserve">
+    <value>Asignar viaje</value>
+  </data>
+  <data name="btnConectar" xml:space="preserve">
+    <value>Conectar</value>
+  </data>
+  <data name="btnConfirmarIdentidad" xml:space="preserve">
+    <value>Confirmar Identidad</value>
+  </data>
+  <data name="btnCrearViaje" xml:space="preserve">
+    <value>Crear Viaje</value>
+  </data>
+  <data name="btnEliminarCliente" xml:space="preserve">
+    <value>Eliminar cliente</value>
+  </data>
+  <data name="btnEliminarConductor" xml:space="preserve">
+    <value>Eliminar Conductor</value>
+  </data>
+  <data name="btnEliminarMan" xml:space="preserve">
+    <value>Eliminar Mantenimiento</value>
+  </data>
+  <data name="btnEliminarUnidad" xml:space="preserve">
+    <value>Eliminar Unidad</value>
+  </data>
+  <data name="btnEliminarViaje" xml:space="preserve">
+    <value>Eliminar Viaje</value>
+  </data>
+  <data name="btnLimpiarCamposunidades" xml:space="preserve">
+    <value>Limpiar Campos</value>
+  </data>
+  <data name="btnModificarConductor" xml:space="preserve">
+    <value>Modificar Conductor</value>
+  </data>
+  <data name="btnModificarMan" xml:space="preserve">
+    <value>Modificar Mantenimiento</value>
+  </data>
+  <data name="hola" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdminConductores" xml:space="preserve">
+    <value>Administración de conductores</value>
+  </data>
+  <data name="lblAnioVehiculo" xml:space="preserve">
+    <value>Año de la unidad:</value>
+  </data>
+  <data name="lblApellidos" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="lblCapacidadUnidad" xml:space="preserve">
+    <value>Capacidad de la unidad:</value>
+  </data>
+  <data name="lblClienteViajes" xml:space="preserve">
+    <value>Cliente:</value>
+  </data>
+  <data name="lblConductorAsignado" xml:space="preserve">
+    <value>Conductor Asignado:</value>
+  </data>
+  <data name="lblConfirmarContra" xml:space="preserve">
+    <value>Confirmar Contraseña:</value>
+  </data>
+  <data name="lblCorreoClientes" xml:space="preserve">
+    <value>Correo</value>
+  </data>
+  <data name="lblDescripcion" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="lblDireccionClientes" xml:space="preserve">
+    <value>Direccion</value>
+  </data>
+  <data name="lblDUICo" xml:space="preserve">
+    <value>Ingresa el DUI correspondiente:</value>
+  </data>
+  <data name="lblEstadoUnidad" xml:space="preserve">
+    <value>Estado de la unidad:</value>
+  </data>
+  <data name="lblEstadoViaje" xml:space="preserve">
+    <value>Estado del viaje:</value>
+  </data>
+  <data name="lblFecha" xml:space="preserve">
+    <value>Fecha:</value>
+  </data>
+  <data name="lblFechaInicioViaje" xml:space="preserve">
+    <value>Fecha de inicio del viaje:</value>
+  </data>
+  <data name="lblFechaLimiteLicencia" xml:space="preserve">
+    <value>Fecha de exporación de la licencia:</value>
+  </data>
+  <data name="lblFecharetornoViaje" xml:space="preserve">
+    <value>Fecha de retorno del viaje:</value>
+  </data>
+  <data name="lblFiltrarporNombre" xml:space="preserve">
+    <value>Filtrar por nombre</value>
+  </data>
+  <data name="lblIDconductor" xml:space="preserve">
+    <value>ID Conduc:</value>
+  </data>
+  <data name="lblIDempleado" xml:space="preserve">
+    <value>ID Empl:</value>
+  </data>
+  <data name="lblIDMan" xml:space="preserve">
+    <value>ID Mantenimiento</value>
+  </data>
+  <data name="lblIDunidad" xml:space="preserve">
+    <value>ID de la unidad</value>
+  </data>
+  <data name="lblIDViaje" xml:space="preserve">
+    <value>ID del viaje</value>
+  </data>
+  <data name="lblLicencia" xml:space="preserve">
+    <value>Licencia:</value>
+  </data>
+  <data name="lblMantenimiento" xml:space="preserve">
+    <value>Mantenimientos</value>
+  </data>
+  <data name="lblMarca" xml:space="preserve">
+    <value>Marca de la unidad:</value>
+  </data>
+  <data name="lblModelo" xml:space="preserve">
+    <value>Modelo de la unidad:</value>
+  </data>
+  <data name="lblMontoMan" xml:space="preserve">
+    <value>Monto del mantenimiento:</value>
+  </data>
+  <data name="lblNITCo" xml:space="preserve">
+    <value>Ingresa el NIT correspondiente:</value>
+  </data>
+  <data name="lblNombreConductor" xml:space="preserve">
+    <value>Nombre del Conductor</value>
+  </data>
+  <data name="lblNombres" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="lblNombreViajePrincipal" xml:space="preserve">
+    <value>Nombre del viaje:</value>
+  </data>
+  <data name="lblNuevaContra" xml:space="preserve">
+    <value>Nueva Contraseña:</value>
+  </data>
+  <data name="lblNumerocel" xml:space="preserve">
+    <value>Numero cel</value>
+  </data>
+  <data name="lblNumeroChasis" xml:space="preserve">
+    <value>Número de chasis</value>
+  </data>
+  <data name="lblNumeroMotor" xml:space="preserve">
+    <value>Número de motor</value>
+  </data>
+  <data name="lblPINsec" xml:space="preserve">
+    <value>Ingresa el PIN de seguridad:</value>
+  </data>
+  <data name="lblPlaca" xml:space="preserve">
+    <value>Matrícula/ Placa:</value>
+  </data>
+  <data name="lblTipoClientes" xml:space="preserve">
+    <value>Tipo cliente</value>
+  </data>
+  <data name="lblTipoLicencia" xml:space="preserve">
+    <value>Tipo de Licencia:</value>
+  </data>
+  <data name="lblTipoPlaca" xml:space="preserve">
+    <value>Tipo de placa:</value>
+  </data>
+  <data name="lblTipoUnidad" xml:space="preserve">
+    <value>Tipo de la unidad:</value>
+  </data>
+  <data name="lblTipoViajePrincipal" xml:space="preserve">
+    <value>Tipo de viaje:</value>
+  </data>
+  <data name="lblUltimoK" xml:space="preserve">
+    <value>último Kilimetraje:</value>
+  </data>
+  <data name="lblUnidad" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="lblUnidadestransporte" xml:space="preserve">
+    <value>Unidades de transporte.</value>
+  </data>
+  <data name="lblUnidadTransporte" xml:space="preserve">
+    <value>Unidad de Transporte:</value>
+  </data>
+  <data name="lblUsuarioArecuperar" xml:space="preserve">
+    <value>Ingresa el usuario a recuperar:</value>
+  </data>
+  <data name="lblViajesPrincipal" xml:space="preserve">
+    <value>Viajes</value>
+  </data>
+  <data name="lblVIN" xml:space="preserve">
+    <value>VIN:</value>
+  </data>
 </root>

@@ -30,29 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoConductores));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtIDConduc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblIDCond = new System.Windows.Forms.Label();
             this.txtIDEmpl = new System.Windows.Forms.TextBox();
             this.dtpExpLicencia = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblIDemple = new System.Windows.Forms.Label();
+            this.lblFechalimiteLicencia = new System.Windows.Forms.Label();
+            this.lblLicencia = new System.Windows.Forms.Label();
             this.txtLicencia = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblNombreConductor = new System.Windows.Forms.Label();
             this.txtNombreConduc = new System.Windows.Forms.TextBox();
             this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTipoLicencia = new System.Windows.Forms.Label();
             this.picBackground = new System.Windows.Forms.PictureBox();
             this.dgvConductores = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdministraciondeConductores = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dragCtrlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
@@ -65,6 +65,8 @@
             this.txtCargoStrip = new System.Windows.Forms.ToolStripLabel();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).BeginInit();
@@ -159,21 +161,21 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel2.Controls.Add(this.txtIDConduc);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblIDCond);
             this.panel2.Controls.Add(this.BtnEliminar);
             this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.BtnActualizar);
             this.panel2.Controls.Add(this.txtIDEmpl);
             this.panel2.Controls.Add(this.dtpExpLicencia);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.lblIDemple);
             this.panel2.Controls.Add(this.BtnAgregar);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.lblApellido);
+            this.panel2.Controls.Add(this.lblFechalimiteLicencia);
+            this.panel2.Controls.Add(this.lblLicencia);
             this.panel2.Controls.Add(this.txtLicencia);
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.lblNombreConductor);
             this.panel2.Controls.Add(this.txtNombreConduc);
             this.panel2.Controls.Add(this.cmbTipoLicencia);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lblTipoLicencia);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(31, 168);
             this.panel2.Name = "panel2";
@@ -190,16 +192,16 @@
             this.txtIDConduc.Size = new System.Drawing.Size(119, 22);
             this.txtIDConduc.TabIndex = 73;
             // 
-            // label2
+            // lblIDCond
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label2.Location = new System.Drawing.Point(184, 197);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "ID Conduc:";
+            this.lblIDCond.AutoSize = true;
+            this.lblIDCond.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDCond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblIDCond.Location = new System.Drawing.Point(184, 197);
+            this.lblIDCond.Name = "lblIDCond";
+            this.lblIDCond.Size = new System.Drawing.Size(86, 20);
+            this.lblIDCond.TabIndex = 74;
+            this.lblIDCond.Text = "ID Conduc:";
             // 
             // txtIDEmpl
             // 
@@ -225,39 +227,39 @@
             this.dtpExpLicencia.TabIndex = 72;
             this.dtpExpLicencia.Value = new System.DateTime(2021, 9, 17, 8, 10, 17, 110);
             // 
-            // label7
+            // lblIDemple
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(26, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
-            this.label7.TabIndex = 68;
-            this.label7.Text = "ID Empl:";
+            this.lblIDemple.AutoSize = true;
+            this.lblIDemple.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDemple.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblIDemple.Location = new System.Drawing.Point(26, 197);
+            this.lblIDemple.Name = "lblIDemple";
+            this.lblIDemple.Size = new System.Drawing.Size(69, 20);
+            this.lblIDemple.TabIndex = 68;
+            this.lblIDemple.Text = "ID Empl:";
             // 
-            // label6
+            // lblFechalimiteLicencia
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(26, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(257, 20);
-            this.label6.TabIndex = 65;
-            this.label6.Text = "Fecha de expiración de la licencia:";
+            this.lblFechalimiteLicencia.AutoSize = true;
+            this.lblFechalimiteLicencia.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechalimiteLicencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblFechalimiteLicencia.Location = new System.Drawing.Point(26, 127);
+            this.lblFechalimiteLicencia.Name = "lblFechalimiteLicencia";
+            this.lblFechalimiteLicencia.Size = new System.Drawing.Size(257, 20);
+            this.lblFechalimiteLicencia.TabIndex = 65;
+            this.lblFechalimiteLicencia.Text = "Fecha de expiración de la licencia:";
             // 
-            // lblApellido
+            // lblLicencia
             // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.lblApellido.Location = new System.Drawing.Point(26, 68);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(73, 20);
-            this.lblApellido.TabIndex = 62;
-            this.lblApellido.Text = "Licencia:";
-            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblLicencia.AutoSize = true;
+            this.lblLicencia.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLicencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblLicencia.Location = new System.Drawing.Point(26, 68);
+            this.lblLicencia.Name = "lblLicencia";
+            this.lblLicencia.Size = new System.Drawing.Size(73, 20);
+            this.lblLicencia.TabIndex = 62;
+            this.lblLicencia.Text = "Licencia:";
+            this.lblLicencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtLicencia
             // 
@@ -270,17 +272,17 @@
             this.txtLicencia.TabIndex = 61;
             this.txtLicencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicencia_KeyPress);
             // 
-            // label12
+            // lblNombreConductor
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label12.Location = new System.Drawing.Point(26, 11);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(168, 20);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Nombre del Conductor";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNombreConductor.AutoSize = true;
+            this.lblNombreConductor.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreConductor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblNombreConductor.Location = new System.Drawing.Point(26, 11);
+            this.lblNombreConductor.Name = "lblNombreConductor";
+            this.lblNombreConductor.Size = new System.Drawing.Size(168, 20);
+            this.lblNombreConductor.TabIndex = 50;
+            this.lblNombreConductor.Text = "Nombre del Conductor";
+            this.lblNombreConductor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtNombreConduc
             // 
@@ -302,16 +304,16 @@
             this.cmbTipoLicencia.Size = new System.Drawing.Size(126, 24);
             this.cmbTipoLicencia.TabIndex = 22;
             // 
-            // label4
+            // lblTipoLicencia
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(195, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 20);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Tipo de Licencia:";
+            this.lblTipoLicencia.AutoSize = true;
+            this.lblTipoLicencia.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoLicencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblTipoLicencia.Location = new System.Drawing.Point(195, 68);
+            this.lblTipoLicencia.Name = "lblTipoLicencia";
+            this.lblTipoLicencia.Size = new System.Drawing.Size(130, 20);
+            this.lblTipoLicencia.TabIndex = 21;
+            this.lblTipoLicencia.Text = "Tipo de Licencia:";
             // 
             // picBackground
             // 
@@ -333,23 +335,23 @@
             this.dgvConductores.AllowUserToDeleteRows = false;
             this.dgvConductores.AllowUserToResizeColumns = false;
             this.dgvConductores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvConductores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvConductores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvConductores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConductores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.dgvConductores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConductores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dgvConductores.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvConductores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConductores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConductores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvConductores.ColumnHeadersHeight = 40;
             this.dgvConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvConductores.DoubleBuffered = true;
@@ -361,29 +363,29 @@
             this.dgvConductores.Name = "dgvConductores";
             this.dgvConductores.ReadOnly = true;
             this.dgvConductores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConductores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConductores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvConductores.RowHeadersWidth = 30;
             this.dgvConductores.Size = new System.Drawing.Size(512, 363);
             this.dgvConductores.TabIndex = 80;
             this.dgvConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConductores_CellClick_1);
             // 
-            // label1
+            // lblAdministraciondeConductores
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(156, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 92);
-            this.label1.TabIndex = 101;
-            this.label1.Text = "Administración de \r\nconductores.\r\n";
+            this.lblAdministraciondeConductores.BackColor = System.Drawing.Color.White;
+            this.lblAdministraciondeConductores.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministraciondeConductores.Location = new System.Drawing.Point(156, 53);
+            this.lblAdministraciondeConductores.Name = "lblAdministraciondeConductores";
+            this.lblAdministraciondeConductores.Size = new System.Drawing.Size(490, 92);
+            this.lblAdministraciondeConductores.TabIndex = 101;
+            this.lblAdministraciondeConductores.Text = "Administración de \r\nconductores.\r\n";
             // 
             // pictureBox1
             // 
@@ -522,14 +524,46 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(665, 92);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(194, 26);
+            this.cmbIdioma.TabIndex = 173;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(687, 56);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 174;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
+            // 
             // frmIngresoConductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 582);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.BtnCambiarIdioma);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAdministraciondeConductores);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvConductores);
             this.Controls.Add(this.panel2);
@@ -558,17 +592,17 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblFechalimiteLicencia;
+        private System.Windows.Forms.Label lblLicencia;
         private System.Windows.Forms.TextBox txtLicencia;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblNombreConductor;
         private System.Windows.Forms.TextBox txtNombreConduc;
         private System.Windows.Forms.ComboBox cmbTipoLicencia;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTipoLicencia;
         private System.Windows.Forms.PictureBox picBackground;
         private Bunifu.Framework.UI.BunifuDatepicker dtpExpLicencia;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvConductores;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAdministraciondeConductores;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuDragControl dragCtrlMain;
         private System.Windows.Forms.Panel panelBar;
@@ -582,8 +616,10 @@
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.TextBox txtIDConduc;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblIDCond;
         private System.Windows.Forms.TextBox txtIDEmpl;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblIDemple;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using MySql.Data.MySqlClient;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -32,6 +35,8 @@ namespace SistemGestionBuses
             CargarGridDatos();
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
 
         public bool Vacio()
@@ -525,6 +530,46 @@ namespace SistemGestionBuses
                 }
             }
             return false;
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblViajesPrincipal.Text = Res.lblViajesPrincipal;
+            lblCliente.Text = Res.lblClienteViajes;
+            lblNombreViaje.Text = Res.lblNombreViaje;
+            lblFechaInicio.Text = Res.lblFechaInicioViaje;
+            lblFechaRetorno.Text = Res.lblFecharetornoViaje;
+            lblTipoViaje.Text = Res.lblTipoViaje;
+            lblEstadoViaje.Text = Res.lblEstadoViaje;
+            lblUnidadTransporte.Text = Res.lblUnidadTransporte;
+            lblConductorAsignado.Text = Res.lblConductorAsignado;
+            lblTarifaViaje.Text = Res.lblTarifa;
+            lblMunicipio.Text = Res.lblMunicipio;
+            lblIDViaje.Text = Res.lblIDViaje;
+            btnActualizar.Text = Res.btnActualizarViaje;
+            btnEliminar.Text = Res.btnEliminarViaje;
+            btnActualizar.Text = Res.btnActualizarViaje;
+            btnCrearViaje.Text = Res.btnCrearViaje;
+            btnLimpiarCampos.Text = Res.btnLimpiarCampos;
+            btnActualizarGrid.Text = Res.btnActulizarGrid;
+            btnAsignarDirecciones.Text = Res.btnAsignarDirecciones;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

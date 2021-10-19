@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using System.IO;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -29,6 +32,8 @@ namespace SistemGestionBuses
             txtConfirmacionNueva.Enabled = false;
             txtNueva.UseSystemPasswordChar = true;
             txtConfirmacionNueva.UseSystemPasswordChar = true;
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
 
         private void btnNueva_Click_1(object sender, EventArgs e)
@@ -161,6 +166,36 @@ namespace SistemGestionBuses
             {
                 txtConfirmacionNueva.UseSystemPasswordChar = true;
             }
+        }
+
+        //CargarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblUsuariorecuperar.Text = Res.lblUsuarioArecuperar;
+            lblNitCo.Text = Res.lblNITCo;
+            lblDUICo.Text = Res.lblDUICo;
+            lblIngresoCodigo.Text = Res.lblPINsec;
+            lblNuevaContraseña.Text = Res.lblNuevaContra;
+            lblConfirmarContraseña.Text = Res.lblConfirmarContra;
+            btnConfirmar.Text = Res.btnConfirmar;
+            btnNueva.Text = Res.btnConfirmar;
+            btnIdentidad.Text = Res.btnConfirmarIdentidad;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

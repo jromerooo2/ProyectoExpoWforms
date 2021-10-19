@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoCliente));
             this.dgvDatosCliente = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblNumerocel = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblApellidos = new System.Windows.Forms.Label();
+            this.lblNombres = new System.Windows.Forms.Label();
             this.cmbTipCliente = new System.Windows.Forms.ComboBox();
             this.txtDirCliente = new System.Windows.Forms.TextBox();
             this.txtApeCliente = new System.Windows.Forms.TextBox();
@@ -48,15 +48,15 @@
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblTipoCliente = new System.Windows.Forms.Label();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.txtTelCliente = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnActualizarGrid = new System.Windows.Forms.Button();
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -71,8 +71,10 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblFiltrarporNombre = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -91,23 +93,23 @@
             // 
             this.dgvDatosCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDatosCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatosCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatosCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDatosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatosCliente.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatosCliente.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDatosCliente.Location = new System.Drawing.Point(188, 392);
             this.dgvDatosCliente.Name = "dgvDatosCliente";
             this.dgvDatosCliente.Size = new System.Drawing.Size(489, 151);
@@ -115,67 +117,67 @@
             this.dgvDatosCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             this.dgvDatosCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatosCliente_CellContentClick);
             // 
-            // label5
+            // lblCorreo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(242, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 18);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Correo";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCorreo.ForeColor = System.Drawing.Color.White;
+            this.lblCorreo.Location = new System.Drawing.Point(242, 75);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(49, 18);
+            this.lblCorreo.TabIndex = 57;
+            this.lblCorreo.Text = "Correo";
+            this.lblCorreo.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label4
+            // lblNumerocel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(324, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 18);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "Numero cel";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblNumerocel.AutoSize = true;
+            this.lblNumerocel.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumerocel.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblNumerocel.ForeColor = System.Drawing.Color.White;
+            this.lblNumerocel.Location = new System.Drawing.Point(324, 10);
+            this.lblNumerocel.Name = "lblNumerocel";
+            this.lblNumerocel.Size = new System.Drawing.Size(78, 18);
+            this.lblNumerocel.TabIndex = 56;
+            this.lblNumerocel.Text = "Numero cel";
+            this.lblNumerocel.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label3
+            // lblDireccion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "Direccion";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblDireccion.ForeColor = System.Drawing.Color.White;
+            this.lblDireccion.Location = new System.Drawing.Point(5, 69);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(66, 18);
+            this.lblDireccion.TabIndex = 55;
+            this.lblDireccion.Text = "Direccion";
+            this.lblDireccion.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // lblApellidos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(157, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 18);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Apellidos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblApellidos.AutoSize = true;
+            this.lblApellidos.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblApellidos.ForeColor = System.Drawing.Color.White;
+            this.lblApellidos.Location = new System.Drawing.Point(157, 10);
+            this.lblApellidos.Name = "lblApellidos";
+            this.lblApellidos.Size = new System.Drawing.Size(64, 18);
+            this.lblApellidos.TabIndex = 54;
+            this.lblApellidos.Text = "Apellidos";
+            this.lblApellidos.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label1
+            // lblNombres
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 18);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Nombres";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombres.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblNombres.ForeColor = System.Drawing.Color.White;
+            this.lblNombres.Location = new System.Drawing.Point(7, 10);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(62, 18);
+            this.lblNombres.TabIndex = 53;
+            this.lblNombres.Text = "Nombres";
+            this.lblNombres.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbTipCliente
             // 
@@ -288,30 +290,30 @@
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             // 
-            // label6
+            // lblTipoCliente
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(242, 125);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 18);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "Tipo cliente";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lblTipoCliente.AutoSize = true;
+            this.lblTipoCliente.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblTipoCliente.ForeColor = System.Drawing.Color.White;
+            this.lblTipoCliente.Location = new System.Drawing.Point(242, 125);
+            this.lblTipoCliente.Name = "lblTipoCliente";
+            this.lblTipoCliente.Size = new System.Drawing.Size(81, 18);
+            this.lblTipoCliente.TabIndex = 60;
+            this.lblTipoCliente.Text = "Tipo cliente";
+            this.lblTipoCliente.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button1
+            // btnLimpiarCampos
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(9, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 40);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Limpiar Campos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.BtnLimCampos_Click);
+            this.btnLimpiarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(9, 62);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(136, 40);
+            this.btnLimpiarCampos.TabIndex = 61;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.BtnLimCampos_Click);
             // 
             // panel1
             // 
@@ -323,14 +325,14 @@
             this.panel1.Controls.Add(this.txtIdCliente);
             this.panel1.Controls.Add(this.txtApeCliente);
             this.panel1.Controls.Add(this.txtCorCliente);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblApellidos);
+            this.panel1.Controls.Add(this.lblTipoCliente);
             this.panel1.Controls.Add(this.txtDirCliente);
             this.panel1.Controls.Add(this.txtNomCliente);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblNumerocel);
+            this.panel1.Controls.Add(this.lblCorreo);
+            this.panel1.Controls.Add(this.lblNombres);
+            this.panel1.Controls.Add(this.lblDireccion);
             this.panel1.Location = new System.Drawing.Point(188, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(489, 243);
@@ -381,30 +383,32 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel2.Controls.Add(this.btnAgregarCliente);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnLimpiarCampos);
             this.panel2.Location = new System.Drawing.Point(9, 210);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(157, 117);
             this.panel2.TabIndex = 79;
             // 
-            // button2
+            // btnActualizarGrid
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(12, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 40);
-            this.button2.TabIndex = 62;
-            this.button2.Text = "Actualizar Grid de datos";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.BtnActualizarGrid_click);
+            this.btnActualizarGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarGrid.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnActualizarGrid.Location = new System.Drawing.Point(12, 11);
+            this.btnActualizarGrid.Name = "btnActualizarGrid";
+            this.btnActualizarGrid.Size = new System.Drawing.Size(136, 40);
+            this.btnActualizarGrid.TabIndex = 62;
+            this.btnActualizarGrid.Text = "Actualizar Grid";
+            this.btnActualizarGrid.UseVisualStyleBackColor = false;
+            this.btnActualizarGrid.Click += new System.EventHandler(this.BtnActualizarGrid_click);
             // 
             // panelBar
             // 
             this.panelBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.cmbIdioma);
+            this.panelBar.Controls.Add(this.BtnCambiarIdioma);
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
@@ -556,22 +560,22 @@
             this.textBox1.TabIndex = 132;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // label13
+            // lblFiltrarporNombre
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(185, 343);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(127, 17);
-            this.label13.TabIndex = 133;
-            this.label13.Text = "Filtrar por nombre";
+            this.lblFiltrarporNombre.AutoSize = true;
+            this.lblFiltrarporNombre.BackColor = System.Drawing.Color.White;
+            this.lblFiltrarporNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrarporNombre.Location = new System.Drawing.Point(185, 343);
+            this.lblFiltrarporNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFiltrarporNombre.Name = "lblFiltrarporNombre";
+            this.lblFiltrarporNombre.Size = new System.Drawing.Size(127, 17);
+            this.lblFiltrarporNombre.TabIndex = 133;
+            this.lblFiltrarporNombre.Text = "Filtrar por nombre";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnActualizarGrid);
             this.panel3.Controls.Add(this.btnEliminarClientes);
             this.panel3.Controls.Add(this.btnActualizarCliente);
             this.panel3.Location = new System.Drawing.Point(12, 380);
@@ -579,13 +583,43 @@
             this.panel3.Size = new System.Drawing.Size(157, 163);
             this.panel3.TabIndex = 80;
             // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(87, 9);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 172;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(265, 12);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(194, 26);
+            this.cmbIdioma.TabIndex = 171;
+            // 
             // frmIngresoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 596);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblFiltrarporNombre);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.toolStrip1);
@@ -621,11 +655,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDatosCliente;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblNumerocel;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblApellidos;
+        private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.ComboBox cmbTipCliente;
         private System.Windows.Forms.TextBox txtDirCliente;
         private System.Windows.Forms.TextBox txtApeCliente;
@@ -636,13 +670,13 @@
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblTipoCliente;
+        private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIdCliente;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnActualizarGrid;
         private System.Windows.Forms.MaskedTextBox txtTelCliente;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
@@ -659,7 +693,9 @@
         private System.Windows.Forms.Button btnAsignar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblFiltrarporNombre;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

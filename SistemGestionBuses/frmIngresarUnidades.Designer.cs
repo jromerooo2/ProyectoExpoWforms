@@ -32,26 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnidades));
             this.ElipseFormulario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblEstadoUnidad = new System.Windows.Forms.Label();
             this.cmbEstadoUnidad = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTipoPlaca = new System.Windows.Forms.Label();
             this.cmbTipoPlaca = new System.Windows.Forms.ComboBox();
             this.txtNumeroChasis = new System.Windows.Forms.TextBox();
             this.txtNumeroMotor = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
             this.txtVIN = new System.Windows.Forms.TextBox();
             this.txtAnio = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNúmeroMotor = new System.Windows.Forms.Label();
+            this.lblNumeroChasis = new System.Windows.Forms.Label();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblVIN = new System.Windows.Forms.Label();
             this.btnCrearUnidad = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.lblPlaca = new System.Windows.Forms.Label();
+            this.lblTipoUnidad = new System.Windows.Forms.Label();
+            this.lblCapacidadUnidad = new System.Windows.Forms.Label();
+            this.lblAnio = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
             this.cmbTipoUnidad = new System.Windows.Forms.ComboBox();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtIDunidad = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblIDunidad = new System.Windows.Forms.Label();
             this.dgvUnidades = new System.Windows.Forms.DataGridView();
             this.DragControlGeneral = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
@@ -102,26 +102,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panelFormularios.Controls.Add(this.label13);
+            this.panelFormularios.Controls.Add(this.lblEstadoUnidad);
             this.panelFormularios.Controls.Add(this.cmbEstadoUnidad);
-            this.panelFormularios.Controls.Add(this.label10);
+            this.panelFormularios.Controls.Add(this.lblTipoPlaca);
             this.panelFormularios.Controls.Add(this.cmbTipoPlaca);
             this.panelFormularios.Controls.Add(this.txtNumeroChasis);
             this.panelFormularios.Controls.Add(this.txtNumeroMotor);
             this.panelFormularios.Controls.Add(this.txtCapacidad);
             this.panelFormularios.Controls.Add(this.txtVIN);
             this.panelFormularios.Controls.Add(this.txtAnio);
-            this.panelFormularios.Controls.Add(this.label4);
-            this.panelFormularios.Controls.Add(this.label3);
+            this.panelFormularios.Controls.Add(this.lblNúmeroMotor);
+            this.panelFormularios.Controls.Add(this.lblNumeroChasis);
             this.panelFormularios.Controls.Add(this.btnLimpiarCampos);
-            this.panelFormularios.Controls.Add(this.label9);
+            this.panelFormularios.Controls.Add(this.lblVIN);
             this.panelFormularios.Controls.Add(this.btnCrearUnidad);
-            this.panelFormularios.Controls.Add(this.label12);
-            this.panelFormularios.Controls.Add(this.label11);
-            this.panelFormularios.Controls.Add(this.label7);
-            this.panelFormularios.Controls.Add(this.label6);
-            this.panelFormularios.Controls.Add(this.label5);
-            this.panelFormularios.Controls.Add(this.label2);
+            this.panelFormularios.Controls.Add(this.lblModelo);
+            this.panelFormularios.Controls.Add(this.lblPlaca);
+            this.panelFormularios.Controls.Add(this.lblTipoUnidad);
+            this.panelFormularios.Controls.Add(this.lblCapacidadUnidad);
+            this.panelFormularios.Controls.Add(this.lblAnio);
+            this.panelFormularios.Controls.Add(this.lblMarca);
             this.panelFormularios.Controls.Add(this.cmbTipoUnidad);
             this.panelFormularios.Controls.Add(this.cmbMarca);
             this.panelFormularios.Controls.Add(this.txtPlaca);
@@ -131,16 +131,16 @@
             this.panelFormularios.Size = new System.Drawing.Size(379, 392);
             this.panelFormularios.TabIndex = 97;
             // 
-            // label13
+            // lblEstadoUnidad
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(13, 278);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 18);
-            this.label13.TabIndex = 107;
-            this.label13.Text = "Estado de la unidad:";
+            this.lblEstadoUnidad.AutoSize = true;
+            this.lblEstadoUnidad.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoUnidad.ForeColor = System.Drawing.Color.White;
+            this.lblEstadoUnidad.Location = new System.Drawing.Point(13, 278);
+            this.lblEstadoUnidad.Name = "lblEstadoUnidad";
+            this.lblEstadoUnidad.Size = new System.Drawing.Size(134, 18);
+            this.lblEstadoUnidad.TabIndex = 107;
+            this.lblEstadoUnidad.Text = "Estado de la unidad:";
             // 
             // cmbEstadoUnidad
             // 
@@ -150,16 +150,16 @@
             this.cmbEstadoUnidad.Size = new System.Drawing.Size(166, 21);
             this.cmbEstadoUnidad.TabIndex = 6;
             // 
-            // label10
+            // lblTipoPlaca
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(198, 226);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 18);
-            this.label10.TabIndex = 105;
-            this.label10.Text = "Tipo de placa:";
+            this.lblTipoPlaca.AutoSize = true;
+            this.lblTipoPlaca.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPlaca.ForeColor = System.Drawing.Color.White;
+            this.lblTipoPlaca.Location = new System.Drawing.Point(198, 226);
+            this.lblTipoPlaca.Name = "lblTipoPlaca";
+            this.lblTipoPlaca.Size = new System.Drawing.Size(96, 18);
+            this.lblTipoPlaca.TabIndex = 105;
+            this.lblTipoPlaca.Text = "Tipo de placa:";
             // 
             // cmbTipoPlaca
             // 
@@ -212,27 +212,27 @@
             this.txtAnio.TextChanged += new System.EventHandler(this.txtAnio_TextChanged);
             this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
             // 
-            // label4
+            // lblNúmeroMotor
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 18);
-            this.label4.TabIndex = 98;
-            this.label4.Text = "Número de motor";
+            this.lblNúmeroMotor.AutoSize = true;
+            this.lblNúmeroMotor.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNúmeroMotor.ForeColor = System.Drawing.Color.White;
+            this.lblNúmeroMotor.Location = new System.Drawing.Point(13, 226);
+            this.lblNúmeroMotor.Name = "lblNúmeroMotor";
+            this.lblNúmeroMotor.Size = new System.Drawing.Size(115, 18);
+            this.lblNúmeroMotor.TabIndex = 98;
+            this.lblNúmeroMotor.Text = "Número de motor";
             // 
-            // label3
+            // lblNumeroChasis
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(194, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 18);
-            this.label3.TabIndex = 97;
-            this.label3.Text = "Número de chasis";
+            this.lblNumeroChasis.AutoSize = true;
+            this.lblNumeroChasis.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroChasis.ForeColor = System.Drawing.Color.White;
+            this.lblNumeroChasis.Location = new System.Drawing.Point(194, 173);
+            this.lblNumeroChasis.Name = "lblNumeroChasis";
+            this.lblNumeroChasis.Size = new System.Drawing.Size(117, 18);
+            this.lblNumeroChasis.TabIndex = 97;
+            this.lblNumeroChasis.Text = "Número de chasis";
             // 
             // btnLimpiarCampos
             // 
@@ -251,16 +251,16 @@
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
-            // label9
+            // lblVIN
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 18);
-            this.label9.TabIndex = 96;
-            this.label9.Text = "VIN:";
+            this.lblVIN.AutoSize = true;
+            this.lblVIN.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVIN.ForeColor = System.Drawing.Color.White;
+            this.lblVIN.Location = new System.Drawing.Point(11, 117);
+            this.lblVIN.Name = "lblVIN";
+            this.lblVIN.Size = new System.Drawing.Size(34, 18);
+            this.lblVIN.TabIndex = 96;
+            this.lblVIN.Text = "VIN:";
             // 
             // btnCrearUnidad
             // 
@@ -281,71 +281,71 @@
             this.btnCrearUnidad.UseVisualStyleBackColor = false;
             this.btnCrearUnidad.Click += new System.EventHandler(this.btnCrearUnidad_Click);
             // 
-            // label12
+            // lblModelo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(194, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 18);
-            this.label12.TabIndex = 87;
-            this.label12.Text = "Modelo de la unidad:";
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.ForeColor = System.Drawing.Color.White;
+            this.lblModelo.Location = new System.Drawing.Point(194, 15);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(137, 18);
+            this.lblModelo.TabIndex = 87;
+            this.lblModelo.Text = "Modelo de la unidad:";
             // 
-            // label11
+            // lblPlaca
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(194, 64);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 18);
-            this.label11.TabIndex = 86;
-            this.label11.Text = "Matricula/ Placa:";
+            this.lblPlaca.AutoSize = true;
+            this.lblPlaca.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaca.ForeColor = System.Drawing.Color.White;
+            this.lblPlaca.Location = new System.Drawing.Point(194, 64);
+            this.lblPlaca.Name = "lblPlaca";
+            this.lblPlaca.Size = new System.Drawing.Size(113, 18);
+            this.lblPlaca.TabIndex = 86;
+            this.lblPlaca.Text = "Matricula/ Placa:";
             // 
-            // label7
+            // lblTipoUnidad
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(194, 117);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 18);
-            this.label7.TabIndex = 82;
-            this.label7.Text = "Tipo de la unidad:";
+            this.lblTipoUnidad.AutoSize = true;
+            this.lblTipoUnidad.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUnidad.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUnidad.Location = new System.Drawing.Point(194, 117);
+            this.lblTipoUnidad.Name = "lblTipoUnidad";
+            this.lblTipoUnidad.Size = new System.Drawing.Size(121, 18);
+            this.lblTipoUnidad.TabIndex = 82;
+            this.lblTipoUnidad.Text = "Tipo de la unidad:";
             // 
-            // label6
+            // lblCapacidadUnidad
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 173);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 18);
-            this.label6.TabIndex = 81;
-            this.label6.Text = "Capacidad de la unidad:";
+            this.lblCapacidadUnidad.AutoSize = true;
+            this.lblCapacidadUnidad.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacidadUnidad.ForeColor = System.Drawing.Color.White;
+            this.lblCapacidadUnidad.Location = new System.Drawing.Point(9, 173);
+            this.lblCapacidadUnidad.Name = "lblCapacidadUnidad";
+            this.lblCapacidadUnidad.Size = new System.Drawing.Size(158, 18);
+            this.lblCapacidadUnidad.TabIndex = 81;
+            this.lblCapacidadUnidad.Text = "Capacidad de la unidad:";
             // 
-            // label5
+            // lblAnio
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
-            this.label5.TabIndex = 80;
-            this.label5.Text = "Año de la unidad:";
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.ForeColor = System.Drawing.Color.White;
+            this.lblAnio.Location = new System.Drawing.Point(11, 66);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(117, 18);
+            this.lblAnio.TabIndex = 80;
+            this.lblAnio.Text = "Año de la unidad:";
             // 
-            // label2
+            // lblMarca
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 18);
-            this.label2.TabIndex = 77;
-            this.label2.Text = "Marca de la unidad:";
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.ForeColor = System.Drawing.Color.White;
+            this.lblMarca.Location = new System.Drawing.Point(9, 15);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(131, 18);
+            this.lblMarca.TabIndex = 77;
+            this.lblMarca.Text = "Marca de la unidad:";
             // 
             // cmbTipoUnidad
             // 
@@ -405,7 +405,7 @@
             this.panelGrid.Controls.Add(this.btnEliminar);
             this.panelGrid.Controls.Add(this.txtIDunidad);
             this.panelGrid.Controls.Add(this.btnActualizar);
-            this.panelGrid.Controls.Add(this.label14);
+            this.panelGrid.Controls.Add(this.lblIDunidad);
             this.panelGrid.Controls.Add(this.dgvUnidades);
             this.panelGrid.Location = new System.Drawing.Point(408, 146);
             this.panelGrid.Name = "panelGrid";
@@ -458,17 +458,17 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // label14
+            // lblIDunidad
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(472, 297);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 18);
-            this.label14.TabIndex = 91;
-            this.label14.Text = "ID de la unidad";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblIDunidad.AutoSize = true;
+            this.lblIDunidad.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDunidad.ForeColor = System.Drawing.Color.White;
+            this.lblIDunidad.Location = new System.Drawing.Point(472, 297);
+            this.lblIDunidad.Name = "lblIDunidad";
+            this.lblIDunidad.Size = new System.Drawing.Size(101, 18);
+            this.lblIDunidad.TabIndex = 91;
+            this.lblIDunidad.Text = "ID de la unidad";
+            this.lblIDunidad.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dgvUnidades
             // 
@@ -558,7 +558,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1037, 596);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -656,6 +656,7 @@
             this.BtnCambiarIdioma.TabIndex = 168;
             this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
             this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
             // 
             // cmbIdioma
             // 
@@ -708,7 +709,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtIDunidad;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblIDunidad;
         private System.Windows.Forms.DataGridView dgvUnidades;
         private Bunifu.Framework.UI.BunifuDragControl DragControlGeneral;
         private Bunifu.Framework.UI.BunifuElipse ElipseGeneral;
@@ -721,24 +722,24 @@
         private System.Windows.Forms.TextBox txtCapacidad;
         private System.Windows.Forms.TextBox txtVIN;
         private System.Windows.Forms.TextBox txtAnio;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNúmeroMotor;
+        private System.Windows.Forms.Label lblNumeroChasis;
         private System.Windows.Forms.Button btnLimpiarCampos;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblVIN;
         private System.Windows.Forms.Button btnCrearUnidad;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.Label lblPlaca;
+        private System.Windows.Forms.Label lblTipoUnidad;
+        private System.Windows.Forms.Label lblCapacidadUnidad;
+        private System.Windows.Forms.Label lblAnio;
+        private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.ComboBox cmbTipoUnidad;
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.ComboBox cmbModelo;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTipoPlaca;
         private System.Windows.Forms.ComboBox cmbTipoPlaca;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblEstadoUnidad;
         private System.Windows.Forms.ComboBox cmbEstadoUnidad;
         private System.Windows.Forms.TextBox txtNumeroChasis;
         private System.Windows.Forms.Panel panelBar;

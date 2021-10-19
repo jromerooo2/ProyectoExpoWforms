@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using MySql.Data.MySqlClient;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 
 namespace SistemGestionBuses
@@ -28,6 +31,8 @@ namespace SistemGestionBuses
             BtnEliminar.Enabled = false;
             BtnAgregar.Enabled = true;
             CargarUnidadCMB();
+            CargarIdioma();
+            llenarIdioma_Combobox();
 
             //tool strip
             username = user;
@@ -267,6 +272,42 @@ namespace SistemGestionBuses
         private void cmbUnidad_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+
+            lblMantenimiento.Text = Res.lblMantenimiento;
+            lblAcciones.Text = Res.lblAcciones;
+            lblDescripcion.Text = Res.lblDescripcion;
+            lblUK.Text = Res.lblUltimoK;
+            lblMontoMan.Text = Res.lblMontoMan;
+            lblUnidad.Text = Res.lblUnidad;
+            lblFecha.Text = Res.lblFecha;
+            lblIDunidad.Text = Res.lblIDunidad;
+            BtnAgregar.Text = Res.btnAgregarMan;
+            BtnActualizar.Text = Res.btnModificarMan;
+            BtnEliminar.Text = Res.btnEliminarMan;
+            btnLimpiar.Text = Res.btnLimpiarCampos;
+            btnActualizarGrid.Text = Res.btnActualizarGridMan;
+            BtnConectar.Text = Res.btnConectar;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

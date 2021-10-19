@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -36,6 +39,8 @@ namespace SistemGestionBuses
                 BtnActualizar.Enabled = false;
                 BtnEliminar.Enabled = false;
             }
+            CargarIdioma();
+            llenarIdioma_Combobox();
         }
 
         //cmb Cargar Cargo
@@ -448,6 +453,44 @@ namespace SistemGestionBuses
             MessageBox.Show("Solo podrás consultar, modificar y eliminar datos, la unica forma de agregar un conductor es por medio de agregar un empleado con el cargo respectivo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             conduc.Show();
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        //Cambio de idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblAdministracionEmpleados.Text = Res.lblAdministraicionEmpleados;
+            lblAcciones.Text = Res.lblAcciones;
+            lblNombreEmpleado.Text = Res.lblNombreEmpleado;
+            lblApellido.Text = Res.lblApellidoEmpleado;
+            lblEstado.Text = Res.lblEstado;
+            lblIngreso.Text = Res.lblCargo;
+            lblGenero.Text = Res.lblGenero;
+            lblMunicipio.Text = Res.lblMunicipio;
+            lblDireccion.Text = Res.lblDireccion;
+            lblTelefonoEmpleado.Text = Res.lblTelefonoEmpleado;
+            lblIDEmpleado.Text = Res.lblIDempleado;
+            lblFiltrarporNombre.Text = Res.lblFiltrarporNombre;
+            BtnAgregar.Text = Res.btnAgregarEmpleado;
+            btnActualizarGrid.Text = Res.btnActualizarGrid;
+            BtnActualizar.Text = Res.btnModificarEmpleado;
+            BtnEliminar.Text = Res.btnAgregarEmpleado;
+            btnLimpiar.Text = Res.btnLimpiarCampos;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

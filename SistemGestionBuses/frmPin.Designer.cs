@@ -32,25 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPin));
             this.btnNueva = new System.Windows.Forms.Button();
             this.txtNueva = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNuevaContraseña = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblIngresoCodigo = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDUICo = new System.Windows.Forms.Label();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.btnIdentidad = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUsuariorecuperar = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.CardValidacion = new Bunifu.Framework.UI.BunifuCards();
             this.txtNIT = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNitCo = new System.Windows.Forms.Label();
             this.panelBar = new System.Windows.Forms.Panel();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.ElipseMain = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblConfirmarContraseña = new System.Windows.Forms.Label();
             this.txtConfirmacionNueva = new System.Windows.Forms.TextBox();
             this.btnVerContra2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnVerContra1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -74,7 +76,7 @@
             this.btnNueva.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNueva.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNueva.Location = new System.Drawing.Point(111, 351);
-            this.btnNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNueva.Margin = new System.Windows.Forms.Padding(2);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(152, 51);
             this.btnNueva.TabIndex = 35;
@@ -85,24 +87,24 @@
             // txtNueva
             // 
             this.txtNueva.Location = new System.Drawing.Point(54, 223);
-            this.txtNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtNueva.MaxLength = 50;
             this.txtNueva.Name = "txtNueva";
             this.txtNueva.Size = new System.Drawing.Size(267, 20);
             this.txtNueva.TabIndex = 34;
             // 
-            // label4
+            // lblNuevaContraseña
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(71, 175);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 28);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Nueva contraseña:";
+            this.lblNuevaContraseña.AutoSize = true;
+            this.lblNuevaContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.lblNuevaContraseña.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevaContraseña.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNuevaContraseña.Location = new System.Drawing.Point(71, 175);
+            this.lblNuevaContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNuevaContraseña.Name = "lblNuevaContraseña";
+            this.lblNuevaContraseña.Size = new System.Drawing.Size(233, 28);
+            this.lblNuevaContraseña.TabIndex = 33;
+            this.lblNuevaContraseña.Text = "Nueva contraseña:";
             // 
             // btnConfirmar
             // 
@@ -111,7 +113,7 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Location = new System.Drawing.Point(111, 97);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(152, 51);
             this.btnConfirmar.TabIndex = 32;
@@ -135,7 +137,7 @@
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(54, 63);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtCode.MaxLength = 15;
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(267, 20);
@@ -153,23 +155,23 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Recupera tu cuenta";
             // 
-            // label2
+            // lblDUICo
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(36, 259);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(363, 28);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Ingresa el DUI correspodiente:";
+            this.lblDUICo.AutoSize = true;
+            this.lblDUICo.BackColor = System.Drawing.Color.Transparent;
+            this.lblDUICo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDUICo.ForeColor = System.Drawing.Color.White;
+            this.lblDUICo.Location = new System.Drawing.Point(36, 259);
+            this.lblDUICo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDUICo.Name = "lblDUICo";
+            this.lblDUICo.Size = new System.Drawing.Size(363, 28);
+            this.lblDUICo.TabIndex = 37;
+            this.lblDUICo.Text = "Ingresa el DUI correspodiente:";
             // 
             // txtDUI
             // 
             this.txtDUI.Location = new System.Drawing.Point(105, 305);
-            this.txtDUI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDUI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDUI.MaxLength = 50;
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(224, 20);
@@ -182,7 +184,7 @@
             this.btnIdentidad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIdentidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIdentidad.Location = new System.Drawing.Point(143, 353);
-            this.btnIdentidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIdentidad.Margin = new System.Windows.Forms.Padding(2);
             this.btnIdentidad.Name = "btnIdentidad";
             this.btnIdentidad.Size = new System.Drawing.Size(152, 51);
             this.btnIdentidad.TabIndex = 38;
@@ -190,23 +192,23 @@
             this.btnIdentidad.UseVisualStyleBackColor = false;
             this.btnIdentidad.Click += new System.EventHandler(this.btnDUI_Click);
             // 
-            // label3
+            // lblUsuariorecuperar
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(370, 28);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Ingresa el usuario a recuperar:";
+            this.lblUsuariorecuperar.AutoSize = true;
+            this.lblUsuariorecuperar.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuariorecuperar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuariorecuperar.ForeColor = System.Drawing.Color.White;
+            this.lblUsuariorecuperar.Location = new System.Drawing.Point(29, 22);
+            this.lblUsuariorecuperar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuariorecuperar.Name = "lblUsuariorecuperar";
+            this.lblUsuariorecuperar.Size = new System.Drawing.Size(370, 28);
+            this.lblUsuariorecuperar.TabIndex = 39;
+            this.lblUsuariorecuperar.Text = "Ingresa el usuario a recuperar:";
             // 
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(105, 74);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.MaxLength = 50;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(224, 20);
@@ -221,10 +223,10 @@
             this.CardValidacion.Controls.Add(this.txtNIT);
             this.CardValidacion.Controls.Add(this.btnIdentidad);
             this.CardValidacion.Controls.Add(this.txtUser);
-            this.CardValidacion.Controls.Add(this.label3);
+            this.CardValidacion.Controls.Add(this.lblUsuariorecuperar);
             this.CardValidacion.Controls.Add(this.txtDUI);
-            this.CardValidacion.Controls.Add(this.label2);
-            this.CardValidacion.Controls.Add(this.label5);
+            this.CardValidacion.Controls.Add(this.lblDUICo);
+            this.CardValidacion.Controls.Add(this.lblNitCo);
             this.CardValidacion.LeftSahddow = false;
             this.CardValidacion.Location = new System.Drawing.Point(0, 42);
             this.CardValidacion.Name = "CardValidacion";
@@ -236,28 +238,30 @@
             // txtNIT
             // 
             this.txtNIT.Location = new System.Drawing.Point(105, 187);
-            this.txtNIT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNIT.Margin = new System.Windows.Forms.Padding(2);
             this.txtNIT.MaxLength = 50;
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(224, 20);
             this.txtNIT.TabIndex = 44;
             // 
-            // label5
+            // lblNitCo
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(13, 141);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 28);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "  Ingresa el NIT correspondiente:";
+            this.lblNitCo.AutoSize = true;
+            this.lblNitCo.BackColor = System.Drawing.Color.Transparent;
+            this.lblNitCo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNitCo.ForeColor = System.Drawing.Color.White;
+            this.lblNitCo.Location = new System.Drawing.Point(13, 141);
+            this.lblNitCo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNitCo.Name = "lblNitCo";
+            this.lblNitCo.Size = new System.Drawing.Size(387, 28);
+            this.lblNitCo.TabIndex = 43;
+            this.lblNitCo.Text = "  Ingresa el NIT correspondiente:";
             // 
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.cmbIdioma);
+            this.panelBar.Controls.Add(this.BtnCambiarIdioma);
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Controls.Add(this.bunifuImageButton1);
@@ -266,6 +270,36 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(812, 49);
             this.panelBar.TabIndex = 95;
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(274, 12);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(208, 26);
+            this.cmbIdioma.TabIndex = 179;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(96, 8);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 180;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
             // 
             // bunifuImageButton5
             // 
@@ -318,23 +352,23 @@
             this.ElipseMain.ElipseRadius = 5;
             this.ElipseMain.TargetControl = this;
             // 
-            // label6
+            // lblConfirmarContraseña
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(51, 257);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(273, 28);
-            this.label6.TabIndex = 96;
-            this.label6.Text = "Confirmar contraseña:";
+            this.lblConfirmarContraseña.AutoSize = true;
+            this.lblConfirmarContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.lblConfirmarContraseña.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarContraseña.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblConfirmarContraseña.Location = new System.Drawing.Point(51, 257);
+            this.lblConfirmarContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarContraseña.Name = "lblConfirmarContraseña";
+            this.lblConfirmarContraseña.Size = new System.Drawing.Size(273, 28);
+            this.lblConfirmarContraseña.TabIndex = 96;
+            this.lblConfirmarContraseña.Text = "Confirmar contraseña:";
             // 
             // txtConfirmacionNueva
             // 
             this.txtConfirmacionNueva.Location = new System.Drawing.Point(54, 303);
-            this.txtConfirmacionNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmacionNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmacionNueva.MaxLength = 50;
             this.txtConfirmacionNueva.Name = "txtConfirmacionNueva";
             this.txtConfirmacionNueva.Size = new System.Drawing.Size(267, 20);
@@ -380,12 +414,12 @@
             this.CardPIN.Controls.Add(this.btnVerContra1);
             this.CardPIN.Controls.Add(this.txtConfirmacionNueva);
             this.CardPIN.Controls.Add(this.btnNueva);
-            this.CardPIN.Controls.Add(this.label6);
+            this.CardPIN.Controls.Add(this.lblConfirmarContraseña);
             this.CardPIN.Controls.Add(this.btnConfirmar);
             this.CardPIN.Controls.Add(this.lblIngresoCodigo);
             this.CardPIN.Controls.Add(this.txtCode);
             this.CardPIN.Controls.Add(this.txtNueva);
-            this.CardPIN.Controls.Add(this.label4);
+            this.CardPIN.Controls.Add(this.lblNuevaContraseña);
             this.CardPIN.LeftSahddow = false;
             this.CardPIN.Location = new System.Drawing.Point(432, 45);
             this.CardPIN.Name = "CardPIN";
@@ -440,15 +474,15 @@
         #endregion
         private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.TextBox txtNueva;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNuevaContraseña;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lblIngresoCodigo;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDUICo;
         private System.Windows.Forms.TextBox txtDUI;
         private System.Windows.Forms.Button btnIdentidad;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUsuariorecuperar;
         private System.Windows.Forms.TextBox txtUser;
         private Bunifu.Framework.UI.BunifuCards CardValidacion;
         private System.Windows.Forms.Panel panelBar;
@@ -457,13 +491,15 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuElipse ElipseMain;
         private System.Windows.Forms.TextBox txtConfirmacionNueva;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblConfirmarContraseña;
         private Bunifu.Framework.UI.BunifuImageButton btnVerContra2;
         private Bunifu.Framework.UI.BunifuImageButton btnVerContra1;
         private Bunifu.Framework.UI.BunifuCards CardPIN;
         private Bunifu.Framework.UI.BunifuDragControl DragControlMain;
         private System.Windows.Forms.TextBox txtNIT;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNitCo;
         private System.Windows.Forms.NotifyIcon nfConfirmacion;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

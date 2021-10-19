@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresoEmpleado));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblAcciones = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnActualizarGrid = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAdministracionEmpleados = new System.Windows.Forms.Label();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -47,24 +48,24 @@
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtNIT = new System.Windows.Forms.MaskedTextBox();
             this.TxtDUI = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTelefonoEmpleado = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.TxtApellidos = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNIT = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblDUI = new System.Windows.Forms.Label();
+            this.lblNombreEmpleado = new System.Windows.Forms.Label();
             this.TxtNombres = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblIDEmpleado = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblGenero = new System.Windows.Forms.Label();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.CmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbMunicipio = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMunicipio = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.dragControlMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelBar = new System.Windows.Forms.Panel();
@@ -79,8 +80,9 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblFiltrarporNombre = new System.Windows.Forms.Label();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,47 +99,67 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.lblAcciones);
+            this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnActualizar);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnActualizarGrid);
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Location = new System.Drawing.Point(17, 119);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 256);
             this.panel1.TabIndex = 31;
             // 
-            // label3
+            // button1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label3.Location = new System.Drawing.Point(82, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 35);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Acciones";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(153, 182);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 51);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Ver conductores";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // lblAcciones
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(21, 185);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 51);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Limpiar campos";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.BtnLimpiar_Click);
+            this.lblAcciones.AutoSize = true;
+            this.lblAcciones.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblAcciones.Location = new System.Drawing.Point(82, 3);
+            this.lblAcciones.Name = "lblAcciones";
+            this.lblAcciones.Size = new System.Drawing.Size(128, 35);
+            this.lblAcciones.TabIndex = 22;
+            this.lblAcciones.Text = "Acciones";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 2;
+            this.btnLimpiar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnLimpiar.Location = new System.Drawing.Point(21, 185);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(111, 51);
+            this.btnLimpiar.TabIndex = 17;
+            this.btnLimpiar.Text = "Limpiar campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnEliminar
             // 
@@ -179,25 +201,25 @@
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_click);
             // 
-            // button4
+            // btnActualizarGrid
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button4.Location = new System.Drawing.Point(153, 52);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 49);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Actualizar grid de datos";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.BtnGrid_Click);
+            this.btnActualizarGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnActualizarGrid.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnActualizarGrid.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.btnActualizarGrid.FlatAppearance.BorderSize = 2;
+            this.btnActualizarGrid.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnActualizarGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnActualizarGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.btnActualizarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarGrid.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.btnActualizarGrid.Location = new System.Drawing.Point(153, 52);
+            this.btnActualizarGrid.Name = "btnActualizarGrid";
+            this.btnActualizarGrid.Size = new System.Drawing.Size(111, 49);
+            this.btnActualizarGrid.TabIndex = 14;
+            this.btnActualizarGrid.Text = "Actualizar grid de datos";
+            this.btnActualizarGrid.UseVisualStyleBackColor = false;
+            this.btnActualizarGrid.Click += new System.EventHandler(this.BtnGrid_Click);
             // 
             // BtnAgregar
             // 
@@ -219,18 +241,18 @@
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.btnAgregar_click);
             // 
-            // label2
+            // lblAdministracionEmpleados
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.label2.Location = new System.Drawing.Point(309, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(486, 43);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Administracion de Empleados";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblAdministracionEmpleados.AutoSize = true;
+            this.lblAdministracionEmpleados.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdministracionEmpleados.Font = new System.Drawing.Font("Trebuchet MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministracionEmpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.lblAdministracionEmpleados.Location = new System.Drawing.Point(309, 73);
+            this.lblAdministracionEmpleados.Name = "lblAdministracionEmpleados";
+            this.lblAdministracionEmpleados.Size = new System.Drawing.Size(486, 43);
+            this.lblAdministracionEmpleados.TabIndex = 30;
+            this.lblAdministracionEmpleados.Text = "Administracion de Empleados";
+            this.lblAdministracionEmpleados.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dgvEmpleados
             // 
@@ -250,7 +272,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1040, 640);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -279,24 +301,24 @@
             this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.txtNIT);
             this.panel2.Controls.Add(this.TxtDUI);
-            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.lblTelefonoEmpleado);
             this.panel2.Controls.Add(this.lblApellido);
             this.panel2.Controls.Add(this.TxtApellidos);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lblNIT);
+            this.panel2.Controls.Add(this.lblDireccion);
             this.panel2.Controls.Add(this.TxtDireccion);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.lblDUI);
+            this.panel2.Controls.Add(this.lblNombreEmpleado);
             this.panel2.Controls.Add(this.TxtNombres);
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.lblIDEmpleado);
             this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.cmbGenero);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblGenero);
             this.panel2.Controls.Add(this.cmbCargo);
             this.panel2.Controls.Add(this.CmbEstado);
             this.panel2.Controls.Add(this.cmbMunicipio);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblMunicipio);
+            this.panel2.Controls.Add(this.lblEstado);
             this.panel2.Controls.Add(this.lblIngreso);
             this.panel2.Location = new System.Drawing.Point(317, 119);
             this.panel2.Name = "panel2";
@@ -329,17 +351,17 @@
             this.TxtDUI.Size = new System.Drawing.Size(254, 20);
             this.TxtDUI.TabIndex = 3;
             // 
-            // label8
+            // lblTelefonoEmpleado
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label8.Location = new System.Drawing.Point(492, 132);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 22);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Telefono del empleado";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTelefonoEmpleado.AutoSize = true;
+            this.lblTelefonoEmpleado.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblTelefonoEmpleado.Location = new System.Drawing.Point(492, 132);
+            this.lblTelefonoEmpleado.Name = "lblTelefonoEmpleado";
+            this.lblTelefonoEmpleado.Size = new System.Drawing.Size(180, 22);
+            this.lblTelefonoEmpleado.TabIndex = 64;
+            this.lblTelefonoEmpleado.Text = "Telefono del empleado";
+            this.lblTelefonoEmpleado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblApellido
             // 
@@ -362,29 +384,29 @@
             this.TxtApellidos.Size = new System.Drawing.Size(254, 24);
             this.TxtApellidos.TabIndex = 2;
             // 
-            // label11
+            // lblNIT
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label11.Location = new System.Drawing.Point(30, 172);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 22);
-            this.label11.TabIndex = 60;
-            this.label11.Text = "NIT";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNIT.AutoSize = true;
+            this.lblNIT.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblNIT.Location = new System.Drawing.Point(30, 172);
+            this.lblNIT.Name = "lblNIT";
+            this.lblNIT.Size = new System.Drawing.Size(35, 22);
+            this.lblNIT.TabIndex = 60;
+            this.lblNIT.Text = "NIT";
+            this.lblNIT.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label6
+            // lblDireccion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label6.Location = new System.Drawing.Point(495, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 22);
-            this.label6.TabIndex = 56;
-            this.label6.Text = "Dirección";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblDireccion.Location = new System.Drawing.Point(495, 16);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(83, 22);
+            this.lblDireccion.TabIndex = 56;
+            this.lblDireccion.Text = "Dirección";
+            this.lblDireccion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TxtDireccion
             // 
@@ -396,29 +418,29 @@
             this.TxtDireccion.Size = new System.Drawing.Size(203, 72);
             this.TxtDireccion.TabIndex = 9;
             // 
-            // label7
+            // lblDUI
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label7.Location = new System.Drawing.Point(30, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 22);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "DUI";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblDUI.AutoSize = true;
+            this.lblDUI.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblDUI.Location = new System.Drawing.Point(30, 120);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.Size = new System.Drawing.Size(35, 22);
+            this.lblDUI.TabIndex = 51;
+            this.lblDUI.Text = "DUI";
+            this.lblDUI.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label12
+            // lblNombreEmpleado
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label12.Location = new System.Drawing.Point(30, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 22);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Nombre del empleado";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNombreEmpleado.AutoSize = true;
+            this.lblNombreEmpleado.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblNombreEmpleado.Location = new System.Drawing.Point(30, 16);
+            this.lblNombreEmpleado.Name = "lblNombreEmpleado";
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(175, 22);
+            this.lblNombreEmpleado.TabIndex = 50;
+            this.lblNombreEmpleado.Text = "Nombre del empleado";
+            this.lblNombreEmpleado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TxtNombres
             // 
@@ -429,17 +451,17 @@
             this.TxtNombres.Size = new System.Drawing.Size(254, 24);
             this.TxtNombres.TabIndex = 1;
             // 
-            // label10
+            // lblIDEmpleado
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label10.Location = new System.Drawing.Point(30, 242);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 22);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "ID empleado";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblIDEmpleado.AutoSize = true;
+            this.lblIDEmpleado.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblIDEmpleado.Location = new System.Drawing.Point(30, 242);
+            this.lblIDEmpleado.Name = "lblIDEmpleado";
+            this.lblIDEmpleado.Size = new System.Drawing.Size(102, 22);
+            this.lblIDEmpleado.TabIndex = 44;
+            this.lblIDEmpleado.Text = "ID empleado";
+            this.lblIDEmpleado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtId
             // 
@@ -462,17 +484,17 @@
             this.cmbGenero.TabIndex = 7;
             this.cmbGenero.Click += new System.EventHandler(this.cmbGenero_click);
             // 
-            // label5
+            // lblGenero
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label5.Location = new System.Drawing.Point(339, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 22);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Genero";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblGenero.Location = new System.Drawing.Point(339, 120);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(65, 22);
+            this.lblGenero.TabIndex = 25;
+            this.lblGenero.Text = "Genero";
+            this.lblGenero.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cmbCargo
             // 
@@ -508,27 +530,27 @@
             this.cmbMunicipio.SelectedIndexChanged += new System.EventHandler(this.cmbMunicipio_SelectedIndexChanged);
             this.cmbMunicipio.Click += new System.EventHandler(this.cmbMunicipios_Click);
             // 
-            // label4
+            // lblMunicipio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(339, 172);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 22);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Municipio";
+            this.lblMunicipio.AutoSize = true;
+            this.lblMunicipio.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMunicipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblMunicipio.Location = new System.Drawing.Point(339, 172);
+            this.lblMunicipio.Name = "lblMunicipio";
+            this.lblMunicipio.Size = new System.Drawing.Size(83, 22);
+            this.lblMunicipio.TabIndex = 21;
+            this.lblMunicipio.Text = "Municipio";
             // 
-            // label1
+            // lblEstado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(339, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 22);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Estado";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.lblEstado.Location = new System.Drawing.Point(339, 16);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(60, 22);
+            this.lblEstado.TabIndex = 20;
+            this.lblEstado.Text = "Estado";
             // 
             // lblIngreso
             // 
@@ -683,43 +705,53 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(252, 395);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
             // 
-            // label13
+            // lblFiltrarporNombre
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(100, 381);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(127, 17);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Filtrar por nombre";
+            this.lblFiltrarporNombre.AutoSize = true;
+            this.lblFiltrarporNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrarporNombre.Location = new System.Drawing.Point(100, 381);
+            this.lblFiltrarporNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFiltrarporNombre.Name = "lblFiltrarporNombre";
+            this.lblFiltrarporNombre.Size = new System.Drawing.Size(127, 17);
+            this.lblFiltrarporNombre.TabIndex = 23;
+            this.lblFiltrarporNombre.Text = "Filtrar por nombre";
             // 
-            // button1
+            // cmbIdioma
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(153, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 51);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Ver conductores";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(26, 87);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(194, 26);
+            this.cmbIdioma.TabIndex = 175;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(26, 53);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 176;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
             // 
             // frmIngresoEmpleado
             // 
@@ -727,14 +759,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 640);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.BtnCambiarIdioma);
+            this.Controls.Add(this.lblFiltrarporNombre);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblAdministracionEmpleados);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -761,13 +795,13 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblAcciones;
+        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnActualizarGrid;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAdministracionEmpleados;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse mainElipse;
@@ -778,24 +812,24 @@
         private System.Windows.Forms.MaskedTextBox txtTelefono;
         private System.Windows.Forms.MaskedTextBox txtNIT;
         private System.Windows.Forms.MaskedTextBox TxtDUI;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTelefonoEmpleado;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox TxtApellidos;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNIT;
+        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.TextBox TxtDireccion;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblDUI;
+        private System.Windows.Forms.Label lblNombreEmpleado;
         private System.Windows.Forms.TextBox TxtNombres;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblIDEmpleado;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.ComboBox CmbEstado;
         private System.Windows.Forms.ComboBox cmbMunicipio;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMunicipio;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
@@ -809,7 +843,9 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblFiltrarporNombre;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }
