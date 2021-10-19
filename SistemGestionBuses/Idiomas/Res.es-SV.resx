@@ -192,4 +192,25 @@
   <data name="btnSeleccionarIdioma" xml:space="preserve">
     <value>Seleccionar Idioma:</value>
   </data>
+  <data name="btnCambiarIdioma" xml:space="preserve">
+    <value>Seleccionar Idioma:</value>
+  </data>
+  <data name="btnIniciarSesion" xml:space="preserve">
+    <value>Iniciar Sesión</value>
+  </data>
+  <data name="lblContraseñaUsuario" xml:space="preserve">
+    <value>Contraseña:</value>
+  </data>
+  <data name="lblIniciarSesion" xml:space="preserve">
+    <value>Inicia Sesión</value>
+  </data>
+  <data name="lblO" xml:space="preserve">
+    <value>Ó</value>
+  </data>
+  <data name="lblRecuperarContra" xml:space="preserve">
+    <value>Recupera tu contraseña</value>
+  </data>
+  <data name="lblUsuario" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
 </root>

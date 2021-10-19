@@ -30,20 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lkRecContraseña = new System.Windows.Forms.LinkLabel();
+            this.lblÓ = new System.Windows.Forms.Label();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblIniciarSesion = new System.Windows.Forms.Label();
+            this.lblContraseñaUsuario = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnIniciarSesion = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelBar = new System.Windows.Forms.Panel();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -54,40 +56,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // lkRecContraseña
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(74, 334);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(143, 18);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Recupera tu contraseña";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lkRecContraseña.AutoSize = true;
+            this.lkRecContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.lkRecContraseña.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkRecContraseña.LinkColor = System.Drawing.Color.White;
+            this.lkRecContraseña.Location = new System.Drawing.Point(74, 334);
+            this.lkRecContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lkRecContraseña.Name = "lkRecContraseña";
+            this.lkRecContraseña.Size = new System.Drawing.Size(143, 18);
+            this.lkRecContraseña.TabIndex = 4;
+            this.lkRecContraseña.TabStop = true;
+            this.lkRecContraseña.Text = "Recupera tu contraseña";
+            this.lkRecContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label6
+            // lblÓ
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(124, 299);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 26);
-            this.label6.TabIndex = 19;
-            this.label6.Text = " ó";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblÓ.AutoSize = true;
+            this.lblÓ.BackColor = System.Drawing.Color.Transparent;
+            this.lblÓ.Font = new System.Drawing.Font("Yu Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblÓ.ForeColor = System.Drawing.Color.White;
+            this.lblÓ.Location = new System.Drawing.Point(120, 299);
+            this.lblÓ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblÓ.Name = "lblÓ";
+            this.lblÓ.Size = new System.Drawing.Size(30, 26);
+            this.lblÓ.TabIndex = 19;
+            this.lblÓ.Text = " ó";
+            this.lblÓ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.Location = new System.Drawing.Point(44, 197);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.MaxLength = 50;
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
@@ -100,7 +102,7 @@
             // 
             this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.Location = new System.Drawing.Point(44, 114);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(2);
             this.txtusername.MaxLength = 50;
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
@@ -118,92 +120,92 @@
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
+            // lblIniciarSesion
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 35);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Inicia Sesión ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblIniciarSesion.AutoSize = true;
+            this.lblIniciarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.lblIniciarSesion.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.lblIniciarSesion.Location = new System.Drawing.Point(28, 26);
+            this.lblIniciarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIniciarSesion.Name = "lblIniciarSesion";
+            this.lblIniciarSesion.Size = new System.Drawing.Size(180, 35);
+            this.lblIniciarSesion.TabIndex = 13;
+            this.lblIniciarSesion.Text = "Inicia Sesión ";
+            this.lblIniciarSesion.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label5
+            // lblContraseñaUsuario
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(41, 164);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 20);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Contraseña:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblContraseñaUsuario.AutoSize = true;
+            this.lblContraseñaUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblContraseñaUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.lblContraseñaUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblContraseñaUsuario.Location = new System.Drawing.Point(41, 164);
+            this.lblContraseñaUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContraseñaUsuario.Name = "lblContraseñaUsuario";
+            this.lblContraseñaUsuario.Size = new System.Drawing.Size(90, 20);
+            this.lblContraseñaUsuario.TabIndex = 18;
+            this.lblContraseñaUsuario.Text = "Contraseña:";
+            this.lblContraseñaUsuario.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label4
+            // lblUsuario
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(41, 81);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Usuario:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(41, 81);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(65, 20);
+            this.lblUsuario.TabIndex = 17;
+            this.lblUsuario.Text = "Usuario:";
+            this.lblUsuario.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnIniciarSesion);
             this.panel1.Controls.Add(this.txtpassword);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtusername);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblContraseñaUsuario);
+            this.panel1.Controls.Add(this.lkRecContraseña);
+            this.panel1.Controls.Add(this.lblIniciarSesion);
+            this.panel1.Controls.Add(this.lblÓ);
             this.panel1.Location = new System.Drawing.Point(388, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 376);
             this.panel1.TabIndex = 25;
             // 
-            // button1
+            // BtnIniciarSesion
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.button1.Location = new System.Drawing.Point(77, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Iniciar sesión";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.BtnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnIniciarSesion.FlatAppearance.BorderSize = 2;
+            this.BtnIniciarSesion.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIniciarSesion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIniciarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnIniciarSesion.Location = new System.Drawing.Point(77, 239);
+            this.BtnIniciarSesion.Name = "BtnIniciarSesion";
+            this.BtnIniciarSesion.Size = new System.Drawing.Size(131, 45);
+            this.BtnIniciarSesion.TabIndex = 3;
+            this.BtnIniciarSesion.Text = "Iniciar sesión";
+            this.BtnIniciarSesion.UseVisualStyleBackColor = false;
+            this.BtnIniciarSesion.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(153, 301);
+            this.label3.Location = new System.Drawing.Point(159, 301);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
@@ -216,7 +218,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 301);
+            this.label1.Location = new System.Drawing.Point(71, 301);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
@@ -226,12 +228,34 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
+            this.panelBar.Controls.Add(this.BtnCambiarIdioma);
             this.panelBar.Controls.Add(this.bunifuImageButton5);
+            this.panelBar.Controls.Add(this.cmbIdioma);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Location = new System.Drawing.Point(-1, -4);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(662, 50);
             this.panelBar.TabIndex = 107;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(13, 10);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 128;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
             // 
             // bunifuImageButton5
             // 
@@ -248,6 +272,16 @@
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
             this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(191, 13);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(211, 26);
+            this.cmbIdioma.TabIndex = 127;
             // 
             // bunifuImageButton3
             // 
@@ -287,7 +321,7 @@
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Inicio de Sesión";
             this.Load += new System.EventHandler(this.frmLogin_Load);
@@ -302,23 +336,25 @@
         }
 
         #endregion
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel lkRecContraseña;
+        private System.Windows.Forms.Label lblÓ;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblIniciarSesion;
+        private System.Windows.Forms.Label lblContraseñaUsuario;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnIniciarSesion;
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
+        private System.Windows.Forms.ComboBox cmbIdioma;
     }
 }
 

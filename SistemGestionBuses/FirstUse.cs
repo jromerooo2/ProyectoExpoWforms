@@ -372,7 +372,7 @@ namespace SistemGestionBuses
                 lblNIT.Text = Res.lblNIT;
                 btnConfirmar.Text = Res.btnConfirmar;
                 btnFinalizar.Text = Res.btnFinalizar;
-                BtnCambiarIdioma.Text = Res.btnSeleccionarIdioma;
+                BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
         }
 
         public void llenarIdiomas_Combobox()

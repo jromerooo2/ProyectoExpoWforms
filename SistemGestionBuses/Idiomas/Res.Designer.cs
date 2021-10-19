@@ -61,6 +61,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Seleccionar Idioma:.
+        /// </summary>
+        internal static string btnCambiarIdioma {
+            get {
+                return ResourceManager.GetString("btnCambiarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirmar.
         /// </summary>
         internal static string btnConfirmar {
@@ -75,6 +84,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string btnFinalizar {
             get {
                 return ResourceManager.GetString("btnFinalizar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Iniciar Sesión.
+        /// </summary>
+        internal static string btnIniciarSesion {
+            get {
+                return ResourceManager.GetString("btnIniciarSesion", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Contraseña:.
+        /// </summary>
+        internal static string lblContraseñaUsuario {
+            get {
+                return ResourceManager.GetString("lblContraseñaUsuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Contraseña y PIN.
         /// </summary>
         internal static string lblContraseñayPin {
@@ -205,6 +232,15 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Inicia Sesión.
+        /// </summary>
+        internal static string lblIniciarSesion {
+            get {
+                return ResourceManager.GetString("lblIniciarSesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Municipio.
         /// </summary>
         internal static string lblMunicipio {
@@ -228,6 +264,15 @@ namespace SistemGestionBuses.Idiomas {
         internal static string lblNombreUsuario {
             get {
                 return ResourceManager.GetString("lblNombreUsuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ó.
+        /// </summary>
+        internal static string lblO {
+            get {
+                return ResourceManager.GetString("lblO", resourceCulture);
             }
         }
         
@@ -277,11 +322,29 @@ namespace SistemGestionBuses.Idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Recupera tu contraseña.
+        /// </summary>
+        internal static string lblRecuperarContra {
+            get {
+                return ResourceManager.GetString("lblRecuperarContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Teléfono.
         /// </summary>
         internal static string lblTeléfono {
             get {
                 return ResourceManager.GetString("lblTeléfono", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Usuario:.
+        /// </summary>
+        internal static string lblUsuario {
+            get {
+                return ResourceManager.GetString("lblUsuario", resourceCulture);
             }
         }
     }

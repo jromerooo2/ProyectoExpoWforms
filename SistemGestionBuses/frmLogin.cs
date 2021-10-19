@@ -9,6 +9,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
 
 namespace SistemGestionBuses
 {
@@ -19,6 +21,8 @@ namespace SistemGestionBuses
         {
             InitializeComponent();
             //PrimerUso();
+            CargarIdioma();
+            llenarIdiomas_Combobox();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -206,6 +210,33 @@ namespace SistemGestionBuses
             {
                 e.Handled = true;
             }
+        }
+
+        //Cambiar Idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+                lblIniciarSesion.Text = Res.lblIniciarSesion;
+                lblUsuario.Text = Res.lblUsuario;
+                lblContraseñaUsuario.Text = Res.lblContraseñaUsuario;
+                BtnIniciarSesion.Text = Res.btnIniciarSesion;
+                lblÓ.Text = Res.lblO;
+                lkRecContraseña.Text = Res.lblRecuperarContra;
+                BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdiomas_Combobox()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

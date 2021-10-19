@@ -47,7 +47,7 @@ namespace SistemGestionBuses.Idiomas
                 },
                 new Idioma
                 {
-                    Nombre = "Inglés",
+                    Nombre = "English",
                     Abrev_Idioma = "en",
                     Pais = "Estados Unidos",
                     Abrev_Pais = "US"
