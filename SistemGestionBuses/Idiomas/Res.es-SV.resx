@@ -582,4 +582,73 @@
   <data name="lblVIN" xml:space="preserve">
     <value>VIN:</value>
   </data>
+  <data name="btnAgregarUsuario" xml:space="preserve">
+    <value>Agregar Usuario</value>
+  </data>
+  <data name="btnAñadirImg" xml:space="preserve">
+    <value>Añadir Imagen</value>
+  </data>
+  <data name="btnEliminarUsuario" xml:space="preserve">
+    <value>Eliminar Usuario</value>
+  </data>
+  <data name="btnModificarUsuario" xml:space="preserve">
+    <value>Modificar Usuario</value>
+  </data>
+  <data name="btnRestablecerContraseña" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="lblCargo2" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="lblClientesReportes" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="lblConectados" xml:space="preserve">
+    <value>Conectados</value>
+  </data>
+  <data name="lblConfirmacióndeContraseña" xml:space="preserve">
+    <value>Confirmación de contraseña:</value>
+  </data>
+  <data name="lblCorreoElec" xml:space="preserve">
+    <value>Correo Electrónico</value>
+  </data>
+  <data name="lblCredencialesAdmin" xml:space="preserve">
+    <value>Ingresa las credenciales del administrador</value>
+  </data>
+  <data name="lblDatosdeCuenta" xml:space="preserve">
+    <value>Datos de la cuenta a recuperar:</value>
+  </data>
+  <data name="lblDUIEmpleado" xml:space="preserve">
+    <value>DUI Empleado:</value>
+  </data>
+  <data name="lblEmpleado2" xml:space="preserve">
+    <value>Empleado</value>
+  </data>
+  <data name="lblEmpleadosReportes" xml:space="preserve">
+    <value>Empleados</value>
+  </data>
+  <data name="lblNombreUsuario2" xml:space="preserve">
+    <value>Nombre de Usuario</value>
+  </data>
+  <data name="lblNuevaContraseñaRec" xml:space="preserve">
+    <value>Nueva contraseña:</value>
+  </data>
+  <data name="lblRecuperarCuenta" xml:space="preserve">
+    <value>Recupara tu cuenta</value>
+  </data>
+  <data name="lblRenuevaContra" xml:space="preserve">
+    <value>Renueva la contraseña:</value>
+  </data>
+  <data name="lblReportesPDF" xml:space="preserve">
+    <value>Reportes PDF</value>
+  </data>
+  <data name="lblTarjetasreportes" xml:space="preserve">
+    <value>Haz click las tarjetas para generar reportes en formato PDF para cada uno de los campos que se te presentan.</value>
+  </data>
+  <data name="lblUnidadesReportes" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="lblUsuarios2" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
 </root>

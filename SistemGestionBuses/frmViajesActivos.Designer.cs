@@ -40,20 +40,22 @@
             this.txtCargoUser = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblActivarGPS = new System.Windows.Forms.Label();
+            this.lblPasosCom = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblIniciar = new System.Windows.Forms.Label();
+            this.lblLChastaFinal = new System.Windows.Forms.Label();
+            this.lblEscanear = new System.Windows.Forms.Label();
+            this.lblInternet = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblViajesActivos = new System.Windows.Forms.Label();
             this.metroText = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnCompartir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblConductorUbicacion = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -204,27 +206,27 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 29);
             this.toolStripLabel1.Text = "Log Out";
             // 
-            // label1
+            // lblActivarGPS
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 17);
-            this.label1.TabIndex = 128;
-            this.label1.Text = "1. Activa tu GPS";
+            this.lblActivarGPS.AutoSize = true;
+            this.lblActivarGPS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivarGPS.ForeColor = System.Drawing.Color.White;
+            this.lblActivarGPS.Location = new System.Drawing.Point(18, 112);
+            this.lblActivarGPS.Name = "lblActivarGPS";
+            this.lblActivarGPS.Size = new System.Drawing.Size(111, 17);
+            this.lblActivarGPS.TabIndex = 128;
+            this.lblActivarGPS.Text = "1. Activa tu GPS";
             // 
-            // label2
+            // lblPasosCom
             // 
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 72);
-            this.label2.TabIndex = 129;
-            this.label2.Text = "Pasos para compartir tu ubicación \r\ncon el sistema";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPasosCom.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasosCom.ForeColor = System.Drawing.Color.White;
+            this.lblPasosCom.Location = new System.Drawing.Point(17, 17);
+            this.lblPasosCom.Name = "lblPasosCom";
+            this.lblPasosCom.Size = new System.Drawing.Size(224, 72);
+            this.lblPasosCom.TabIndex = 129;
+            this.lblPasosCom.Text = "Pasos para compartir tu ubicación \r\ncon el sistema";
+            this.lblPasosCom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCards1
             // 
@@ -232,12 +234,12 @@
             this.bunifuCards1.BorderRadius = 10;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
-            this.bunifuCards1.Controls.Add(this.label5);
-            this.bunifuCards1.Controls.Add(this.label6);
-            this.bunifuCards1.Controls.Add(this.label4);
-            this.bunifuCards1.Controls.Add(this.label3);
-            this.bunifuCards1.Controls.Add(this.label1);
-            this.bunifuCards1.Controls.Add(this.label2);
+            this.bunifuCards1.Controls.Add(this.lblIniciar);
+            this.bunifuCards1.Controls.Add(this.lblLChastaFinal);
+            this.bunifuCards1.Controls.Add(this.lblEscanear);
+            this.bunifuCards1.Controls.Add(this.lblInternet);
+            this.bunifuCards1.Controls.Add(this.lblActivarGPS);
+            this.bunifuCards1.Controls.Add(this.lblPasosCom);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(21, 77);
             this.bunifuCards1.Name = "bunifuCards1";
@@ -246,48 +248,48 @@
             this.bunifuCards1.Size = new System.Drawing.Size(259, 341);
             this.bunifuCards1.TabIndex = 130;
             // 
-            // label5
+            // lblIniciar
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(16, 245);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 30);
-            this.label5.TabIndex = 132;
-            this.label5.Text = "4. Presiona el botón de \"Iniciar\".\r\n";
+            this.lblIniciar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciar.ForeColor = System.Drawing.Color.White;
+            this.lblIniciar.Location = new System.Drawing.Point(16, 245);
+            this.lblIniciar.Name = "lblIniciar";
+            this.lblIniciar.Size = new System.Drawing.Size(240, 30);
+            this.lblIniciar.TabIndex = 132;
+            this.lblIniciar.Text = "4. Presiona el botón de \"Iniciar\".\r\n";
             // 
-            // label6
+            // lblLChastaFinal
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(-7, 275);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(248, 56);
-            this.label6.TabIndex = 133;
-            this.label6.Text = "5. Inicia tu viaje, Locus te acompañará hasta el final.\r\n";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLChastaFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(147)))), ((int)(((byte)(198)))));
+            this.lblLChastaFinal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLChastaFinal.ForeColor = System.Drawing.Color.Black;
+            this.lblLChastaFinal.Location = new System.Drawing.Point(-7, 275);
+            this.lblLChastaFinal.Name = "lblLChastaFinal";
+            this.lblLChastaFinal.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.lblLChastaFinal.Size = new System.Drawing.Size(248, 56);
+            this.lblLChastaFinal.TabIndex = 133;
+            this.lblLChastaFinal.Text = "5. Inicia tu viaje, Locus te acompañará hasta el final.\r\n";
+            this.lblLChastaFinal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // lblEscanear
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 39);
-            this.label4.TabIndex = 131;
-            this.label4.Text = "3. Presiona este botón o escanea el codigo QR";
+            this.lblEscanear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEscanear.ForeColor = System.Drawing.Color.White;
+            this.lblEscanear.Location = new System.Drawing.Point(18, 195);
+            this.lblEscanear.Name = "lblEscanear";
+            this.lblEscanear.Size = new System.Drawing.Size(195, 39);
+            this.lblEscanear.TabIndex = 131;
+            this.lblEscanear.Text = "3. Presiona este botón o escanea el codigo QR";
             // 
-            // label3
+            // lblInternet
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(18, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 38);
-            this.label3.TabIndex = 130;
-            this.label3.Text = "2. Verifica que tu conexión a internet sea estable.";
+            this.lblInternet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInternet.ForeColor = System.Drawing.Color.White;
+            this.lblInternet.Location = new System.Drawing.Point(18, 147);
+            this.lblInternet.Name = "lblInternet";
+            this.lblInternet.Size = new System.Drawing.Size(195, 38);
+            this.lblInternet.TabIndex = 130;
+            this.lblInternet.Text = "2. Verifica que tu conexión a internet sea estable.";
             // 
             // bunifuImageButton2
             // 
@@ -304,16 +306,16 @@
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             // 
-            // label7
+            // lblViajesActivos
             // 
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(568, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 53);
-            this.label7.TabIndex = 134;
-            this.label7.Text = "Viajes Activos\r\nactualmente:\r\n";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViajesActivos.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViajesActivos.ForeColor = System.Drawing.Color.Black;
+            this.lblViajesActivos.Location = new System.Drawing.Point(568, 54);
+            this.lblViajesActivos.Name = "lblViajesActivos";
+            this.lblViajesActivos.Size = new System.Drawing.Size(169, 53);
+            this.lblViajesActivos.TabIndex = 134;
+            this.lblViajesActivos.Text = "Viajes Activos\r\nactualmente:\r\n";
+            this.lblViajesActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroText
             // 
@@ -384,15 +386,15 @@
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
             // 
-            // label8
+            // lblConductorUbicacion
             // 
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(316, 379);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(317, 40);
-            this.label8.TabIndex = 134;
-            this.label8.Text = "* Recuerda pedirle al conductor que active su ubicación para poder ver el viaje e" +
+            this.lblConductorUbicacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConductorUbicacion.ForeColor = System.Drawing.Color.Black;
+            this.lblConductorUbicacion.Location = new System.Drawing.Point(316, 379);
+            this.lblConductorUbicacion.Name = "lblConductorUbicacion";
+            this.lblConductorUbicacion.Size = new System.Drawing.Size(317, 40);
+            this.lblConductorUbicacion.TabIndex = 134;
+            this.lblConductorUbicacion.Text = "* Recuerda pedirle al conductor que active su ubicación para poder ver el viaje e" +
     "n el mapa.";
             // 
             // bunifuDragControl1
@@ -402,17 +404,48 @@
             this.bunifuDragControl1.TargetControl = this.panelBar;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(208, 49);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(208, 26);
+            this.cmbIdioma.TabIndex = 189;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(42, 45);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 190;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            // 
             // frmViajesActivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(842, 472);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.BtnCambiarIdioma);
+            this.Controls.Add(this.lblConductorUbicacion);
             this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.btnCompartir);
             this.Controls.Add(this.metroText);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblViajesActivos);
             this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.toolStrip1);
@@ -447,19 +480,21 @@
         private System.Windows.Forms.ToolStripLabel txtCargoUser;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblActivarGPS;
+        private System.Windows.Forms.Label lblPasosCom;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLChastaFinal;
+        private System.Windows.Forms.Label lblIniciar;
+        private System.Windows.Forms.Label lblEscanear;
+        private System.Windows.Forms.Label lblInternet;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblViajesActivos;
         private Bunifu.Framework.UI.BunifuMetroTextbox metroText;
         private Bunifu.Framework.UI.BunifuFlatButton btnCompartir;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblConductorUbicacion;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

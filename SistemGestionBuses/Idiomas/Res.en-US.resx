@@ -582,4 +582,73 @@
   <data name="lblVIN" xml:space="preserve">
     <value>VIN:</value>
   </data>
+  <data name="btnAgregarUsuario" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="btnAñadirImg" xml:space="preserve">
+    <value>Add Image</value>
+  </data>
+  <data name="btnEliminarUsuario" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="btnModificarUsuario" xml:space="preserve">
+    <value>Update User</value>
+  </data>
+  <data name="btnRestablecerContraseña" xml:space="preserve">
+    <value>Restore Password</value>
+  </data>
+  <data name="lblCargo2" xml:space="preserve">
+    <value>Work position</value>
+  </data>
+  <data name="lblClientesReportes" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="lblConectados" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="lblConfirmacióndeContraseña" xml:space="preserve">
+    <value>Password Confirmation:</value>
+  </data>
+  <data name="lblCorreoElec" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="lblCredencialesAdmin" xml:space="preserve">
+    <value>Enter the manager credentials</value>
+  </data>
+  <data name="lblDatosdeCuenta" xml:space="preserve">
+    <value>Account data to recover:</value>
+  </data>
+  <data name="lblDUIEmpleado" xml:space="preserve">
+    <value>Employee DUI:</value>
+  </data>
+  <data name="lblEmpleado2" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="lblEmpleadosReportes" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="lblNombreUsuario2" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="lblNuevaContraseñaRec" xml:space="preserve">
+    <value>New Password:</value>
+  </data>
+  <data name="lblRecuperarCuenta" xml:space="preserve">
+    <value>Recover your Account</value>
+  </data>
+  <data name="lblRenuevaContra" xml:space="preserve">
+    <value>Renew Password</value>
+  </data>
+  <data name="lblReportesPDF" xml:space="preserve">
+    <value>Reports PDF</value>
+  </data>
+  <data name="lblTarjetasreportes" xml:space="preserve">
+    <value>Click on the cards to generate reports in PDF format for each of the fields that are presented to you.</value>
+  </data>
+  <data name="lblUnidadesReportes" xml:space="preserve">
+    <value>Unities</value>
+  </data>
+  <data name="lblUsuarios2" xml:space="preserve">
+    <value>Users</value>
+  </data>
 </root>

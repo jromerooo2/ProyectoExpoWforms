@@ -17,6 +17,9 @@ using System.IO;
 using Document = iTextSharp.text.Document;
 using PdfWriter = iTextSharp.text.pdf.PdfWriter;
 using Paragraph = iTextSharp.text.Paragraph;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -35,6 +38,8 @@ namespace SistemGestionBuses
             txtCargoStrip.Text = cargostring;
             idlogged = iduser;
             idcargo = cargoid;
+            CargarIdioma();
+            llenarIdioma();
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
@@ -264,6 +269,31 @@ namespace SistemGestionBuses
         private void cardEmpleado_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblReportesPDF.Text = Res.lblReportesPDF;
+            lblTarjetasReportes.Text = Res.lblTarjetasreportes;
+            lblUnidades.Text = Res.lblClientesReportes;
+            lblUnidades.Text = Res.lblUnidadesReportes;
+            lblEmpleados.Text = Res.lblEmpleadosReportes;
+        }
+
+        public void llenarIdioma()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

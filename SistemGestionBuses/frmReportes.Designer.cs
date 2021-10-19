@@ -32,17 +32,17 @@
             this.panelBar = new System.Windows.Forms.Panel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblReportesPDF = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTarjetasReportes = new System.Windows.Forms.Label();
             this.cardClientes = new Bunifu.Framework.UI.BunifuCards();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblClientes = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblUnidades = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cardEmpleado = new Bunifu.Framework.UI.BunifuCards();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblEmpleados = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.txtActiveUser = new System.Windows.Forms.ToolStripLabel();
@@ -52,6 +52,8 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.print = new System.Windows.Forms.PrintDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.BtnCambiarIdioma = new System.Windows.Forms.Button();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -73,9 +75,8 @@
             this.panelBar.Controls.Add(this.bunifuImageButton5);
             this.panelBar.Controls.Add(this.bunifuImageButton3);
             this.panelBar.Location = new System.Drawing.Point(0, 1);
-            this.panelBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(956, 65);
+            this.panelBar.Size = new System.Drawing.Size(717, 53);
             this.panelBar.TabIndex = 96;
             // 
             // bunifuImageButton5
@@ -85,10 +86,9 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(848, 11);
-            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(636, 9);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(33, 41);
+            this.bunifuImageButton5.Size = new System.Drawing.Size(25, 33);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 98;
             this.bunifuImageButton5.TabStop = false;
@@ -102,46 +102,48 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(891, 11);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(668, 9);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(36, 41);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(27, 33);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 96;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
             this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
-            // label1
+            // lblReportesPDF
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(35, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 41);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "Reportes PDF";
+            this.lblReportesPDF.AutoSize = true;
+            this.lblReportesPDF.Font = new System.Drawing.Font("Century Gothic", 20.8F, System.Drawing.FontStyle.Bold);
+            this.lblReportesPDF.Location = new System.Drawing.Point(26, 85);
+            this.lblReportesPDF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReportesPDF.Name = "lblReportesPDF";
+            this.lblReportesPDF.Size = new System.Drawing.Size(189, 34);
+            this.lblReportesPDF.TabIndex = 97;
+            this.lblReportesPDF.Text = "Reportes PDF";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(292, 105);
+            this.label2.Location = new System.Drawing.Point(219, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(582, 24);
+            this.label2.Size = new System.Drawing.Size(476, 18);
             this.label2.TabIndex = 98;
             this.label2.Text = "____________________________________________________\r\n";
             // 
-            // label3
+            // lblTarjetasReportes
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.2F);
-            this.label3.Location = new System.Drawing.Point(37, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(482, 42);
-            this.label3.TabIndex = 99;
-            this.label3.Text = "Haz click sobre las tarjetas para generar reportes en formato \r\nPDF para cada uno" +
+            this.lblTarjetasReportes.AutoSize = true;
+            this.lblTarjetasReportes.Font = new System.Drawing.Font("Century Gothic", 9.2F);
+            this.lblTarjetasReportes.Location = new System.Drawing.Point(28, 119);
+            this.lblTarjetasReportes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTarjetasReportes.Name = "lblTarjetasReportes";
+            this.lblTarjetasReportes.Size = new System.Drawing.Size(403, 34);
+            this.lblTarjetasReportes.TabIndex = 99;
+            this.lblTarjetasReportes.Text = "Haz click sobre las tarjetas para generar reportes en formato \r\nPDF para cada uno" +
     " de los campos que se te presentan.\r\n";
             // 
             // cardClientes
@@ -150,40 +152,37 @@
             this.cardClientes.BorderRadius = 50;
             this.cardClientes.BottomSahddow = true;
             this.cardClientes.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
-            this.cardClientes.Controls.Add(this.label8);
+            this.cardClientes.Controls.Add(this.lblClientes);
             this.cardClientes.Controls.Add(this.pictureBox6);
             this.cardClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardClientes.LeftSahddow = false;
-            this.cardClientes.Location = new System.Drawing.Point(41, 302);
-            this.cardClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardClientes.Location = new System.Drawing.Point(31, 245);
             this.cardClientes.Name = "cardClientes";
             this.cardClientes.RightSahddow = true;
             this.cardClientes.ShadowDepth = 20;
-            this.cardClientes.Size = new System.Drawing.Size(267, 196);
+            this.cardClientes.Size = new System.Drawing.Size(200, 159);
             this.cardClientes.TabIndex = 100;
             this.cardClientes.Click += new System.EventHandler(this.cardClientes_Click);
             this.cardClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.cardClientes_Paint);
             // 
-            // label8
+            // lblClientes
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(92, 161);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 23);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Clientes";
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.lblClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblClientes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblClientes.Location = new System.Drawing.Point(69, 131);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(69, 19);
+            this.lblClientes.TabIndex = 11;
+            this.lblClientes.Text = "Clientes";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(69, 36);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(52, 29);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(115, 101);
+            this.pictureBox6.Size = new System.Drawing.Size(86, 82);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
@@ -195,40 +194,37 @@
             this.bunifuCards1.BorderRadius = 50;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
-            this.bunifuCards1.Controls.Add(this.label4);
+            this.bunifuCards1.Controls.Add(this.lblUnidades);
             this.bunifuCards1.Controls.Add(this.pictureBox2);
             this.bunifuCards1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(357, 302);
-            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCards1.Location = new System.Drawing.Point(268, 245);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(267, 196);
+            this.bunifuCards1.Size = new System.Drawing.Size(200, 159);
             this.bunifuCards1.TabIndex = 101;
             this.bunifuCards1.Click += new System.EventHandler(this.bunifuCards1_Click);
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
-            // label4
+            // lblUnidades
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(73, 161);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Unidades";
+            this.lblUnidades.AutoSize = true;
+            this.lblUnidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.lblUnidades.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUnidades.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUnidades.Location = new System.Drawing.Point(55, 131);
+            this.lblUnidades.Name = "lblUnidades";
+            this.lblUnidades.Size = new System.Drawing.Size(82, 19);
+            this.lblUnidades.TabIndex = 11;
+            this.lblUnidades.Text = "Unidades";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(65, 36);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 29);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(117, 101);
+            this.pictureBox2.Size = new System.Drawing.Size(88, 82);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -240,40 +236,37 @@
             this.cardEmpleado.BorderRadius = 50;
             this.cardEmpleado.BottomSahddow = true;
             this.cardEmpleado.color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
-            this.cardEmpleado.Controls.Add(this.label5);
+            this.cardEmpleado.Controls.Add(this.lblEmpleados);
             this.cardEmpleado.Controls.Add(this.pictureBox4);
             this.cardEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardEmpleado.LeftSahddow = false;
-            this.cardEmpleado.Location = new System.Drawing.Point(657, 302);
-            this.cardEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardEmpleado.Location = new System.Drawing.Point(493, 245);
             this.cardEmpleado.Name = "cardEmpleado";
             this.cardEmpleado.RightSahddow = true;
             this.cardEmpleado.ShadowDepth = 20;
-            this.cardEmpleado.Size = new System.Drawing.Size(267, 196);
+            this.cardEmpleado.Size = new System.Drawing.Size(200, 159);
             this.cardEmpleado.TabIndex = 102;
             this.cardEmpleado.Click += new System.EventHandler(this.cardEmpleado_Click);
             this.cardEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.cardEmpleado_Paint);
             // 
-            // label5
+            // lblEmpleados
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(65, 161);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 23);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Empleados";
+            this.lblEmpleados.AutoSize = true;
+            this.lblEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(204)))), ((int)(((byte)(235)))));
+            this.lblEmpleados.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmpleados.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEmpleados.Location = new System.Drawing.Point(49, 131);
+            this.lblEmpleados.Name = "lblEmpleados";
+            this.lblEmpleados.Size = new System.Drawing.Size(96, 19);
+            this.lblEmpleados.TabIndex = 11;
+            this.lblEmpleados.Text = "Empleados";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(43, 36);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(32, 29);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(179, 101);
+            this.pictureBox4.Size = new System.Drawing.Size(134, 82);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
@@ -291,9 +284,9 @@
             this.txtCargoStrip,
             this.btnLogOut,
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 567);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 461);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(952, 41);
+            this.toolStrip1.Size = new System.Drawing.Size(714, 33);
             this.toolStrip1.TabIndex = 129;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -303,13 +296,13 @@
             this.txtActiveUser.ForeColor = System.Drawing.Color.White;
             this.txtActiveUser.Image = ((System.Drawing.Image)(resources.GetObject("txtActiveUser.Image")));
             this.txtActiveUser.Name = "txtActiveUser";
-            this.txtActiveUser.Size = new System.Drawing.Size(119, 38);
+            this.txtActiveUser.Size = new System.Drawing.Size(103, 30);
             this.txtActiveUser.Text = "active user";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // txtCargoStrip
             // 
@@ -317,7 +310,7 @@
             this.txtCargoStrip.ForeColor = System.Drawing.Color.White;
             this.txtCargoStrip.Image = ((System.Drawing.Image)(resources.GetObject("txtCargoStrip.Image")));
             this.txtCargoStrip.Name = "txtCargoStrip";
-            this.txtCargoStrip.Size = new System.Drawing.Size(134, 38);
+            this.txtCargoStrip.Size = new System.Drawing.Size(114, 30);
             this.txtCargoStrip.Text = "work position";
             // 
             // btnLogOut
@@ -328,7 +321,7 @@
             this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(32, 38);
+            this.btnLogOut.Size = new System.Drawing.Size(32, 30);
             this.btnLogOut.Text = "toolStripButton3";
             // 
             // toolStripLabel1
@@ -337,7 +330,7 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(67, 38);
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 30);
             this.toolStripLabel1.Text = "Log Out";
             // 
             // print
@@ -347,29 +340,62 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(600, 538);
+            this.dataGridView1.Location = new System.Drawing.Point(450, 437);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 26);
+            this.dataGridView1.Size = new System.Drawing.Size(180, 21);
             this.dataGridView1.TabIndex = 130;
             this.dataGridView1.Visible = false;
             // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(446, 63);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(208, 26);
+            this.cmbIdioma.TabIndex = 185;
+            // 
+            // BtnCambiarIdioma
+            // 
+            this.BtnCambiarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCambiarIdioma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(206)))), ((int)(((byte)(237)))));
+            this.BtnCambiarIdioma.FlatAppearance.BorderSize = 2;
+            this.BtnCambiarIdioma.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BtnCambiarIdioma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnCambiarIdioma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(110)))), ((int)(((byte)(167)))));
+            this.BtnCambiarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCambiarIdioma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.BtnCambiarIdioma.Location = new System.Drawing.Point(268, 60);
+            this.BtnCambiarIdioma.Name = "BtnCambiarIdioma";
+            this.BtnCambiarIdioma.Size = new System.Drawing.Size(172, 30);
+            this.BtnCambiarIdioma.TabIndex = 186;
+            this.BtnCambiarIdioma.Text = "Seleccionar Idioma:";
+            this.BtnCambiarIdioma.UseVisualStyleBackColor = false;
+            this.BtnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdioma_Click);
+            // 
             // frmReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 608);
+            this.ClientSize = new System.Drawing.Size(714, 494);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.BtnCambiarIdioma);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cardEmpleado);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.cardClientes);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTarjetasReportes);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblReportesPDF);
             this.Controls.Add(this.panelBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReportes";
             this.Text = "frmReportes";
             this.panelBar.ResumeLayout(false);
@@ -397,17 +423,17 @@
         private System.Windows.Forms.Panel panelBar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblReportesPDF;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTarjetasReportes;
         private Bunifu.Framework.UI.BunifuCards cardClientes;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.PictureBox pictureBox6;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblUnidades;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuCards cardEmpleado;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEmpleados;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel txtActiveUser;
@@ -417,5 +443,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.PrintDialog print;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button BtnCambiarIdioma;
     }
 }

@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 
 namespace SistemGestionBuses
@@ -35,7 +38,8 @@ namespace SistemGestionBuses
             {
                 BtnAgregar.Enabled = true;
             }
-
+            CargarIdioma();
+            llenarIdioma();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -438,6 +442,39 @@ namespace SistemGestionBuses
             txtCorreo.Text = "";
             txtUser.Text = "";
 
+        }
+
+        //CambiarIdioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblNombreUsuario.Text = Res.lblNombreUsuario2;
+            lblEmpleado.Text = Res.lblEmpleado2;
+            lblCargo.Text = Res.lblCargo2;
+            lblCorreo.Text = Res.lblCorreoElec;
+            lblConectados.Text = Res.lblConectados;
+            lblUsuarios.Text = Res.lblUsuarios2;
+            btnAñadirImg.Text = Res.btnAñadirImg;
+            BtnAgregar.Text = Res.btnAgregarUsuario;
+            btnLimpiar.Text = Res.btnLimpiarCampos;
+            BtnActualizar.Text = Res.btnModificarUsuario;
+            BtnEliminar.Text = Res.btnEliminarEmpleado;
+            btnRestablecer.Text = Res.btnRestablecerContraseña;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using System.IO;
+using SistemGestionBuses.Properties;
+using SistemGestionBuses.Idiomas;
+using System.Threading;
 
 namespace SistemGestionBuses
 {
@@ -25,6 +28,8 @@ namespace SistemGestionBuses
             txtClaveAdmin.UseSystemPasswordChar = true;
             txtNueva.UseSystemPasswordChar = true;
             txtConfirmacionContra.UseSystemPasswordChar = true;
+            CargarIdioma();
+            llenarIdioma();
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -171,6 +176,37 @@ namespace SistemGestionBuses
             {
                 txtConfirmacionContra.UseSystemPasswordChar = false;
             }
+        }
+
+        //Cambiar Idioma
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+
+            lblRecuperatucuenta.Text = Res.lblRecuperarCuenta;
+            lblCredencialesAdmin.Text = Res.lblCredencialesAdmin;
+            lblUsuario.Text = Res.lblUsuario;
+            lblContraseña.Text = Res.lblContraseña;
+            lblDatosdeCuenta.Text = Res.lblDatosdeCuenta;
+            lblUsuario2.Text = Res.lblUsuario;
+            lblDUIEmpleado.Text = Res.lblDUIEmpleado;
+            lblRenovarContraseña.Text = Res.lblRenuevaContra;
+            lblNuevaContraseña.Text = Res.lblNuevaContraseña;
+            lblConfirmaciónContraseña.Text = Res.lblConfirmacióndeContraseña;
+            BtnCambiarIdioma.Text = Res.btnCambiarIdioma;
+        }
+
+        public void llenarIdioma()
+        {
+            cmbIdioma.DataSource = Idioma.ObtenerIdiomas();
+            cmbIdioma.ValueMember = "CultureInfo";
+            cmbIdioma.DisplayMember = "CargarNombre_Pais";
+        }
+
+        private void BtnCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Idioma = cmbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }
